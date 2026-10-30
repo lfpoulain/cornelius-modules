@@ -1,0 +1,44 @@
+{
+  "summary": { "query": "cours de verdun bordeaux", "queryType": "NON_NEAR", "numResults": 5 },
+  "results": [
+    {
+      "type": "Street",
+      "id": "exemple-rue-1",
+      "score": 5.2,
+      "address": {
+        "streetName": "Cours de Verdun",
+        "municipality": "Bordeaux",
+        "freeformAddress": "Cours de Verdun, 33000 Bordeaux"
+      },
+      "position": { "lat": 44.84713, "lon": -0.57158 }
+    },
+    {
+      "type": "POI",
+      "id": "exemple-poi-1",
+      "score": 4.1,
+      "poi": { "name": "Lieu d'exemple" },
+      "address": {
+        "municipality": "Bordeaux",
+        "freeformAddress": "12 Cours de Verdun, 33000 Bordeaux"
+      },
+      "position": { "lat": 44.84655, "lon": -0.57302 }
+    },
+    {
+      "type": "Street",
+      "id": "exemple-rue-doublon",
+      "score": 3.0,
+      "address": {
+        "streetName": "Cours de Verdun",
+        "municipality": "Bordeaux",
+        "freeformAddress": "Cours de Verdun (autre tronçon), 33000 Bordeaux"
+      },
+      "position": { "lat": 44.84713, "lon": -0.57158 }
+    },
+    {
+      "type": "Geography",
+      "id": "exemple-sans-position",
+      "score": 2.0,
+      "address": { "municipality": "Bordeaux", "freeformAddress": "Bordeaux" }
+    }
+  ]
+}
