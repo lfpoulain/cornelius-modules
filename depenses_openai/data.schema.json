@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DepensesOpenaiData v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["currency", "month", "today", "week", "byLine", "budget", "monthStart", "partial"],
+  "properties": {
+    "currency": { "type": "string", "pattern": "^[a-z]{3}$" },
+    "month": { "type": "number", "minimum": 0 },
+    "today": { "type": "number", "minimum": 0 },
+    "week": { "type": "number", "minimum": 0 },
+    "byLine": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "amount"],
+        "properties": {
+          "label": { "type": "string", "minLength": 1, "maxLength": 80 },
+          "amount": { "type": "number", "minimum": 0 }
+        }
+      }
+    },
+    "budget": { "type": ["number", "null"], "minimum": 0 },
+    "monthStart": { "type": "string", "format": "date" },
+    "partial": { "type": "boolean" }
+  }
+}

@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-10-31 : module Dépenses OpenAI
+
+**Ajouté**
+
+- Module **Dépenses OpenAI** (`depenses_openai`, 1.0.0) : dépenses du mois, du jour et des 7 derniers jours lues par l’API des coûts de l’organisation (clé Admin en lecture seule), avec les usages les plus chers et une alerte de budget à 80 % et 100 %. Mois et jour suivent le fuseau du foyer, rapprochés des journées UTC d’OpenAI. Auteur : tigul_one.
+
 ### 2026-10-29 : licence MIT
 
 **Modifié**
