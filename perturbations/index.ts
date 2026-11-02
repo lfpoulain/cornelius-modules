@@ -11,6 +11,11 @@ type PerturbationsConfig = { lignes: string; arrets: string; limite: number };
 
 type Perturbation = {
   lignes: string[];
+  /**
+   * Lignes sous leur forme « exploitant:numéro » lue dans `LineRef` (« 85:820:7 » donne
+   * « 820:7 ») : c'est ce qui distingue la ligne 7 des TL de toutes les lignes 7 du pays.
+   */
+  reseaux: string[];
   lieux: string[];
   texte: string;
   fin: string | null;
@@ -125,6 +130,19 @@ function firstSentence(value: string, max: number): string {
   return `${(space > max * 0.5 ? cut.slice(0, space) : cut).trimEnd()}…`;
 }
 
+/** « 85:820:7 » donne « 820:7 » : le pays, l'exploitant, la ligne. */
+function lineRefKey(value: string): string | null {
+  const parts = value
+    .trim()
+    .split(':')
+    .map((part) => part.trim())
+    .filter((part) => part.length > 0);
+  if (parts.length < 2) return null;
+  const ligne = parts[parts.length - 1]!;
+  const exploitant = parts[parts.length - 2]!;
+  return `${exploitant}:${lineKey(ligne)}`;
+}
+
 /** Une annonce, ramenée à ses lignes, ses lieux et une phrase en français. */
 function readSituation(block: string): Perturbation | null {
   const texte =
@@ -136,12 +154,20 @@ function readSituation(block: string): Perturbation | null {
   const lignes = [
     ...new Set(allTags(block, 'PublishedLineName').map((line) => line.slice(0, 24))),
   ].slice(0, 6);
+  const reseaux = [
+    ...new Set(
+      allTags(block, 'LineRef')
+        .map((ref) => lineRefKey(ref))
+        .filter((ref): ref is string => ref !== null),
+    ),
+  ].slice(0, 6);
   const lieux = [
     ...new Set([...allTags(block, 'PlaceName'), ...allTags(block, 'StopPlaceName')]),
   ].slice(0, 4);
   const cause = textTag(block, 'ReasonText') ?? null;
   return {
     lignes,
+    reseaux,
     lieux: lieux.map((lieu) => lieu.slice(0, 80)),
     texte: texte.replace(/\s+/gu, ' ').slice(0, 300),
     fin: endTime(block),
@@ -153,7 +179,16 @@ function readSituation(block: string): Perturbation | null {
 function concerns(perturbation: Perturbation, lignes: string[], arrets: string[]): boolean {
   if (lignes.length === 0 && arrets.length === 0) return true;
   const lines = new Set(perturbation.lignes.map(lineKey));
-  if (lignes.some((ligne) => lines.has(lineKey(ligne)))) return true;
+  const reseaux = new Set(perturbation.reseaux);
+  for (const ligne of lignes) {
+    // « 820:7 » désigne la ligne 7 de l'exploitant 820, sans ramasser les autres lignes 7.
+    const avecOperateur = /^([^:]+):(.+)$/u.exec(ligne.trim());
+    if (avecOperateur) {
+      if (reseaux.has(`${avecOperateur[1]!.trim()}:${lineKey(avecOperateur[2]!)}`)) return true;
+      continue;
+    }
+    if (lines.has(lineKey(ligne))) return true;
+  }
   const haystack = fold(`${perturbation.lieux.join(' ')} ${perturbation.texte}`);
   return arrets.some((arret) => {
     // Nom entier, pas sous-chaîne : « Chailly » ne doit pas attraper « Chailly-sur-Montreux ».
@@ -266,6 +301,13 @@ const addon: AddonDefinition<PerturbationsConfig, PerturbationsData> = {
         false,
       );
     const body = response.text();
+    // Un flux coupé au plafond de lecture donnerait des annonces incomplètes : on le dit.
+    if (response.truncated)
+      throw new AddonCollectError(
+        'malformed',
+        'Le flux SIRI-SX dépasse la taille lue : annonces incomplètes.',
+        false,
+      );
     // Ce qui n'est pas du SIRI-SX est refusé ; un SIRI-SX sans annonce, lui, est une bonne
     // nouvelle : « rien à signaler », et la carte le dit.
     if (!/<Siri[\s>]/u.test(body))
@@ -280,7 +322,8 @@ const addon: AddonDefinition<PerturbationsConfig, PerturbationsData> = {
       if (!concerns(perturbation, lignes, arrets)) continue;
       found.push(perturbation);
     }
-    // La coupe à `limite` ne doit pas fausser le total annoncé à l'oral.
+    // La coupe à `limite` intervient après le filtrage, pour ne pas fausser le total annoncé.
+    // L'ordre reste celui du flux : c'est le fournisseur qui décide de la priorité.
     const retenues = found.slice(0, limite);
     return {
       data: { perturbations: retenues, filtre: { lignes, arrets } },

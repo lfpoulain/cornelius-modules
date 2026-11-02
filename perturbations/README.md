@@ -25,13 +25,14 @@ Dans **Modules → Perturbations → Ajouter une source** :
 
 | Réglage | Effet | Par défaut |
 | --- | --- | --- |
-| Lignes surveillées | Lignes dont les perturbations t'intéressent, séparées par des virgules | `B 7, B 8` |
+| Lignes surveillées | Lignes dont les perturbations vous intéressent, séparées par des virgules. « 820:7 » vise la seule ligne 7 de l'exploitant 820 | `B 7, B 8` |
 | Arrêts surveillés | Noms d'arrêts ou de quartiers à surveiller aussi | `Chailly` |
-| Annonces affichées | Nombre d'annonces sur la carte | `5` |
+| Annonces affichées | Nombre d'annonces sur la carte, dans l'ordre du flux | `5` |
 
 ## Limites
 
-- Le fournisseur limite à deux appels par minute et trois mille par jour. Le cache de dix minutes les respecte ; un appel trop rapproché renvoie une erreur de quota explicite, jamais une carte vide.
+- Le fournisseur limite à deux appels par minute et trois mille par jour. Le module demande un cache de dix minutes, mais le cœur refuse de mettre en cache une réponse de plus de deux mégaoctets : ce flux en fait plusieurs, donc chaque lecture le retélécharge. Le module reste dans les clous parce que la fraîcheur est de dix minutes et que la voix interroge peu, mais un enchaînement de questions rapprochées peut renvoyer une erreur de quota explicite, jamais une carte vide.
+- Une ligne désignée par son seul numéro ramasse les annonces de tous les réseaux qui portent ce numéro. Pour lever l'ambiguïté, précisez l'exploitant : « 820:7 ».
 - Le flux ne couvre que les annonces non planifiées : les travaux annoncés longtemps à l'avance sont dans un autre flux, plus lourd, non utilisé ici.
 - Une annonce sans ligne ni lieu identifiables ne peut pas être filtrée et reste écartée.
 - En cas de jeton refusé, le module le dit et n'affiche rien.
