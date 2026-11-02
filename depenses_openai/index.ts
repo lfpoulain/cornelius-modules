@@ -2,11 +2,12 @@
  * Dépenses OpenAI du mois (API Costs de l'organisation, clé Admin en lecture).
  * Les montants arrivent chez OpenAI avec du retard, par jour UTC. Le mois et le jour sont ceux
  * du foyer (context.timeZone) ; ils sont rapprochés des jours UTC de même date, faute de mieux.
- * Format vérifié le 2026-10-31 contre la vraie API (fixtures/costs.json : réponse anonymisée).
+ * Format vérifié le 2026-10-31 contre la vraie API. fixtures/costs.json est reconstitué au même
+ * format (mêmes champs), avec dates, organisation, projet et montants fictifs.
  */
 import { AddonCollectError, type AddonDefinition } from '#cornelius/addons';
 import { compile } from '#cornelius/validation';
-import { dayIn, dayMs, nextMidnight } from '../_lib/temps.js';
+import { dateIn, dayIn, dayMs, iso, nextMidnight } from '../_lib/temps.js';
 import configSchema from './config.schema.json' with { type: 'json' };
 import dataSchema from './data.schema.json' with { type: 'json' };
 
@@ -20,6 +21,8 @@ type DepensesData = {
   byLine: { label: string; amount: number }[];
   budget: number | null;
   monthStart: string;
+  /** Jour du foyer au moment du relevé (absent des relevés de la version 1.0.0). */
+  day?: string;
   partial: boolean;
 };
 
@@ -75,16 +78,63 @@ const BASE = 'https://api.openai.com/v1/organization/costs';
 const DAY_S = 86_400;
 const MAX_PAGES = 3;
 
+const MONTHS = [
+  'janvier',
+  'février',
+  'mars',
+  'avril',
+  'mai',
+  'juin',
+  'juillet',
+  'août',
+  'septembre',
+  'octobre',
+  'novembre',
+  'décembre',
+];
+
 const round2 = (n: number) => Math.round(n * 100) / 100;
-const money = (n: number, currency: string) =>
-  `${n.toFixed(2).replace('.', ',')} ${currency === 'usd' ? '$' : currency.toUpperCase()}`;
+
+/** 1234.5 -> « 1 234,50 $ » (espace insécable entre les milliers). */
+function money(n: number, currency: string) {
+  const [int = '0', dec = '00'] = Math.abs(n).toFixed(2).split('.');
+  const sign = n < 0 && `${int}${dec}` !== '000' ? '-' : '';
+  const grouped = int.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+  return `${sign}${grouped},${dec} ${currency === 'usd' ? '$' : currency.toUpperCase()}`;
+}
+
+/** « 2026-11-01 » -> « 1er novembre ». */
+const dayName = (day: string) => {
+  const date = Number(day.slice(8, 10));
+  return `${date === 1 ? '1er' : date} ${MONTHS[Number(day.slice(5, 7)) - 1] ?? ''}`;
+};
+
+/**
+ * Libellés du jour et du mois. Un relevé d'un autre jour (repris après une panne) est daté au
+ * lieu d'être dit « d'aujourd'hui », et son mois est nommé s'il n'est plus le mois en cours.
+ */
+function period(data: DepensesData, context: { now(): number; timeZone: string }) {
+  const now = dateIn(context.now(), context.timeZone);
+  const day = data.day ?? now;
+  const current = day === now;
+  const sameMonth = data.monthStart.slice(0, 7) === now.slice(0, 7);
+  const monthName = MONTHS[Number(data.monthStart.slice(5, 7)) - 1] ?? '';
+  return {
+    current,
+    dayLabel: current ? 'Aujourd’hui' : `Le ${dayName(day)}`,
+    daySpoken: current ? 'aujourd’hui' : `le ${dayName(day)}`,
+    month: sameMonth ? 'ce mois-ci' : `en ${monthName}`,
+    monthSpoken: sameMonth ? 'depuis le début du mois' : `en ${monthName}`,
+  };
+}
 
 /** « gpt-live-1, input » -> « gpt-live-1 » : regroupe entrées et sorties d'un même modèle. */
 const lineLabel = (item: string | null | undefined) =>
   item ? (item.split(',')[0] ?? item).trim().slice(0, 80) || 'Autre' : 'Autre';
 
+/** Le budget est réglé en dollars : pas d'alerte si OpenAI compte dans une autre devise. */
 const budgetLevel = (data: DepensesData) =>
-  data.budget === null
+  data.budget === null || data.currency !== 'usd'
     ? 'none'
     : data.month >= data.budget
       ? 'over'
@@ -92,9 +142,12 @@ const budgetLevel = (data: DepensesData) =>
         ? 'near'
         : 'ok';
 
-/** Un jour sans montant publié n'est pas un jour à 0 $ : les coûts arrivent avec retard. */
+/**
+ * OpenAI renvoie une journée vide aussi bien quand rien n'est encore publié que quand rien n'a
+ * été dépensé : le libellé reste neutre plutôt que d'annoncer 0,00 $.
+ */
 const todayText = (data: DepensesData) =>
-  data.today === null ? 'pas encore publié' : money(data.today, data.currency);
+  data.today === null ? 'rien de publié pour l’instant' : money(data.today, data.currency);
 
 const addon: AddonDefinition<DepensesConfig, DepensesData> = {
   id: 'depenses_openai',
@@ -176,7 +229,8 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
         headers: { Authorization: `Bearer ${key}`, Accept: 'application/json' },
         signal: context.signal,
         timeoutMs: 8000,
-        maxBytes: 512 * 1024,
+        // Une organisation aux nombreux usages peut dépasser 512 Ko sur un mois.
+        maxBytes: 2 * 1024 * 1024,
       });
       if (response.status === 401) throw new AddonCollectError('auth', 'Clé Admin OpenAI refusée.');
       if (response.status === 403)
@@ -227,6 +281,8 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
         }
       }
       page = payload.has_more ? (payload.next_page ?? null) : null;
+      // D'autres pages annoncées sans curseur pour les lire : le relevé est incomplet.
+      if (payload.has_more && !page) partial = true;
       if (!page) break;
       if (n === MAX_PAGES - 1) partial = true;
     }
@@ -245,6 +301,7 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
         byLine,
         budget: context.config.budgetMensuel,
         monthStart: new Date(monthStartS * 1000).toISOString().slice(0, 10),
+        day: dateIn(context.now(), context.timeZone),
         partial,
       },
       source: { provider: 'openai-costs', sourceId: context.config.projet ?? 'organisation' },
@@ -253,11 +310,12 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
     };
   },
   ambient: {
-    present(snapshot) {
+    present(snapshot, context) {
       const data = snapshot.data;
       if (!data) throw new Error('Aucune dépense à afficher.');
+      const when = period(data, context);
       const level = budgetLevel(data);
-      const budget = data.budget === null ? '' : money(data.budget, data.currency);
+      const budget = data.budget === null ? '' : money(data.budget, 'usd');
       return {
         layout: 'metric',
         title: 'Dépenses OpenAI',
@@ -268,18 +326,21 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
             : level === 'near'
               ? `plus de 80 % du budget de ${budget}`
               : level === 'ok'
-                ? `sur ${budget} ce mois-ci`
-                : 'ce mois-ci',
-        items: [{ label: 'Aujourd’hui', value: todayText(data) }],
+                ? `sur ${budget} ${when.month}`
+                : when.month,
+        items: [{ label: when.dayLabel, value: todayText(data) }],
+        // À minuit, « aujourd'hui » devient la veille, même si la collecte suivante échoue.
+        refreshAt: iso(nextMidnight(context.now(), context.timeZone)),
       };
     },
   },
-  present(snapshot) {
+  present(snapshot, context) {
     const data = snapshot.data;
     if (!data) throw new Error('Aucune dépense à présenter.');
     const stale = snapshot.status === 'stale';
+    const when = period(data, context);
     const level = budgetLevel(data);
-    const budget = data.budget === null ? '' : money(data.budget, data.currency);
+    const budget = data.budget === null ? '' : money(data.budget, 'usd');
     const budgetText =
       level === 'none'
         ? null
@@ -289,7 +350,7 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
             ? `Plus de 80 % du budget de ${budget}.`
             : `Budget : ${budget}.`;
     const items = [
-      { label: 'Aujourd’hui', value: todayText(data) },
+      { label: when.dayLabel, value: todayText(data) },
       { label: '7 derniers jours', value: money(data.week, data.currency) },
       ...data.byLine
         .slice(0, 3)
@@ -302,17 +363,20 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
     ].filter((note): note is string => note !== null);
     return {
       title: 'Dépenses OpenAI',
-      primaryValue: `${money(data.month, data.currency)} ce mois-ci`,
+      primaryValue: `${money(data.month, data.currency)} ${when.month}`,
       subtitle: budgetText,
       description: notes.join(' '),
       items,
       summary: [
         stale ? 'Dernier relevé connu :' : null,
-        data.today === null
-          ? `${money(data.month, data.currency)} dépensés chez OpenAI depuis le début du mois ;` +
-            ' rien n’est encore publié pour aujourd’hui.'
-          : `${money(data.month, data.currency)} dépensés chez OpenAI depuis le début du mois,` +
-            ` dont ${money(data.today, data.currency)} aujourd’hui.`,
+        `${money(data.month, data.currency)} dépensés chez OpenAI ${when.monthSpoken}` +
+          (data.today === null
+            ? when.current
+              ? ' ; aucun montant publié pour aujourd’hui pour l’instant.'
+              : ` ; aucun montant publié pour ${when.daySpoken}.`
+            : data.today < 0
+              ? `, avec un avoir de ${money(-data.today, data.currency)} ${when.daySpoken}.`
+              : `, dont ${money(data.today, data.currency)} ${when.daySpoken}.`),
         budgetText,
         'Les montants arrivent avec du retard et suivent les journées UTC d’OpenAI.',
       ]

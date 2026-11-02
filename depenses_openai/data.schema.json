@@ -24,6 +24,7 @@
     },
     "budget": { "type": ["number", "null"], "minimum": 0 },
     "monthStart": { "type": "string", "format": "date" },
+    "day": { "type": "string", "format": "date" },
     "partial": { "type": "boolean" }
   }
 }

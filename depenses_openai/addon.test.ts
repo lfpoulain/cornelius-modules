@@ -43,6 +43,9 @@ test('définition, contrat, adresse et clé envoyées', async (t) => {
   // Le 5 novembre, les 7 derniers jours commencent le 30 octobre.
   assert.equal(url.searchParams.get('start_time'), String(NOV_1 - 2 * DAY));
   assert.equal(url.searchParams.get('bucket_width'), '1d');
+  assert.equal(url.searchParams.get('limit'), '31');
+  assert.equal(url.searchParams.get('group_by'), 'line_item');
+  assert.equal(f.calls[0]?.maxBytes, 2 * 1024 * 1024);
   assert.equal(url.searchParams.get('project_ids'), 'proj_TestProject0001');
   assert.equal(f.calls[0]?.headers?.Authorization, `Bearer ${KEY}`);
 });
@@ -105,7 +108,94 @@ test('les avoirs sont déduits', async (t) => {
   const result = await f.read();
   assert.equal(result.ok && result.snapshot.data?.month, 1.5);
   assert.equal(result.ok && result.snapshot.data?.today, -0.5);
+  assert.equal(result.ok && result.snapshot.data?.week, 1.5);
+  // L'avoir ne figure pas parmi les usages les plus chers.
+  assert.deepEqual(result.ok && result.snapshot.data?.byLine, [{ label: 'gpt-live-1', amount: 2 }]);
+  assert.match(
+    (result.ok && result.presentation.summary) || '',
+    /avec un avoir de 0,50 \$ aujourd’hui/u,
+  );
   assert.deepEqual(f.contract(result), []);
+});
+
+test('autre devise que le dollar : pas d’alerte de budget, budget toujours en dollars', async (t) => {
+  const f = setup(t, {
+    config: { projet: null, budgetMensuel: 2 },
+    routes: { '/organization/costs': costs(bucket(NOV_1, [5, 'gpt-live-1', 'eur'])) },
+  });
+  const result = await f.read();
+  assert.equal(result.ok && result.card.primaryValue, '5,00 EUR ce mois-ci');
+  assert.equal(result.ok && result.card.subtitle, null);
+});
+
+test('budget vide : aucune alerte', async (t) => {
+  const f = setup(t, { config: { projet: null, budgetMensuel: null } });
+  const result = await f.read();
+  assert.equal(result.ok && result.card.subtitle, null);
+  assert.equal(f.ambient().content?.subtitle, 'ce mois-ci');
+  assert.deepEqual(f.contract(result), []);
+});
+
+test('milliers séparés par une espace insécable', async (t) => {
+  const f = setup(t, {
+    routes: { '/organization/costs': costs(bucket(NOV_1, [12345.678, 'gpt-live-1'])) },
+  });
+  const result = await f.read();
+  assert.equal(result.ok && result.card.primaryValue, '12\u00a0345,68 $ ce mois-ci');
+});
+
+test('relevé repris après minuit : daté au lieu d’« aujourd’hui »', async (t) => {
+  // 31 octobre à 23:30 à Paris, puis panne le 1er novembre à 00:01.
+  const f = setup(t, {
+    at: '2026-10-31T22:30:00Z',
+    routes: { '/organization/costs': costs(bucket(NOV_1 - DAY, [3, 'gpt-live-1'])) },
+  });
+  const first = await f.read();
+  assert.equal(first.ok && first.snapshot.data?.day, '2026-10-31');
+  f.advance(31 * 60_000);
+  f.route({ '/organization/costs': { status: 503 } });
+  const result = await f.read();
+  assert.equal(result.ok && result.stale, true);
+  if (!result.ok) return;
+  assert.equal(result.card.primaryValue, '3,00 $ en octobre');
+  assert.equal(result.card.items[0]?.label, 'Le 31 octobre');
+  assert.match(
+    result.presentation.summary,
+    /3,00 \$ dépensés chez OpenAI en octobre, dont 3,00 \$ le 31 octobre\./u,
+  );
+  assert.doesNotMatch(result.presentation.summary, /aujourd’hui|début du mois/u);
+  const ambient = f.ambient().content;
+  assert.equal(ambient?.items[0]?.label, 'Le 31 octobre');
+  assert.equal(ambient?.subtitle, 'sur 10,00 $ en octobre');
+});
+
+test('l’affichage permanent se recalcule à minuit', async (t) => {
+  const f = setup(t);
+  await f.read();
+  // 5 novembre 13:00 à Paris : prochain minuit à 23:00 UTC.
+  assert.equal(f.ambient().content?.refreshAt, '2026-11-05T23:00:00.000Z');
+});
+
+test('réponse coupée ou illisible : malformed', async (t) => {
+  for (const reply of [
+    { status: 200, body: JSON.stringify(payload), truncated: true },
+    { status: 200, body: '{' },
+  ]) {
+    const f = setup(t, { routes: { '/organization/costs': reply } });
+    const result = await f.read();
+    assert.equal(result.ok, false);
+    if (!result.ok) assert.equal(result.error.code, 'malformed');
+  }
+});
+
+test('la clé ne figure ni dans l’adresse ni dans les messages', async (t) => {
+  const ok = setup(t);
+  await ok.read();
+  assert.equal(ok.calls[0]?.url.includes(KEY), false);
+  const ko = setup(t, { routes: { '/organization/costs': { status: 401, body: KEY } } });
+  const result = await ko.read();
+  assert.equal(result.ok, false);
+  if (!result.ok) assert.equal(JSON.stringify(result.error).includes(KEY), false);
 });
 
 test('plusieurs devises : malformed', async (t) => {
@@ -168,6 +258,38 @@ test('pagination : pages suivantes lues, relevé incomplet au-delà de 3 pages',
   assert.equal(endless.calls.length, 3);
   assert.equal(partial.ok && partial.snapshot.data?.partial, true);
   assert.match((partial.ok && partial.card.description) || '', /incomplet/u);
+
+  // D'autres pages annoncées sans curseur : relevé incomplet, sans nouvel appel.
+  const noCursor = setup(t, {
+    routes: {
+      '/organization/costs': { ...costs(bucket(NOV_1, [1, 'gpt-live-1'])), has_more: true },
+    },
+  });
+  const cut = await noCursor.read();
+  assert.equal(noCursor.calls.length, 1);
+  assert.equal(cut.ok && cut.snapshot.data?.partial, true);
+
+  // 31 décembre : 31 journées du mois, plus la journée UTC du lendemain à New York -> 2 pages.
+  const all = Array.from({ length: 32 }, (_, i) => bucket(1796083200 + i * DAY, [1, 'gpt-live-1']));
+  const endOfMonth = setup(t, {
+    at: '2027-01-01T03:00:00Z',
+    timeZone: 'America/New_York',
+    routes: (request: { url: string }) => {
+      const pageNo = new URL(request.url).searchParams.get('page') === 'p2' ? 1 : 0;
+      const data = all.slice(pageNo * 31, pageNo * 31 + 31);
+      return {
+        object: 'page',
+        data,
+        has_more: pageNo === 0,
+        next_page: pageNo === 0 ? 'p2' : null,
+      };
+    },
+  });
+  const december = await endOfMonth.read();
+  assert.equal(endOfMonth.calls.length, 2);
+  assert.equal(december.ok && december.snapshot.data?.month, 31);
+  assert.equal(december.ok && december.snapshot.data?.week, 7);
+  assert.equal(december.ok && december.snapshot.data?.today, 1);
 });
 
 test('le relevé expire à minuit chez le foyer, au plus tard après une heure', async (t) => {
@@ -253,9 +375,12 @@ test('mois et jour du foyer : début du mois à Paris, avant le premier jour UTC
   assert.equal(result.snapshot.data?.monthStart, '2026-11-01');
   assert.equal(result.snapshot.data?.week, 0.4);
   assert.equal(result.snapshot.data?.today, null);
-  assert.equal(result.card.items[0]?.value, 'pas encore publié');
-  assert.match(result.presentation.summary, /rien n’est encore publié pour aujourd’hui/u);
-  assert.equal(f.ambient().content?.items[0]?.value, 'pas encore publié');
+  assert.equal(result.card.items[0]?.value, 'rien de publié pour l’instant');
+  assert.match(
+    result.presentation.summary,
+    /aucun montant publié pour aujourd’hui pour l’instant/u,
+  );
+  assert.equal(f.ambient().content?.items[0]?.value, 'rien de publié pour l’instant');
 });
 
 test('mois et jour du foyer : fuseau en retard sur UTC', async (t) => {
