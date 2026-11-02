@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Siri xmlns="http://www.siri.org.uk/siri">
+  <ServiceDelivery>
+    <SituationExchangeDelivery>
+      <Situations>
+        <PtSituationElement>
+          <SituationNumber>ch:1:test:1</SituationNumber>
+          <ValidityPeriod>
+            <StartTime>2026-10-29T05:00:00Z</StartTime>
+            <EndTime>2026-10-29T09:00:00Z</EndTime>
+          </ValidityPeriod>
+          <AlertCause>serviceDisruption</AlertCause>
+          <Priority>3</Priority>
+          <ScopeType>line</ScopeType>
+          <Summary xml:lang="FR">Circulation irrégulière ligne 7</Summary>
+          <PublishingActions>
+            <PublishingAction>
+              <PublishAtScope>
+                <ScopeType>line</ScopeType>
+                <Affects>
+                  <Networks>
+                    <AffectedNetwork>
+                      <AffectedLine>
+                        <LineRef>85:820:7</LineRef>
+                        <PublishedLineName>7</PublishedLineName>
+                      </AffectedLine>
+                      <AffectedLine>
+                        <LineRef>85:820:8</LineRef>
+                        <PublishedLineName>8</PublishedLineName>
+                      </AffectedLine>
+                    </AffectedNetwork>
+                  </Networks>
+                </Affects>
+              </PublishAtScope>
+              <PassengerInformationAction>
+                <TextualContent>
+                  <TextualContentSize>S</TextualContentSize>
+                  <SummaryContent>
+                    <SummaryText xml:lang="FR">Service irrégulier ligne 7</SummaryText>
+                  </SummaryContent>
+                  <ReasonContent>
+                    <ReasonText xml:lang="FR">Cause : incendie</ReasonText>
+                  </ReasonContent>
+                </TextualContent>
+                <TextualContent>
+                  <TextualContentSize>L</TextualContentSize>
+                  <SummaryContent>
+                    <SummaryText xml:lang="FR"
+                      >Circulation irrégulière des bus sur la ligne 7, en raison d’un incendie, avec des retards à prévoir et des suppressions possibles sur toute la journée.</SummaryText
+                    >
+                  </SummaryContent>
+                </TextualContent>
+              </PassengerInformationAction>
+            </PublishingAction>
+          </PublishingActions>
+        </PtSituationElement>
+        <PtSituationElement>
+          <SituationNumber>ch:1:test:2</SituationNumber>
+          <ValidityPeriod>
+            <StartTime>2026-10-29T06:00:00Z</StartTime>
+            <EndTime>2026-10-29T18:00:00Z</EndTime>
+          </ValidityPeriod>
+          <AlertCause>technicalProblem</AlertCause>
+          <Priority>3</Priority>
+          <ScopeType>stopPlace</ScopeType>
+          <Summary xml:lang="FR">Arrêt Chailly-Village déplacé</Summary>
+          <Affects>
+            <StopPlaces>
+              <AffectedStopPlace>
+                <StopPlaceRef>ch:1:sloid:8588432</StopPlaceRef>
+                <PlaceName>Lausanne, Chailly-Village</PlaceName>
+              </AffectedStopPlace>
+            </StopPlaces>
+          </Affects>
+        </PtSituationElement>
+        <PtSituationElement>
+          <SituationNumber>ch:1:test:3</SituationNumber>
+          <ValidityPeriod>
+            <StartTime>2026-10-29T06:30:00Z</StartTime>
+            <EndTime>2026-10-29T08:35:00Z</EndTime>
+          </ValidityPeriod>
+          <AlertCause>serviceDisruption</AlertCause>
+          <Priority>3</Priority>
+          <ScopeType>line</ScopeType>
+          <Summary xml:lang="FR">Circulation irrégulière ligne 121 direction Engelburg</Summary>
+          <PublishingActions>
+            <PublishingAction>
+              <PublishAtScope>
+                <ScopeType>line</ScopeType>
+                <Affects>
+                  <Networks>
+                    <AffectedNetwork>
+                      <AffectedLine>
+                        <LineRef>85:801:2242</LineRef>
+                        <PublishedLineName>121</PublishedLineName>
+                      </AffectedLine>
+                    </AffectedNetwork>
+                  </Networks>
+                </Affects>
+              </PublishAtScope>
+            </PublishingAction>
+          </PublishingActions>
+        </PtSituationElement>
+      </Situations>
+    </SituationExchangeDelivery>
+  </ServiceDelivery>
+</Siri>

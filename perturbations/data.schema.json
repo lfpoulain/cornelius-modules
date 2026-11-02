@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["perturbations", "filtre"],
+  "properties": {
+    "perturbations": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["lignes", "lieux", "texte", "fin", "cause"],
+        "properties": {
+          "lignes": {
+            "type": "array",
+            "maxItems": 6,
+            "items": { "type": "string", "minLength": 1, "maxLength": 24 }
+          },
+          "lieux": {
+            "type": "array",
+            "maxItems": 4,
+            "items": { "type": "string", "minLength": 1, "maxLength": 80 }
+          },
+          "texte": { "type": "string", "minLength": 1, "maxLength": 300 },
+          "fin": { "type": ["string", "null"], "maxLength": 40 },
+          "cause": { "type": ["string", "null"], "maxLength": 120 }
+        }
+      }
+    },
+    "filtre": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lignes", "arrets"],
+      "properties": {
+        "lignes": {
+          "type": "array",
+          "maxItems": 12,
+          "items": { "type": "string", "minLength": 1, "maxLength": 40 }
+        },
+        "arrets": {
+          "type": "array",
+          "maxItems": 12,
+          "items": { "type": "string", "minLength": 1, "maxLength": 40 }
+        }
+      }
+    }
+  }
+}
