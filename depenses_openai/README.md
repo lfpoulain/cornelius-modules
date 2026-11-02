@@ -10,7 +10,7 @@ Le module Dépenses OpenAI dit ce que Cornelius coûte chez OpenAI. Cette fiche 
   - les 3 usages qui coûtent le plus (`gpt-live-1`, `gpt-6-luna`, images…).
 - Si un budget mensuel est réglé, le module signale quand 80 % du budget est atteint, puis quand il est dépassé, sur la carte comme sur l’affichage permanent.
 - Un mois sans dépense affiche « 0,00 $ ce mois-ci » : zéro est une vraie valeur, pas une panne.
-- Les données restent en cache une heure.
+- Les données restent en cache une heure, jamais au-delà de minuit chez le foyer.
 
 ## Jeton requis
 
@@ -41,9 +41,9 @@ Dans **Modules → Dépenses OpenAI → Ajouter une source** :
 - OpenAI publie les coûts avec du retard, parfois plusieurs heures. Tant que rien n’est publié pour la journée, la carte indique « Aujourd’hui : pas encore publié » plutôt que 0,00 $.
 - Les 7 derniers jours peuvent commencer le mois précédent : du 1er au 6, le module lit aussi la fin du mois d’avant, sans la compter dans le total du mois.
 - Les avoirs (montants négatifs) sont déduits. Si OpenAI renvoyait plusieurs devises, la lecture échouerait plutôt que d’additionner des montants incompatibles.
-- Appel vérifié le 31 octobre 2026 avec une vraie clé Admin : `start_time`, `bucket_width=1d`, `limit=31`, `group_by=line_item` et `project_ids` sont acceptés. Les libellés `line_item` ont la forme « modèle, usage » (`gpt-6-luna, input`) ou le nom seul (`gpt-live-1`, `web search tool calls`). La réponse d’exemple des tests reprend ce format, anonymisé (organisation, projet et montants fictifs).
+- Appel vérifié le 31 octobre 2026 avec une vraie clé Admin : `start_time`, `bucket_width=1d`, `limit=31`, `group_by=line_item` et `project_ids` sont acceptés. Le 2 novembre, la lecture depuis la fin du mois précédent a aussi été vérifiée en réel. Les libellés `line_item` ont la forme « modèle, usage » (`gpt-6-luna, input`) ou le nom seul (`gpt-live-1`, `web search tool calls`). La réponse d’exemple des tests reprend ce format, anonymisé (organisation, projet et montants fictifs).
 - Le filtre par projet n’a été essayé qu’avec une organisation à un seul projet.
-- Au plus 3 pages sont lues ; au-delà, la carte indique « Relevé incomplet ».
+- Au plus 3 pages sont lues ; au-delà, la carte indique « Relevé incomplet ». La pagination n’a pas été rencontrée en réel (un mois tient sur une page) : elle n’est couverte que par les tests.
 - En cas de panne, la carte reprend le dernier relevé et l’annonce comme tel.
 - Le solde de crédits n’est pas lu : il n’existe pas d’API officielle connue pour cela.
 - Le module ne remplace pas le plafond de dépense du compte OpenAI.

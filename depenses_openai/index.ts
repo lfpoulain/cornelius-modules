@@ -6,7 +6,7 @@
  */
 import { AddonCollectError, type AddonDefinition } from '#cornelius/addons';
 import { compile } from '#cornelius/validation';
-import { dayIn, dayMs } from '../_lib/temps.js';
+import { dayIn, dayMs, nextMidnight } from '../_lib/temps.js';
 import configSchema from './config.schema.json' with { type: 'json' };
 import dataSchema from './data.schema.json' with { type: 'json' };
 
@@ -248,6 +248,8 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
         partial,
       },
       source: { provider: 'openai-costs', sourceId: context.config.projet ?? 'organisation' },
+      // Une heure au plus, et jamais au-delà de minuit chez le foyer : « aujourd'hui » change.
+      freshMs: Math.min(60 * 60_000, nextMidnight(context.now(), context.timeZone) - context.now()),
     };
   },
   ambient: {
@@ -262,9 +264,9 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
         value: money(data.month, data.currency),
         subtitle:
           level === 'over'
-            ? `Budget de ${budget} dépassé`
+            ? `budget de ${budget} dépassé`
             : level === 'near'
-              ? `Plus de 80 % du budget de ${budget}`
+              ? `plus de 80 % du budget de ${budget}`
               : level === 'ok'
                 ? `sur ${budget} ce mois-ci`
                 : 'ce mois-ci',

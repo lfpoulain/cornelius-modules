@@ -170,6 +170,16 @@ test('pagination : pages suivantes lues, relevé incomplet au-delà de 3 pages',
   assert.match((partial.ok && partial.card.description) || '', /incomplet/u);
 });
 
+test('le relevé expire à minuit chez le foyer, au plus tard après une heure', async (t) => {
+  // 23:30 à Paris : « aujourd’hui » change à minuit, soit 23:00 UTC.
+  const late = setup(t, { at: '2026-11-05T22:30:00Z' });
+  const lateResult = await late.read();
+  assert.equal(lateResult.ok && lateResult.snapshot.validUntil, '2026-11-05T23:00:00.000Z');
+  const noon = setup(t);
+  const noonResult = await noon.read();
+  assert.equal(noonResult.ok && noonResult.snapshot.validUntil, '2026-11-05T13:00:00.000Z');
+});
+
 test('affichage permanent', async (t) => {
   const f = setup(t);
   const result = await f.read();
