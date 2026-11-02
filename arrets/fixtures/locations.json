@@ -1,0 +1,12 @@
+{
+  "stations": [
+    { "id": "8588431", "name": "Lausanne, Bel-Air", "score": null },
+    { "id": "8588432", "name": "Lausanne, Chailly-Village", "score": null },
+    { "id": "8590000", "name": "Genève, Bel-Air", "score": null },
+    { "id": "8588440", "name": "Lausanne, Ouchy-Olympique", "score": null },
+    { "id": "8588441", "name": "Lausanne-Ouchy (lac)", "score": null },
+    { "id": "8588442", "name": "Lausanne, Croix d'Ouchy", "score": null },
+    { "id": "8507000", "name": "Bern", "score": null },
+    { "id": "8507001", "name": "Berneuse (Leysin)", "score": null }
+  ]
+}

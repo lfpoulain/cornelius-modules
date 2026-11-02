@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ville", "arret", "limite"],
+  "properties": {
+    "ville": {
+      "title": "Ville",
+      "description": "Ville où chercher les arrêts ; elle préfixe la recherche et écarte les homonymes. Laisser vide pour chercher partout en Suisse.",
+      "type": ["string", "null"],
+      "maxLength": 40,
+      "examples": ["Lausanne"]
+    },
+    "arret": {
+      "title": "Arrêt habituel",
+      "description": "L'arrêt lu par « mon bus », sans le nommer. Nom exact tel que le donne la recherche, par exemple « Lausanne, Chailly-Village ».",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80,
+      "pattern": "^\\S",
+      "examples": ["Lausanne, Chailly-Village"]
+    },
+    "bureau": {
+      "title": "Destination par défaut (facultatif)",
+      "description": "Sert uniquement quand la question ne nomme pas la destination. Dans tous les autres cas, la destination est demandée à chaque fois. Laisser vide pour la demander toujours.",
+      "type": ["string", "null"],
+      "maxLength": 80,
+      "examples": ["Lausanne, gare"]
+    },
+    "limite": {
+      "title": "Lignes affichées",
+      "description": "Nombre de lignes et directions sur la carte. Chacune n'apparaît qu'une fois, avec son prochain départ.",
+      "type": "integer",
+      "minimum": 3,
+      "maximum": 12
+    }
+  }
+}
