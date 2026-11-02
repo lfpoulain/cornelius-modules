@@ -8,7 +8,7 @@ Le module Dépenses OpenAI dit ce que Cornelius coûte chez OpenAI. Cette fiche 
   - le total du mois en cours, en dollars ;
   - la dépense du jour et des 7 derniers jours ;
   - les 3 usages qui coûtent le plus (`gpt-live-1`, `gpt-6-luna`, images…).
-- Si un budget mensuel est réglé, la carte signale quand 80 % du budget est atteint, puis quand il est dépassé.
+- Si un budget mensuel est réglé, le module signale quand 80 % du budget est atteint, puis quand il est dépassé, sur la carte comme sur l’affichage permanent.
 - Un mois sans dépense affiche « 0,00 $ ce mois-ci » : zéro est une vraie valeur, pas une panne.
 - Les données restent en cache une heure.
 
@@ -37,8 +37,10 @@ Dans **Modules → Dépenses OpenAI → Ajouter une source** :
 
 ## Limites
 
-- **Jours et fuseau horaire** : le mois et « aujourd’hui » sont ceux du foyer (`CORNELIUS_TIMEZONE`). L’API d’OpenAI ne compte que par journée UTC (`bucket_width=1d`) : le module prend les journées UTC de même date. À Paris, la journée d’OpenAI commence donc à 1 h (heure d’hiver) ou 2 h (heure d’été). Pendant ces premières heures du mois, il annonce 0,00 $ sans interroger OpenAI. La carte et la phrase le précisent (« par journée UTC »).
-- OpenAI publie les coûts avec du retard, parfois plusieurs heures.
+- **Jours et fuseau horaire** : le mois et « aujourd’hui » sont ceux du foyer (`CORNELIUS_TIMEZONE`). L’API d’OpenAI ne compte que par journée UTC (`bucket_width=1d`) : le module prend les journées UTC de même date. À Paris, la journée d’OpenAI commence donc à 1 h (heure d’hiver) ou 2 h (heure d’été). La carte et la phrase le précisent (« par journée UTC »).
+- OpenAI publie les coûts avec du retard, parfois plusieurs heures. Tant que rien n’est publié pour la journée, la carte indique « Aujourd’hui : pas encore publié » plutôt que 0,00 $.
+- Les 7 derniers jours peuvent commencer le mois précédent : du 1er au 6, le module lit aussi la fin du mois d’avant, sans la compter dans le total du mois.
+- Les avoirs (montants négatifs) sont déduits. Si OpenAI renvoyait plusieurs devises, la lecture échouerait plutôt que d’additionner des montants incompatibles.
 - Appel vérifié le 31 octobre 2026 avec une vraie clé Admin : `start_time`, `bucket_width=1d`, `limit=31`, `group_by=line_item` et `project_ids` sont acceptés. Les libellés `line_item` ont la forme « modèle, usage » (`gpt-6-luna, input`) ou le nom seul (`gpt-live-1`, `web search tool calls`). La réponse d’exemple des tests reprend ce format, anonymisé (organisation, projet et montants fictifs).
 - Le filtre par projet n’a été essayé qu’avec une organisation à un seul projet.
 - Au plus 3 pages sont lues ; au-delà, la carte indique « Relevé incomplet ».
@@ -49,7 +51,7 @@ Dans **Modules → Dépenses OpenAI → Ajouter une source** :
 
 ## Outil vocal et affichage permanent
 
-L’outil s’appelle `depenses_openai__read`. Avec « Afficher en permanence sur le miroir », le miroir montre le total du mois, le budget s’il est réglé, et la dépense du jour.
+L’outil s’appelle `depenses_openai__read`. Avec « Afficher en permanence sur le miroir », le miroir montre le total du mois, le budget s’il est réglé (avec l’alerte à 80 % et 100 %), et la dépense du jour.
 
 ## Auteur
 

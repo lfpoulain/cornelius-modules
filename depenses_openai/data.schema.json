@@ -6,9 +6,9 @@
   "required": ["currency", "month", "today", "week", "byLine", "budget", "monthStart", "partial"],
   "properties": {
     "currency": { "type": "string", "pattern": "^[a-z]{3}$" },
-    "month": { "type": "number", "minimum": 0 },
-    "today": { "type": "number", "minimum": 0 },
-    "week": { "type": "number", "minimum": 0 },
+    "month": { "type": "number" },
+    "today": { "type": ["number", "null"] },
+    "week": { "type": "number" },
     "byLine": {
       "type": "array",
       "maxItems": 5,

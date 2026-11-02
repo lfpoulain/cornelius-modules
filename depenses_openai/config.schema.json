@@ -7,14 +7,14 @@
   "properties": {
     "projet": {
       "title": "Projet OpenAI",
-      "description": "Identifiant du projet de Cornelius (proj_…), dans Settings → Projects. Vide : toute l'organisation.",
+      "description": "Identifiant du projet de Cornelius (proj_…), dans Settings → Projects. Vide : toute l’organisation.",
       "type": ["string", "null"],
       "pattern": "^proj_[A-Za-z0-9]{8,64}$",
       "examples": ["proj_AbCdEf1234567890"]
     },
     "budgetMensuel": {
       "title": "Budget mensuel ($)",
-      "description": "Montant en dollars au-delà duquel une alerte est donnée. Vide : pas d'alerte.",
+      "description": "Montant en dollars au-delà duquel une alerte est donnée. Vide : pas d’alerte.",
       "type": ["number", "null"],
       "minimum": 0.5,
       "maximum": 10000

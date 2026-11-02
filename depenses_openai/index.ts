@@ -15,7 +15,7 @@ type DepensesConfig = { projet: string | null; budgetMensuel: number | null };
 type DepensesData = {
   currency: string;
   month: number;
-  today: number;
+  today: number | null;
   week: number;
   byLine: { label: string; amount: number }[];
   budget: number | null;
@@ -83,6 +83,19 @@ const money = (n: number, currency: string) =>
 const lineLabel = (item: string | null | undefined) =>
   item ? (item.split(',')[0] ?? item).trim().slice(0, 80) || 'Autre' : 'Autre';
 
+const budgetLevel = (data: DepensesData) =>
+  data.budget === null
+    ? 'none'
+    : data.month >= data.budget
+      ? 'over'
+      : data.month >= data.budget * 0.8
+        ? 'near'
+        : 'ok';
+
+/** Un jour sans montant publié n'est pas un jour à 0 $ : les coûts arrivent avec retard. */
+const todayText = (data: DepensesData) =>
+  data.today === null ? 'pas encore publié' : money(data.today, data.currency);
+
 const addon: AddonDefinition<DepensesConfig, DepensesData> = {
   id: 'depenses_openai',
   apiVersion: 1,
@@ -132,15 +145,15 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
   async collect(context) {
     const key = context.secret('adminKey');
     if (!key) throw new AddonCollectError('config_invalid', 'Clé Admin OpenAI absente.');
-    const nowS = Math.floor(context.now() / 1000);
     // Jour et mois du foyer, puis compartiments UTC de même date (l'API ne compte qu'en UTC).
     const todayDay = dayIn(context.now(), context.timeZone);
     const today0 = new Date(todayDay * dayMs);
     const monthStartS = Date.UTC(today0.getUTCFullYear(), today0.getUTCMonth(), 1) / 1000;
     const todayS = todayDay * DAY_S;
     const weekS = todayS - 6 * DAY_S;
+    // Du 1er au 6 du mois, les 7 derniers jours commencent le mois précédent.
     const params = new URLSearchParams({
-      start_time: String(monthStartS),
+      start_time: String(Math.min(monthStartS, weekS)),
       bucket_width: '1d',
       limit: '31',
       group_by: 'line_item',
@@ -149,13 +162,13 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
 
     let month = 0;
     let today = 0;
+    let todayPublished = false;
     let week = 0;
-    let currency = 'usd';
+    let currency: string | null = null;
     const lines = new Map<string, number>();
     let page: string | null = null;
     let partial = false;
-    // Premières heures du mois chez le foyer : le premier jour UTC n'a pas commencé, rien à lire.
-    for (let n = 0; monthStartS <= nowS && n < MAX_PAGES; n++) {
+    for (let n = 0; n < MAX_PAGES; n++) {
       if (page) params.set('page', page);
       const response = await context.http.fetch({
         url: `${BASE}?${params.toString()}`,
@@ -196,11 +209,19 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
         // Jour UTC déjà commencé mais pas encore chez le foyer (fuseau en retard) : ignoré.
         if (bucket.start_time > todayS) continue;
         for (const result of bucket.results) {
-          const value = Math.max(0, result.amount.value);
-          currency = result.amount.currency.toLowerCase();
-          month += value;
+          // Les avoirs (montants négatifs) sont déduits.
+          const value = result.amount.value;
+          const resultCurrency = result.amount.currency.toLowerCase();
+          if (currency !== null && resultCurrency !== currency)
+            throw new AddonCollectError('malformed', 'Coûts OpenAI en plusieurs devises.');
+          currency = resultCurrency;
           if (bucket.start_time >= weekS) week += value;
-          if (bucket.start_time >= todayS) today += value;
+          if (bucket.start_time >= todayS) {
+            today += value;
+            todayPublished = true;
+          }
+          if (bucket.start_time < monthStartS) continue;
+          month += value;
           const label = lineLabel(result.line_item);
           lines.set(label, (lines.get(label) ?? 0) + value);
         }
@@ -216,9 +237,10 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
       .slice(0, 5);
     return {
       data: {
-        currency,
+        currency: currency ?? 'usd',
         month: round2(month),
-        today: round2(today),
+        // null : OpenAI n'a encore rien publié pour aujourd'hui.
+        today: todayPublished ? round2(today) : null,
         week: round2(week),
         byLine,
         budget: context.config.budgetMensuel,
@@ -232,15 +254,21 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
     present(snapshot) {
       const data = snapshot.data;
       if (!data) throw new Error('Aucune dépense à afficher.');
+      const level = budgetLevel(data);
+      const budget = data.budget === null ? '' : money(data.budget, data.currency);
       return {
         layout: 'metric',
         title: 'Dépenses OpenAI',
         value: money(data.month, data.currency),
         subtitle:
-          data.budget !== null
-            ? `sur ${money(data.budget, data.currency)} ce mois-ci`
-            : 'ce mois-ci',
-        items: [{ label: 'Aujourd’hui', value: money(data.today, data.currency) }],
+          level === 'over'
+            ? `Budget de ${budget} dépassé`
+            : level === 'near'
+              ? `Plus de 80 % du budget de ${budget}`
+              : level === 'ok'
+                ? `sur ${budget} ce mois-ci`
+                : 'ce mois-ci',
+        items: [{ label: 'Aujourd’hui', value: todayText(data) }],
       };
     },
   },
@@ -248,18 +276,18 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
     const data = snapshot.data;
     if (!data) throw new Error('Aucune dépense à présenter.');
     const stale = snapshot.status === 'stale';
-    const over = data.budget !== null && data.month >= data.budget;
-    const near = data.budget !== null && !over && data.month >= data.budget * 0.8;
+    const level = budgetLevel(data);
+    const budget = data.budget === null ? '' : money(data.budget, data.currency);
     const budgetText =
-      data.budget === null
+      level === 'none'
         ? null
-        : over
-          ? `Budget de ${money(data.budget, data.currency)} dépassé.`
-          : near
-            ? `Plus de 80 % du budget de ${money(data.budget, data.currency)}.`
-            : `Budget : ${money(data.budget, data.currency)}.`;
+        : level === 'over'
+          ? `Budget de ${budget} dépassé.`
+          : level === 'near'
+            ? `Plus de 80 % du budget de ${budget}.`
+            : `Budget : ${budget}.`;
     const items = [
-      { label: 'Aujourd’hui', value: money(data.today, data.currency) },
+      { label: 'Aujourd’hui', value: todayText(data) },
       { label: '7 derniers jours', value: money(data.week, data.currency) },
       ...data.byLine
         .slice(0, 3)
@@ -278,8 +306,11 @@ const addon: AddonDefinition<DepensesConfig, DepensesData> = {
       items,
       summary: [
         stale ? 'Dernier relevé connu :' : null,
-        `${money(data.month, data.currency)} dépensés chez OpenAI depuis le début du mois,`,
-        `dont ${money(data.today, data.currency)} aujourd’hui.`,
+        data.today === null
+          ? `${money(data.month, data.currency)} dépensés chez OpenAI depuis le début du mois ;` +
+            ' rien n’est encore publié pour aujourd’hui.'
+          : `${money(data.month, data.currency)} dépensés chez OpenAI depuis le début du mois,` +
+            ` dont ${money(data.today, data.currency)} aujourd’hui.`,
         budgetText,
         'Les montants arrivent avec du retard et suivent les journées UTC d’OpenAI.',
       ]
