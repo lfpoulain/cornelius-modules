@@ -21,8 +21,8 @@ type DepensesData = {
   byLine: { label: string; amount: number }[];
   budget: number | null;
   monthStart: string;
-  /** Jour du foyer au moment du relevé (absent des relevés de la version 1.0.0). */
-  day?: string;
+  /** Jour du foyer au moment du relevé. */
+  day: string;
   partial: boolean;
 };
 
@@ -95,12 +95,12 @@ const MONTHS = [
 
 const round2 = (n: number) => Math.round(n * 100) / 100;
 
-/** 1234.5 -> « 1 234,50 $ » (espace insécable entre les milliers). */
+/** 1234.5 -> « 1 234,50 $ » (espaces insécables entre les milliers et avant la devise). */
 function money(n: number, currency: string) {
   const [int = '0', dec = '00'] = Math.abs(n).toFixed(2).split('.');
   const sign = n < 0 && `${int}${dec}` !== '000' ? '-' : '';
-  const grouped = int.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-  return `${sign}${grouped},${dec} ${currency === 'usd' ? '$' : currency.toUpperCase()}`;
+  const grouped = int.replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0');
+  return `${sign}${grouped},${dec}\u00a0${currency === 'usd' ? '$' : currency.toUpperCase()}`;
 }
 
 /** « 2026-11-01 » -> « 1er novembre ». */
@@ -115,14 +115,13 @@ const dayName = (day: string) => {
  */
 function period(data: DepensesData, context: { now(): number; timeZone: string }) {
   const now = dateIn(context.now(), context.timeZone);
-  const day = data.day ?? now;
-  const current = day === now;
+  const current = data.day === now;
   const sameMonth = data.monthStart.slice(0, 7) === now.slice(0, 7);
   const monthName = MONTHS[Number(data.monthStart.slice(5, 7)) - 1] ?? '';
   return {
     current,
-    dayLabel: current ? 'Aujourd’hui' : `Le ${dayName(day)}`,
-    daySpoken: current ? 'aujourd’hui' : `le ${dayName(day)}`,
+    dayLabel: current ? 'Aujourd’hui' : `Le ${dayName(data.day)}`,
+    daySpoken: current ? 'aujourd’hui' : `le ${dayName(data.day)}`,
     month: sameMonth ? 'ce mois-ci' : `en ${monthName}`,
     monthSpoken: sameMonth ? 'depuis le début du mois' : `en ${monthName}`,
   };

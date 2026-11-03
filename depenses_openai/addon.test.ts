@@ -6,7 +6,7 @@ import payload from './fixtures/costs.json' with { type: 'json' };
 
 // 5 novembre 2026, 12:00 UTC : le fixture couvre le 1er (2,00 $) et le 5 (0,18 $).
 const AT = '2026-11-05T12:00:00Z';
-const AMBIENT_VALUE = '2,18 $';
+const AMBIENT_VALUE = '2,18\u00a0$';
 const KEY = 'sk-admin-test-0000000000000000';
 
 const setup = (t: { after(fn: () => void): void }, extra: Record<string, unknown> = {}) =>
@@ -64,8 +64,8 @@ test('totaux du mois, du jour, de la semaine et par modèle', async (t) => {
     label: 'gpt-live-1',
     amount: 2,
   });
-  assert.equal(result.card.primaryValue, '2,18 $ ce mois-ci');
-  assert.match(result.presentation.summary, /0,18 \$/u);
+  assert.equal(result.card.primaryValue, '2,18\u00a0$ ce mois-ci');
+  assert.match(result.presentation.summary, /0,18\u00a0\$/u);
 });
 
 test('semaine à cheval sur deux mois', async (t) => {
@@ -113,7 +113,7 @@ test('les avoirs sont déduits', async (t) => {
   assert.deepEqual(result.ok && result.snapshot.data?.byLine, [{ label: 'gpt-live-1', amount: 2 }]);
   assert.match(
     (result.ok && result.presentation.summary) || '',
-    /avec un avoir de 0,50 \$ aujourd’hui/u,
+    /avec un avoir de 0,50\u00a0\$ aujourd’hui/u,
   );
   assert.deepEqual(f.contract(result), []);
 });
@@ -124,7 +124,7 @@ test('autre devise que le dollar : pas d’alerte de budget, budget toujours en 
     routes: { '/organization/costs': costs(bucket(NOV_1, [5, 'gpt-live-1', 'eur'])) },
   });
   const result = await f.read();
-  assert.equal(result.ok && result.card.primaryValue, '5,00 EUR ce mois-ci');
+  assert.equal(result.ok && result.card.primaryValue, '5,00\u00a0EUR ce mois-ci');
   assert.equal(result.ok && result.card.subtitle, null);
 });
 
@@ -141,7 +141,7 @@ test('milliers séparés par une espace insécable', async (t) => {
     routes: { '/organization/costs': costs(bucket(NOV_1, [12345.678, 'gpt-live-1'])) },
   });
   const result = await f.read();
-  assert.equal(result.ok && result.card.primaryValue, '12\u00a0345,68 $ ce mois-ci');
+  assert.equal(result.ok && result.card.primaryValue, '12\u00a0345,68\u00a0$ ce mois-ci');
 });
 
 test('relevé repris après minuit : daté au lieu d’« aujourd’hui »', async (t) => {
@@ -157,16 +157,16 @@ test('relevé repris après minuit : daté au lieu d’« aujourd’hui »', asy
   const result = await f.read();
   assert.equal(result.ok && result.stale, true);
   if (!result.ok) return;
-  assert.equal(result.card.primaryValue, '3,00 $ en octobre');
+  assert.equal(result.card.primaryValue, '3,00\u00a0$ en octobre');
   assert.equal(result.card.items[0]?.label, 'Le 31 octobre');
   assert.match(
     result.presentation.summary,
-    /3,00 \$ dépensés chez OpenAI en octobre, dont 3,00 \$ le 31 octobre\./u,
+    /3,00\u00a0\$ dépensés chez OpenAI en octobre, dont 3,00\u00a0\$ le 31 octobre\./u,
   );
   assert.doesNotMatch(result.presentation.summary, /aujourd’hui|début du mois/u);
   const ambient = f.ambient().content;
   assert.equal(ambient?.items[0]?.label, 'Le 31 octobre');
-  assert.equal(ambient?.subtitle, 'sur 10,00 $ en octobre');
+  assert.equal(ambient?.subtitle, 'sur 10,00\u00a0$ en octobre');
 });
 
 test('l’affichage permanent se recalcule à minuit', async (t) => {
@@ -227,7 +227,7 @@ test('budget : 80 % puis dépassé, carte et affichage permanent', async (t) => 
 
   const ok = setup(t, { config: { projet: null, budgetMensuel: 10 } });
   await ok.read();
-  assert.equal(ok.ambient().content?.subtitle, 'sur 10,00 $ ce mois-ci');
+  assert.equal(ok.ambient().content?.subtitle, 'sur 10,00\u00a0$ ce mois-ci');
 });
 
 test('pagination : pages suivantes lues, relevé incomplet au-delà de 3 pages', async (t) => {
@@ -353,7 +353,7 @@ test('zéro dépense reste un succès utile', async (t) => {
   });
   const result = await f.read();
   assert.equal(result.ok && result.snapshot.status, 'ready');
-  assert.equal(result.ok && result.card.primaryValue, '0,00 $ ce mois-ci');
+  assert.equal(result.ok && result.card.primaryValue, '0,00\u00a0$ ce mois-ci');
   assert.deepEqual(f.contract(result), []);
 });
 
@@ -371,7 +371,7 @@ test('mois et jour du foyer : début du mois à Paris, avant le premier jour UTC
   );
   assert.equal(result.ok, true);
   if (!result.ok) return;
-  assert.equal(result.card.primaryValue, '0,00 $ ce mois-ci');
+  assert.equal(result.card.primaryValue, '0,00\u00a0$ ce mois-ci');
   assert.equal(result.snapshot.data?.monthStart, '2026-11-01');
   assert.equal(result.snapshot.data?.week, 0.4);
   assert.equal(result.snapshot.data?.today, null);

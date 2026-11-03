@@ -3,7 +3,17 @@
   "title": "DepensesOpenaiData v1",
   "type": "object",
   "additionalProperties": false,
-  "required": ["currency", "month", "today", "week", "byLine", "budget", "monthStart", "partial"],
+  "required": [
+    "currency",
+    "month",
+    "today",
+    "week",
+    "byLine",
+    "budget",
+    "monthStart",
+    "day",
+    "partial"
+  ],
   "properties": {
     "currency": { "type": "string", "pattern": "^[a-z]{3}$" },
     "month": { "type": "number" },
