@@ -8,7 +8,7 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 **Ajouté**
 
-- Module **Temps de trajet** (`tempsdetrajet`, 1.1.0) : l’heure d’arrivée estimée d’un trajet en voiture avec le trafic en direct, d’après l’API TomTom (clé gratuite, 20 000 itinéraires et 2 500 recherches par mois). Départ et arrivée choisis par recherche d’adresse, points arrondis à environ 100 mètres, affichage permanent possible. Auteur : Bunchfr.
+- Module **Temps de trajet** (`tempsdetrajet`, 1.0.0) : l’heure d’arrivée estimée d’un trajet en voiture avec le trafic en direct, d’après l’API TomTom (clé gratuite, 20 000 itinéraires et 2 500 recherches par mois). Départ et arrivée choisis par recherche d’adresse, points arrondis à environ 100 mètres, affichage permanent possible. Auteur : Bunchfr.
 
 ### 2026-10-29 : licence MIT
 
