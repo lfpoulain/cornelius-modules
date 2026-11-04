@@ -11,7 +11,7 @@ Le module Temps de trajet donne l’heure d’arrivée estimée d’un trajet en
 
 ## Jeton requis
 
-Le module a besoin d’une **clé API TomTom gratuite**, à créer sur [developer.tomtom.com](https://developer.tomtom.com/) : un compte, puis une clé depuis le tableau de bord. D’après la [page des tarifs](https://docs.tomtom.com/pricing), la formule gratuite ne demande pas de carte bancaire et couvre, **chaque mois**, 20 000 requêtes d’itinéraire (Routing) et 2 500 requêtes de recherche d’adresse (Search). C’est un usage limité : voir « Quota gratuit » plus bas. Ajoutez la clé dans le fichier `.env` puis redémarrez Cornelius :
+Le module a besoin d’une clé TomTom (gratuite à la date de rédaction, voir les limites), à demander sur [developer.tomtom.com](https://developer.tomtom.com/). Ajoutez-la dans le fichier `.env` puis redémarrez Cornelius :
 
 ```ini
 CORNELIUS_TOMTOM_KEY=votre-cle
@@ -21,16 +21,16 @@ Elle peut aussi se saisir dans **Mise en route → Clés et jetons**. Elle n’e
 
 ## Réglages d’une source
 
-Dans **Modules → Temps de trajet → Ajouter une source** :
+Dans **Modules → Trajet → Ajouter une source** :
 
 | Réglage | Effet | Par défaut |
 | --- | --- | --- |
 | Départ | Se choisit par **recherche d’adresse** : tapez une rue ou un lieu, puis **Chercher** et cliquez le résultat | Place de la Bourse, Bordeaux (exemple) |
 | Arrivée | Même recherche | Gare Saint-Jean, Bordeaux (exemple) |
 
-Les valeurs par défaut sont des repères de démonstration : remplacez-les par vos adresses. La recherche demande au moins 3 lettres, ne cherche qu’en France et propose six résultats au plus.
+Les valeurs par défaut sont des repères de démonstration : remplacez-les par vos adresses. La recherche demande au moins 3 lettres, ne cherche qu’en France et propose six résultats au plus. Une même saisie est gardée 10 minutes en mémoire, ce qui épargne le quota.
 
-**Confidentialité.** L’adresse tapée part chez TomTom au moment de la recherche. Le point retenu est ensuite **arrondi à environ 100 mètres** avant d’être enregistré et envoyé pour calculer le trajet : TomTom reçoit un repère proche, pas la porte exacte. Pour ne pas lui donner non plus l’adresse tapée, cherchez une rue ou un lieu voisin plutôt que votre numéro.
+**Confidentialité.** L’adresse tapée part chez TomTom au moment de la recherche. Le point retenu est ensuite **arrondi à environ 100 mètres** avant d’être enregistré et envoyé pour calculer le trajet : TomTom reçoit un repère proche, pas la porte exacte. Un point saisi à la main avec plus de précision est arrondi de la même façon avant l’envoi. Pour ne pas lui donner non plus l’adresse tapée, cherchez une rue ou un lieu voisin plutôt que votre numéro.
 
 Une adresse de domicile est une donnée personnelle : TomTom reçoit la recherche et le point arrondi pour fournir le service, et le libellé choisi reste enregistré dans les réglages de la source, sur votre installation. Il n’est pas affiché sur le miroir.
 
@@ -49,35 +49,22 @@ Le miroir affiche quatre sources permanentes au plus. Avec la reconnaissance dé
 - Le module annonce une durée de route, pas un temps garanti : les accidents et les ralentissements soudains ne sont connus qu’au relevé suivant.
 - Le départ est toujours « maintenant ». Une heure de départ fixe n’est pas gérée.
 - Le module ne change pas de destination tout seul selon l’heure : une source par destination, choisie à la voix ou affichée en permanence.
-- Le retard dû au trafic vient du champ `trafficDelayInSeconds` de TomTom. S’il manque, il se déduit de la durée sans trafic ; si celle-ci manque aussi, il n’est pas affiché.
-- Les sources créées avec la version 1 (coordonnées saisies à la main) sont reprises automatiquement, leurs points arrondis à environ 100 mètres ; leur départ et leur arrivée s’affichent « Départ » et « Arrivée » jusqu’à la prochaine recherche. Si leurs réglages sont illisibles, la source retrouve les repères de démonstration : refaites alors la recherche.
+- La recherche d’adresse utilise l’API de recherche de TomTom, en plus de l’API de calcul d’itinéraire. Son quota gratuit n’est pas vérifié ici.
+- Le palier gratuit annoncé sur la [page des tarifs TomTom](https://docs.tomtom.com/pricing) est de 20 000 requêtes par mois pour le Routing. Ses conditions d’usage et ce qui arrive au-delà ne figurent pas sur cette page : lisez les conditions de TomTom avant de l’utiliser.
+- Le retard affiché est l’écart entre la durée avec trafic et la durée sans trafic (`noTrafficTravelTimeInSeconds`), pour que « sans trafic + retard = durée » reste vrai sur la carte. À défaut de durée sans trafic, le champ `trafficDelayInSeconds` de TomTom (les incidents du moment) est utilisé ; sinon le retard n’est pas affiché.
 - En cas de panne, le dernier relevé est gardé et annoncé comme « dernier relevé connu ».
-- **Formats de réponse à valider.** Les tests utilisent des réponses d’exemple écrites d’après la documentation de TomTom (`fixtures/route.json` et `fixtures/search.json`), pas des réponses réelles. Avant de compter sur le module, faites **Tester** dans l’administration avec votre clé, puis une recherche d’adresse : une réponse de forme différente donne « Réponse illisible », ou aucun résultat, jamais une durée ni une adresse inventée.
-
-## Quota gratuit
-
-Vérifié sur la [page des tarifs](https://docs.tomtom.com/pricing) et la [FAQ](https://docs.tomtom.com/platform/documentation/status-and-support/faqs) de TomTom le 30 octobre 2026. Ces conditions peuvent changer : relisez-les avant de compter dessus.
-
-- **Gratuit** : 20 000 requêtes d’itinéraire et 2 500 recherches d’adresse par mois, sans carte bancaire.
-- **Au-delà** : les requêtes sont refusées (erreur 429 chez TomTom). Le module affiche alors « Quota TomTom atteint » et garde le dernier relevé. Les conditions exactes au-delà du quota gratuit figurent chez TomTom, pas ici.
-- **Ce que consomme le module** : une requête d’itinéraire au plus toutes les 5 minutes par source, et seulement pendant qu’une personne est devant le miroir, soit 12 par heure et par source au maximum. Une recherche d’adresse ne part que lorsque vous cliquez sur **Chercher** dans les réglages.
-- **Usage commercial** : la FAQ de TomTom l’autorise pour la formule gratuite ; les conditions détaillées sont dans ses conditions générales, à lire vous-même.
-- TomTom classe l’API de recherche utilisée ici (Search) comme de génération précédente et recommande Places Search pour les nouveaux projets : elle peut un jour disparaître.
+- **Réponses de référence.** Les tests s’appuient sur deux réponses réelles de TomTom, enregistrées le 2 novembre 2026 sur des lieux publics : un itinéraire de la gare Saint-Jean vers le centre de Bordeaux (`fixtures/route.json`) et la recherche « gare saint-jean bordeaux » (`fixtures/search.json`). Si TomTom change la forme de ses réponses, le module affiche « Réponse illisible », ou ne propose aucun résultat, jamais une durée ni une adresse inventée.
 
 ## Sécurité
 
-- La clé TomTom n'est lue que par Cornelius (variable d'environnement ou saisie dans l'administration). Le module ne la cite dans aucun message d'erreur, y compris en cas de panne réseau.
-- Utilisez une clé réservée à Cornelius, et renouvelez-la si vous pensez qu'elle a fuité. TomTom l'attend dans l'adresse de la requête : évitez de journaliser les adresses des requêtes sortantes.
+- La clé TomTom n’est lue que par Cornelius (variable d’environnement ou saisie dans l’administration). Le module ne la cite dans aucun message d’erreur, y compris en cas de panne réseau.
+- Utilisez une clé réservée à Cornelius, et renouvelez-la si vous pensez qu’elle a fuité. TomTom l’attend dans l’adresse de la requête : évitez de journaliser les adresses des requêtes sortantes.
 - Seuls deux services TomTom sont appelés (recherche et itinéraire), en HTTPS. Les réponses sont validées, limitées en taille et en durée ; une réponse inattendue donne une erreur, jamais une valeur devinée.
 - Les textes reçus de TomTom (libellés, villes) sont nettoyés des caractères de contrôle et limités en longueur. La recherche est limitée à 120 caractères.
 
 ## Outil vocal et affichage permanent
 
 L’outil s’appelle `tempsdetrajet__read`. Avec « Afficher en permanence sur le miroir », le miroir montre « Arrivée 8 h 42 » en grand, la durée en dessous, puis jusqu’à trois lignes : trafic, durée sans trafic et distance.
-
-## Auteur
-
-[Bunchfr](https://github.com/Bunchfr), avec l’aide de Claude.
 
 ## Voir aussi
 
