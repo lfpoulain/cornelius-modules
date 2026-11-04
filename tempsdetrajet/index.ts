@@ -16,13 +16,6 @@ type TrajetConfig = {
   destination: string;
   destinationLabel: string;
 };
-/** Réglages de la version 1 : quatre nombres saisis à la main. */
-type TrajetConfigV1 = {
-  originLatitude: number;
-  originLongitude: number;
-  destinationLatitude: number;
-  destinationLongitude: number;
-};
 type TrajetData = {
   travelSeconds: number;
   freeFlowSeconds: number | null;
@@ -113,28 +106,18 @@ const approximate = (value: number) => value.toFixed(3);
 
 const pointPattern = /^(-?\d{1,2}\.\d+),(-?\d{1,3}\.\d+)$/u;
 
-/** « 44.84130,-0.56930 » pour l'adresse du service, ou null si le point est hors du globe. */
+/**
+ * « 44.841,-0.569 » pour l'adresse du service, ou null si le point est hors du globe. Le point
+ * est arrondi ici aussi, comme celui de la recherche : un réglage saisi à la main ou ancien ne
+ * donne jamais à TomTom plus de précision que l'arrondi annoncé.
+ */
 function readPoint(value: string): string | null {
   const match = pointPattern.exec(value);
   if (!match) return null;
   const latitude = Number(match[1]);
   const longitude = Number(match[2]);
   if (Math.abs(latitude) > 90 || Math.abs(longitude) > 180) return null;
-  return `${latitude.toFixed(5)},${longitude.toFixed(5)}`;
-}
-
-/**
- * Enveloppe un appel réseau : une panne de transport (délai, DNS, taille dépassée) devient une
- * erreur au message fixe. L'erreur d'origine n'est jamais relayée, car son texte peut reprendre
- * l'adresse demandée, donc la clé. Une annulation voulue (signal) garde son erreur d'origine.
- */
-async function guarded<T>(call: () => Promise<T>, signal?: AbortSignal): Promise<T> {
-  try {
-    return await call();
-  } catch (error) {
-    if (error instanceof AddonCollectError || signal?.aborted) throw error;
-    throw new AddonCollectError('unavailable', 'TomTom est injoignable.', true);
-  }
+  return `${approximate(latitude)},${approximate(longitude)}`;
 }
 
 /** Un texte venu du fournisseur : sans caractère de contrôle, espaces réduits. */
@@ -208,7 +191,7 @@ const defaultConfig: TrajetConfig = {
 const addon: AddonDefinition<TrajetConfig, TrajetData> = {
   id: 'tempsdetrajet',
   apiVersion: 1,
-  version: '1.1.0',
+  version: '1.0.0',
   minCoreVersion: '0.2.0',
   sourceLabel: 'TomTom',
   display: {
@@ -228,31 +211,9 @@ const addon: AddonDefinition<TrajetConfig, TrajetData> = {
       note: 'gratuit',
     },
   ],
-  configVersion: 2,
+  configVersion: 1,
   configSchema,
   configDefaults: defaultConfig,
-  // Version 1 : quatre nombres. Les points sont arrondis comme ceux de la recherche (environ
-  // 100 m). Si un nombre manque ou n'en est pas un, on revient aux repères de démonstration :
-  // la personne refait la recherche, plutôt que de voir la migration échouer.
-  configMigrate(fromVersion, config) {
-    if (fromVersion >= 2) return config as TrajetConfig;
-    const old = config as Partial<TrajetConfigV1>;
-    const numbers = [
-      old.originLatitude,
-      old.originLongitude,
-      old.destinationLatitude,
-      old.destinationLongitude,
-    ];
-    if (!numbers.every((value) => typeof value === 'number' && Number.isFinite(value)))
-      return { ...defaultConfig };
-    const [oLat, oLon, dLat, dLon] = numbers as number[];
-    return {
-      origin: `${approximate(oLat!)},${approximate(oLon!)}`,
-      originLabel: 'Départ',
-      destination: `${approximate(dLat!)},${approximate(dLon!)}`,
-      destinationLabel: 'Arrivée',
-    };
-  },
   search: {
     fields: [
       {
@@ -275,19 +236,17 @@ const addon: AddonDefinition<TrajetConfig, TrajetData> = {
       if (!key) throw new AddonCollectError('config_invalid', 'Clé TomTom manquante.');
       const query = (input.query ?? '').trim().slice(0, maxQueryLength).trim();
       if (query.length < 3) return [];
-      const response = await guarded(
-        () =>
-          context.http.fetch({
-            url:
-              `${searchUrl}/${encodeURIComponent(query)}.json?key=${encodeURIComponent(key)}` +
-              '&limit=6&countrySet=FR&language=fr-FR',
-            method: 'GET',
-            signal: context.signal,
-            timeoutMs: 5000,
-            maxBytes: 128 * 1024,
-          }),
-        context.signal,
-      );
+      const response = await context.http.fetch({
+        url:
+          `${searchUrl}/${encodeURIComponent(query)}.json?key=${encodeURIComponent(key)}` +
+          '&limit=6&countrySet=FR&language=fr-FR',
+        method: 'GET',
+        signal: context.signal,
+        timeoutMs: 5000,
+        maxBytes: 128 * 1024,
+        // Une même saisie revient (frappe répétée, deux sources) : le cache du cœur épargne le quota.
+        cacheMs: 10 * minute,
+      });
       if (response.status !== 200) failFor(response.status, 'Recherche d’adresse refusée.');
       let payload: unknown;
       try {
@@ -302,6 +261,8 @@ const addon: AddonDefinition<TrajetConfig, TrajetData> = {
         // Un résultat sans position exploitable est écarté : il n'est jamais deviné.
         if (!validateSearchResult(result)) continue;
         const id = `${approximate(result.position.lat)},${approximate(result.position.lon)}`;
+        // Deux lieux au même point arrondi donnent le même réglage enregistré : un seul suffit,
+        // et l'administration utilise l'id comme clé de liste.
         if (found.has(id)) continue;
         const address = clean(result.address?.freeformAddress);
         const name = clean(result.poi?.name);
@@ -352,17 +313,13 @@ const addon: AddonDefinition<TrajetConfig, TrajetData> = {
       // Demande aussi la durée sans trafic, pour dire de combien le trafic retarde.
       'computeTravelTimeFor=all',
     ].join('&');
-    const response = await guarded(
-      () =>
-        context.http.fetch({
-          url: `${baseUrl}/${places}/json?${query}`,
-          method: 'GET',
-          signal: context.signal,
-          timeoutMs: 5000,
-          maxBytes: 256 * 1024,
-        }),
-      context.signal,
-    );
+    const response = await context.http.fetch({
+      url: `${baseUrl}/${places}/json?${query}`,
+      method: 'GET',
+      signal: context.signal,
+      timeoutMs: 5000,
+      maxBytes: 256 * 1024,
+    });
     if (response.status !== 200)
       failFor(
         response.status,
@@ -378,10 +335,13 @@ const addon: AddonDefinition<TrajetConfig, TrajetData> = {
       throw new AddonCollectError('malformed', 'Itinéraire TomTom invalide.');
     const summary = payload.routes[0]!.summary;
     const freeFlow = summary.noTrafficTravelTimeInSeconds ?? null;
-    // Le retard annoncé par TomTom, sinon l'écart avec la durée sans trafic, sinon inconnu.
+    // L'écart avec la durée sans trafic : « sans trafic + retard = durée » reste vrai sur la carte.
+    // `trafficDelayInSeconds` ne compte que les incidents du moment (300 s pour un écart réel de
+    // 423 s dans la réponse enregistrée) : il ne sert qu'à défaut de durée sans trafic.
     const delay =
-      summary.trafficDelayInSeconds ??
-      (freeFlow === null ? null : Math.max(0, summary.travelTimeInSeconds - freeFlow));
+      freeFlow === null
+        ? (summary.trafficDelayInSeconds ?? null)
+        : Math.max(0, summary.travelTimeInSeconds - freeFlow);
     return {
       data: {
         travelSeconds: summary.travelTimeInSeconds,
