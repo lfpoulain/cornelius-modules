@@ -1,0 +1,262 @@
+{
+  "summary": {
+    "query": "gare saint jean bordeaux",
+    "queryType": "NON_NEAR",
+    "queryTime": 34,
+    "numResults": 6,
+    "offset": 0,
+    "totalResults": 28,
+    "fuzzyLevel": 1,
+    "queryIntent": []
+  },
+  "results": [
+    {
+      "type": "POI",
+      "id": "E-G0_P3APK_8o6vJOw8NYw",
+      "score": 11.274181366,
+      "info": "search:ta:250009003299730-FR",
+      "poi": {
+        "name": "Bordeaux Saint-Jean",
+        "phone": "+33 892 35 35 35",
+        "categorySet": [{ "id": 7380002 }],
+        "url": "www.sncf.fr",
+        "categories": ["international", "railway station"],
+        "classifications": [
+          {
+            "code": "RAILWAY_STATION",
+            "names": [
+              { "nameLocale": "en-US", "name": "international" },
+              { "nameLocale": "en-US", "name": "railway station" }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetName": "Rue Charles Domercq",
+        "municipality": "Bordeaux",
+        "neighbourhood": "Bordeaux Sud",
+        "countrySecondarySubdivision": "Gironde",
+        "countrySubdivision": "Nouvelle-Aquitaine",
+        "countrySubdivisionName": "Nouvelle-Aquitaine",
+        "countrySubdivisionCode": "NAQ",
+        "postalCode": "33800",
+        "countryCode": "FR",
+        "country": "France",
+        "countryCodeISO3": "FRA",
+        "freeformAddress": "Rue Charles Domercq, 33800 Bordeaux",
+        "localName": "Bordeaux"
+      },
+      "position": { "lat": 44.82646, "lon": -0.556223 },
+      "viewport": {
+        "topLeftPoint": { "lat": 44.82736, "lon": -0.55749 },
+        "btmRightPoint": { "lat": 44.82556, "lon": -0.55496 }
+      },
+      "entryPoints": [
+        { "type": "main", "position": { "lat": 44.82636, "lon": -0.55677 } },
+        { "type": "main", "position": { "lat": 44.82619, "lon": -0.55687 } },
+        { "type": "main", "position": { "lat": 44.82644, "lon": -0.55672 } },
+        { "type": "main", "position": { "lat": 44.82626, "lon": -0.55722 } },
+        { "type": "main", "position": { "lat": 44.82618, "lon": -0.55687 } },
+        { "type": "main", "position": { "lat": 44.82625, "lon": -0.55683 } }
+      ]
+    },
+    {
+      "type": "Street",
+      "id": "x9PAUPKr_OhJvCx25Ih1YQ",
+      "score": 8.6688928604,
+      "address": {
+        "streetName": "Gare Saint-Jean",
+        "municipality": "Bordeaux",
+        "neighbourhood": "Bordeaux Sud",
+        "countrySecondarySubdivision": "Gironde",
+        "countrySubdivision": "Nouvelle-Aquitaine",
+        "countrySubdivisionName": "Nouvelle-Aquitaine",
+        "countrySubdivisionCode": "NAQ",
+        "postalCode": "33800",
+        "countryCode": "FR",
+        "country": "France",
+        "countryCodeISO3": "FRA",
+        "freeformAddress": "Gare Saint-Jean, 33800 Bordeaux",
+        "localName": "Bordeaux"
+      },
+      "position": { "lat": 44.825059, "lon": -0.556936 },
+      "viewport": {
+        "topLeftPoint": { "lat": 44.82539, "lon": -0.55711 },
+        "btmRightPoint": { "lat": 44.82481, "lon": -0.55684 }
+      }
+    },
+    {
+      "type": "POI",
+      "id": "64qe3FxkVKbxvD0b3KER4g",
+      "score": 8.4855251312,
+      "info": "search:ta:250008003929119-FR",
+      "poi": {
+        "name": "Pause Gourmande-Gare Saint-Jean Bordeaux",
+        "phone": "+33 6 36 36 44 16",
+        "categorySet": [{ "id": 7315145 }],
+        "url": "instagram.com/pause.gourmande33",
+        "categories": ["restaurant", "take away"],
+        "classifications": [
+          {
+            "code": "RESTAURANT",
+            "names": [
+              { "nameLocale": "en-US", "name": "restaurant" },
+              { "nameLocale": "en-US", "name": "take away" }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "37",
+        "streetName": "Rue Charles Domercq",
+        "municipality": "Bordeaux",
+        "neighbourhood": "Bordeaux Sud",
+        "countrySecondarySubdivision": "Gironde",
+        "countrySubdivision": "Nouvelle-Aquitaine",
+        "countrySubdivisionName": "Nouvelle-Aquitaine",
+        "countrySubdivisionCode": "NAQ",
+        "postalCode": "33800",
+        "countryCode": "FR",
+        "country": "France",
+        "countryCodeISO3": "FRA",
+        "freeformAddress": "37 Rue Charles Domercq, 33800 Bordeaux",
+        "localName": "Bordeaux"
+      },
+      "position": { "lat": 44.824988, "lon": -0.557478 },
+      "viewport": {
+        "topLeftPoint": { "lat": 44.82589, "lon": -0.55875 },
+        "btmRightPoint": { "lat": 44.82409, "lon": -0.55621 }
+      },
+      "entryPoints": [{ "type": "main", "position": { "lat": 44.82496, "lon": -0.55736 } }]
+    },
+    {
+      "type": "POI",
+      "id": "5Y3NjgFRNu5zAV7samvsjA",
+      "score": 8.3716497421,
+      "info": "search:ta:250009041064428-FR",
+      "poi": {
+        "name": "Cargo Bordeaux GARE Saint-Jean",
+        "phone": "+33 5 56 86 06 26",
+        "brands": [{ "name": "CarGo" }],
+        "categorySet": [{ "id": 7312 }],
+        "url": "www.cargo.fr",
+        "categories": ["rent-a-car facility"],
+        "classifications": [
+          {
+            "code": "RENT_A_CAR_FACILITY",
+            "names": [{ "nameLocale": "en-US", "name": "rent-a-car facility" }]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "40-42",
+        "streetName": "Rue Furtado",
+        "municipality": "Bordeaux",
+        "neighbourhood": "Bordeaux Sud",
+        "countrySecondarySubdivision": "Gironde",
+        "countrySubdivision": "Nouvelle-Aquitaine",
+        "countrySubdivisionName": "Nouvelle-Aquitaine",
+        "countrySubdivisionCode": "NAQ",
+        "postalCode": "33800",
+        "countryCode": "FR",
+        "country": "France",
+        "countryCodeISO3": "FRA",
+        "freeformAddress": "40-42 Rue Furtado, 33800 Bordeaux",
+        "localName": "Bordeaux"
+      },
+      "position": { "lat": 44.824819, "lon": -0.560643 },
+      "viewport": {
+        "topLeftPoint": { "lat": 44.82572, "lon": -0.56191 },
+        "btmRightPoint": { "lat": 44.82392, "lon": -0.55938 }
+      },
+      "entryPoints": [{ "type": "main", "position": { "lat": 44.82474, "lon": -0.56069 } }]
+    },
+    {
+      "type": "POI",
+      "id": "kTUPfhrdv0ADHN_ot2rSxQ",
+      "score": 8.3488435745,
+      "info": "search:ta:250006000233234-FR",
+      "poi": {
+        "name": "Ténéo Apparthotel Bordeaux-Gare Saint-Jean",
+        "phone": "+33 5 56 33 22 00",
+        "categorySet": [{ "id": 7314003 }],
+        "url": "www.teneo.fr",
+        "categories": ["hotel", "hotel/motel"],
+        "classifications": [
+          {
+            "code": "HOTEL_MOTEL",
+            "names": [
+              { "nameLocale": "en-US", "name": "hotel" },
+              { "nameLocale": "en-US", "name": "hotel/motel" }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "4",
+        "streetName": "Cours Barbey",
+        "municipality": "Bordeaux",
+        "neighbourhood": "Bordeaux Sud",
+        "countrySecondarySubdivision": "Gironde",
+        "countrySubdivision": "Nouvelle-Aquitaine",
+        "countrySubdivisionName": "Nouvelle-Aquitaine",
+        "countrySubdivisionCode": "NAQ",
+        "postalCode": "33800",
+        "countryCode": "FR",
+        "country": "France",
+        "countryCodeISO3": "FRA",
+        "freeformAddress": "4 Cours Barbey, 33800 Bordeaux",
+        "localName": "Bordeaux"
+      },
+      "position": { "lat": 44.828333, "lon": -0.561944 },
+      "viewport": {
+        "topLeftPoint": { "lat": 44.82923, "lon": -0.56321 },
+        "btmRightPoint": { "lat": 44.82743, "lon": -0.56068 }
+      },
+      "entryPoints": [{ "type": "main", "position": { "lat": 44.82843, "lon": -0.56213 } }]
+    },
+    {
+      "type": "POI",
+      "id": "mLAYoaa2A5BEmJioF0Huxg",
+      "score": 8.308131218,
+      "info": "search:ta:250008005107621-FR",
+      "poi": {
+        "name": "Coiffeur Gare Saint-Jean",
+        "phone": "+33 5 57 71 49 30",
+        "categorySet": [{ "id": 9361067 }],
+        "categories": ["beauty salon", "shop"],
+        "classifications": [
+          {
+            "code": "SHOP",
+            "names": [
+              { "nameLocale": "en-US", "name": "shop" },
+              { "nameLocale": "en-US", "name": "beauty salon" }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "202",
+        "streetName": "Cours de la Marne",
+        "municipality": "Bordeaux",
+        "neighbourhood": "Bordeaux Sud",
+        "countrySecondarySubdivision": "Gironde",
+        "countrySubdivision": "Nouvelle-Aquitaine",
+        "countrySubdivisionName": "Nouvelle-Aquitaine",
+        "countrySubdivisionCode": "NAQ",
+        "postalCode": "33800",
+        "countryCode": "FR",
+        "country": "France",
+        "countryCodeISO3": "FRA",
+        "freeformAddress": "202 Cours de la Marne, 33800 Bordeaux",
+        "localName": "Bordeaux"
+      },
+      "position": { "lat": 44.827836, "lon": -0.558808 },
+      "viewport": {
+        "topLeftPoint": { "lat": 44.82874, "lon": -0.56008 },
+        "btmRightPoint": { "lat": 44.82694, "lon": -0.55754 }
+      },
+      "entryPoints": [{ "type": "main", "position": { "lat": 44.82776, "lon": -0.55887 } }]
+    }
+  ]
+}
