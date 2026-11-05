@@ -6,10 +6,19 @@ import { CalendarError, readCalendar } from './ics.js';
 import configSchema from './config.schema.json' with { type: 'json' };
 import dataSchema from './data.schema.json' with { type: 'json' };
 
-type AgendaConfig = { url: string; days: number };
+type AgendaConfig = {
+  url: string;
+  days: number;
+  /** Garder la description de chaque rendez-vous, pour la voix (ni lue d'office ni affichée). */
+  descriptions: boolean;
+  /** Caractères gardés au plus par description. */
+  descriptionLength: number;
+};
 type AgendaEvent = {
   title: string;
   location: string | null;
+  /** Null si la source ne lit pas les descriptions ou si le rendez-vous n'en a pas. */
+  description: string | null;
   start: string;
   end: string;
   allDay: boolean;
@@ -25,6 +34,19 @@ type AgendaData = {
 };
 
 const maxEvents = 40;
+
+/** Réglages de la version 1 (sans descriptions) : les descriptions sont lues, 300 caractères. */
+function migrate(fromVersion: number, config: unknown): AgendaConfig {
+  if (fromVersion !== 1 || !config || typeof config !== 'object')
+    throw new Error(`Réglages agenda v${fromVersion} inconnus.`);
+  const old = config as Partial<AgendaConfig>;
+  return {
+    url: typeof old.url === 'string' ? old.url : '',
+    days: typeof old.days === 'number' ? old.days : 7,
+    descriptions: true,
+    descriptionLength: 300,
+  };
+}
 
 const formats = new Map<string, Intl.DateTimeFormat>();
 function format(zone: string, options: Intl.DateTimeFormatOptions): Intl.DateTimeFormat {
@@ -128,7 +150,7 @@ function nextChange(events: Upcoming[], now: number, zone: string): string {
 const addon: AddonDefinition<AgendaConfig, AgendaData> = {
   id: 'agenda',
   apiVersion: 1,
-  version: '1.1.0',
+  version: '1.2.0',
   minCoreVersion: '0.2.0',
   sourceLabel: 'Agenda',
   display: {
@@ -140,10 +162,11 @@ const addon: AddonDefinition<AgendaConfig, AgendaData> = {
     example: { label: 'Agenda de la famille', ref: 'famille' },
     spoken: { head: 'l’agenda', repeats: ['agenda', 'calendrier'] },
   },
-  configVersion: 1,
+  configVersion: 2,
   configSchema,
-  configDefaults: { url: '', days: 7 },
-  dataVersion: 2,
+  configMigrate: migrate,
+  configDefaults: { url: '', days: 7, descriptions: true, descriptionLength: 300 },
+  dataVersion: 3,
   dataSchema,
   freshMs: 15 * 60 * 1000,
   tools: [
@@ -152,7 +175,10 @@ const addon: AddonDefinition<AgendaConfig, AgendaData> = {
       description:
         'Lire les rendez-vous de l’agenda configuré et afficher sa carte. Utiliser pour ' +
         '« qu’est-ce qu’on a demain ? », « c’est quand le dentiste ? », « mon agenda de la semaine » ' +
-        'ou « on fait quoi samedi ? ». Sans argument : les prochains jours réglés dans la source.',
+        'ou « on fait quoi samedi ? ». Sans argument : les prochains jours réglés dans la source. ' +
+        'Si la source lit les descriptions, chaque rendez-vous des données porte la sienne ' +
+        '(notes, détails) : s’en servir pour « qu’est-ce qu’il y a dans la description du ' +
+        'dentiste ? » ou « c’est quoi les détails de la réunion ? », sans les lire d’office.',
       parameters: {
         type: 'object',
         additionalProperties: false,
@@ -231,9 +257,14 @@ const addon: AddonDefinition<AgendaConfig, AgendaData> = {
         );
       throw error;
     }
+    const { descriptions, descriptionLength } = context.config;
     const events: AgendaEvent[] = calendar.occurrences.slice(0, maxEvents).map((occurrence) => ({
       title: clip(occurrence.title, 200),
       location: occurrence.location ? clip(occurrence.location, 200) : null,
+      description:
+        descriptions && occurrence.description
+          ? clip(occurrence.description, descriptionLength)
+          : null,
       start: iso(occurrence.start),
       end: iso(Math.max(occurrence.end, occurrence.start + 1)),
       allDay: occurrence.allDay,

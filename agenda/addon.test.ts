@@ -9,6 +9,9 @@ const ics = readFileSync(new URL('./fixtures/famille.ics', import.meta.url), 'ut
 const secretUrl =
   'https://calendar.google.com/calendar/ical/famille%40example.com/private-0123456789abcdef/basic.ics';
 
+type Stored = { events: { title: string; description: string | null }[] };
+const full = { days: 7, descriptions: true, descriptionLength: 300 };
+
 const setup = (
   t: { after(fn: () => void): void },
   options: { config?: Record<string, unknown>; at?: string; body?: string; status?: number } = {},
@@ -22,11 +25,14 @@ const setup = (
 test('définition, réglages et contrat', async (t) => {
   const f = setup(t);
   for (const url of [secretUrl, 'webcal://p01-caldav.icloud.com/published/2/abc'])
-    assert.equal(f.runtime.validateConfig(addon.id, { url, days: 7 }).ok, true, url);
+    assert.equal(f.runtime.validateConfig(addon.id, { url, ...full }).ok, true, url);
   for (const config of [
-    { url: 'ftp://exemple.fr/a.ics', days: 7 },
-    { url: 'https://exemple.fr/a b.ics', days: 7 },
-    { url: secretUrl, days: 30 },
+    { url: 'ftp://exemple.fr/a.ics', ...full },
+    { url: 'https://exemple.fr/a b.ics', ...full },
+    { url: secretUrl, ...full, days: 30 },
+    { url: secretUrl, ...full, descriptionLength: 10 },
+    { url: secretUrl, ...full, descriptionLength: 5000 },
+    { url: secretUrl, days: 7 },
   ])
     assert.equal(f.runtime.validateConfig(addon.id, config).ok, false, JSON.stringify(config));
   const result = await f.read();
@@ -67,6 +73,65 @@ test('la semaine : rendez-vous en cours d’abord, puis par jour, à l’oral co
       "Jeudi 22 octobre : Anniversaire de Mamie toute la journée et Visio avec les cousins d'Amérique " +
       "pour préparer les fêtes de fin d'année et la grande réunion de famille à 14 h. " +
       'Et 4 autres dans les 7 prochains jours.',
+  );
+});
+
+test('descriptions : dans les données pour la voix, ni dites d’office ni sur la carte', async (t) => {
+  const f = setup(t);
+  const result = await f.read();
+  assert.equal(result.ok, true);
+  if (!result.ok) return;
+  const data = f.runtime.toolResult(result).result?.data as Stored;
+  const of = (title: string) => data.events.find((e) => e.title === title)?.description;
+  assert.equal(
+    of('Dentiste de Léa'),
+    'Apporter la carte vitale et le carnet de santé. Code de la porte : 4B',
+  );
+  assert.equal(of("Réunion d'école"), null);
+  const shown = JSON.stringify([result.card, result.presentation.summary, f.ambient()]);
+  assert.equal(shown.includes('carte vitale'), false);
+});
+
+test('réglages de la source : longueur des descriptions, ou pas de description', async (t) => {
+  const short = setup(t, { config: { descriptionLength: 50 } });
+  await short.read();
+  const dentist = (short.instances.getSnapshot(short.instance)?.data as Stored).events.find(
+    (e) => e.title === 'Dentiste de Léa',
+  )?.description;
+  assert.ok(dentist && dentist.length <= 50 && dentist.endsWith('…'), dentist ?? 'absente');
+  assert.match(dentist, /^Apporter la carte vitale/u);
+
+  const off = setup(t, { config: { descriptions: false } });
+  await off.read();
+  const events = (off.instances.getSnapshot(off.instance)?.data as Stored).events;
+  assert.equal(events.length > 0, true);
+  assert.equal(
+    events.every((e) => e.description === null),
+    true,
+  );
+});
+
+test('les réglages de la version 1 sont repris : descriptions lues, 300 caractères', async (t) => {
+  assert.deepEqual(addon.configMigrate!(1, { url: secretUrl, days: 14 }), {
+    url: secretUrl,
+    days: 14,
+    descriptions: true,
+    descriptionLength: 300,
+  });
+  assert.throws(() => addon.configMigrate!(9, {}), /inconnus/u);
+  // Une source enregistrée en version 1 se lit sans être réglée à nouveau.
+  const f = setup(t);
+  f.instances.updateInstance(f.instance.id, {
+    config: { url: secretUrl, days: 7 },
+    configVersion: 1,
+  });
+  const result = await f.runtime.read(addon.id, null, 'test', new AbortController().signal);
+  assert.equal(result.ok, true);
+  if (!result.ok) return;
+  const data = f.runtime.toolResult(result).result?.data as Stored;
+  assert.equal(
+    data.events.find((e) => e.title === 'Cours de piano (décalé)')?.description,
+    'Salle 2, au lieu de la salle 1.',
   );
 });
 

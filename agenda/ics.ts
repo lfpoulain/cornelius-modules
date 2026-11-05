@@ -7,12 +7,15 @@
  * BYDAY (rangs compris) et BYMONTHDAY ; EXDATE ; RECURRENCE-ID ; STATUS:CANCELLED.
  */
 
+import { plainText } from '../_lib/flux.js';
 import { dayIn, dayMs, zonedTime, type Wall } from '../_lib/temps.js';
 
 export interface Occurrence {
   uid: string;
   title: string;
   location: string | null;
+  /** Description en texte simple (HTML retiré, bloc de visio Google retiré), entière. */
+  description: string | null;
   /** Début et fin en millisecondes UTC ; pour une journée entière, minuit dans le fuseau du foyer. */
   start: number;
   end: number;
@@ -75,6 +78,21 @@ function unescapeText(value: string): string {
   return value
     .replace(/\\([\\;,nN])/gu, (_, char: string) => (char === 'n' || char === 'N' ? ' ' : char))
     .trim();
+}
+
+/**
+ * Bloc qu'ajoute Google Agenda pour une visio (« Rejoindre avec Google Meet », numéros,
+ * code PIN), entre deux lignes « -::~:~::~:…::- » ; jusqu'à la fin si la seconde manque.
+ */
+const conferenceBlock = /-::~[:~]*::-[\s\S]*?(?:-::~[:~]*::-|$)/gu;
+
+/**
+ * Description lisible : déséchappée, sans le bloc de visio, puis sans HTML (Google Agenda
+ * garde la mise en forme saisie : gras, listes, liens) ni entités, espaces resserrés.
+ */
+function descriptionOf(value: string | undefined): string | null {
+  if (!value) return null;
+  return plainText(unescapeText(value).replace(conferenceBlock, ' ')) || null;
 }
 
 /** Lignes dépliées (RFC 5545 § 3.1) puis propriétés « NOM;PARAM=…:valeur ». */
@@ -294,6 +312,7 @@ type RawEvent = {
   uid: string;
   title: string;
   location: string | null;
+  description: string | null;
   start: Moment;
   end: Moment | null;
   duration: number | null;
@@ -337,6 +356,7 @@ function events(text: string): { name: string | null; events: RawEvent[] } {
           uid: get('UID')?.value.trim() || `sans-uid-${result.length}`,
           title: unescapeText(get('SUMMARY')?.value ?? '') || 'Sans titre',
           location: unescapeText(get('LOCATION')?.value ?? '') || null,
+          description: descriptionOf(get('DESCRIPTION')?.value),
           start,
           end: moment(get('DTEND')),
           duration: duration(get('DURATION')?.value),
@@ -384,6 +404,7 @@ export function readCalendar(
       uid: event.uid,
       title: event.title,
       location: event.location,
+      description: event.description,
       start,
       end,
       allDay: event.start.allDay,

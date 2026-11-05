@@ -31,12 +31,16 @@ Dans **Modules → Agenda → Ajouter une source** :
 | --- | --- | --- |
 | Lien iCal privé | L’adresse ci-dessus, en `https://` ou `webcal://` | vide |
 | Jours à l’avance | De 1 à 14, aujourd’hui compris | 7 |
+| Lire les descriptions | Garde la description de chaque rendez-vous pour répondre quand on la demande | oui |
+| Longueur des descriptions | Caractères gardés au plus par description, de 50 à 2 000 ; au-delà, elle est coupée | 300 |
+
+Les descriptions ne sont ni dites d’office ni affichées sur la carte : Cornelius s’en sert quand on lui demande « qu’est-ce qu’il y a dans la description du dentiste ? » ou « c’est quoi les détails de la réunion ? ». Le HTML de Google Agenda (gras, listes, liens) est retiré, comme le bloc « Rejoindre avec Google Meet ». Elles partent au fournisseur vocal avec le reste de l’agenda : plus elles sont longues, plus chaque question sur l’agenda coûte. Une source réglée avant la version 1.2.0 les lit, coupées à 300 caractères ; rouvrez-la pour choisir.
 
 Une source par agenda : « Agenda de la famille », « Agenda de Léa » (propriétaire : Léa), « Le foot de Tom »…
 
 ## Ce que le module comprend
 
-Les événements simples, les journées entières et les séjours ; les fuseaux horaires, y compris les noms Windows d’Outlook ; les répétitions chaque jour, chaque semaine (certains jours), chaque mois (« le 15 », « le 2e mardi », « le dernier vendredi ») et chaque année, avec leur fin ou leur nombre d’occurrences ; les occurrences supprimées ou déplacées ; les événements annulés.
+Le titre, le lieu et la description ; les événements simples, les journées entières et les séjours ; les fuseaux horaires, y compris les noms Windows d’Outlook ; les répétitions chaque jour, chaque semaine (certains jours), chaque mois (« le 15 », « le 2e mardi », « le dernier vendredi ») et chaque année, avec leur fin ou leur nombre d’occurrences ; les occurrences supprimées ou déplacées ; les événements annulés.
 
 ## Limites
 
@@ -44,11 +48,12 @@ Les événements simples, les journées entières et les séjours ; les fuseaux 
 - Les règles de répétition rares (toutes les heures, `BYSETPOS`, `BYWEEKNO`) ne sont pas lues : l’événement n’apparaît qu’à sa première date.
 - Un agenda de plus de 8 Mo est coupé : ses derniers événements dans le fichier peuvent manquer. La carte et la réponse le disent (« Agenda incomplet »).
 - Les invitations, les réponses et les rappels de l’agenda ne sont pas gérés : seulement ce qui est prévu.
+- Seul le bloc de visio de Google Meet est retiré des descriptions. Celui d’une invitation Teams ou Zoom reste, dans la limite de longueur.
 - Si l’agenda ne répond pas, Cornelius annonce le dernier agenda connu, à vérifier.
 
 ## Outil vocal et affichage permanent
 
-L’outil s’appelle `agenda__read`. Il accepte deux précisions : le premier jour à lire (`debut`, de 0 aujourd’hui à 60) et le nombre de jours (`jours`, de 1 à 14). Une lecture précisée n’est ni gardée en cache, ni enregistrée.
+L’outil s’appelle `agenda__read`. Il accepte deux précisions : le premier jour à lire (`debut`, de 0 aujourd’hui à 60) et le nombre de jours (`jours`, de 1 à 14). Une lecture précisée n’est ni gardée en cache, ni enregistrée. Les descriptions voyagent dans les données de la réponse (`events[].description`), pas dans la phrase dite.
 
 Avec « Afficher en permanence sur le miroir », le miroir montre les trois prochains rendez-vous avec leur jour et leur heure, ou « Rien de prévu ». Il se met à jour au début et à la fin de chaque rendez-vous, et à minuit, sans relire l’agenda.
 
