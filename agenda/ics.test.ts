@@ -76,6 +76,27 @@ test('journée entière, plusieurs jours, lieu échappé, fuseau Outlook, nom de
   assert.equal(iso(banque.start), '2026-10-23T07:00:00.000Z');
 });
 
+test('descriptions : HTML et visio Google retirés, alarme ignorée, occurrence décalée', () => {
+  const calendar = readCalendar(ics, now, in14);
+  const of = (title: string) =>
+    calendar.occurrences.find((o) => o.title.startsWith(title))?.description;
+  assert.equal(
+    of('Dentiste de Léa'),
+    'Apporter la carte vitale et le carnet de santé. Code de la porte : 4B',
+  );
+  // Le bloc « Rejoindre avec Google Meet » disparaît, liens et numéros compris.
+  assert.equal(of('Visio avec les cousins'), 'Ordre du jour : le menu de Noël.');
+  assert.equal(of("Réunion d'école"), null);
+  // L'occurrence décalée garde sa propre description, les autres celle de la répétition.
+  assert.equal(of('Cours de piano (décalé)'), 'Salle 2, au lieu de la salle 1.');
+  assert.equal(
+    calendar.occurrences.find((o) => o.title === 'Cours de piano')?.description,
+    'Apporter la partition.',
+  );
+  // La description d'une alarme (VALARM) n'est pas celle du rendez-vous.
+  assert.equal(JSON.stringify(calendar).includes('event reminder'), false);
+});
+
 test('un événement en cours compte, un événement fini non', () => {
   const later = Date.parse('2026-10-20T09:30:00Z'); // 11 h 30 : la réunion d'école est finie
   assert.equal(titles(later)[0], '2026-10-20T14:00 Dentiste de Léa');

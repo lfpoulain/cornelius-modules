@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-05 : descriptions dans l’Agenda
+
+**Modifié**
+
+- **Agenda** (1.2.0) : la description de chaque rendez-vous est lue (HTML et bloc Google Meet retirés) et donnée à la voix dans les données de la réponse, sans être dite d’office ni affichée. Deux réglages par source : « Lire les descriptions » et « Longueur des descriptions » (50 à 2 000 caractères, 300 par défaut). Les sources déjà réglées sont reprises avec les descriptions lues, à 300 caractères (`configVersion` 2, `dataVersion` 3).
+
 ### 2026-10-29 : licence MIT
 
 **Modifié**
