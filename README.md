@@ -36,6 +36,7 @@ Cornelius livre ses modules de base avec lui. Ce dépôt accueille **tous les au
 | 📅 **Agenda** | Les prochains rendez-vous d’un agenda Google, iCloud ou Outlook, par son lien iCal privé, répétitions comprises ; « et samedi ? » se demande à la voix | lien privé | [agenda](agenda/README.md) |
 | 💸 **Dépenses OpenAI** | Ce que coûte Cornelius chez OpenAI : mois, jour, 7 derniers jours et usages les plus chers, avec alerte de budget ; mois et jour du foyer | clé Admin OpenAI | [depenses_openai](depenses_openai/README.md) |
 | 📜 **Éphéméride** | Ce qui s’est passé un jour comme aujourd’hui, l’anniversaire le plus rond d’abord, d’après Wikipédia | aucun | [ephemeride](ephemeride/README.md) |
+| 🌦️ **Météo libre** | Les prévisions du jour et des jours suivants pour un lieu (latitude, longitude), d’après Open-Meteo : températures, temps, pluie, vent | aucun | [meteo_libre](meteo_libre/README.md) |
 | 🗑️ **Poubelles** | Quel bac sortir et quand, d’après le calendrier de la commune écrit en toutes lettres, encombrants compris ; rappel la veille au soir | aucun | [poubelles](poubelles/README.md) |
 | ⛽ **Prix des carburants** | Les prix d’une station-service, carburant principal d’abord ou celui demandé (« et le SP98 ? ») ; station trouvée par commune ou code postal | aucun | [carburants](carburants/README.md) |
 | 📰 **Titres de l’actualité** | Les premiers titres d’un journal, d’après son flux RSS ou Atom (franceinfo par défaut) | aucun | [actu](actu/README.md) |

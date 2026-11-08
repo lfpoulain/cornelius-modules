@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-08 : météo sans jeton
+
+**Ajouté**
+
+- Module **Météo libre** (`meteo_libre`, 1.0.0) : prévisions d’un lieu donné par sa latitude et sa longitude, de 1 à 7 jours, d’après l’API libre et gratuite Open-Meteo, sans jeton. Codes météo de l’OMM dits en français, pluie citée à partir de 40 %, vent à partir de 40 km/h ; jours dans le fuseau du foyer ; affichage permanent qui passe au lendemain à minuit. Pour un foyer sans jeton Météo Concept (module Météo livré avec Cornelius). Par Louis (NeuTroNBZh).
+
 ### 2026-10-31 : module Dépenses OpenAI
 
 **Ajouté**

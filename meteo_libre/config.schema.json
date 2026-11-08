@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MeteoLibreConfig v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["place", "latitude", "longitude", "days"],
+  "properties": {
+    "place": {
+      "title": "Lieu",
+      "description": "Nom dit et affiché pour ce lieu.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80,
+      "examples": ["Brest"]
+    },
+    "latitude": {
+      "title": "Latitude",
+      "description": "En degrés décimaux, par exemple 48.39 pour Brest.",
+      "type": "number",
+      "minimum": -90,
+      "maximum": 90,
+      "examples": [48.39]
+    },
+    "longitude": {
+      "title": "Longitude",
+      "description": "En degrés décimaux, négative à l’ouest de Greenwich : -4.49 pour Brest.",
+      "type": "number",
+      "minimum": -180,
+      "maximum": 180,
+      "examples": [-4.49]
+    },
+    "days": {
+      "title": "Jours de prévision",
+      "description": "Aujourd’hui compris, de 1 à 7.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 7,
+      "examples": [3]
+    }
+  }
+}
