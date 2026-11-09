@@ -2,11 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "additionalProperties": false,
-  "required": ["perturbations", "filtre"],
+  "required": ["perturbations", "total", "filtre"],
   "properties": {
     "perturbations": {
       "type": "array",
-      "maxItems": 8,
+      "maxItems": 5,
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -33,6 +33,7 @@
         }
       }
     },
+    "total": { "type": "integer", "minimum": 0, "maximum": 100000 },
     "filtre": {
       "type": "object",
       "additionalProperties": false,
@@ -40,13 +41,13 @@
       "properties": {
         "lignes": {
           "type": "array",
-          "maxItems": 12,
-          "items": { "type": "string", "minLength": 1, "maxLength": 40 }
+          "maxItems": 60,
+          "items": { "type": "string", "minLength": 1, "maxLength": 120 }
         },
         "arrets": {
           "type": "array",
-          "maxItems": 12,
-          "items": { "type": "string", "minLength": 1, "maxLength": 40 }
+          "maxItems": 60,
+          "items": { "type": "string", "minLength": 1, "maxLength": 120 }
         }
       }
     }

@@ -8,7 +8,7 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 **Ajouté**
 
-- Module **Perturbations** (`perturbations`, 1.0.0), par [Malvu](https://github.com/Malvu) : les annonces de trafic du hub suisse (SIRI-SX), filtrées sur les lignes et les arrêts du foyer. Une ligne peut être désignée par son numéro ou par son exploitant (« 820:7 ») pour lever les homonymes ; les annonces terminées sont écartées et un flux sans annonce donne « Aucune » plutôt qu'une erreur. Jeton gratuit à déclarer. Source : opentransportdata.swiss.
+- Module **Perturbations** (`perturbations`, 1.0.0), par [Malvu](https://github.com/Malvu) : les annonces de trafic du hub suisse (SIRI-SX), filtrées sur les lignes et les arrêts du foyer. Une ligne peut être désignée par son numéro public ou par son exploitant (« 801:121 ») pour lever les homonymes ; seules les annonces en cours sont retenues, un flux sans annonce donne « Aucune » plutôt qu’une erreur, et un flux illisible une erreur plutôt qu’un faux « Aucune ». Jeton gratuit à déclarer. Source : opentransportdata.swiss.
 
 ### 2026-10-29 : licence MIT
 

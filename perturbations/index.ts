@@ -6,14 +6,17 @@
 import { AddonCollectError, type AddonDefinition } from '#cornelius/addons';
 import configSchema from './config.schema.json' with { type: 'json' };
 import dataSchema from './data.schema.json' with { type: 'json' };
+import { plainText, tagText } from '../_lib/flux.js';
 
 type PerturbationsConfig = { lignes: string; arrets: string; limite: number };
 
 type Perturbation = {
+  /** Numéros publics des lignes touchées, tels que le voyageur les lit (`PublishedLineName`). */
   lignes: string[];
   /**
-   * Lignes sous leur forme « exploitant:numéro » lue dans `LineRef` (« 85:820:7 » donne
-   * « 820:7 ») : c'est ce qui distingue la ligne 7 des TL de toutes les lignes 7 du pays.
+   * Les mêmes lignes sous la forme « exploitant:numéro public » : l'exploitant vient de
+   * `LineRef` (« 85:801:2242 » donne 801), le numéro de `PublishedLineName` (121). C'est ce qui
+   * distingue la ligne 121 de CarPostal de toutes les autres lignes 121 du pays.
    */
   reseaux: string[];
   lieux: string[];
@@ -24,13 +27,21 @@ type Perturbation = {
 
 type PerturbationsData = {
   perturbations: Perturbation[];
+  /** Annonces trouvées pour le foyer, avant la coupe à `limite`. */
+  total: number;
   filtre: { lignes: string[]; arrets: string[] };
 };
 
 const feedUrl = 'https://api.opentransportdata.swiss/la/siri-sx-unplanned';
 
-/** Tout le flux fait plusieurs mégaoctets : on le borne, sans le tronquer par surprise. */
+/** Tout le flux peut peser plusieurs mégaoctets : on le borne, sans le tronquer par surprise. */
 const maxFeedBytes = 16 * 1024 * 1024;
+
+/** Une carte de miroir montre cinq lignes au plus : c'est aussi la limite du réglage. */
+const maxAnnonces = 5;
+
+/** Balise d'ouverture d'une annonce, avec ou sans préfixe d'espace de noms et attributs. */
+const situationOpening = /<(?:\w+:)?PtSituationElement\b[^>]*>/gu;
 
 /** Texte comparable : accents retirés, minuscules, espaces simples. */
 function fold(value: string): string {
@@ -42,57 +53,92 @@ function fold(value: string): string {
     .trim();
 }
 
-/** « B 7 » et « 7 » désignent la même ligne : on ne garde que le numéro quand il y en a un. */
-function lineKey(value: string): string {
-  const compact = fold(value).replace(/\s+/gu, '');
-  const numbered = /^([a-z]{1,3})?(\d{1,3})$/u.exec(compact);
-  return numbered ? numbered[2]! : compact;
-}
-
-/** Décode les quelques entités que le flux utilise dans ses textes. */
-function decode(value: string): string {
+/**
+ * Nom de lieu comparable : comme `fold`, mais le tiret reste. « Chailly-sur-Montreux » est un
+ * seul mot, qui ne se confond plus avec « Chailly ».
+ */
+function foldName(value: string): string {
   return value
-    .replace(/&lt;/gu, '<')
-    .replace(/&gt;/gu, '>')
-    .replace(/&quot;/gu, '"')
-    .replace(/&apos;/gu, "'")
-    .replace(/&#(\d+);/gu, (_, code: string) => String.fromCodePoint(Number(code)))
-    .replace(/&amp;/gu, '&')
+    .normalize('NFD')
+    .replace(/\p{M}+/gu, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9-]+/gu, ' ')
+    .replace(/\s*-\s*/gu, '-')
+    .replace(/-+/gu, '-')
+    .replace(/(?:^-|-$)/gu, '')
     .trim();
 }
 
-function textTag(block: string, tag: string, lang = 'FR'): string | null {
-  const match = new RegExp(`<${tag} xml:lang="${lang}">([\\s\\S]*?)</${tag}>`, 'u').exec(block);
-  return match ? decode(match[1]!) : null;
+/**
+ * « B 7 », « Bus 7 » et « 7 » désignent la même ligne : on retire le seul mot « bus », que le
+ * flux n'écrit pas. Les autres lettres font partie du nom : « m2 » n'est pas le bus 2, « S1 »
+ * ni « IC 1 » ne sont la ligne 1.
+ */
+function lineKey(value: string): string {
+  const compact = fold(value).replace(/\s+/gu, '');
+  const bus = /^(?:bus|b)(\d{1,4}[a-z]?)$/u.exec(compact);
+  return bus ? bus[1]! : compact;
 }
 
-function allTags(block: string, tag: string): string[] {
-  const found: string[] = [];
-  const pattern = new RegExp(`<${tag}>([\\s\\S]*?)</${tag}>`, 'gu');
-  for (const match of block.matchAll(pattern)) {
-    const value = decode(match[1]!);
-    if (value) found.push(value);
+/** Les annonces d'un flux SIRI-SX, préfixes d'espace de noms retirés pour la lecture. */
+function situations(body: string): { found: number; blocks: string[] } {
+  const xml = body.replace(/<(\/?)\w+:(?=\w)/gu, '<$1');
+  const openings = [...xml.matchAll(situationOpening)];
+  const blocks: string[] = [];
+  for (const [index, opening] of openings.entries()) {
+    const start = opening.index + opening[0].length;
+    const next = openings[index + 1]?.index ?? xml.length;
+    const end = xml.indexOf('</PtSituationElement>', start);
+    // Une annonce sans fermeture avant la suivante (ou la fin) est coupée : on ne la lit pas.
+    if (end >= 0 && end <= next) blocks.push(xml.slice(start, end));
   }
-  return found;
+  return { found: openings.length, blocks };
 }
 
-/** Tous les textes d'une balise dans une langue donnée, espaces normalisés. */
-function textsIn(block: string, tag: string, lang = 'FR'): string[] {
-  const found: string[] = [];
-  const pattern = new RegExp(`<${tag} xml:lang="${lang}">([\\s\\S]*?)</${tag}>`, 'gu');
-  for (const match of block.matchAll(pattern)) {
-    const value = decode(match[1]!).replace(/\s+/gu, ' ').trim();
-    if (value) found.push(value);
+/** Contenu de toutes les balises `name` du bloc, attributs permis. */
+function allContents(block: string, name: string): string[] {
+  const pattern = new RegExp(`<${name}(?:\\s[^>]*)?>([\\s\\S]*?)</${name}>`, 'gu');
+  return [...block.matchAll(pattern)].map((match) => match[1] ?? '');
+}
+
+/** Textes d'une balise dans une langue donnée (`xml:lang`), où que soit l'attribut. */
+function textsIn(block: string, name: string, lang = 'FR'): string[] {
+  const pattern = new RegExp(
+    `<${name}\\s[^>]*\\bxml:lang="${lang}"[^>]*>([\\s\\S]*?)</${name}>`,
+    'gu',
+  );
+  return [...block.matchAll(pattern)]
+    .map((match) => plainText(match[1] ?? ''))
+    .filter((value) => value.length > 0);
+}
+
+function textIn(block: string, name: string, lang = 'FR'): string | null {
+  return textsIn(block, name, lang)[0] ?? null;
+}
+
+function instant(value: string | null): number | null {
+  if (!value) return null;
+  const parsed = Date.parse(value.trim());
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+/**
+ * Période de validité qui contient maintenant : chaque `ValidityPeriod` est lue pour elle-même,
+ * sans déborder sur la suivante. `en cours` est faux si aucune période n'a commencé ou si toutes
+ * sont terminées ; `fin` est la fin de la période en cours, ou null si elle est ouverte.
+ */
+function validity(block: string, now: number): { enCours: boolean; fin: string | null } {
+  const periods = allContents(block, 'ValidityPeriod');
+  // Sans période, l'annonce vaut tant qu'elle est publiée.
+  if (periods.length === 0) return { enCours: true, fin: null };
+  for (const period of periods) {
+    const start = instant(tagText(period, 'StartTime'));
+    const end = instant(tagText(period, 'EndTime'));
+    if (start !== null && start > now) continue;
+    if (end !== null && end < now) continue;
+    return { enCours: true, fin: end === null ? null : new Date(end).toISOString() };
   }
-  return found;
-}
-
-/** Fin de validité : la première période suffit, les annonces en ont une seule en pratique. */
-function endTime(block: string): string | null {
-  const match = /<ValidityPeriod>[\s\S]*?<EndTime>([^<]+)<\/EndTime>/u.exec(block);
-  if (!match) return null;
-  const parsed = new Date(match[1]!.trim());
-  return Number.isFinite(parsed.getTime()) ? parsed.toISOString() : null;
+  return { enCours: false, fin: null };
 }
 
 /**
@@ -102,12 +148,12 @@ function endTime(block: string): string | null {
  * condition qu'il soit informatif — les fragments du genre « Concerne : ligne 7 » ne le sont pas.
  */
 function bestText(block: string): string | null {
-  for (const section of block.split('<TextualContent>').slice(1)) {
-    if (!/<TextualContentSize>S<\/TextualContentSize>/u.test(section)) continue;
-    const short = textTag(section, 'SummaryText');
+  for (const section of allContents(block, 'TextualContent')) {
+    if (tagText(section, 'TextualContentSize') !== 'S') continue;
+    const short = textIn(section, 'SummaryText');
     if (short && short.length >= 12) return short;
   }
-  const summary = textTag(block, 'Summary');
+  const summary = textIn(block, 'Summary');
   if (summary && summary.length >= 12) return summary;
   const others = textsIn(block, 'SummaryText').filter((value) => value.length >= 20);
   if (others.length === 0) return null;
@@ -130,58 +176,98 @@ function firstSentence(value: string, max: number): string {
   return `${(space > max * 0.5 ? cut.slice(0, space) : cut).trimEnd()}…`;
 }
 
-/** « 85:820:7 » donne « 820:7 » : le pays, l'exploitant, la ligne. */
-function lineRefKey(value: string): string | null {
-  const parts = value
-    .trim()
+/** « 85:801:2242 » donne 801 : le pays, l'exploitant, puis un identifiant interne. */
+function operatorOf(lineRef: string): string | null {
+  const parts = lineRef
     .split(':')
     .map((part) => part.trim())
     .filter((part) => part.length > 0);
-  if (parts.length < 2) return null;
-  const ligne = parts[parts.length - 1]!;
-  const exploitant = parts[parts.length - 2]!;
-  return `${exploitant}:${lineKey(ligne)}`;
+  return parts.length >= 2 ? parts[parts.length - 2]! : null;
 }
 
 /** Une annonce, ramenée à ses lignes, ses lieux et une phrase en français. */
-function readSituation(block: string): Perturbation | null {
+function readSituation(block: string): Omit<Perturbation, 'fin'> | null {
   const texte =
     bestText(block) ??
-    textTag(block, 'Summary', 'DE') ??
-    textTag(block, 'SummaryText', 'EN') ??
-    textTag(block, 'Summary');
+    textIn(block, 'Summary', 'DE') ??
+    textIn(block, 'SummaryText', 'EN') ??
+    tagText(block, 'Summary');
   if (!texte) return null;
-  const lignes = [
-    ...new Set(allTags(block, 'PublishedLineName').map((line) => line.slice(0, 24))),
-  ].slice(0, 6);
-  const reseaux = [
-    ...new Set(
-      allTags(block, 'LineRef')
-        .map((ref) => lineRefKey(ref))
-        .filter((ref): ref is string => ref !== null),
-    ),
-  ].slice(0, 6);
-  const lieux = [
-    ...new Set([...allTags(block, 'PlaceName'), ...allTags(block, 'StopPlaceName')]),
-  ].slice(0, 4);
-  const cause = textTag(block, 'ReasonText') ?? null;
+  const lignes = new Set<string>();
+  const reseaux = new Set<string>();
+  for (const line of allContents(block, 'AffectedLine')) {
+    // Le numéro public est celui du voyageur ; `LineRef` ne sert qu'à nommer l'exploitant.
+    const published = tagText(line, 'PublishedLineName')?.slice(0, 24);
+    if (!published) continue;
+    lignes.add(published);
+    const operator = operatorOf(tagText(line, 'LineRef') ?? '');
+    if (operator) reseaux.add(`${operator}:${lineKey(published)}`.slice(0, 40));
+  }
+  // Une ligne citée hors d'un bloc `AffectedLine` reste une ligne touchée.
+  for (const content of allContents(block, 'PublishedLineName')) {
+    const published = plainText(content).slice(0, 24);
+    if (published) lignes.add(published);
+  }
+  const lieux = new Set(
+    [...allContents(block, 'PlaceName'), ...allContents(block, 'StopPlaceName')]
+      .map((content) => plainText(content).slice(0, 80))
+      .filter((lieu) => lieu.length > 0),
+  );
+  const cause = textIn(block, 'ReasonText');
   return {
-    lignes,
-    reseaux,
-    lieux: lieux.map((lieu) => lieu.slice(0, 80)),
-    texte: texte.replace(/\s+/gu, ' ').slice(0, 300),
-    fin: endTime(block),
-    cause: cause ? cause.replace(/\s+/gu, ' ').slice(0, 120) : null,
+    lignes: [...lignes].slice(0, 6),
+    reseaux: [...reseaux].filter((reseau) => reseau.length >= 3).slice(0, 6),
+    lieux: [...lieux].slice(0, 4),
+    texte: texte.slice(0, 300),
+    cause: cause ? cause.slice(0, 120) : null,
   };
 }
 
+/** Le nom surveillé figure-t-il, mot pour mot, dans ce texte ? Tirets compris. */
+function phraseIn(haystack: string, nom: string): boolean {
+  const escaped = nom.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&');
+  return new RegExp(`(?:^| )${escaped}(?: |$)`, 'u').test(haystack);
+}
+
+/**
+ * Un lieu de l'annonce (« Lausanne, Chailly-Village ») correspond-il au nom surveillé ?
+ * - « Lausanne, Chailly-Village » : la même localité, et le même arrêt ou un arrêt qui commence
+ *   par ce nom.
+ * - « Chailly » : la localité entière (« Chailly » seul), ou un arrêt de n'importe quelle
+ *   localité qui porte ce nom ou commence par lui (« Chailly-Village »). Une autre localité
+ *   (« Chailly-Montreux, village ») n'est pas « Chailly ».
+ */
+function placeMatches(lieu: string, surveille: string): boolean {
+  const split = (value: string) => {
+    const comma = value.indexOf(',');
+    return comma >= 0
+      ? { localite: foldName(value.slice(0, comma)), arret: foldName(value.slice(comma + 1)) }
+      : { localite: foldName(value), arret: '' };
+  };
+  const place = split(lieu);
+  const wanted = split(surveille);
+  const arretMatches = (arret: string, nom: string) =>
+    nom.length >= 3 &&
+    (arret === nom ||
+      arret.startsWith(`${nom}-`) ||
+      arret.startsWith(`${nom} `) ||
+      arret.split(' ').includes(nom));
+  if (wanted.arret)
+    return place.localite === wanted.localite && arretMatches(place.arret, wanted.arret);
+  return place.localite === wanted.localite || arretMatches(place.arret, wanted.localite);
+}
+
 /** Une annonce nous concerne-t-elle ? Par ses lignes, ses lieux, ou son texte. */
-function concerns(perturbation: Perturbation, lignes: string[], arrets: string[]): boolean {
+function concerns(
+  perturbation: Omit<Perturbation, 'fin'>,
+  lignes: string[],
+  arrets: string[],
+): boolean {
   if (lignes.length === 0 && arrets.length === 0) return true;
   const lines = new Set(perturbation.lignes.map(lineKey));
   const reseaux = new Set(perturbation.reseaux);
   for (const ligne of lignes) {
-    // « 820:7 » désigne la ligne 7 de l'exploitant 820, sans ramasser les autres lignes 7.
+    // « 801:121 » désigne la ligne 121 de l'exploitant 801, sans ramasser les autres lignes 121.
     const avecOperateur = /^([^:]+):(.+)$/u.exec(ligne.trim());
     if (avecOperateur) {
       if (reseaux.has(`${avecOperateur[1]!.trim()}:${lineKey(avecOperateur[2]!)}`)) return true;
@@ -189,16 +275,22 @@ function concerns(perturbation: Perturbation, lignes: string[], arrets: string[]
     }
     if (lines.has(lineKey(ligne))) return true;
   }
-  const haystack = fold(`${perturbation.lieux.join(' ')} ${perturbation.texte}`);
-  return arrets.some((arret) => {
-    // Nom entier, pas sous-chaîne : « Chailly » ne doit pas attraper « Chailly-sur-Montreux ».
-    // Les deux formes sont essayées, avec la ville (« Lausanne, Chailly-Village ») et sans.
-    const comma = arret.indexOf(',');
-    const noms = [fold(arret), comma >= 0 ? fold(arret.slice(comma + 1)) : ''].filter(
-      (nom) => nom.length >= 3,
-    );
-    return noms.some((nom) => new RegExp(`(?:^| )${nom}(?: |$)`, 'u').test(haystack));
-  });
+  const texte = foldName(perturbation.texte);
+  return arrets.some(
+    (arret) =>
+      perturbation.lieux.some((lieu) => placeMatches(lieu, arret)) ||
+      // Dans le texte libre, le nom doit y être entier : « Chailly » n'attrape pas
+      // « Chailly-sur-Montreux », et « Lausanne, Chailly-Village » se cherche tel quel.
+      (foldName(arret).length >= 3 && phraseIn(texte, foldName(arret))),
+  );
+}
+
+/** Réglage en liste : `séparateurs` découpe, les entrées vides tombent. */
+function listOf(value: string, separators: RegExp): string[] {
+  return value
+    .split(separators)
+    .map((entry) => entry.trim())
+    .filter((entry) => entry.length > 0);
 }
 
 const addon: AddonDefinition<PerturbationsConfig, PerturbationsData> = {
@@ -234,7 +326,8 @@ const addon: AddonDefinition<PerturbationsConfig, PerturbationsData> = {
   },
   dataVersion: 1,
   dataSchema,
-  // Le flux est limité à deux appels par minute : dix minutes de cache, le maximum du cœur.
+  // Le flux est limité à deux appels par minute : une lecture reste fraîche dix minutes, et le
+  // cœur ne redemande pas le flux pendant ce temps.
   freshMs: 10 * 60_000,
   tools: [
     {
@@ -260,15 +353,11 @@ const addon: AddonDefinition<PerturbationsConfig, PerturbationsData> = {
         'Jeton SIRI-SX absent : ajoutez CORNELIUS_SIRI_SX_TOKEN dans le fichier .env.',
         false,
       );
-    const lignes = context.config.lignes
-      .split(/[,;]/u)
-      .map((ligne) => ligne.trim())
-      .filter((ligne) => ligne.length > 0);
-    const arrets = context.config.arrets
-      .split(/[,;]/u)
-      .map((arret) => arret.trim())
-      .filter((arret) => arret.length > 0);
-    const limite = Math.min(8, Math.max(1, Math.round(context.config.limite)));
+    // Une ligne ne contient jamais de virgule : les deux séparateurs sont permis. Un arrêt, lui,
+    // peut s'écrire « Lausanne, Chailly-Village » : la liste des arrêts se sépare par « ; ».
+    const lignes = listOf(context.config.lignes, /[,;]/u);
+    const arrets = listOf(context.config.arrets, /;/u);
+    const limite = Math.min(maxAnnonces, Math.max(1, Math.round(context.config.limite)));
 
     const response = await context.http.fetch({
       url: feedUrl,
@@ -277,7 +366,8 @@ const addon: AddonDefinition<PerturbationsConfig, PerturbationsData> = {
       signal: context.signal,
       timeoutMs: 20_000,
       maxBytes: maxFeedBytes,
-      // Deux appels par minute au plus côté fournisseur : on garde la réponse dix minutes.
+      // Le cœur ne garde en cache que les réponses modestes : un flux lourd est retéléchargé, et
+      // c'est la fraîcheur de dix minutes (`freshMs`) qui tient la limite du fournisseur.
       cacheMs: 10 * 60_000,
     });
     if (response.status === 401 || response.status === 403)
@@ -310,63 +400,84 @@ const addon: AddonDefinition<PerturbationsConfig, PerturbationsData> = {
       );
     // Ce qui n'est pas du SIRI-SX est refusé ; un SIRI-SX sans annonce, lui, est une bonne
     // nouvelle : « rien à signaler », et la carte le dit.
-    if (!/<Siri[\s>]/u.test(body))
+    if (!/<(?:\w+:)?Siri[\s>]/u.test(body))
       throw new AddonCollectError('malformed', 'Réponse SIRI-SX illisible.', false);
+    const { found: balises, blocks } = situations(body);
+    const lues = blocks.map(readSituation);
+    // Des annonces présentes mais aucune lisible : le format a changé ou le flux est coupé. Dire
+    // « aucune perturbation » serait un faux « rien à signaler ».
+    if (balises > 0 && !lues.some((lue) => lue !== null))
+      throw new AddonCollectError(
+        'malformed',
+        'Flux SIRI-SX illisible : annonces présentes mais aucune lue.',
+        false,
+      );
     const nowMs = context.now();
-    const found: Perturbation[] = [];
-    for (const block of body.split('<PtSituationElement>').slice(1)) {
-      const perturbation = readSituation(block);
-      if (!perturbation) continue;
-      // Une annonce terminée reste dans le flux un moment : on l'écarte.
-      if (perturbation.fin && new Date(perturbation.fin).getTime() < nowMs) continue;
-      if (!concerns(perturbation, lignes, arrets)) continue;
-      found.push(perturbation);
+    const trouvees: Perturbation[] = [];
+    for (const [index, lue] of lues.entries()) {
+      if (!lue) continue;
+      // Une annonce terminée reste dans le flux un moment, et une annonce peut être publiée
+      // avant de commencer : seules celles en cours sont retenues.
+      const periode = validity(blocks[index]!, nowMs);
+      if (!periode.enCours) continue;
+      if (!concerns(lue, lignes, arrets)) continue;
+      trouvees.push({ ...lue, fin: periode.fin });
     }
-    // La coupe à `limite` intervient après le filtrage, pour ne pas fausser le total annoncé.
+    // Le total est celui des annonces trouvées ; la coupe à `limite` ne vaut que pour la carte.
     // L'ordre reste celui du flux : c'est le fournisseur qui décide de la priorité.
-    const retenues = found.slice(0, limite);
+    const retenues = trouvees.slice(0, limite);
     return {
-      data: { perturbations: retenues, filtre: { lignes, arrets } },
+      data: { perturbations: retenues, total: trouvees.length, filtre: { lignes, arrets } },
       empty: retenues.length === 0,
-      source: { provider: 'siri-sx', sourceId: lignes.join(', ') || arrets.join(', ') || 'toutes' },
+      source: {
+        provider: 'siri-sx',
+        sourceId: (lignes.join(', ') || arrets.join('; ') || 'toutes').slice(0, 128),
+      },
     };
   },
   present(snapshot) {
     const data = snapshot.data;
     if (!data) throw new Error('Aucune perturbation à présenter.');
-    const filtre = [...data.filtre.lignes, ...data.filtre.arrets].join(', ') || 'tout le réseau';
-    const nombre = data.perturbations.length;
+    const filtre =
+      [...data.filtre.lignes, ...data.filtre.arrets].join(', ').slice(0, 120) || 'tout le réseau';
+    const nombre = Math.max(data.total, data.perturbations.length);
     if (nombre === 0) {
       return {
         title: 'Perturbations',
         primaryValue: 'Aucune',
-        subtitle: filtre.slice(0, 120),
+        subtitle: filtre,
         description: null,
         items: [],
         summary: `Aucune perturbation signalée pour ${filtre}.`,
-        sources: ['opendata.swiss'],
+        sources: ['perturbations'],
       };
     }
-    const items = data.perturbations.slice(0, 5).map((perturbation) => ({
+    const items = data.perturbations.slice(0, maxAnnonces).map((perturbation) => ({
       label: (perturbation.lignes.join(', ') || perturbation.lieux.join(', ') || 'Annonce').slice(
         0,
         80,
       ),
       value: firstSentence(perturbation.texte, 160),
     }));
+    const montrees = items.length;
     const first = data.perturbations[0]!;
     return {
       title: 'Perturbations',
       primaryValue: `${nombre} perturbation${nombre > 1 ? 's' : ''}`,
-      subtitle: filtre.slice(0, 120),
-      description: snapshot.status === 'stale' ? 'Dernier relevé connu, à vérifier.' : null,
+      subtitle: filtre,
+      description:
+        snapshot.status === 'stale'
+          ? 'Dernier relevé connu, à vérifier.'
+          : montrees < nombre
+            ? `Les ${montrees} premières sur ${nombre}.`
+            : null,
       items,
       summary: firstSentence(
         `${nombre} perturbation${nombre > 1 ? 's' : ''} en cours pour ${filtre}. ` +
           `${first.lignes.length > 0 ? `${first.lignes.join(', ')} : ` : ''}${first.texte}`,
         200,
       ),
-      sources: ['opendata.swiss'],
+      sources: ['perturbations'],
     };
   },
 };
