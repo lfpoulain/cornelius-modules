@@ -10,6 +10,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 - Module **Arrêts et itinéraires** (`arrets`, 1.0.0), par [Malvu](https://github.com/Malvu) : n’importe quel arrêt de Suisse, les lignes qui le desservent et leur prochain départ, et l’itinéraire entre deux lieux avec ses changements. À la voix, l’outil `partir` donne l’heure de départ pour arriver à une heure donnée, en gardant le dernier départ utile et en annonçant la marge. La ville est facultative : vide, la recherche porte sur tout le pays. Les gares germanophones sont cherchées sous leur nom français (« Berne » donne Bern). Source : transport.opendata.ch, sans jeton.
 
+### 2026-10-31 : module Dépenses OpenAI
+
+**Ajouté**
+
+- Module **Dépenses OpenAI** (`depenses_openai`, 1.0.0) : dépenses du mois, du jour et des 7 derniers jours lues par l’API des coûts de l’organisation (clé Admin, en lecture seule si OpenAI le propose), avec les usages les plus chers et une alerte de budget à 80 % et 100 %, sur la carte comme sur l’affichage permanent. Les avoirs sont déduits ; « rien de publié pour l’instant » pour une journée sans montant ; un relevé repris après une panne est daté. Mois et jour suivent le fuseau du foyer, rapprochés des journées UTC d’OpenAI. Auteur : tigul_one.
+
 ### 2026-10-29 : licence MIT
 
 **Modifié**
