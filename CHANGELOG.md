@@ -10,6 +10,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 - Module **Perturbations** (`perturbations`, 1.0.0), par [Malvu](https://github.com/Malvu) : les annonces de trafic du hub suisse (SIRI-SX), filtrées sur les lignes et les arrêts du foyer. Une ligne peut être désignée par son numéro public ou par son exploitant (« 801:121 ») pour lever les homonymes ; seules les annonces en cours sont retenues, un flux sans annonce donne « Aucune » plutôt qu’une erreur, et un flux illisible une erreur plutôt qu’un faux « Aucune ». Jeton gratuit à déclarer. Source : opentransportdata.swiss.
 
+### 2026-10-31 : module Dépenses OpenAI
+
+**Ajouté**
+
+- Module **Dépenses OpenAI** (`depenses_openai`, 1.0.0) : dépenses du mois, du jour et des 7 derniers jours lues par l’API des coûts de l’organisation (clé Admin, en lecture seule si OpenAI le propose), avec les usages les plus chers et une alerte de budget à 80 % et 100 %, sur la carte comme sur l’affichage permanent. Les avoirs sont déduits ; « rien de publié pour l’instant » pour une journée sans montant ; un relevé repris après une panne est daté. Mois et jour suivent le fuseau du foyer, rapprochés des journées UTC d’OpenAI. Auteur : tigul_one.
+
 ### 2026-10-29 : licence MIT
 
 **Modifié**
