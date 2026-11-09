@@ -91,14 +91,16 @@ function parseDays(payload: unknown, keep: number): MeteoDay[] {
     payload && typeof payload === 'object' ? (payload as Record<string, unknown>).daily : null;
   if (!daily || typeof daily !== 'object')
     throw new AddonCollectError('malformed', 'Prévisions Open-Meteo illisibles.');
-  const column = (name: string) => {
+  const column = (name: string, required = false) => {
     const values = (daily as Record<string, unknown>)[name];
-    return Array.isArray(values) ? values : [];
+    if (Array.isArray(values)) return values;
+    if (required) throw new AddonCollectError('malformed', 'Prévisions Open-Meteo incomplètes.');
+    return [];
   };
-  const time = column('time');
+  const time = column('time', true);
   const codes = column('weather_code');
-  const max = column('temperature_2m_max');
-  const min = column('temperature_2m_min');
+  const max = column('temperature_2m_max', true);
+  const min = column('temperature_2m_min', true);
   const rain = column('precipitation_probability_max');
   const wind = column('wind_speed_10m_max');
   const days: MeteoDay[] = [];
@@ -117,14 +119,18 @@ function parseDays(payload: unknown, keep: number): MeteoDay[] {
       windKmh: finite(wind[index]) ? Math.round(wind[index] as number) : null,
     });
   }
+  if (!days.length)
+    throw new AddonCollectError('malformed', 'Open-Meteo ne donne aucun jour exploitable.');
   return days;
 }
 
-/** Prévisions d'aujourd'hui et des jours suivants : un relevé de la veille perd son premier jour. */
-function currentDays(data: MeteoLibreData, context: AddonPresentContext): MeteoDay[] {
-  const today = dateIn(context.now(), context.timeZone);
-  const days = data.days.filter((day) => day.date >= today);
-  return days.length ? days : data.days.slice(-1);
+/** Coordonnées arrondies à 2 décimales (environ 1 km) : assez pour Open-Meteo, moins précis
+ * que le domicile, et deux sources proches partagent le cache. */
+const rounded = (value: number) => Math.round(value * 100) / 100;
+
+/** Prévisions d'aujourd'hui et des jours suivants, jamais celles d'un jour passé. */
+function currentDays(data: MeteoLibreData, today: string): MeteoDay[] {
+  return data.days.filter((day) => day.date >= today);
 }
 
 function weekday(date: string): string {
@@ -133,44 +139,60 @@ function weekday(date: string): string {
   );
 }
 
+/** « aujourd'hui », « demain » ou le nom du jour : un jour n'est jamais dit sous un autre. */
+function dayName(date: string, today: string, tomorrow: string): string {
+  if (date === today) return 'aujourd’hui';
+  if (date === tomorrow) return 'demain';
+  return weekday(date);
+}
+
+const capitalized = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
+
 function present(
   snapshot: ModuleSnapshot<MeteoLibreData>,
   context: AddonPresentContext,
 ): AddonPresentation {
   const data = snapshot.data;
   if (!data) throw new Error('Aucune prévision à présenter.');
-  const days = currentDays(data, context);
-  const today = days[0];
-  if (!today)
+  const today = dateIn(context.now(), context.timeZone);
+  const tomorrow = dateIn(nextMidnight(context.now(), context.timeZone), context.timeZone);
+  const days = currentDays(data, today);
+  const first = days[0];
+  if (!first)
     return {
-      title: 'Météo',
+      title: 'Météo libre',
       primaryValue: null,
       subtitle: data.place,
-      description: 'Open-Meteo ne donne aucune prévision pour ce lieu.',
+      description: 'Pas de prévision à jour pour ce lieu.',
       items: [],
-      summary: `Pas de prévision disponible pour ${data.place}.`,
+      summary: `Pas de prévision à jour pour ${data.place}.`,
       sources: ['meteo_libre'],
     };
+  // Le premier jour gardé n'est pas forcément aujourd'hui (température du jour absente).
+  const firstName = first.date === today ? null : dayName(first.date, today, tomorrow);
   const items = days.slice(1, 6).map((day) => ({
-    label: weekday(day.date),
+    label: dayName(day.date, today, tomorrow),
     value: `${day.tmin} / ${day.tmax} °C · ${day.summary}`,
   }));
+  const next = days[1];
   const stale = snapshot.status === 'stale';
   const summary = [
-    `${stale ? 'Dernière prévision connue' : 'Météo'} à ${data.place} : ${today.tmin} / ${today.tmax} °C, ${today.summary.toLowerCase()}.`,
-    today.rainProbability !== null && today.rainProbability >= 40
-      ? `Risque de pluie ${today.rainProbability} %.`
+    `${stale ? 'Dernière prévision connue' : 'Météo'} à ${data.place}${firstName ? `, ${firstName}` : ''} : ${first.tmin} / ${first.tmax} °C, ${first.summary.toLowerCase()}.`,
+    first.rainProbability !== null && first.rainProbability >= 40
+      ? `Risque de pluie ${first.rainProbability} %.`
       : null,
-    today.windKmh !== null && today.windKmh >= 40 ? `Vent jusqu'à ${today.windKmh} km/h.` : null,
-    items[0] ? `Demain ${items[0].value.replace(' · ', ', ').toLowerCase()}.` : null,
+    first.windKmh !== null && first.windKmh >= 40 ? `Vent jusqu’à ${first.windKmh} km/h.` : null,
+    next
+      ? `${capitalized(dayName(next.date, today, tomorrow))} ${next.tmin} / ${next.tmax} °C, ${next.summary.toLowerCase()}.`
+      : null,
     stale ? 'À vérifier.' : null,
   ]
     .filter(Boolean)
     .join(' ');
   return {
-    title: 'Météo',
-    primaryValue: `${today.tmin} / ${today.tmax} °C`,
-    subtitle: `${data.place} · ${today.summary}`,
+    title: 'Météo libre',
+    primaryValue: `${first.tmin} / ${first.tmax} °C`,
+    subtitle: `${data.place} · ${firstName ? capitalized(firstName) + ' · ' : ''}${first.summary}`,
     description: stale ? 'Dernière prévision connue, à vérifier.' : null,
     items,
     summary: summary.slice(0, 500),
@@ -190,7 +212,8 @@ const addon: AddonDefinition<MeteoLibreConfig, MeteoLibreData> = {
     icon: 'cloud-sun',
     keywords: ['météo', 'temps', 'prévisions', 'pluie', 'température', 'open-meteo'],
     example: { label: 'Météo à Brest', ref: 'brest' },
-    spoken: { head: 'la météo', repeats: ['meteo', 'temps', 'previsions'] },
+    // « les prévisions de brest » : distinct de « la météo » de la Météo du cœur.
+    spoken: { head: 'les prévisions', repeats: ['meteo', 'temps', 'previsions'] },
   },
   configVersion: 1,
   configSchema,
@@ -202,8 +225,9 @@ const addon: AddonDefinition<MeteoLibreConfig, MeteoLibreData> = {
     {
       name: 'read',
       description:
-        'Lire les prévisions météo du lieu configuré et afficher la carte Météo : températures, temps, risque de pluie, vent. ' +
-        'Utiliser pour « quel temps fait-il ? », « va-t-il pleuvoir demain ? », « météo de la semaine ».',
+        'Lire les prévisions météo du lieu configuré, d’après Open-Meteo, et afficher la carte Météo libre : températures, temps, risque de pluie, vent. ' +
+        'Utiliser pour « quel temps fait-il ? », « va-t-il pleuvoir demain ? », « météo de la semaine ». ' +
+        'Si une autre source météo répond aussi, préférer celle que la personne nomme.',
       parameters: {
         type: 'object',
         additionalProperties: false,
@@ -214,9 +238,11 @@ const addon: AddonDefinition<MeteoLibreConfig, MeteoLibreData> = {
   ],
   async collect(context) {
     const { config } = context;
+    const latitude = rounded(config.latitude);
+    const longitude = rounded(config.longitude);
     const params = new URLSearchParams({
-      latitude: String(config.latitude),
-      longitude: String(config.longitude),
+      latitude: String(latitude),
+      longitude: String(longitude),
       daily:
         'weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,wind_speed_10m_max',
       // Les jours sont ceux du fuseau du foyer, pas ceux du lieu ni de l'UTC.
@@ -235,7 +261,7 @@ const addon: AddonDefinition<MeteoLibreConfig, MeteoLibreData> = {
     if (response.status === 400)
       throw new AddonCollectError(
         'config_invalid',
-        'Open-Meteo refuse ce lieu : vérifiez la latitude et la longitude.',
+        'Open-Meteo refuse la demande : vérifiez la latitude et la longitude du lieu.',
       );
     if (response.status === 429)
       throw new AddonCollectError('quota', 'Quota quotidien d’Open-Meteo atteint.', true);
@@ -255,10 +281,15 @@ const addon: AddonDefinition<MeteoLibreConfig, MeteoLibreData> = {
     const data = { place: config.place, days: parseDays(payload, config.days) };
     if (!validateData(data))
       throw new AddonCollectError('malformed', 'Prévisions Open-Meteo invalides.');
-    const sourceId = `${config.latitude},${config.longitude}`;
-    return data.days.length
-      ? { data, source: { provider: 'open-meteo', sourceId } }
-      : { data, empty: true, source: { provider: 'open-meteo', sourceId } };
+    return {
+      data,
+      // Une prévision du jour ne vaut que jusqu'à minuit : la veille n'est jamais servie fraîche.
+      freshMs: Math.min(
+        30 * 60_000,
+        Math.max(5_000, nextMidnight(context.now(), context.timeZone) - context.now()),
+      ),
+      source: { provider: 'open-meteo', sourceId: `${latitude},${longitude}` },
+    };
   },
   ambient: {
     present(snapshot, context) {
@@ -267,7 +298,8 @@ const addon: AddonDefinition<MeteoLibreConfig, MeteoLibreData> = {
         layout: 'metric',
         title: 'Météo',
         value: card.primaryValue ?? 'Indisponible',
-        subtitle: card.subtitle?.slice(0, 120) ?? null,
+        // Données sous licence CC BY 4.0 : la source reste citée à l'écran.
+        subtitle: `${card.subtitle ?? ''} · Open-Meteo`.slice(0, 120),
         items: [],
         // À minuit, la prévision du jour devient celle de la veille : la carte passe au lendemain.
         refreshAt: new Date(nextMidnight(context.now(), context.timeZone)).toISOString(),

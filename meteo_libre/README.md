@@ -4,11 +4,16 @@ Le module Météo libre donne les prévisions du jour et des jours suivants pour
 
 ## Ce que fait le module
 
-- Il répond à « quel temps fait-il ? », « va-t-il pleuvoir demain ? » ou « météo de la semaine » et affiche une carte « Météo » : températures minimale et maximale du jour, temps, puis une ligne par jour suivant (5 au plus).
+- Il répond à « quel temps fait-il ? », « va-t-il pleuvoir demain ? » ou « météo de la semaine » et affiche une carte « Météo libre » : températures minimale et maximale du jour, temps, puis une ligne par jour suivant (5 au plus), nommée « demain » ou par le nom du jour.
 - À l’oral, il cite le risque de pluie à partir de 40 % et le vent à partir de 40 km/h.
-- Les jours suivent le fuseau du foyer. Le lendemain, un relevé de la veille ne garde que les jours à venir.
-- Une valeur absente chez Open-Meteo n’est jamais inventée : un jour sans température est écarté, et une probabilité de pluie absente n’est pas dite.
-- Les données restent en cache 30 minutes. Deux sources du même lieu partagent la réponse 5 minutes.
+- Les jours suivent le fuseau du foyer. Un jour n’est jamais annoncé sous la date d’un autre : si la température du jour manque, le premier jour annoncé est nommé (« demain : … »). Un relevé de la veille ne garde que les jours à venir ; s’il ne contient plus que des jours passés, la carte dit qu’il n’y a pas de prévision à jour.
+- Une valeur absente chez Open-Meteo n’est jamais inventée : un jour sans température est écarté, et une probabilité de pluie absente n’est pas dite. Une réponse sans dates ni températures, ou sans aucun jour exploitable, est une erreur, pas une prévision vide.
+- Les données restent en cache 30 minutes, et jamais au-delà de minuit. Deux sources du même lieu partagent la réponse 5 minutes.
+- Les coordonnées envoyées à Open-Meteo sont arrondies à 2 décimales (environ 1 km) : assez pour une prévision, sans la position exacte du domicile.
+
+## Avec la Météo du cœur
+
+Cornelius a déjà une météo intégrée (Météo-Concept, avec jeton). Les deux peuvent être actives, mais une question comme « quel temps fait-il ? » peut alors aller à l’une ou à l’autre. Gardez celle que vous préférez, ou nommez la source : à la voix, ce module se désigne comme « les prévisions de … », et sa description d’outil précise « d’après Open-Meteo ».
 
 ## Réglages d’une source
 
@@ -28,11 +33,11 @@ Pour trouver les coordonnées d’un lieu, un clic droit sur la carte d’OpenSt
 - Usage non commercial gratuit, limité par Open-Meteo à 10 000 appels par jour : largement assez pour un foyer (une collecte toutes les 30 minutes par lieu).
 - Prévisions par modèle numérique, sans les vigilances officielles de Météo-France.
 - En cas de panne, la source annonce la dernière prévision connue, à vérifier ; sans aucun succès précédent, elle dit qu’Open-Meteo est indisponible.
-- Données d’Open-Meteo sous licence [CC BY 4.0](https://open-meteo.com/en/license) : la source s’appelle « Météo libre (Open-Meteo) » dans l’administration et sur les cartes.
+- Données d’Open-Meteo sous licence [CC BY 4.0](https://open-meteo.com/en/license) : la source s’appelle « Météo libre (Open-Meteo) » dans l’administration et sur les cartes, et l’affichage permanent finit par « Open-Meteo ».
 
 ## Outil vocal et affichage permanent
 
-L’outil s’appelle `meteo_libre__read`. Avec « Afficher en permanence sur le miroir », le miroir montre les températures du jour et le temps, et passe au lendemain à minuit.
+L’outil s’appelle `meteo_libre__read`. Avec « Afficher en permanence sur le miroir », le miroir montre les températures du jour, le temps et la source (« Brest · Couvert · Open-Meteo »), et passe au lendemain à minuit.
 
 ## Auteur
 
