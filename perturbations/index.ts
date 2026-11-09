@@ -34,7 +34,7 @@ type PerturbationsData = {
 
 const feedUrl = 'https://api.opentransportdata.swiss/la/siri-sx-unplanned';
 
-/** Tout le flux peut peser plusieurs mégaoctets : on le borne, sans le tronquer par surprise. */
+/** Le flux relevé le 29 octobre 2026 pesait 200 Ko : la borne laisse une large marge. */
 const maxFeedBytes = 16 * 1024 * 1024;
 
 /** Une carte de miroir montre cinq lignes au plus : c'est aussi la limite du réglage. */
@@ -145,7 +145,7 @@ function validity(block: string, now: number): { enCours: boolean; fin: string |
  * Le flux publie la même annonce en trois tailles (S, M, L), plus un résumé d'en-tête, et tous
  * les exploitants ne remplissent pas tout. Dans l'ordre : la variante S, faite pour l'oral ; le
  * résumé d'en-tête, qui est une phrase entière ; puis le plus court des textes qui restent, à
- * condition qu'il soit informatif — les fragments du genre « Concerne : ligne 7 » ne le sont pas.
+ * condition qu'il soit informatif : les fragments du genre « Concerne : ligne 7 » ne le sont pas.
  */
 function bestText(block: string): string | null {
   for (const section of allContents(block, 'TextualContent')) {
@@ -235,7 +235,10 @@ function phraseIn(haystack: string, nom: string): boolean {
  *   par ce nom.
  * - « Chailly » : la localité entière (« Chailly » seul), ou un arrêt de n'importe quelle
  *   localité qui porte ce nom ou commence par lui (« Chailly-Village »). Une autre localité
- *   (« Chailly-Montreux, village ») n'est pas « Chailly ».
+ *   (« Chailly-Montreux, village ») n'est pas « Chailly », ni un arrêt qui porte le nom d'une
+ *   autre localité (« Montreux, Chailly-sur-Montreux »).
+ * Un lieu sans virgule est lu comme une localité : « Chailly-Village » seul ne répond pas à
+ * « Chailly », faute de pouvoir le distinguer de « Chailly-Montreux ».
  */
 function placeMatches(lieu: string, surveille: string): boolean {
   const split = (value: string) => {
@@ -246,10 +249,15 @@ function placeMatches(lieu: string, surveille: string): boolean {
   };
   const place = split(lieu);
   const wanted = split(surveille);
+  // « Chailly-sur-Montreux » ou « Chailly-près-X » nomment une autre localité, de même qu'un
+  // arrêt qui se termine par le nom de sa propre ville : ce n'est pas un arrêt de « Chailly ».
+  const homonyme = (suite: string) =>
+    /^(?:sur|pres|s)-/u.test(suite) ||
+    (place.localite.length > 0 && suite.split('-').includes(place.localite));
   const arretMatches = (arret: string, nom: string) =>
     nom.length >= 3 &&
     (arret === nom ||
-      arret.startsWith(`${nom}-`) ||
+      (arret.startsWith(`${nom}-`) && !homonyme(arret.slice(nom.length + 1))) ||
       arret.startsWith(`${nom} `) ||
       arret.split(' ').includes(nom));
   if (wanted.arret)
@@ -366,8 +374,10 @@ const addon: AddonDefinition<PerturbationsConfig, PerturbationsData> = {
       signal: context.signal,
       timeoutMs: 20_000,
       maxBytes: maxFeedBytes,
-      // Le cœur ne garde en cache que les réponses modestes : un flux lourd est retéléchargé, et
-      // c'est la fraîcheur de dix minutes (`freshMs`) qui tient la limite du fournisseur.
+      // Le flux relevé le 29 octobre 2026 pesait environ 200 Ko pour 22 annonces : il tient dans
+      // le cache du cœur, qui écarte les réponses de plus de deux millions de caractères environ.
+      // Un jour de perturbations massives, un flux plus lourd serait retéléchargé ; la fraîcheur
+      // de dix minutes (`freshMs`) tient alors seule la limite du fournisseur.
       cacheMs: 10 * 60_000,
     });
     if (response.status === 401 || response.status === 403)
@@ -449,7 +459,7 @@ const addon: AddonDefinition<PerturbationsConfig, PerturbationsData> = {
         description: null,
         items: [],
         summary: `Aucune perturbation signalée pour ${filtre}.`,
-        sources: ['perturbations'],
+        sources: ['perturbations', 'opentransportdata.swiss'],
       };
     }
     const items = data.perturbations.slice(0, maxAnnonces).map((perturbation) => ({
@@ -477,7 +487,7 @@ const addon: AddonDefinition<PerturbationsConfig, PerturbationsData> = {
           `${first.lignes.length > 0 ? `${first.lignes.join(', ')} : ` : ''}${first.texte}`,
         200,
       ),
-      sources: ['perturbations'],
+      sources: ['perturbations', 'opentransportdata.swiss'],
     };
   },
 };

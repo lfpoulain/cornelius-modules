@@ -11,7 +11,11 @@ Le module Perturbations rassemble les annonces de trafic des exploitants suisses
 - Une phrase courte : le flux propose chaque annonce en trois tailles, le module prend la variante S quand elle existe, sinon le résumé d’en-tête, puis coupe à la première phrase pour la carte.
 - Sans annonce, la carte dit « Aucune » : le silence est une information, pas une panne. Un flux dont les annonces ne se lisent pas (format changé, flux coupé) donne une erreur, jamais un faux « Aucune ».
 - Le total annoncé compte toutes les annonces trouvées ; la carte en montre cinq au plus.
-- Une lecture reste fraîche dix minutes : pendant ce temps, Cornelius ne redemande pas le flux. C’est ce qui tient la limite du fournisseur, le cache HTTP du cœur ne s’appliquant pas à un flux aussi lourd (voir les limites).
+- Une lecture reste fraîche dix minutes, et la réponse du flux est gardée dix minutes dans le cache du cœur : pendant ce temps, Cornelius ne redemande pas le flux (voir les limites).
+
+## Source et licence des données
+
+Le flux [SIRI-SX des perturbations non planifiées](https://opentransportdata.swiss/fr/cookbook/siri-sx/) de la plateforme suisse [opentransportdata.swiss](https://opentransportdata.swiss/), qui rassemble les annonces de tous les exploitants. Ses [conditions d’utilisation](https://opentransportdata.swiss/fr/terms-of-use/) permettent un usage libre à condition de citer la source : les cartes du module citent opentransportdata.swiss parmi leurs sources.
 
 ## Jeton requis
 
@@ -33,7 +37,8 @@ Dans **Modules → Perturbations → Ajouter une source** :
 
 ## Limites
 
-- Le fournisseur limite à deux appels par minute et trois mille par jour. Le module demande un cache de dix minutes, mais le cœur refuse de mettre en cache une réponse de plus de deux mégaoctets : ce flux en fait plusieurs, donc chaque lecture le retélécharge. Le module reste dans les clous parce que la fraîcheur est de dix minutes et que la voix interroge peu, mais un enchaînement de questions rapprochées peut renvoyer une erreur de quota explicite, jamais une carte vide.
+- Le fournisseur limite à deux appels par minute et trois mille par jour. Le flux relevé le 29 octobre 2026 pesait environ 200 Ko pour 22 annonces : le cœur le garde dix minutes en cache, et la fraîcheur est de dix minutes, ce qui reste loin de la limite. Le cœur ne met pas en cache une réponse de plus de deux millions de caractères environ : un jour de perturbations massives, un flux aussi lourd serait retéléchargé à chaque lecture, et un enchaînement de questions rapprochées pourrait alors renvoyer une erreur de quota explicite, jamais une carte vide.
+- Un lieu de l’annonce écrit sans ville (« Chailly-Village » seul) est lu comme une localité : il ne répond pas à « Chailly », faute de pouvoir le distinguer d’une autre localité comme « Chailly-Montreux ». Pour le suivre, surveillez « Chailly-Village ».
 - Une ligne désignée par son seul numéro ramasse les annonces de tous les réseaux qui portent ce numéro. Pour lever l’ambiguïté, précisez l’exploitant, tel qu’il figure dans `LineRef` (« 85:801:2242 » : exploitant 801) : « 801:121 ».
 - Le flux ne couvre que les annonces non planifiées : les travaux annoncés longtemps à l’avance sont dans un autre flux, plus lourd, non utilisé ici.
 - Une annonce sans ligne ni lieu identifiables ne peut pas être filtrée et reste écartée.

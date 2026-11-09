@@ -73,8 +73,8 @@ test('les annonces des lignes et des arrêts surveillés sont retenues, les autr
   // La version courte (taille S) est préférée à l'en-tête : c'est celle qui se dit à l'oral.
   assert.equal(result.card.items[1]!.value, "Pas d'accès PMR à Neuhausen");
   assert.equal(result.card.items[2]!.value, 'Circulation irrégulière lignes 1, 6, 14');
-  // La source affichée est l'identifiant du module, comme le veut la convention du dépôt.
-  assert.deepEqual(result.card.sources, ['perturbations']);
+  // L'identifiant du module, puis la source des données, que ses conditions demandent de citer.
+  assert.deepEqual(result.card.sources, ['perturbations', 'opentransportdata.swiss']);
 });
 
 test('« m2 », « S1 » ou « IC 1 » ne sont pas les lignes 2 ou 1', async (t) => {
@@ -274,4 +274,21 @@ test('une réponse qui n’est pas du SIRI-SX est refusée', async (t) => {
   assert.equal(result.ok, false);
   if (result.ok) return;
   assert.equal(result.error.code, 'malformed');
+});
+
+test('un arrêt qui porte le nom d’une autre localité ne répond pas à « Chailly »', async (t) => {
+  const at = (lieu: string) => feed.replaceAll('Neuhausen', lieu);
+  const chailly = { lignes: '', arrets: 'Chailly' };
+  assert.deepEqual(
+    await labels(setup(t, { config: chailly, body: at('Montreux, Chailly-sur-Montreux') })),
+    [],
+  );
+  // Un lieu sans ville est une localité : « Chailly-Village » seul se surveille par son nom.
+  assert.deepEqual(await labels(setup(t, { config: chailly, body: at('Chailly-Village') })), []);
+  assert.deepEqual(
+    await labels(
+      setup(t, { config: { lignes: '', arrets: 'Chailly-Village' }, body: at('Chailly-Village') }),
+    ),
+    ['Chailly-Village'],
+  );
 });
