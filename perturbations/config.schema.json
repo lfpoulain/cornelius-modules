@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["lignes", "arrets", "limite"],
+  "properties": {
+    "lignes": {
+      "title": "Lignes surveillées",
+      "description": "Lignes dont les perturbations vous intéressent, séparées par des virgules. « B 7 » et « 7 » désignent la même ligne ; pour distinguer deux réseaux qui portent le même numéro, précisez l’exploitant, par exemple « 801:121 » pour la seule ligne 121 de l’exploitant 801 (CarPostal). Les lettres comptent : « m2 » n’est pas le bus 2.",
+      "type": "string",
+      "maxLength": 120,
+      "examples": ["B 7, B 8, m2"]
+    },
+    "arrets": {
+      "title": "Arrêts surveillés",
+      "description": "Noms d’arrêts ou de quartiers à surveiller aussi, séparés par des points-virgules. Un nom seul (« Chailly ») vise ce lieu et les arrêts qui portent son nom, pas « Chailly-Montreux » ; « Lausanne, Chailly-Village » vise cet arrêt précis.",
+      "type": "string",
+      "maxLength": 120,
+      "examples": ["Chailly; Lausanne, Ouchy-Olympique"]
+    },
+    "limite": {
+      "title": "Annonces affichées",
+      "description": "Nombre d’annonces sur la carte, dans l’ordre du flux ; cinq au plus, la place d’une carte. Le total annoncé compte toutes celles trouvées.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    }
+  }
+}
