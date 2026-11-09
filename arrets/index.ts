@@ -1,13 +1,13 @@
 /**
- * Arrêts et itinéraires : les lignes qui desservent un arrêt de la ville, et le trajet entre deux
- * lieux de cette ville. Une seule source couvre la ville entière ; la voix nomme l'arrêt qu'elle
- * veut, ou les deux bouts du trajet.
+ * Arrêts et itinéraires : les lignes qui desservent un arrêt de Suisse, et le trajet entre deux
+ * lieux. Une seule source couvre tout le pays, sa ville réglée passant en premier ; la voix nomme
+ * l'arrêt qu'elle veut, ou les deux bouts du trajet.
  */
 import { AddonCollectError, type AddonDefinition, type AddonHttpResponse } from '#cornelius/addons';
 import { compile } from '#cornelius/validation';
 import configSchema from './config.schema.json' with { type: 'json' };
 import dataSchema from './data.schema.json' with { type: 'json' };
-import { dateIn, nextWallTime } from '../_lib/temps.js';
+import { dateIn, nextWallTime, wallIn } from '../_lib/temps.js';
 
 type ArretsConfig = {
   ville: string | null;
@@ -76,6 +76,53 @@ const locationsUrl = 'https://transport.opendata.ch/v1/locations';
 const stationboardUrl = 'https://transport.opendata.ch/v1/stationboard';
 const connectionsUrl = 'https://transport.opendata.ch/v1/connections';
 
+/** L'API lit la date et l'heure demandées en heure suisse, quel que soit le fuseau du foyer. */
+const apiTimeZone = 'Europe/Zurich';
+
+/** Une ligne sans nom ni numéro reste affichable : le schéma refuse un libellé vide. */
+const sansNom = 'Ligne';
+
+/**
+ * Champs demandés à l'API (`fields[]`) : sans eux, chaque départ arrive avec la liste de tous
+ * ses arrêts (`passList`), et 60 départs d'une grande gare dépassent 400 Kio.
+ */
+const stationboardFields = [
+  'station/name',
+  'stationboard/category',
+  'stationboard/number',
+  'stationboard/name',
+  'stationboard/to',
+  'stationboard/stop/departure',
+  'stationboard/stop/delay',
+  'stationboard/stop/platform',
+  'stationboard/stop/prognosis/departure',
+];
+
+const connectionsFields = [
+  'connections/from/departure',
+  'connections/from/delay',
+  'connections/from/prognosis/departure',
+  'connections/to/arrival',
+  'connections/duration',
+  'connections/transfers',
+  'connections/products',
+  'connections/sections/departure/station/name',
+  'connections/sections/departure/departure',
+  'connections/sections/departure/platform',
+  'connections/sections/arrival/station/name',
+  'connections/sections/arrival/arrival',
+  'connections/sections/journey/category',
+  'connections/sections/journey/number',
+  'connections/sections/journey/name',
+  'connections/sections/walk/duration',
+];
+
+/**
+ * Les recherches d'arrêts changent rarement, et un `partir` peut en lancer quatre : dix minutes
+ * de cache, le maximum que le cœur accorde.
+ */
+const locationsCacheMs = 10 * 60_000;
+
 type LocationsPayload = {
   stations?: { id?: unknown; name?: unknown; score?: unknown }[];
 };
@@ -87,13 +134,23 @@ type StationboardPayload = {
     number?: unknown;
     name?: unknown;
     to?: unknown;
-    stop?: { departure?: unknown; delay?: unknown; platform?: unknown };
+    stop?: {
+      departure?: unknown;
+      delay?: unknown;
+      platform?: unknown;
+      prognosis?: { departure?: unknown };
+    };
   }[];
 };
 
 type ConnectionsPayload = {
   connections?: {
-    from?: { station?: unknown; departure?: unknown };
+    from?: {
+      station?: unknown;
+      departure?: unknown;
+      delay?: unknown;
+      prognosis?: { departure?: unknown };
+    };
     to?: { station?: unknown; arrival?: unknown };
     duration?: unknown;
     transfers?: unknown;
@@ -214,12 +271,36 @@ function clock(iso: string, timeZone: string): string {
   );
 }
 
-/** « B » + « 7 » donne « B 7 » ; « m » + « 2 » donne « m2 ». */
+/** « B » + « 7 » donne « B 7 » ; « m » + « 2 » donne « m2 ». Jamais vide, et 40 caractères au plus. */
 function lineName(category: string, number: string, fallback: string): string {
-  if (!number) return category || fallback;
   const cat = category.trim();
-  if (!cat) return number;
-  return number.toLowerCase().startsWith(cat.toLowerCase()) ? number : `${cat} ${number}`;
+  const name = !number
+    ? cat || fallback
+    : !cat
+      ? number
+      : number.toLowerCase().startsWith(cat.toLowerCase())
+        ? number
+        : `${cat} ${number}`;
+  return name.trim().slice(0, 40) || sansNom;
+}
+
+/**
+ * Heure de départ réelle : la prévision quand l'API en donne une, sinon l'heure prévue décalée du
+ * retard annoncé. C'est elle qui dit si le bus est déjà passé.
+ */
+function actualDeparture(scheduled: string, prognosis: unknown, delay: unknown): number {
+  const forecast = normalizeIso(prognosis);
+  if (forecast) return new Date(forecast).getTime();
+  const minutes = Number(delay);
+  return (
+    new Date(scheduled).getTime() + (Number.isFinite(minutes) && minutes > 0 ? minutes * 60_000 : 0)
+  );
+}
+
+/** Paramètres `fields[]` d'une requête : seuls ces champs reviennent. */
+function withFields(params: URLSearchParams, fields: string[]): URLSearchParams {
+  for (const field of fields) params.append('fields[]', field);
+  return params;
 }
 
 /** Coupe à la première phrase : une carte de miroir se lit d'un coup d'œil. */
@@ -275,6 +356,10 @@ function fail(response: AddonHttpResponse): never {
 }
 
 function payloadOf(response: AddonHttpResponse): unknown {
+  // Un corps coupé à `maxBytes` n'est pas du JSON valide : on le dit, au lieu d'une
+  // « réponse illisible » qui ferait chercher une panne du fournisseur.
+  if (response.truncated)
+    throw new AddonCollectError('malformed', 'Réponse des transports trop longue, coupée.');
   try {
     return response.json();
   } catch {
@@ -288,7 +373,8 @@ type CollectContext = Parameters<
 
 /**
  * Départs d'un arrêt, d'après l'identifiant quand on l'a, sinon son nom exact.
- * On demande large (60) pour voir toutes les directions ; on ne garde que l'avenir.
+ * On demande large (60) pour voir toutes les directions, en ne gardant que les champs utiles ;
+ * on ne garde que l'avenir, retards compris.
  */
 async function departuresOf(
   context: CollectContext,
@@ -298,6 +384,7 @@ async function departuresOf(
   const params = new URLSearchParams({ limit: '60' });
   if (station.id) params.set('id', station.id);
   else params.set('station', station.name);
+  withFields(params, stationboardFields);
   const response = await context.http.fetch({
     url: `${stationboardUrl}?${params.toString()}`,
     method: 'GET',
@@ -317,14 +404,16 @@ async function departuresOf(
     const departure = normalizeIso(entry.stop?.departure);
     const destination = text(entry.to, 80);
     if (!departure || !destination) continue;
-    // Un départ déjà passé n'est pas une information : on l'ignore.
-    if (new Date(departure).getTime() < now - 60_000) continue;
+    // Un départ déjà passé n'est pas une information : on l'ignore. Un bus en retard, lui,
+    // n'est pas encore passé : c'est son heure réelle qui compte.
+    if (
+      actualDeparture(departure, entry.stop?.prognosis?.departure, entry.stop?.delay) <
+      now - 60_000
+    )
+      continue;
     const delay = Number(entry.stop?.delay);
     departures.push({
-      ligne: lineName(text(entry.category, 12), text(entry.number, 12), text(entry.name, 20)).slice(
-        0,
-        40,
-      ),
+      ligne: lineName(text(entry.category, 12), text(entry.number, 12), text(entry.name, 20)),
       direction: destination,
       depart: departure,
       retardMin: Number.isFinite(delay) && delay > 0 ? Math.min(240, Math.round(delay)) : 0,
@@ -411,6 +500,7 @@ async function locate(
     signal: context.signal,
     timeoutMs: 8000,
     maxBytes: 128 * 1024,
+    cacheMs: locationsCacheMs,
   });
   if (response.status !== 200) fail(response);
   const payload = payloadOf(response);
@@ -476,18 +566,22 @@ function bothEnds(query: string): { from: string; to: string } | null {
   return from && to ? { from, to } : null;
 }
 
+/** Un itinéraire et l'instant où il part vraiment, retard compris. */
+type Proposition = { trajet: Trajet; partMs: number };
+
 /** Itinéraires proposés entre deux arrêts, du plus proche au plus tardif. */
 async function journeysOf(
   context: CollectContext,
   from: Station,
   to: Station,
   arrivee?: { date: string; time: string },
-): Promise<Trajet[]> {
+): Promise<Proposition[]> {
   const params = new URLSearchParams({
     from: from.id ?? from.name,
     to: to.id ?? to.name,
     limit: '3',
   });
+  withFields(params, connectionsFields);
   // `isArrivalTime` renverse la question : au lieu des départs qui suivent l'heure, on demande
   // les trajets qui arrivent avant elle. C'est ce que veut dire « être au bureau à 9 h ».
   if (arrivee) {
@@ -507,7 +601,7 @@ async function journeysOf(
   const payload = payloadOf(response);
   if (!validateConnections(payload) || !Array.isArray(payload.connections))
     throw new AddonCollectError('malformed', 'Réponse sans itinéraire.');
-  const trajets: Trajet[] = [];
+  const propositions: Proposition[] = [];
   for (const connection of payload.connections) {
     const depart = normalizeIso(connection.from?.departure);
     const arrive = normalizeIso(connection.to?.arrival);
@@ -537,11 +631,7 @@ async function journeysOf(
       const marche = Number.isFinite(marcheSec) ? Math.max(1, Math.round(marcheSec / 60)) : null;
       etapes.push({
         ligne: journey
-          ? lineName(
-              text(journey.category, 12),
-              text(journey.number, 12),
-              text(journey.name, 20),
-            ).slice(0, 40)
+          ? lineName(text(journey.category, 12), text(journey.number, 12), text(journey.name, 20))
           : marche === null
             ? 'À pied'
             : `À pied · ${marche} min`,
@@ -553,16 +643,24 @@ async function journeysOf(
       });
       if (etapes.length >= 8) break;
     }
-    trajets.push({
-      depart,
-      arrive,
-      dureeMin: durationMinutes(connection.duration),
-      correspondances: Math.min(9, Math.max(0, Math.round(Number(connection.transfers) || 0))),
-      lignes: products,
-      etapes,
+    propositions.push({
+      trajet: {
+        depart,
+        arrive,
+        // Une durée hors d'une journée vient d'une réponse aberrante : on la borne au schéma.
+        dureeMin: Math.min(1440, Math.max(0, durationMinutes(connection.duration))),
+        correspondances: Math.min(9, Math.max(0, Math.round(Number(connection.transfers) || 0))),
+        lignes: products,
+        etapes,
+      },
+      partMs: actualDeparture(
+        depart,
+        connection.from?.prognosis?.departure,
+        connection.from?.delay,
+      ),
     });
   }
-  return trajets;
+  return propositions;
 }
 
 const addon: AddonDefinition<ArretsConfig, ArretsData> = {
@@ -574,7 +672,7 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
   display: {
     name: 'Arrêts et itinéraires',
     description:
-      'Les lignes qui desservent un arrêt de la ville, et le trajet entre deux lieux de la ville.',
+      'Les lignes qui desservent un arrêt de Suisse, et le trajet entre deux lieux du pays.',
     icon: 'bus',
     group: 'daily',
     keywords: ['arrêt', 'arrêts', 'bus', 'tram', 'correspondance', 'ligne', 'itinéraire', 'trajet'],
@@ -608,8 +706,9 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
     {
       name: 'ask',
       description:
-        'Chercher un arrêt par son nom dans la ville configurée et afficher toutes les lignes ' +
-        'qui le desservent, leur direction et le prochain départ. Utiliser pour « quels bus ' +
+        'Chercher un arrêt par son nom, dans la ville configurée d’abord puis partout en Suisse, ' +
+        'et afficher toutes les lignes qui le desservent, leur direction et le prochain départ. ' +
+        'Utiliser pour « quels bus ' +
         'passent à Bel-Air ? », « les lignes à Ouchy », « il y a quoi comme bus à Chailly ? ». ' +
         'query : le nom de l’arrêt ou du lieu tel qu’on le dit (« Bel-Air », « Chailly », ' +
         '« Riponne »), sans la ville et sans flèche.',
@@ -627,7 +726,7 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
     {
       name: 'trajet',
       description:
-        'Calculer un itinéraire en transports publics entre deux lieux de la ville et afficher ' +
+        'Calculer un itinéraire en transports publics entre deux lieux de Suisse et afficher ' +
         'la durée, les heures et les lignes à prendre. Utiliser pour « comment je vais à Ouchy ? », ' +
         '« c’est long d’aller à la gare ? », « je suis à Bel-Air, je vais au Flon ». query : les ' +
         'deux bouts, séparés par « > » : « Chailly > Ouchy », « Bel-Air > gare ». Pour partir de ' +
@@ -752,20 +851,32 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
       const heure = String(arrivee.heure).padStart(2, '0');
       const minute = String(arrivee.minute).padStart(2, '0');
       const limite = `${heure}:${minute}`;
-      const trajets = await journeysOf(context, from, to, {
-        date: dateIn(limiteMs, context.timeZone),
-        time: limite,
+      // L'échéance est dite dans le fuseau du foyer, mais l'API lit la date et l'heure en heure
+      // suisse : on lui transmet le même instant, exprimé à Zurich.
+      const suisse = wallIn(limiteMs, apiTimeZone);
+      const propositions = await journeysOf(context, from, to, {
+        date: dateIn(limiteMs, apiTimeZone),
+        time: `${String(suisse.hour).padStart(2, '0')}:${String(suisse.minute).padStart(2, '0')}`,
       });
       // On compare des instants, pas des minutes depuis minuit : un trajet qui arrive après
       // minuit reste comparé à la bonne échéance.
-      const utiles = trajets
-        .filter((trajet) => new Date(trajet.arrive).getTime() <= limiteMs)
+      const aTemps = propositions.filter(
+        (proposition) => new Date(proposition.trajet.arrive).getTime() <= limiteMs,
+      );
+      // Un trajet déjà parti n'est pas une proposition : à 8 h 50, celui de 8 h 20 qui arrive à
+      // 9 h ne sert plus à rien. Un départ en retard, lui, reste à prendre tant qu'il n'est pas
+      // passé : c'est son heure réelle qui compte.
+      const utiles = aTemps
+        .filter((proposition) => proposition.partMs >= now)
+        .map((proposition) => proposition.trajet)
         .sort((a, b) => (a.depart < b.depart ? 1 : a.depart > b.depart ? -1 : 0));
       const meilleur = utiles[0];
       if (!meilleur)
         throw new AddonCollectError(
           'not_found',
-          `Aucun trajet n’arrive avant ${limite} à ${to.name}.`,
+          aTemps.length > 0
+            ? `Trop tard pour arriver à ${to.name} à ${limite} : le dernier départ utile est déjà passé.`
+            : `Aucun trajet n’arrive avant ${limite} à ${to.name}.`,
           false,
         );
       return {
@@ -774,7 +885,8 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
           depuis: from.name,
           vers: to.name,
           limite,
-          // Une marge ne dépasse pas une journée : au-delà, l'API a rendu un trajet hors sujet.
+          // Le départ est à venir et l'échéance dans moins d'un jour : la marge tient d'elle-même
+          // sous 1 440 minutes. La borne ne sert qu'au passage à l'heure d'hiver (journée de 25 h).
           margeMin: Math.min(
             1440,
             Math.max(0, Math.round((limiteMs - new Date(meilleur.arrive).getTime()) / 60_000)),
@@ -803,7 +915,10 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
       const to = await findAnywhere(context, ville, ends.to);
       if (!to)
         throw new AddonCollectError('not_found', `Aucun arrêt « ${ends.to} » trouvé ${ou}.`, false);
-      const trajets = await journeysOf(context, from, to);
+      // L'API peut rendre plus de trajets que demandé : la carte et le schéma en gardent trois.
+      const trajets = (await journeysOf(context, from, to))
+        .slice(0, 3)
+        .map((proposition) => proposition.trajet);
       if (trajets.length === 0)
         throw new AddonCollectError(
           'not_found',
@@ -951,7 +1066,7 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
         description: stale ? 'Dernier relevé connu, à vérifier.' : null,
         items,
         summary: firstSentence(
-          `Pars à ${clock(premier.depart, context.timeZone)} de ${data.depuis} pour arriver à ${
+          `Partez à ${clock(premier.depart, context.timeZone)} de ${data.depuis} pour arriver à ${
             data.vers
           } à ${clock(premier.arrive, context.timeZone)} : ${premier.dureeMin} minutes ${correspondances}, ${marge}.`,
           500,

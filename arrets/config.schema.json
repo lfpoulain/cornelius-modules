@@ -13,7 +13,7 @@
     },
     "arret": {
       "title": "Arrêt habituel",
-      "description": "L'arrêt lu par « mon bus », sans le nommer. Nom exact tel que le donne la recherche, par exemple « Lausanne, Chailly-Village ».",
+      "description": "L’arrêt lu par « mon bus », sans le nommer. Nom exact tel que le donne la recherche, par exemple « Lausanne, Chailly-Village ».",
       "type": "string",
       "minLength": 1,
       "maxLength": 80,
@@ -29,7 +29,7 @@
     },
     "limite": {
       "title": "Lignes affichées",
-      "description": "Nombre de lignes et directions sur la carte. Chacune n'apparaît qu'une fois, avec son prochain départ.",
+      "description": "Nombre de lignes et directions sur la carte. Chacune n’apparaît qu’une fois, avec son prochain départ.",
       "type": "integer",
       "minimum": 3,
       "maximum": 12

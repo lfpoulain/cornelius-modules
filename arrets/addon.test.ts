@@ -2,13 +2,47 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { createTestModule, validateAddonDefinition } from '#cornelius/testing';
 import addon from './index.js';
-import locations from './fixtures/locations.json' with { type: 'json' };
+import belAirSuisse from './fixtures/locations/bel-air.json' with { type: 'json' };
+import bern from './fixtures/locations/bern.json' with { type: 'json' };
+import lausanneBelAir from './fixtures/locations/lausanne-bel-air.json' with { type: 'json' };
+import lausanneChailly from './fixtures/locations/lausanne-chailly.json' with { type: 'json' };
+import lausanneLausanneBelAir from './fixtures/locations/lausanne-lausanne-bel-air.json' with { type: 'json' };
+import lausanneOuchy from './fixtures/locations/lausanne-ouchy.json' with { type: 'json' };
+import lausanneInconnu from './fixtures/locations/lausanne-zzz-inconnu.json' with { type: 'json' };
 import stationboard from './fixtures/stationboard.json' with { type: 'json' };
 import connections from './fixtures/connections.json' with { type: 'json' };
 
+/**
+ * Vraies réponses de /v1/locations (type=all, limit=20), relevées le 9 novembre 2026, rangées
+ * par texte cherché. Une recherche absente de la table rend une liste vide, comme l'API pour un
+ * nom inconnu (« Zzz-Inconnu » sans ville).
+ */
+const recherches: Record<string, Record<string, unknown>> = {
+  'Lausanne Bel-Air': lausanneBelAir,
+  'Lausanne Chailly': lausanneChailly,
+  'Lausanne Ouchy': lausanneOuchy,
+  'Lausanne Lausanne, Bel-Air': lausanneLausanneBelAir,
+  'Lausanne Zzz-Inconnu': lausanneInconnu,
+  Bern: bern,
+  'Bel-Air': belAirSuisse,
+};
+
+const locations = (request: { url: string }) =>
+  recherches[new URL(request.url).searchParams.get('query') ?? ''] ?? { stations: [] };
+
+/** Identifiants réels de ces réponses. */
+const ids = {
+  belAir: '8591988',
+  chailly: '8588432',
+  ouchyOlympique: '8592086',
+  ouchyLac: '8501075',
+  geneveBelAir: '8587387',
+  bern: '8507000',
+};
+
 /** Table des arrêts de Bel-Air, pour vérifier que la question choisit le bon. */
 const belAir = {
-  station: { id: '8588431', name: 'Lausanne, Bel-Air' },
+  station: { id: ids.belAir, name: 'Lausanne, Bel-Air' },
   stationboard: [
     {
       category: 'B',
@@ -39,7 +73,8 @@ const setup = (
     routes: {
       '/locations': locations,
       '/connections': connections,
-      '/stationboard': (request) => (request.url.includes('id=8588431') ? belAir : stationboard),
+      '/stationboard': (request) =>
+        request.url.includes(`id=${ids.belAir}`) ? belAir : stationboard,
     },
   });
 
@@ -78,7 +113,7 @@ test('une question nomme un autre arrêt de la ville et trouve ses correspondanc
   if (!invoked.outcome.ok) return;
   assert.ok(f.calls[0]?.url.includes('/locations'));
   assert.ok(f.calls[0]?.url.includes('Lausanne+Bel-Air'));
-  assert.ok(f.calls[1]?.url.includes('id=8588431'));
+  assert.ok(f.calls[1]?.url.includes(`id=${ids.belAir}`));
   assert.equal(invoked.outcome.card.subtitle, 'Lausanne, Bel-Air');
   assert.equal(invoked.outcome.card.primaryValue, '2 lignes');
   assert.deepEqual(f.contract(invoked.outcome), []);
@@ -88,9 +123,9 @@ test('la question ne garde que les arrêts de la ville configurée', async (t) =
   const f = setup(t);
   const invoked = await f.invoke('ask', { query: 'Bel-Air' });
   assert.equal(invoked.outcome.ok, true);
-  // Genève, Bel-Air est écarté : seul l'arrêt lausannois est demandé au flux.
-  assert.ok(f.calls[1]?.url.includes('id=8588431'));
-  assert.equal(f.calls[1]?.url.includes('8590000'), false);
+  // La réponse réelle contient aussi « Bel-Air LEB, Lausanne », une adresse sans virgule après
+  // la ville : elle est écartée, seul l'arrêt lausannois est demandé au flux.
+  assert.ok(f.calls[1]?.url.includes(`id=${ids.belAir}`));
 });
 
 test('le nom qui commence par la demande passe avant celui qui la contient', async (t) => {
@@ -98,8 +133,8 @@ test('le nom qui commence par la demande passe avant celui qui la contient', asy
   const invoked = await f.invoke('ask', { query: 'Ouchy' });
   assert.equal(invoked.outcome.ok, true);
   // « Ouchy-Olympique » l'emporte sur « Croix d'Ouchy » et sur le débarcadère des bateaux.
-  assert.ok(f.calls[1]?.url.includes('id=8588440'));
-  assert.equal(f.calls[1]?.url.includes('8588441'), false);
+  assert.ok(f.calls[1]?.url.includes(`id=${ids.ouchyOlympique}`));
+  assert.equal(f.calls[1]?.url.includes(ids.ouchyLac), false);
 });
 
 test('un nom français de gare germanophone est traduit', async (t) => {
@@ -109,7 +144,7 @@ test('un nom français de gare germanophone est traduit', async (t) => {
   // « Bern » est cherché avant « Berne », qui attirerait « Berneuse ».
   assert.ok(f.calls[0]?.url.includes('query=Bern'));
   // Le tableau de départs est simulé : on vérifie l'identifiant demandé, pas le nom affiché.
-  assert.ok(f.calls[1]?.url.includes('id=8507000'));
+  assert.ok(f.calls[1]?.url.includes(`id=${ids.bern}`));
 });
 
 test('sans ville, la recherche porte sur toute la Suisse', async (t) => {
@@ -119,6 +154,8 @@ test('sans ville, la recherche porte sur toute la Suisse', async (t) => {
   // Aucun préfixe de ville dans la recherche.
   assert.ok(f.calls[0]?.url.includes('query=Bel-Air'));
   assert.equal(f.calls[0]?.url.includes('Lausanne'), false);
+  // À pertinence égale, l'ordre de l'API tranche : elle classe Genève avant Lausanne.
+  assert.ok(f.calls[1]?.url.includes(`id=${ids.geneveBelAir}`));
 });
 
 test('un trajet donne la durée, les heures et le nombre de correspondances', async (t) => {
@@ -127,8 +164,8 @@ test('un trajet donne la durée, les heures et le nombre de correspondances', as
   assert.equal(invoked.outcome.ok, true);
   if (!invoked.outcome.ok) return;
   assert.ok(f.calls[2]?.url.includes('/connections'));
-  assert.ok(f.calls[2]?.url.includes('from=8588432'));
-  assert.ok(f.calls[2]?.url.includes('to=8588440'));
+  assert.ok(f.calls[2]?.url.includes(`from=${ids.chailly}`));
+  assert.ok(f.calls[2]?.url.includes(`to=${ids.ouchyOlympique}`));
   assert.equal(invoked.outcome.card.primaryValue, '49 min');
   assert.equal(
     invoked.outcome.card.subtitle,
@@ -321,14 +358,217 @@ test('aucun trajet n’arrive avant l’heure demandée : le module le dit', asy
   assert.match(invoked.outcome.error.message, /Aucun trajet n’arrive avant 00:30/u);
 });
 
+/** Un trajet direct de Chailly à Ouchy, aux heures données, retard annoncé éventuel compris. */
+function direct(depart: string, arrive: string, delay = 0) {
+  return {
+    from: {
+      departure: depart,
+      delay,
+      // Sans retard, l'API annonce la même heure en prévision ; avec, on laisse le retard seul.
+      prognosis: delay ? null : { departure: depart },
+    },
+    to: { arrival: arrive },
+    duration: '00d00:30:00',
+    transfers: 0,
+    products: ['B 6'],
+    sections: [
+      {
+        departure: {
+          station: { name: 'Lausanne, Chailly-Village' },
+          departure: depart,
+          platform: null,
+        },
+        arrival: { station: { name: 'Lausanne, Ouchy-Olympique' }, arrival: arrive },
+        journey: { category: 'B', number: '6', name: 'B 6' },
+      },
+    ],
+  };
+}
+
 test('le soir, « 9 h » vise le lendemain matin', async (t) => {
   // 22 h locales : l'échéance de 9 h est le lendemain, pas le matin déjà passé.
   const f = setup(t, {}, '2026-10-29T21:00:00Z');
+  f.route({
+    '/connections': {
+      connections: [direct('2026-10-30T08:20:00+0100', '2026-10-30T08:50:00+0100')],
+    },
+  });
   const invoked = await f.invoke('partir', { query: 'Ouchy', heure: 9, minute: 0 });
   assert.equal(invoked.outcome.ok, true);
+  if (!invoked.outcome.ok) return;
   const url = f.calls.find((call) => call.url.includes('/connections'))?.url ?? '';
   assert.ok(url.includes('date=2026-10-30'));
   assert.ok(url.includes('time=09%3A00'));
+  assert.equal(invoked.outcome.card.primaryValue, '08:20');
+  assert.deepEqual(f.contract(invoked.outcome), []);
+});
+
+test('le soir, un trajet de la veille n’est pas proposé pour le lendemain', async (t) => {
+  // Les itinéraires du fixture partent le 29 à 0 h 18 et 0 h 41 : à 22 h le 29, ils sont passés.
+  const f = setup(t, {}, '2026-10-29T21:00:00Z');
+  const invoked = await f.invoke('partir', { query: 'Ouchy', heure: 9, minute: 0 });
+  assert.equal(invoked.outcome.ok, false);
+  if (invoked.outcome.ok) return;
+  assert.match(invoked.outcome.error.message, /Trop tard/u);
+});
+
+test('un départ déjà passé n’est pas proposé : le module dit qu’il est trop tard', async (t) => {
+  // 8 h 50 à Lausanne, pour être à Ouchy à 9 h avec 30 minutes de trajet.
+  const f = setup(t, {}, '2026-10-29T07:50:00Z');
+  f.route({
+    '/connections': {
+      connections: [
+        direct('2026-10-29T08:00:00+0100', '2026-10-29T08:30:00+0100'),
+        direct('2026-10-29T08:20:00+0100', '2026-10-29T08:50:00+0100'),
+      ],
+    },
+  });
+  const invoked = await f.invoke('partir', { query: 'Ouchy', heure: 9, minute: 0 });
+  assert.equal(invoked.outcome.ok, false);
+  if (invoked.outcome.ok) return;
+  assert.equal(invoked.outcome.error.code, 'not_found');
+  assert.match(
+    invoked.outcome.error.message,
+    /Trop tard pour arriver à Lausanne, Ouchy-Olympique à 09:00/u,
+  );
+});
+
+test('seuls les départs à venir sont proposés, le plus tardif d’abord', async (t) => {
+  // 8 h 10 : le départ de 8 h est passé, celui de 8 h 20 reste.
+  const f = setup(t, {}, '2026-10-29T07:10:00Z');
+  f.route({
+    '/connections': {
+      connections: [
+        direct('2026-10-29T08:00:00+0100', '2026-10-29T08:30:00+0100'),
+        direct('2026-10-29T08:20:00+0100', '2026-10-29T08:50:00+0100'),
+      ],
+    },
+  });
+  const invoked = await f.invoke('partir', { query: 'Ouchy', heure: 9, minute: 0 });
+  assert.equal(invoked.outcome.ok, true);
+  if (!invoked.outcome.ok) return;
+  assert.equal(invoked.outcome.card.primaryValue, '08:20');
+  assert.equal(invoked.outcome.card.items.length, 1);
+  // Le résumé vouvoie, comme le reste du module.
+  assert.match(invoked.outcome.presentation.summary, /^Partez à 08:20/u);
+  assert.deepEqual(f.contract(invoked.outcome), []);
+});
+
+test('un départ en retard reste proposé tant qu’il n’est pas parti', async (t) => {
+  // 8 h 25 : le bus de 8 h 20 annonce 10 minutes de retard, il part donc à 8 h 30.
+  const f = setup(t, {}, '2026-10-29T07:25:00Z');
+  f.route({
+    '/connections': {
+      connections: [direct('2026-10-29T08:20:00+0100', '2026-10-29T08:50:00+0100', 10)],
+    },
+  });
+  const invoked = await f.invoke('partir', { query: 'Ouchy', heure: 9, minute: 0 });
+  assert.equal(invoked.outcome.ok, true);
+  if (!invoked.outcome.ok) return;
+  assert.equal(invoked.outcome.card.primaryValue, '08:20');
+});
+
+test('l’heure transmise à l’API est l’heure suisse, quel que soit le fuseau du foyer', async (t) => {
+  // Un foyer réglé sur Londres demande 9 h : c'est 10 h à Zurich, et c'est ce que lit l'API.
+  const f = createTestModule(t, addon, {
+    at: '2026-10-29T06:00:00Z',
+    timeZone: 'Europe/London',
+    routes: {
+      '/locations': locations,
+      '/connections': {
+        connections: [direct('2026-10-29T09:20:00+0100', '2026-10-29T09:50:00+0100')],
+      },
+    },
+  });
+  const invoked = await f.invoke('partir', { query: 'Ouchy', heure: 9, minute: 0 });
+  const url = f.calls.find((call) => call.url.includes('/connections'))?.url ?? '';
+  assert.ok(url.includes('date=2026-10-29'));
+  assert.ok(url.includes('time=10%3A00'));
+  assert.equal(invoked.outcome.ok, true);
+  if (!invoked.outcome.ok) return;
+  // La carte reste à l'heure du foyer : départ à 8 h 20 à Londres, échéance de 9 h.
+  assert.equal(invoked.outcome.card.primaryValue, '08:20');
+  assert.match(invoked.outcome.presentation.summary, /échéance de 09:00/u);
+});
+
+test('un bus en retard reste au tableau tant qu’il n’est pas passé', async (t) => {
+  const f = setup(t);
+  // 0 h 10 : le bus de 0 h 05 annonce 8 minutes de retard, il n'est pas encore passé ; celui
+  // de 0 h 05 à l'heure, si.
+  f.route({
+    '/stationboard': {
+      station: { name: 'Lausanne, Chailly-Village' },
+      stationboard: [
+        {
+          category: 'B',
+          number: '7',
+          name: 'B 7',
+          to: 'Prilly-M., gare',
+          stop: {
+            departure: '2026-10-29T00:05:00+0100',
+            delay: 8,
+            platform: null,
+            prognosis: { departure: '2026-10-29T00:13:00+0100' },
+          },
+        },
+        {
+          category: 'B',
+          number: '8',
+          name: 'B 8',
+          to: 'Lausanne, Bel-Air',
+          stop: { departure: '2026-10-29T00:05:00+0100', delay: 0, platform: null },
+        },
+      ],
+    },
+  });
+  const result = await f.read();
+  assert.equal(result.ok, true);
+  if (!result.ok) return;
+  assert.deepEqual(result.card.items, [{ label: 'B 7', value: '→ Prilly-M., gare · 00:05 (+8)' }]);
+});
+
+test('seuls les champs utiles sont demandés, et une réponse coupée est dite', async (t) => {
+  const f = setup(t);
+  f.route({ '/stationboard': { status: 200, body: '{"stationboard":[', truncated: true } });
+  const result = await f.read();
+  assert.ok(f.calls[0]?.url.includes('fields%5B%5D=stationboard%2Fto'));
+  assert.equal(result.ok, false);
+  if (result.ok) return;
+  assert.equal(result.error.code, 'malformed');
+  assert.match(result.error.message, /coupée/u);
+});
+
+test('une réponse hors normes reste dans le schéma : trois trajets, durée bornée, ligne nommée', async (t) => {
+  const f = setup(t);
+  const aberrant = direct('2026-10-29T00:30:00+0100', '2026-10-29T01:00:00+0100');
+  aberrant.duration = '03d00:00:00';
+  aberrant.sections[0]!.journey = { category: '', number: '', name: '' };
+  f.route({
+    '/connections': {
+      connections: [
+        aberrant,
+        direct('2026-10-29T00:40:00+0100', '2026-10-29T01:10:00+0100'),
+        direct('2026-10-29T00:50:00+0100', '2026-10-29T01:20:00+0100'),
+        direct('2026-10-29T01:00:00+0100', '2026-10-29T01:30:00+0100'),
+      ],
+    },
+  });
+  const invoked = await f.invoke('trajet', { query: 'Chailly > Ouchy' });
+  assert.equal(invoked.outcome.ok, true);
+  if (!invoked.outcome.ok) return;
+  assert.equal(invoked.outcome.card.primaryValue, '1440 min');
+  assert.equal(invoked.outcome.card.items[0]?.label, 'Ligne · 00:30');
+  // Le schéma (trois trajets au plus, durée bornée, libellé non vide) est respecté.
+  assert.deepEqual(f.contract(invoked.outcome), []);
+});
+
+test('les recherches d’arrêts sont gardées en cache', async (t) => {
+  const f = setup(t);
+  await f.invoke('trajet', { query: 'Chailly > Ouchy' });
+  const recherchesFaites = f.calls.filter((call) => call.url.includes('/locations'));
+  assert.ok(recherchesFaites.length > 0);
+  // Dix minutes, le maximum du cœur : il borne lui-même toute valeur plus haute.
+  for (const call of recherchesFaites) assert.equal(call.cacheMs, 600_000);
 });
 
 test('un arrêt sans départ affiche une carte, sans lever d’exception', async (t) => {
