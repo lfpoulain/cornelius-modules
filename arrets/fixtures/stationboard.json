@@ -1,0 +1,40 @@
+{
+  "station": { "id": "8588432", "name": "Lausanne, Chailly-Village" },
+  "stationboard": [
+    {
+      "category": "B",
+      "number": "7",
+      "name": "B 7",
+      "to": "Prilly-M., gare",
+      "stop": { "departure": "2026-10-29T00:34:00+0100", "delay": 3, "platform": null }
+    },
+    {
+      "category": "B",
+      "number": "7",
+      "name": "B 7",
+      "to": "Prilly-M., gare",
+      "stop": { "departure": "2026-10-29T00:19:00+0100", "delay": 0, "platform": null }
+    },
+    {
+      "category": "B",
+      "number": "7",
+      "name": "B 7",
+      "to": "Pully, Val-Vert",
+      "stop": { "departure": "2026-10-29T00:21:00+0100", "delay": 0, "platform": null }
+    },
+    {
+      "category": "B",
+      "number": "8",
+      "name": "B 8",
+      "to": "Lausanne, Bel-Air",
+      "stop": { "departure": "2026-10-29T00:25:00+0100", "delay": 2, "platform": null }
+    },
+    {
+      "category": "B",
+      "number": "7",
+      "name": "B 7",
+      "to": "Pully, Val-Vert",
+      "stop": { "departure": "2026-10-28T23:01:00+0100", "delay": 0, "platform": null }
+    }
+  ]
+}

@@ -10,6 +10,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 - **Agenda** (1.2.0) : la description de chaque rendez-vous peut être lue (HTML et bloc Google Meet retirés) et donnée à la voix dans les données de la réponse, sans être dite d’office ni affichée. Deux réglages par source : « Lire les descriptions », désactivé par défaut, et « Longueur des descriptions » (50 à 1 000 caractères, 300 par défaut). Les sources déjà réglées restent sans descriptions (`configVersion` 2, `dataVersion` 3).
 
+### 2026-11-02 : module Arrêts et itinéraires
+
+**Ajouté**
+
+- Module **Arrêts et itinéraires** (`arrets`, 1.0.0), par [Malvu](https://github.com/Malvu) : n’importe quel arrêt de Suisse, les lignes qui le desservent et leur prochain départ, et l’itinéraire entre deux lieux avec ses changements. À la voix, l’outil `partir` donne l’heure de départ pour arriver à une heure donnée, en gardant le dernier départ utile et en annonçant la marge. La ville est facultative : vide, la recherche porte sur tout le pays. Les gares germanophones sont cherchées sous leur nom français (« Berne » donne Bern). Source : transport.opendata.ch, sans jeton.
+
 ### 2026-10-31 : module Dépenses OpenAI
 
 **Ajouté**
