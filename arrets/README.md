@@ -5,12 +5,16 @@ Le module Arrêts et itinéraires donne les lignes qui desservent un arrêt de S
 ## Ce que fait le module
 
 - Il répond à « quels bus passent à Bel-Air ? » et affiche une carte « Arrêts » : le nombre de lignes, puis une entrée par ligne et par direction avec son prochain départ et son retard éventuel. Un bus en retard reste affiché tant que son heure réelle n’est pas passée.
-- Il répond à « comment je vais à Ouchy ? » et affiche une carte « Itinéraire » : la durée en grand, puis chaque tronçon avec sa ligne, ses deux arrêts et ses heures. Les changements sont nommés à l’oral, avec le temps d’attente à chacun. Les tronçons à pied figurent sur la carte tant que la place le permet.
+- Il répond à « comment je vais à Ouchy ? » et affiche une carte « Itinéraire » : l’outil `arrets__trajet` reçoit toujours deux bouts séparés par `>`, et sa description demande au modèle d’écrire « ici > Ouchy » quand seule la destination est dite. La carte montre la durée en grand, puis chaque tronçon avec sa ligne, ses deux arrêts et ses heures. Les changements sont nommés à l’oral, avec le temps d’attente à chacun. Les tronçons à pied figurent sur la carte tant que la place le permet.
 - Il répond à « à quelle heure je pars pour être au bureau à 9 h ? » et affiche une carte « Départ » : l’heure de départ en grand, puis les trajets qui arrivent avant l’échéance, du plus tardif au plus tôt, avec la marge restante. L’heure de départ affichée est le **dernier** départ encore à venir qui arrive à temps, pas le plus rapide. Un trajet déjà parti n’est jamais proposé : s’il n’en reste aucun, le module dit qu’il est trop tard.
 - L’échéance vaut pour **n’importe quel trajet de Suisse**, pas seulement maison → bureau : « Bel-Air > Genève à 10 h » est accepté, et c’est la même carte qui revient.
 - La ville est facultative : vide, la recherche porte sur toute la Suisse. C’est ce qui permet une source « Lausanne » et une source « Suisse » sur le même module.
 - Quand il n’y a aucun départ, la carte le dit au lieu d’inventer une valeur.
 - Les données restent en cache 45 secondes, le temps que les questions rapprochées ne redemandent pas le flux.
+
+## Source
+
+L’API [transport.opendata.ch](https://transport.opendata.ch/) (Opendata.ch), sans jeton. Elle reprend les horaires et les prévisions en temps réel publiés par [opentransportdata.swiss](https://opentransportdata.swiss/), dont les [conditions d’utilisation](https://opentransportdata.swiss/fr/terms-of-use/) permettent un usage libre à condition de citer la source : « Timetable data: opentransportdata.swiss ». Les cartes du module citent donc opentransportdata.swiss parmi leurs sources.
 
 ## Réglages d’une source
 
@@ -34,7 +38,7 @@ Dans **Modules → Arrêts et itinéraires → Ajouter une source** :
 
 ## Outil vocal et affichage permanent
 
-L’outil s’appelle `arrets__read` pour l’arrêt habituel, `arrets__ask` pour un arrêt nommé, `arrets__trajet` pour un itinéraire et `arrets__partir` pour une heure d’arrivée à respecter. Les deux derniers attendent la destination, et `arrets__trajet` accepte deux bouts séparés par `>` : « Chailly > Ouchy », ou « ici > Ouchy » pour partir de l’arrêt habituel.
+L’outil s’appelle `arrets__read` pour l’arrêt habituel, `arrets__ask` pour un arrêt nommé, `arrets__trajet` pour un itinéraire et `arrets__partir` pour une heure d’arrivée à respecter. Les deux derniers attendent la destination. `arrets__trajet` exige deux bouts séparés par `>` : « Chailly > Ouchy », ou « ici > Ouchy » pour partir de l’arrêt habituel ; sans `>`, la question est lue comme un arrêt et donne ses départs. Seuls `>`, `->` et `→` séparent deux bouts : « Gare à Ouchy » ou « Pully vers Ouchy » restent un seul lieu.
 
 `arrets__partir` reçoit l’heure d’arrivée dans les arguments `heure` et `minute`, bornés. Sa description demande au modèle de **ne pas l’appeler sans heure** : si la personne n’en donne pas, Cornelius lui demande d’abord « Vous voulez arriver à une heure précise ? ». Un appel sans heure retombe sur une question d’arrêt ordinaire.
 

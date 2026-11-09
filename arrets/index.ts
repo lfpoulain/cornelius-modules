@@ -118,8 +118,9 @@ const connectionsFields = [
 ];
 
 /**
- * Les recherches d'arrêts changent rarement, et un `partir` peut en lancer quatre : dix minutes
- * de cache, le maximum que le cœur accorde.
+ * Les recherches d'arrêts changent rarement, et un trajet en lance jusqu'à quatre par bout (nom
+ * français puis nom dit, dans la ville puis dans tout le pays) : dix minutes de cache, le
+ * maximum que le cœur accorde.
  */
 const locationsCacheMs = 10 * 60_000;
 
@@ -554,12 +555,13 @@ async function locate(
 }
 
 /**
- * Les deux bouts d'un trajet dans la question : « Chailly > Ouchy », « Bel-Air → gare »,
- * « Chailly vers Ouchy », « Bel-Air à la gare ». Sans séparateur, la question ne décrit
- * qu'une destination.
+ * Les deux bouts d'un trajet dans la question : « Chailly > Ouchy », « Bel-Air → gare ».
+ * Sans séparateur, la question ne décrit qu'un seul lieu.
  */
 function bothEnds(query: string): { from: string; to: string } | null {
-  const match = /^(.*?)\s*(?:>|→|->|\svers\s|\sà\s)\s*(.+)$/iu.exec(query.trim());
+  // Seuls les séparateurs symboliques comptent : « à » et « vers » font partie de noms de lieux
+  // ou de questions d'arrêt (« Gare à Ouchy », « Pully vers Ouchy »), qui restent un seul lieu.
+  const match = /^(.*?)\s*(?:->|>|→)\s*(.+)$/u.exec(query.trim());
   if (!match) return null;
   const from = text(match[1], 80);
   const to = text(match[2], 80);
@@ -729,9 +731,11 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
         'Calculer un itinéraire en transports publics entre deux lieux de Suisse et afficher ' +
         'la durée, les heures et les lignes à prendre. Utiliser pour « comment je vais à Ouchy ? », ' +
         '« c’est long d’aller à la gare ? », « je suis à Bel-Air, je vais au Flon ». query : les ' +
-        'deux bouts, séparés par « > » : « Chailly > Ouchy », « Bel-Air > gare ». Pour partir de ' +
-        'l’arrêt habituel, écrire « ici > Ouchy ». Ne jamais inventer une durée : si aucun trajet ' +
-        'n’est trouvé, le dire.',
+        'deux bouts, toujours séparés par « > » : « Chailly > Ouchy », « Bel-Air > gare ». Quand ' +
+        'la personne ne nomme que la destination (« comment je vais à Ouchy ? »), écrire ' +
+        '« ici > Ouchy » : le départ est alors l’arrêt habituel. Sans « > », la source lit un ' +
+        'seul arrêt et donne ses départs, pas un itinéraire. Ne jamais inventer une durée : si ' +
+        'aucun trajet n’est trouvé, le dire.',
       parameters: {
         type: 'object',
         additionalProperties: false,
@@ -829,16 +833,19 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
           'Indiquez la destination, ou renseignez le bureau dans la configuration.',
           false,
         );
-      const from: Station | null = fromHome
-        ? { id: null, name: habitual }
-        : await findAnywhere(context, ville, ends?.from ?? '');
+      // Les deux bouts sont cherchés en même temps : la latence est celle du plus lent.
+      const [from, to] = await Promise.all([
+        fromHome
+          ? Promise.resolve<Station | null>({ id: null, name: habitual })
+          : findAnywhere(context, ville, ends?.from ?? ''),
+        findAnywhere(context, ville, destination),
+      ]);
       if (!from)
         throw new AddonCollectError(
           'not_found',
           `Aucun arrêt « ${ends?.from ?? ''} » trouvé ${ou}.`,
           false,
         );
-      const to = await findAnywhere(context, ville, destination);
       if (!to)
         throw new AddonCollectError(
           'not_found',
@@ -903,16 +910,19 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
       const fromHome = ['ici', 'moi', 'maison', 'domicile'].includes(fold(ends.from));
       // Un bout hors de la ville de la source reste cherchable : « gare > Renens » depuis
       // Lausanne doit trouver Renens, qui n'est pas dans Lausanne.
-      const from: Station | null = fromHome
-        ? { id: null, name: habitual }
-        : await findAnywhere(context, ville, ends.from);
+      // Les deux bouts sont cherchés en même temps : la latence est celle du plus lent.
+      const [from, to] = await Promise.all([
+        fromHome
+          ? Promise.resolve<Station | null>({ id: null, name: habitual })
+          : findAnywhere(context, ville, ends.from),
+        findAnywhere(context, ville, ends.to),
+      ]);
       if (!from)
         throw new AddonCollectError(
           'not_found',
           `Aucun arrêt « ${ends.from} » trouvé ${ou}.`,
           false,
         );
-      const to = await findAnywhere(context, ville, ends.to);
       if (!to)
         throw new AddonCollectError('not_found', `Aucun arrêt « ${ends.to} » trouvé ${ou}.`, false);
       // L'API peut rendre plus de trajets que demandé : la carte et le schéma en gardent trois.
@@ -931,7 +941,8 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
       };
     }
 
-    // Un seul lieu : ou bien l'arrêt demandé, ou bien la destination depuis l'arrêt habituel.
+    // Un seul lieu : l'arrêt demandé et ses départs. Un itinéraire demande toujours deux bouts
+    // séparés par « > » ; la description de `trajet` fait écrire « ici > Ouchy » au modèle.
     const stop = await findStop(context, ville, query);
     if (!stop)
       throw new AddonCollectError('not_found', `Aucun arrêt « ${query} » trouvé ${ou}.`, false);
@@ -1029,7 +1040,7 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
           )}, arrivée à ${clock(premier.arrive, context.timeZone)}, ${premier.dureeMin} minutes${correspondances}.${ou}${lignes}`,
           500,
         ),
-        sources: ['transport.opendata.ch'],
+        sources: ['arrets', 'opentransportdata.swiss'],
       };
     }
 
@@ -1071,7 +1082,7 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
           } à ${clock(premier.arrive, context.timeZone)} : ${premier.dureeMin} minutes ${correspondances}, ${marge}.`,
           500,
         ),
-        sources: ['transport.opendata.ch'],
+        sources: ['arrets', 'opentransportdata.swiss'],
       };
     }
 
@@ -1085,7 +1096,7 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
         description: stale ? 'Dernier relevé connu, à vérifier.' : null,
         items: [],
         summary: `Aucun départ prévu à ${data.arret} pour l’instant.`,
-        sources: ['transport.opendata.ch'],
+        sources: ['arrets', 'opentransportdata.swiss'],
       };
     const items = data.lignes.slice(0, 5).map((ligne) => ({
       label: ligne.ligne,
@@ -1108,7 +1119,7 @@ const addon: AddonDefinition<ArretsConfig, ArretsData> = {
       summary: `${stale ? 'Dernier relevé connu à' : 'À'} ${data.arret} : ${premieres.join(', ')}${
         nombre > 3 ? `, et ${nombre - 3} autre${nombre - 3 > 1 ? 's' : ''}` : ''
       }.`,
-      sources: ['transport.opendata.ch'],
+      sources: ['arrets', 'opentransportdata.swiss'],
     };
   },
 };

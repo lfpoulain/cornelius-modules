@@ -583,3 +583,44 @@ test('un arrêt sans départ affiche une carte, sans lever d’exception', async
   assert.match(result.presentation.summary, /Aucun départ prévu/u);
   assert.deepEqual(f.contract(result), []);
 });
+
+test('« à » et « vers » ne coupent pas une question d’arrêt en deux bouts', async (t) => {
+  for (const query of ['Gare à Ouchy', 'Pully vers Ouchy']) {
+    const f = setup(t);
+    await f.invoke('ask', { query });
+    // Un seul lieu est cherché, avec tout le texte dit ; aucun itinéraire n'est calculé.
+    assert.ok(
+      f.calls.every(
+        (call) =>
+          !call.url.includes('/locations') ||
+          new URL(call.url).searchParams.get('query')?.includes(query),
+      ),
+    );
+    assert.equal(
+      f.calls.some((call) => call.url.includes('/connections')),
+      false,
+    );
+  }
+});
+
+test('sans « > », trajet lit un seul arrêt : l’itinéraire demande deux bouts', async (t) => {
+  const f = setup(t);
+  const invoked = await f.invoke('trajet', { query: 'Ouchy' });
+  assert.equal(invoked.outcome.ok, true);
+  assert.equal(
+    f.calls.some((call) => call.url.includes('/connections')),
+    false,
+  );
+  // La description de l'outil fait écrire « ici > Ouchy » pour un itinéraire depuis l'arrêt
+  // habituel.
+  const trajet = addon.tools.find((tool) => tool.name === 'trajet');
+  assert.match(trajet?.description ?? '', /« ici > Ouchy »/u);
+});
+
+test('les cartes citent opentransportdata.swiss, comme le demandent ses conditions', async (t) => {
+  const f = setup(t);
+  const result = await f.read();
+  assert.equal(result.ok, true);
+  if (!result.ok) return;
+  assert.deepEqual(result.card.sources, ['arrets', 'opentransportdata.swiss']);
+});
