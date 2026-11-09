@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "AgendaData v2",
+  "title": "AgendaData v3",
   "description": "Le lien de l’agenda n’y figure jamais : il ne vit que dans les réglages de la source.",
   "type": "object",
   "additionalProperties": false,
@@ -30,7 +30,7 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["title", "location", "start", "end", "allDay"],
+        "required": ["title", "location", "description", "start", "end", "allDay"],
         "properties": {
           "title": {
             "type": "string",
@@ -40,6 +40,10 @@
           "location": {
             "type": ["string", "null"],
             "maxLength": 200
+          },
+          "description": {
+            "type": ["string", "null"],
+            "maxLength": 1000
           },
           "start": {
             "type": "string",
