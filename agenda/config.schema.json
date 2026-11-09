@@ -29,7 +29,7 @@
       "description": "Caractères gardés au plus par description ; au-delà, elle est coupée. Plus elles sont longues, plus chaque question sur l’agenda coûte.",
       "type": "integer",
       "minimum": 50,
-      "maximum": 2000
+      "maximum": 1000
     }
   }
 }

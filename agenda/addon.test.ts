@@ -26,12 +26,16 @@ test('définition, réglages et contrat', async (t) => {
   const f = setup(t);
   for (const url of [secretUrl, 'webcal://p01-caldav.icloud.com/published/2/abc'])
     assert.equal(f.runtime.validateConfig(addon.id, { url, ...full }).ok, true, url);
+  for (const descriptionLength of [50, 1000]) {
+    const config = { url: secretUrl, ...full, descriptionLength };
+    assert.equal(f.runtime.validateConfig(addon.id, config).ok, true, JSON.stringify(config));
+  }
   for (const config of [
     { url: 'ftp://exemple.fr/a.ics', ...full },
     { url: 'https://exemple.fr/a b.ics', ...full },
     { url: secretUrl, ...full, days: 30 },
-    { url: secretUrl, ...full, descriptionLength: 10 },
-    { url: secretUrl, ...full, descriptionLength: 5000 },
+    { url: secretUrl, ...full, descriptionLength: 49 },
+    { url: secretUrl, ...full, descriptionLength: 1001 },
     { url: secretUrl, days: 7 },
   ])
     assert.equal(f.runtime.validateConfig(addon.id, config).ok, false, JSON.stringify(config));
@@ -77,7 +81,7 @@ test('la semaine : rendez-vous en cours d’abord, puis par jour, à l’oral co
 });
 
 test('descriptions : dans les données pour la voix, ni dites d’office ni sur la carte', async (t) => {
-  const f = setup(t);
+  const f = setup(t, { config: { descriptions: true } });
   const result = await f.read();
   assert.equal(result.ok, true);
   if (!result.ok) return;
@@ -92,8 +96,8 @@ test('descriptions : dans les données pour la voix, ni dites d’office ni sur 
   assert.equal(shown.includes('carte vitale'), false);
 });
 
-test('réglages de la source : longueur des descriptions, ou pas de description', async (t) => {
-  const short = setup(t, { config: { descriptionLength: 50 } });
+test('réglages de la source : longueur des descriptions, ou aucune par défaut', async (t) => {
+  const short = setup(t, { config: { descriptions: true, descriptionLength: 50 } });
   await short.read();
   const dentist = (short.instances.getSnapshot(short.instance)?.data as Stored).events.find(
     (e) => e.title === 'Dentiste de Léa',
@@ -101,7 +105,7 @@ test('réglages de la source : longueur des descriptions, ou pas de description'
   assert.ok(dentist && dentist.length <= 50 && dentist.endsWith('…'), dentist ?? 'absente');
   assert.match(dentist, /^Apporter la carte vitale/u);
 
-  const off = setup(t, { config: { descriptions: false } });
+  const off = setup(t);
   await off.read();
   const events = (off.instances.getSnapshot(off.instance)?.data as Stored).events;
   assert.equal(events.length > 0, true);
@@ -111,15 +115,15 @@ test('réglages de la source : longueur des descriptions, ou pas de description'
   );
 });
 
-test('les réglages de la version 1 sont repris : descriptions lues, 300 caractères', async (t) => {
+test('les réglages de la version 1 sont repris : descriptions désactivées, 300 caractères', async (t) => {
   assert.deepEqual(addon.configMigrate!(1, { url: secretUrl, days: 14 }), {
     url: secretUrl,
     days: 14,
-    descriptions: true,
+    descriptions: false,
     descriptionLength: 300,
   });
   assert.throws(() => addon.configMigrate!(9, {}), /inconnus/u);
-  // Une source enregistrée en version 1 se lit sans être réglée à nouveau.
+  // Une source enregistrée en version 1 se lit sans être réglée à nouveau, et sans description.
   const f = setup(t);
   f.instances.updateInstance(f.instance.id, {
     config: { url: secretUrl, days: 7 },
@@ -129,9 +133,10 @@ test('les réglages de la version 1 sont repris : descriptions lues, 300 caract�
   assert.equal(result.ok, true);
   if (!result.ok) return;
   const data = f.runtime.toolResult(result).result?.data as Stored;
+  assert.equal(data.events.length > 0, true);
   assert.equal(
-    data.events.find((e) => e.title === 'Cours de piano (décalé)')?.description,
-    'Salle 2, au lieu de la salle 1.',
+    data.events.every((e) => e.description === null),
+    true,
   );
 });
 

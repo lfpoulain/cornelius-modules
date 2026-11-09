@@ -43,7 +43,7 @@
           },
           "description": {
             "type": ["string", "null"],
-            "maxLength": 2000
+            "maxLength": 1000
           },
           "start": {
             "type": "string",

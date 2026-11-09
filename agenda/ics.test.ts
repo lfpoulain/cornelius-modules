@@ -86,6 +86,8 @@ test('descriptions : HTML et visio Google retirés, alarme ignorée, occurrence 
   );
   // Le bloc « Rejoindre avec Google Meet » disparaît, liens et numéros compris.
   assert.equal(of('Visio avec les cousins'), 'Ordre du jour : le menu de Noël.');
+  // Une alarme sur un rendez-vous sans description, le cas courant chez Google, ne lui en donne
+  // pas : le texte de l'alarme (VALARM) n'est pas celui du rendez-vous.
   assert.equal(of("Réunion d'école"), null);
   // L'occurrence décalée garde sa propre description, les autres celle de la répétition.
   assert.equal(of('Cours de piano (décalé)'), 'Salle 2, au lieu de la salle 1.');
@@ -93,7 +95,6 @@ test('descriptions : HTML et visio Google retirés, alarme ignorée, occurrence 
     calendar.occurrences.find((o) => o.title === 'Cours de piano')?.description,
     'Apporter la partition.',
   );
-  // La description d'une alarme (VALARM) n'est pas celle du rendez-vous.
   assert.equal(JSON.stringify(calendar).includes('event reminder'), false);
 });
 
