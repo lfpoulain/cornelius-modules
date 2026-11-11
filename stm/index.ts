@@ -16,6 +16,7 @@ import { compile } from '#cornelius/validation';
 import configSchema from './config.schema.json' with { type: 'json' };
 import dataSchema from './data.schema.json' with { type: 'json' };
 import { cleStm } from './cle.js';
+import { lirePassages, type PassagesReels } from './gtfs-rt.js';
 
 type Favori = { nom: string; dit: string; adresse: string };
 type StmConfig = {
@@ -241,6 +242,53 @@ export function phraseAvis(text: string): string {
   return fin > 40 ? court.slice(0, fin + 1) : court.trim();
 }
 
+/**
+ * Temps réel de la STM (GTFS-RT TripUpdates, protobuf, environ 2 Mo pour tout le réseau, sans
+ * filtre possible) : lu seulement si le cœur sait rendre un corps binaire (`bytes()`), gardé
+ * 30 secondes dans le cache partagé. Le métro n'y figure pas : ses passages restent prévus.
+ */
+const tempsReelUrl = 'https://api.stm.info/pub/od/gtfs-rt/ic/v2/tripUpdates';
+/** Le cœur n'a pas `bytes()` : inutile de retélécharger 2 Mo à chaque question. */
+let sansLectureBinaire = false;
+/** Vrai si le cœur a montré qu'il ne sait pas rendre un corps binaire (tests, diagnostic). */
+export const coeurSansLectureBinaire = () => sansLectureBinaire;
+
+/** « 20261111_15:20_ca-qc-STM_302247349 » (Transitous) → « 302247349 » (STM). */
+export function voyageStm(tripId: string): string {
+  return /STM_([^_]+)$/u.exec(tripId)?.[1] ?? '';
+}
+
+async function passagesReels(context: Context, voyages: Set<string>): Promise<PassagesReels> {
+  if (!voyages.size || sansLectureBinaire) return new Map();
+  try {
+    const response = await context.http.fetch({
+      url: tempsReelUrl,
+      method: 'GET',
+      headers: {
+        'User-Agent': headers['User-Agent'],
+        Accept: 'application/x-protobuf',
+        apiKey: cleStm(),
+      },
+      signal: context.signal,
+      timeoutMs: 8000,
+      maxBytes: 6 * 1024 * 1024,
+      cacheMs: 30_000,
+    });
+    // `bytes()` arrive avec une version de Cornelius plus récente que 0.3.0 : sans lui, horaire.
+    const bytes = (response as { bytes?: () => Uint8Array }).bytes;
+    if (typeof bytes !== 'function') {
+      sansLectureBinaire = true;
+      return new Map();
+    }
+    if (response.status !== 200 || response.truncated) return new Map();
+    return lirePassages(bytes.call(response), voyages);
+  } catch (error) {
+    if (context.signal?.aborted) throw error;
+    // Clé refusée, quota, panne ou flux illisible : les heures restent celles de l'horaire.
+    return new Map();
+  }
+}
+
 /** État du service de la STM (JSON, ~14 ko) : une lecture par 3 minutes au plus, par Cornelius. */
 const etatService = 'https://api.stm.info/pub/od/i3/v1/messages/etatservice';
 
@@ -366,7 +414,9 @@ async function collect(context: Context) {
     `${transitous}/v5/stoptimes?${new URLSearchParams({ stopId: ride.stopId, n: '30' })}`,
     { timeoutMs: 8000 },
   )) as Leg;
-  const passages: Depart[] = (Array.isArray(times?.stopTimes) ? (times.stopTimes as Leg[]) : [])
+  // Un passage prévu il y a peu peut être réellement à venir (autobus en retard) : on garde les
+  // vingt dernières minutes, que le temps réel départage.
+  const candidats = (Array.isArray(times?.stopTimes) ? (times.stopTimes as Leg[]) : [])
     .filter(
       (s) =>
         !s.cancelled &&
@@ -375,10 +425,24 @@ async function collect(context: Context) {
         String(s.headsign ?? '').trim() === ride.direction,
     )
     .map((s) => ({
-      at: Date.parse(String(s.place?.departure ?? s.place?.arrival ?? '')),
+      prevu: Date.parse(String(s.place?.departure ?? s.place?.arrival ?? '')),
       reel: s.realTime === true,
+      voyage: voyageStm(String(s.tripId ?? '')),
     }))
-    .filter((s) => Number.isFinite(s.at) && s.at >= context.now() - 30_000)
+    .filter((s) => Number.isFinite(s.prevu) && s.prevu >= context.now() - 20 * 60_000)
+    .sort((a, b) => a.prevu - b.prevu)
+    .slice(0, 10);
+  const reels = await passagesReels(
+    context,
+    new Set(candidats.map((s) => s.voyage).filter(Boolean)),
+  );
+  const arretStm = /STM_(.+)$/u.exec(ride.stopId)?.[1] ?? '';
+  const passages: Depart[] = candidats
+    .map((s) => {
+      const reel = reels.get(s.voyage)?.get(arretStm);
+      return reel === undefined ? { at: s.prevu, reel: s.reel } : { at: reel, reel: true };
+    })
+    .filter((s) => s.at >= context.now() - 30_000)
     .sort((a, b) => a.at - b.at)
     .slice(0, 6)
     .map((s) => ({ heure: new Date(s.at).toISOString(), reel: s.reel }));
@@ -474,7 +538,7 @@ function present(
 const addon: AddonDefinition<StmConfig, StmData> = {
   id: 'stm',
   apiVersion: 1,
-  version: '1.2.0',
+  version: '1.3.0',
   minCoreVersion: '0.2.0',
   sourceLabel: 'Transitous et état du service STM',
   display: {

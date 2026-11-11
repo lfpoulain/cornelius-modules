@@ -10,8 +10,8 @@ Le module Transports STM donne le prochain départ de la STM (Montréal : métro
 
 - **Disponibilité du réseau** : si la STM publie un avis en cours sur la ligne du trajet (interruption, ouverture tardive, détour), il est dit à la fin : « Avis de la STM : Ce samedi 14 novembre, le service métro débutera seulement vers 9h30 sur la ligne 5 - Bleue… ». « Service normal du métro » n’est jamais dit.
 - Parmi les itinéraires proposés, le module retient celui qui arrive le plus tôt. « Le prochain » est le premier départ qu’on peut attraper, marche jusqu’à la station comprise.
-- Les heures sont celles de l’horaire, et la réponse le dit (« selon l’horaire ») : Transitous n’a pas encore le temps réel de la STM. Le jour où il l’aura, l’indicateur `realTime` est déjà lu et « selon l’horaire » disparaîtra sans changer le module.
-- Les données restent en cache 1 minute ; l’état du service, 3 minutes.
+- **Temps réel des autobus** : avec un Cornelius qui sait lire une réponse binaire (`bytes()`, proposé après la 0.3.0), le module lit le flux temps réel de la STM (GTFS-RT) et donne l’heure réelle des autobus en route. Le métro n’y figure pas, et un autobus qui n’a pas quitté son terminus non plus : leurs heures restent celles de l’horaire, et la réponse le dit (« selon l’horaire »). Avec Cornelius 0.3.0, tout reste « selon l’horaire », sans erreur.
+- Les données restent en cache 1 minute ; le flux temps réel, 30 secondes ; l’état du service, 3 minutes.
 
 ## Sources des données
 
@@ -19,13 +19,14 @@ Le module Transports STM donne le prochain départ de la STM (Montréal : métro
 | --- | --- | --- |
 | Destination et départ → coordonnées | [Transitous](https://transitous.org/api/) `v1/geocode` | Gratuit, sans jeton ; usage non commercial raisonnable, sans garantie |
 | Itinéraire, ligne, station, durée ; passages suivants | Transitous `v5/plan` et `v5/stoptimes` (horaires GTFS officiels de la STM) | Idem |
+| Heure réelle des autobus | STM, temps réel GTFS-RT `gtfs-rt/ic/v2/tripUpdates` (protobuf, environ 2 Mo pour tout le réseau, sans filtre possible) | [Données ouvertes de la STM](https://www.stm.info/fr/a-propos/developpeurs) ; clé d’application ; Cornelius avec `bytes()` |
 | Disponibilité du réseau | STM, état du service `i3/v1/messages/etatservice` (JSON, environ 14 ko) | [Données ouvertes de la STM](https://www.stm.info/fr/a-propos/developpeurs) ; clé d’application |
 
 ## Clé de l’état du service
 
-Aucun jeton à demander ni à saisir. C’est la STM, l’entreprise publique de transport de Montréal, qui exige une clé pour son état du service : une clé **par application**, qui sert à identifier chaque application qui interroge son API, pas chaque personne. Ce n’est ni un jeton personnel ni un secret d’utilisateur. Celle de l’application « Transports STM », déclarée publique auprès de la STM, est incluse dans le module (`cle.ts`). Elle est seulement brouillée, pour échapper aux robots qui cherchent des clés en clair : ce n’est pas un secret.
+Aucun jeton à demander ni à saisir. C’est la STM, l’entreprise publique de transport de Montréal, qui exige une clé pour son état du service et son temps réel : une clé **par application**, qui sert à identifier chaque application qui interroge son API, pas chaque personne. Ce n’est ni un jeton personnel ni un secret d’utilisateur. Celle de l’application « Transports STM », déclarée publique auprès de la STM, est incluse dans le module (`cle.ts`). Elle est seulement brouillée, pour échapper aux robots qui cherchent des clés en clair : ce n’est pas un secret.
 
-L’état du service n’est lu que lorsqu’une question de trajet est posée, jamais en tâche de fond, puis gardé 3 minutes dans le cache de chaque installation. Clé refusée, quota atteint ou STM injoignable : la réponse reste celle de l’horaire, sans avis.
+L’état du service et le temps réel ne sont lus que lorsqu’une question de trajet est posée, jamais en tâche de fond, puis gardés 3 minutes et 30 secondes dans le cache de chaque installation. Le décodage du flux temps réel (protobuf) est fait par le module, sans dépendance ([gtfs-rt.ts](gtfs-rt.ts)), pour les seuls voyages de l’arrêt. Clé refusée, quota atteint ou STM injoignable : la réponse reste celle de l’horaire, sans avis.
 
 ## Réglages d’une source
 

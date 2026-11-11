@@ -1,7 +1,17 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { createTestModule } from '#cornelius/testing';
-import addon, { arretDit, destinationFor, phraseAvis, surLaRue, vehiculeDit } from './index.js';
+import addon, {
+  arretDit,
+  coeurSansLectureBinaire,
+  destinationFor,
+  phraseAvis,
+  surLaRue,
+  vehiculeDit,
+  voyageStm,
+} from './index.js';
+import { lirePassages } from './gtfs-rt.js';
 // Réponses réelles relevées le 2026-11-11 à 21 h 16 UTC (16 h 16 à Montréal), lieux publics
 // seulement : Transitous (géocodage, itinéraire, passages) et l'état du service de la STM.
 import etatservice from './fixtures/etatservice.json' with { type: 'json' };
@@ -11,6 +21,8 @@ import planCentreBell from './fixtures/plan-centre-bell.json' with { type: 'json
 import planSaintMichel from './fixtures/plan-saint-michel.json' with { type: 'json' };
 import stoptimesCentreBell from './fixtures/stoptimes-centre-bell.json' with { type: 'json' };
 import stoptimesSaintMichel from './fixtures/stoptimes-saint-michel.json' with { type: 'json' };
+import etatSnowdon from './fixtures/etatservice-snowdon.json' with { type: 'json' };
+import transitousSnowdon from './fixtures/transitous-snowdon.json' with { type: 'json' };
 
 const at = '2026-11-11T21:16:00Z';
 const berri = { depart: 'Berri-UQAM', latitude: 45.515, longitude: -73.561, favoris: [] };
@@ -158,5 +170,68 @@ test('destinations, adresses refusées et noms dits à la voix', () => {
   assert.equal(
     phraseAvis('[Ouverture tardive] Ligne 5 fermée le matin. Navettes. <a class="external"'),
     'Ligne 5 fermée le matin. Navettes.',
+  );
+});
+
+// Temps réel des autobus (GTFS-RT, binaire) : relevé réel du 2026-11-11 à 21 h 38 UTC, de la
+// station Snowdon à l'Oratoire Saint-Joseph (autobus 51). Le flux de la STM (2 Mo) est réduit aux
+// voyages de l'arrêt : les octets de leurs entités sont recopiés tels quels, sans réencodage.
+test('décodeur GTFS-RT : passages réels des voyages demandés seulement', () => {
+  const buf = new Uint8Array(
+    readFileSync(new URL('./fixtures/tripupdates-snowdon.pb', import.meta.url)),
+  );
+  const tous = lirePassages(buf, { has: () => true } as unknown as Set<string>);
+  assert.ok(tous.size > 5, 'plusieurs voyages');
+  const [voyage] = [...tous.keys()];
+  const un = lirePassages(buf, new Set([voyage!]));
+  assert.deepEqual([...un.keys()], [voyage]);
+  for (const ms of un.get(voyage!)!.values()) assert.ok(ms > Date.parse('2026-11-11T20:00:00Z'));
+  assert.throws(
+    () => lirePassages(buf.subarray(0, buf.length - 3), new Set([voyage!])),
+    /tronqué/u,
+  );
+  assert.equal(voyageStm('20261111_16:47_ca-qc-STM_302247463'), '302247463');
+});
+
+test('temps réel des autobus avec un cœur qui lit le binaire ; sinon, l’horaire', async (t) => {
+  const pb = new Uint8Array(
+    readFileSync(new URL('./fixtures/tripupdates-snowdon.pb', import.meta.url)),
+  );
+  const routesSnowdon = (request: { url: string }) => {
+    const url = new URL(request.url);
+    if (url.pathname.endsWith('/tripUpdates')) return { status: 200, body: pb } as never;
+    if (url.hostname === 'api.stm.info') return etatSnowdon;
+    const cle =
+      url.pathname.split('/').pop() + ((u) => (u.searchParams.delete('time'), u.search))(url);
+    return (
+      (transitousSnowdon as unknown as Record<string, Record<string, unknown>>)[cle] ?? {
+        status: 404,
+      }
+    );
+  };
+  const snowdon = { depart: 'Snowdon', adresseDepart: 'Station Snowdon', favoris: [] };
+  const f = createTestModule(t, addon, {
+    config: snowdon,
+    at: '2026-11-11T21:38:00Z',
+    routes: routesSnowdon,
+  });
+  const result = await f.invoke('trajet', { query: 'à l’Oratoire Saint-Joseph' });
+  assert.deepEqual(f.contract(result.outcome), []);
+  assert.equal(result.tool.status, 'succeeded', result.tool.error?.message);
+  assert.match(
+    result.tool.summary,
+    /^Pour te rendre à l’Oratoire Saint-Joseph, le prochain départ est l’autobus 51 /u,
+  );
+  const debut =
+    'Pour te rendre à l’Oratoire Saint-Joseph, le prochain départ est l’autobus 51 dans 2 minutes selon l’horaire, ' +
+    'à la station Snowdon (Queen-Mary et Circle), à 1 minute à pied. La durée du trajet est de 12 minutes. ';
+  // Avec bytes() (Cornelius plus récent que 0.3.0), le suivant est à l'heure réelle de la STM ;
+  // sans, il reste celui de l'horaire. Le premier n'est pas encore dans le flux temps réel.
+  assert.equal(
+    result.tool.summary,
+    debut +
+      (coeurSansLectureBinaire()
+        ? 'Le suivant est prévu dans 9 minutes selon l’horaire.'
+        : 'Le suivant est prévu dans 9 minutes.'),
   );
 });

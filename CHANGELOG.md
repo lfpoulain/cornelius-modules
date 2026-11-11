@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-11 : temps réel des autobus de la STM
+
+**Modifié**
+
+- **Transports STM** (1.3.0) : heure réelle des autobus en route, d’après le flux temps réel GTFS-RT de la STM (protobuf), décodé par le module sans dépendance pour les seuls voyages de l’arrêt, cache de 30 secondes. Demande un Cornelius qui sait lire une réponse binaire (`bytes()`) ; avec Cornelius 0.3.0, les heures restent celles de l’horaire, sans erreur. Le métro n’est pas dans ce flux.
+
 ### 2026-11-11 : module Transports STM
 
 **Ajouté**
