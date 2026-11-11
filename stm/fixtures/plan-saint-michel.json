@@ -1,0 +1,1912 @@
+{
+ "requestParameters": {},
+ "debugOutput": {
+  "algorithm": 1,
+  "direct": 1,
+  "execute_time": 20,
+  "fares": 0,
+  "fastest_direct": 0,
+  "fp_update_prevented_by_lower_bound": 0,
+  "gpu_supported": 1,
+  "gpu_used": 1,
+  "interval_extensions": 0,
+  "lb_time": 0,
+  "n_dest_offsets": 96,
+  "n_earliest_arrival_updated_by_footpath": 0,
+  "n_earliest_arrival_updated_by_route": 0,
+  "n_earliest_trip_calls": 0,
+  "n_events_skipped_by_early_termination": 0,
+  "n_execute_bwd": 4,
+  "n_execute_fwd": 4,
+  "n_footpaths_visited": 0,
+  "n_routes_visited": 0,
+  "n_routing_time": 0,
+  "n_start_offsets": 96,
+  "n_td_dest_offsets": 0,
+  "n_td_start_offsets": 0,
+  "prepare": 14,
+  "prepare_backward_WALK": 7,
+  "prepare_forward_WALK": 7,
+  "route_update_prevented_by_lower_bound": 0,
+  "search_interval_reduction_by_early_termination": 0
+ },
+ "from": {
+  "name": "START",
+  "lat": 45.539,
+  "lon": -73.614,
+  "level": 0,
+  "vertexType": "NORMAL"
+ },
+ "to": {
+  "name": "END",
+  "lat": 45.56,
+  "lon": -73.6,
+  "level": 0,
+  "vertexType": "NORMAL"
+ },
+ "direct": [],
+ "itineraries": [
+  {
+   "duration": 540,
+   "startTime": "2026-11-11T21:19:00Z",
+   "endTime": "2026-11-11T21:28:00Z",
+   "transfers": 0,
+   "id": "CkshokW28/3ERkApnu+nxktnUsAyEWNhLXFjLVNUTV85OTk5MDU1OWkAb4EExUZAQQuwj05dZ1LASMS309cGULy409cGWgRXQUxLYAEKggEKATUSIjIwMjYxMTExXzE2OjA5X2NhLXFjLVNUTV8zMDE4Nzg0MzgaEWNhLXFjLVNUTV85OTk5MDU1IWkAb4EExUZAKQuwj05dZ1LAMgxjYS1xYy1TVE1fNjQ5kNjuHqDHRkBBijxJumZmUsBIvLjT1wZQ6LrT1wZaBlNVQldBWWABCkYaDGNhLXFjLVNUTV82NCGQ2O4eoMdGQCmKPEm6ZmZSwDlI4XoUrsdGQEFmZmZmZmZSwEjoutPXBlDgu9PXBloEV0FMS2AB",
+   "legs": [
+    {
+     "mode": "WALK",
+     "from": {
+      "name": "START",
+      "lat": 45.539,
+      "lon": -73.614,
+      "level": 0,
+      "tz": "America/Toronto",
+      "departure": "2026-11-11T21:19:00Z",
+      "scheduledDeparture": "2026-11-11T21:19:00Z",
+      "vertexType": "NORMAL"
+     },
+     "to": {
+      "name": "STATION JEAN-TALON",
+      "stopId": "ca-qc-STM_9999055",
+      "parentId": "ca-qc-STM_STATION_M272",
+      "importance": 0.0038322473410516977,
+      "lat": 45.5392,
+      "lon": -73.61506999999999,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:21:00Z",
+      "scheduledArrival": "2026-11-11T21:21:00Z",
+      "stopCode": "10272",
+      "vertexType": "TRANSIT",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "duration": 120,
+     "startTime": "2026-11-11T21:19:00Z",
+     "endTime": "2026-11-11T21:21:00Z",
+     "scheduledStartTime": "2026-11-11T21:19:00Z",
+     "scheduledEndTime": "2026-11-11T21:21:00Z",
+     "realTime": false,
+     "scheduled": false,
+     "distance": 98,
+     "legGeometry": {
+      "points": "imnzuAxn`lkC??RZF`@??\\C??hC~@??hC`A??JR??UPW^}@|E??iCfNy@zFqF~X",
+      "precision": 6,
+      "length": 20
+     },
+     "steps": [
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 2,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "toOsmNode": 12228610887,
+       "polyline": {
+        "points": "imnzuAxn`lkC??RZF`@",
+        "precision": 6,
+        "length": 4
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 2,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 1321508672,
+       "fromOsmNode": 12228610887,
+       "toOsmNode": 11167133610,
+       "polyline": {
+        "points": "mlnzuAvp`lkC\\C",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 8,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 766091386,
+       "fromOsmNode": 11167133610,
+       "toOsmNode": 7154947695,
+       "polyline": {
+        "points": "oknzuArp`lkChC~@",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "Rue Jean-Talon Est",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 8,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 766091386,
+       "fromOsmNode": 7154947695,
+       "toOsmNode": 12228610891,
+       "polyline": {
+        "points": "egnzuArr`lkChC`A",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "Rue Jean-Talon Est",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 1,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 1321508674,
+       "fromOsmNode": 12228610891,
+       "toOsmNode": 7154931281,
+       "polyline": {
+        "points": "{bnzuAtt`lkCJR",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 12,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 966732163,
+       "fromOsmNode": 7154931281,
+       "toOsmNode": 12228610896,
+       "polyline": {
+        "points": "obnzuAhu`lkCUPW^}@|E",
+        "precision": 6,
+        "length": 4
+       },
+       "streetName": "Rue Berri",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 65,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "fromOsmNode": 12228610896,
+       "polyline": {
+        "points": "{enzuAx}`lkCiCfNy@zFqF~X",
+        "precision": 6,
+        "length": 4
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      }
+     ]
+    },
+    {
+     "mode": "SUBWAY",
+     "from": {
+      "name": "STATION JEAN-TALON",
+      "stopId": "ca-qc-STM_9999055",
+      "parentId": "ca-qc-STM_STATION_M272",
+      "importance": 0.0038322473410516977,
+      "lat": 45.5392,
+      "lon": -73.61506999999999,
+      "level": 0,
+      "tz": "America/Toronto",
+      "departure": "2026-11-11T21:21:00Z",
+      "scheduledDeparture": "2026-11-11T21:21:00Z",
+      "stopCode": "10272",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "departureTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "to": {
+      "name": "STATION SAINT-MICHEL",
+      "stopId": "ca-qc-STM_64",
+      "parentId": "ca-qc-STM_STATION_M556",
+      "importance": 0.0018324046395719051,
+      "lat": 45.559574,
+      "lon": -73.60002,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:26:00Z",
+      "scheduledArrival": "2026-11-11T21:26:00Z",
+      "stopCode": "10556",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "duration": 300,
+     "startTime": "2026-11-11T21:21:00Z",
+     "endTime": "2026-11-11T21:26:00Z",
+     "scheduledStartTime": "2026-11-11T21:21:00Z",
+     "scheduledEndTime": "2026-11-11T21:26:00Z",
+     "realTime": false,
+     "scheduled": true,
+     "interlineWithPreviousLeg": false,
+     "headsign": "Station Saint-Michel",
+     "tripFrom": {
+      "name": "STATION SNOWDON",
+      "stopId": "ca-qc-STM_9999495",
+      "parentId": "ca-qc-STM_STATION_M236",
+      "importance": 0.0037885066121816635,
+      "lat": 45.48572,
+      "lon": -73.62855499999999,
+      "level": 0,
+      "tz": "America/Toronto",
+      "departure": "2026-11-11T21:09:00Z",
+      "scheduledDeparture": "2026-11-11T21:09:00Z",
+      "stopCode": "10236",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "departureTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "tripTo": {
+      "name": "STATION SAINT-MICHEL",
+      "stopId": "ca-qc-STM_64",
+      "parentId": "ca-qc-STM_STATION_M556",
+      "importance": 0.0018324046395719051,
+      "lat": 45.559574,
+      "lon": -73.60002,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:26:00Z",
+      "scheduledArrival": "2026-11-11T21:26:00Z",
+      "stopCode": "10556",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "routeId": "ca-qc-STM_5",
+     "routeUrl": "https://www.stm.info/fr/infos/reseaux/metro/ligne-5---bleue",
+     "directionId": "0",
+     "routeColor": "0095e6",
+     "routeTextColor": "ffffff",
+     "routeType": 1,
+     "agencyName": "Société de transport de Montréal",
+     "agencyUrl": "https://www.stm.info",
+     "agencyFareUrl": "https://www.stm.info/fr/tarifs",
+     "agencyId": "STM",
+     "tripId": "20261111_16:09_ca-qc-STM_301878438",
+     "routeShortName": "5",
+     "routeLongName": "Ligne 5 - Bleue",
+     "tripShortName": "",
+     "displayName": "5",
+     "cancelled": false,
+     "source": "ca-qc_STM.gtfs.zip/stop_times.txt:269803:269814",
+     "intermediateStops": [
+      {
+       "name": "STATION FABRE",
+       "stopId": "ca-qc-STM_62",
+       "parentId": "ca-qc-STM_STATION_M552",
+       "importance": 0.0017203993629664183,
+       "lat": 45.546738000000005,
+       "lon": -73.608154,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:23:00Z",
+       "departure": "2026-11-11T21:23:00Z",
+       "scheduledArrival": "2026-11-11T21:23:00Z",
+       "scheduledDeparture": "2026-11-11T21:23:00Z",
+       "stopCode": "10552",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "SUBWAY",
+        "BUS"
+       ]
+      },
+      {
+       "name": "STATION IBERVILLE",
+       "stopId": "ca-qc-STM_63",
+       "parentId": "ca-qc-STM_STATION_M554",
+       "importance": 0.0017186476616188884,
+       "lat": 45.553577,
+       "lon": -73.60199,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:24:00Z",
+       "departure": "2026-11-11T21:24:00Z",
+       "scheduledArrival": "2026-11-11T21:24:00Z",
+       "scheduledDeparture": "2026-11-11T21:24:00Z",
+       "stopCode": "10554",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "SUBWAY",
+        "BUS"
+       ]
+      }
+     ],
+     "legGeometry": {
+      "points": "_wnzuAzlblkCbBgkAezMweJelLo}JgrJk{B[f@",
+      "precision": 6,
+      "length": 6
+     },
+     "bikesAllowed": false,
+     "wheelchairAccessible": "ACCESSIBLE",
+     "reservation": "NONE",
+     "alternatives": []
+    },
+    {
+     "mode": "WALK",
+     "from": {
+      "name": "STATION SAINT-MICHEL",
+      "stopId": "ca-qc-STM_64",
+      "parentId": "ca-qc-STM_STATION_M556",
+      "importance": 0.0018324046395719051,
+      "lat": 45.559574,
+      "lon": -73.60002,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:26:00Z",
+      "departure": "2026-11-11T21:26:00Z",
+      "scheduledArrival": "2026-11-11T21:26:00Z",
+      "scheduledDeparture": "2026-11-11T21:26:00Z",
+      "stopCode": "10556",
+      "vertexType": "TRANSIT",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "to": {
+      "name": "END",
+      "lat": 45.56,
+      "lon": -73.6,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:28:00Z",
+      "scheduledArrival": "2026-11-11T21:28:00Z",
+      "vertexType": "NORMAL"
+     },
+     "duration": 120,
+     "startTime": "2026-11-11T21:26:00Z",
+     "endTime": "2026-11-11T21:28:00Z",
+     "scheduledStartTime": "2026-11-11T21:26:00Z",
+     "scheduledEndTime": "2026-11-11T21:28:00Z",
+     "realTime": false,
+     "scheduled": false,
+     "distance": 67,
+     "legGeometry": {
+      "points": "kwv{uA|ydkkCxBuGVw@Hi@?e@??EUOSWKc@Ee@@]FyT~E",
+      "precision": 6,
+      "length": 13
+     },
+     "steps": [
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 18,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "toOsmNode": 11665526007,
+       "polyline": {
+        "points": "kwv{uA|ydkkCxBuGVw@Hi@?e@",
+        "precision": 6,
+        "length": 5
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 49,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "fromOsmNode": 11665526007,
+       "polyline": {
+        "points": "orv{uA~ldkkCEUOSWKc@Ee@@]FyT~E",
+        "precision": 6,
+        "length": 8
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "duration": 540,
+   "startTime": "2026-11-11T21:24:00Z",
+   "endTime": "2026-11-11T21:33:00Z",
+   "transfers": 0,
+   "id": "CkshokW28/3ERkApnu+nxktnUsAyEWNhLXFjLVNUTV85OTk5MDU1OWkAb4EExUZAQQuwj05dZ1LASPC509cGUOi609cGWgRXQUxLYAEKggEKATUSIjIwMjYxMTExXzE2OjE0X2NhLXFjLVNUTV8zMDE4Nzg1MjQaEWNhLXFjLVNUTV85OTk5MDU1IWkAb4EExUZAKQuwj05dZ1LAMgxjYS1xYy1TVE1fNjQ5kNjuHqDHRkBBijxJumZmUsBI6LrT1wZQlL3T1wZaBlNVQldBWWABCkYaDGNhLXFjLVNUTV82NCGQ2O4eoMdGQCmKPEm6ZmZSwDlI4XoUrsdGQEFmZmZmZmZSwEiUvdPXBlCMvtPXBloEV0FMS2AB",
+   "legs": [
+    {
+     "mode": "WALK",
+     "from": {
+      "name": "START",
+      "lat": 45.539,
+      "lon": -73.614,
+      "level": 0,
+      "tz": "America/Toronto",
+      "departure": "2026-11-11T21:24:00Z",
+      "scheduledDeparture": "2026-11-11T21:24:00Z",
+      "vertexType": "NORMAL"
+     },
+     "to": {
+      "name": "STATION JEAN-TALON",
+      "stopId": "ca-qc-STM_9999055",
+      "parentId": "ca-qc-STM_STATION_M272",
+      "importance": 0.0038322473410516977,
+      "lat": 45.5392,
+      "lon": -73.61506999999999,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:26:00Z",
+      "scheduledArrival": "2026-11-11T21:26:00Z",
+      "stopCode": "10272",
+      "vertexType": "TRANSIT",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "duration": 120,
+     "startTime": "2026-11-11T21:24:00Z",
+     "endTime": "2026-11-11T21:26:00Z",
+     "scheduledStartTime": "2026-11-11T21:24:00Z",
+     "scheduledEndTime": "2026-11-11T21:26:00Z",
+     "realTime": false,
+     "scheduled": false,
+     "distance": 98,
+     "legGeometry": {
+      "points": "imnzuAxn`lkC??RZF`@??\\C??hC~@??hC`A??JR??UPW^}@|E??iCfNy@zFqF~X",
+      "precision": 6,
+      "length": 20
+     },
+     "steps": [
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 2,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "toOsmNode": 12228610887,
+       "polyline": {
+        "points": "imnzuAxn`lkC??RZF`@",
+        "precision": 6,
+        "length": 4
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 2,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 1321508672,
+       "fromOsmNode": 12228610887,
+       "toOsmNode": 11167133610,
+       "polyline": {
+        "points": "mlnzuAvp`lkC\\C",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 8,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 766091386,
+       "fromOsmNode": 11167133610,
+       "toOsmNode": 7154947695,
+       "polyline": {
+        "points": "oknzuArp`lkChC~@",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "Rue Jean-Talon Est",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 8,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 766091386,
+       "fromOsmNode": 7154947695,
+       "toOsmNode": 12228610891,
+       "polyline": {
+        "points": "egnzuArr`lkChC`A",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "Rue Jean-Talon Est",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 1,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 1321508674,
+       "fromOsmNode": 12228610891,
+       "toOsmNode": 7154931281,
+       "polyline": {
+        "points": "{bnzuAtt`lkCJR",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 12,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 966732163,
+       "fromOsmNode": 7154931281,
+       "toOsmNode": 12228610896,
+       "polyline": {
+        "points": "obnzuAhu`lkCUPW^}@|E",
+        "precision": 6,
+        "length": 4
+       },
+       "streetName": "Rue Berri",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 65,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "fromOsmNode": 12228610896,
+       "polyline": {
+        "points": "{enzuAx}`lkCiCfNy@zFqF~X",
+        "precision": 6,
+        "length": 4
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      }
+     ]
+    },
+    {
+     "mode": "SUBWAY",
+     "from": {
+      "name": "STATION JEAN-TALON",
+      "stopId": "ca-qc-STM_9999055",
+      "parentId": "ca-qc-STM_STATION_M272",
+      "importance": 0.0038322473410516977,
+      "lat": 45.5392,
+      "lon": -73.61506999999999,
+      "level": 0,
+      "tz": "America/Toronto",
+      "departure": "2026-11-11T21:26:00Z",
+      "scheduledDeparture": "2026-11-11T21:26:00Z",
+      "stopCode": "10272",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "departureTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "to": {
+      "name": "STATION SAINT-MICHEL",
+      "stopId": "ca-qc-STM_64",
+      "parentId": "ca-qc-STM_STATION_M556",
+      "importance": 0.0018324046395719051,
+      "lat": 45.559574,
+      "lon": -73.60002,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:31:00Z",
+      "scheduledArrival": "2026-11-11T21:31:00Z",
+      "stopCode": "10556",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "duration": 300,
+     "startTime": "2026-11-11T21:26:00Z",
+     "endTime": "2026-11-11T21:31:00Z",
+     "scheduledStartTime": "2026-11-11T21:26:00Z",
+     "scheduledEndTime": "2026-11-11T21:31:00Z",
+     "realTime": false,
+     "scheduled": true,
+     "interlineWithPreviousLeg": false,
+     "headsign": "Station Saint-Michel",
+     "tripFrom": {
+      "name": "STATION SNOWDON",
+      "stopId": "ca-qc-STM_9999495",
+      "parentId": "ca-qc-STM_STATION_M236",
+      "importance": 0.0037885066121816635,
+      "lat": 45.48572,
+      "lon": -73.62855499999999,
+      "level": 0,
+      "tz": "America/Toronto",
+      "departure": "2026-11-11T21:14:00Z",
+      "scheduledDeparture": "2026-11-11T21:14:00Z",
+      "stopCode": "10236",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "departureTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "tripTo": {
+      "name": "STATION SAINT-MICHEL",
+      "stopId": "ca-qc-STM_64",
+      "parentId": "ca-qc-STM_STATION_M556",
+      "importance": 0.0018324046395719051,
+      "lat": 45.559574,
+      "lon": -73.60002,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:31:00Z",
+      "scheduledArrival": "2026-11-11T21:31:00Z",
+      "stopCode": "10556",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "routeId": "ca-qc-STM_5",
+     "routeUrl": "https://www.stm.info/fr/infos/reseaux/metro/ligne-5---bleue",
+     "directionId": "0",
+     "routeColor": "0095e6",
+     "routeTextColor": "ffffff",
+     "routeType": 1,
+     "agencyName": "Société de transport de Montréal",
+     "agencyUrl": "https://www.stm.info",
+     "agencyFareUrl": "https://www.stm.info/fr/tarifs",
+     "agencyId": "STM",
+     "tripId": "20261111_16:14_ca-qc-STM_301878524",
+     "routeShortName": "5",
+     "routeLongName": "Ligne 5 - Bleue",
+     "tripShortName": "",
+     "displayName": "5",
+     "cancelled": false,
+     "source": "ca-qc_STM.gtfs.zip/stop_times.txt:269983:269994",
+     "intermediateStops": [
+      {
+       "name": "STATION FABRE",
+       "stopId": "ca-qc-STM_62",
+       "parentId": "ca-qc-STM_STATION_M552",
+       "importance": 0.0017203993629664183,
+       "lat": 45.546738000000005,
+       "lon": -73.608154,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:28:00Z",
+       "departure": "2026-11-11T21:28:00Z",
+       "scheduledArrival": "2026-11-11T21:28:00Z",
+       "scheduledDeparture": "2026-11-11T21:28:00Z",
+       "stopCode": "10552",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "SUBWAY",
+        "BUS"
+       ]
+      },
+      {
+       "name": "STATION IBERVILLE",
+       "stopId": "ca-qc-STM_63",
+       "parentId": "ca-qc-STM_STATION_M554",
+       "importance": 0.0017186476616188884,
+       "lat": 45.553577,
+       "lon": -73.60199,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:29:00Z",
+       "departure": "2026-11-11T21:29:00Z",
+       "scheduledArrival": "2026-11-11T21:29:00Z",
+       "scheduledDeparture": "2026-11-11T21:29:00Z",
+       "stopCode": "10554",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "SUBWAY",
+        "BUS"
+       ]
+      }
+     ],
+     "legGeometry": {
+      "points": "_wnzuAzlblkCbBgkAezMweJelLo}JgrJk{B[f@",
+      "precision": 6,
+      "length": 6
+     },
+     "bikesAllowed": false,
+     "wheelchairAccessible": "ACCESSIBLE",
+     "reservation": "NONE",
+     "alternatives": []
+    },
+    {
+     "mode": "WALK",
+     "from": {
+      "name": "STATION SAINT-MICHEL",
+      "stopId": "ca-qc-STM_64",
+      "parentId": "ca-qc-STM_STATION_M556",
+      "importance": 0.0018324046395719051,
+      "lat": 45.559574,
+      "lon": -73.60002,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:31:00Z",
+      "departure": "2026-11-11T21:31:00Z",
+      "scheduledArrival": "2026-11-11T21:31:00Z",
+      "scheduledDeparture": "2026-11-11T21:31:00Z",
+      "stopCode": "10556",
+      "vertexType": "TRANSIT",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "to": {
+      "name": "END",
+      "lat": 45.56,
+      "lon": -73.6,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:33:00Z",
+      "scheduledArrival": "2026-11-11T21:33:00Z",
+      "vertexType": "NORMAL"
+     },
+     "duration": 120,
+     "startTime": "2026-11-11T21:31:00Z",
+     "endTime": "2026-11-11T21:33:00Z",
+     "scheduledStartTime": "2026-11-11T21:31:00Z",
+     "scheduledEndTime": "2026-11-11T21:33:00Z",
+     "realTime": false,
+     "scheduled": false,
+     "distance": 67,
+     "legGeometry": {
+      "points": "kwv{uA|ydkkCxBuGVw@Hi@?e@??EUOSWKc@Ee@@]FyT~E",
+      "precision": 6,
+      "length": 13
+     },
+     "steps": [
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 18,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "toOsmNode": 11665526007,
+       "polyline": {
+        "points": "kwv{uA|ydkkCxBuGVw@Hi@?e@",
+        "precision": 6,
+        "length": 5
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 49,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "fromOsmNode": 11665526007,
+       "polyline": {
+        "points": "orv{uA~ldkkCEUOSWKc@Ee@@]FyT~E",
+        "precision": 6,
+        "length": 8
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "duration": 540,
+   "startTime": "2026-11-11T21:29:00Z",
+   "endTime": "2026-11-11T21:38:00Z",
+   "transfers": 0,
+   "id": "CkshokW28/3ERkApnu+nxktnUsAyEWNhLXFjLVNUTV85OTk5MDU1OWkAb4EExUZAQQuwj05dZ1LASJy809cGUJS909cGWgRXQUxLYAEKggEKATUSIjIwMjYxMTExXzE2OjE5X2NhLXFjLVNUTV8zMDE4Nzg2MTUaEWNhLXFjLVNUTV85OTk5MDU1IWkAb4EExUZAKQuwj05dZ1LAMgxjYS1xYy1TVE1fNjQ5kNjuHqDHRkBBijxJumZmUsBIlL3T1wZQwL/T1wZaBlNVQldBWWABCkYaDGNhLXFjLVNUTV82NCGQ2O4eoMdGQCmKPEm6ZmZSwDlI4XoUrsdGQEFmZmZmZmZSwEjAv9PXBlC4wNPXBloEV0FMS2AB",
+   "legs": [
+    {
+     "mode": "WALK",
+     "from": {
+      "name": "START",
+      "lat": 45.539,
+      "lon": -73.614,
+      "level": 0,
+      "tz": "America/Toronto",
+      "departure": "2026-11-11T21:29:00Z",
+      "scheduledDeparture": "2026-11-11T21:29:00Z",
+      "vertexType": "NORMAL"
+     },
+     "to": {
+      "name": "STATION JEAN-TALON",
+      "stopId": "ca-qc-STM_9999055",
+      "parentId": "ca-qc-STM_STATION_M272",
+      "importance": 0.0038322473410516977,
+      "lat": 45.5392,
+      "lon": -73.61506999999999,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:31:00Z",
+      "scheduledArrival": "2026-11-11T21:31:00Z",
+      "stopCode": "10272",
+      "vertexType": "TRANSIT",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "duration": 120,
+     "startTime": "2026-11-11T21:29:00Z",
+     "endTime": "2026-11-11T21:31:00Z",
+     "scheduledStartTime": "2026-11-11T21:29:00Z",
+     "scheduledEndTime": "2026-11-11T21:31:00Z",
+     "realTime": false,
+     "scheduled": false,
+     "distance": 98,
+     "legGeometry": {
+      "points": "imnzuAxn`lkC??RZF`@??\\C??hC~@??hC`A??JR??UPW^}@|E??iCfNy@zFqF~X",
+      "precision": 6,
+      "length": 20
+     },
+     "steps": [
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 2,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "toOsmNode": 12228610887,
+       "polyline": {
+        "points": "imnzuAxn`lkC??RZF`@",
+        "precision": 6,
+        "length": 4
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 2,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 1321508672,
+       "fromOsmNode": 12228610887,
+       "toOsmNode": 11167133610,
+       "polyline": {
+        "points": "mlnzuAvp`lkC\\C",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 8,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 766091386,
+       "fromOsmNode": 11167133610,
+       "toOsmNode": 7154947695,
+       "polyline": {
+        "points": "oknzuArp`lkChC~@",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "Rue Jean-Talon Est",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 8,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 766091386,
+       "fromOsmNode": 7154947695,
+       "toOsmNode": 12228610891,
+       "polyline": {
+        "points": "egnzuArr`lkChC`A",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "Rue Jean-Talon Est",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 1,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 1321508674,
+       "fromOsmNode": 12228610891,
+       "toOsmNode": 7154931281,
+       "polyline": {
+        "points": "{bnzuAtt`lkCJR",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 12,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 966732163,
+       "fromOsmNode": 7154931281,
+       "toOsmNode": 12228610896,
+       "polyline": {
+        "points": "obnzuAhu`lkCUPW^}@|E",
+        "precision": 6,
+        "length": 4
+       },
+       "streetName": "Rue Berri",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 65,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "fromOsmNode": 12228610896,
+       "polyline": {
+        "points": "{enzuAx}`lkCiCfNy@zFqF~X",
+        "precision": 6,
+        "length": 4
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      }
+     ]
+    },
+    {
+     "mode": "SUBWAY",
+     "from": {
+      "name": "STATION JEAN-TALON",
+      "stopId": "ca-qc-STM_9999055",
+      "parentId": "ca-qc-STM_STATION_M272",
+      "importance": 0.0038322473410516977,
+      "lat": 45.5392,
+      "lon": -73.61506999999999,
+      "level": 0,
+      "tz": "America/Toronto",
+      "departure": "2026-11-11T21:31:00Z",
+      "scheduledDeparture": "2026-11-11T21:31:00Z",
+      "stopCode": "10272",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "departureTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "to": {
+      "name": "STATION SAINT-MICHEL",
+      "stopId": "ca-qc-STM_64",
+      "parentId": "ca-qc-STM_STATION_M556",
+      "importance": 0.0018324046395719051,
+      "lat": 45.559574,
+      "lon": -73.60002,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:36:00Z",
+      "scheduledArrival": "2026-11-11T21:36:00Z",
+      "stopCode": "10556",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "duration": 300,
+     "startTime": "2026-11-11T21:31:00Z",
+     "endTime": "2026-11-11T21:36:00Z",
+     "scheduledStartTime": "2026-11-11T21:31:00Z",
+     "scheduledEndTime": "2026-11-11T21:36:00Z",
+     "realTime": false,
+     "scheduled": true,
+     "interlineWithPreviousLeg": false,
+     "headsign": "Station Saint-Michel",
+     "tripFrom": {
+      "name": "STATION SNOWDON",
+      "stopId": "ca-qc-STM_9999495",
+      "parentId": "ca-qc-STM_STATION_M236",
+      "importance": 0.0037885066121816635,
+      "lat": 45.48572,
+      "lon": -73.62855499999999,
+      "level": 0,
+      "tz": "America/Toronto",
+      "departure": "2026-11-11T21:19:00Z",
+      "scheduledDeparture": "2026-11-11T21:19:00Z",
+      "stopCode": "10236",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "departureTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "tripTo": {
+      "name": "STATION SAINT-MICHEL",
+      "stopId": "ca-qc-STM_64",
+      "parentId": "ca-qc-STM_STATION_M556",
+      "importance": 0.0018324046395719051,
+      "lat": 45.559574,
+      "lon": -73.60002,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:36:00Z",
+      "scheduledArrival": "2026-11-11T21:36:00Z",
+      "stopCode": "10556",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "routeId": "ca-qc-STM_5",
+     "routeUrl": "https://www.stm.info/fr/infos/reseaux/metro/ligne-5---bleue",
+     "directionId": "0",
+     "routeColor": "0095e6",
+     "routeTextColor": "ffffff",
+     "routeType": 1,
+     "agencyName": "Société de transport de Montréal",
+     "agencyUrl": "https://www.stm.info",
+     "agencyFareUrl": "https://www.stm.info/fr/tarifs",
+     "agencyId": "STM",
+     "tripId": "20261111_16:19_ca-qc-STM_301878615",
+     "routeShortName": "5",
+     "routeLongName": "Ligne 5 - Bleue",
+     "tripShortName": "",
+     "displayName": "5",
+     "cancelled": false,
+     "source": "ca-qc_STM.gtfs.zip/stop_times.txt:270163:270174",
+     "intermediateStops": [
+      {
+       "name": "STATION FABRE",
+       "stopId": "ca-qc-STM_62",
+       "parentId": "ca-qc-STM_STATION_M552",
+       "importance": 0.0017203993629664183,
+       "lat": 45.546738000000005,
+       "lon": -73.608154,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:33:00Z",
+       "departure": "2026-11-11T21:33:00Z",
+       "scheduledArrival": "2026-11-11T21:33:00Z",
+       "scheduledDeparture": "2026-11-11T21:33:00Z",
+       "stopCode": "10552",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "SUBWAY",
+        "BUS"
+       ]
+      },
+      {
+       "name": "STATION IBERVILLE",
+       "stopId": "ca-qc-STM_63",
+       "parentId": "ca-qc-STM_STATION_M554",
+       "importance": 0.0017186476616188884,
+       "lat": 45.553577,
+       "lon": -73.60199,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:34:00Z",
+       "departure": "2026-11-11T21:34:00Z",
+       "scheduledArrival": "2026-11-11T21:34:00Z",
+       "scheduledDeparture": "2026-11-11T21:34:00Z",
+       "stopCode": "10554",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "SUBWAY",
+        "BUS"
+       ]
+      }
+     ],
+     "legGeometry": {
+      "points": "_wnzuAzlblkCbBgkAezMweJelLo}JgrJk{B[f@",
+      "precision": 6,
+      "length": 6
+     },
+     "bikesAllowed": false,
+     "wheelchairAccessible": "ACCESSIBLE",
+     "reservation": "NONE",
+     "alternatives": []
+    },
+    {
+     "mode": "WALK",
+     "from": {
+      "name": "STATION SAINT-MICHEL",
+      "stopId": "ca-qc-STM_64",
+      "parentId": "ca-qc-STM_STATION_M556",
+      "importance": 0.0018324046395719051,
+      "lat": 45.559574,
+      "lon": -73.60002,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:36:00Z",
+      "departure": "2026-11-11T21:36:00Z",
+      "scheduledArrival": "2026-11-11T21:36:00Z",
+      "scheduledDeparture": "2026-11-11T21:36:00Z",
+      "stopCode": "10556",
+      "vertexType": "TRANSIT",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "to": {
+      "name": "END",
+      "lat": 45.56,
+      "lon": -73.6,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:38:00Z",
+      "scheduledArrival": "2026-11-11T21:38:00Z",
+      "vertexType": "NORMAL"
+     },
+     "duration": 120,
+     "startTime": "2026-11-11T21:36:00Z",
+     "endTime": "2026-11-11T21:38:00Z",
+     "scheduledStartTime": "2026-11-11T21:36:00Z",
+     "scheduledEndTime": "2026-11-11T21:38:00Z",
+     "realTime": false,
+     "scheduled": false,
+     "distance": 67,
+     "legGeometry": {
+      "points": "kwv{uA|ydkkCxBuGVw@Hi@?e@??EUOSWKc@Ee@@]FyT~E",
+      "precision": 6,
+      "length": 13
+     },
+     "steps": [
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 18,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "toOsmNode": 11665526007,
+       "polyline": {
+        "points": "kwv{uA|ydkkCxBuGVw@Hi@?e@",
+        "precision": 6,
+        "length": 5
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 49,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "fromOsmNode": 11665526007,
+       "polyline": {
+        "points": "orv{uA~ldkkCEUOSWKc@Ee@@]FyT~E",
+        "precision": 6,
+        "length": 8
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "duration": 540,
+   "startTime": "2026-11-11T21:34:00Z",
+   "endTime": "2026-11-11T21:43:00Z",
+   "transfers": 0,
+   "id": "CkshokW28/3ERkApnu+nxktnUsAyEWNhLXFjLVNUTV85OTk5MDU1OWkAb4EExUZAQQuwj05dZ1LASMi+09cGUMC/09cGWgRXQUxLYAEKggEKATUSIjIwMjYxMTExXzE2OjI0X2NhLXFjLVNUTV8zMDE4Nzg3MTgaEWNhLXFjLVNUTV85OTk5MDU1IWkAb4EExUZAKQuwj05dZ1LAMgxjYS1xYy1TVE1fNjQ5kNjuHqDHRkBBijxJumZmUsBIwL/T1wZQ7MHT1wZaBlNVQldBWWABCkYaDGNhLXFjLVNUTV82NCGQ2O4eoMdGQCmKPEm6ZmZSwDlI4XoUrsdGQEFmZmZmZmZSwEjswdPXBlDkwtPXBloEV0FMS2AB",
+   "legs": [
+    {
+     "mode": "WALK",
+     "from": {
+      "name": "START",
+      "lat": 45.539,
+      "lon": -73.614,
+      "level": 0,
+      "tz": "America/Toronto",
+      "departure": "2026-11-11T21:34:00Z",
+      "scheduledDeparture": "2026-11-11T21:34:00Z",
+      "vertexType": "NORMAL"
+     },
+     "to": {
+      "name": "STATION JEAN-TALON",
+      "stopId": "ca-qc-STM_9999055",
+      "parentId": "ca-qc-STM_STATION_M272",
+      "importance": 0.0038322473410516977,
+      "lat": 45.5392,
+      "lon": -73.61506999999999,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:36:00Z",
+      "scheduledArrival": "2026-11-11T21:36:00Z",
+      "stopCode": "10272",
+      "vertexType": "TRANSIT",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "duration": 120,
+     "startTime": "2026-11-11T21:34:00Z",
+     "endTime": "2026-11-11T21:36:00Z",
+     "scheduledStartTime": "2026-11-11T21:34:00Z",
+     "scheduledEndTime": "2026-11-11T21:36:00Z",
+     "realTime": false,
+     "scheduled": false,
+     "distance": 98,
+     "legGeometry": {
+      "points": "imnzuAxn`lkC??RZF`@??\\C??hC~@??hC`A??JR??UPW^}@|E??iCfNy@zFqF~X",
+      "precision": 6,
+      "length": 20
+     },
+     "steps": [
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 2,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "toOsmNode": 12228610887,
+       "polyline": {
+        "points": "imnzuAxn`lkC??RZF`@",
+        "precision": 6,
+        "length": 4
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 2,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 1321508672,
+       "fromOsmNode": 12228610887,
+       "toOsmNode": 11167133610,
+       "polyline": {
+        "points": "mlnzuAvp`lkC\\C",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 8,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 766091386,
+       "fromOsmNode": 11167133610,
+       "toOsmNode": 7154947695,
+       "polyline": {
+        "points": "oknzuArp`lkChC~@",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "Rue Jean-Talon Est",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 8,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 766091386,
+       "fromOsmNode": 7154947695,
+       "toOsmNode": 12228610891,
+       "polyline": {
+        "points": "egnzuArr`lkChC`A",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "Rue Jean-Talon Est",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 1,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 1321508674,
+       "fromOsmNode": 12228610891,
+       "toOsmNode": 7154931281,
+       "polyline": {
+        "points": "{bnzuAtt`lkCJR",
+        "precision": 6,
+        "length": 2
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 12,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "osmWay": 966732163,
+       "fromOsmNode": 7154931281,
+       "toOsmNode": 12228610896,
+       "polyline": {
+        "points": "obnzuAhu`lkCUPW^}@|E",
+        "precision": 6,
+        "length": 4
+       },
+       "streetName": "Rue Berri",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 65,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "fromOsmNode": 12228610896,
+       "polyline": {
+        "points": "{enzuAx}`lkCiCfNy@zFqF~X",
+        "precision": 6,
+        "length": 4
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      }
+     ]
+    },
+    {
+     "mode": "SUBWAY",
+     "from": {
+      "name": "STATION JEAN-TALON",
+      "stopId": "ca-qc-STM_9999055",
+      "parentId": "ca-qc-STM_STATION_M272",
+      "importance": 0.0038322473410516977,
+      "lat": 45.5392,
+      "lon": -73.61506999999999,
+      "level": 0,
+      "tz": "America/Toronto",
+      "departure": "2026-11-11T21:36:00Z",
+      "scheduledDeparture": "2026-11-11T21:36:00Z",
+      "stopCode": "10272",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "departureTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "to": {
+      "name": "STATION SAINT-MICHEL",
+      "stopId": "ca-qc-STM_64",
+      "parentId": "ca-qc-STM_STATION_M556",
+      "importance": 0.0018324046395719051,
+      "lat": 45.559574,
+      "lon": -73.60002,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:41:00Z",
+      "scheduledArrival": "2026-11-11T21:41:00Z",
+      "stopCode": "10556",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "duration": 300,
+     "startTime": "2026-11-11T21:36:00Z",
+     "endTime": "2026-11-11T21:41:00Z",
+     "scheduledStartTime": "2026-11-11T21:36:00Z",
+     "scheduledEndTime": "2026-11-11T21:41:00Z",
+     "realTime": false,
+     "scheduled": true,
+     "interlineWithPreviousLeg": false,
+     "headsign": "Station Saint-Michel",
+     "tripFrom": {
+      "name": "STATION SNOWDON",
+      "stopId": "ca-qc-STM_9999495",
+      "parentId": "ca-qc-STM_STATION_M236",
+      "importance": 0.0037885066121816635,
+      "lat": 45.48572,
+      "lon": -73.62855499999999,
+      "level": 0,
+      "tz": "America/Toronto",
+      "departure": "2026-11-11T21:24:00Z",
+      "scheduledDeparture": "2026-11-11T21:24:00Z",
+      "stopCode": "10236",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "departureTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "tripTo": {
+      "name": "STATION SAINT-MICHEL",
+      "stopId": "ca-qc-STM_64",
+      "parentId": "ca-qc-STM_STATION_M556",
+      "importance": 0.0018324046395719051,
+      "lat": 45.559574,
+      "lon": -73.60002,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:41:00Z",
+      "scheduledArrival": "2026-11-11T21:41:00Z",
+      "stopCode": "10556",
+      "vertexType": "TRANSIT",
+      "pickupType": "NORMAL",
+      "dropoffType": "NORMAL",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "routeId": "ca-qc-STM_5",
+     "routeUrl": "https://www.stm.info/fr/infos/reseaux/metro/ligne-5---bleue",
+     "directionId": "0",
+     "routeColor": "0095e6",
+     "routeTextColor": "ffffff",
+     "routeType": 1,
+     "agencyName": "Société de transport de Montréal",
+     "agencyUrl": "https://www.stm.info",
+     "agencyFareUrl": "https://www.stm.info/fr/tarifs",
+     "agencyId": "STM",
+     "tripId": "20261111_16:24_ca-qc-STM_301878718",
+     "routeShortName": "5",
+     "routeLongName": "Ligne 5 - Bleue",
+     "tripShortName": "",
+     "displayName": "5",
+     "cancelled": false,
+     "source": "ca-qc_STM.gtfs.zip/stop_times.txt:270367:270378",
+     "intermediateStops": [
+      {
+       "name": "STATION FABRE",
+       "stopId": "ca-qc-STM_62",
+       "parentId": "ca-qc-STM_STATION_M552",
+       "importance": 0.0017203993629664183,
+       "lat": 45.546738000000005,
+       "lon": -73.608154,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:37:00Z",
+       "departure": "2026-11-11T21:37:00Z",
+       "scheduledArrival": "2026-11-11T21:37:00Z",
+       "scheduledDeparture": "2026-11-11T21:37:00Z",
+       "stopCode": "10552",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "SUBWAY",
+        "BUS"
+       ]
+      },
+      {
+       "name": "STATION IBERVILLE",
+       "stopId": "ca-qc-STM_63",
+       "parentId": "ca-qc-STM_STATION_M554",
+       "importance": 0.0017186476616188884,
+       "lat": 45.553577,
+       "lon": -73.60199,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:39:00Z",
+       "departure": "2026-11-11T21:39:00Z",
+       "scheduledArrival": "2026-11-11T21:39:00Z",
+       "scheduledDeparture": "2026-11-11T21:39:00Z",
+       "stopCode": "10554",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "SUBWAY",
+        "BUS"
+       ]
+      }
+     ],
+     "legGeometry": {
+      "points": "_wnzuAzlblkCbBgkAezMweJelLo}JgrJk{B[f@",
+      "precision": 6,
+      "length": 6
+     },
+     "bikesAllowed": false,
+     "wheelchairAccessible": "ACCESSIBLE",
+     "reservation": "NONE",
+     "alternatives": []
+    },
+    {
+     "mode": "WALK",
+     "from": {
+      "name": "STATION SAINT-MICHEL",
+      "stopId": "ca-qc-STM_64",
+      "parentId": "ca-qc-STM_STATION_M556",
+      "importance": 0.0018324046395719051,
+      "lat": 45.559574,
+      "lon": -73.60002,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:41:00Z",
+      "departure": "2026-11-11T21:41:00Z",
+      "scheduledArrival": "2026-11-11T21:41:00Z",
+      "scheduledDeparture": "2026-11-11T21:41:00Z",
+      "stopCode": "10556",
+      "vertexType": "TRANSIT",
+      "cancelled": false,
+      "arrivalTimestampReason": "NO_RT_DATA",
+      "modes": [
+       "SUBWAY",
+       "BUS"
+      ]
+     },
+     "to": {
+      "name": "END",
+      "lat": 45.56,
+      "lon": -73.6,
+      "level": 0,
+      "tz": "America/Toronto",
+      "arrival": "2026-11-11T21:43:00Z",
+      "scheduledArrival": "2026-11-11T21:43:00Z",
+      "vertexType": "NORMAL"
+     },
+     "duration": 120,
+     "startTime": "2026-11-11T21:41:00Z",
+     "endTime": "2026-11-11T21:43:00Z",
+     "scheduledStartTime": "2026-11-11T21:41:00Z",
+     "scheduledEndTime": "2026-11-11T21:43:00Z",
+     "realTime": false,
+     "scheduled": false,
+     "distance": 67,
+     "legGeometry": {
+      "points": "kwv{uA|ydkkCxBuGVw@Hi@?e@??EUOSWKc@Ee@@]FyT~E",
+      "precision": 6,
+      "length": 13
+     },
+     "steps": [
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 18,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "toOsmNode": 11665526007,
+       "polyline": {
+        "points": "kwv{uA|ydkkCxBuGVw@Hi@?e@",
+        "precision": 6,
+        "length": 5
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      },
+      {
+       "relativeDirection": "CONTINUE",
+       "distance": 49,
+       "fromLevel": 0,
+       "toLevel": 0,
+       "fromOsmNode": 11665526007,
+       "polyline": {
+        "points": "orv{uA~ldkkCEUOSWKc@Ee@@]FyT~E",
+        "precision": 6,
+        "length": 8
+       },
+       "streetName": "",
+       "exit": "",
+       "stayOn": false,
+       "area": false,
+       "toll": false,
+       "elevationUp": 0,
+       "elevationDown": 0
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "previousPageCursor": "EARLIER|1794431760",
+ "nextPageCursor": "LATER|1794432900"
+}

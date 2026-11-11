@@ -1,0 +1,67 @@
+# Module Transports STM
+
+Le module Transports STM donne le prochain départ de la STM (Montréal : métro, autobus, REM) vers une destination, la durée du trajet, le départ suivant et la disponibilité du réseau. Cette fiche s’adresse à la personne qui règle le miroir et à celle qui lit le code du module (identifiant `stm`).
+
+## Ce que fait le module
+
+- Il répond à « comment je vais au Centre Bell ? » ou « c’est quand le prochain métro pour la station Saint-Michel ? » et affiche une carte « Transports STM · au Centre Bell » : la ligne et le délai, puis les départs suivants et la durée du trajet. Exemple réel :
+
+  > Pour te rendre au Centre Bell, le prochain départ est le métro, ligne orange dans 1 minute selon l’horaire, à la station Berri-UQAM, à 1 minute à pied. La durée du trajet est de 11 minutes. Le suivant est prévu dans 4 minutes selon l’horaire.
+
+- **Disponibilité du réseau** : si la STM publie un avis en cours sur la ligne du trajet (interruption, ouverture tardive, détour), il est dit à la fin : « Avis de la STM : Ce samedi 14 novembre, le service métro débutera seulement vers 9h30 sur la ligne 5 - Bleue… ». « Service normal du métro » n’est jamais dit.
+- Parmi les itinéraires proposés, le module retient celui qui arrive le plus tôt. « Le prochain » est le premier départ qu’on peut attraper, marche jusqu’à la station comprise.
+- Les heures sont celles de l’horaire, et la réponse le dit (« selon l’horaire ») : Transitous n’a pas encore le temps réel de la STM. Le jour où il l’aura, l’indicateur `realTime` est déjà lu et « selon l’horaire » disparaîtra sans changer le module.
+- Les données restent en cache 1 minute ; l’état du service, 3 minutes.
+
+## Sources des données
+
+| Donnée | Source | Licence, conditions |
+| --- | --- | --- |
+| Destination et départ → coordonnées | [Transitous](https://transitous.org/api/) `v1/geocode` | Gratuit, sans jeton ; usage non commercial raisonnable, sans garantie |
+| Itinéraire, ligne, station, durée ; passages suivants | Transitous `v5/plan` et `v5/stoptimes` (horaires GTFS officiels de la STM) | Idem |
+| Disponibilité du réseau | STM, état du service `i3/v1/messages/etatservice` (JSON, environ 14 ko) | [Données ouvertes de la STM](https://www.stm.info/fr/a-propos/developpeurs) ; clé d’application |
+
+## Clé de l’état du service
+
+Aucun jeton à demander ni à saisir. La STM exige une clé par application pour son état du service : celle de l’application « Transports STM », déclarée publique auprès de la STM, est incluse dans le module (`cle.ts`). Elle est seulement brouillée, pour échapper aux robots qui cherchent des clés en clair : ce n’est pas un secret.
+
+L’état du service n’est lu que lorsqu’une question de trajet est posée, jamais en tâche de fond, puis gardé 3 minutes dans le cache de chaque installation. Clé refusée, quota atteint ou STM injoignable : la réponse reste celle de l’horaire, sans avis.
+
+## Réglages d’une source
+
+Dans **Modules → Transports STM → Ajouter une source** :
+
+| Réglage | Effet | Par défaut |
+| --- | --- | --- |
+| Point de départ | Nom du départ, dit dans les réponses | « la maison » |
+| Adresse du départ | Adresse, intersection ou station (« Berri-UQAM », « Saint-Denis et Mont-Royal »), cherchée près du centre de Montréal | vide |
+| Latitude, longitude du départ | Au choix, à la place de l’adresse ; si elles sont saisies, elles passent avant | vides |
+| Destinations favorites | Mot-clé dit à la voix (« travail »), formulation dans la réponse (« au travail »), adresse | aucune |
+
+Le module ne contient aucun lieu par défaut : chaque foyer saisit le sien. **Tester** calcule le trajet vers la première destination favorite.
+
+## Vie privée
+
+L’adresse du départ est envoyée à Transitous pour la trouver (au plus une fois par 10 minutes) ; le départ part ensuite **arrondi à environ 100 m**. Une intersection proche est plus discrète que l’adresse exacte. Les coordonnées saisies partent elles aussi arrondies.
+
+## Limites
+
+- Grand Montréal (latitude 45,2 à 45,9, longitude -74,2 à -73,2) ; les lieux à plus de 80 km du départ sont écartés.
+- Le géocodeur de Transitous (OpenStreetMap) remplace sans prévenir une adresse qu’il ne connaît pas par une voisine d’orthographe (« 1500 rue Berri » → « 1500 rue Serre »). Le module le refuse : avec un numéro civique, le résultat doit être sur la rue demandée ; pour une intersection, il doit contenir les deux rues. Sinon : « Adresse introuvable… Essayez une intersection proche ou un lieu connu ».
+- Sans ville dans l’adresse, une deuxième recherche ajoute « , Montréal ».
+- Transitous est un service communautaire sans garantie : en panne, le module répond « Transitous est indisponible ».
+
+## Outil vocal et affichage permanent
+
+L’outil s’appelle `stm__trajet`. Il reçoit la destination (`query`) : un mot-clé de destination favorite, ou une adresse ou un lieu à Montréal avec sa préposition (« au Centre Bell », « à l’Université de Montréal »). Une destination mémorisée par Cornelius (« retiens que chez Marie c’est au 123 rue X, Montréal ») lui est passée par son adresse. Ce module ne propose pas d’affichage permanent.
+
+## Auteur
+
+[LucQuebec](https://github.com/LucQuebec), pour [Jokobee™](https://jokobee.com).
+
+## Voir aussi
+
+- [Les modules dans Cornelius](https://github.com/lfpoulain/Cornelius/blob/main/docs/modules/README.md)
+- [Créer un module](../docs/creer-un-module.md)
+- [Référence du contrat des modules](https://github.com/lfpoulain/Cornelius/blob/main/docs/modules/reference.md)
+- Code : [index.ts](index.ts), [config.schema.json](config.schema.json)

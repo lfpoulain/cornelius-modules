@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-11 : module Transports STM
+
+**Ajouté**
+
+- Module **Transports STM** (`stm`, 1.2.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : le prochain départ de la STM (Montréal : métro, autobus, REM) vers une destination dite à la voix ou une destination favorite, la durée du trajet et le départ suivant, d’après Transitous (horaires GTFS officiels, sans jeton). Disponibilité du réseau : un avis en cours de la STM sur la ligne du trajet est dit à la fin (état du service, clé d’application publique incluse, cache de 3 minutes, sans effet en cas de panne). Départ par adresse ou par coordonnées (celles-ci priment), arrondi à environ 100 m ; itinéraire qui arrive le plus tôt ; adresse substituée par le géocodeur refusée plutôt qu’un faux trajet.
+
 ### 2026-11-08 : météo sans jeton
 
 **Ajouté**

@@ -1,0 +1,678 @@
+[
+ {
+  "type": "STOP",
+  "tokens": [
+   [
+    0,
+    7
+   ],
+   [
+    8,
+    12
+   ]
+  ],
+  "name": "STATION SAINT-MICHEL",
+  "id": "ca-qc-STM_STATION_M556",
+  "lat": 45.559708,
+  "lon": -73.60016999999999,
+  "country": "CA",
+  "tz": "America/Toronto",
+  "areas": [
+   {
+    "name": "Canada",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Québec",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Montréal (région administrative)",
+    "adminLevel": 5,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Agglomération de Montréal",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Montréal",
+    "adminLevel": 8,
+    "matched": false,
+    "unique": true,
+    "default": true
+   },
+   {
+    "name": "Villeray–Saint-Michel–Parc-Extension",
+    "adminLevel": 10,
+    "matched": false,
+    "unique": false,
+    "default": false
+   }
+  ],
+  "score": -32.71908950805664,
+  "modes": [
+   "SUBWAY",
+   "BUS"
+  ],
+  "importance": 0.0018324046395719051
+ },
+ {
+  "type": "PLACE",
+  "category": "none",
+  "tokens": [
+   [
+    0,
+    7
+   ],
+   [
+    8,
+    12
+   ]
+  ],
+  "name": "Station Saint-Michel",
+  "id": "way/790587117",
+  "lat": 47.0555653,
+  "lon": 6.6091454,
+  "country": "FR",
+  "zip": "25500",
+  "tz": "Europe/Paris",
+  "areas": [
+   {
+    "name": "France",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "France métropolitaine",
+    "adminLevel": 3,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Bourgogne-Franche-Comté",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Doubs",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Pontarlier",
+    "adminLevel": 7,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Morteau",
+    "adminLevel": 8,
+    "matched": false,
+    "unique": true,
+    "default": true
+   }
+  ],
+  "score": -24.5
+ },
+ {
+  "type": "PLACE",
+  "category": "fuel_16",
+  "tokens": [
+   [
+    0,
+    7
+   ],
+   [
+    8,
+    12
+   ]
+  ],
+  "name": "Station U",
+  "id": "way/331991450",
+  "lat": 47.1757684,
+  "lon": -2.1465448,
+  "country": "FR",
+  "zip": "44730",
+  "tz": "Europe/Paris",
+  "areas": [
+   {
+    "name": "France",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "France métropolitaine",
+    "adminLevel": 3,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Pays de la Loire",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Loire-Atlantique",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Saint-Nazaire",
+    "adminLevel": 7,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Saint-Michel-Chef-Chef",
+    "adminLevel": 8,
+    "matched": true,
+    "unique": true,
+    "default": true
+   }
+  ],
+  "score": -24.25111961364746
+ },
+ {
+  "type": "PLACE",
+  "category": "fuel_16",
+  "tokens": [
+   [
+    0,
+    7
+   ],
+   [
+    8,
+    12
+   ]
+  ],
+  "name": "Station U",
+  "id": "node/950119893",
+  "lat": 46.3330575,
+  "lon": -1.2919259,
+  "country": "FR",
+  "zip": "85580",
+  "tz": "Europe/Paris",
+  "areas": [
+   {
+    "name": "France",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "France métropolitaine",
+    "adminLevel": 3,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Pays de la Loire",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Vendée",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Fontenay-le-Comte",
+    "adminLevel": 7,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Saint-Michel-en-l'Herm",
+    "adminLevel": 8,
+    "matched": true,
+    "unique": true,
+    "default": true
+   }
+  ],
+  "score": -24.000438690185547
+ },
+ {
+  "type": "PLACE",
+  "category": "guidepost_14",
+  "tokens": [
+   [
+    0,
+    7
+   ],
+   [
+    8,
+    12
+   ]
+  ],
+  "name": "Chaillol Station",
+  "id": "node/11917751074",
+  "lat": 44.6892497,
+  "lon": 6.1672421,
+  "country": "FR",
+  "zip": "05260",
+  "tz": "Europe/Paris",
+  "areas": [
+   {
+    "name": "France",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "France métropolitaine",
+    "adminLevel": 3,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Provence-Alpes-Côte d'Azur",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Hautes-Alpes",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Gap",
+    "adminLevel": 7,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Saint-Michel-de-Chaillol",
+    "adminLevel": 8,
+    "matched": true,
+    "unique": true,
+    "default": true
+   }
+  ],
+  "score": -22.25004005432129
+ },
+ {
+  "type": "PLACE",
+  "category": "none",
+  "tokens": [
+   [
+    0,
+    7
+   ],
+   [
+    8,
+    12
+   ]
+  ],
+  "name": "Station d'épuration de Le Mont-Saint-Michel",
+  "id": "way/1318959784",
+  "lat": 48.6031242,
+  "lon": -1.4926661,
+  "country": "FR",
+  "zip": "50170",
+  "tz": "Europe/Paris",
+  "areas": [
+   {
+    "name": "France",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "France métropolitaine",
+    "adminLevel": 3,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Normandie",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Manche",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Avranches",
+    "adminLevel": 7,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Pontorson",
+    "adminLevel": 8,
+    "matched": false,
+    "unique": true,
+    "default": true
+   },
+   {
+    "name": "Pontorson",
+    "adminLevel": 9,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Ardevon",
+    "adminLevel": 10,
+    "matched": false,
+    "unique": false,
+    "default": false
+   }
+  ],
+  "score": -19.25
+ },
+ {
+  "type": "PLACE",
+  "category": "fire_station_16",
+  "tokens": [
+   [
+    0,
+    7
+   ],
+   [
+    8,
+    12
+   ]
+  ],
+  "name": "Saint Michael Fire Sub-station",
+  "id": "node/8681818725",
+  "lat": 13.9579823,
+  "lon": 121.6043884,
+  "country": "PH",
+  "zip": "4301",
+  "tz": "Asia/Manila",
+  "areas": [
+   {
+    "name": "Philippines",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Calabarzon",
+    "adminLevel": 3,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "2nd District",
+    "adminLevel": 5,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Lucena",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": true,
+    "default": true
+   },
+   {
+    "name": "Gulang-Gulang",
+    "adminLevel": 10,
+    "matched": false,
+    "unique": false,
+    "default": false
+   }
+  ],
+  "score": -18.75
+ },
+ {
+  "type": "PLACE",
+  "category": "none",
+  "tokens": [
+   [
+    0,
+    7
+   ],
+   [
+    8,
+    12
+   ]
+  ],
+  "name": "Station d'épuration de Saint-Michel-de-Montjoie",
+  "id": "way/1318959716",
+  "lat": 48.7599258,
+  "lon": -1.0307844,
+  "country": "FR",
+  "zip": "50670",
+  "tz": "Europe/Paris",
+  "areas": [
+   {
+    "name": "France",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "France métropolitaine",
+    "adminLevel": 3,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Normandie",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Manche",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Avranches",
+    "adminLevel": 7,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Saint-Michel-de-Montjoie",
+    "adminLevel": 8,
+    "matched": false,
+    "unique": true,
+    "default": true
+   }
+  ],
+  "score": -18.25
+ },
+ {
+  "type": "PLACE",
+  "category": "none",
+  "tokens": [
+   [
+    0,
+    7
+   ],
+   [
+    8,
+    12
+   ]
+  ],
+  "name": "Station d'épuration de Saint-Bernard - Saint-Michel",
+  "id": "way/1557556205",
+  "lat": 45.352317,
+  "lon": 5.9169677,
+  "country": "FR",
+  "zip": "38660",
+  "tz": "Europe/Paris",
+  "areas": [
+   {
+    "name": "France",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "France métropolitaine",
+    "adminLevel": 3,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Auvergne-Rhône-Alpes",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Isère",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Grenoble",
+    "adminLevel": 7,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Plateau-des-Petites-Roches",
+    "adminLevel": 8,
+    "matched": false,
+    "unique": true,
+    "default": true
+   },
+   {
+    "name": "Saint-Bernard",
+    "adminLevel": 9,
+    "matched": false,
+    "unique": false,
+    "default": false
+   }
+  ],
+  "score": -18
+ },
+ {
+  "type": "STOP",
+  "tokens": [
+   [
+    0,
+    7
+   ],
+   [
+    8,
+    12
+   ]
+  ],
+  "name": "UCCLE Station Saint-Job",
+  "id": "be-sncb_S8814449",
+  "lat": 50.794410000000006,
+  "lon": 4.3627579999999995,
+  "country": "BE",
+  "zip": "1180",
+  "tz": "Europe/Brussels",
+  "areas": [
+   {
+    "name": "Belgique",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Bruxelles-Capitale",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Bruxelles-Capitale",
+    "adminLevel": 7,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Uccle",
+    "adminLevel": 8,
+    "matched": false,
+    "unique": true,
+    "default": true
+   },
+   {
+    "name": "Uccle",
+    "adminLevel": 9,
+    "matched": false,
+    "unique": false,
+    "default": false
+   }
+  ],
+  "score": -16.881437301635742,
+  "modes": [
+   "REGIONAL_RAIL",
+   "SUBURBAN",
+   "TRAM",
+   "BUS"
+  ],
+  "importance": 0.0033578097354620695
+ }
+]
