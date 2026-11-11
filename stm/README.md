@@ -23,7 +23,7 @@ Le module Transports STM donne le prochain départ de la STM (Montréal : métro
 
 ## Clé de l’état du service
 
-Aucun jeton à demander ni à saisir. La STM exige une clé par application pour son état du service : celle de l’application « Transports STM », déclarée publique auprès de la STM, est incluse dans le module (`cle.ts`). Elle est seulement brouillée, pour échapper aux robots qui cherchent des clés en clair : ce n’est pas un secret.
+Aucun jeton à demander ni à saisir. C’est la STM, l’entreprise publique de transport de Montréal, qui exige une clé pour son état du service : une clé **par application**, qui sert à identifier chaque application qui interroge son API, pas chaque personne. Ce n’est ni un jeton personnel ni un secret d’utilisateur. Celle de l’application « Transports STM », déclarée publique auprès de la STM, est incluse dans le module (`cle.ts`). Elle est seulement brouillée, pour échapper aux robots qui cherchent des clés en clair : ce n’est pas un secret.
 
 L’état du service n’est lu que lorsqu’une question de trajet est posée, jamais en tâche de fond, puis gardé 3 minutes dans le cache de chaque installation. Clé refusée, quota atteint ou STM injoignable : la réponse reste celle de l’horaire, sans avis.
 
