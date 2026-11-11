@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RtcConfig v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["depart", "favoris"],
+  "properties": {
+    "depart": {
+      "title": "Point de départ",
+      "description": "Nom du lieu de départ, dit dans les réponses.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 60,
+      "examples": ["la maison"]
+    },
+    "adresseDepart": {
+      "title": "Adresse du départ",
+      "description": "Une adresse, une intersection ou un lieu (« Place D’Youville », « 1re Avenue et 41e Rue »). Envoyée à Transitous pour la trouver ; une intersection proche reste plus discrète que l’adresse exacte. Si la latitude et la longitude sont saisies, elles passent avant.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 160,
+      "examples": ["Place D’Youville, Québec"]
+    },
+    "latitude": {
+      "title": "Latitude du départ (facultatif)",
+      "description": "Au choix, à la place de l’adresse ; si elles sont saisies, elles passent avant. En degrés décimaux, arrondie à environ 100 m avant d’être envoyée à Transitous.",
+      "type": ["number", "null"],
+      "minimum": 46.5,
+      "maximum": 47.2,
+      "examples": [46.81]
+    },
+    "longitude": {
+      "title": "Longitude du départ (facultatif)",
+      "description": "Au choix, avec la latitude. En degrés décimaux, négative : -71.21 pour la Place D’Youville.",
+      "type": ["number", "null"],
+      "minimum": -71.8,
+      "maximum": -70.8,
+      "examples": [-71.21]
+    },
+    "favoris": {
+      "title": "Destinations favorites",
+      "description": "Un mot-clé dit à la voix (« travail »), la façon de le dire dans la réponse (« au travail ») et l’adresse. Toute autre destination dite à la voix est cherchée telle quelle.",
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["nom", "dit", "adresse"],
+        "properties": {
+          "nom": {
+            "title": "Mot-clé",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          },
+          "dit": {
+            "title": "Dans la réponse",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60
+          },
+          "adresse": {
+            "title": "Adresse",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 160
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5962 @@
+{
+ "geocode?text=Universit%C3%A9+Laval&language=fr&place=46.812%2C-71.213": [
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     11
+    ],
+    [
+     12,
+     5
+    ]
+   ],
+   "name": "Université Laval",
+   "id": "ca-qc-RTC_1-1472",
+   "lat": 46.787113000000005,
+   "lon": -71.27656999999999,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Capitale-Nationale",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Québec",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Sainte-Foy–Sillery–Cap-Rouge",
+     "adminLevel": 9,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Cité-Universitaire",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -26.850000381469727,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.000042322459194110706
+  },
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     11
+    ],
+    [
+     12,
+     5
+    ]
+   ],
+   "name": "Université Laval",
+   "id": "ca-qc-RTC_1-1515",
+   "lat": 46.77923200000001,
+   "lon": -71.27089,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Capitale-Nationale",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Québec",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Sainte-Foy–Sillery–Cap-Rouge",
+     "adminLevel": 9,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Cité-Universitaire",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -26.850000381469727,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.00004629716568160802
+  },
+  {
+   "type": "PLACE",
+   "category": "none",
+   "tokens": [
+    [
+     0,
+     11
+    ],
+    [
+     12,
+     5
+    ]
+   ],
+   "name": "Université Laval",
+   "id": "way/42201631",
+   "lat": 46.7787219,
+   "lon": -71.2892314,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Capitale-Nationale",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Québec",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Sainte-Foy–Sillery–Cap-Rouge",
+     "adminLevel": 9,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Cité-Universitaire",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -22.25
+  },
+  {
+   "type": "PLACE",
+   "category": "sports_14",
+   "tokens": [
+    [
+     0,
+     11
+    ],
+    [
+     12,
+     5
+    ]
+   ],
+   "name": "Décathlon PEPS Université Laval",
+   "id": "node/11077654705",
+   "lat": 46.7843108,
+   "lon": -71.2771424,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Capitale-Nationale",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Québec",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Sainte-Foy–Sillery–Cap-Rouge",
+     "adminLevel": 9,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Cité-Universitaire",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -22
+  },
+  {
+   "type": "PLACE",
+   "category": "none",
+   "tokens": [
+    [
+     0,
+     11
+    ],
+    [
+     12,
+     5
+    ]
+   ],
+   "name": "Stade TELUS-Université Laval",
+   "id": "way/104100179",
+   "lat": 46.7839846,
+   "lon": -71.2808329,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Capitale-Nationale",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Québec",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Sainte-Foy–Sillery–Cap-Rouge",
+     "adminLevel": 9,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Cité-Universitaire",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -19.75
+  },
+  {
+   "type": "PLACE",
+   "category": "chalet",
+   "tokens": [
+    [
+     0,
+     11
+    ],
+    [
+     12,
+     5
+    ]
+   ],
+   "name": "Pourvoirie Forêt Montmorency-Université Laval",
+   "id": "node/1209397519",
+   "lat": 47.3219931,
+   "lon": -71.1473034,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Capitale-Nationale",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "La Côte-de-Beaupré",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Lac-Jacques-Cartier",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    }
+   ],
+   "score": -17.75
+  },
+  {
+   "type": "PLACE",
+   "category": "none",
+   "tokens": [
+    [
+     0,
+     11
+    ],
+    [
+     12,
+     5
+    ]
+   ],
+   "name": "Université Laval - Faculté de médecine",
+   "id": "node/12518410022",
+   "lat": 46.7786078,
+   "lon": -71.2778549,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Capitale-Nationale",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Québec",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Sainte-Foy–Sillery–Cap-Rouge",
+     "adminLevel": 9,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Cité-Universitaire",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -17.75
+  },
+  {
+   "type": "PLACE",
+   "category": "none",
+   "tokens": [
+    [
+     0,
+     11
+    ],
+    [
+     12,
+     5
+    ]
+   ],
+   "name": "Université de Montréal",
+   "id": "way/373555499",
+   "lat": 45.5588598,
+   "lon": -73.7201473,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Laval (région administrative)",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Laval",
+     "adminLevel": 8,
+     "matched": true,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Laval-des-Rapides",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -17.58763885498047
+  },
+  {
+   "type": "PLACE",
+   "category": "none",
+   "tokens": [
+    [
+     0,
+     11
+    ],
+    [
+     12,
+     5
+    ]
+   ],
+   "name": "Centrale Téléphonique Université Laval",
+   "id": "node/9879968049",
+   "lat": 46.7823328,
+   "lon": -71.274105,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Capitale-Nationale",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Québec",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Sainte-Foy–Sillery–Cap-Rouge",
+     "adminLevel": 9,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Cité-Universitaire",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -17.25
+  },
+  {
+   "type": "ADDRESS",
+   "tokens": [
+    [
+     0,
+     11
+    ],
+    [
+     12,
+     5
+    ]
+   ],
+   "name": "Piste cyclable Université Laval",
+   "id": "",
+   "lat": 46.7839474,
+   "lon": -71.2632789,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Capitale-Nationale",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Québec",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Sainte-Foy–Sillery–Cap-Rouge",
+     "adminLevel": 9,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Cité-Universitaire",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -17
+  }
+ ],
+ "plan?fromPlace=46.812%2C-71.213&toPlace=46.787%2C-71.277&numItineraries=5": {
+  "requestParameters": {},
+  "debugOutput": {
+   "algorithm": 1,
+   "direct": 0,
+   "execute_time": 27,
+   "fares": 0,
+   "fastest_direct": 0,
+   "fp_update_prevented_by_lower_bound": 0,
+   "gpu_supported": 1,
+   "gpu_used": 1,
+   "interval_extensions": 0,
+   "lb_time": 0,
+   "n_dest_offsets": 46,
+   "n_earliest_arrival_updated_by_footpath": 0,
+   "n_earliest_arrival_updated_by_route": 0,
+   "n_earliest_trip_calls": 0,
+   "n_events_skipped_by_early_termination": 0,
+   "n_execute_bwd": 7,
+   "n_execute_fwd": 5,
+   "n_footpaths_visited": 0,
+   "n_routes_visited": 0,
+   "n_routing_time": 0,
+   "n_start_offsets": 60,
+   "n_td_dest_offsets": 0,
+   "n_td_start_offsets": 0,
+   "prepare": 5,
+   "prepare_backward_WALK": 1,
+   "prepare_forward_WALK": 3,
+   "route_update_prevented_by_lower_bound": 0,
+   "search_interval_reduction_by_early_termination": 0
+  },
+  "from": {
+   "name": "START",
+   "lat": 46.812,
+   "lon": -71.213,
+   "level": 0,
+   "vertexType": "NORMAL"
+  },
+  "to": {
+   "name": "END",
+   "lat": 46.787,
+   "lon": -71.277,
+   "level": 0,
+   "vertexType": "NORMAL"
+  },
+  "direct": [],
+  "itineraries": [
+   {
+    "duration": 2520,
+    "startTime": "2026-11-11T21:21:00Z",
+    "endTime": "2026-11-11T22:03:00Z",
+    "transfers": 1,
+    "id": "CkohDi2yne9nR0ApEoPAyqHNUcAyEGNhLXFjLVJUQ18xLTExOTA5vz46deVnR0BBXaeRlsrNUcBIvLjT1wZQrLrT1wZaBFdBTEtgAQqSAQoDODA1EjAyMDI2MTExMV8xNjoxOF9jYS1xYy1SVENfMTExOTI3MDY3XzIwMjYxMTExZGFpbHkaEGNhLXFjLVJUQ18xLTExOTAhvz46deVnR0ApXaeRlsrNUcAyEGNhLXFjLVJUQ18xLTE1MTU5lP/J371jR0BBD7QCQ1bRUcBIrLrT1wZQxMbT1wZaA0JVU2ABClwaEGNhLXFjLVJUQ18xLTE1MTUhlP/J371jR0ApD7QCQ1bRUcAyEGNhLXFjLVJUQ18xLTE1NjE5T0ATYcNjR0BBjIS2nEvRUcBIxMbT1wZQvMfT1wZaBFdBTEtgAQqSAQoDODA0EjAyMDI2MTExMV8xNjozOF9jYS1xYy1SVENfMTExNjQxMDM2XzIwMjYxMTExZGFpbHkaEGNhLXFjLVJUQ18xLTE1NjEhT0ATYcNjR0ApjIS2nEvRUcAyEGNhLXFjLVJUQ18xLTE1MDQ5+dhdoKRkR0BBZ7Pqc7XRUcBIrMnT1wZQnMvT1wZaA0JVU2ABCkoaEGNhLXFjLVJUQ18xLTE1MDQh+dhdoKRkR0ApZ7Pqc7XRUcA52/l+arxkR0BBfT81XrrRUcBInMvT1wZQlMzT1wZaBFdBTEtgAQ==",
+    "legs": [
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "START",
+       "lat": 46.812,
+       "lon": -71.213,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:21:00Z",
+       "scheduledDeparture": "2026-11-11T21:21:00Z",
+       "vertexType": "NORMAL"
+      },
+      "to": {
+       "name": "D'Youville",
+       "stopId": "ca-qc-RTC_1-1190",
+       "importance": 0.00016701898130122572,
+       "lat": 46.81168999999999,
+       "lon": -71.21549,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:25:00Z",
+       "scheduledArrival": "2026-11-11T21:25:00Z",
+       "stopCode": "1190",
+       "description": "H.-Mercier / Saint-Joachim",
+       "vertexType": "TRANSIT",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 240,
+      "startTime": "2026-11-11T21:21:00Z",
+      "endTime": "2026-11-11T21:25:00Z",
+      "scheduledStartTime": "2026-11-11T21:21:00Z",
+      "scheduledEndTime": "2026-11-11T21:25:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 266,
+      "legGeometry": {
+       "points": "swdhxAhrnyfCsKrF{AnAw@`A??e@xAYvAKz@@fA?bAPfAzT`l@??_B`Fs@xCWzAIzACzADbB??oCjC??\\x@??HT^?d@XrPbc@??lBfF??`AnC??l@|A??n@fB??jB`F??wAxA",
+       "precision": 6,
+       "length": 40
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 34,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 3956598725,
+        "polyline": {
+         "points": "swdhxAhrnyfCsKrF{AnAw@`A",
+         "precision": 6,
+         "length": 4
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 86,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1576254266,
+        "fromOsmNode": 3956598725,
+        "toOsmNode": 3956598718,
+        "polyline": {
+         "points": "{hehxAn~nyfCe@xAYvAKz@@fA?bAPfAzT`l@",
+         "precision": 6,
+         "length": 8
+        },
+        "streetName": "Place d'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 31,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 392440879,
+        "fromOsmNode": 3956598718,
+        "toOsmNode": 3637858068,
+        "polyline": {
+         "points": "wtdhxArypyfC_B`Fs@xCWzAIzACzADbB",
+         "precision": 6,
+         "length": 7
+        },
+        "streetName": "Rue Saint-Joachim",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 10,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 3637858068,
+        "toOsmNode": 6482432782,
+        "polyline": {
+         "points": "kzdhxAfqqyfCoCjC",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 3,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1526551537,
+        "fromOsmNode": 6482432782,
+        "toOsmNode": 13913324671,
+        "polyline": {
+         "points": "{~dhxAruqyfC\\x@",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 59,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1434231044,
+        "fromOsmNode": 13913324671,
+        "toOsmNode": 7261100580,
+        "polyline": {
+         "points": "}}dhxAlwqyfCHT^?d@XrPbc@",
+         "precision": 6,
+         "length": 5
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 11,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 778015027,
+        "fromOsmNode": 7261100580,
+        "toOsmNode": 7261115287,
+        "polyline": {
+         "points": "yidhxA`}ryfClBfF",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 778015027,
+        "fromOsmNode": 7261115287,
+        "toOsmNode": 13911818016,
+        "polyline": {
+         "points": "kfdhxAhdsyfC`AnC",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 4,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1526362219,
+        "fromOsmNode": 13911818016,
+        "toOsmNode": 13911818015,
+        "polyline": {
+         "points": "iddhxAxhsyfCl@|A",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 5,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1526362218,
+        "fromOsmNode": 13911818015,
+        "toOsmNode": 7261115288,
+        "polyline": {
+         "points": "{bdhxAvksyfCn@fB",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 10,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1526362218,
+        "fromOsmNode": 7261115288,
+        "toOsmNode": 7261100581,
+        "polyline": {
+         "points": "kadhxA~nsyfCjB`F",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 6,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 7261100581,
+        "polyline": {
+         "points": "_~chxA`vsyfCwAxA",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     },
+     {
+      "mode": "BUS",
+      "from": {
+       "name": "D'Youville",
+       "stopId": "ca-qc-RTC_1-1190",
+       "importance": 0.00016701898130122572,
+       "lat": 46.81168999999999,
+       "lon": -71.21549,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:25:00Z",
+       "scheduledDeparture": "2026-11-11T21:25:00Z",
+       "stopCode": "1190",
+       "description": "H.-Mercier / Saint-Joachim",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "Université Laval",
+       "stopId": "ca-qc-RTC_1-1515",
+       "importance": 0.00004629716568160802,
+       "lat": 46.77923200000001,
+       "lon": -71.27089,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:51:00Z",
+       "scheduledArrival": "2026-11-11T21:51:00Z",
+       "stopCode": "1515",
+       "description": "de l'Université / des S.-Humaines",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 1560,
+      "startTime": "2026-11-11T21:25:00Z",
+      "endTime": "2026-11-11T21:51:00Z",
+      "scheduledStartTime": "2026-11-11T21:25:00Z",
+      "scheduledEndTime": "2026-11-11T21:51:00Z",
+      "realTime": false,
+      "scheduled": true,
+      "interlineWithPreviousLeg": false,
+      "headsign": "Pointe-de-Sainte-Foy (Ouest)",
+      "tripFrom": {
+       "name": "T. Parc-Victoria",
+       "stopId": "ca-qc-RTC_1-8405",
+       "importance": 0.00013529526768252254,
+       "lat": 46.81737,
+       "lon": -71.230705,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:18:00Z",
+       "scheduledDeparture": "2026-11-11T21:18:00Z",
+       "stopCode": "8405",
+       "description": "Terminus Parc-Victoria - Quai A2",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "tripTo": {
+       "name": "T. de Marly",
+       "stopId": "ca-qc-RTC_1-2009",
+       "importance": 0.0000617508267168887,
+       "lat": 46.751835,
+       "lon": -71.33086999999999,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:18:00Z",
+       "scheduledArrival": "2026-11-11T22:18:00Z",
+       "stopCode": "2009",
+       "description": "de Marly / au 3800",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "routeId": "ca-qc-RTC_1-805",
+      "routeUrl": "https://www.rtcquebec.ca/Default.aspx?tabid=95&noParcours=805",
+      "directionId": "1",
+      "routeColor": "97bf0d",
+      "routeTextColor": "000000",
+      "routeType": 3,
+      "agencyName": "Réseau de transport de la capitale (RTC)",
+      "agencyUrl": "https://www.rtcquebec.ca",
+      "agencyFareUrl": "",
+      "agencyId": "RTC",
+      "tripId": "20261111_16:18_ca-qc-RTC_111927067_20261111daily",
+      "routeShortName": "805",
+      "routeLongName": "",
+      "tripShortName": "Pointe-de-Ste-Foy",
+      "displayName": "805",
+      "cancelled": false,
+      "source": "ca-qc_RTC.gtfs.zip/stop_times.txt:2849011:2849044",
+      "intermediateStops": [
+       {
+        "name": "C. Parlementaire",
+        "stopId": "ca-qc-RTC_1-1517",
+        "importance": 0.0001331360690528527,
+        "lat": 46.809593,
+        "lon": -71.21624000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:26:00Z",
+        "departure": "2026-11-11T21:26:00Z",
+        "scheduledArrival": "2026-11-11T21:26:00Z",
+        "scheduledDeparture": "2026-11-11T21:26:00Z",
+        "stopCode": "1517",
+        "description": "R.-Lévesque Est / J.-J.-Bertrand",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "de Cl.-Fontaine",
+        "stopId": "ca-qc-RTC_1-8115",
+        "importance": 0.00005998170672683045,
+        "lat": 46.806262999999994,
+        "lon": -71.22045,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:28:00Z",
+        "departure": "2026-11-11T21:28:00Z",
+        "scheduledArrival": "2026-11-11T21:28:00Z",
+        "scheduledDeparture": "2026-11-11T21:28:00Z",
+        "stopCode": "8115",
+        "description": "J.-Parizeau / de Cl.-Fontaine",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Grande Allée",
+        "stopId": "ca-qc-RTC_1-8118",
+        "importance": 0.000026477275241632015,
+        "lat": 46.80428299999999,
+        "lon": -71.22082,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:29:00Z",
+        "departure": "2026-11-11T21:29:00Z",
+        "scheduledArrival": "2026-11-11T21:29:00Z",
+        "scheduledDeparture": "2026-11-11T21:29:00Z",
+        "stopCode": "8118",
+        "description": "Turnbull / Grande Allée Est",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "De Salaberry",
+        "stopId": "ca-qc-RTC_1-1767",
+        "importance": 0.0000515871106472332,
+        "lat": 46.80293,
+        "lon": -71.22256,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:29:00Z",
+        "departure": "2026-11-11T21:29:00Z",
+        "scheduledArrival": "2026-11-11T21:29:00Z",
+        "scheduledDeparture": "2026-11-11T21:29:00Z",
+        "stopCode": "1767",
+        "description": "Grande Allée Est / De Salaberry",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Cartier",
+        "stopId": "ca-qc-RTC_1-1768",
+        "importance": 0.00007480747444787994,
+        "lat": 46.80225,
+        "lon": -71.22373999999999,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:30:00Z",
+        "departure": "2026-11-11T21:30:00Z",
+        "scheduledArrival": "2026-11-11T21:30:00Z",
+        "scheduledDeparture": "2026-11-11T21:30:00Z",
+        "stopCode": "1768",
+        "description": "Grande Allée Ouest / Cartier",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Gr. Allée/6606",
+        "stopId": "ca-qc-RTC_1-6606",
+        "importance": 0.000026477275241632015,
+        "lat": 46.79920200000001,
+        "lon": -71.229034,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:32:00Z",
+        "departure": "2026-11-11T21:32:00Z",
+        "scheduledArrival": "2026-11-11T21:32:00Z",
+        "scheduledDeparture": "2026-11-11T21:32:00Z",
+        "stopCode": "6606",
+        "description": "Grande Allée Ouest / au 390",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Brown",
+        "stopId": "ca-qc-RTC_1-1772",
+        "importance": 0.00006453645619330928,
+        "lat": 46.797790000000006,
+        "lon": -71.23151400000002,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:32:00Z",
+        "departure": "2026-11-11T21:32:00Z",
+        "scheduledArrival": "2026-11-11T21:32:00Z",
+        "scheduledDeparture": "2026-11-11T21:32:00Z",
+        "stopCode": "1772",
+        "description": "Grande Allée Ouest / Brown",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Belvédère",
+        "stopId": "ca-qc-RTC_1-1774",
+        "importance": 0.00008020617678994313,
+        "lat": 46.79517000000001,
+        "lon": -71.23609,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:34:00Z",
+        "departure": "2026-11-11T21:34:00Z",
+        "scheduledArrival": "2026-11-11T21:34:00Z",
+        "scheduledDeparture": "2026-11-11T21:34:00Z",
+        "stopCode": "1774",
+        "description": "Grande Allée Ouest / Belvédère",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Gr. Allée/6607",
+        "stopId": "ca-qc-RTC_1-6607",
+        "importance": 0.000026477275241632015,
+        "lat": 46.79370500000001,
+        "lon": -71.23869,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:35:00Z",
+        "departure": "2026-11-11T21:35:00Z",
+        "scheduledArrival": "2026-11-11T21:35:00Z",
+        "scheduledDeparture": "2026-11-11T21:35:00Z",
+        "stopCode": "6607",
+        "description": "Grande Allée Ouest / Boisé-de-Sillery",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Thornhill",
+        "stopId": "ca-qc-RTC_1-1058",
+        "importance": 0.00005159436113899574,
+        "lat": 46.79081000000001,
+        "lon": -71.24383,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:37:00Z",
+        "departure": "2026-11-11T21:37:00Z",
+        "scheduledArrival": "2026-11-11T21:37:00Z",
+        "scheduledDeparture": "2026-11-11T21:37:00Z",
+        "stopCode": "1058",
+        "description": "Grande Allée Ouest / Thornhill",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "du Chan.-Morel",
+        "stopId": "ca-qc-RTC_1-2451",
+        "importance": 0.00004179462121101096,
+        "lat": 46.78683,
+        "lon": -71.25129000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:40:00Z",
+        "departure": "2026-11-11T21:40:00Z",
+        "scheduledArrival": "2026-11-11T21:40:00Z",
+        "scheduledDeparture": "2026-11-11T21:40:00Z",
+        "stopCode": "2451",
+        "description": "Laurier / du Chan.-Morel",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Maguire",
+        "stopId": "ca-qc-RTC_1-1778",
+        "importance": 0.000020262170437490568,
+        "lat": 46.78416,
+        "lon": -71.25626000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:42:00Z",
+        "departure": "2026-11-11T21:42:00Z",
+        "scheduledArrival": "2026-11-11T21:42:00Z",
+        "scheduledDeparture": "2026-11-11T21:42:00Z",
+        "stopCode": "1778",
+        "description": "Laurier / Maguire",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "du Père-Vaultier",
+        "stopId": "ca-qc-RTC_1-1780",
+        "importance": 0.00003926855788449757,
+        "lat": 46.78173,
+        "lon": -71.26057,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:44:00Z",
+        "departure": "2026-11-11T21:44:00Z",
+        "scheduledArrival": "2026-11-11T21:44:00Z",
+        "scheduledDeparture": "2026-11-11T21:44:00Z",
+        "stopCode": "1780",
+        "description": "Laurier / du Père-Vaultier",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "des Gouverneurs",
+        "stopId": "ca-qc-RTC_1-1782",
+        "importance": 0.00003926855788449757,
+        "lat": 46.78015500000001,
+        "lon": -71.26348,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:46:00Z",
+        "departure": "2026-11-11T21:46:00Z",
+        "scheduledArrival": "2026-11-11T21:46:00Z",
+        "scheduledDeparture": "2026-11-11T21:46:00Z",
+        "stopCode": "1782",
+        "description": "Laurier / R.-Lévesque Ouest",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       }
+      ],
+      "legGeometry": {
+       "points": "sadhxAbwsyfCp@cG|DsD~h@wj@`X{Yz@lBtUdn@pGvG`C~HrPni@xMpc@dEhNv_@zkAnK~\\vIl[bLp^rG~QlSjl@lZwV~LuHnd@qTnIv`@tEnP`CfJpu@z_BpCkC~y@_eAbNcQzVrg@lc@b~@lKbUpBtDdJ|S|JvQdHfO|ArCtErJj`AznBzJrSfDbG`]xs@lO`]rPf]zc@r_A~J|Tde@t_Alc@r`AvDjHrP~\\jRz^fEvPjSjb@jAtCrAtCr[tp@vR|b@tP~\\d@bBvTnd@bUve@rYnn@lGbMzEjLlAvCnCbFnTzc@RR|A~C`AvBvTbe@zo@rtAtTve@`MbVzL~WfKnUrSrb@pGnPxMfYl}@njBj[vp@jArCdZnn@bLjWjMnZrY|q@lU|l@|c@fkAvDnKrPzc@nSfh@di@vmA|AjC|Xbo@pTfc@bX~k@~Nb[|eCroFt@~C|O~\\pc@r`AnLvVjQra@bZzs@zArDvQv`@~JzTzAnE~E~NgAz@wAz@cHbC{Bn@wDZsE?}J_CiBSsIRgz@{Jkh@_I_DnFg@~C_@dF?pEJrHpEfPtDzOrCrIxFfPd@jBlEvM~CrH~`BztD`HrXbKfU~Xrp@sA?",
+       "precision": 6,
+       "length": 136
+      },
+      "bikesAllowed": false,
+      "wheelchairAccessible": "NOT_ACCESSIBLE",
+      "reservation": "NONE",
+      "alternatives": []
+     },
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "Université Laval",
+       "stopId": "ca-qc-RTC_1-1515",
+       "importance": 0.00004629716568160802,
+       "lat": 46.77923200000001,
+       "lon": -71.27089,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:51:00Z",
+       "departure": "2026-11-11T21:51:00Z",
+       "scheduledArrival": "2026-11-11T21:51:00Z",
+       "scheduledDeparture": "2026-11-11T21:51:00Z",
+       "stopCode": "1515",
+       "description": "de l'Université / des S.-Humaines",
+       "vertexType": "TRANSIT",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "Univ. Laval/1561",
+       "stopId": "ca-qc-RTC_1-1561",
+       "importance": 0.000032888143323361874,
+       "lat": 46.7794,
+       "lon": -71.27024,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:53:00Z",
+       "scheduledArrival": "2026-11-11T21:53:00Z",
+       "stopCode": "1561",
+       "description": "de l'Université / des S.-Humaines",
+       "vertexType": "TRANSIT",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 120,
+      "startTime": "2026-11-11T21:51:00Z",
+      "endTime": "2026-11-11T21:53:00Z",
+      "scheduledStartTime": "2026-11-11T21:51:00Z",
+      "scheduledEndTime": "2026-11-11T21:53:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 108,
+      "legGeometry": {
+       "points": "yudfxAn~_}fCjBhEp@xC??PO??vAcB??lC}C??dBqB??Pw@??IO??g@CUKY_@eFoL??yLsX",
+       "precision": 6,
+       "length": 22
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 16,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 2845335765,
+        "polyline": {
+         "points": "yudfxAn~_}fCjBhEp@xC",
+         "precision": 6,
+         "length": 3
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 1,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1206311801,
+        "fromOsmNode": 2845335765,
+        "toOsmNode": 13950732478,
+        "polyline": {
+         "points": "{pdfxAri`}fCPO",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 6,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1530687210,
+        "fromOsmNode": 13950732478,
+        "toOsmNode": 2845335764,
+        "polyline": {
+         "points": "ipdfxAbi`}fCvAcB",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 10,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1530687210,
+        "fromOsmNode": 2845335764,
+        "toOsmNode": 2845335761,
+        "polyline": {
+         "points": "qmdfxA~e`}fClC}C",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1530687210,
+        "fromOsmNode": 2845335761,
+        "toOsmNode": 13950732479,
+        "polyline": {
+         "points": "cidfxA`a`}fCdBqB",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 2,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1530687211,
+        "fromOsmNode": 13950732479,
+        "toOsmNode": 11178157176,
+        "polyline": {
+         "points": "}edfxAn}_}fCPw@",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 1,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1208960032,
+        "fromOsmNode": 11178157176,
+        "toOsmNode": 2851967842,
+        "polyline": {
+         "points": "kedfxAv{_}fCIO",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 26,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1208960033,
+        "fromOsmNode": 2851967842,
+        "toOsmNode": 11192039892,
+        "polyline": {
+         "points": "uedfxAf{_}fCg@CUKY_@eFoL",
+         "precision": 6,
+         "length": 5
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 39,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 11192039892,
+        "polyline": {
+         "points": "sodfxAfl_}fCyLsX",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     },
+     {
+      "mode": "BUS",
+      "from": {
+       "name": "Univ. Laval/1561",
+       "stopId": "ca-qc-RTC_1-1561",
+       "importance": 0.000032888143323361874,
+       "lat": 46.7794,
+       "lon": -71.27024,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:57:00Z",
+       "scheduledDeparture": "2026-11-11T21:57:00Z",
+       "stopCode": "1561",
+       "description": "de l'Université / des S.-Humaines",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "Ste-Foy/1504",
+       "stopId": "ca-qc-RTC_1-1504",
+       "importance": 0.000027876616513822228,
+       "lat": 46.786274,
+       "lon": -71.27669999999999,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:01:00Z",
+       "scheduledArrival": "2026-11-11T22:01:00Z",
+       "stopCode": "1504",
+       "description": "du Séminaire / Sainte-Foy",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 240,
+      "startTime": "2026-11-11T21:57:00Z",
+      "endTime": "2026-11-11T22:01:00Z",
+      "scheduledStartTime": "2026-11-11T21:57:00Z",
+      "scheduledEndTime": "2026-11-11T22:01:00Z",
+      "realTime": false,
+      "scheduled": true,
+      "interlineWithPreviousLeg": false,
+      "headsign": "Val-Bélair (Nord)",
+      "tripFrom": {
+       "name": "Wolfe",
+       "stopId": "ca-qc-RTC_1-6783",
+       "importance": 0.000029197652111179195,
+       "lat": 46.775650000000006,
+       "lon": -71.29494500000001,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:38:00Z",
+       "scheduledDeparture": "2026-11-11T21:38:00Z",
+       "stopCode": "6783",
+       "description": "Wolfe / au 945",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NOT_ALLOWED",
+       "cancelled": false,
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "tripTo": {
+       "name": "Émond",
+       "stopId": "ca-qc-RTC_1-5582",
+       "importance": 0.00003105087307631038,
+       "lat": 46.85707999999999,
+       "lon": -71.419846,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:53:00Z",
+       "scheduledArrival": "2026-11-11T22:53:00Z",
+       "stopCode": "5582",
+       "description": "Pie-XI Nord / Émond",
+       "vertexType": "TRANSIT",
+       "pickupType": "NOT_ALLOWED",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "routeId": "ca-qc-RTC_1-804",
+      "routeUrl": "https://www.rtcquebec.ca/Default.aspx?tabid=95&noParcours=804",
+      "directionId": "1",
+      "routeColor": "97bf0d",
+      "routeTextColor": "000000",
+      "routeType": 3,
+      "agencyName": "Réseau de transport de la capitale (RTC)",
+      "agencyUrl": "https://www.rtcquebec.ca",
+      "agencyFareUrl": "",
+      "agencyId": "RTC",
+      "tripId": "20261111_16:38_ca-qc-RTC_111641036_20261111daily",
+      "routeShortName": "804",
+      "routeLongName": "",
+      "tripShortName": "Val-Bélair",
+      "displayName": "804",
+      "cancelled": false,
+      "source": "ca-qc_RTC.gtfs.zip/stop_times.txt:3876149:3876207",
+      "intermediateStops": [
+       {
+        "name": "Bibliothèques",
+        "stopId": "ca-qc-RTC_1-1501",
+        "importance": 0.000038191137718968093,
+        "lat": 46.78186399999999,
+        "lon": -71.27156000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:58:00Z",
+        "departure": "2026-11-11T21:58:00Z",
+        "scheduledArrival": "2026-11-11T21:58:00Z",
+        "scheduledDeparture": "2026-11-11T21:58:00Z",
+        "stopCode": "1501",
+        "description": "du Séminaire / des Bibliothèques",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "de la Terrasse",
+        "stopId": "ca-qc-RTC_1-1502",
+        "importance": 0.000038191137718968093,
+        "lat": 46.783970000000004,
+        "lon": -71.27405,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:00:00Z",
+        "departure": "2026-11-11T22:00:00Z",
+        "scheduledArrival": "2026-11-11T22:00:00Z",
+        "scheduledDeparture": "2026-11-11T22:00:00Z",
+        "stopCode": "1502",
+        "description": "du Séminaire / de la Terrasse",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       }
+      ],
+      "legGeometry": {
+       "points": "o_efxA~t~|fC{AcBuDsIyIcVuM_SaqAz_Be@nAoXr]wS~Waf@nn@snAj}A_CvB_DrDgFjCkQ~RgX`\\{KtMwG~HsHpJkX|]oPrR{KvNOs@",
+       "precision": 6,
+       "length": 23
+      },
+      "bikesAllowed": false,
+      "wheelchairAccessible": "ACCESSIBLE",
+      "reservation": "NONE",
+      "alternatives": []
+     },
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "Ste-Foy/1504",
+       "stopId": "ca-qc-RTC_1-1504",
+       "importance": 0.000027876616513822228,
+       "lat": 46.786274,
+       "lon": -71.27669999999999,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:01:00Z",
+       "departure": "2026-11-11T22:01:00Z",
+       "scheduledArrival": "2026-11-11T22:01:00Z",
+       "scheduledDeparture": "2026-11-11T22:01:00Z",
+       "stopCode": "1504",
+       "description": "du Séminaire / Sainte-Foy",
+       "vertexType": "TRANSIT",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "END",
+       "lat": 46.787,
+       "lon": -71.277,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:03:00Z",
+       "scheduledArrival": "2026-11-11T22:03:00Z",
+       "vertexType": "NORMAL"
+      },
+      "duration": 120,
+      "startTime": "2026-11-11T22:01:00Z",
+      "endTime": "2026-11-11T22:03:00Z",
+      "scheduledStartTime": "2026-11-11T22:01:00Z",
+      "scheduledEndTime": "2026-11-11T22:03:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 103,
+      "legGeometry": {
+       "points": "wnrfxAhek}fCgDhD??mLbKaEjC_KnG??{@d@??}DlB??QgA[kB??i@eD",
+       "precision": 6,
+       "length": 15
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 11,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 3142835426,
+        "polyline": {
+         "points": "wnrfxAhek}fCgDhD",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 64,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1343609116,
+        "fromOsmNode": 3142835426,
+        "toOsmNode": 3142835423,
+        "polyline": {
+         "points": "_trfxArjk}fCmLbKaEjC_KnG",
+         "precision": 6,
+         "length": 4
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 4,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1343609116,
+        "fromOsmNode": 3142835423,
+        "toOsmNode": 12432034382,
+        "polyline": {
+         "points": "ossfxArcl}fC{@d@",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 11,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1343609116,
+        "fromOsmNode": 12432034382,
+        "toOsmNode": 1690707381,
+        "polyline": {
+         "points": "kusfxAxdl}fC}DlB",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 156833464,
+        "fromOsmNode": 1690707381,
+        "toOsmNode": 11783780216,
+        "polyline": {
+         "points": "i{sfxAfhl}fCQgA[kB",
+         "precision": 6,
+         "length": 3
+        },
+        "streetName": "Chemin Sainte-Foy",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 6,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 11783780216,
+        "polyline": {
+         "points": "w|sfxArbl}fCi@eD",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "duration": 2400,
+    "startTime": "2026-11-11T21:25:00Z",
+    "endTime": "2026-11-11T22:05:00Z",
+    "transfers": 0,
+    "id": "CkohDi2yne9nR0ApEoPAyqHNUcAyEGNhLXFjLVJUQ18xLTI0NDE5o7CLogdoR0BB5j+k377NUcBIrLrT1wZQnLzT1wZaBFdBTEtgAQqSAQoDODA3EjAyMDI2MTExMV8xNjoyOV9jYS1xYy1SVENfMTExOTI5MzI5XzIwMjYxMTExZGFpbHkaEGNhLXFjLVJUQ18xLTI0NDEho7CLogdoR0Ap5j+k377NUcAyEGNhLXFjLVJUQ18xLTE0MTM5FZD2P8BkR0BBHM9nQL3RUcBInLzT1wZQ0MzT1wZaA0JVU2ABCkoaEGNhLXFjLVJUQ18xLTE0MTMhFZD2P8BkR0ApHM9nQL3RUcA52/l+arxkR0BBfT81XrrRUcBI0MzT1wZQjM3T1wZaBFdBTEtgAQ==",
+    "legs": [
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "START",
+       "lat": 46.812,
+       "lon": -71.213,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:25:00Z",
+       "scheduledDeparture": "2026-11-11T21:25:00Z",
+       "vertexType": "NORMAL"
+      },
+      "to": {
+       "name": "T. D'Youville",
+       "stopId": "ca-qc-RTC_1-2441",
+       "importance": 0.00016701898130122572,
+       "lat": 46.812733,
+       "lon": -71.214775,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:29:00Z",
+       "scheduledArrival": "2026-11-11T21:29:00Z",
+       "stopCode": "2441",
+       "description": "D'Youville / D'Aiguillon",
+       "vertexType": "TRANSIT",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 240,
+      "startTime": "2026-11-11T21:25:00Z",
+      "endTime": "2026-11-11T21:29:00Z",
+      "scheduledStartTime": "2026-11-11T21:25:00Z",
+      "scheduledEndTime": "2026-11-11T21:29:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 233,
+      "legGeometry": {
+       "points": "swdhxAhrnyfCsKrF{AnAw@`A??e@xAYvAKz@@fA?bAPfAzT`l@??_B`Fs@xCWzAIzACzADbB??oCjC??CBcDbD??kBlB??gCtC??cBzA??yI}A??oGvG",
+       "precision": 6,
+       "length": 34
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 34,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 3956598725,
+        "polyline": {
+         "points": "swdhxAhrnyfCsKrF{AnAw@`A",
+         "precision": 6,
+         "length": 4
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 86,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1576254266,
+        "fromOsmNode": 3956598725,
+        "toOsmNode": 3956598718,
+        "polyline": {
+         "points": "{hehxAn~nyfCe@xAYvAKz@@fA?bAPfAzT`l@",
+         "precision": 6,
+         "length": 8
+        },
+        "streetName": "Place d'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 31,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 392440879,
+        "fromOsmNode": 3956598718,
+        "toOsmNode": 3637858068,
+        "polyline": {
+         "points": "wtdhxArypyfC_B`Fs@xCWzAIzACzADbB",
+         "precision": 6,
+         "length": 7
+        },
+        "streetName": "Rue Saint-Joachim",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 10,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 3637858068,
+        "toOsmNode": 6482432782,
+        "polyline": {
+         "points": "kzdhxAfqqyfCoCjC",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 11,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 6482432782,
+        "toOsmNode": 12544228299,
+        "polyline": {
+         "points": "{~dhxAruqyfCCBcDbD",
+         "precision": 6,
+         "length": 3
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 12544228299,
+        "toOsmNode": 2559199057,
+        "polyline": {
+         "points": "cdehxAzzqyfCkBlB",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 9,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 2559199057,
+        "toOsmNode": 6482433004,
+        "polyline": {
+         "points": "ogehxAh~qyfCgCtC",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 6482433004,
+        "toOsmNode": 3637858066,
+        "polyline": {
+         "points": "wkehxA~bryfCcBzA",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 20,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 249295342,
+        "fromOsmNode": 3637858066,
+        "toOsmNode": 2559199135,
+        "polyline": {
+         "points": "{nehxAzeryfCyI}A",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 18,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 2559199135,
+        "polyline": {
+         "points": "uyehxA|bryfCoGvG",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     },
+     {
+      "mode": "BUS",
+      "from": {
+       "name": "T. D'Youville",
+       "stopId": "ca-qc-RTC_1-2441",
+       "importance": 0.00016701898130122572,
+       "lat": 46.812733,
+       "lon": -71.214775,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:29:00Z",
+       "scheduledDeparture": "2026-11-11T21:29:00Z",
+       "stopCode": "2441",
+       "description": "D'Youville / D'Aiguillon",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "Univ. Laval/1413",
+       "stopId": "ca-qc-RTC_1-1413",
+       "importance": 0.00004020096821477637,
+       "lat": 46.787117,
+       "lon": -71.277176,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:04:00Z",
+       "scheduledArrival": "2026-11-11T22:04:00Z",
+       "stopCode": "1413",
+       "description": "Sainte-Foy / du Séminaire",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 2100,
+      "startTime": "2026-11-11T21:29:00Z",
+      "endTime": "2026-11-11T22:04:00Z",
+      "scheduledStartTime": "2026-11-11T21:29:00Z",
+      "scheduledEndTime": "2026-11-11T22:04:00Z",
+      "realTime": false,
+      "scheduled": true,
+      "interlineWithPreviousLeg": false,
+      "headsign": "Pointe-de-Sainte-Foy (Ouest)",
+      "tripFrom": {
+       "name": "T. D'Youville",
+       "stopId": "ca-qc-RTC_1-2441",
+       "importance": 0.00016701898130122572,
+       "lat": 46.812733,
+       "lon": -71.214775,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:29:00Z",
+       "scheduledDeparture": "2026-11-11T21:29:00Z",
+       "stopCode": "2441",
+       "description": "D'Youville / D'Aiguillon",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "tripTo": {
+       "name": "T. de Marly",
+       "stopId": "ca-qc-RTC_1-2009",
+       "importance": 0.0000617508267168887,
+       "lat": 46.751835,
+       "lon": -71.33086999999999,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:35:00Z",
+       "scheduledArrival": "2026-11-11T22:35:00Z",
+       "stopCode": "2009",
+       "description": "de Marly / au 3800",
+       "vertexType": "TRANSIT",
+       "pickupType": "NOT_ALLOWED",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "routeId": "ca-qc-RTC_1-807",
+      "routeUrl": "https://www.rtcquebec.ca/Default.aspx?tabid=95&noParcours=807",
+      "directionId": "1",
+      "routeColor": "97bf0d",
+      "routeTextColor": "000000",
+      "routeType": 3,
+      "agencyName": "Réseau de transport de la capitale (RTC)",
+      "agencyUrl": "https://www.rtcquebec.ca",
+      "agencyFareUrl": "",
+      "agencyId": "RTC",
+      "tripId": "20261111_16:29_ca-qc-RTC_111929329_20261111daily",
+      "routeShortName": "807",
+      "routeLongName": "",
+      "tripShortName": "Pointe-de-Ste-Foy",
+      "displayName": "807",
+      "cancelled": false,
+      "source": "ca-qc_RTC.gtfs.zip/stop_times.txt:1504661:1504695",
+      "intermediateStops": [
+       {
+        "name": "H.-Mercier",
+        "stopId": "ca-qc-RTC_1-1386",
+        "importance": 0.00004086511398782022,
+        "lat": 46.812163999999996,
+        "lon": -71.216576,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:30:00Z",
+        "departure": "2026-11-11T21:30:00Z",
+        "scheduledArrival": "2026-11-11T21:30:00Z",
+        "scheduledDeparture": "2026-11-11T21:30:00Z",
+        "stopCode": "1386",
+        "description": "D'Aiguillon / H.-Mercier",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Ste-Marie",
+        "stopId": "ca-qc-RTC_1-1388",
+        "importance": 0.000023220361981657334,
+        "lat": 46.810658,
+        "lon": -71.22,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:31:00Z",
+        "departure": "2026-11-11T21:31:00Z",
+        "scheduledArrival": "2026-11-11T21:31:00Z",
+        "scheduledDeparture": "2026-11-11T21:31:00Z",
+        "stopCode": "1388",
+        "description": "D'Aiguillon / Sainte-Marie",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Deligny",
+        "stopId": "ca-qc-RTC_1-1390",
+        "importance": 0.000023220361981657334,
+        "lat": 46.809452,
+        "lon": -71.22266,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:32:00Z",
+        "departure": "2026-11-11T21:32:00Z",
+        "scheduledArrival": "2026-11-11T21:32:00Z",
+        "scheduledDeparture": "2026-11-11T21:32:00Z",
+        "stopCode": "1390",
+        "description": "D'Aiguillon / Deligny",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Turnbull",
+        "stopId": "ca-qc-RTC_1-1391",
+        "importance": 0.00004661618731915951,
+        "lat": 46.807857999999996,
+        "lon": -71.2259,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:34:00Z",
+        "departure": "2026-11-11T21:34:00Z",
+        "scheduledArrival": "2026-11-11T21:34:00Z",
+        "scheduledDeparture": "2026-11-11T21:34:00Z",
+        "stopCode": "1391",
+        "description": "Saint-Jean / Turnbull",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Cartier",
+        "stopId": "ca-qc-RTC_1-1393",
+        "importance": 0.00007480747444787994,
+        "lat": 46.806079999999994,
+        "lon": -71.22842,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:35:00Z",
+        "departure": "2026-11-11T21:35:00Z",
+        "scheduledArrival": "2026-11-11T21:35:00Z",
+        "scheduledDeparture": "2026-11-11T21:35:00Z",
+        "stopCode": "1393",
+        "description": "Sainte-Foy / Cartier",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "De Bourlamaque",
+        "stopId": "ca-qc-RTC_1-1394",
+        "importance": 0.00003805918095167726,
+        "lat": 46.805004,
+        "lon": -71.2303,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:36:00Z",
+        "departure": "2026-11-11T21:36:00Z",
+        "scheduledArrival": "2026-11-11T21:36:00Z",
+        "scheduledDeparture": "2026-11-11T21:36:00Z",
+        "stopCode": "1394",
+        "description": "Sainte-Foy / De Bourlamaque",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "de l'Alverne",
+        "stopId": "ca-qc-RTC_1-1395",
+        "importance": 0.00001902959047583863,
+        "lat": 46.804012,
+        "lon": -71.2324,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:37:00Z",
+        "departure": "2026-11-11T21:37:00Z",
+        "scheduledArrival": "2026-11-11T21:37:00Z",
+        "scheduledDeparture": "2026-11-11T21:37:00Z",
+        "stopCode": "1395",
+        "description": "Sainte-Foy / de l'Alverne",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Brown",
+        "stopId": "ca-qc-RTC_1-1397",
+        "importance": 0.00006453645619330928,
+        "lat": 46.802265,
+        "lon": -71.23653,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:39:00Z",
+        "departure": "2026-11-11T21:39:00Z",
+        "scheduledArrival": "2026-11-11T21:39:00Z",
+        "scheduledDeparture": "2026-11-11T21:39:00Z",
+        "stopCode": "1397",
+        "description": "Sainte-Foy / Brown",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "H. St-Sacrement",
+        "stopId": "ca-qc-RTC_1-1400",
+        "importance": 0.000021945730622974224,
+        "lat": 46.79957600000001,
+        "lon": -71.24322500000002,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:43:00Z",
+        "departure": "2026-11-11T21:43:00Z",
+        "scheduledArrival": "2026-11-11T21:43:00Z",
+        "scheduledDeparture": "2026-11-11T21:43:00Z",
+        "stopCode": "1400",
+        "description": "Sainte-Foy / C.-Lavallée",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Joffre",
+        "stopId": "ca-qc-RTC_1-1401",
+        "importance": 0.00003725437636603601,
+        "lat": 46.798187000000006,
+        "lon": -71.24660000000002,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:45:00Z",
+        "departure": "2026-11-11T21:45:00Z",
+        "scheduledArrival": "2026-11-11T21:45:00Z",
+        "scheduledDeparture": "2026-11-11T21:45:00Z",
+        "stopCode": "1401",
+        "description": "Sainte-Foy / Joffre",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "H. Jeffery Hale",
+        "stopId": "ca-qc-RTC_1-1404",
+        "importance": 0.00003725437636603601,
+        "lat": 46.79633300000001,
+        "lon": -71.25109,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:49:00Z",
+        "departure": "2026-11-11T21:49:00Z",
+        "scheduledArrival": "2026-11-11T21:49:00Z",
+        "scheduledDeparture": "2026-11-11T21:49:00Z",
+        "stopCode": "1404",
+        "description": "Sainte-Foy / E.-Gagnon",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "M.-Bourgeoys",
+        "stopId": "ca-qc-RTC_1-1406",
+        "importance": 0.00003725437636603601,
+        "lat": 46.79386,
+        "lon": -71.25636,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:54:00Z",
+        "departure": "2026-11-11T21:54:00Z",
+        "scheduledArrival": "2026-11-11T21:54:00Z",
+        "scheduledDeparture": "2026-11-11T21:54:00Z",
+        "stopCode": "1406",
+        "description": "Sainte-Foy / M.-Bourgeoys",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Marois",
+        "stopId": "ca-qc-RTC_1-1409",
+        "importance": 0.00008252342377090827,
+        "lat": 46.79182,
+        "lon": -71.26160400000002,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:56:00Z",
+        "departure": "2026-11-11T21:56:00Z",
+        "scheduledArrival": "2026-11-11T21:56:00Z",
+        "scheduledDeparture": "2026-11-11T21:56:00Z",
+        "stopCode": "1409",
+        "description": "Sainte-Foy / Marois",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Cégep Garneau",
+        "stopId": "ca-qc-RTC_1-1410",
+        "importance": 0.00006121573824202642,
+        "lat": 46.790634000000004,
+        "lon": -71.265175,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:58:00Z",
+        "departure": "2026-11-11T21:58:00Z",
+        "scheduledArrival": "2026-11-11T21:58:00Z",
+        "scheduledDeparture": "2026-11-11T21:58:00Z",
+        "stopCode": "1410",
+        "description": "Sainte-Foy / É.-Côté",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Myrand",
+        "stopId": "ca-qc-RTC_1-1412",
+        "importance": 0.00008139525016304106,
+        "lat": 46.7886,
+        "lon": -71.2718,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:01:00Z",
+        "departure": "2026-11-11T22:01:00Z",
+        "scheduledArrival": "2026-11-11T22:01:00Z",
+        "scheduledDeparture": "2026-11-11T22:01:00Z",
+        "stopCode": "1412",
+        "description": "Sainte-Foy / de Belmont",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       }
+      ],
+      "legGeometry": {
+       "points": "ybfhxAljryfCd@?cFxFbE~MjRjp@vCrI~GrSj]vbAbAxB~g@p_BfXfw@dA~Dle@nuAr@bBf^jiAjA~CfUhq@rDhMpCrJdT~p@zAtCtEtHlEvGh\\bj@z@nAtErDtUz]db@jk@vLvRvf@v~@r@xAvYpm@jKzTvMzZbCvFjCjIv`@nfAzErNnFfObGnPnUzr@|Ubt@xD~MhFzOdErNrRpm@n[xbANf@rTzr@nJv[rTnx@p^vcA|N~a@nKnZhLn`@hBjKvPvp@`Ptk@pBbGzUfw@~c@txA`W~z@nCnK`S|q@fXpaAzZr`AfTvj@bQnh@jAvCba@nhArXzq@bCnFjVzm@zFbQxMp^xHdU~GfTnGzT~EhN~Z`_AvUju@v\\zaAfP~f@rCrI~CrIrDzOrF~WrGb\\fEvUbB~H`AbG`Rf|@nC~MbLni@pRvy@pGv[f@jClIb`@`SbcA`Gb`@tOx}@nIhg@vDbQlJ`a@|N`f@jUrz@fEbQpGfUbVvrAhHve@jLrq@rVbrA|Nby@_D^",
+       "precision": 6,
+       "length": 114
+      },
+      "bikesAllowed": false,
+      "wheelchairAccessible": "ACCESSIBLE",
+      "reservation": "NONE",
+      "alternatives": []
+     },
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "Univ. Laval/1413",
+       "stopId": "ca-qc-RTC_1-1413",
+       "importance": 0.00004020096821477637,
+       "lat": 46.787117,
+       "lon": -71.277176,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:04:00Z",
+       "departure": "2026-11-11T22:04:00Z",
+       "scheduledArrival": "2026-11-11T22:04:00Z",
+       "scheduledDeparture": "2026-11-11T22:04:00Z",
+       "stopCode": "1413",
+       "description": "Sainte-Foy / du Séminaire",
+       "vertexType": "TRANSIT",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "END",
+       "lat": 46.787,
+       "lon": -71.277,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:05:00Z",
+       "scheduledArrival": "2026-11-11T22:05:00Z",
+       "vertexType": "NORMAL"
+      },
+      "duration": 60,
+      "startTime": "2026-11-11T22:04:00Z",
+      "endTime": "2026-11-11T22:05:00Z",
+      "scheduledStartTime": "2026-11-11T22:04:00Z",
+      "scheduledEndTime": "2026-11-11T22:05:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 7,
+      "legGeometry": {
+       "points": "o|sfxApcl}fCG]??i@eD",
+       "precision": 6,
+       "length": 4
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 1,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 11783780216,
+        "polyline": {
+         "points": "o|sfxApcl}fCG]",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 6,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 11783780216,
+        "polyline": {
+         "points": "w|sfxArbl}fCi@eD",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "duration": 2280,
+    "startTime": "2026-11-11T21:35:00Z",
+    "endTime": "2026-11-11T22:13:00Z",
+    "transfers": 1,
+    "id": "CkohDi2yne9nR0ApEoPAyqHNUcAyEGNhLXFjLVJUQ18xLTExOTA5vz46deVnR0BBXaeRlsrNUcBIhL/T1wZQ9MDT1wZaBFdBTEtgAQqSAQoDODA1EjAyMDI2MTExMV8xNjozMl9jYS1xYy1SVENfMTExOTI3MDczXzIwMjYxMTExZGFpbHkaEGNhLXFjLVJUQ18xLTExOTAhvz46deVnR0ApXaeRlsrNUcAyEGNhLXFjLVJUQ18xLTE1MTU5lP/J371jR0BBD7QCQ1bRUcBI9MDT1wZQjM3T1wZaA0JVU2ABClwaEGNhLXFjLVJUQ18xLTE1MTUhlP/J371jR0ApD7QCQ1bRUcAyEGNhLXFjLVJUQ18xLTE1NjE5T0ATYcNjR0BBjIS2nEvRUcBIjM3T1wZQhM7T1wZaBFdBTEtgAQqSAQoDODA0EjAyMDI2MTExMV8xNjo0OF9jYS1xYy1SVENfMTExOTI5MjQxXzIwMjYxMTExZGFpbHkaEGNhLXFjLVJUQ18xLTE1NjEhT0ATYcNjR0ApjIS2nEvRUcAyEGNhLXFjLVJUQ18xLTE1MDQ5+dhdoKRkR0BBZ7Pqc7XRUcBIhM7T1wZQ9M/T1wZaA0JVU2ABCkoaEGNhLXFjLVJUQ18xLTE1MDQh+dhdoKRkR0ApZ7Pqc7XRUcA52/l+arxkR0BBfT81XrrRUcBI9M/T1wZQ7NDT1wZaBFdBTEtgAQ==",
+    "legs": [
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "START",
+       "lat": 46.812,
+       "lon": -71.213,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:35:00Z",
+       "scheduledDeparture": "2026-11-11T21:35:00Z",
+       "vertexType": "NORMAL"
+      },
+      "to": {
+       "name": "D'Youville",
+       "stopId": "ca-qc-RTC_1-1190",
+       "importance": 0.00016701898130122572,
+       "lat": 46.81168999999999,
+       "lon": -71.21549,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:39:00Z",
+       "scheduledArrival": "2026-11-11T21:39:00Z",
+       "stopCode": "1190",
+       "description": "H.-Mercier / Saint-Joachim",
+       "vertexType": "TRANSIT",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 240,
+      "startTime": "2026-11-11T21:35:00Z",
+      "endTime": "2026-11-11T21:39:00Z",
+      "scheduledStartTime": "2026-11-11T21:35:00Z",
+      "scheduledEndTime": "2026-11-11T21:39:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 266,
+      "legGeometry": {
+       "points": "swdhxAhrnyfCsKrF{AnAw@`A??e@xAYvAKz@@fA?bAPfAzT`l@??_B`Fs@xCWzAIzACzADbB??oCjC??\\x@??HT^?d@XrPbc@??lBfF??`AnC??l@|A??n@fB??jB`F??wAxA",
+       "precision": 6,
+       "length": 40
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 34,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 3956598725,
+        "polyline": {
+         "points": "swdhxAhrnyfCsKrF{AnAw@`A",
+         "precision": 6,
+         "length": 4
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 86,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1576254266,
+        "fromOsmNode": 3956598725,
+        "toOsmNode": 3956598718,
+        "polyline": {
+         "points": "{hehxAn~nyfCe@xAYvAKz@@fA?bAPfAzT`l@",
+         "precision": 6,
+         "length": 8
+        },
+        "streetName": "Place d'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 31,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 392440879,
+        "fromOsmNode": 3956598718,
+        "toOsmNode": 3637858068,
+        "polyline": {
+         "points": "wtdhxArypyfC_B`Fs@xCWzAIzACzADbB",
+         "precision": 6,
+         "length": 7
+        },
+        "streetName": "Rue Saint-Joachim",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 10,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 3637858068,
+        "toOsmNode": 6482432782,
+        "polyline": {
+         "points": "kzdhxAfqqyfCoCjC",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 3,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1526551537,
+        "fromOsmNode": 6482432782,
+        "toOsmNode": 13913324671,
+        "polyline": {
+         "points": "{~dhxAruqyfC\\x@",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 59,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1434231044,
+        "fromOsmNode": 13913324671,
+        "toOsmNode": 7261100580,
+        "polyline": {
+         "points": "}}dhxAlwqyfCHT^?d@XrPbc@",
+         "precision": 6,
+         "length": 5
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 11,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 778015027,
+        "fromOsmNode": 7261100580,
+        "toOsmNode": 7261115287,
+        "polyline": {
+         "points": "yidhxA`}ryfClBfF",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 778015027,
+        "fromOsmNode": 7261115287,
+        "toOsmNode": 13911818016,
+        "polyline": {
+         "points": "kfdhxAhdsyfC`AnC",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 4,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1526362219,
+        "fromOsmNode": 13911818016,
+        "toOsmNode": 13911818015,
+        "polyline": {
+         "points": "iddhxAxhsyfCl@|A",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 5,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1526362218,
+        "fromOsmNode": 13911818015,
+        "toOsmNode": 7261115288,
+        "polyline": {
+         "points": "{bdhxAvksyfCn@fB",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 10,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1526362218,
+        "fromOsmNode": 7261115288,
+        "toOsmNode": 7261100581,
+        "polyline": {
+         "points": "kadhxA~nsyfCjB`F",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 6,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 7261100581,
+        "polyline": {
+         "points": "_~chxA`vsyfCwAxA",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     },
+     {
+      "mode": "BUS",
+      "from": {
+       "name": "D'Youville",
+       "stopId": "ca-qc-RTC_1-1190",
+       "importance": 0.00016701898130122572,
+       "lat": 46.81168999999999,
+       "lon": -71.21549,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:39:00Z",
+       "scheduledDeparture": "2026-11-11T21:39:00Z",
+       "stopCode": "1190",
+       "description": "H.-Mercier / Saint-Joachim",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "Université Laval",
+       "stopId": "ca-qc-RTC_1-1515",
+       "importance": 0.00004629716568160802,
+       "lat": 46.77923200000001,
+       "lon": -71.27089,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:05:00Z",
+       "scheduledArrival": "2026-11-11T22:05:00Z",
+       "stopCode": "1515",
+       "description": "de l'Université / des S.-Humaines",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 1560,
+      "startTime": "2026-11-11T21:39:00Z",
+      "endTime": "2026-11-11T22:05:00Z",
+      "scheduledStartTime": "2026-11-11T21:39:00Z",
+      "scheduledEndTime": "2026-11-11T22:05:00Z",
+      "realTime": false,
+      "scheduled": true,
+      "interlineWithPreviousLeg": false,
+      "headsign": "Pointe-de-Sainte-Foy (Ouest)",
+      "tripFrom": {
+       "name": "T. Parc-Victoria",
+       "stopId": "ca-qc-RTC_1-8405",
+       "importance": 0.00013529526768252254,
+       "lat": 46.81737,
+       "lon": -71.230705,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:32:00Z",
+       "scheduledDeparture": "2026-11-11T21:32:00Z",
+       "stopCode": "8405",
+       "description": "Terminus Parc-Victoria - Quai A2",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "tripTo": {
+       "name": "T. de Marly",
+       "stopId": "ca-qc-RTC_1-2009",
+       "importance": 0.0000617508267168887,
+       "lat": 46.751835,
+       "lon": -71.33086999999999,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:32:00Z",
+       "scheduledArrival": "2026-11-11T22:32:00Z",
+       "stopCode": "2009",
+       "description": "de Marly / au 3800",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "routeId": "ca-qc-RTC_1-805",
+      "routeUrl": "https://www.rtcquebec.ca/Default.aspx?tabid=95&noParcours=805",
+      "directionId": "1",
+      "routeColor": "97bf0d",
+      "routeTextColor": "000000",
+      "routeType": 3,
+      "agencyName": "Réseau de transport de la capitale (RTC)",
+      "agencyUrl": "https://www.rtcquebec.ca",
+      "agencyFareUrl": "",
+      "agencyId": "RTC",
+      "tripId": "20261111_16:32_ca-qc-RTC_111927073_20261111daily",
+      "routeShortName": "805",
+      "routeLongName": "",
+      "tripShortName": "Pointe-de-Ste-Foy",
+      "displayName": "805",
+      "cancelled": false,
+      "source": "ca-qc_RTC.gtfs.zip/stop_times.txt:1424007:1424040",
+      "intermediateStops": [
+       {
+        "name": "C. Parlementaire",
+        "stopId": "ca-qc-RTC_1-1517",
+        "importance": 0.0001331360690528527,
+        "lat": 46.809593,
+        "lon": -71.21624000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:40:00Z",
+        "departure": "2026-11-11T21:40:00Z",
+        "scheduledArrival": "2026-11-11T21:40:00Z",
+        "scheduledDeparture": "2026-11-11T21:40:00Z",
+        "stopCode": "1517",
+        "description": "R.-Lévesque Est / J.-J.-Bertrand",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "de Cl.-Fontaine",
+        "stopId": "ca-qc-RTC_1-8115",
+        "importance": 0.00005998170672683045,
+        "lat": 46.806262999999994,
+        "lon": -71.22045,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:42:00Z",
+        "departure": "2026-11-11T21:42:00Z",
+        "scheduledArrival": "2026-11-11T21:42:00Z",
+        "scheduledDeparture": "2026-11-11T21:42:00Z",
+        "stopCode": "8115",
+        "description": "J.-Parizeau / de Cl.-Fontaine",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Grande Allée",
+        "stopId": "ca-qc-RTC_1-8118",
+        "importance": 0.000026477275241632015,
+        "lat": 46.80428299999999,
+        "lon": -71.22082,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:43:00Z",
+        "departure": "2026-11-11T21:43:00Z",
+        "scheduledArrival": "2026-11-11T21:43:00Z",
+        "scheduledDeparture": "2026-11-11T21:43:00Z",
+        "stopCode": "8118",
+        "description": "Turnbull / Grande Allée Est",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "De Salaberry",
+        "stopId": "ca-qc-RTC_1-1767",
+        "importance": 0.0000515871106472332,
+        "lat": 46.80293,
+        "lon": -71.22256,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:43:00Z",
+        "departure": "2026-11-11T21:43:00Z",
+        "scheduledArrival": "2026-11-11T21:43:00Z",
+        "scheduledDeparture": "2026-11-11T21:43:00Z",
+        "stopCode": "1767",
+        "description": "Grande Allée Est / De Salaberry",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Cartier",
+        "stopId": "ca-qc-RTC_1-1768",
+        "importance": 0.00007480747444787994,
+        "lat": 46.80225,
+        "lon": -71.22373999999999,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:44:00Z",
+        "departure": "2026-11-11T21:44:00Z",
+        "scheduledArrival": "2026-11-11T21:44:00Z",
+        "scheduledDeparture": "2026-11-11T21:44:00Z",
+        "stopCode": "1768",
+        "description": "Grande Allée Ouest / Cartier",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Gr. Allée/6606",
+        "stopId": "ca-qc-RTC_1-6606",
+        "importance": 0.000026477275241632015,
+        "lat": 46.79920200000001,
+        "lon": -71.229034,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:46:00Z",
+        "departure": "2026-11-11T21:46:00Z",
+        "scheduledArrival": "2026-11-11T21:46:00Z",
+        "scheduledDeparture": "2026-11-11T21:46:00Z",
+        "stopCode": "6606",
+        "description": "Grande Allée Ouest / au 390",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Brown",
+        "stopId": "ca-qc-RTC_1-1772",
+        "importance": 0.00006453645619330928,
+        "lat": 46.797790000000006,
+        "lon": -71.23151400000002,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:46:00Z",
+        "departure": "2026-11-11T21:46:00Z",
+        "scheduledArrival": "2026-11-11T21:46:00Z",
+        "scheduledDeparture": "2026-11-11T21:46:00Z",
+        "stopCode": "1772",
+        "description": "Grande Allée Ouest / Brown",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Belvédère",
+        "stopId": "ca-qc-RTC_1-1774",
+        "importance": 0.00008020617678994313,
+        "lat": 46.79517000000001,
+        "lon": -71.23609,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:48:00Z",
+        "departure": "2026-11-11T21:48:00Z",
+        "scheduledArrival": "2026-11-11T21:48:00Z",
+        "scheduledDeparture": "2026-11-11T21:48:00Z",
+        "stopCode": "1774",
+        "description": "Grande Allée Ouest / Belvédère",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Gr. Allée/6607",
+        "stopId": "ca-qc-RTC_1-6607",
+        "importance": 0.000026477275241632015,
+        "lat": 46.79370500000001,
+        "lon": -71.23869,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:49:00Z",
+        "departure": "2026-11-11T21:49:00Z",
+        "scheduledArrival": "2026-11-11T21:49:00Z",
+        "scheduledDeparture": "2026-11-11T21:49:00Z",
+        "stopCode": "6607",
+        "description": "Grande Allée Ouest / Boisé-de-Sillery",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Thornhill",
+        "stopId": "ca-qc-RTC_1-1058",
+        "importance": 0.00005159436113899574,
+        "lat": 46.79081000000001,
+        "lon": -71.24383,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:51:00Z",
+        "departure": "2026-11-11T21:51:00Z",
+        "scheduledArrival": "2026-11-11T21:51:00Z",
+        "scheduledDeparture": "2026-11-11T21:51:00Z",
+        "stopCode": "1058",
+        "description": "Grande Allée Ouest / Thornhill",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "du Chan.-Morel",
+        "stopId": "ca-qc-RTC_1-2451",
+        "importance": 0.00004179462121101096,
+        "lat": 46.78683,
+        "lon": -71.25129000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:54:00Z",
+        "departure": "2026-11-11T21:54:00Z",
+        "scheduledArrival": "2026-11-11T21:54:00Z",
+        "scheduledDeparture": "2026-11-11T21:54:00Z",
+        "stopCode": "2451",
+        "description": "Laurier / du Chan.-Morel",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Maguire",
+        "stopId": "ca-qc-RTC_1-1778",
+        "importance": 0.000020262170437490568,
+        "lat": 46.78416,
+        "lon": -71.25626000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:56:00Z",
+        "departure": "2026-11-11T21:56:00Z",
+        "scheduledArrival": "2026-11-11T21:56:00Z",
+        "scheduledDeparture": "2026-11-11T21:56:00Z",
+        "stopCode": "1778",
+        "description": "Laurier / Maguire",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "du Père-Vaultier",
+        "stopId": "ca-qc-RTC_1-1780",
+        "importance": 0.00003926855788449757,
+        "lat": 46.78173,
+        "lon": -71.26057,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:58:00Z",
+        "departure": "2026-11-11T21:58:00Z",
+        "scheduledArrival": "2026-11-11T21:58:00Z",
+        "scheduledDeparture": "2026-11-11T21:58:00Z",
+        "stopCode": "1780",
+        "description": "Laurier / du Père-Vaultier",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "des Gouverneurs",
+        "stopId": "ca-qc-RTC_1-1782",
+        "importance": 0.00003926855788449757,
+        "lat": 46.78015500000001,
+        "lon": -71.26348,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:00:00Z",
+        "departure": "2026-11-11T22:00:00Z",
+        "scheduledArrival": "2026-11-11T22:00:00Z",
+        "scheduledDeparture": "2026-11-11T22:00:00Z",
+        "stopCode": "1782",
+        "description": "Laurier / R.-Lévesque Ouest",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       }
+      ],
+      "legGeometry": {
+       "points": "sadhxAbwsyfCp@cG|DsD~h@wj@`X{Yz@lBtUdn@pGvG`C~HrPni@xMpc@dEhNv_@zkAnK~\\vIl[bLp^rG~QlSjl@lZwV~LuHnd@qTnIv`@tEnP`CfJpu@z_BpCkC~y@_eAbNcQzVrg@lc@b~@lKbUpBtDdJ|S|JvQdHfO|ArCtErJj`AznBzJrSfDbG`]xs@lO`]rPf]zc@r_A~J|Tde@t_Alc@r`AvDjHrP~\\jRz^fEvPjSjb@jAtCrAtCr[tp@vR|b@tP~\\d@bBvTnd@bUve@rYnn@lGbMzEjLlAvCnCbFnTzc@RR|A~C`AvBvTbe@zo@rtAtTve@`MbVzL~WfKnUrSrb@pGnPxMfYl}@njBj[vp@jArCdZnn@bLjWjMnZrY|q@lU|l@|c@fkAvDnKrPzc@nSfh@di@vmA|AjC|Xbo@pTfc@bX~k@~Nb[|eCroFt@~C|O~\\pc@r`AnLvVjQra@bZzs@zArDvQv`@~JzTzAnE~E~NgAz@wAz@cHbC{Bn@wDZsE?}J_CiBSsIRgz@{Jkh@_I_DnFg@~C_@dF?pEJrHpEfPtDzOrCrIxFfPd@jBlEvM~CrH~`BztD`HrXbKfU~Xrp@sA?",
+       "precision": 6,
+       "length": 136
+      },
+      "bikesAllowed": false,
+      "wheelchairAccessible": "NOT_ACCESSIBLE",
+      "reservation": "NONE",
+      "alternatives": []
+     },
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "Université Laval",
+       "stopId": "ca-qc-RTC_1-1515",
+       "importance": 0.00004629716568160802,
+       "lat": 46.77923200000001,
+       "lon": -71.27089,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:05:00Z",
+       "departure": "2026-11-11T22:05:00Z",
+       "scheduledArrival": "2026-11-11T22:05:00Z",
+       "scheduledDeparture": "2026-11-11T22:05:00Z",
+       "stopCode": "1515",
+       "description": "de l'Université / des S.-Humaines",
+       "vertexType": "TRANSIT",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "Univ. Laval/1561",
+       "stopId": "ca-qc-RTC_1-1561",
+       "importance": 0.000032888143323361874,
+       "lat": 46.7794,
+       "lon": -71.27024,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:07:00Z",
+       "scheduledArrival": "2026-11-11T22:07:00Z",
+       "stopCode": "1561",
+       "description": "de l'Université / des S.-Humaines",
+       "vertexType": "TRANSIT",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 120,
+      "startTime": "2026-11-11T22:05:00Z",
+      "endTime": "2026-11-11T22:07:00Z",
+      "scheduledStartTime": "2026-11-11T22:05:00Z",
+      "scheduledEndTime": "2026-11-11T22:07:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 108,
+      "legGeometry": {
+       "points": "yudfxAn~_}fCjBhEp@xC??PO??vAcB??lC}C??dBqB??Pw@??IO??g@CUKY_@eFoL??yLsX",
+       "precision": 6,
+       "length": 22
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 16,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 2845335765,
+        "polyline": {
+         "points": "yudfxAn~_}fCjBhEp@xC",
+         "precision": 6,
+         "length": 3
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 1,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1206311801,
+        "fromOsmNode": 2845335765,
+        "toOsmNode": 13950732478,
+        "polyline": {
+         "points": "{pdfxAri`}fCPO",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 6,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1530687210,
+        "fromOsmNode": 13950732478,
+        "toOsmNode": 2845335764,
+        "polyline": {
+         "points": "ipdfxAbi`}fCvAcB",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 10,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1530687210,
+        "fromOsmNode": 2845335764,
+        "toOsmNode": 2845335761,
+        "polyline": {
+         "points": "qmdfxA~e`}fClC}C",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1530687210,
+        "fromOsmNode": 2845335761,
+        "toOsmNode": 13950732479,
+        "polyline": {
+         "points": "cidfxA`a`}fCdBqB",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 2,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1530687211,
+        "fromOsmNode": 13950732479,
+        "toOsmNode": 11178157176,
+        "polyline": {
+         "points": "}edfxAn}_}fCPw@",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 1,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1208960032,
+        "fromOsmNode": 11178157176,
+        "toOsmNode": 2851967842,
+        "polyline": {
+         "points": "kedfxAv{_}fCIO",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 26,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1208960033,
+        "fromOsmNode": 2851967842,
+        "toOsmNode": 11192039892,
+        "polyline": {
+         "points": "uedfxAf{_}fCg@CUKY_@eFoL",
+         "precision": 6,
+         "length": 5
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 39,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 11192039892,
+        "polyline": {
+         "points": "sodfxAfl_}fCyLsX",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     },
+     {
+      "mode": "BUS",
+      "from": {
+       "name": "Univ. Laval/1561",
+       "stopId": "ca-qc-RTC_1-1561",
+       "importance": 0.000032888143323361874,
+       "lat": 46.7794,
+       "lon": -71.27024,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T22:07:00Z",
+       "scheduledDeparture": "2026-11-11T22:07:00Z",
+       "stopCode": "1561",
+       "description": "de l'Université / des S.-Humaines",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "Ste-Foy/1504",
+       "stopId": "ca-qc-RTC_1-1504",
+       "importance": 0.000027876616513822228,
+       "lat": 46.786274,
+       "lon": -71.27669999999999,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:11:00Z",
+       "scheduledArrival": "2026-11-11T22:11:00Z",
+       "stopCode": "1504",
+       "description": "du Séminaire / Sainte-Foy",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 240,
+      "startTime": "2026-11-11T22:07:00Z",
+      "endTime": "2026-11-11T22:11:00Z",
+      "scheduledStartTime": "2026-11-11T22:07:00Z",
+      "scheduledEndTime": "2026-11-11T22:11:00Z",
+      "realTime": false,
+      "scheduled": true,
+      "interlineWithPreviousLeg": false,
+      "headsign": "Val-Bélair (Nord)",
+      "tripFrom": {
+       "name": "Wolfe",
+       "stopId": "ca-qc-RTC_1-6783",
+       "importance": 0.000029197652111179195,
+       "lat": 46.775650000000006,
+       "lon": -71.29494500000001,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:48:00Z",
+       "scheduledDeparture": "2026-11-11T21:48:00Z",
+       "stopCode": "6783",
+       "description": "Wolfe / au 945",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "tripTo": {
+       "name": "Émond",
+       "stopId": "ca-qc-RTC_1-5582",
+       "importance": 0.00003105087307631038,
+       "lat": 46.85707999999999,
+       "lon": -71.419846,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T23:02:00Z",
+       "scheduledArrival": "2026-11-11T23:02:00Z",
+       "stopCode": "5582",
+       "description": "Pie-XI Nord / Émond",
+       "vertexType": "TRANSIT",
+       "pickupType": "NOT_ALLOWED",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "routeId": "ca-qc-RTC_1-804",
+      "routeUrl": "https://www.rtcquebec.ca/Default.aspx?tabid=95&noParcours=804",
+      "directionId": "1",
+      "routeColor": "97bf0d",
+      "routeTextColor": "000000",
+      "routeType": 3,
+      "agencyName": "Réseau de transport de la capitale (RTC)",
+      "agencyUrl": "https://www.rtcquebec.ca",
+      "agencyFareUrl": "",
+      "agencyId": "RTC",
+      "tripId": "20261111_16:48_ca-qc-RTC_111929241_20261111daily",
+      "routeShortName": "804",
+      "routeLongName": "",
+      "tripShortName": "Val-Bélair",
+      "displayName": "804",
+      "cancelled": false,
+      "source": "ca-qc_RTC.gtfs.zip/stop_times.txt:1798556:1798614",
+      "intermediateStops": [
+       {
+        "name": "Bibliothèques",
+        "stopId": "ca-qc-RTC_1-1501",
+        "importance": 0.000038191137718968093,
+        "lat": 46.78186399999999,
+        "lon": -71.27156000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:08:00Z",
+        "departure": "2026-11-11T22:08:00Z",
+        "scheduledArrival": "2026-11-11T22:08:00Z",
+        "scheduledDeparture": "2026-11-11T22:08:00Z",
+        "stopCode": "1501",
+        "description": "du Séminaire / des Bibliothèques",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "de la Terrasse",
+        "stopId": "ca-qc-RTC_1-1502",
+        "importance": 0.000038191137718968093,
+        "lat": 46.783970000000004,
+        "lon": -71.27405,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:10:00Z",
+        "departure": "2026-11-11T22:10:00Z",
+        "scheduledArrival": "2026-11-11T22:10:00Z",
+        "scheduledDeparture": "2026-11-11T22:10:00Z",
+        "stopCode": "1502",
+        "description": "du Séminaire / de la Terrasse",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       }
+      ],
+      "legGeometry": {
+       "points": "o_efxA~t~|fC{AcBuDsIyIcVuM_SaqAz_Be@nAoXr]wS~Waf@nn@snAj}A_CvB_DrDgFjCkQ~RgX`\\{KtMwG~HsHpJkX|]oPrR{KvNOs@",
+       "precision": 6,
+       "length": 23
+      },
+      "bikesAllowed": false,
+      "wheelchairAccessible": "ACCESSIBLE",
+      "reservation": "NONE",
+      "alternatives": []
+     },
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "Ste-Foy/1504",
+       "stopId": "ca-qc-RTC_1-1504",
+       "importance": 0.000027876616513822228,
+       "lat": 46.786274,
+       "lon": -71.27669999999999,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:11:00Z",
+       "departure": "2026-11-11T22:11:00Z",
+       "scheduledArrival": "2026-11-11T22:11:00Z",
+       "scheduledDeparture": "2026-11-11T22:11:00Z",
+       "stopCode": "1504",
+       "description": "du Séminaire / Sainte-Foy",
+       "vertexType": "TRANSIT",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "END",
+       "lat": 46.787,
+       "lon": -71.277,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:13:00Z",
+       "scheduledArrival": "2026-11-11T22:13:00Z",
+       "vertexType": "NORMAL"
+      },
+      "duration": 120,
+      "startTime": "2026-11-11T22:11:00Z",
+      "endTime": "2026-11-11T22:13:00Z",
+      "scheduledStartTime": "2026-11-11T22:11:00Z",
+      "scheduledEndTime": "2026-11-11T22:13:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 103,
+      "legGeometry": {
+       "points": "wnrfxAhek}fCgDhD??mLbKaEjC_KnG??{@d@??}DlB??QgA[kB??i@eD",
+       "precision": 6,
+       "length": 15
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 11,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 3142835426,
+        "polyline": {
+         "points": "wnrfxAhek}fCgDhD",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 64,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1343609116,
+        "fromOsmNode": 3142835426,
+        "toOsmNode": 3142835423,
+        "polyline": {
+         "points": "_trfxArjk}fCmLbKaEjC_KnG",
+         "precision": 6,
+         "length": 4
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 4,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1343609116,
+        "fromOsmNode": 3142835423,
+        "toOsmNode": 12432034382,
+        "polyline": {
+         "points": "ossfxArcl}fC{@d@",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 11,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1343609116,
+        "fromOsmNode": 12432034382,
+        "toOsmNode": 1690707381,
+        "polyline": {
+         "points": "kusfxAxdl}fC}DlB",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 156833464,
+        "fromOsmNode": 1690707381,
+        "toOsmNode": 11783780216,
+        "polyline": {
+         "points": "i{sfxAfhl}fCQgA[kB",
+         "precision": 6,
+         "length": 3
+        },
+        "streetName": "Chemin Sainte-Foy",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 6,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 11783780216,
+        "polyline": {
+         "points": "w|sfxArbl}fCi@eD",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "duration": 2280,
+    "startTime": "2026-11-11T21:36:00Z",
+    "endTime": "2026-11-11T22:14:00Z",
+    "transfers": 0,
+    "id": "CkohDi2yne9nR0ApEoPAyqHNUcAyEGNhLXFjLVJUQ18xLTI0NDE5o7CLogdoR0BB5j+k377NUcBIwL/T1wZQsMHT1wZaBFdBTEtgAQqSAQoDODA3EjAyMDI2MTExMV8xNjo0MF9jYS1xYy1SVENfMTExOTI5MzMwXzIwMjYxMTExZGFpbHkaEGNhLXFjLVJUQ18xLTI0NDEho7CLogdoR0Ap5j+k377NUcAyEGNhLXFjLVJUQ18xLTE0MTM5FZD2P8BkR0BBHM9nQL3RUcBIsMHT1wZQ7NDT1wZaA0JVU2ABCkoaEGNhLXFjLVJUQ18xLTE0MTMhFZD2P8BkR0ApHM9nQL3RUcA52/l+arxkR0BBfT81XrrRUcBI7NDT1wZQqNHT1wZaBFdBTEtgAQ==",
+    "legs": [
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "START",
+       "lat": 46.812,
+       "lon": -71.213,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:36:00Z",
+       "scheduledDeparture": "2026-11-11T21:36:00Z",
+       "vertexType": "NORMAL"
+      },
+      "to": {
+       "name": "T. D'Youville",
+       "stopId": "ca-qc-RTC_1-2441",
+       "importance": 0.00016701898130122572,
+       "lat": 46.812733,
+       "lon": -71.214775,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:40:00Z",
+       "scheduledArrival": "2026-11-11T21:40:00Z",
+       "stopCode": "2441",
+       "description": "D'Youville / D'Aiguillon",
+       "vertexType": "TRANSIT",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 240,
+      "startTime": "2026-11-11T21:36:00Z",
+      "endTime": "2026-11-11T21:40:00Z",
+      "scheduledStartTime": "2026-11-11T21:36:00Z",
+      "scheduledEndTime": "2026-11-11T21:40:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 233,
+      "legGeometry": {
+       "points": "swdhxAhrnyfCsKrF{AnAw@`A??e@xAYvAKz@@fA?bAPfAzT`l@??_B`Fs@xCWzAIzACzADbB??oCjC??CBcDbD??kBlB??gCtC??cBzA??yI}A??oGvG",
+       "precision": 6,
+       "length": 34
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 34,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 3956598725,
+        "polyline": {
+         "points": "swdhxAhrnyfCsKrF{AnAw@`A",
+         "precision": 6,
+         "length": 4
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 86,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1576254266,
+        "fromOsmNode": 3956598725,
+        "toOsmNode": 3956598718,
+        "polyline": {
+         "points": "{hehxAn~nyfCe@xAYvAKz@@fA?bAPfAzT`l@",
+         "precision": 6,
+         "length": 8
+        },
+        "streetName": "Place d'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 31,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 392440879,
+        "fromOsmNode": 3956598718,
+        "toOsmNode": 3637858068,
+        "polyline": {
+         "points": "wtdhxArypyfC_B`Fs@xCWzAIzACzADbB",
+         "precision": 6,
+         "length": 7
+        },
+        "streetName": "Rue Saint-Joachim",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 10,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 3637858068,
+        "toOsmNode": 6482432782,
+        "polyline": {
+         "points": "kzdhxAfqqyfCoCjC",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 11,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 6482432782,
+        "toOsmNode": 12544228299,
+        "polyline": {
+         "points": "{~dhxAruqyfCCBcDbD",
+         "precision": 6,
+         "length": 3
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 12544228299,
+        "toOsmNode": 2559199057,
+        "polyline": {
+         "points": "cdehxAzzqyfCkBlB",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 9,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 2559199057,
+        "toOsmNode": 6482433004,
+        "polyline": {
+         "points": "ogehxAh~qyfCgCtC",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 6482433004,
+        "toOsmNode": 3637858066,
+        "polyline": {
+         "points": "wkehxA~bryfCcBzA",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 20,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 249295342,
+        "fromOsmNode": 3637858066,
+        "toOsmNode": 2559199135,
+        "polyline": {
+         "points": "{nehxAzeryfCyI}A",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 18,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 2559199135,
+        "polyline": {
+         "points": "uyehxA|bryfCoGvG",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     },
+     {
+      "mode": "BUS",
+      "from": {
+       "name": "T. D'Youville",
+       "stopId": "ca-qc-RTC_1-2441",
+       "importance": 0.00016701898130122572,
+       "lat": 46.812733,
+       "lon": -71.214775,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:40:00Z",
+       "scheduledDeparture": "2026-11-11T21:40:00Z",
+       "stopCode": "2441",
+       "description": "D'Youville / D'Aiguillon",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "Univ. Laval/1413",
+       "stopId": "ca-qc-RTC_1-1413",
+       "importance": 0.00004020096821477637,
+       "lat": 46.787117,
+       "lon": -71.277176,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:13:00Z",
+       "scheduledArrival": "2026-11-11T22:13:00Z",
+       "stopCode": "1413",
+       "description": "Sainte-Foy / du Séminaire",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 1980,
+      "startTime": "2026-11-11T21:40:00Z",
+      "endTime": "2026-11-11T22:13:00Z",
+      "scheduledStartTime": "2026-11-11T21:40:00Z",
+      "scheduledEndTime": "2026-11-11T22:13:00Z",
+      "realTime": false,
+      "scheduled": true,
+      "interlineWithPreviousLeg": false,
+      "headsign": "Pointe-de-Sainte-Foy (Ouest)",
+      "tripFrom": {
+       "name": "T. D'Youville",
+       "stopId": "ca-qc-RTC_1-2441",
+       "importance": 0.00016701898130122572,
+       "lat": 46.812733,
+       "lon": -71.214775,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:40:00Z",
+       "scheduledDeparture": "2026-11-11T21:40:00Z",
+       "stopCode": "2441",
+       "description": "D'Youville / D'Aiguillon",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "tripTo": {
+       "name": "T. de Marly",
+       "stopId": "ca-qc-RTC_1-2009",
+       "importance": 0.0000617508267168887,
+       "lat": 46.751835,
+       "lon": -71.33086999999999,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:44:00Z",
+       "scheduledArrival": "2026-11-11T22:44:00Z",
+       "stopCode": "2009",
+       "description": "de Marly / au 3800",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "routeId": "ca-qc-RTC_1-807",
+      "routeUrl": "https://www.rtcquebec.ca/Default.aspx?tabid=95&noParcours=807",
+      "directionId": "1",
+      "routeColor": "97bf0d",
+      "routeTextColor": "000000",
+      "routeType": 3,
+      "agencyName": "Réseau de transport de la capitale (RTC)",
+      "agencyUrl": "https://www.rtcquebec.ca",
+      "agencyFareUrl": "",
+      "agencyId": "RTC",
+      "tripId": "20261111_16:40_ca-qc-RTC_111929330_20261111daily",
+      "routeShortName": "807",
+      "routeLongName": "",
+      "tripShortName": "Pointe-de-Ste-Foy",
+      "displayName": "807",
+      "cancelled": false,
+      "source": "ca-qc_RTC.gtfs.zip/stop_times.txt:1504766:1504800",
+      "intermediateStops": [
+       {
+        "name": "H.-Mercier",
+        "stopId": "ca-qc-RTC_1-1386",
+        "importance": 0.00004086511398782022,
+        "lat": 46.812163999999996,
+        "lon": -71.216576,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:41:00Z",
+        "departure": "2026-11-11T21:41:00Z",
+        "scheduledArrival": "2026-11-11T21:41:00Z",
+        "scheduledDeparture": "2026-11-11T21:41:00Z",
+        "stopCode": "1386",
+        "description": "D'Aiguillon / H.-Mercier",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Ste-Marie",
+        "stopId": "ca-qc-RTC_1-1388",
+        "importance": 0.000023220361981657334,
+        "lat": 46.810658,
+        "lon": -71.22,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:42:00Z",
+        "departure": "2026-11-11T21:42:00Z",
+        "scheduledArrival": "2026-11-11T21:42:00Z",
+        "scheduledDeparture": "2026-11-11T21:42:00Z",
+        "stopCode": "1388",
+        "description": "D'Aiguillon / Sainte-Marie",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Deligny",
+        "stopId": "ca-qc-RTC_1-1390",
+        "importance": 0.000023220361981657334,
+        "lat": 46.809452,
+        "lon": -71.22266,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:43:00Z",
+        "departure": "2026-11-11T21:43:00Z",
+        "scheduledArrival": "2026-11-11T21:43:00Z",
+        "scheduledDeparture": "2026-11-11T21:43:00Z",
+        "stopCode": "1390",
+        "description": "D'Aiguillon / Deligny",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Turnbull",
+        "stopId": "ca-qc-RTC_1-1391",
+        "importance": 0.00004661618731915951,
+        "lat": 46.807857999999996,
+        "lon": -71.2259,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:45:00Z",
+        "departure": "2026-11-11T21:45:00Z",
+        "scheduledArrival": "2026-11-11T21:45:00Z",
+        "scheduledDeparture": "2026-11-11T21:45:00Z",
+        "stopCode": "1391",
+        "description": "Saint-Jean / Turnbull",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Cartier",
+        "stopId": "ca-qc-RTC_1-1393",
+        "importance": 0.00007480747444787994,
+        "lat": 46.806079999999994,
+        "lon": -71.22842,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:46:00Z",
+        "departure": "2026-11-11T21:46:00Z",
+        "scheduledArrival": "2026-11-11T21:46:00Z",
+        "scheduledDeparture": "2026-11-11T21:46:00Z",
+        "stopCode": "1393",
+        "description": "Sainte-Foy / Cartier",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "De Bourlamaque",
+        "stopId": "ca-qc-RTC_1-1394",
+        "importance": 0.00003805918095167726,
+        "lat": 46.805004,
+        "lon": -71.2303,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:47:00Z",
+        "departure": "2026-11-11T21:47:00Z",
+        "scheduledArrival": "2026-11-11T21:47:00Z",
+        "scheduledDeparture": "2026-11-11T21:47:00Z",
+        "stopCode": "1394",
+        "description": "Sainte-Foy / De Bourlamaque",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "de l'Alverne",
+        "stopId": "ca-qc-RTC_1-1395",
+        "importance": 0.00001902959047583863,
+        "lat": 46.804012,
+        "lon": -71.2324,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:48:00Z",
+        "departure": "2026-11-11T21:48:00Z",
+        "scheduledArrival": "2026-11-11T21:48:00Z",
+        "scheduledDeparture": "2026-11-11T21:48:00Z",
+        "stopCode": "1395",
+        "description": "Sainte-Foy / de l'Alverne",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Brown",
+        "stopId": "ca-qc-RTC_1-1397",
+        "importance": 0.00006453645619330928,
+        "lat": 46.802265,
+        "lon": -71.23653,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:50:00Z",
+        "departure": "2026-11-11T21:50:00Z",
+        "scheduledArrival": "2026-11-11T21:50:00Z",
+        "scheduledDeparture": "2026-11-11T21:50:00Z",
+        "stopCode": "1397",
+        "description": "Sainte-Foy / Brown",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "H. St-Sacrement",
+        "stopId": "ca-qc-RTC_1-1400",
+        "importance": 0.000021945730622974224,
+        "lat": 46.79957600000001,
+        "lon": -71.24322500000002,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:54:00Z",
+        "departure": "2026-11-11T21:54:00Z",
+        "scheduledArrival": "2026-11-11T21:54:00Z",
+        "scheduledDeparture": "2026-11-11T21:54:00Z",
+        "stopCode": "1400",
+        "description": "Sainte-Foy / C.-Lavallée",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Joffre",
+        "stopId": "ca-qc-RTC_1-1401",
+        "importance": 0.00003725437636603601,
+        "lat": 46.798187000000006,
+        "lon": -71.24660000000002,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:56:00Z",
+        "departure": "2026-11-11T21:56:00Z",
+        "scheduledArrival": "2026-11-11T21:56:00Z",
+        "scheduledDeparture": "2026-11-11T21:56:00Z",
+        "stopCode": "1401",
+        "description": "Sainte-Foy / Joffre",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "H. Jeffery Hale",
+        "stopId": "ca-qc-RTC_1-1404",
+        "importance": 0.00003725437636603601,
+        "lat": 46.79633300000001,
+        "lon": -71.25109,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:59:00Z",
+        "departure": "2026-11-11T21:59:00Z",
+        "scheduledArrival": "2026-11-11T21:59:00Z",
+        "scheduledDeparture": "2026-11-11T21:59:00Z",
+        "stopCode": "1404",
+        "description": "Sainte-Foy / E.-Gagnon",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "M.-Bourgeoys",
+        "stopId": "ca-qc-RTC_1-1406",
+        "importance": 0.00003725437636603601,
+        "lat": 46.79386,
+        "lon": -71.25636,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:03:00Z",
+        "departure": "2026-11-11T22:03:00Z",
+        "scheduledArrival": "2026-11-11T22:03:00Z",
+        "scheduledDeparture": "2026-11-11T22:03:00Z",
+        "stopCode": "1406",
+        "description": "Sainte-Foy / M.-Bourgeoys",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Marois",
+        "stopId": "ca-qc-RTC_1-1409",
+        "importance": 0.00008252342377090827,
+        "lat": 46.79182,
+        "lon": -71.26160400000002,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:05:00Z",
+        "departure": "2026-11-11T22:05:00Z",
+        "scheduledArrival": "2026-11-11T22:05:00Z",
+        "scheduledDeparture": "2026-11-11T22:05:00Z",
+        "stopCode": "1409",
+        "description": "Sainte-Foy / Marois",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Cégep Garneau",
+        "stopId": "ca-qc-RTC_1-1410",
+        "importance": 0.00006121573824202642,
+        "lat": 46.790634000000004,
+        "lon": -71.265175,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:07:00Z",
+        "departure": "2026-11-11T22:07:00Z",
+        "scheduledArrival": "2026-11-11T22:07:00Z",
+        "scheduledDeparture": "2026-11-11T22:07:00Z",
+        "stopCode": "1410",
+        "description": "Sainte-Foy / É.-Côté",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Myrand",
+        "stopId": "ca-qc-RTC_1-1412",
+        "importance": 0.00008139525016304106,
+        "lat": 46.7886,
+        "lon": -71.2718,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:10:00Z",
+        "departure": "2026-11-11T22:10:00Z",
+        "scheduledArrival": "2026-11-11T22:10:00Z",
+        "scheduledDeparture": "2026-11-11T22:10:00Z",
+        "stopCode": "1412",
+        "description": "Sainte-Foy / de Belmont",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       }
+      ],
+      "legGeometry": {
+       "points": "ybfhxAljryfCd@?cFxFbE~MjRjp@vCrI~GrSj]vbAbAxB~g@p_BfXfw@dA~Dle@nuAr@bBf^jiAjA~CfUhq@rDhMpCrJdT~p@zAtCtEtHlEvGh\\bj@z@nAtErDtUz]db@jk@vLvRvf@v~@r@xAvYpm@jKzTvMzZbCvFjCjIv`@nfAzErNnFfObGnPnUzr@|Ubt@xD~MhFzOdErNrRpm@n[xbANf@rTzr@nJv[rTnx@p^vcA|N~a@nKnZhLn`@hBjKvPvp@`Ptk@pBbGzUfw@~c@txA`W~z@nCnK`S|q@fXpaAzZr`AfTvj@bQnh@jAvCba@nhArXzq@bCnFjVzm@zFbQxMp^xHdU~GfTnGzT~EhN~Z`_AvUju@v\\zaAfP~f@rCrI~CrIrDzOrF~WrGb\\fEvUbB~H`AbG`Rf|@nC~MbLni@pRvy@pGv[f@jClIb`@`SbcA`Gb`@tOx}@nIhg@vDbQlJ`a@|N`f@jUrz@fEbQpGfUbVvrAhHve@jLrq@rVbrA|Nby@_D^",
+       "precision": 6,
+       "length": 114
+      },
+      "bikesAllowed": false,
+      "wheelchairAccessible": "ACCESSIBLE",
+      "reservation": "NONE",
+      "alternatives": []
+     },
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "Univ. Laval/1413",
+       "stopId": "ca-qc-RTC_1-1413",
+       "importance": 0.00004020096821477637,
+       "lat": 46.787117,
+       "lon": -71.277176,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:13:00Z",
+       "departure": "2026-11-11T22:13:00Z",
+       "scheduledArrival": "2026-11-11T22:13:00Z",
+       "scheduledDeparture": "2026-11-11T22:13:00Z",
+       "stopCode": "1413",
+       "description": "Sainte-Foy / du Séminaire",
+       "vertexType": "TRANSIT",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "END",
+       "lat": 46.787,
+       "lon": -71.277,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:14:00Z",
+       "scheduledArrival": "2026-11-11T22:14:00Z",
+       "vertexType": "NORMAL"
+      },
+      "duration": 60,
+      "startTime": "2026-11-11T22:13:00Z",
+      "endTime": "2026-11-11T22:14:00Z",
+      "scheduledStartTime": "2026-11-11T22:13:00Z",
+      "scheduledEndTime": "2026-11-11T22:14:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 7,
+      "legGeometry": {
+       "points": "o|sfxApcl}fCG]??i@eD",
+       "precision": 6,
+       "length": 4
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 1,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 11783780216,
+        "polyline": {
+         "points": "o|sfxApcl}fCG]",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 6,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 11783780216,
+        "polyline": {
+         "points": "w|sfxArbl}fCi@eD",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "duration": 2160,
+    "startTime": "2026-11-11T21:47:00Z",
+    "endTime": "2026-11-11T22:23:00Z",
+    "transfers": 0,
+    "id": "CkohDi2yne9nR0ApEoPAyqHNUcAyEGNhLXFjLVJUQ18xLTI0NDE5o7CLogdoR0BB5j+k377NUcBI1MTT1wZQxMbT1wZaBFdBTEtgAQqSAQoDODA3EjAyMDI2MTExMV8xNjo1MV9jYS1xYy1SVENfMTExOTI5MzMxXzIwMjYxMTExZGFpbHkaEGNhLXFjLVJUQ18xLTI0NDEho7CLogdoR0Ap5j+k377NUcAyEGNhLXFjLVJUQ18xLTE0MTM5FZD2P8BkR0BBHM9nQL3RUcBIxMbT1wZQiNXT1wZaA0JVU2ABCkoaEGNhLXFjLVJUQ18xLTE0MTMhFZD2P8BkR0ApHM9nQL3RUcA52/l+arxkR0BBfT81XrrRUcBIiNXT1wZQxNXT1wZaBFdBTEtgAQ==",
+    "legs": [
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "START",
+       "lat": 46.812,
+       "lon": -71.213,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:47:00Z",
+       "scheduledDeparture": "2026-11-11T21:47:00Z",
+       "vertexType": "NORMAL"
+      },
+      "to": {
+       "name": "T. D'Youville",
+       "stopId": "ca-qc-RTC_1-2441",
+       "importance": 0.00016701898130122572,
+       "lat": 46.812733,
+       "lon": -71.214775,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T21:51:00Z",
+       "scheduledArrival": "2026-11-11T21:51:00Z",
+       "stopCode": "2441",
+       "description": "D'Youville / D'Aiguillon",
+       "vertexType": "TRANSIT",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 240,
+      "startTime": "2026-11-11T21:47:00Z",
+      "endTime": "2026-11-11T21:51:00Z",
+      "scheduledStartTime": "2026-11-11T21:47:00Z",
+      "scheduledEndTime": "2026-11-11T21:51:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 233,
+      "legGeometry": {
+       "points": "swdhxAhrnyfCsKrF{AnAw@`A??e@xAYvAKz@@fA?bAPfAzT`l@??_B`Fs@xCWzAIzACzADbB??oCjC??CBcDbD??kBlB??gCtC??cBzA??yI}A??oGvG",
+       "precision": 6,
+       "length": 34
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 34,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 3956598725,
+        "polyline": {
+         "points": "swdhxAhrnyfCsKrF{AnAw@`A",
+         "precision": 6,
+         "length": 4
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 86,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1576254266,
+        "fromOsmNode": 3956598725,
+        "toOsmNode": 3956598718,
+        "polyline": {
+         "points": "{hehxAn~nyfCe@xAYvAKz@@fA?bAPfAzT`l@",
+         "precision": 6,
+         "length": 8
+        },
+        "streetName": "Place d'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 31,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 392440879,
+        "fromOsmNode": 3956598718,
+        "toOsmNode": 3637858068,
+        "polyline": {
+         "points": "wtdhxArypyfC_B`Fs@xCWzAIzACzADbB",
+         "precision": 6,
+         "length": 7
+        },
+        "streetName": "Rue Saint-Joachim",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 10,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 3637858068,
+        "toOsmNode": 6482432782,
+        "polyline": {
+         "points": "kzdhxAfqqyfCoCjC",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 11,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 6482432782,
+        "toOsmNode": 12544228299,
+        "polyline": {
+         "points": "{~dhxAruqyfCCBcDbD",
+         "precision": 6,
+         "length": 3
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 12544228299,
+        "toOsmNode": 2559199057,
+        "polyline": {
+         "points": "cdehxAzzqyfCkBlB",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 9,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 2559199057,
+        "toOsmNode": 6482433004,
+        "polyline": {
+         "points": "ogehxAh~qyfCgCtC",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 1110656738,
+        "fromOsmNode": 6482433004,
+        "toOsmNode": 3637858066,
+        "polyline": {
+         "points": "wkehxA~bryfCcBzA",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "Rue D'Youville",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 20,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 249295342,
+        "fromOsmNode": 3637858066,
+        "toOsmNode": 2559199135,
+        "polyline": {
+         "points": "{nehxAzeryfCyI}A",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 18,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 2559199135,
+        "polyline": {
+         "points": "uyehxA|bryfCoGvG",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     },
+     {
+      "mode": "BUS",
+      "from": {
+       "name": "T. D'Youville",
+       "stopId": "ca-qc-RTC_1-2441",
+       "importance": 0.00016701898130122572,
+       "lat": 46.812733,
+       "lon": -71.214775,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:51:00Z",
+       "scheduledDeparture": "2026-11-11T21:51:00Z",
+       "stopCode": "2441",
+       "description": "D'Youville / D'Aiguillon",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "Univ. Laval/1413",
+       "stopId": "ca-qc-RTC_1-1413",
+       "importance": 0.00004020096821477637,
+       "lat": 46.787117,
+       "lon": -71.277176,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:22:00Z",
+       "scheduledArrival": "2026-11-11T22:22:00Z",
+       "stopCode": "1413",
+       "description": "Sainte-Foy / du Séminaire",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 1860,
+      "startTime": "2026-11-11T21:51:00Z",
+      "endTime": "2026-11-11T22:22:00Z",
+      "scheduledStartTime": "2026-11-11T21:51:00Z",
+      "scheduledEndTime": "2026-11-11T22:22:00Z",
+      "realTime": false,
+      "scheduled": true,
+      "interlineWithPreviousLeg": false,
+      "headsign": "Pointe-de-Sainte-Foy (Ouest)",
+      "tripFrom": {
+       "name": "T. D'Youville",
+       "stopId": "ca-qc-RTC_1-2441",
+       "importance": 0.00016701898130122572,
+       "lat": 46.812733,
+       "lon": -71.214775,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-11T21:51:00Z",
+       "scheduledDeparture": "2026-11-11T21:51:00Z",
+       "stopCode": "2441",
+       "description": "D'Youville / D'Aiguillon",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "tripTo": {
+       "name": "T. de Marly",
+       "stopId": "ca-qc-RTC_1-2009",
+       "importance": 0.0000617508267168887,
+       "lat": 46.751835,
+       "lon": -71.33086999999999,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:52:00Z",
+       "scheduledArrival": "2026-11-11T22:52:00Z",
+       "stopCode": "2009",
+       "description": "de Marly / au 3800",
+       "vertexType": "TRANSIT",
+       "pickupType": "NOT_ALLOWED",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "routeId": "ca-qc-RTC_1-807",
+      "routeUrl": "https://www.rtcquebec.ca/Default.aspx?tabid=95&noParcours=807",
+      "directionId": "1",
+      "routeColor": "97bf0d",
+      "routeTextColor": "000000",
+      "routeType": 3,
+      "agencyName": "Réseau de transport de la capitale (RTC)",
+      "agencyUrl": "https://www.rtcquebec.ca",
+      "agencyFareUrl": "",
+      "agencyId": "RTC",
+      "tripId": "20261111_16:51_ca-qc-RTC_111929331_20261111daily",
+      "routeShortName": "807",
+      "routeLongName": "",
+      "tripShortName": "Pointe-de-Ste-Foy",
+      "displayName": "807",
+      "cancelled": false,
+      "source": "ca-qc_RTC.gtfs.zip/stop_times.txt:1504871:1504905",
+      "intermediateStops": [
+       {
+        "name": "H.-Mercier",
+        "stopId": "ca-qc-RTC_1-1386",
+        "importance": 0.00004086511398782022,
+        "lat": 46.812163999999996,
+        "lon": -71.216576,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:52:00Z",
+        "departure": "2026-11-11T21:52:00Z",
+        "scheduledArrival": "2026-11-11T21:52:00Z",
+        "scheduledDeparture": "2026-11-11T21:52:00Z",
+        "stopCode": "1386",
+        "description": "D'Aiguillon / H.-Mercier",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Ste-Marie",
+        "stopId": "ca-qc-RTC_1-1388",
+        "importance": 0.000023220361981657334,
+        "lat": 46.810658,
+        "lon": -71.22,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:53:00Z",
+        "departure": "2026-11-11T21:53:00Z",
+        "scheduledArrival": "2026-11-11T21:53:00Z",
+        "scheduledDeparture": "2026-11-11T21:53:00Z",
+        "stopCode": "1388",
+        "description": "D'Aiguillon / Sainte-Marie",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Deligny",
+        "stopId": "ca-qc-RTC_1-1390",
+        "importance": 0.000023220361981657334,
+        "lat": 46.809452,
+        "lon": -71.22266,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:54:00Z",
+        "departure": "2026-11-11T21:54:00Z",
+        "scheduledArrival": "2026-11-11T21:54:00Z",
+        "scheduledDeparture": "2026-11-11T21:54:00Z",
+        "stopCode": "1390",
+        "description": "D'Aiguillon / Deligny",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Turnbull",
+        "stopId": "ca-qc-RTC_1-1391",
+        "importance": 0.00004661618731915951,
+        "lat": 46.807857999999996,
+        "lon": -71.2259,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:56:00Z",
+        "departure": "2026-11-11T21:56:00Z",
+        "scheduledArrival": "2026-11-11T21:56:00Z",
+        "scheduledDeparture": "2026-11-11T21:56:00Z",
+        "stopCode": "1391",
+        "description": "Saint-Jean / Turnbull",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Cartier",
+        "stopId": "ca-qc-RTC_1-1393",
+        "importance": 0.00007480747444787994,
+        "lat": 46.806079999999994,
+        "lon": -71.22842,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:57:00Z",
+        "departure": "2026-11-11T21:57:00Z",
+        "scheduledArrival": "2026-11-11T21:57:00Z",
+        "scheduledDeparture": "2026-11-11T21:57:00Z",
+        "stopCode": "1393",
+        "description": "Sainte-Foy / Cartier",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "De Bourlamaque",
+        "stopId": "ca-qc-RTC_1-1394",
+        "importance": 0.00003805918095167726,
+        "lat": 46.805004,
+        "lon": -71.2303,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:58:00Z",
+        "departure": "2026-11-11T21:58:00Z",
+        "scheduledArrival": "2026-11-11T21:58:00Z",
+        "scheduledDeparture": "2026-11-11T21:58:00Z",
+        "stopCode": "1394",
+        "description": "Sainte-Foy / De Bourlamaque",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "de l'Alverne",
+        "stopId": "ca-qc-RTC_1-1395",
+        "importance": 0.00001902959047583863,
+        "lat": 46.804012,
+        "lon": -71.2324,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T21:59:00Z",
+        "departure": "2026-11-11T21:59:00Z",
+        "scheduledArrival": "2026-11-11T21:59:00Z",
+        "scheduledDeparture": "2026-11-11T21:59:00Z",
+        "stopCode": "1395",
+        "description": "Sainte-Foy / de l'Alverne",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Brown",
+        "stopId": "ca-qc-RTC_1-1397",
+        "importance": 0.00006453645619330928,
+        "lat": 46.802265,
+        "lon": -71.23653,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:01:00Z",
+        "departure": "2026-11-11T22:01:00Z",
+        "scheduledArrival": "2026-11-11T22:01:00Z",
+        "scheduledDeparture": "2026-11-11T22:01:00Z",
+        "stopCode": "1397",
+        "description": "Sainte-Foy / Brown",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "H. St-Sacrement",
+        "stopId": "ca-qc-RTC_1-1400",
+        "importance": 0.000021945730622974224,
+        "lat": 46.79957600000001,
+        "lon": -71.24322500000002,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:04:00Z",
+        "departure": "2026-11-11T22:04:00Z",
+        "scheduledArrival": "2026-11-11T22:04:00Z",
+        "scheduledDeparture": "2026-11-11T22:04:00Z",
+        "stopCode": "1400",
+        "description": "Sainte-Foy / C.-Lavallée",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Joffre",
+        "stopId": "ca-qc-RTC_1-1401",
+        "importance": 0.00003725437636603601,
+        "lat": 46.798187000000006,
+        "lon": -71.24660000000002,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:06:00Z",
+        "departure": "2026-11-11T22:06:00Z",
+        "scheduledArrival": "2026-11-11T22:06:00Z",
+        "scheduledDeparture": "2026-11-11T22:06:00Z",
+        "stopCode": "1401",
+        "description": "Sainte-Foy / Joffre",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "H. Jeffery Hale",
+        "stopId": "ca-qc-RTC_1-1404",
+        "importance": 0.00003725437636603601,
+        "lat": 46.79633300000001,
+        "lon": -71.25109,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:08:00Z",
+        "departure": "2026-11-11T22:08:00Z",
+        "scheduledArrival": "2026-11-11T22:08:00Z",
+        "scheduledDeparture": "2026-11-11T22:08:00Z",
+        "stopCode": "1404",
+        "description": "Sainte-Foy / E.-Gagnon",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "M.-Bourgeoys",
+        "stopId": "ca-qc-RTC_1-1406",
+        "importance": 0.00003725437636603601,
+        "lat": 46.79386,
+        "lon": -71.25636,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:12:00Z",
+        "departure": "2026-11-11T22:12:00Z",
+        "scheduledArrival": "2026-11-11T22:12:00Z",
+        "scheduledDeparture": "2026-11-11T22:12:00Z",
+        "stopCode": "1406",
+        "description": "Sainte-Foy / M.-Bourgeoys",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Marois",
+        "stopId": "ca-qc-RTC_1-1409",
+        "importance": 0.00008252342377090827,
+        "lat": 46.79182,
+        "lon": -71.26160400000002,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:14:00Z",
+        "departure": "2026-11-11T22:14:00Z",
+        "scheduledArrival": "2026-11-11T22:14:00Z",
+        "scheduledDeparture": "2026-11-11T22:14:00Z",
+        "stopCode": "1409",
+        "description": "Sainte-Foy / Marois",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Cégep Garneau",
+        "stopId": "ca-qc-RTC_1-1410",
+        "importance": 0.00006121573824202642,
+        "lat": 46.790634000000004,
+        "lon": -71.265175,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:16:00Z",
+        "departure": "2026-11-11T22:16:00Z",
+        "scheduledArrival": "2026-11-11T22:16:00Z",
+        "scheduledDeparture": "2026-11-11T22:16:00Z",
+        "stopCode": "1410",
+        "description": "Sainte-Foy / É.-Côté",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "Myrand",
+        "stopId": "ca-qc-RTC_1-1412",
+        "importance": 0.00008139525016304106,
+        "lat": 46.7886,
+        "lon": -71.2718,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-11T22:19:00Z",
+        "departure": "2026-11-11T22:19:00Z",
+        "scheduledArrival": "2026-11-11T22:19:00Z",
+        "scheduledDeparture": "2026-11-11T22:19:00Z",
+        "stopCode": "1412",
+        "description": "Sainte-Foy / de Belmont",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       }
+      ],
+      "legGeometry": {
+       "points": "ybfhxAljryfCd@?cFxFbE~MjRjp@vCrI~GrSj]vbAbAxB~g@p_BfXfw@dA~Dle@nuAr@bBf^jiAjA~CfUhq@rDhMpCrJdT~p@zAtCtEtHlEvGh\\bj@z@nAtErDtUz]db@jk@vLvRvf@v~@r@xAvYpm@jKzTvMzZbCvFjCjIv`@nfAzErNnFfObGnPnUzr@|Ubt@xD~MhFzOdErNrRpm@n[xbANf@rTzr@nJv[rTnx@p^vcA|N~a@nKnZhLn`@hBjKvPvp@`Ptk@pBbGzUfw@~c@txA`W~z@nCnK`S|q@fXpaAzZr`AfTvj@bQnh@jAvCba@nhArXzq@bCnFjVzm@zFbQxMp^xHdU~GfTnGzT~EhN~Z`_AvUju@v\\zaAfP~f@rCrI~CrIrDzOrF~WrGb\\fEvUbB~H`AbG`Rf|@nC~MbLni@pRvy@pGv[f@jClIb`@`SbcA`Gb`@tOx}@nIhg@vDbQlJ`a@|N`f@jUrz@fEbQpGfUbVvrAhHve@jLrq@rVbrA|Nby@_D^",
+       "precision": 6,
+       "length": 114
+      },
+      "bikesAllowed": false,
+      "wheelchairAccessible": "ACCESSIBLE",
+      "reservation": "NONE",
+      "alternatives": []
+     },
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "Univ. Laval/1413",
+       "stopId": "ca-qc-RTC_1-1413",
+       "importance": 0.00004020096821477637,
+       "lat": 46.787117,
+       "lon": -71.277176,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:22:00Z",
+       "departure": "2026-11-11T22:22:00Z",
+       "scheduledArrival": "2026-11-11T22:22:00Z",
+       "scheduledDeparture": "2026-11-11T22:22:00Z",
+       "stopCode": "1413",
+       "description": "Sainte-Foy / du Séminaire",
+       "vertexType": "TRANSIT",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "END",
+       "lat": 46.787,
+       "lon": -71.277,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-11T22:23:00Z",
+       "scheduledArrival": "2026-11-11T22:23:00Z",
+       "vertexType": "NORMAL"
+      },
+      "duration": 60,
+      "startTime": "2026-11-11T22:22:00Z",
+      "endTime": "2026-11-11T22:23:00Z",
+      "scheduledStartTime": "2026-11-11T22:22:00Z",
+      "scheduledEndTime": "2026-11-11T22:23:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 7,
+      "legGeometry": {
+       "points": "o|sfxApcl}fCG]??i@eD",
+       "precision": 6,
+       "length": 4
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 1,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 11783780216,
+        "polyline": {
+         "points": "o|sfxApcl}fCG]",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 6,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 11783780216,
+        "polyline": {
+         "points": "w|sfxArbl}fCi@eD",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "previousPageCursor": "EARLIER|1794431940",
+  "nextPageCursor": "LATER|1794433680"
+ }
+}

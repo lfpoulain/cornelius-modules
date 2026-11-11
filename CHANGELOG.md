@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-11 : module Transports RTC
+
+**Ajouté**
+
+- Module **Transports RTC** (`rtc`, 1.1.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : le prochain autobus du RTC (Québec) vers une destination dite à la voix ou favorite, la durée du trajet, les correspondances et le bus suivant, d’après Transitous (horaires GTFS officiels, sans jeton). Heure réelle des autobus en route par les données ouvertes de l’appli Nomade du RTC, lues à la demande ; repli « selon l’horaire » si elles ne répondent pas. Départ par adresse ou par coordonnées (celles-ci priment), arrondi à environ 100 m ; itinéraire qui arrive le plus tôt ; adresse substituée par le géocodeur refusée plutôt qu’un faux trajet.
+
 ### 2026-11-08 : météo sans jeton
 
 **Ajouté**
