@@ -320,3 +320,17 @@ test('réseaux et lieux dits à la voix', () => {
   assert.equal(lieuDit('Jean-Talon et Saint-Denis'), 'à l’arrêt Jean-Talon et Saint-Denis');
   assert.equal(arretDit('Gare Parc'), 'gare Parc');
 });
+
+test('l’apostrophe typographique est changée en apostrophe droite avant le géocodage', async (t) => {
+  const f = createTestModule(t, addon, {
+    config: { depart: 'le départ', adresseDepart: 'Gare de l’Est', favoris: [] },
+    routes: () => ({ status: 404 }),
+  });
+  await f.invoke('trajet', { query: 'à l’Université' });
+  const textes = f.calls
+    .filter((call) => call.url.includes('/v1/geocode'))
+    .map((call) => new URL(call.url).searchParams.get('text') ?? '');
+  assert.ok(textes.length > 0);
+  for (const texte of textes) assert.doesNotMatch(texte, /[’‘]/u, texte);
+  assert.equal(textes[0], "Gare de l'Est");
+});
