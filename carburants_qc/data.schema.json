@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CarburantsQcData v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["rayonKm", "zone", "meilleurs", "favorite", "releve"],
+  "$defs": {
+    "carburant": {
+      "enum": ["Régulier", "Super", "Diesel"]
+    },
+    "cents": {
+      "type": "number",
+      "minimum": 50,
+      "maximum": 1000
+    },
+    "station": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["nom", "adresse", "distanceKm", "prix"],
+      "properties": {
+        "nom": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "adresse": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "distanceKm": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 2000
+        },
+        "prix": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["carburant", "cents"],
+            "properties": {
+              "carburant": {
+                "$ref": "#/$defs/carburant"
+              },
+              "cents": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/cents"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "rayonKm": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 50
+    },
+    "zone": {
+      "type": "boolean"
+    },
+    "meilleurs": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["carburant", "cents", "station", "favorite"],
+        "properties": {
+          "carburant": {
+            "$ref": "#/$defs/carburant"
+          },
+          "cents": {
+            "$ref": "#/$defs/cents"
+          },
+          "station": {
+            "$ref": "#/$defs/station"
+          },
+          "favorite": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "favorite": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/station"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "releve": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    }
+  }
+}

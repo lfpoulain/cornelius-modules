@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-12 : module Prix des carburants au Québec
+
+**Ajouté**
+
+- Module **Prix des carburants au Québec** (`carburants_qc`, 1.0.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : les prix d’une station préférée et le meilleur prix de chaque carburant autour d’un code postal, avec le nom et l’adresse de la station (la préférée si elle est au même prix), d’après les prix déclarés à la Régie de l’énergie (Régie essence Québec, sans jeton). Un ou plusieurs carburants québécois au choix (ordinaire, super, diesel), prix dits en dollars ; « et le diesel ? » se demande à la voix. Le code postal est situé d’après les stations qui le partagent, sans géocodeur : il ne quitte pas Cornelius ; coordonnées au choix, qui priment. Bannières ou stations exclues au choix (« Costco »).
+
 ### 2026-11-08 : météo sans jeton
 
 **Ajouté**
