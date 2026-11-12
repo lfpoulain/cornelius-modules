@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FeriesCaConfig v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["province"],
+  "properties": {
+    "province": {
+      "title": "Province ou territoire",
+      "description": "Les jours fériés de cette province ou de ce territoire.",
+      "type": "string",
+      "enum": [
+        "Alberta",
+        "Colombie-Britannique",
+        "Île-du-Prince-Édouard",
+        "Manitoba",
+        "Nouveau-Brunswick",
+        "Nouvelle-Écosse",
+        "Nunavut",
+        "Ontario",
+        "Québec",
+        "Saskatchewan",
+        "Terre-Neuve-et-Labrador",
+        "Territoires du Nord-Ouest",
+        "Yukon"
+      ],
+      "examples": ["Québec"]
+    },
+    "employeurFederal": {
+      "title": "Mon employeur suit le calendrier fédéral",
+      "description": "À cocher pour un employeur sous réglementation fédérale (banques, transport aérien, ferroviaire et interprovincial, télécommunications, fonction publique fédérale) : les jours fériés fédéraux remplacent ceux de la province.",
+      "type": "boolean"
+    }
+  }
+}

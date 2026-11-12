@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-12 : module Jours fériés au Canada
+
+**Ajouté**
+
+- Module **Jours fériés au Canada** (`feries_ca`, 1.0.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : le prochain jour férié et les suivants de la province ou du territoire choisi, ou du calendrier fédéral si l’employeur le suit (case à cocher), d’après canada-holidays.ca (sans jeton). Date observée quand le jour férié est reporté ; au Québec, Vendredi saint ou lundi de Pâques au choix de l’employeur ; liste de l’année en cours et de la suivante dans les données de la réponse ; compte à rebours sur le miroir, recalculé à minuit.
+
 ### 2026-11-08 : météo sans jeton
 
 **Ajouté**
