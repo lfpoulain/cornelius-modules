@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StsData v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "vers",
+    "destination",
+    "vehicule",
+    "ligne",
+    "direction",
+    "arret",
+    "marcheMin",
+    "dureeMin",
+    "correspondances",
+    "departs"
+  ],
+  "properties": {
+    "vers": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "destination": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "vehicule": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "ligne": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "direction": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "arret": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "marcheMin": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 240
+    },
+    "dureeMin": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 600
+    },
+    "correspondances": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 80
+      }
+    },
+    "departs": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["heure", "reel"],
+        "properties": {
+          "heure": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "reel": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}
