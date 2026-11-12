@@ -1,6 +1,6 @@
 # Module Vélos en libre-service
 
-Le module Vélos en libre-service dit combien de vélos et de places libres compte une station, dans la plupart des réseaux de France : Vélib’, V’Lille, Vélo’v, LE vélo STAR, Le Vélo TBM, Naolib… Cette fiche s’adresse à la personne qui règle le miroir et à celle qui lit le code du module (identifiant `velos`).
+Le module Vélos en libre-service dit combien de vélos et de places libres compte une station, dans la plupart des réseaux de France et du Canada : Vélib’, V’Lille, Vélo’v, LE vélo STAR, Le Vélo TBM, Naolib, BIXI, àVélo… Cette fiche s’adresse à la personne qui règle le miroir et à celle qui lit le code du module (identifiant `velos`).
 
 ## Ce que fait le module
 
@@ -19,7 +19,7 @@ Dans **Modules → Vélos en libre-service → Ajouter une source** :
 
 | Réglage | Effet | Par défaut |
 | --- | --- | --- |
-| Réseau | Recherche par ville ou par nom (« Rennes », « Vélo’v », « Bordeaux ») parmi les réseaux de France, Belgique, Suisse, Luxembourg et Monaco | Vélib’ Métropole |
+| Réseau | Recherche par ville ou par nom (« Rennes », « Vélo’v », « Bordeaux ») parmi les réseaux de France, Belgique, Suisse, Luxembourg, Monaco et du Canada (« Québec » pour àVélo, « BIXI », « Saguenay ») | Vélib’ Métropole |
 | Station | Recherche par nom de station, sans accents, une fois le réseau choisi. Chaque résultat montre l’adresse et le nombre de places. | Benjamin Godard - Victor Hugo |
 
 Une source par station : « Vélos de la maison », « Vélos du bureau »…
