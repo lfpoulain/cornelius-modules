@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-12 : vélos en libre-service au Canada
+
+**Modifié**
+
+- **Vélos en libre-service** (1.2.0) : les réseaux du Canada sont proposés dans la recherche, avec ceux de France, de Belgique, de Suisse, du Luxembourg et de Monaco : àVélo (Québec), BIXI (Montréal), Accès Vélo (Saguenay), Bike Share Toronto, Mobi (Vancouver)… Les trottinettes et l’autopartage restent écartés. Par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)).
+
 ### 2026-11-08 : météo sans jeton
 
 **Ajouté**
