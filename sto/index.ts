@@ -223,7 +223,13 @@ async function geocode(context: Context, adresse: string, near: string) {
     typeof r.lon === 'number' &&
     Math.hypot(r.lat - lat0, (r.lon - lon0) * Math.cos((lat0 * Math.PI) / 180)) * 111 < 80;
   for (const text of adresse.includes(',') ? [adresse] : [adresse, `${adresse}, ${ville}`]) {
-    const params = new URLSearchParams({ text, language: 'fr', place: near });
+    // Le géocodeur ne reconnaît pas l'apostrophe typographique : « Carrefour de l’Estrie »
+    // donnait des « Carrefour » en France, « Carrefour de l'Estrie » le bon lieu.
+    const params = new URLSearchParams({
+      text: text.replace(/[’‘]/gu, "'"),
+      language: 'fr',
+      place: near,
+    });
     const results = await getJson(context, `${transitous}/v1/geocode?${params}`, {
       cacheMs: 10 * 60_000,
     });

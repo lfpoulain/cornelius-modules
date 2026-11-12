@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { createTestModule } from '#cornelius/testing';
 import addon, { arretDit, destinationFor, lieuDit, reseauDit, vehiculeDit } from './index.js';
-// Relevés réels du 2026-11-12 à 14 h 23 UTC (9 h 23 à Gatineau), lieux publics seulement :
+// Relevés réels du 2026-11-12 à 14 h 23 UTC (Gappe) et 14 h 34 UTC (Promenades), lieux publics seulement :
 // géocodage, itinéraire et passages de Transitous, dont l'heure réelle de la STO.
 import transitousGappe from './fixtures/transitous-gappe.json' with { type: 'json' };
 import transitousPromenades from './fixtures/transitous-promenades.json' with { type: 'json' };
@@ -45,15 +45,15 @@ test('Rapibus à l’heure réelle de la STO, depuis la station de la Gappe', as
 test('heure réelle puis horaire prévu, depuis les Promenades', async (t) => {
   const f = createTestModule(t, addon, {
     config: source('Promenades Gatineau'),
-    at,
+    at: '2026-11-12T14:34:00Z',
     routes: routes(transitousPromenades),
   });
   const result = await f.invoke('trajet', { query: 'au Musée canadien de l’histoire' });
   assert.deepEqual(f.contract(result.outcome), []);
   assert.equal(
     result.tool.summary,
-    'Pour te rendre au Musée canadien de l’histoire, le prochain départ est l’autobus 67 dans 9 minutes, à l’arrêt Les Promenades, à 2 minutes à pied. ' +
-      'La durée du trajet est de 23 minutes. Le suivant est prévu dans 29 minutes selon l’horaire.',
+    'Pour te rendre au Musée canadien de l’histoire, le prochain départ est l’autobus 67 dans 18 minutes, à l’arrêt Les Promenades, à 2 minutes à pied. ' +
+      'La durée du trajet est de 22 minutes. Le suivant est prévu dans 38 minutes selon l’horaire.',
   );
 });
 
@@ -89,4 +89,18 @@ test('réseaux, arrêts et destinations dits à la voix', () => {
       adresse: 'Musée canadien de l’histoire, Gatineau',
     },
   );
+});
+
+test('l’apostrophe typographique est changée en apostrophe droite avant le géocodage', async (t) => {
+  const f = createTestModule(t, addon, {
+    config: { depart: 'le départ', adresseDepart: 'Gare de l’Est', favoris: [] },
+    routes: () => ({ status: 404 }),
+  });
+  await f.invoke('trajet', { query: 'à l’Université' });
+  const textes = f.calls
+    .filter((call) => call.url.includes('/v1/geocode'))
+    .map((call) => new URL(call.url).searchParams.get('text') ?? '');
+  assert.ok(textes.length > 0);
+  for (const texte of textes) assert.doesNotMatch(texte, /[’‘]/u, texte);
+  assert.equal(textes[0], "Gare de l'Est");
 });

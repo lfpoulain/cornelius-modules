@@ -609,7 +609,7 @@
    "importance": 0.000003551281452018884
   }
  ],
- "geocode?text=Mus%C3%A9e+canadien+de+l%E2%80%99histoire&language=fr&place=45.474%2C-75.697": [
+ "geocode?text=Mus%C3%A9e+canadien+de+l%27histoire&language=fr&place=45.474%2C-75.697": [
   {
    "type": "PLACE",
    "category": "museum_16",
@@ -628,88 +628,7 @@
     ],
     [
      19,
-     12
-    ]
-   ],
-   "name": "Musée de l’Histoire de France",
-   "id": "node/1806106282",
-   "lat": 48.8043021,
-   "lon": 2.1208461,
-   "country": "FR",
-   "zip": "78000",
-   "tz": "Europe/Paris",
-   "areas": [
-    {
-     "name": "France",
-     "adminLevel": 2,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "France métropolitaine",
-     "adminLevel": 3,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Île-de-France",
-     "adminLevel": 4,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Yvelines",
-     "adminLevel": 6,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Versailles",
-     "adminLevel": 7,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Versailles",
-     "adminLevel": 8,
-     "matched": false,
-     "unique": true,
-     "default": true
-    },
-    {
-     "name": "Notre-Dame",
-     "adminLevel": 10,
-     "matched": false,
-     "unique": false,
-     "default": false
-    }
-   ],
-   "score": -18
-  },
-  {
-   "type": "PLACE",
-   "category": "museum_16",
-   "tokens": [
-    [
-     0,
-     6
-    ],
-    [
-     7,
-     8
-    ],
-    [
-     16,
-     2
-    ],
-    [
-     19,
-     12
+     10
     ]
    ],
    "name": "Musée canadien de l'histoire",
@@ -755,7 +674,7 @@
      "default": false
     }
    ],
-   "score": -16.75
+   "score": -36.75
   },
   {
    "type": "PLACE",
@@ -775,7 +694,7 @@
     ],
     [
      19,
-     12
+     10
     ]
    ],
    "name": "Musée canadien de l'histoire",
@@ -821,6 +740,367 @@
      "default": false
     }
    ],
+   "score": -36.75
+  },
+  {
+   "type": "PLACE",
+   "category": "none",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     16,
+     2
+    ],
+    [
+     19,
+     10
+    ]
+   ],
+   "name": "Musée Josiah Henson de l'histoire des Afro-Canadiens",
+   "id": "way/658916316",
+   "lat": 42.5837992,
+   "lon": -82.1966547,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Ontario",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Sud-Ouest de l'Ontario",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Chatham-Kent",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": true,
+     "default": true
+    }
+   ],
+   "score": -21.75
+  },
+  {
+   "type": "PLACE",
+   "category": "museum_16",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     16,
+     2
+    ],
+    [
+     19,
+     10
+    ]
+   ],
+   "name": "Musée de l'Histoire du Fer",
+   "id": "way/99542401",
+   "lat": 48.666478,
+   "lon": 6.20842,
+   "country": "FR",
+   "zip": "54140",
+   "tz": "Europe/Paris",
+   "areas": [
+    {
+     "name": "France",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "France métropolitaine",
+     "adminLevel": 3,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Grand Est",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Meurthe-et-Moselle",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Nancy",
+     "adminLevel": 7,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Jarville-la-Malgrange",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    }
+   ],
+   "score": -17.25
+  },
+  {
+   "type": "PLACE",
+   "category": "museum_16",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     16,
+     2
+    ],
+    [
+     19,
+     10
+    ]
+   ],
+   "name": "Musée de l'Histoire Vivante",
+   "id": "node/4247776290",
+   "lat": 48.8660128,
+   "lon": 2.4718198,
+   "country": "FR",
+   "zip": "93100",
+   "tz": "Europe/Paris",
+   "areas": [
+    {
+     "name": "France",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "France métropolitaine",
+     "adminLevel": 3,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Île-de-France",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Seine-Saint-Denis",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Bobigny",
+     "adminLevel": 7,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montreuil",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Montreau - Le Morillon",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -17
+  },
+  {
+   "type": "PLACE",
+   "category": "museum_16",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     16,
+     2
+    ],
+    [
+     19,
+     10
+    ]
+   ],
+   "name": "Musée de l'histoire tissée",
+   "id": "node/7223529988",
+   "lat": 31.371332,
+   "lon": -7.7983135,
+   "country": "MA",
+   "tz": "Africa/Casablanca",
+   "areas": [
+    {
+     "name": "Maroc",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Marrakech-Safi",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Province d'Al Haouz",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Cercle de Tahannaout",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "caïdat d'Ourika",
+     "adminLevel": 7,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Ourika",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    }
+   ],
+   "score": -17
+  },
+  {
+   "type": "PLACE",
+   "category": "museum_16",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     16,
+     2
+    ],
+    [
+     19,
+     10
+    ]
+   ],
+   "name": "Musée de l'histoire d'Orelle",
+   "id": "way/167599767",
+   "lat": 45.2098974,
+   "lon": 6.5338933,
+   "country": "FR",
+   "zip": "73140",
+   "tz": "Europe/Paris",
+   "areas": [
+    {
+     "name": "France",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "France métropolitaine",
+     "adminLevel": 3,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Auvergne-Rhône-Alpes",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Savoie",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Saint-Jean-de-Maurienne",
+     "adminLevel": 7,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Orelle",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    }
+   ],
    "score": -16.75
   },
   {
@@ -841,7 +1121,7 @@
     ],
     [
      19,
-     12
+     10
     ]
    ],
    "name": "Musée canadien de la nature",
@@ -907,230 +1187,61 @@
     ],
     [
      19,
-     12
+     10
     ]
    ],
-   "name": "Musée de la culture et de l’histoire de Kamakura",
-   "id": "way/568389897",
-   "lat": 35.3225487,
-   "lon": 139.5473018,
-   "country": "JP",
-   "tz": "Asia/Tokyo",
+   "name": "Musée de l'Histoire Maritime",
+   "id": "way/1452468602",
+   "lat": -22.2679845,
+   "lon": 166.4337198,
+   "country": "FR",
+   "zip": "98800",
+   "tz": "Pacific/Noumea",
    "areas": [
     {
-     "name": "Japon",
+     "name": "France",
      "adminLevel": 2,
      "matched": false,
      "unique": false,
      "default": false
     },
     {
-     "name": "Préfecture de Kanagawa",
-     "adminLevel": 4,
+     "name": "Nouvelle-Calédonie",
+     "adminLevel": 3,
      "matched": false,
      "unique": false,
      "default": false
     },
     {
-     "name": "Kamakura",
-     "adminLevel": 7,
-     "matched": false,
-     "unique": true,
-     "default": true
-    }
-   ],
-   "score": -15.25
-  },
-  {
-   "type": "PLACE",
-   "category": "museum_16",
-   "tokens": [
-    [
-     0,
-     6
-    ],
-    [
-     7,
-     8
-    ],
-    [
-     16,
-     2
-    ],
-    [
-     19,
-     12
-    ]
-   ],
-   "name": "Musée Canadian de la Guerre",
-   "id": "way/103438401",
-   "lat": 45.4167196,
-   "lon": -75.7168921,
-   "country": "CA",
-   "tz": "America/Toronto",
-   "areas": [
-    {
-     "name": "Canada",
-     "adminLevel": 2,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Ontario",
-     "adminLevel": 4,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Est de l'Ontario",
-     "adminLevel": 5,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Ottawa",
-     "adminLevel": 6,
-     "matched": false,
-     "unique": true,
-     "default": true
-    },
-    {
-     "name": "Somerset",
-     "adminLevel": 9,
-     "matched": false,
-     "unique": false,
-     "default": false
-    }
-   ],
-   "score": -9.25
-  },
-  {
-   "type": "PLACE",
-   "category": "none",
-   "tokens": [
-    [
-     0,
-     6
-    ],
-    [
-     7,
-     8
-    ],
-    [
-     16,
-     2
-    ],
-    [
-     19,
-     12
-    ]
-   ],
-   "name": "Musée Josiah Henson de l'histoire des Afro-Canadiens",
-   "id": "way/658916316",
-   "lat": 42.5837992,
-   "lon": -82.1966547,
-   "country": "CA",
-   "tz": "America/Toronto",
-   "areas": [
-    {
-     "name": "Canada",
-     "adminLevel": 2,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Ontario",
-     "adminLevel": 4,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Sud-Ouest de l'Ontario",
-     "adminLevel": 5,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Chatham-Kent",
-     "adminLevel": 6,
-     "matched": false,
-     "unique": true,
-     "default": true
-    }
-   ],
-   "score": -7.75
-  },
-  {
-   "type": "PLACE",
-   "category": "museum_16",
-   "tokens": [
-    [
-     0,
-     6
-    ],
-    [
-     7,
-     8
-    ],
-    [
-     16,
-     2
-    ],
-    [
-     19,
-     12
-    ]
-   ],
-   "name": "Le musée des Anciens Canadiens",
-   "id": "node/5918927685",
-   "lat": 47.1942641,
-   "lon": -70.2867659,
-   "country": "CA",
-   "tz": "America/Toronto",
-   "areas": [
-    {
-     "name": "Canada",
-     "adminLevel": 2,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Québec",
-     "adminLevel": 4,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Chaudière-Appalaches",
-     "adminLevel": 5,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "L'Islet (MRC)",
+     "name": "Province Sud",
      "adminLevel": 6,
      "matched": false,
      "unique": false,
      "default": false
     },
     {
-     "name": "Saint-Jean-Port-Joli",
+     "name": "Nouméa",
      "adminLevel": 8,
      "matched": false,
      "unique": true,
      "default": true
+    },
+    {
+     "name": "Secteur Ouest",
+     "adminLevel": 9,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Centre-Ville",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
     }
    ],
-   "score": -7.25
+   "score": -16.75
   },
   {
    "type": "PLACE",
@@ -1150,13 +1261,13 @@
     ],
     [
      19,
-     12
+     10
     ]
    ],
-   "name": "Musée Moissan",
-   "id": "node/1426245253",
-   "lat": 48.8434624,
-   "lon": 2.3362665,
+   "name": "musée de l'Histoire de Paris",
+   "id": "way/4811911",
+   "lat": 48.8572722,
+   "lon": 2.3618571,
    "country": "FR",
    "zip": "75000;75001;75002;75003;75004;75005;75006;75007;75008;75009;75010;75011;75012;75013;75014;75015;75016;75017;75018;75019;75020;75116",
    "tz": "Europe/Paris",
@@ -1178,7 +1289,7 @@
     {
      "name": "Île-de-France",
      "adminLevel": 4,
-     "matched": true,
+     "matched": false,
      "unique": false,
      "default": false
     },
@@ -1204,95 +1315,21 @@
      "default": true
     },
     {
-     "name": "Paris 6e Arrondissement",
+     "name": "Paris 3e Arrondissement",
      "adminLevel": 9,
      "matched": false,
      "unique": false,
      "default": false
     },
     {
-     "name": "Quartier de l'Odéon",
+     "name": "Quartier des Archives",
      "adminLevel": 10,
      "matched": false,
      "unique": false,
      "default": false
     }
    ],
-   "score": -7.202480316162109
-  },
-  {
-   "type": "PLACE",
-   "category": "museum_16",
-   "tokens": [
-    [
-     0,
-     6
-    ],
-    [
-     7,
-     8
-    ],
-    [
-     16,
-     2
-    ],
-    [
-     19,
-     12
-    ]
-   ],
-   "name": "Musée historique",
-   "id": "node/5741257391",
-   "lat": 48.8385495,
-   "lon": 2.2184119,
-   "country": "FR",
-   "zip": "92210",
-   "tz": "Europe/Paris",
-   "areas": [
-    {
-     "name": "France",
-     "adminLevel": 2,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "France métropolitaine",
-     "adminLevel": 3,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Île-de-France",
-     "adminLevel": 4,
-     "matched": true,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Hauts-de-Seine",
-     "adminLevel": 6,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Nanterre",
-     "adminLevel": 7,
-     "matched": false,
-     "unique": false,
-     "default": false
-    },
-    {
-     "name": "Saint-Cloud",
-     "adminLevel": 8,
-     "matched": false,
-     "unique": true,
-     "default": true
-    }
-   ],
-   "score": -6.452480316162109
+   "score": -16.5
   }
  ],
  "plan?fromPlace=45.474%2C-75.697&toPlace=45.428%2C-75.708&numItineraries=3": {
@@ -1344,862 +1381,11 @@
   "direct": [],
   "itineraries": [
    {
-    "duration": 1380,
-    "startTime": "2026-11-12T14:30:00Z",
-    "endTime": "2026-11-12T14:53:00Z",
-    "transfers": 0,
-    "id": "Ckgh6SYxCKy8RkAp+FPjpZvsUsAyDmNhLXFjLVNUT18zMTAxOfCcLSC0vEZAQVyxv+ye7FLASOia19cGUOCb19cGWgRXQUxLYAEKfgoCNjcSITIwMjYxMTEyXzA5OjIwX2NhLXFjLVNUT182MzI5NTExMBoOY2EtcWMtU1RPXzMxMDEh8JwtILS8RkApXLG/7J7sUsAyDmNhLXFjLVNUT18yNjIzOaYPXVDftkZAQSmbcoV37VLASOCb19cGUNyj19cGWgNCVVNgAQpIGg5jYS1xYy1TVE9fMjYyMyGmD11Q37ZGQCkpm3KFd+1SwDkQWDm0yLZGQEFaZDvfT+1SwEjco9fXBlDMpdfXBloEV0FMS2AB",
-    "legs": [
-     {
-      "mode": "WALK",
-      "from": {
-       "name": "START",
-       "lat": 45.474,
-       "lon": -75.697,
-       "level": 0,
-       "tz": "America/Toronto",
-       "departure": "2026-11-12T14:30:00Z",
-       "scheduledDeparture": "2026-11-12T14:30:00Z",
-       "vertexType": "NORMAL"
-      },
-      "to": {
-       "name": "LES PROMENADES",
-       "stopId": "ca-qc-STO_3101",
-       "importance": 0.00000982729034149088,
-       "lat": 45.47424699999999,
-       "lon": -75.69720000000001,
-       "level": 0,
-       "tz": "America/Toronto",
-       "arrival": "2026-11-12T14:32:00Z",
-       "scheduledArrival": "2026-11-12T14:32:00Z",
-       "stopCode": "3101",
-       "vertexType": "TRANSIT",
-       "modes": [
-        "BUS"
-       ]
-      },
-      "duration": 120,
-      "startTime": "2026-11-12T14:30:00Z",
-      "endTime": "2026-11-12T14:32:00Z",
-      "scheduledStartTime": "2026-11-12T14:30:00Z",
-      "scheduledEndTime": "2026-11-12T14:32:00Z",
-      "realTime": false,
-      "scheduled": false,
-      "distance": 119,
-      "legGeometry": {
-       "points": "{povuAbvdkoCcA_a@??uAD??uEN??mAD??JjE??FvE??PdE??p@vX",
-       "precision": 6,
-       "length": 16
-      },
-      "steps": [
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 42,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "toOsmNode": 7418346964,
-        "polyline": {
-         "points": "{povuAbvdkoCcA_a@",
-         "precision": 6,
-         "length": 2
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       },
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 5,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "osmWay": 793353586,
-        "fromOsmNode": 7418346964,
-        "toOsmNode": 7418346962,
-        "polyline": {
-         "points": "_sovuAbtckoCuAD",
-         "precision": 6,
-         "length": 2
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       },
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 12,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "osmWay": 793353586,
-        "fromOsmNode": 7418346962,
-        "toOsmNode": 7418346963,
-        "polyline": {
-         "points": "uuovuAhtckoCuEN",
-         "precision": 6,
-         "length": 2
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       },
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 4,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "osmWay": 793353586,
-        "fromOsmNode": 7418346963,
-        "toOsmNode": 7418346966,
-        "polyline": {
-         "points": "k|ovuAxtckoCmAD",
-         "precision": 6,
-         "length": 2
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       },
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 8,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "osmWay": 793353586,
-        "fromOsmNode": 7418346966,
-        "toOsmNode": 7418346972,
-        "polyline": {
-         "points": "y~ovuA~tckoCJjE",
-         "precision": 6,
-         "length": 2
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       },
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 8,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "osmWay": 793353586,
-        "fromOsmNode": 7418346972,
-        "toOsmNode": 7418346965,
-        "polyline": {
-         "points": "m~ovuAj{ckoCFvE",
-         "precision": 6,
-         "length": 2
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       },
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 8,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "osmWay": 793353629,
-        "fromOsmNode": 7418346965,
-        "toOsmNode": 7418346973,
-        "polyline": {
-         "points": "e~ovuAbbdkoCPdE",
-         "precision": 6,
-         "length": 2
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       },
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 32,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "fromOsmNode": 7418346973,
-        "polyline": {
-         "points": "s}ovuAhhdkoCp@vX",
-         "precision": 6,
-         "length": 2
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       }
-      ]
-     },
-     {
-      "mode": "BUS",
-      "from": {
-       "name": "LES PROMENADES",
-       "stopId": "ca-qc-STO_3101",
-       "importance": 0.00000982729034149088,
-       "lat": 45.47424699999999,
-       "lon": -75.69720000000001,
-       "level": 0,
-       "tz": "America/Toronto",
-       "departure": "2026-11-12T14:32:00Z",
-       "scheduledDeparture": "2026-11-12T14:32:00Z",
-       "stopCode": "3101",
-       "vertexType": "TRANSIT",
-       "pickupType": "NORMAL",
-       "dropoffType": "NORMAL",
-       "cancelled": false,
-       "arrivalTimestampReason": "PREDICTED",
-       "departureTimestampReason": "PREDICTED",
-       "modes": [
-        "BUS"
-       ]
-      },
-      "to": {
-       "name": "LAURIER/VICTORIA",
-       "stopId": "ca-qc-STO_2623",
-       "importance": 0.000005878683168702992,
-       "lat": 45.42869,
-       "lon": -75.71042000000001,
-       "level": 0,
-       "tz": "America/Toronto",
-       "arrival": "2026-11-12T14:49:00Z",
-       "scheduledArrival": "2026-11-12T14:49:00Z",
-       "stopCode": "2623",
-       "vertexType": "TRANSIT",
-       "pickupType": "NORMAL",
-       "dropoffType": "NORMAL",
-       "cancelled": false,
-       "arrivalTimestampReason": "PREDICTED",
-       "departureTimestampReason": "PREDICTED",
-       "modes": [
-        "BUS"
-       ]
-      },
-      "duration": 1020,
-      "startTime": "2026-11-12T14:32:00Z",
-      "endTime": "2026-11-12T14:49:00Z",
-      "scheduledStartTime": "2026-11-12T14:32:00Z",
-      "scheduledEndTime": "2026-11-12T14:49:00Z",
-      "realTime": true,
-      "scheduled": true,
-      "interlineWithPreviousLeg": false,
-      "headsign": "Ottawa",
-      "tripFrom": {
-       "name": "QUAI LOCAL de la CITÉ #10",
-       "stopId": "ca-qc-STO_3485",
-       "importance": 0.000035143038985552266,
-       "lat": 45.48143999999999,
-       "lon": -75.684044,
-       "level": 0,
-       "tz": "America/Toronto",
-       "departure": "2026-11-12T14:20:00Z",
-       "scheduledDeparture": "2026-11-12T14:20:00Z",
-       "stopCode": "3485",
-       "vertexType": "TRANSIT",
-       "pickupType": "NORMAL",
-       "dropoffType": "NORMAL",
-       "cancelled": false,
-       "departureTimestampReason": "PREDICTED",
-       "modes": [
-        "BUS"
-       ]
-      },
-      "tripTo": {
-       "name": "CENTRE RIDEAU",
-       "stopId": "ca-qc-STO_5136",
-       "importance": 0.00007925346289994195,
-       "lat": 45.424168,
-       "lon": -75.68933999999999,
-       "level": 0,
-       "tz": "America/Toronto",
-       "arrival": "2026-11-12T15:03:00Z",
-       "scheduledArrival": "2026-11-12T15:02:00Z",
-       "stopCode": "5136",
-       "vertexType": "TRANSIT",
-       "pickupType": "NOT_ALLOWED",
-       "dropoffType": "NORMAL",
-       "cancelled": false,
-       "arrivalTimestampReason": "PREDICTED",
-       "modes": [
-        "BUS"
-       ]
-      },
-      "routeId": "ca-qc-STO_67",
-      "routeUrl": "",
-      "directionId": "1",
-      "routeType": 3,
-      "agencyName": "STO",
-      "agencyUrl": "http://www.sto.ca",
-      "agencyFareUrl": "",
-      "agencyId": "STO",
-      "tripId": "20261112_09:20_ca-qc-STO_63295110",
-      "routeShortName": "67",
-      "routeLongName": "FOURNIER/GRÉBER",
-      "tripShortName": "",
-      "displayName": "67",
-      "cancelled": false,
-      "source": "ca-qc_STO.gtfs.zip/stop_times.txt:170215:170251",
-      "intermediateStops": [
-       {
-        "name": "GRÉBER/de la SAVANE",
-        "stopId": "ca-qc-STO_3068",
-        "importance": 0.000008258288289653137,
-        "lat": 45.472443,
-        "lon": -75.70132400000001,
-        "level": 0,
-        "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:33:00Z",
-        "departure": "2026-11-12T14:33:00Z",
-        "scheduledArrival": "2026-11-12T14:33:00Z",
-        "scheduledDeparture": "2026-11-12T14:33:00Z",
-        "stopCode": "3068",
-        "vertexType": "TRANSIT",
-        "pickupType": "NORMAL",
-        "dropoffType": "NORMAL",
-        "cancelled": false,
-        "arrivalTimestampReason": "PREDICTED",
-        "departureTimestampReason": "PREDICTED",
-        "modes": [
-         "BUS"
-        ]
-       },
-       {
-        "name": "GRÉBER/LOUIS-RIEL",
-        "stopId": "ca-qc-STO_3060",
-        "importance": 0.000016516576579306275,
-        "lat": 45.47085,
-        "lon": -75.70110000000001,
-        "level": 0,
-        "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:34:00Z",
-        "departure": "2026-11-12T14:34:00Z",
-        "scheduledArrival": "2026-11-12T14:34:00Z",
-        "scheduledDeparture": "2026-11-12T14:34:00Z",
-        "stopCode": "3060",
-        "vertexType": "TRANSIT",
-        "pickupType": "NORMAL",
-        "dropoffType": "NORMAL",
-        "cancelled": false,
-        "arrivalTimestampReason": "PREDICTED",
-        "departureTimestampReason": "PREDICTED",
-        "modes": [
-         "BUS"
-        ]
-       },
-       {
-        "name": "GRÉBER/LOUIS-RIEL",
-        "stopId": "ca-qc-STO_3062",
-        "importance": 0.000016516576579306275,
-        "lat": 45.46868,
-        "lon": -75.70081,
-        "level": 0,
-        "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:36:00Z",
-        "departure": "2026-11-12T14:36:00Z",
-        "scheduledArrival": "2026-11-12T14:35:00Z",
-        "scheduledDeparture": "2026-11-12T14:35:00Z",
-        "stopCode": "3062",
-        "vertexType": "TRANSIT",
-        "pickupType": "NORMAL",
-        "dropoffType": "NORMAL",
-        "cancelled": false,
-        "arrivalTimestampReason": "PREDICTED",
-        "departureTimestampReason": "PREDICTED",
-        "modes": [
-         "BUS"
-        ]
-       },
-       {
-        "name": "GRÉBER/de POINTE-GATINEAU",
-        "stopId": "ca-qc-STO_3150",
-        "importance": 0.000017986971215577796,
-        "lat": 45.466137,
-        "lon": -75.70046,
-        "level": 0,
-        "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:37:00Z",
-        "departure": "2026-11-12T14:37:00Z",
-        "scheduledArrival": "2026-11-12T14:36:00Z",
-        "scheduledDeparture": "2026-11-12T14:36:00Z",
-        "stopCode": "3150",
-        "vertexType": "TRANSIT",
-        "pickupType": "NORMAL",
-        "dropoffType": "NORMAL",
-        "cancelled": false,
-        "arrivalTimestampReason": "PREDICTED",
-        "departureTimestampReason": "PREDICTED",
-        "modes": [
-         "BUS"
-        ]
-       },
-       {
-        "name": "GRÉBER/de POINTE-GATINEAU",
-        "stopId": "ca-qc-STO_3147",
-        "importance": 0.000017986971215577796,
-        "lat": 45.464583999999995,
-        "lon": -75.70025000000001,
-        "level": 0,
-        "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:38:00Z",
-        "departure": "2026-11-12T14:38:00Z",
-        "scheduledArrival": "2026-11-12T14:37:00Z",
-        "scheduledDeparture": "2026-11-12T14:37:00Z",
-        "stopCode": "3147",
-        "vertexType": "TRANSIT",
-        "pickupType": "NORMAL",
-        "dropoffType": "NORMAL",
-        "cancelled": false,
-        "arrivalTimestampReason": "PREDICTED",
-        "departureTimestampReason": "PREDICTED",
-        "modes": [
-         "BUS"
-        ]
-       },
-       {
-        "name": "GRÉBER/ SAINT-LOUIS",
-        "stopId": "ca-qc-STO_3146",
-        "importance": 0.00001673263977863826,
-        "lat": 45.462616000000004,
-        "lon": -75.700005,
-        "level": 0,
-        "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:38:00Z",
-        "departure": "2026-11-12T14:38:00Z",
-        "scheduledArrival": "2026-11-12T14:38:00Z",
-        "scheduledDeparture": "2026-11-12T14:38:00Z",
-        "stopCode": "3146",
-        "vertexType": "TRANSIT",
-        "pickupType": "NORMAL",
-        "dropoffType": "NORMAL",
-        "cancelled": false,
-        "arrivalTimestampReason": "PREDICTED",
-        "departureTimestampReason": "PREDICTED",
-        "modes": [
-         "BUS"
-        ]
-       },
-       {
-        "name": "GRÉBER/PHILÉAS-LEGAULT",
-        "stopId": "ca-qc-STO_3232",
-        "importance": 0.0000040298127714777365,
-        "lat": 45.460632000000004,
-        "lon": -75.70003,
-        "level": 0,
-        "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:39:00Z",
-        "departure": "2026-11-12T14:39:00Z",
-        "scheduledArrival": "2026-11-12T14:39:00Z",
-        "scheduledDeparture": "2026-11-12T14:39:00Z",
-        "stopCode": "3232",
-        "vertexType": "TRANSIT",
-        "pickupType": "NORMAL",
-        "dropoffType": "NORMAL",
-        "cancelled": false,
-        "arrivalTimestampReason": "PREDICTED",
-        "departureTimestampReason": "PREDICTED",
-        "modes": [
-         "BUS"
-        ]
-       },
-       {
-        "name": "GRÉBER/JACQUES-CARTIER",
-        "stopId": "ca-qc-STO_3226",
-        "importance": 0.000008258288289653137,
-        "lat": 45.458107,
-        "lon": -75.70016500000001,
-        "level": 0,
-        "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:39:00Z",
-        "departure": "2026-11-12T14:39:00Z",
-        "scheduledArrival": "2026-11-12T14:39:00Z",
-        "scheduledDeparture": "2026-11-12T14:39:00Z",
-        "stopCode": "3226",
-        "vertexType": "TRANSIT",
-        "pickupType": "NORMAL",
-        "dropoffType": "NORMAL",
-        "cancelled": false,
-        "arrivalTimestampReason": "PREDICTED",
-        "departureTimestampReason": "PREDICTED",
-        "modes": [
-         "BUS"
-        ]
-       },
-       {
-        "name": "FOURNIER/chemin LAC LEAMY",
-        "stopId": "ca-qc-STO_2718",
-        "importance": 0.000008258288289653137,
-        "lat": 45.45479999999999,
-        "lon": -75.70364000000001,
-        "level": 0,
-        "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:40:00Z",
-        "departure": "2026-11-12T14:40:00Z",
-        "scheduledArrival": "2026-11-12T14:40:00Z",
-        "scheduledDeparture": "2026-11-12T14:40:00Z",
-        "stopCode": "2718",
-        "vertexType": "TRANSIT",
-        "pickupType": "NORMAL",
-        "dropoffType": "NORMAL",
-        "cancelled": false,
-        "arrivalTimestampReason": "PREDICTED",
-        "departureTimestampReason": "PREDICTED",
-        "modes": [
-         "BUS"
-        ]
-       },
-       {
-        "name": "FOURNIER/JOANISSE",
-        "stopId": "ca-qc-STO_2714",
-        "importance": 0.0000040298127714777365,
-        "lat": 45.44542,
-        "lon": -75.71310000000001,
-        "level": 0,
-        "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:44:00Z",
-        "departure": "2026-11-12T14:44:00Z",
-        "scheduledArrival": "2026-11-12T14:43:00Z",
-        "scheduledDeparture": "2026-11-12T14:43:00Z",
-        "stopCode": "2714",
-        "vertexType": "TRANSIT",
-        "pickupType": "NORMAL",
-        "dropoffType": "NORMAL",
-        "cancelled": false,
-        "arrivalTimestampReason": "PREDICTED",
-        "departureTimestampReason": "PREDICTED",
-        "modes": [
-         "BUS"
-        ]
-       },
-       {
-        "name": "FOURNIER/LAMBERT",
-        "stopId": "ca-qc-STO_2715",
-        "importance": 0.0000040298127714777365,
-        "lat": 45.443979999999996,
-        "lon": -75.71341000000001,
-        "level": 0,
-        "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:44:00Z",
-        "departure": "2026-11-12T14:44:00Z",
-        "scheduledArrival": "2026-11-12T14:44:00Z",
-        "scheduledDeparture": "2026-11-12T14:44:00Z",
-        "stopCode": "2715",
-        "vertexType": "TRANSIT",
-        "pickupType": "NORMAL",
-        "dropoffType": "NORMAL",
-        "cancelled": false,
-        "arrivalTimestampReason": "PREDICTED",
-        "departureTimestampReason": "PREDICTED",
-        "modes": [
-         "BUS"
-        ]
-       },
-       {
-        "name": "SACRÉ-COEUR/LAURIER",
-        "stopId": "ca-qc-STO_2668",
-        "importance": 0.000005698871518688975,
-        "lat": 45.43719,
-        "lon": -75.70920600000001,
-        "level": 0,
-        "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:46:00Z",
-        "departure": "2026-11-12T14:46:00Z",
-        "scheduledArrival": "2026-11-12T14:46:00Z",
-        "scheduledDeparture": "2026-11-12T14:46:00Z",
-        "stopCode": "2668",
-        "vertexType": "TRANSIT",
-        "pickupType": "NORMAL",
-        "dropoffType": "NORMAL",
-        "cancelled": false,
-        "arrivalTimestampReason": "PREDICTED",
-        "departureTimestampReason": "PREDICTED",
-        "modes": [
-         "BUS"
-        ]
-       },
-       {
-        "name": "LAURIER/VERDUN",
-        "stopId": "ca-qc-STO_2676",
-        "importance": 0.000011560153325262945,
-        "lat": 45.43513500000001,
-        "lon": -75.70919,
-        "level": 0,
-        "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:47:00Z",
-        "departure": "2026-11-12T14:47:00Z",
-        "scheduledArrival": "2026-11-12T14:47:00Z",
-        "scheduledDeparture": "2026-11-12T14:47:00Z",
-        "stopCode": "2676",
-        "vertexType": "TRANSIT",
-        "pickupType": "NORMAL",
-        "dropoffType": "NORMAL",
-        "cancelled": false,
-        "arrivalTimestampReason": "PREDICTED",
-        "departureTimestampReason": "PREDICTED",
-        "modes": [
-         "BUS"
-        ]
-       },
-       {
-        "name": "LAURIER/ÉLISABETH-BRUYÈRE",
-        "stopId": "ca-qc-STO_2621",
-        "importance": 0.000005788777343695983,
-        "lat": 45.431396,
-        "lon": -75.70993,
-        "level": 0,
-        "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:48:00Z",
-        "departure": "2026-11-12T14:48:00Z",
-        "scheduledArrival": "2026-11-12T14:48:00Z",
-        "scheduledDeparture": "2026-11-12T14:48:00Z",
-        "stopCode": "2621",
-        "vertexType": "TRANSIT",
-        "pickupType": "NORMAL",
-        "dropoffType": "NORMAL",
-        "cancelled": false,
-        "arrivalTimestampReason": "PREDICTED",
-        "departureTimestampReason": "PREDICTED",
-        "modes": [
-         "BUS"
-        ]
-       }
-      ],
-      "legGeometry": {
-       "points": "m{ovuA~aekoC|@ShBfv@`Ab\\vB~q@jCzv@dAn_@dAb`@D~HxCSvvAcKbbByLdKq@vzB{OntBgOph@{Dz_BoLjiA_IrXoAvQcArCK`X?v|@f@v]RlE?rF?nm@wB`l@gExGo@rCFvGz@pQrDjPrIlAz@nLbL`x@n}@fr@zw@xV~WvW~WlGbGxZzYnUzThVrX|mAzuApL~MdHfJ~F~HfGfJvFfJ`LzTxRrb@xRnd@bQv`@|GnPjSrb@nNrXbRr\\~`@bp@pCfEvCrDjGjHhGbGnFnFnBnAtD~C~DjCtDjCrJnFxDbBbFvBlOzFtEbAjFbAr`@bG`^rEt^nF|e@bGrDf@pk@jHpf@jHfDr@~k@rHbLbBvEf@tEHpEI`Es@xDcArDoAbAq@d@Ix`Bsv@rJcG~SgK~l@oYnc@gTbBKfEcAfESvF?fAJdCF|Bz@|Bf@tNnFbRbGvLhDzGlB?mL|DxADi`A?m}@XkNl@wL`B{^n`CfY|^rEnkAhMdhA`MdFjChk@vGx]rDnkAvLv|@rICjC",
-       "precision": 6,
-       "length": 125
-      },
-      "bikesAllowed": false,
-      "wheelchairAccessible": "ACCESSIBLE",
-      "reservation": "NONE",
-      "alternatives": []
-     },
-     {
-      "mode": "WALK",
-      "from": {
-       "name": "LAURIER/VICTORIA",
-       "stopId": "ca-qc-STO_2623",
-       "importance": 0.000005878683168702992,
-       "lat": 45.42869,
-       "lon": -75.71042000000001,
-       "level": 0,
-       "tz": "America/Toronto",
-       "arrival": "2026-11-12T14:49:00Z",
-       "departure": "2026-11-12T14:49:00Z",
-       "scheduledArrival": "2026-11-12T14:49:00Z",
-       "scheduledDeparture": "2026-11-12T14:49:00Z",
-       "stopCode": "2623",
-       "vertexType": "TRANSIT",
-       "cancelled": false,
-       "arrivalTimestampReason": "PREDICTED",
-       "departureTimestampReason": "PREDICTED",
-       "modes": [
-        "BUS"
-       ]
-      },
-      "to": {
-       "name": "END",
-       "lat": 45.428,
-       "lon": -75.708,
-       "level": 0,
-       "tz": "America/Toronto",
-       "arrival": "2026-11-12T14:53:00Z",
-       "scheduledArrival": "2026-11-12T14:53:00Z",
-       "vertexType": "NORMAL"
-      },
-      "duration": 240,
-      "startTime": "2026-11-12T14:49:00Z",
-      "endTime": "2026-11-12T14:53:00Z",
-      "scheduledStartTime": "2026-11-12T14:49:00Z",
-      "scheduledEndTime": "2026-11-12T14:53:00Z",
-      "realTime": false,
-      "scheduled": false,
-      "distance": 230,
-      "legGeometry": {
-       "points": "i|vsuAl~~koC`Gj@f@X??VwG??`@wJ??vCX??^aHZ_GNeB??^mC|@yEx@gDl@{Cd@oD`@}DZqD^uENiEH}DBoFMmGOkI??NcCf@kCbAiDbAmCb@eBn@{BRiBV{C",
-       "precision": 6,
-       "length": 36
-      },
-      "steps": [
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 16,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "toOsmNode": 5631097818,
-        "polyline": {
-         "points": "i|vsuAl~~koC`Gj@f@X",
-         "precision": 6,
-         "length": 3
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       },
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 11,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "osmWay": 947368526,
-        "fromOsmNode": 5631097818,
-        "toOsmNode": 3213628336,
-        "polyline": {
-         "points": "_svsuAr`_loCVwG",
-         "precision": 6,
-         "length": 2
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       },
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 15,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "osmWay": 947368526,
-        "fromOsmNode": 3213628336,
-        "toOsmNode": 5631097817,
-        "polyline": {
-         "points": "grvsuAzw~koC`@wJ",
-         "precision": 6,
-         "length": 2
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       },
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 9,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "osmWay": 947368473,
-        "fromOsmNode": 5631097817,
-        "toOsmNode": 5631098430,
-        "polyline": {
-         "points": "eqvsuAbl~koCvCX",
-         "precision": 6,
-         "length": 2
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       },
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 26,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "osmWay": 39613018,
-        "fromOsmNode": 5631098430,
-        "toOsmNode": 1419422260,
-        "polyline": {
-         "points": "mlvsuA|l~koC^aHZ_GNeB",
-         "precision": 6,
-         "length": 4
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       },
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 108,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "osmWay": 39613018,
-        "fromOsmNode": 1419422260,
-        "toOsmNode": 474869696,
-        "polyline": {
-         "points": "ajvsuAtx}koC^mC|@yEx@gDl@{Cd@oD`@}DZqD^uENiEH}DBoFMmGOkI",
-         "precision": 6,
-         "length": 14
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       },
-       {
-        "relativeDirection": "CONTINUE",
-        "distance": 45,
-        "fromLevel": 0,
-        "toLevel": 0,
-        "fromOsmNode": 474869696,
-        "polyline": {
-         "points": "w_vsuA`e{koCNcCf@kCbAiDbAmCb@eBn@{BRiBV{C",
-         "precision": 6,
-         "length": 9
-        },
-        "streetName": "",
-        "exit": "",
-        "stayOn": false,
-        "area": false,
-        "toll": false,
-        "elevationUp": 0,
-        "elevationDown": 0
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "duration": 1380,
+    "duration": 1320,
     "startTime": "2026-11-12T14:50:00Z",
-    "endTime": "2026-11-12T15:13:00Z",
+    "endTime": "2026-11-12T15:12:00Z",
     "transfers": 0,
-    "id": "Ckgh6SYxCKy8RkAp+FPjpZvsUsAyDmNhLXFjLVNUT18zMTAxOfCcLSC0vEZAQVyxv+ye7FLASJik19cGUJCl19cGWgRXQUxLYAEKfgoCNjcSITIwMjYxMTEyXzA5OjQwX2NhLXFjLVNUT182MzI5NjExMRoOY2EtcWMtU1RPXzMxMDEh8JwtILS8RkApXLG/7J7sUsAyDmNhLXFjLVNUT18yNjIzOaYPXVDftkZAQSmbcoV37VLASJCl19cGUIyt19cGWgNCVVNgAQpIGg5jYS1xYy1TVE9fMjYyMyGmD11Q37ZGQCkpm3KFd+1SwDkQWDm0yLZGQEFaZDvfT+1SwEiMrdfXBlD8rtfXBloEV0FMS2AB",
+    "id": "Ckgh6SYxCKy8RkAp+FPjpZvsUsAyDmNhLXFjLVNUT18zMTAxOfCcLSC0vEZAQVyxv+ye7FLASJik19cGUJCl19cGWgRXQUxLYAEKfgoCNjcSITIwMjYxMTEyXzA5OjQwX2NhLXFjLVNUT182MzI5NjExMRoOY2EtcWMtU1RPXzMxMDEh8JwtILS8RkApXLG/7J7sUsAyDmNhLXFjLVNUT18yNjIzOaYPXVDftkZAQSmbcoV37VLASJCl19cGUIyt19cGWgNCVVNgAQpIGg5jYS1xYy1TVE9fMjYyMyGmD11Q37ZGQCkpm3KFd+1SwDkQWDm0yLZGQEFaZDvfT+1SwEjQrNfXBlDArtfXBloEV0FMS2AB",
     "legs": [
      {
       "mode": "WALK",
@@ -2426,8 +1612,8 @@
        "pickupType": "NORMAL",
        "dropoffType": "NORMAL",
        "cancelled": false,
-       "arrivalTimestampReason": "NO_RT_DATA",
-       "departureTimestampReason": "NO_RT_DATA",
+       "arrivalTimestampReason": "PREDICTED",
+       "departureTimestampReason": "PREDICTED",
        "modes": [
         "BUS"
        ]
@@ -2440,25 +1626,25 @@
        "lon": -75.71042000000001,
        "level": 0,
        "tz": "America/Toronto",
-       "arrival": "2026-11-12T15:09:00Z",
+       "arrival": "2026-11-12T15:08:00Z",
        "scheduledArrival": "2026-11-12T15:09:00Z",
        "stopCode": "2623",
        "vertexType": "TRANSIT",
        "pickupType": "NORMAL",
        "dropoffType": "NORMAL",
        "cancelled": false,
-       "arrivalTimestampReason": "NO_RT_DATA",
-       "departureTimestampReason": "NO_RT_DATA",
+       "arrivalTimestampReason": "PREDICTED",
+       "departureTimestampReason": "PREDICTED",
        "modes": [
         "BUS"
        ]
       },
-      "duration": 1020,
+      "duration": 960,
       "startTime": "2026-11-12T14:52:00Z",
-      "endTime": "2026-11-12T15:09:00Z",
+      "endTime": "2026-11-12T15:08:00Z",
       "scheduledStartTime": "2026-11-12T14:52:00Z",
       "scheduledEndTime": "2026-11-12T15:09:00Z",
-      "realTime": false,
+      "realTime": true,
       "scheduled": true,
       "interlineWithPreviousLeg": false,
       "headsign": "Ottawa",
@@ -2477,7 +1663,7 @@
        "pickupType": "NORMAL",
        "dropoffType": "NORMAL",
        "cancelled": false,
-       "departureTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "PREDICTED",
        "modes": [
         "BUS"
        ]
@@ -2497,7 +1683,7 @@
        "pickupType": "NOT_ALLOWED",
        "dropoffType": "NORMAL",
        "cancelled": false,
-       "arrivalTimestampReason": "NO_RT_DATA",
+       "arrivalTimestampReason": "PREDICTED",
        "modes": [
         "BUS"
        ]
@@ -2535,8 +1721,8 @@
         "pickupType": "NORMAL",
         "dropoffType": "NORMAL",
         "cancelled": false,
-        "arrivalTimestampReason": "NO_RT_DATA",
-        "departureTimestampReason": "NO_RT_DATA",
+        "arrivalTimestampReason": "PREDICTED",
+        "departureTimestampReason": "PREDICTED",
         "modes": [
          "BUS"
         ]
@@ -2558,8 +1744,8 @@
         "pickupType": "NORMAL",
         "dropoffType": "NORMAL",
         "cancelled": false,
-        "arrivalTimestampReason": "NO_RT_DATA",
-        "departureTimestampReason": "NO_RT_DATA",
+        "arrivalTimestampReason": "PREDICTED",
+        "departureTimestampReason": "PREDICTED",
         "modes": [
          "BUS"
         ]
@@ -2581,8 +1767,8 @@
         "pickupType": "NORMAL",
         "dropoffType": "NORMAL",
         "cancelled": false,
-        "arrivalTimestampReason": "NO_RT_DATA",
-        "departureTimestampReason": "NO_RT_DATA",
+        "arrivalTimestampReason": "PREDICTED",
+        "departureTimestampReason": "PREDICTED",
         "modes": [
          "BUS"
         ]
@@ -2604,8 +1790,8 @@
         "pickupType": "NORMAL",
         "dropoffType": "NORMAL",
         "cancelled": false,
-        "arrivalTimestampReason": "NO_RT_DATA",
-        "departureTimestampReason": "NO_RT_DATA",
+        "arrivalTimestampReason": "PREDICTED",
+        "departureTimestampReason": "PREDICTED",
         "modes": [
          "BUS"
         ]
@@ -2627,8 +1813,8 @@
         "pickupType": "NORMAL",
         "dropoffType": "NORMAL",
         "cancelled": false,
-        "arrivalTimestampReason": "NO_RT_DATA",
-        "departureTimestampReason": "NO_RT_DATA",
+        "arrivalTimestampReason": "PREDICTED",
+        "departureTimestampReason": "PREDICTED",
         "modes": [
          "BUS"
         ]
@@ -2650,8 +1836,8 @@
         "pickupType": "NORMAL",
         "dropoffType": "NORMAL",
         "cancelled": false,
-        "arrivalTimestampReason": "NO_RT_DATA",
-        "departureTimestampReason": "NO_RT_DATA",
+        "arrivalTimestampReason": "PREDICTED",
+        "departureTimestampReason": "PREDICTED",
         "modes": [
          "BUS"
         ]
@@ -2664,8 +1850,8 @@
         "lon": -75.70003,
         "level": 0,
         "tz": "America/Toronto",
-        "arrival": "2026-11-12T14:59:00Z",
-        "departure": "2026-11-12T14:59:00Z",
+        "arrival": "2026-11-12T14:58:00Z",
+        "departure": "2026-11-12T14:58:00Z",
         "scheduledArrival": "2026-11-12T14:59:00Z",
         "scheduledDeparture": "2026-11-12T14:59:00Z",
         "stopCode": "3232",
@@ -2673,8 +1859,8 @@
         "pickupType": "NORMAL",
         "dropoffType": "NORMAL",
         "cancelled": false,
-        "arrivalTimestampReason": "NO_RT_DATA",
-        "departureTimestampReason": "NO_RT_DATA",
+        "arrivalTimestampReason": "PREDICTED",
+        "departureTimestampReason": "PREDICTED",
         "modes": [
          "BUS"
         ]
@@ -2696,8 +1882,8 @@
         "pickupType": "NORMAL",
         "dropoffType": "NORMAL",
         "cancelled": false,
-        "arrivalTimestampReason": "NO_RT_DATA",
-        "departureTimestampReason": "NO_RT_DATA",
+        "arrivalTimestampReason": "PREDICTED",
+        "departureTimestampReason": "PREDICTED",
         "modes": [
          "BUS"
         ]
@@ -2719,8 +1905,8 @@
         "pickupType": "NORMAL",
         "dropoffType": "NORMAL",
         "cancelled": false,
-        "arrivalTimestampReason": "NO_RT_DATA",
-        "departureTimestampReason": "NO_RT_DATA",
+        "arrivalTimestampReason": "PREDICTED",
+        "departureTimestampReason": "PREDICTED",
         "modes": [
          "BUS"
         ]
@@ -2742,8 +1928,8 @@
         "pickupType": "NORMAL",
         "dropoffType": "NORMAL",
         "cancelled": false,
-        "arrivalTimestampReason": "NO_RT_DATA",
-        "departureTimestampReason": "NO_RT_DATA",
+        "arrivalTimestampReason": "PREDICTED",
+        "departureTimestampReason": "PREDICTED",
         "modes": [
          "BUS"
         ]
@@ -2756,8 +1942,8 @@
         "lon": -75.71341000000001,
         "level": 0,
         "tz": "America/Toronto",
-        "arrival": "2026-11-12T15:04:00Z",
-        "departure": "2026-11-12T15:04:00Z",
+        "arrival": "2026-11-12T15:03:00Z",
+        "departure": "2026-11-12T15:03:00Z",
         "scheduledArrival": "2026-11-12T15:04:00Z",
         "scheduledDeparture": "2026-11-12T15:04:00Z",
         "stopCode": "2715",
@@ -2765,8 +1951,8 @@
         "pickupType": "NORMAL",
         "dropoffType": "NORMAL",
         "cancelled": false,
-        "arrivalTimestampReason": "NO_RT_DATA",
-        "departureTimestampReason": "NO_RT_DATA",
+        "arrivalTimestampReason": "PREDICTED",
+        "departureTimestampReason": "PREDICTED",
         "modes": [
          "BUS"
         ]
@@ -2788,8 +1974,8 @@
         "pickupType": "NORMAL",
         "dropoffType": "NORMAL",
         "cancelled": false,
-        "arrivalTimestampReason": "NO_RT_DATA",
-        "departureTimestampReason": "NO_RT_DATA",
+        "arrivalTimestampReason": "PREDICTED",
+        "departureTimestampReason": "PREDICTED",
         "modes": [
          "BUS"
         ]
@@ -2802,8 +1988,8 @@
         "lon": -75.70919,
         "level": 0,
         "tz": "America/Toronto",
-        "arrival": "2026-11-12T15:07:00Z",
-        "departure": "2026-11-12T15:07:00Z",
+        "arrival": "2026-11-12T15:06:00Z",
+        "departure": "2026-11-12T15:06:00Z",
         "scheduledArrival": "2026-11-12T15:07:00Z",
         "scheduledDeparture": "2026-11-12T15:07:00Z",
         "stopCode": "2676",
@@ -2811,8 +1997,8 @@
         "pickupType": "NORMAL",
         "dropoffType": "NORMAL",
         "cancelled": false,
-        "arrivalTimestampReason": "NO_RT_DATA",
-        "departureTimestampReason": "NO_RT_DATA",
+        "arrivalTimestampReason": "PREDICTED",
+        "departureTimestampReason": "PREDICTED",
         "modes": [
          "BUS"
         ]
@@ -2825,8 +2011,8 @@
         "lon": -75.70993,
         "level": 0,
         "tz": "America/Toronto",
-        "arrival": "2026-11-12T15:08:00Z",
-        "departure": "2026-11-12T15:08:00Z",
+        "arrival": "2026-11-12T15:07:00Z",
+        "departure": "2026-11-12T15:07:00Z",
         "scheduledArrival": "2026-11-12T15:08:00Z",
         "scheduledDeparture": "2026-11-12T15:08:00Z",
         "stopCode": "2621",
@@ -2834,8 +2020,8 @@
         "pickupType": "NORMAL",
         "dropoffType": "NORMAL",
         "cancelled": false,
-        "arrivalTimestampReason": "NO_RT_DATA",
-        "departureTimestampReason": "NO_RT_DATA",
+        "arrivalTimestampReason": "PREDICTED",
+        "departureTimestampReason": "PREDICTED",
         "modes": [
          "BUS"
         ]
@@ -2861,15 +2047,15 @@
        "lon": -75.71042000000001,
        "level": 0,
        "tz": "America/Toronto",
-       "arrival": "2026-11-12T15:09:00Z",
-       "departure": "2026-11-12T15:09:00Z",
+       "arrival": "2026-11-12T15:08:00Z",
+       "departure": "2026-11-12T15:08:00Z",
        "scheduledArrival": "2026-11-12T15:09:00Z",
-       "scheduledDeparture": "2026-11-12T15:09:00Z",
+       "scheduledDeparture": "2026-11-12T15:08:00Z",
        "stopCode": "2623",
        "vertexType": "TRANSIT",
        "cancelled": false,
-       "arrivalTimestampReason": "NO_RT_DATA",
-       "departureTimestampReason": "NO_RT_DATA",
+       "arrivalTimestampReason": "PREDICTED",
+       "departureTimestampReason": "PREDICTED",
        "modes": [
         "BUS"
        ]
@@ -2880,15 +2066,15 @@
        "lon": -75.708,
        "level": 0,
        "tz": "America/Toronto",
-       "arrival": "2026-11-12T15:13:00Z",
-       "scheduledArrival": "2026-11-12T15:13:00Z",
+       "arrival": "2026-11-12T15:12:00Z",
+       "scheduledArrival": "2026-11-12T15:12:00Z",
        "vertexType": "NORMAL"
       },
       "duration": 240,
-      "startTime": "2026-11-12T15:09:00Z",
-      "endTime": "2026-11-12T15:13:00Z",
-      "scheduledStartTime": "2026-11-12T15:09:00Z",
-      "scheduledEndTime": "2026-11-12T15:13:00Z",
+      "startTime": "2026-11-12T15:08:00Z",
+      "endTime": "2026-11-12T15:12:00Z",
+      "scheduledStartTime": "2026-11-12T15:08:00Z",
+      "scheduledEndTime": "2026-11-12T15:12:00Z",
       "realTime": false,
       "scheduled": false,
       "distance": 230,
@@ -3895,273 +3081,875 @@
       ]
      }
     ]
+   },
+   {
+    "duration": 1380,
+    "startTime": "2026-11-12T15:30:00Z",
+    "endTime": "2026-11-12T15:53:00Z",
+    "transfers": 0,
+    "id": "Ckgh6SYxCKy8RkAp+FPjpZvsUsAyDmNhLXFjLVNUT18zMTAxOfCcLSC0vEZAQVyxv+ye7FLASPi219cGUPC319cGWgRXQUxLYAEKfgoCNjcSITIwMjYxMTEyXzEwOjIwX2NhLXFjLVNUT182MzI5NDg4MRoOY2EtcWMtU1RPXzMxMDEh8JwtILS8RkApXLG/7J7sUsAyDmNhLXFjLVNUT18yNjIzOaYPXVDftkZAQSmbcoV37VLASPC319cGUOy/19cGWgNCVVNgAQpIGg5jYS1xYy1TVE9fMjYyMyGmD11Q37ZGQCkpm3KFd+1SwDkQWDm0yLZGQEFaZDvfT+1SwEjsv9fXBlDcwdfXBloEV0FMS2AB",
+    "legs": [
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "START",
+       "lat": 45.474,
+       "lon": -75.697,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-12T15:30:00Z",
+       "scheduledDeparture": "2026-11-12T15:30:00Z",
+       "vertexType": "NORMAL"
+      },
+      "to": {
+       "name": "LES PROMENADES",
+       "stopId": "ca-qc-STO_3101",
+       "importance": 0.00000982729034149088,
+       "lat": 45.47424699999999,
+       "lon": -75.69720000000001,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T15:32:00Z",
+       "scheduledArrival": "2026-11-12T15:32:00Z",
+       "stopCode": "3101",
+       "vertexType": "TRANSIT",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 120,
+      "startTime": "2026-11-12T15:30:00Z",
+      "endTime": "2026-11-12T15:32:00Z",
+      "scheduledStartTime": "2026-11-12T15:30:00Z",
+      "scheduledEndTime": "2026-11-12T15:32:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 119,
+      "legGeometry": {
+       "points": "{povuAbvdkoCcA_a@??uAD??uEN??mAD??JjE??FvE??PdE??p@vX",
+       "precision": 6,
+       "length": 16
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 42,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 7418346964,
+        "polyline": {
+         "points": "{povuAbvdkoCcA_a@",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 5,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 793353586,
+        "fromOsmNode": 7418346964,
+        "toOsmNode": 7418346962,
+        "polyline": {
+         "points": "_sovuAbtckoCuAD",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 12,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 793353586,
+        "fromOsmNode": 7418346962,
+        "toOsmNode": 7418346963,
+        "polyline": {
+         "points": "uuovuAhtckoCuEN",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 4,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 793353586,
+        "fromOsmNode": 7418346963,
+        "toOsmNode": 7418346966,
+        "polyline": {
+         "points": "k|ovuAxtckoCmAD",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 8,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 793353586,
+        "fromOsmNode": 7418346966,
+        "toOsmNode": 7418346972,
+        "polyline": {
+         "points": "y~ovuA~tckoCJjE",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 8,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 793353586,
+        "fromOsmNode": 7418346972,
+        "toOsmNode": 7418346965,
+        "polyline": {
+         "points": "m~ovuAj{ckoCFvE",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 8,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 793353629,
+        "fromOsmNode": 7418346965,
+        "toOsmNode": 7418346973,
+        "polyline": {
+         "points": "e~ovuAbbdkoCPdE",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 32,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 7418346973,
+        "polyline": {
+         "points": "s}ovuAhhdkoCp@vX",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     },
+     {
+      "mode": "BUS",
+      "from": {
+       "name": "LES PROMENADES",
+       "stopId": "ca-qc-STO_3101",
+       "importance": 0.00000982729034149088,
+       "lat": 45.47424699999999,
+       "lon": -75.69720000000001,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-12T15:32:00Z",
+       "scheduledDeparture": "2026-11-12T15:32:00Z",
+       "stopCode": "3101",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "LAURIER/VICTORIA",
+       "stopId": "ca-qc-STO_2623",
+       "importance": 0.000005878683168702992,
+       "lat": 45.42869,
+       "lon": -75.71042000000001,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T15:49:00Z",
+       "scheduledArrival": "2026-11-12T15:49:00Z",
+       "stopCode": "2623",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 1020,
+      "startTime": "2026-11-12T15:32:00Z",
+      "endTime": "2026-11-12T15:49:00Z",
+      "scheduledStartTime": "2026-11-12T15:32:00Z",
+      "scheduledEndTime": "2026-11-12T15:49:00Z",
+      "realTime": false,
+      "scheduled": true,
+      "interlineWithPreviousLeg": false,
+      "headsign": "Ottawa",
+      "tripFrom": {
+       "name": "QUAI LOCAL de la CITÉ #10",
+       "stopId": "ca-qc-STO_3485",
+       "importance": 0.000035143038985552266,
+       "lat": 45.48143999999999,
+       "lon": -75.684044,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-12T15:20:00Z",
+       "scheduledDeparture": "2026-11-12T15:20:00Z",
+       "stopCode": "3485",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "tripTo": {
+       "name": "CENTRE RIDEAU",
+       "stopId": "ca-qc-STO_5136",
+       "importance": 0.00007925346289994195,
+       "lat": 45.424168,
+       "lon": -75.68933999999999,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T16:02:00Z",
+       "scheduledArrival": "2026-11-12T16:02:00Z",
+       "stopCode": "5136",
+       "vertexType": "TRANSIT",
+       "pickupType": "NOT_ALLOWED",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "routeId": "ca-qc-STO_67",
+      "routeUrl": "",
+      "directionId": "1",
+      "routeType": 3,
+      "agencyName": "STO",
+      "agencyUrl": "http://www.sto.ca",
+      "agencyFareUrl": "",
+      "agencyId": "STO",
+      "tripId": "20261112_10:20_ca-qc-STO_63294881",
+      "routeShortName": "67",
+      "routeLongName": "FOURNIER/GRÉBER",
+      "tripShortName": "",
+      "displayName": "67",
+      "cancelled": false,
+      "source": "ca-qc_STO.gtfs.zip/stop_times.txt:170141:170177",
+      "intermediateStops": [
+       {
+        "name": "GRÉBER/de la SAVANE",
+        "stopId": "ca-qc-STO_3068",
+        "importance": 0.000008258288289653137,
+        "lat": 45.472443,
+        "lon": -75.70132400000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T15:33:00Z",
+        "departure": "2026-11-12T15:33:00Z",
+        "scheduledArrival": "2026-11-12T15:33:00Z",
+        "scheduledDeparture": "2026-11-12T15:33:00Z",
+        "stopCode": "3068",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "GRÉBER/LOUIS-RIEL",
+        "stopId": "ca-qc-STO_3060",
+        "importance": 0.000016516576579306275,
+        "lat": 45.47085,
+        "lon": -75.70110000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T15:34:00Z",
+        "departure": "2026-11-12T15:34:00Z",
+        "scheduledArrival": "2026-11-12T15:34:00Z",
+        "scheduledDeparture": "2026-11-12T15:34:00Z",
+        "stopCode": "3060",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "GRÉBER/LOUIS-RIEL",
+        "stopId": "ca-qc-STO_3062",
+        "importance": 0.000016516576579306275,
+        "lat": 45.46868,
+        "lon": -75.70081,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T15:35:00Z",
+        "departure": "2026-11-12T15:35:00Z",
+        "scheduledArrival": "2026-11-12T15:35:00Z",
+        "scheduledDeparture": "2026-11-12T15:35:00Z",
+        "stopCode": "3062",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "GRÉBER/de POINTE-GATINEAU",
+        "stopId": "ca-qc-STO_3150",
+        "importance": 0.000017986971215577796,
+        "lat": 45.466137,
+        "lon": -75.70046,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T15:36:00Z",
+        "departure": "2026-11-12T15:36:00Z",
+        "scheduledArrival": "2026-11-12T15:36:00Z",
+        "scheduledDeparture": "2026-11-12T15:36:00Z",
+        "stopCode": "3150",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "GRÉBER/de POINTE-GATINEAU",
+        "stopId": "ca-qc-STO_3147",
+        "importance": 0.000017986971215577796,
+        "lat": 45.464583999999995,
+        "lon": -75.70025000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T15:37:00Z",
+        "departure": "2026-11-12T15:37:00Z",
+        "scheduledArrival": "2026-11-12T15:37:00Z",
+        "scheduledDeparture": "2026-11-12T15:37:00Z",
+        "stopCode": "3147",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "GRÉBER/ SAINT-LOUIS",
+        "stopId": "ca-qc-STO_3146",
+        "importance": 0.00001673263977863826,
+        "lat": 45.462616000000004,
+        "lon": -75.700005,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T15:38:00Z",
+        "departure": "2026-11-12T15:38:00Z",
+        "scheduledArrival": "2026-11-12T15:38:00Z",
+        "scheduledDeparture": "2026-11-12T15:38:00Z",
+        "stopCode": "3146",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "GRÉBER/PHILÉAS-LEGAULT",
+        "stopId": "ca-qc-STO_3232",
+        "importance": 0.0000040298127714777365,
+        "lat": 45.460632000000004,
+        "lon": -75.70003,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T15:39:00Z",
+        "departure": "2026-11-12T15:39:00Z",
+        "scheduledArrival": "2026-11-12T15:39:00Z",
+        "scheduledDeparture": "2026-11-12T15:39:00Z",
+        "stopCode": "3232",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "GRÉBER/JACQUES-CARTIER",
+        "stopId": "ca-qc-STO_3226",
+        "importance": 0.000008258288289653137,
+        "lat": 45.458107,
+        "lon": -75.70016500000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T15:39:00Z",
+        "departure": "2026-11-12T15:39:00Z",
+        "scheduledArrival": "2026-11-12T15:39:00Z",
+        "scheduledDeparture": "2026-11-12T15:39:00Z",
+        "stopCode": "3226",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "FOURNIER/chemin LAC LEAMY",
+        "stopId": "ca-qc-STO_2718",
+        "importance": 0.000008258288289653137,
+        "lat": 45.45479999999999,
+        "lon": -75.70364000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T15:40:00Z",
+        "departure": "2026-11-12T15:40:00Z",
+        "scheduledArrival": "2026-11-12T15:40:00Z",
+        "scheduledDeparture": "2026-11-12T15:40:00Z",
+        "stopCode": "2718",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "FOURNIER/JOANISSE",
+        "stopId": "ca-qc-STO_2714",
+        "importance": 0.0000040298127714777365,
+        "lat": 45.44542,
+        "lon": -75.71310000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T15:43:00Z",
+        "departure": "2026-11-12T15:43:00Z",
+        "scheduledArrival": "2026-11-12T15:43:00Z",
+        "scheduledDeparture": "2026-11-12T15:43:00Z",
+        "stopCode": "2714",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "FOURNIER/LAMBERT",
+        "stopId": "ca-qc-STO_2715",
+        "importance": 0.0000040298127714777365,
+        "lat": 45.443979999999996,
+        "lon": -75.71341000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T15:44:00Z",
+        "departure": "2026-11-12T15:44:00Z",
+        "scheduledArrival": "2026-11-12T15:44:00Z",
+        "scheduledDeparture": "2026-11-12T15:44:00Z",
+        "stopCode": "2715",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "SACRÉ-COEUR/LAURIER",
+        "stopId": "ca-qc-STO_2668",
+        "importance": 0.000005698871518688975,
+        "lat": 45.43719,
+        "lon": -75.70920600000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T15:46:00Z",
+        "departure": "2026-11-12T15:46:00Z",
+        "scheduledArrival": "2026-11-12T15:46:00Z",
+        "scheduledDeparture": "2026-11-12T15:46:00Z",
+        "stopCode": "2668",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "LAURIER/VERDUN",
+        "stopId": "ca-qc-STO_2676",
+        "importance": 0.000011560153325262945,
+        "lat": 45.43513500000001,
+        "lon": -75.70919,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T15:47:00Z",
+        "departure": "2026-11-12T15:47:00Z",
+        "scheduledArrival": "2026-11-12T15:47:00Z",
+        "scheduledDeparture": "2026-11-12T15:47:00Z",
+        "stopCode": "2676",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "LAURIER/ÉLISABETH-BRUYÈRE",
+        "stopId": "ca-qc-STO_2621",
+        "importance": 0.000005788777343695983,
+        "lat": 45.431396,
+        "lon": -75.70993,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T15:48:00Z",
+        "departure": "2026-11-12T15:48:00Z",
+        "scheduledArrival": "2026-11-12T15:48:00Z",
+        "scheduledDeparture": "2026-11-12T15:48:00Z",
+        "stopCode": "2621",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       }
+      ],
+      "legGeometry": {
+       "points": "m{ovuA~aekoC|@ShBfv@`Ab\\vB~q@jCzv@dAn_@dAb`@D~HxCSvvAcKbbByLdKq@vzB{OntBgOph@{Dz_BoLjiA_IrXoAvQcArCK`X?v|@f@v]RlE?rF?nm@wB`l@gExGo@rCFvGz@pQrDjPrIlAz@nLbL`x@n}@fr@zw@xV~WvW~WlGbGxZzYnUzThVrX|mAzuApL~MdHfJ~F~HfGfJvFfJ`LzTxRrb@xRnd@bQv`@|GnPjSrb@nNrXbRr\\~`@bp@pCfEvCrDjGjHhGbGnFnFnBnAtD~C~DjCtDjCrJnFxDbBbFvBlOzFtEbAjFbAr`@bG`^rEt^nF|e@bGrDf@pk@jHpf@jHfDr@~k@rHbLbBvEf@tEHpEI`Es@xDcArDoAbAq@d@Ix`Bsv@rJcG~SgK~l@oYnc@gTbBKfEcAfESvF?fAJdCF|Bz@|Bf@tNnFbRbGvLhDzGlB?mL|DxADi`A?m}@XkNl@wL`B{^n`CfY|^rEnkAhMdhA`MdFjChk@vGx]rDnkAvLv|@rICjC",
+       "precision": 6,
+       "length": 125
+      },
+      "bikesAllowed": false,
+      "wheelchairAccessible": "ACCESSIBLE",
+      "reservation": "NONE",
+      "alternatives": []
+     },
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "LAURIER/VICTORIA",
+       "stopId": "ca-qc-STO_2623",
+       "importance": 0.000005878683168702992,
+       "lat": 45.42869,
+       "lon": -75.71042000000001,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T15:49:00Z",
+       "departure": "2026-11-12T15:49:00Z",
+       "scheduledArrival": "2026-11-12T15:49:00Z",
+       "scheduledDeparture": "2026-11-12T15:49:00Z",
+       "stopCode": "2623",
+       "vertexType": "TRANSIT",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "END",
+       "lat": 45.428,
+       "lon": -75.708,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T15:53:00Z",
+       "scheduledArrival": "2026-11-12T15:53:00Z",
+       "vertexType": "NORMAL"
+      },
+      "duration": 240,
+      "startTime": "2026-11-12T15:49:00Z",
+      "endTime": "2026-11-12T15:53:00Z",
+      "scheduledStartTime": "2026-11-12T15:49:00Z",
+      "scheduledEndTime": "2026-11-12T15:53:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 230,
+      "legGeometry": {
+       "points": "i|vsuAl~~koC`Gj@f@X??VwG??`@wJ??vCX??^aHZ_GNeB??^mC|@yEx@gDl@{Cd@oD`@}DZqD^uENiEH}DBoFMmGOkI??NcCf@kCbAiDbAmCb@eBn@{BRiBV{C",
+       "precision": 6,
+       "length": 36
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 16,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 5631097818,
+        "polyline": {
+         "points": "i|vsuAl~~koC`Gj@f@X",
+         "precision": 6,
+         "length": 3
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 11,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 947368526,
+        "fromOsmNode": 5631097818,
+        "toOsmNode": 3213628336,
+        "polyline": {
+         "points": "_svsuAr`_loCVwG",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 15,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 947368526,
+        "fromOsmNode": 3213628336,
+        "toOsmNode": 5631097817,
+        "polyline": {
+         "points": "grvsuAzw~koC`@wJ",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 9,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 947368473,
+        "fromOsmNode": 5631097817,
+        "toOsmNode": 5631098430,
+        "polyline": {
+         "points": "eqvsuAbl~koCvCX",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 26,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 39613018,
+        "fromOsmNode": 5631098430,
+        "toOsmNode": 1419422260,
+        "polyline": {
+         "points": "mlvsuA|l~koC^aHZ_GNeB",
+         "precision": 6,
+         "length": 4
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 108,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 39613018,
+        "fromOsmNode": 1419422260,
+        "toOsmNode": 474869696,
+        "polyline": {
+         "points": "ajvsuAtx}koC^mC|@yEx@gDl@{Cd@oD`@}DZqD^uENiEH}DBoFMmGOkI",
+         "precision": 6,
+         "length": 14
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 45,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 474869696,
+        "polyline": {
+         "points": "w_vsuA`e{koCNcCf@kCbAiDbAmCb@eBn@{BRiBV{C",
+         "precision": 6,
+         "length": 9
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     }
+    ]
    }
   ],
-  "previousPageCursor": "EARLIER|1794493380",
-  "nextPageCursor": "LATER|1794496260"
+  "previousPageCursor": "EARLIER|1794494040",
+  "nextPageCursor": "LATER|1794497460"
  },
  "stoptimes?stopId=ca-qc-STO_3101&n=30": {
   "stopTimes": [
    {
     "place": {
      "name": "LES PROMENADES",
-     "stopId": "ca-qc-STO_3101",
-     "importance": 0.00000982729034149088,
-     "lat": 45.47424699999999,
-     "lon": -75.69720000000001,
-     "level": 0,
-     "tz": "America/Toronto",
-     "arrival": "2026-11-12T14:26:00Z",
-     "departure": "2026-11-12T14:26:00Z",
-     "scheduledArrival": "2026-11-12T14:23:00Z",
-     "scheduledDeparture": "2026-11-12T14:23:00Z",
-     "stopCode": "3101",
-     "vertexType": "TRANSIT",
-     "pickupType": "NORMAL",
-     "dropoffType": "NORMAL",
-     "cancelled": false,
-     "arrivalTimestampReason": "PREDICTED",
-     "departureTimestampReason": "PREDICTED",
-     "modes": [
-      "BUS"
-     ]
-    },
-    "mode": "BUS",
-    "realTime": true,
-    "headsign": "La Gappe",
-    "tripFrom": {
-     "name": "QUAI LOCAL de la CITÉ #6",
-     "stopId": "ca-qc-STO_3481",
-     "importance": 0.000035143038985552266,
-     "lat": 45.48153,
-     "lon": -75.68272999999998,
-     "level": 0,
-     "tz": "America/Toronto",
-     "stopCode": "3481",
-     "vertexType": "TRANSIT",
-     "pickupType": "NORMAL",
-     "dropoffType": "NORMAL",
-     "cancelled": false,
-     "departureTimestampReason": "PREDICTED",
-     "modes": [
-      "BUS"
-     ]
-    },
-    "tripTo": {
-     "name": "STATION DE LA GAPPE",
-     "stopId": "ca-qc-STO_9735",
-     "importance": 0.00004051273936056532,
-     "lat": 45.46887,
-     "lon": -75.71634,
-     "level": 0,
-     "tz": "America/Toronto",
-     "stopCode": "9735",
-     "vertexType": "TRANSIT",
-     "pickupType": "NOT_ALLOWED",
-     "dropoffType": "NORMAL",
-     "cancelled": false,
-     "arrivalTimestampReason": "PREDICTED",
-     "modes": [
-      "BUS"
-     ]
-    },
-    "agencyId": "STO",
-    "agencyName": "STO",
-    "agencyUrl": "http://www.sto.ca",
-    "routeId": "ca-qc-STO_63",
-    "routeUrl": "",
-    "directionId": "1",
-    "tripId": "20261112_09:17_ca-qc-STO_63296465",
-    "routeType": 3,
-    "routeShortName": "63",
-    "routeLongName": "POINTE-GATINEAU",
-    "tripShortName": "",
-    "displayName": "63",
-    "pickupDropoffType": "NORMAL",
-    "cancelled": false,
-    "tripCancelled": false,
-    "bikesAllowed": false,
-    "wheelchairAccessible": "ACCESSIBLE",
-    "reservation": "NONE",
-    "source": "ca-qc_STO.gtfs.zip/stop_times.txt:545199:545225"
-   },
-   {
-    "place": {
-     "name": "LES PROMENADES",
      "stopId": "ca-qc-STO_3105",
      "importance": 0.00000982729034149088,
      "lat": 45.47413,
      "lon": -75.696014,
      "level": 0,
      "tz": "America/Toronto",
-     "arrival": "2026-11-12T14:31:00Z",
-     "departure": "2026-11-12T14:31:00Z",
-     "scheduledArrival": "2026-11-12T14:28:00Z",
-     "scheduledDeparture": "2026-11-12T14:28:00Z",
-     "stopCode": "3105",
-     "vertexType": "TRANSIT",
-     "pickupType": "NORMAL",
-     "dropoffType": "NORMAL",
-     "cancelled": false,
-     "arrivalTimestampReason": "PREDICTED",
-     "departureTimestampReason": "PREDICTED",
-     "modes": [
-      "BUS"
-     ]
-    },
-    "mode": "BUS",
-    "realTime": true,
-    "headsign": "La Cité",
-    "tripFrom": {
-     "name": "CENTRE RIDEAU",
-     "stopId": "ca-qc-STO_5138",
-     "importance": 0.00007925346289994195,
-     "lat": 45.424133000000005,
-     "lon": -75.68995,
-     "level": 0,
-     "tz": "America/Toronto",
-     "stopCode": "5138",
-     "vertexType": "TRANSIT",
-     "pickupType": "NORMAL",
-     "dropoffType": "NORMAL",
-     "cancelled": false,
-     "departureTimestampReason": "PREDICTED",
-     "modes": [
-      "BUS"
-     ]
-    },
-    "tripTo": {
-     "name": "QUAI LOCAL de la CITÉ arrivée",
-     "stopId": "ca-qc-STO_3500",
-     "importance": 0.000035143038985552266,
-     "lat": 45.48141999999999,
-     "lon": -75.68404,
-     "level": 0,
-     "tz": "America/Toronto",
-     "stopCode": "3500",
-     "vertexType": "TRANSIT",
-     "pickupType": "NOT_ALLOWED",
-     "dropoffType": "NORMAL",
-     "cancelled": false,
-     "arrivalTimestampReason": "PREDICTED",
-     "modes": [
-      "BUS"
-     ]
-    },
-    "agencyId": "STO",
-    "agencyName": "STO",
-    "agencyUrl": "http://www.sto.ca",
-    "routeId": "ca-qc-STO_67",
-    "routeUrl": "",
-    "directionId": "0",
-    "tripId": "20261112_09:00_ca-qc-STO_63295300",
-    "routeType": 3,
-    "routeShortName": "67",
-    "routeLongName": "FOURNIER/GRÉBER",
-    "tripShortName": "",
-    "displayName": "67",
-    "pickupDropoffType": "NORMAL",
-    "cancelled": false,
-    "tripCancelled": false,
-    "bikesAllowed": false,
-    "wheelchairAccessible": "ACCESSIBLE",
-    "reservation": "NONE",
-    "source": "ca-qc_STO.gtfs.zip/stop_times.txt:157746:157790"
-   },
-   {
-    "place": {
-     "name": "LES PROMENADES",
-     "stopId": "ca-qc-STO_3101",
-     "importance": 0.00000982729034149088,
-     "lat": 45.47424699999999,
-     "lon": -75.69720000000001,
-     "level": 0,
-     "tz": "America/Toronto",
-     "arrival": "2026-11-12T14:32:00Z",
-     "departure": "2026-11-12T14:32:00Z",
-     "scheduledArrival": "2026-11-12T14:32:00Z",
-     "scheduledDeparture": "2026-11-12T14:32:00Z",
-     "stopCode": "3101",
-     "vertexType": "TRANSIT",
-     "pickupType": "NORMAL",
-     "dropoffType": "NORMAL",
-     "cancelled": false,
-     "arrivalTimestampReason": "PREDICTED",
-     "departureTimestampReason": "PREDICTED",
-     "modes": [
-      "BUS"
-     ]
-    },
-    "mode": "BUS",
-    "realTime": true,
-    "headsign": "Ottawa",
-    "tripFrom": {
-     "name": "QUAI LOCAL de la CITÉ #10",
-     "stopId": "ca-qc-STO_3485",
-     "importance": 0.000035143038985552266,
-     "lat": 45.48143999999999,
-     "lon": -75.684044,
-     "level": 0,
-     "tz": "America/Toronto",
-     "stopCode": "3485",
-     "vertexType": "TRANSIT",
-     "pickupType": "NORMAL",
-     "dropoffType": "NORMAL",
-     "cancelled": false,
-     "departureTimestampReason": "PREDICTED",
-     "modes": [
-      "BUS"
-     ]
-    },
-    "tripTo": {
-     "name": "CENTRE RIDEAU",
-     "stopId": "ca-qc-STO_5136",
-     "importance": 0.00007925346289994195,
-     "lat": 45.424168,
-     "lon": -75.68933999999999,
-     "level": 0,
-     "tz": "America/Toronto",
-     "stopCode": "5136",
-     "vertexType": "TRANSIT",
-     "pickupType": "NOT_ALLOWED",
-     "dropoffType": "NORMAL",
-     "cancelled": false,
-     "arrivalTimestampReason": "PREDICTED",
-     "modes": [
-      "BUS"
-     ]
-    },
-    "agencyId": "STO",
-    "agencyName": "STO",
-    "agencyUrl": "http://www.sto.ca",
-    "routeId": "ca-qc-STO_67",
-    "routeUrl": "",
-    "directionId": "1",
-    "tripId": "20261112_09:20_ca-qc-STO_63295110",
-    "routeType": 3,
-    "routeShortName": "67",
-    "routeLongName": "FOURNIER/GRÉBER",
-    "tripShortName": "",
-    "displayName": "67",
-    "pickupDropoffType": "NORMAL",
-    "cancelled": false,
-    "tripCancelled": false,
-    "bikesAllowed": false,
-    "wheelchairAccessible": "ACCESSIBLE",
-    "reservation": "NONE",
-    "source": "ca-qc_STO.gtfs.zip/stop_times.txt:170215:170251"
-   },
-   {
-    "place": {
-     "name": "LES PROMENADES",
-     "stopId": "ca-qc-STO_3105",
-     "importance": 0.00000982729034149088,
-     "lat": 45.47413,
-     "lon": -75.696014,
-     "level": 0,
-     "tz": "America/Toronto",
-     "arrival": "2026-11-12T14:48:00Z",
-     "departure": "2026-11-12T14:48:00Z",
+     "arrival": "2026-11-12T14:50:00Z",
+     "departure": "2026-11-12T14:50:00Z",
      "scheduledArrival": "2026-11-12T14:48:00Z",
      "scheduledDeparture": "2026-11-12T14:48:00Z",
      "stopCode": "3105",
@@ -4169,8 +3957,8 @@
      "pickupType": "NORMAL",
      "dropoffType": "NORMAL",
      "cancelled": false,
-     "arrivalTimestampReason": "PROPAGATED",
-     "departureTimestampReason": "PROPAGATED",
+     "arrivalTimestampReason": "PREDICTED",
+     "departureTimestampReason": "PREDICTED",
      "modes": [
       "BUS"
      ]
@@ -4209,7 +3997,7 @@
      "pickupType": "NOT_ALLOWED",
      "dropoffType": "NORMAL",
      "cancelled": false,
-     "arrivalTimestampReason": "PROPAGATED",
+     "arrivalTimestampReason": "PREDICTED",
      "modes": [
       "BUS"
      ]
@@ -4252,14 +4040,14 @@
      "pickupType": "NORMAL",
      "dropoffType": "NORMAL",
      "cancelled": false,
-     "arrivalTimestampReason": "NO_RT_DATA",
-     "departureTimestampReason": "NO_RT_DATA",
+     "arrivalTimestampReason": "PREDICTED",
+     "departureTimestampReason": "PREDICTED",
      "modes": [
       "BUS"
      ]
     },
     "mode": "BUS",
-    "realTime": false,
+    "realTime": true,
     "headsign": "Ottawa",
     "tripFrom": {
      "name": "QUAI LOCAL de la CITÉ #10",
@@ -4274,7 +4062,7 @@
      "pickupType": "NORMAL",
      "dropoffType": "NORMAL",
      "cancelled": false,
-     "departureTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "PREDICTED",
      "modes": [
       "BUS"
      ]
@@ -4292,7 +4080,7 @@
      "pickupType": "NOT_ALLOWED",
      "dropoffType": "NORMAL",
      "cancelled": false,
-     "arrivalTimestampReason": "NO_RT_DATA",
+     "arrivalTimestampReason": "PREDICTED",
      "modes": [
       "BUS"
      ]
@@ -4326,8 +4114,8 @@
      "lon": -75.696014,
      "level": 0,
      "tz": "America/Toronto",
-     "arrival": "2026-11-12T15:00:00Z",
-     "departure": "2026-11-12T15:00:00Z",
+     "arrival": "2026-11-12T15:01:00Z",
+     "departure": "2026-11-12T15:01:00Z",
      "scheduledArrival": "2026-11-12T15:00:00Z",
      "scheduledDeparture": "2026-11-12T15:00:00Z",
      "stopCode": "3105",
@@ -6391,6 +6179,255 @@
     "wheelchairAccessible": "ACCESSIBLE",
     "reservation": "NONE",
     "source": "ca-qc_STO.gtfs.zip/stop_times.txt:541083:541115"
+   },
+   {
+    "place": {
+     "name": "LES PROMENADES",
+     "stopId": "ca-qc-STO_3105",
+     "importance": 0.00000982729034149088,
+     "lat": 45.47413,
+     "lon": -75.696014,
+     "level": 0,
+     "tz": "America/Toronto",
+     "arrival": "2026-11-12T18:08:00Z",
+     "departure": "2026-11-12T18:08:00Z",
+     "scheduledArrival": "2026-11-12T18:08:00Z",
+     "scheduledDeparture": "2026-11-12T18:08:00Z",
+     "stopCode": "3105",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "La Cité",
+    "tripFrom": {
+     "name": "CENTRE RIDEAU",
+     "stopId": "ca-qc-STO_5138",
+     "importance": 0.00007925346289994195,
+     "lat": 45.424133000000005,
+     "lon": -75.68995,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "5138",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "QUAI LOCAL de la CITÉ arrivée",
+     "stopId": "ca-qc-STO_3500",
+     "importance": 0.000035143038985552266,
+     "lat": 45.48141999999999,
+     "lon": -75.68404,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "3500",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "STO",
+    "agencyName": "STO",
+    "agencyUrl": "http://www.sto.ca",
+    "routeId": "ca-qc-STO_67",
+    "routeUrl": "",
+    "directionId": "0",
+    "tripId": "20261112_12:40_ca-qc-STO_63296119",
+    "routeType": 3,
+    "routeShortName": "67",
+    "routeLongName": "FOURNIER/GRÉBER",
+    "tripShortName": "",
+    "displayName": "67",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_STO.gtfs.zip/stop_times.txt:158331:158375"
+   },
+   {
+    "place": {
+     "name": "LES PROMENADES",
+     "stopId": "ca-qc-STO_3101",
+     "importance": 0.00000982729034149088,
+     "lat": 45.47424699999999,
+     "lon": -75.69720000000001,
+     "level": 0,
+     "tz": "America/Toronto",
+     "arrival": "2026-11-12T18:12:00Z",
+     "departure": "2026-11-12T18:12:00Z",
+     "scheduledArrival": "2026-11-12T18:12:00Z",
+     "scheduledDeparture": "2026-11-12T18:12:00Z",
+     "stopCode": "3101",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Ottawa",
+    "tripFrom": {
+     "name": "QUAI LOCAL de la CITÉ #10",
+     "stopId": "ca-qc-STO_3485",
+     "importance": 0.000035143038985552266,
+     "lat": 45.48143999999999,
+     "lon": -75.684044,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "3485",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "CENTRE RIDEAU",
+     "stopId": "ca-qc-STO_5136",
+     "importance": 0.00007925346289994195,
+     "lat": 45.424168,
+     "lon": -75.68933999999999,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "5136",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "STO",
+    "agencyName": "STO",
+    "agencyUrl": "http://www.sto.ca",
+    "routeId": "ca-qc-STO_67",
+    "routeUrl": "",
+    "directionId": "1",
+    "tripId": "20261112_13:00_ca-qc-STO_63295487",
+    "routeType": 3,
+    "routeShortName": "67",
+    "routeLongName": "FOURNIER/GRÉBER",
+    "tripShortName": "",
+    "displayName": "67",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_STO.gtfs.zip/stop_times.txt:170474:170510"
+   },
+   {
+    "place": {
+     "name": "LES PROMENADES",
+     "stopId": "ca-qc-STO_3101",
+     "importance": 0.00000982729034149088,
+     "lat": 45.47424699999999,
+     "lon": -75.69720000000001,
+     "level": 0,
+     "tz": "America/Toronto",
+     "arrival": "2026-11-12T18:23:00Z",
+     "departure": "2026-11-12T18:23:00Z",
+     "scheduledArrival": "2026-11-12T18:23:00Z",
+     "scheduledDeparture": "2026-11-12T18:23:00Z",
+     "stopCode": "3101",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "La Gappe",
+    "tripFrom": {
+     "name": "QUAI LOCAL de la CITÉ #6",
+     "stopId": "ca-qc-STO_3481",
+     "importance": 0.000035143038985552266,
+     "lat": 45.48153,
+     "lon": -75.68272999999998,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "3481",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "STATION DE LA GAPPE",
+     "stopId": "ca-qc-STO_9735",
+     "importance": 0.00004051273936056532,
+     "lat": 45.46887,
+     "lon": -75.71634,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "9735",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "STO",
+    "agencyName": "STO",
+    "agencyUrl": "http://www.sto.ca",
+    "routeId": "ca-qc-STO_63",
+    "routeUrl": "",
+    "directionId": "1",
+    "tripId": "20261112_13:17_ca-qc-STO_63296476",
+    "routeType": 3,
+    "routeShortName": "63",
+    "routeLongName": "POINTE-GATINEAU",
+    "tripShortName": "",
+    "displayName": "63",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_STO.gtfs.zip/stop_times.txt:545496:545522"
    }
   ],
   "place": {
@@ -6407,7 +6444,7 @@
     "BUS"
    ]
   },
-  "previousPageCursor": "EARLIER|1794493500",
-  "nextPageCursor": "LATER|1794506460"
+  "previousPageCursor": "EARLIER|1794494940",
+  "nextPageCursor": "LATER|1794507840"
  }
 }
