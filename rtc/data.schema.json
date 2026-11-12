@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RtcData v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "vers",
+    "destination",
+    "ligne",
+    "direction",
+    "arret",
+    "noArret",
+    "marcheMin",
+    "dureeMin",
+    "correspondances",
+    "departs"
+  ],
+  "properties": {
+    "vers": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "destination": { "type": "string", "minLength": 1, "maxLength": 160 },
+    "ligne": { "type": "string", "minLength": 1, "maxLength": 16 },
+    "direction": { "type": "string", "maxLength": 120 },
+    "arret": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "noArret": { "type": "string", "minLength": 1, "maxLength": 16 },
+    "marcheMin": { "type": "integer", "minimum": 0, "maximum": 240 },
+    "dureeMin": { "type": "integer", "minimum": 1, "maximum": 600 },
+    "correspondances": {
+      "type": "array",
+      "maxItems": 4,
+      "items": { "type": "string", "minLength": 1, "maxLength": 16 }
+    },
+    "departs": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["heure", "reel"],
+        "properties": {
+          "heure": { "type": "string", "format": "date-time" },
+          "reel": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}
