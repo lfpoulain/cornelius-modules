@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-12 : module Transports STS
+
+**Ajouté**
+
+- Module **Transports STS** (`sts`, 1.0.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : le prochain autobus de la STS (Sherbrooke) vers une destination dite à la voix ou favorite, la durée du trajet et le départ suivant, d’après Transitous (horaires GTFS de la STS, sans jeton ; pas encore de temps réel). Départ par adresse ou par coordonnées (celles-ci priment), arrondi à environ 100 m ; itinéraire qui arrive le plus tôt ; adresse substituée par le géocodeur refusée ; apostrophe typographique changée en apostrophe droite avant la recherche.
+
 ### 2026-11-08 : météo sans jeton
 
 **Ajouté**
