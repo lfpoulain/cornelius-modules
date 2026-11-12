@@ -99,3 +99,17 @@ test('destinations et adresses refusées', () => {
   assert.equal(surLaRue('2325 rue de l’Université', { street: 'Rue de la Faune' }), false);
   assert.equal(surLaRue('1re Avenue et 41e Rue', { name: '41e Rue Est et 1re Avenue' }), true);
 });
+
+test('l’apostrophe typographique est changée en apostrophe droite avant le géocodage', async (t) => {
+  const f = createTestModule(t, addon, {
+    config: { depart: 'le départ', adresseDepart: 'Gare de l’Est', favoris: [] },
+    routes: () => ({ status: 404 }),
+  });
+  await f.invoke('trajet', { query: 'à l’Université' });
+  const textes = f.calls
+    .filter((call) => call.url.includes('/v1/geocode'))
+    .map((call) => new URL(call.url).searchParams.get('text') ?? '');
+  assert.ok(textes.length > 0);
+  for (const texte of textes) assert.doesNotMatch(texte, /[’‘]/u, texte);
+  assert.equal(textes[0], "Gare de l'Est");
+});
