@@ -1,0 +1,1986 @@
+{
+ "provinces/QC?year=2026": {
+  "status": 200,
+  "body": {
+   "province": {
+    "id": "QC",
+    "nameEn": "Quebec",
+    "nameFr": "Québec",
+    "sourceLink": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/liste-jours-feries",
+    "sourceEn": "Liste des jours fériés, chômés et payés",
+    "holidays": [
+     {
+      "id": 1,
+      "date": "2026-01-01",
+      "nameEn": "New Year’s Day",
+      "nameFr": "Jour de l’An",
+      "federal": 1,
+      "observedDate": "2026-01-01"
+     },
+     {
+      "id": 8,
+      "date": "2026-04-03",
+      "nameEn": "Good Friday",
+      "nameFr": "Vendredi saint",
+      "federal": 1,
+      "observedDate": "2026-04-03"
+     },
+     {
+      "id": 11,
+      "date": "2026-05-18",
+      "nameEn": "National Patriots’ Day",
+      "nameFr": "Journée nationale des patriotes",
+      "federal": 0,
+      "observedDate": "2026-05-18"
+     },
+     {
+      "id": 14,
+      "date": "2026-06-24",
+      "nameEn": "Saint-Jean-Baptiste Day",
+      "nameFr": "Saint-Jean-Baptiste / Fête nationale du Québec",
+      "federal": 0,
+      "observedDate": "2026-06-24"
+     },
+     {
+      "id": 16,
+      "date": "2026-07-01",
+      "nameEn": "Canada Day",
+      "nameFr": "Fête du Canada",
+      "federal": 1,
+      "observedDate": "2026-07-01"
+     },
+     {
+      "id": 28,
+      "date": "2026-09-07",
+      "nameEn": "Labour Day",
+      "nameFr": "Fête du travail",
+      "federal": 1,
+      "observedDate": "2026-09-07"
+     },
+     {
+      "id": 32,
+      "date": "2026-10-12",
+      "nameEn": "Thanksgiving",
+      "nameFr": "Action de grâce",
+      "federal": 1,
+      "observedDate": "2026-10-12"
+     },
+     {
+      "id": 34,
+      "date": "2026-12-25",
+      "nameEn": "Christmas Day",
+      "nameFr": "Noël",
+      "federal": 1,
+      "observedDate": "2026-12-25"
+     }
+    ],
+    "nextHoliday": {
+     "id": 34,
+     "date": "2026-12-25",
+     "nameEn": "Christmas Day",
+     "nameFr": "Noël",
+     "federal": 1,
+     "observedDate": "2026-12-25"
+    }
+   }
+  }
+ },
+ "provinces/QC?year=2027": {
+  "status": 200,
+  "body": {
+   "province": {
+    "id": "QC",
+    "nameEn": "Quebec",
+    "nameFr": "Québec",
+    "sourceLink": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/liste-jours-feries",
+    "sourceEn": "Liste des jours fériés, chômés et payés",
+    "holidays": [
+     {
+      "id": 1,
+      "date": "2027-01-01",
+      "nameEn": "New Year’s Day",
+      "nameFr": "Jour de l’An",
+      "federal": 1,
+      "observedDate": "2027-01-01"
+     },
+     {
+      "id": 8,
+      "date": "2027-03-26",
+      "nameEn": "Good Friday",
+      "nameFr": "Vendredi saint",
+      "federal": 1,
+      "observedDate": "2027-03-26"
+     },
+     {
+      "id": 11,
+      "date": "2027-05-24",
+      "nameEn": "National Patriots’ Day",
+      "nameFr": "Journée nationale des patriotes",
+      "federal": 0,
+      "observedDate": "2027-05-24"
+     },
+     {
+      "id": 14,
+      "date": "2027-06-24",
+      "nameEn": "Saint-Jean-Baptiste Day",
+      "nameFr": "Saint-Jean-Baptiste / Fête nationale du Québec",
+      "federal": 0,
+      "observedDate": "2027-06-24"
+     },
+     {
+      "id": 16,
+      "date": "2027-07-01",
+      "nameEn": "Canada Day",
+      "nameFr": "Fête du Canada",
+      "federal": 1,
+      "observedDate": "2027-07-01"
+     },
+     {
+      "id": 28,
+      "date": "2027-09-06",
+      "nameEn": "Labour Day",
+      "nameFr": "Fête du travail",
+      "federal": 1,
+      "observedDate": "2027-09-06"
+     },
+     {
+      "id": 32,
+      "date": "2027-10-11",
+      "nameEn": "Thanksgiving",
+      "nameFr": "Action de grâce",
+      "federal": 1,
+      "observedDate": "2027-10-11"
+     },
+     {
+      "id": 34,
+      "date": "2027-12-25",
+      "nameEn": "Christmas Day",
+      "nameFr": "Noël",
+      "federal": 1,
+      "observedDate": "2027-12-27"
+     }
+    ],
+    "nextHoliday": {
+     "id": 1,
+     "date": "2027-01-01",
+     "nameEn": "New Year’s Day",
+     "nameFr": "Jour de l’An",
+     "federal": 1,
+     "observedDate": "2027-01-01"
+    }
+   }
+  }
+ },
+ "provinces/ON?year=2026": {
+  "status": 200,
+  "body": {
+   "province": {
+    "id": "ON",
+    "nameEn": "Ontario",
+    "nameFr": "Ontario",
+    "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+    "sourceEn": "Ontario Public holidays",
+    "holidays": [
+     {
+      "id": 1,
+      "date": "2026-01-01",
+      "nameEn": "New Year’s Day",
+      "nameFr": "Jour de l’An",
+      "federal": 1,
+      "observedDate": "2026-01-01"
+     },
+     {
+      "id": 5,
+      "date": "2026-02-16",
+      "nameEn": "Family Day",
+      "nameFr": "Fête de la famille",
+      "federal": 0,
+      "observedDate": "2026-02-16"
+     },
+     {
+      "id": 8,
+      "date": "2026-04-03",
+      "nameEn": "Good Friday",
+      "nameFr": "Vendredi saint",
+      "federal": 1,
+      "observedDate": "2026-04-03"
+     },
+     {
+      "id": 12,
+      "date": "2026-05-18",
+      "nameEn": "Victoria Day",
+      "nameFr": "Fête de la Reine",
+      "federal": 1,
+      "observedDate": "2026-05-18"
+     },
+     {
+      "id": 16,
+      "date": "2026-07-01",
+      "nameEn": "Canada Day",
+      "nameFr": "Fête du Canada",
+      "federal": 1,
+      "observedDate": "2026-07-01"
+     },
+     {
+      "id": 28,
+      "date": "2026-09-07",
+      "nameEn": "Labour Day",
+      "nameFr": "Fête du travail",
+      "federal": 1,
+      "observedDate": "2026-09-07"
+     },
+     {
+      "id": 32,
+      "date": "2026-10-12",
+      "nameEn": "Thanksgiving",
+      "nameFr": "Action de grâce",
+      "federal": 1,
+      "observedDate": "2026-10-12"
+     },
+     {
+      "id": 34,
+      "date": "2026-12-25",
+      "nameEn": "Christmas Day",
+      "nameFr": "Noël",
+      "federal": 1,
+      "observedDate": "2026-12-25"
+     },
+     {
+      "id": 35,
+      "date": "2026-12-26",
+      "nameEn": "Boxing Day",
+      "nameFr": "Lendemain de Noël",
+      "federal": 1,
+      "observedDate": "2026-12-28"
+     }
+    ],
+    "nextHoliday": {
+     "id": 34,
+     "date": "2026-12-25",
+     "nameEn": "Christmas Day",
+     "nameFr": "Noël",
+     "federal": 1,
+     "observedDate": "2026-12-25"
+    }
+   }
+  }
+ },
+ "provinces/ON?year=2027": {
+  "status": 200,
+  "body": {
+   "province": {
+    "id": "ON",
+    "nameEn": "Ontario",
+    "nameFr": "Ontario",
+    "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+    "sourceEn": "Ontario Public holidays",
+    "holidays": [
+     {
+      "id": 1,
+      "date": "2027-01-01",
+      "nameEn": "New Year’s Day",
+      "nameFr": "Jour de l’An",
+      "federal": 1,
+      "observedDate": "2027-01-01"
+     },
+     {
+      "id": 5,
+      "date": "2027-02-15",
+      "nameEn": "Family Day",
+      "nameFr": "Fête de la famille",
+      "federal": 0,
+      "observedDate": "2027-02-15"
+     },
+     {
+      "id": 8,
+      "date": "2027-03-26",
+      "nameEn": "Good Friday",
+      "nameFr": "Vendredi saint",
+      "federal": 1,
+      "observedDate": "2027-03-26"
+     },
+     {
+      "id": 12,
+      "date": "2027-05-24",
+      "nameEn": "Victoria Day",
+      "nameFr": "Fête de la Reine",
+      "federal": 1,
+      "observedDate": "2027-05-24"
+     },
+     {
+      "id": 16,
+      "date": "2027-07-01",
+      "nameEn": "Canada Day",
+      "nameFr": "Fête du Canada",
+      "federal": 1,
+      "observedDate": "2027-07-01"
+     },
+     {
+      "id": 28,
+      "date": "2027-09-06",
+      "nameEn": "Labour Day",
+      "nameFr": "Fête du travail",
+      "federal": 1,
+      "observedDate": "2027-09-06"
+     },
+     {
+      "id": 32,
+      "date": "2027-10-11",
+      "nameEn": "Thanksgiving",
+      "nameFr": "Action de grâce",
+      "federal": 1,
+      "observedDate": "2027-10-11"
+     },
+     {
+      "id": 34,
+      "date": "2027-12-25",
+      "nameEn": "Christmas Day",
+      "nameFr": "Noël",
+      "federal": 1,
+      "observedDate": "2027-12-27"
+     },
+     {
+      "id": 35,
+      "date": "2027-12-26",
+      "nameEn": "Boxing Day",
+      "nameFr": "Lendemain de Noël",
+      "federal": 1,
+      "observedDate": "2027-12-28"
+     }
+    ],
+    "nextHoliday": {
+     "id": 1,
+     "date": "2027-01-01",
+     "nameEn": "New Year’s Day",
+     "nameFr": "Jour de l’An",
+     "federal": 1,
+     "observedDate": "2027-01-01"
+    }
+   }
+  }
+ },
+ "holidays?federal=true&year=2026": {
+  "status": 200,
+  "body": {
+   "holidays": [
+    {
+     "id": 1,
+     "date": "2026-01-01",
+     "nameEn": "New Year’s Day",
+     "nameFr": "Jour de l’An",
+     "federal": 1,
+     "observedDate": "2026-01-01",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "MB",
+       "nameEn": "Manitoba",
+       "nameFr": "Manitoba",
+       "sourceLink": "https://www.gov.mb.ca/labour/standards/doc,gen-holidays-after-april-30-07,factsheet.html#q12",
+       "sourceEn": "General holidays in Manitoba"
+      },
+      {
+       "id": "NB",
+       "nameEn": "New Brunswick",
+       "nameFr": "Nouveau-Brunswick",
+       "sourceLink": "https://www2.gnb.ca/content/gnb/en/departments/elg/local_government/content/governance/content/days_of_rest_act/faq.html#2",
+       "sourceEn": "10 prescribed days of rest"
+      },
+      {
+       "id": "NL",
+       "nameEn": "Newfoundland and Labrador",
+       "nameFr": "Terre-Neuve-et-Labrador",
+       "sourceLink": "https://www.gov.nl.ca/exec/tbs/2026-paid-holidays-2/",
+       "sourceEn": "Newfoundland 2026 Paid Holidays"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NS",
+       "nameEn": "Nova Scotia",
+       "nameFr": "Nouvelle-Écosse",
+       "sourceLink": "https://novascotia.ca/lae/employmentrights/holidaychart.asp",
+       "sourceEn": "Paid holidays in Nova Scotia"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      },
+      {
+       "id": "PE",
+       "nameEn": "Prince Edward Island",
+       "nameFr": "Île-du-Prince-Édouard",
+       "sourceLink": "https://www.princeedwardisland.ca/en/information/economic-growth-tourism-and-culture/paid-holidays",
+       "sourceEn": "PEI Paid Holidays"
+      },
+      {
+       "id": "QC",
+       "nameEn": "Quebec",
+       "nameFr": "Québec",
+       "sourceLink": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/liste-jours-feries",
+       "sourceEn": "Liste des jours fériés, chômés et payés"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "date": "2026-04-03",
+     "nameEn": "Good Friday",
+     "nameFr": "Vendredi saint",
+     "federal": 1,
+     "observedDate": "2026-04-03",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "MB",
+       "nameEn": "Manitoba",
+       "nameFr": "Manitoba",
+       "sourceLink": "https://www.gov.mb.ca/labour/standards/doc,gen-holidays-after-april-30-07,factsheet.html#q12",
+       "sourceEn": "General holidays in Manitoba"
+      },
+      {
+       "id": "NB",
+       "nameEn": "New Brunswick",
+       "nameFr": "Nouveau-Brunswick",
+       "sourceLink": "https://www2.gnb.ca/content/gnb/en/departments/elg/local_government/content/governance/content/days_of_rest_act/faq.html#2",
+       "sourceEn": "10 prescribed days of rest"
+      },
+      {
+       "id": "NL",
+       "nameEn": "Newfoundland and Labrador",
+       "nameFr": "Terre-Neuve-et-Labrador",
+       "sourceLink": "https://www.gov.nl.ca/exec/tbs/2026-paid-holidays-2/",
+       "sourceEn": "Newfoundland 2026 Paid Holidays"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NS",
+       "nameEn": "Nova Scotia",
+       "nameFr": "Nouvelle-Écosse",
+       "sourceLink": "https://novascotia.ca/lae/employmentrights/holidaychart.asp",
+       "sourceEn": "Paid holidays in Nova Scotia"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      },
+      {
+       "id": "PE",
+       "nameEn": "Prince Edward Island",
+       "nameFr": "Île-du-Prince-Édouard",
+       "sourceLink": "https://www.princeedwardisland.ca/en/information/economic-growth-tourism-and-culture/paid-holidays",
+       "sourceEn": "PEI Paid Holidays"
+      },
+      {
+       "id": "QC",
+       "nameEn": "Quebec",
+       "nameFr": "Québec",
+       "sourceLink": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/liste-jours-feries",
+       "sourceEn": "Liste des jours fériés, chômés et payés"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "date": "2026-04-06",
+     "nameEn": "Easter Monday",
+     "nameFr": "Lundi de Pâques",
+     "federal": 1,
+     "observedDate": "2026-04-06",
+     "provinces": []
+    },
+    {
+     "id": 12,
+     "date": "2026-05-18",
+     "nameEn": "Victoria Day",
+     "nameFr": "Fête de la Reine",
+     "federal": 1,
+     "observedDate": "2026-05-18",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "MB",
+       "nameEn": "Manitoba",
+       "nameFr": "Manitoba",
+       "sourceLink": "https://www.gov.mb.ca/labour/standards/doc,gen-holidays-after-april-30-07,factsheet.html#q12",
+       "sourceEn": "General holidays in Manitoba"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 16,
+     "date": "2026-07-01",
+     "nameEn": "Canada Day",
+     "nameFr": "Fête du Canada",
+     "federal": 1,
+     "observedDate": "2026-07-01",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "MB",
+       "nameEn": "Manitoba",
+       "nameFr": "Manitoba",
+       "sourceLink": "https://www.gov.mb.ca/labour/standards/doc,gen-holidays-after-april-30-07,factsheet.html#q12",
+       "sourceEn": "General holidays in Manitoba"
+      },
+      {
+       "id": "NB",
+       "nameEn": "New Brunswick",
+       "nameFr": "Nouveau-Brunswick",
+       "sourceLink": "https://www2.gnb.ca/content/gnb/en/departments/elg/local_government/content/governance/content/days_of_rest_act/faq.html#2",
+       "sourceEn": "10 prescribed days of rest"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NS",
+       "nameEn": "Nova Scotia",
+       "nameFr": "Nouvelle-Écosse",
+       "sourceLink": "https://novascotia.ca/lae/employmentrights/holidaychart.asp",
+       "sourceEn": "Paid holidays in Nova Scotia"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      },
+      {
+       "id": "PE",
+       "nameEn": "Prince Edward Island",
+       "nameFr": "Île-du-Prince-Édouard",
+       "sourceLink": "https://www.princeedwardisland.ca/en/information/economic-growth-tourism-and-culture/paid-holidays",
+       "sourceEn": "PEI Paid Holidays"
+      },
+      {
+       "id": "QC",
+       "nameEn": "Quebec",
+       "nameFr": "Québec",
+       "sourceLink": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/liste-jours-feries",
+       "sourceEn": "Liste des jours fériés, chômés et payés"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 20,
+     "date": "2026-08-03",
+     "nameEn": "Civic Holiday",
+     "nameFr": "Congé civique",
+     "federal": 1,
+     "observedDate": "2026-08-03",
+     "provinces": [
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      }
+     ]
+    },
+    {
+     "id": 28,
+     "date": "2026-09-07",
+     "nameEn": "Labour Day",
+     "nameFr": "Fête du travail",
+     "federal": 1,
+     "observedDate": "2026-09-07",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "MB",
+       "nameEn": "Manitoba",
+       "nameFr": "Manitoba",
+       "sourceLink": "https://www.gov.mb.ca/labour/standards/doc,gen-holidays-after-april-30-07,factsheet.html#q12",
+       "sourceEn": "General holidays in Manitoba"
+      },
+      {
+       "id": "NB",
+       "nameEn": "New Brunswick",
+       "nameFr": "Nouveau-Brunswick",
+       "sourceLink": "https://www2.gnb.ca/content/gnb/en/departments/elg/local_government/content/governance/content/days_of_rest_act/faq.html#2",
+       "sourceEn": "10 prescribed days of rest"
+      },
+      {
+       "id": "NL",
+       "nameEn": "Newfoundland and Labrador",
+       "nameFr": "Terre-Neuve-et-Labrador",
+       "sourceLink": "https://www.gov.nl.ca/exec/tbs/2026-paid-holidays-2/",
+       "sourceEn": "Newfoundland 2026 Paid Holidays"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NS",
+       "nameEn": "Nova Scotia",
+       "nameFr": "Nouvelle-Écosse",
+       "sourceLink": "https://novascotia.ca/lae/employmentrights/holidaychart.asp",
+       "sourceEn": "Paid holidays in Nova Scotia"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      },
+      {
+       "id": "PE",
+       "nameEn": "Prince Edward Island",
+       "nameFr": "Île-du-Prince-Édouard",
+       "sourceLink": "https://www.princeedwardisland.ca/en/information/economic-growth-tourism-and-culture/paid-holidays",
+       "sourceEn": "PEI Paid Holidays"
+      },
+      {
+       "id": "QC",
+       "nameEn": "Quebec",
+       "nameFr": "Québec",
+       "sourceLink": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/liste-jours-feries",
+       "sourceEn": "Liste des jours fériés, chômés et payés"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 30,
+     "date": "2026-09-30",
+     "nameEn": "National Day for Truth and Reconciliation",
+     "nameFr": "Journée nationale de la vérité et de la réconciliation",
+     "federal": 1,
+     "observedDate": "2026-09-30",
+     "provinces": [
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "PE",
+       "nameEn": "Prince Edward Island",
+       "nameFr": "Île-du-Prince-Édouard",
+       "sourceLink": "https://www.princeedwardisland.ca/en/information/economic-growth-tourism-and-culture/paid-holidays",
+       "sourceEn": "PEI Paid Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 32,
+     "date": "2026-10-12",
+     "nameEn": "Thanksgiving",
+     "nameFr": "Action de grâce",
+     "federal": 1,
+     "observedDate": "2026-10-12",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "MB",
+       "nameEn": "Manitoba",
+       "nameFr": "Manitoba",
+       "sourceLink": "https://www.gov.mb.ca/labour/standards/doc,gen-holidays-after-april-30-07,factsheet.html#q12",
+       "sourceEn": "General holidays in Manitoba"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      },
+      {
+       "id": "QC",
+       "nameEn": "Quebec",
+       "nameFr": "Québec",
+       "sourceLink": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/liste-jours-feries",
+       "sourceEn": "Liste des jours fériés, chômés et payés"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 33,
+     "date": "2026-11-11",
+     "nameEn": "Remembrance Day",
+     "nameFr": "Jour du Souvenir",
+     "federal": 1,
+     "observedDate": "2026-11-11",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "NB",
+       "nameEn": "New Brunswick",
+       "nameFr": "Nouveau-Brunswick",
+       "sourceLink": "https://www2.gnb.ca/content/gnb/en/departments/elg/local_government/content/governance/content/days_of_rest_act/faq.html#2",
+       "sourceEn": "10 prescribed days of rest"
+      },
+      {
+       "id": "NL",
+       "nameEn": "Newfoundland and Labrador",
+       "nameFr": "Terre-Neuve-et-Labrador",
+       "sourceLink": "https://www.gov.nl.ca/exec/tbs/2026-paid-holidays-2/",
+       "sourceEn": "Newfoundland 2026 Paid Holidays"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "PE",
+       "nameEn": "Prince Edward Island",
+       "nameFr": "Île-du-Prince-Édouard",
+       "sourceLink": "https://www.princeedwardisland.ca/en/information/economic-growth-tourism-and-culture/paid-holidays",
+       "sourceEn": "PEI Paid Holidays"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 34,
+     "date": "2026-12-25",
+     "nameEn": "Christmas Day",
+     "nameFr": "Noël",
+     "federal": 1,
+     "observedDate": "2026-12-25",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "MB",
+       "nameEn": "Manitoba",
+       "nameFr": "Manitoba",
+       "sourceLink": "https://www.gov.mb.ca/labour/standards/doc,gen-holidays-after-april-30-07,factsheet.html#q12",
+       "sourceEn": "General holidays in Manitoba"
+      },
+      {
+       "id": "NB",
+       "nameEn": "New Brunswick",
+       "nameFr": "Nouveau-Brunswick",
+       "sourceLink": "https://www2.gnb.ca/content/gnb/en/departments/elg/local_government/content/governance/content/days_of_rest_act/faq.html#2",
+       "sourceEn": "10 prescribed days of rest"
+      },
+      {
+       "id": "NL",
+       "nameEn": "Newfoundland and Labrador",
+       "nameFr": "Terre-Neuve-et-Labrador",
+       "sourceLink": "https://www.gov.nl.ca/exec/tbs/2026-paid-holidays-2/",
+       "sourceEn": "Newfoundland 2026 Paid Holidays"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NS",
+       "nameEn": "Nova Scotia",
+       "nameFr": "Nouvelle-Écosse",
+       "sourceLink": "https://novascotia.ca/lae/employmentrights/holidaychart.asp",
+       "sourceEn": "Paid holidays in Nova Scotia"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      },
+      {
+       "id": "PE",
+       "nameEn": "Prince Edward Island",
+       "nameFr": "Île-du-Prince-Édouard",
+       "sourceLink": "https://www.princeedwardisland.ca/en/information/economic-growth-tourism-and-culture/paid-holidays",
+       "sourceEn": "PEI Paid Holidays"
+      },
+      {
+       "id": "QC",
+       "nameEn": "Quebec",
+       "nameFr": "Québec",
+       "sourceLink": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/liste-jours-feries",
+       "sourceEn": "Liste des jours fériés, chômés et payés"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 35,
+     "date": "2026-12-26",
+     "nameEn": "Boxing Day",
+     "nameFr": "Lendemain de Noël",
+     "federal": 1,
+     "observedDate": "2026-12-28",
+     "provinces": [
+      {
+       "id": "NL",
+       "nameEn": "Newfoundland and Labrador",
+       "nameFr": "Terre-Neuve-et-Labrador",
+       "sourceLink": "https://www.gov.nl.ca/exec/tbs/2026-paid-holidays-2/",
+       "sourceEn": "Newfoundland 2026 Paid Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "holidays?federal=true&year=2027": {
+  "status": 200,
+  "body": {
+   "holidays": [
+    {
+     "id": 1,
+     "date": "2027-01-01",
+     "nameEn": "New Year’s Day",
+     "nameFr": "Jour de l’An",
+     "federal": 1,
+     "observedDate": "2027-01-01",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "MB",
+       "nameEn": "Manitoba",
+       "nameFr": "Manitoba",
+       "sourceLink": "https://www.gov.mb.ca/labour/standards/doc,gen-holidays-after-april-30-07,factsheet.html#q12",
+       "sourceEn": "General holidays in Manitoba"
+      },
+      {
+       "id": "NB",
+       "nameEn": "New Brunswick",
+       "nameFr": "Nouveau-Brunswick",
+       "sourceLink": "https://www2.gnb.ca/content/gnb/en/departments/elg/local_government/content/governance/content/days_of_rest_act/faq.html#2",
+       "sourceEn": "10 prescribed days of rest"
+      },
+      {
+       "id": "NL",
+       "nameEn": "Newfoundland and Labrador",
+       "nameFr": "Terre-Neuve-et-Labrador",
+       "sourceLink": "https://www.gov.nl.ca/exec/tbs/2026-paid-holidays-2/",
+       "sourceEn": "Newfoundland 2026 Paid Holidays"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NS",
+       "nameEn": "Nova Scotia",
+       "nameFr": "Nouvelle-Écosse",
+       "sourceLink": "https://novascotia.ca/lae/employmentrights/holidaychart.asp",
+       "sourceEn": "Paid holidays in Nova Scotia"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      },
+      {
+       "id": "PE",
+       "nameEn": "Prince Edward Island",
+       "nameFr": "Île-du-Prince-Édouard",
+       "sourceLink": "https://www.princeedwardisland.ca/en/information/economic-growth-tourism-and-culture/paid-holidays",
+       "sourceEn": "PEI Paid Holidays"
+      },
+      {
+       "id": "QC",
+       "nameEn": "Quebec",
+       "nameFr": "Québec",
+       "sourceLink": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/liste-jours-feries",
+       "sourceEn": "Liste des jours fériés, chômés et payés"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "date": "2027-03-26",
+     "nameEn": "Good Friday",
+     "nameFr": "Vendredi saint",
+     "federal": 1,
+     "observedDate": "2027-03-26",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "MB",
+       "nameEn": "Manitoba",
+       "nameFr": "Manitoba",
+       "sourceLink": "https://www.gov.mb.ca/labour/standards/doc,gen-holidays-after-april-30-07,factsheet.html#q12",
+       "sourceEn": "General holidays in Manitoba"
+      },
+      {
+       "id": "NB",
+       "nameEn": "New Brunswick",
+       "nameFr": "Nouveau-Brunswick",
+       "sourceLink": "https://www2.gnb.ca/content/gnb/en/departments/elg/local_government/content/governance/content/days_of_rest_act/faq.html#2",
+       "sourceEn": "10 prescribed days of rest"
+      },
+      {
+       "id": "NL",
+       "nameEn": "Newfoundland and Labrador",
+       "nameFr": "Terre-Neuve-et-Labrador",
+       "sourceLink": "https://www.gov.nl.ca/exec/tbs/2026-paid-holidays-2/",
+       "sourceEn": "Newfoundland 2026 Paid Holidays"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NS",
+       "nameEn": "Nova Scotia",
+       "nameFr": "Nouvelle-Écosse",
+       "sourceLink": "https://novascotia.ca/lae/employmentrights/holidaychart.asp",
+       "sourceEn": "Paid holidays in Nova Scotia"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      },
+      {
+       "id": "PE",
+       "nameEn": "Prince Edward Island",
+       "nameFr": "Île-du-Prince-Édouard",
+       "sourceLink": "https://www.princeedwardisland.ca/en/information/economic-growth-tourism-and-culture/paid-holidays",
+       "sourceEn": "PEI Paid Holidays"
+      },
+      {
+       "id": "QC",
+       "nameEn": "Quebec",
+       "nameFr": "Québec",
+       "sourceLink": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/liste-jours-feries",
+       "sourceEn": "Liste des jours fériés, chômés et payés"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "date": "2027-03-29",
+     "nameEn": "Easter Monday",
+     "nameFr": "Lundi de Pâques",
+     "federal": 1,
+     "observedDate": "2027-03-29",
+     "provinces": []
+    },
+    {
+     "id": 12,
+     "date": "2027-05-24",
+     "nameEn": "Victoria Day",
+     "nameFr": "Fête de la Reine",
+     "federal": 1,
+     "observedDate": "2027-05-24",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "MB",
+       "nameEn": "Manitoba",
+       "nameFr": "Manitoba",
+       "sourceLink": "https://www.gov.mb.ca/labour/standards/doc,gen-holidays-after-april-30-07,factsheet.html#q12",
+       "sourceEn": "General holidays in Manitoba"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 16,
+     "date": "2027-07-01",
+     "nameEn": "Canada Day",
+     "nameFr": "Fête du Canada",
+     "federal": 1,
+     "observedDate": "2027-07-01",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "MB",
+       "nameEn": "Manitoba",
+       "nameFr": "Manitoba",
+       "sourceLink": "https://www.gov.mb.ca/labour/standards/doc,gen-holidays-after-april-30-07,factsheet.html#q12",
+       "sourceEn": "General holidays in Manitoba"
+      },
+      {
+       "id": "NB",
+       "nameEn": "New Brunswick",
+       "nameFr": "Nouveau-Brunswick",
+       "sourceLink": "https://www2.gnb.ca/content/gnb/en/departments/elg/local_government/content/governance/content/days_of_rest_act/faq.html#2",
+       "sourceEn": "10 prescribed days of rest"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NS",
+       "nameEn": "Nova Scotia",
+       "nameFr": "Nouvelle-Écosse",
+       "sourceLink": "https://novascotia.ca/lae/employmentrights/holidaychart.asp",
+       "sourceEn": "Paid holidays in Nova Scotia"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      },
+      {
+       "id": "PE",
+       "nameEn": "Prince Edward Island",
+       "nameFr": "Île-du-Prince-Édouard",
+       "sourceLink": "https://www.princeedwardisland.ca/en/information/economic-growth-tourism-and-culture/paid-holidays",
+       "sourceEn": "PEI Paid Holidays"
+      },
+      {
+       "id": "QC",
+       "nameEn": "Quebec",
+       "nameFr": "Québec",
+       "sourceLink": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/liste-jours-feries",
+       "sourceEn": "Liste des jours fériés, chômés et payés"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 20,
+     "date": "2027-08-02",
+     "nameEn": "Civic Holiday",
+     "nameFr": "Congé civique",
+     "federal": 1,
+     "observedDate": "2027-08-02",
+     "provinces": [
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      }
+     ]
+    },
+    {
+     "id": 28,
+     "date": "2027-09-06",
+     "nameEn": "Labour Day",
+     "nameFr": "Fête du travail",
+     "federal": 1,
+     "observedDate": "2027-09-06",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "MB",
+       "nameEn": "Manitoba",
+       "nameFr": "Manitoba",
+       "sourceLink": "https://www.gov.mb.ca/labour/standards/doc,gen-holidays-after-april-30-07,factsheet.html#q12",
+       "sourceEn": "General holidays in Manitoba"
+      },
+      {
+       "id": "NB",
+       "nameEn": "New Brunswick",
+       "nameFr": "Nouveau-Brunswick",
+       "sourceLink": "https://www2.gnb.ca/content/gnb/en/departments/elg/local_government/content/governance/content/days_of_rest_act/faq.html#2",
+       "sourceEn": "10 prescribed days of rest"
+      },
+      {
+       "id": "NL",
+       "nameEn": "Newfoundland and Labrador",
+       "nameFr": "Terre-Neuve-et-Labrador",
+       "sourceLink": "https://www.gov.nl.ca/exec/tbs/2026-paid-holidays-2/",
+       "sourceEn": "Newfoundland 2026 Paid Holidays"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NS",
+       "nameEn": "Nova Scotia",
+       "nameFr": "Nouvelle-Écosse",
+       "sourceLink": "https://novascotia.ca/lae/employmentrights/holidaychart.asp",
+       "sourceEn": "Paid holidays in Nova Scotia"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      },
+      {
+       "id": "PE",
+       "nameEn": "Prince Edward Island",
+       "nameFr": "Île-du-Prince-Édouard",
+       "sourceLink": "https://www.princeedwardisland.ca/en/information/economic-growth-tourism-and-culture/paid-holidays",
+       "sourceEn": "PEI Paid Holidays"
+      },
+      {
+       "id": "QC",
+       "nameEn": "Quebec",
+       "nameFr": "Québec",
+       "sourceLink": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/liste-jours-feries",
+       "sourceEn": "Liste des jours fériés, chômés et payés"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 30,
+     "date": "2027-09-30",
+     "nameEn": "National Day for Truth and Reconciliation",
+     "nameFr": "Journée nationale de la vérité et de la réconciliation",
+     "federal": 1,
+     "observedDate": "2027-09-30",
+     "provinces": [
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "PE",
+       "nameEn": "Prince Edward Island",
+       "nameFr": "Île-du-Prince-Édouard",
+       "sourceLink": "https://www.princeedwardisland.ca/en/information/economic-growth-tourism-and-culture/paid-holidays",
+       "sourceEn": "PEI Paid Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 32,
+     "date": "2027-10-11",
+     "nameEn": "Thanksgiving",
+     "nameFr": "Action de grâce",
+     "federal": 1,
+     "observedDate": "2027-10-11",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "MB",
+       "nameEn": "Manitoba",
+       "nameFr": "Manitoba",
+       "sourceLink": "https://www.gov.mb.ca/labour/standards/doc,gen-holidays-after-april-30-07,factsheet.html#q12",
+       "sourceEn": "General holidays in Manitoba"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      },
+      {
+       "id": "QC",
+       "nameEn": "Quebec",
+       "nameFr": "Québec",
+       "sourceLink": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/liste-jours-feries",
+       "sourceEn": "Liste des jours fériés, chômés et payés"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 33,
+     "date": "2027-11-11",
+     "nameEn": "Remembrance Day",
+     "nameFr": "Jour du Souvenir",
+     "federal": 1,
+     "observedDate": "2027-11-11",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "NB",
+       "nameEn": "New Brunswick",
+       "nameFr": "Nouveau-Brunswick",
+       "sourceLink": "https://www2.gnb.ca/content/gnb/en/departments/elg/local_government/content/governance/content/days_of_rest_act/faq.html#2",
+       "sourceEn": "10 prescribed days of rest"
+      },
+      {
+       "id": "NL",
+       "nameEn": "Newfoundland and Labrador",
+       "nameFr": "Terre-Neuve-et-Labrador",
+       "sourceLink": "https://www.gov.nl.ca/exec/tbs/2026-paid-holidays-2/",
+       "sourceEn": "Newfoundland 2026 Paid Holidays"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "PE",
+       "nameEn": "Prince Edward Island",
+       "nameFr": "Île-du-Prince-Édouard",
+       "sourceLink": "https://www.princeedwardisland.ca/en/information/economic-growth-tourism-and-culture/paid-holidays",
+       "sourceEn": "PEI Paid Holidays"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 34,
+     "date": "2027-12-25",
+     "nameEn": "Christmas Day",
+     "nameFr": "Noël",
+     "federal": 1,
+     "observedDate": "2027-12-27",
+     "provinces": [
+      {
+       "id": "AB",
+       "nameEn": "Alberta",
+       "nameFr": "Alberta",
+       "sourceLink": "https://www.alberta.ca/alberta-general-holidays.aspx#jumplinks-1",
+       "sourceEn": "General holidays in Alberta"
+      },
+      {
+       "id": "BC",
+       "nameEn": "British Columbia",
+       "nameFr": "Colombie-Britannique",
+       "sourceLink": "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/statutory-holidays#body",
+       "sourceEn": "Statutory Holidays in British Columbia"
+      },
+      {
+       "id": "MB",
+       "nameEn": "Manitoba",
+       "nameFr": "Manitoba",
+       "sourceLink": "https://www.gov.mb.ca/labour/standards/doc,gen-holidays-after-april-30-07,factsheet.html#q12",
+       "sourceEn": "General holidays in Manitoba"
+      },
+      {
+       "id": "NB",
+       "nameEn": "New Brunswick",
+       "nameFr": "Nouveau-Brunswick",
+       "sourceLink": "https://www2.gnb.ca/content/gnb/en/departments/elg/local_government/content/governance/content/days_of_rest_act/faq.html#2",
+       "sourceEn": "10 prescribed days of rest"
+      },
+      {
+       "id": "NL",
+       "nameEn": "Newfoundland and Labrador",
+       "nameFr": "Terre-Neuve-et-Labrador",
+       "sourceLink": "https://www.gov.nl.ca/exec/tbs/2026-paid-holidays-2/",
+       "sourceEn": "Newfoundland 2026 Paid Holidays"
+      },
+      {
+       "id": "NT",
+       "nameEn": "Northwest Territories",
+       "nameFr": "Territoires du Nord-Ouest",
+       "sourceLink": "https://www.ece.gov.nt.ca/en/services/employment-standards/frequently-asked-questions#Statutory%20Holidays",
+       "sourceEn": "Employment Standards, Northwest Territories"
+      },
+      {
+       "id": "NS",
+       "nameEn": "Nova Scotia",
+       "nameFr": "Nouvelle-Écosse",
+       "sourceLink": "https://novascotia.ca/lae/employmentrights/holidaychart.asp",
+       "sourceEn": "Paid holidays in Nova Scotia"
+      },
+      {
+       "id": "NU",
+       "nameEn": "Nunavut",
+       "nameFr": "Nunavut",
+       "sourceLink": "https://nu-lsco.ca/faq-s?tmpl=component&faqid=11",
+       "sourceEn": "Nunavut General Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      },
+      {
+       "id": "PE",
+       "nameEn": "Prince Edward Island",
+       "nameFr": "Île-du-Prince-Édouard",
+       "sourceLink": "https://www.princeedwardisland.ca/en/information/economic-growth-tourism-and-culture/paid-holidays",
+       "sourceEn": "PEI Paid Holidays"
+      },
+      {
+       "id": "QC",
+       "nameEn": "Quebec",
+       "nameFr": "Québec",
+       "sourceLink": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/liste-jours-feries",
+       "sourceEn": "Liste des jours fériés, chômés et payés"
+      },
+      {
+       "id": "SK",
+       "nameEn": "Saskatchewan",
+       "nameFr": "Saskatchewan",
+       "sourceLink": "https://www.saskatchewan.ca/business/employment-standards/public-statutory-holidays/list-of-saskatchewan-public-holidays",
+       "sourceEn": "Saskatchewan Public Holidays"
+      },
+      {
+       "id": "YT",
+       "nameEn": "Yukon",
+       "nameFr": "Yukon",
+       "sourceLink": "https://yukon.ca/en/doing-business/employer-responsibilities/find-yukon-statutory-holiday",
+       "sourceEn": "Yukon statutory holiday dates"
+      }
+     ]
+    },
+    {
+     "id": 35,
+     "date": "2027-12-26",
+     "nameEn": "Boxing Day",
+     "nameFr": "Lendemain de Noël",
+     "federal": 1,
+     "observedDate": "2027-12-28",
+     "provinces": [
+      {
+       "id": "NL",
+       "nameEn": "Newfoundland and Labrador",
+       "nameFr": "Terre-Neuve-et-Labrador",
+       "sourceLink": "https://www.gov.nl.ca/exec/tbs/2026-paid-holidays-2/",
+       "sourceEn": "Newfoundland 2026 Paid Holidays"
+      },
+      {
+       "id": "ON",
+       "nameEn": "Ontario",
+       "nameFr": "Ontario",
+       "sourceLink": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays",
+       "sourceEn": "Ontario Public holidays"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
