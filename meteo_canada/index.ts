@@ -413,7 +413,7 @@ function present(
 const addon: AddonDefinition<MeteoCanadaConfig, MeteoCanadaData> = {
   id: 'meteo_canada',
   apiVersion: 1,
-  version: '1.0.0',
+  version: '1.0.1',
   minCoreVersion: '0.2.0',
   sourceLabel: 'Environnement Canada',
   display: {
@@ -445,7 +445,11 @@ const addon: AddonDefinition<MeteoCanadaConfig, MeteoCanadaData> = {
       name: 'read',
       description:
         'Lire la météo d’Environnement Canada pour la ville réglée : température, conditions, prévisions des prochaines périodes et avertissements en vigueur, et afficher la carte Météo Canada. ' +
-        'Utiliser pour « quel temps fait-il ? », « va-t-il neiger ce soir ? », « y a-t-il un avertissement météo ? ». ' +
+        'Utiliser pour toute question de météo du foyer : « quelle est la météo ? », « quel temps fait-il ? », « et demain ? », « va-t-il neiger ce soir ? », « y a-t-il un avertissement météo ? ». ' +
+        // Plusieurs modules météo peuvent être installés sans source (la Météo livrée avec
+        // Cornelius, par exemple) : le modèle les choisissait et répondait qu'aucun module
+        // n'était réglé. Une source Météo Canada autorisée l'emporte sur un outil météo sans source.
+        'Si une source Météo Canada est autorisée, c’est cet outil qu’il faut appeler, et non un autre outil météo sans source. ' +
         'Dire les avertissements s’il y en a.',
       parameters: {
         type: 'object',

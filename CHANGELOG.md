@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-12 : Météo Canada choisi pour la météo
+
+**Modifié**
+
+- **Météo Canada** (1.0.1) : la description de l’outil dit qu’il répond à toute question de météo du foyer et qu’il passe avant un autre outil météo sans source. Avec la Météo livrée avec Cornelius installée mais sans source, le modèle choisissait parfois celle-ci et répondait qu’aucun module n’était réglé.
+
 ### 2026-11-11 : module Météo Canada
 
 **Ajouté**
