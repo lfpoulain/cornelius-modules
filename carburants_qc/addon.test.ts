@@ -9,6 +9,8 @@ import addon, {
   ditEnDollars,
   enDollars,
   exclue,
+  initialesRue,
+  banniere,
 } from './index.js';
 // Relevé réel de Régie essence Québec du 2026-11-12 à 14 h 45 UTC, réduit aux stations à 10 km
 // de Sainte-Foy et à celles de la région de tri rurale G0A (166 stations sur 2 471).
@@ -43,7 +45,7 @@ test('le code postal, saisi à la va-vite, place la zone', async (t) => {
     title: 'Carburants',
     value: null,
     subtitle: 'Costco, 3233 Watt (3,4 km)',
-    items: [{ label: 'Ordinaire', value: '1,669 $/L' }],
+    items: [{ label: 'Ordinaire', value: '1,67 $/L' }],
   });
   // Toutes les stations du rayon comptent, pas seulement celles du code postal ; un seul appel.
   assert.equal(f.calls.length, 1);
@@ -78,16 +80,17 @@ test('trois carburants : le meilleur prix de chacun, une station dite une fois',
     'Meilleurs prix dans un rayon de 5 kilomètres : l’ordinaire à 1 dollar 67 et le super à 1 dollar 87 chez Costco, 3233 avenue Watt, à 3 kilomètres ; ' +
       'le diesel à 2 dollars 77 chez Shell, 2831 boulevard Laurier, à 100 mètres.',
   );
-  // Sur le miroir, plusieurs stations : le type et sa station à gauche, le prix à droite.
+  // Sur le miroir, plusieurs stations : lignes courtes (carburant, bannière et numéro civique, prix
+  // arrondi au cent), adresses dans le sous-titre, chacune commençant par son numéro.
   assert.deepEqual(f.ambient().content, {
     layout: 'metric',
     title: 'Carburants',
     value: null,
-    subtitle: 'Rayon de 5 km',
+    subtitle: 'Costco 3233 Watt · Shell 2831 Laurier',
     items: [
-      { label: 'Ordinaire · Costco, 3233 Watt', value: '1,669 $/L' },
-      { label: 'Super · Costco, 3233 Watt', value: '1,869 $/L' },
-      { label: 'Diesel · Shell, 2831 Laurier', value: '2,769 $/L' },
+      { label: 'Ordinaire · Costco', value: '1,67 $/L' },
+      { label: 'Super · Costco', value: '1,87 $/L' },
+      { label: 'Diesel · Shell', value: '2,77 $/L' },
     ],
   });
 });
@@ -113,8 +116,8 @@ test('super et diesel avec la station préférée : deux tuiles', async (t) => {
       'Meilleurs prix dans un rayon de 5 kilomètres : le super à 1 dollar 87 chez Costco, 3233 avenue Watt, à 3 kilomètres ; le diesel à 2 dollars 77 à ta station.',
   );
   assert.deepEqual(f.ambient().content?.items, [
-    { label: 'Super · Costco, 3233 Watt', value: '1,869 $/L' },
-    { label: 'Diesel · ta station', value: '2,769 $/L' },
+    { label: 'Super · Costco', value: '1,87 $/L' },
+    { label: 'Diesel · ta station', value: '2,77 $/L' },
   ]);
   const card = result.outcome.ok ? result.outcome.card : null;
   assert.deepEqual(card?.items, [
@@ -131,8 +134,8 @@ test('super et diesel avec la station préférée : deux tuiles', async (t) => {
     value: null,
     subtitle: 'Shell, 2831 Laurier',
     items: [
-      { label: 'Super', value: '2,069 $/L' },
-      { label: 'Diesel', value: '2,769 $/L' },
+      { label: 'Super', value: '2,07 $/L' },
+      { label: 'Diesel', value: '2,77 $/L' },
     ],
   });
   // Les réglages exigent au moins un carburant, sans doublon.
@@ -141,6 +144,43 @@ test('super et diesel avec la station préférée : deux tuiles', async (t) => {
     f.runtime.validateConfig(addon.id, source({ carburants: ['Super', 'Super'] })).ok,
     false,
   );
+});
+
+test('miroir : deux Esso et un Mobil, l’adresse seulement pour départager les Esso', () => {
+  const station = (nom: string, adresse: string) => ({
+    nom,
+    adresse,
+    distanceKm: 3,
+    prix: [],
+  });
+  const saintefoy = station('Esso', '3000 ch. Sainte-Foy, Québec');
+  const levesque = station('Esso', '2500 boul. René-Lévesque, Québec');
+  const mobil = station('Mobil', '2400 boul. René-Lévesque, Québec');
+  const content = addon.ambient!.present(
+    {
+      status: 'ready',
+      data: {
+        rayonKm: 5,
+        zone: true,
+        meilleurs: [
+          { carburant: 'Régulier', cents: 169.9, station: saintefoy, favorite: false },
+          { carburant: 'Super', cents: 191.9, station: levesque, favorite: false },
+          { carburant: 'Diesel', cents: 275.9, station: mobil, favorite: false },
+        ],
+        favorite: null,
+        releve: '2026-11-12T15:50:00Z',
+      },
+    } as never,
+    { instance: { config: {} }, now: () => 0, timeZone: 'America/Toronto' } as never,
+  );
+  // Trop long pour deux lignes : la rue déjà écrite passe en initiales.
+  assert.equal(content.subtitle, 'Esso 3000 Sainte-Foy · Esso 2500 René-Lévesque · Mobil 2400 R-L');
+  assert.deepEqual(content.items, [
+    { label: 'Ordinaire · Esso 3000 S-F', value: '1,70 $/L' },
+    { label: 'Super · Esso 2500 R-L', value: '1,92 $/L' },
+    // Un seul Mobil : la bannière suffit.
+    { label: 'Diesel · Mobil', value: '2,76 $/L' },
+  ]);
 });
 
 test('station préférée déjà la moins chère : rien de mieux à annoncer', async (t) => {
@@ -248,6 +288,19 @@ test('recherche avec une adresse copiée de Google', async (t) => {
 
 test('codes postaux, prix et adresses', () => {
   assert.equal(codePostal(' h2x 1y4 '), 'H2X1Y4');
+  // Initiales de la rue, pour distinguer deux stations de la même bannière sur le miroir.
+  assert.equal(initialesRue('2500 boul. René-Lévesque, Québec'), 'R-L');
+  assert.equal(initialesRue('800 rue de l’Église, Québec'), 'É');
+  assert.equal(initialesRue("800 rue de l'Église, Québec"), 'É');
+  assert.equal(initialesRue('1350 ch. Sainte-Foy, Québec'), 'S-F');
+  assert.equal(initialesRue('4105 av. 4 est, Québec'), '4E');
+  assert.equal(initialesRue('8860 boul. Louis-XIV, Québec'), 'L-XIV');
+  // Bannière longue en initiales sur le miroir, traits d'union gardés.
+  assert.equal(banniere('Petro-Canada'), 'P-C');
+  assert.equal(banniere('Couche-Tard'), 'C-T');
+  assert.equal(banniere('Canadian Tire'), 'CT');
+  assert.equal(banniere('Ultramar'), 'Ultramar');
+  assert.equal(banniere('Esso'), 'Esso');
   assert.equal(codePostal('K1A 0B1'), null);
   assert.equal(cents('169.9¢'), 169.9);
   assert.equal(cents(''), null);

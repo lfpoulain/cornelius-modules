@@ -380,6 +380,13 @@ async function collect(context: Context) {
 
 /** Carte : « 1,699 $/L ». */
 export const enDollars = (c: number) => `${(c / 100).toFixed(3).replace('.', ',')} $/L`;
+/**
+ * Miroir, colonne étroite : le prix seul, arrondi au cent (« 1,91 »), l'unité dans le sous-titre.
+ * Même avec une espace insécable, le miroir coupait « 1,909 $ » avant le « $ ».
+ */
+export const prixCourt = (c: number) => (Math.round(c) / 100).toFixed(2).replace('.', ',');
+/** Miroir, quand la colonne de gauche ne porte que le carburant : « 2,07 $/L », arrondi au cent. */
+export const prixLitre = (c: number) => `${prixCourt(c)} $/L`;
 /** Oral : 169,9 cents → « 1 dollar 70 » ; 200 → « 2 dollars ». */
 export function ditEnDollars(c: number): string {
   const total = Math.round(c);
@@ -422,6 +429,78 @@ const prixDits = (s: Station) =>
 /** Oral : « Petro-Canada, 1350 chemin Sainte-Foy, à 4 kilomètres ». */
 const stationDite = (s: Station) =>
   `${s.nom}, ${adresseDite(s.adresse)}${s.distanceKm === null ? '' : `, ${distanceDite(s.distanceKm)}`}`;
+/** Petits mots d'un nom de rue, sans initiale : « de l'Église » donne « É ». */
+const particules = new Set(['de', 'du', 'des', 'la', 'le', 'les', 'l', 'd', 'et', 'au', 'aux']);
+/**
+ * Initiales de la rue : « 2500 René-Lévesque » donne « R-L », « 800 de l'Église » « É »,
+ * « 1350 Sainte-Foy » « S-F ». Un nombre (« 4e ») est gardé tel quel.
+ */
+export function initialesRue(adresse: string): string {
+  return initiales(adresseCourte(adresse).replace(/^\s*\d+[a-z]?\s+/iu, ''));
+}
+/**
+ * Initiales d'un nom, sans les petits mots ; le trait d'union d'un nom composé est gardé
+ * (« René-Lévesque » donne « R-L ») et un nombre (« 4e ») reste tel quel.
+ */
+function initiales(texte: string): string {
+  return texte
+    .split(/[\s’']+/u)
+    .filter((mot) => mot && !particules.has(mot.toLowerCase()))
+    .map((mot) =>
+      mot
+        .split('-')
+        .filter(Boolean)
+        // Un nombre (« 4e ») ou un chiffre romain (« Louis-XIV » donne « L-XIV ») reste entier.
+        .map((partie) =>
+          /^\d/u.test(partie) || /^[IVXLC]{2,}$/u.test(partie)
+            ? partie
+            : partie.charAt(0).toUpperCase(),
+        )
+        .join('-'),
+    )
+    .join('')
+    .slice(0, 8);
+}
+/**
+ * Bannière sur le miroir : en entier si elle est courte (« Esso », « Ultramar »), en initiales
+ * au-delà de 8 caractères (« Petro-Canada » donne « P-C », « Canadian Tire » « CT »).
+ */
+export const banniere = (nom: string) => (nom.length > 8 ? initiales(nom) : nom);
+/**
+ * Miroir : la bannière, le numéro civique et les initiales de la rue (« Esso 2500 R-L »), pour
+ * distinguer deux stations de la même bannière d'un coup d'œil.
+ */
+const repere = (s: Station) => {
+  const numero = /^\s*(\d+[a-z]?)\b/iu.exec(s.adresse)?.[1];
+  const rue = initialesRue(s.adresse);
+  return [banniere(s.nom), numero, rue].filter(Boolean).join(' ');
+};
+/**
+ * Sous-titre de la tuile à plusieurs stations : la bannière (courte) et l'adresse de chacune,
+ * « Esso 2500 René-Lévesque · Mobil 2400 René-Lévesque ». Le miroir le coupe au-delà de deux
+ * lignes (environ 64 caractères) : une rue déjà écrite en entier passe alors en initiales
+ * (« Mobil 2400 R-L »), puis, s'il le faut encore, toutes les rues sauf la première.
+ */
+export function sousTitreAdresses(stations: Station[]): string {
+  const parties = stations.map((s) => {
+    const adresse = adresseCourte(s.adresse);
+    const numero = /^\s*(\d+[a-z]?)\b/iu.exec(adresse)?.[1] ?? '';
+    const rue = adresse.slice(numero.length).trim();
+    return { banniere: banniere(s.nom), numero, rue, initiales: initialesRue(s.adresse) };
+  });
+  const ecrire = (abreger: (rue: string, i: number) => boolean) =>
+    parties
+      .map((p, i) =>
+        [p.banniere, p.numero, abreger(p.rue, i) ? p.initiales : p.rue].filter(Boolean).join(' '),
+      )
+      .join(' · ');
+  const limite = 64;
+  const complet = ecrire(() => false);
+  if (complet.length <= limite) return complet;
+  const repetees = ecrire((rue, i) => parties.findIndex((p) => p.rue === rue) < i);
+  if (repetees.length <= limite) return repetees;
+  return ecrire((_rue, i) => i > 0);
+}
 /** Écrit : « Petro-Canada, 1350 Sainte-Foy ». */
 const stationEcrite = (s: Station) => `${s.nom}, ${adresseCourte(s.adresse)}`;
 
@@ -646,7 +725,7 @@ const addon: AddonDefinition<CarburantsConfig, CarburantsData> = {
               stationEcrite(fav),
               fav.prix.map((p) => ({
                 label: noms[p.carburant].court,
-                value: p.cents === null ? '—' : enDollars(p.cents),
+                value: p.cents === null ? '—' : prixLitre(p.cents),
               })),
             )
           : tuile('Aucune station préférée', []);
@@ -663,18 +742,33 @@ const addon: AddonDefinition<CarburantsConfig, CarburantsData> = {
       if (seule)
         return tuile(
           `${stationEcrite(seule.station)}${seule.station.distanceKm === null ? '' : ` (${km(seule.station.distanceKm)})`}`,
-          seule.prix.map((m) => ({ label: noms[m.carburant].court, value: enDollars(m.cents) })),
+          seule.prix.map((m) => ({ label: noms[m.carburant].court, value: prixLitre(m.cents) })),
         );
-      // Plusieurs stations : le type et sa station à gauche, le prix à droite.
+      // Plusieurs stations. Le miroir rétrécit les deux colonnes d'une ligne ensemble dès qu'elle
+      // déborde : une adresse dans une ligne écrasait le prix ou le carburant (« 1,9 / 1 »,
+      // « Supe / r »). Les lignes restent donc courtes (« Super · Esso », « 1,91 $/L ») et les
+      // adresses passent dans le sous-titre, qui occupe toute la largeur.
+      // Jusqu'à trois carburants, donc trois stations. La ligne ne porte que la bannière
+      // (« Diesel · Mobil »), sauf quand la même bannière revient à des adresses différentes (deux
+      // Esso) : alors le numéro civique et les initiales de la rue (« Super · Esso 2500 R-L »). Le
+      // sous-titre donne les adresses complètes, dans le même ordre. Le prix se contente de « $ »
+      // pour que la ligne tienne entière.
+      const stations = groupes.filter((g) => !g.favorite).map((g) => g.station);
+      const doublons = new Set(
+        stations.map((s) => s.nom).filter((nom, i, liste) => liste.indexOf(nom) !== i),
+      );
+      const adresses = sousTitreAdresses(stations);
       return tuile(
-        `Rayon de ${data.rayonKm} km`,
+        adresses || `Rayon de ${data.rayonKm} km`,
         meilleurs.map((m) => ({
-          label:
-            `${noms[m.carburant].court} · ${m.favorite ? 'ta station' : stationEcrite(m.station)}`.slice(
-              0,
-              80,
-            ),
-          value: enDollars(m.cents),
+          label: `${noms[m.carburant].court} · ${
+            m.favorite
+              ? 'ta station'
+              : doublons.has(m.station.nom)
+                ? repere(m.station)
+                : banniere(m.station.nom)
+          }`.slice(0, 80),
+          value: prixLitre(m.cents),
         })),
       );
     },
