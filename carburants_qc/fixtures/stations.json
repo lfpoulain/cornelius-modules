@@ -1,0 +1,5691 @@
+{
+ "type": "FeatureCollection",
+ "metadata": {
+  "generated_at": "2026-11-12T14:45:00.2854952Z",
+  "excel_url": "/data/stations-20261112144500.xlsx",
+  "total_stations": 2471,
+  "excel_size_bytes": 197357
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.476258,
+     46.942111
+    ]
+   },
+   "properties": {
+    "Name": "3094-1140 QUEBEC INC",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "2288 Boul. Valcartier, SAINT-GABRIEL-DE-VALCARTIER",
+    "PostalCode": "G0A 4S0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.354569,
+     46.834381
+    ]
+   },
+   "properties": {
+    "Name": "9008-3619 QUEBEC INC",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "9335 Boul. de l'Ormière, QUÉBEC",
+    "PostalCode": "G2B 3K6",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "205.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.190853,
+     47.00538
+    ]
+   },
+   "properties": {
+    "Name": "9014-1151 Québec Inc.",
+    "brand": "Harnois",
+    "Status": "En opération",
+    "Address": "443 av. Sainte-Brigitte, Sainte-Brigitte-de-Laval",
+    "PostalCode": "G0A 3K0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "170.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "191.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.270009,
+     46.788965
+    ]
+   },
+   "properties": {
+    "Name": "9027-6593 Québec Inc.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "2125 ch. Sainte-Foy, Québec",
+    "PostalCode": "G1V 1R9",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "189.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "219.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.255006,
+     46.837285
+    ]
+   },
+   "properties": {
+    "Name": "9049-7777 Québec Inc.",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "3355 av. Duval, Québec",
+    "PostalCode": "G1L 4P6",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "169.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "194.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.077725,
+     46.919491
+    ]
+   },
+   "properties": {
+    "Name": "9071-9535 Québec Inc.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "6680 boul. Sainte-Anne, L'Ange-Gardien",
+    "PostalCode": "G0A 2K0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "179.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "207.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.230569,
+     47.559644
+    ]
+   },
+   "properties": {
+    "Name": "9160-0890 Québec inc.",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "10001 rte 175, Stoneham-et-Tewkesbury",
+    "PostalCode": "G0A 4P0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "201.4¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "221.4¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "301.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.30397,
+     46.849502
+    ]
+   },
+   "properties": {
+    "Name": "9163-8007 quebec inc.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "1234 boul. Bastien, Québec",
+    "PostalCode": "G2K 1G1",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.241687,
+     46.849652
+    ]
+   },
+   "properties": {
+    "Name": "9310-5666 Québec Inc.",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "4680 boul. Henri-Bourassa, Québec",
+    "PostalCode": "G1H 3A5",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "170.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "191.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.226154,
+     46.835538
+    ]
+   },
+   "properties": {
+    "Name": "9319-6756 QUÉBEC INC.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "1254 rue 18, Québec",
+    "PostalCode": "G1J 1Z3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "170.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "198.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "276.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.277316,
+     46.833438
+    ]
+   },
+   "properties": {
+    "Name": "9319-6756 QUÉBEC INC.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "780 rue Bouvier, Québec",
+    "PostalCode": "G2J 1A3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.331086,
+     46.818765
+    ]
+   },
+   "properties": {
+    "Name": "9319-6756 QUÉBEC INC.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "5000 boul. de l'Ormière, Québec",
+    "PostalCode": "G1P 1K7",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "206.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.2811,
+     46.843048
+    ]
+   },
+   "properties": {
+    "Name": "9319-6756 QUÉBEC INC.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "720 boul. Lebourgneuf, Québec",
+    "PostalCode": "G2J 1A8",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.288052,
+     46.767025
+    ]
+   },
+   "properties": {
+    "Name": "9319-6756 QUÉBEC INC.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "2831 boul. Laurier, Québec",
+    "PostalCode": "G1V 2L9",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "206.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "276.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.310881,
+     46.781377
+    ]
+   },
+   "properties": {
+    "Name": "9319-6756 QUÉBEC INC.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "745 av. de Lestres, Québec",
+    "PostalCode": "G1X 2L9",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "206.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.246089,
+     46.789708
+    ]
+   },
+   "properties": {
+    "Name": "9394-4833 Québec Inc.",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "1280 boul. Grande Allée ouest, Québec",
+    "PostalCode": "G1S 1E8",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "192.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.891093,
+     46.708901
+    ]
+   },
+   "properties": {
+    "Name": "9403-1135 Québec Inc.",
+    "brand": "Pétro-T",
+    "Status": "En opération",
+    "Address": "300 rue Saint-Charles, Notre-Dame-de-Portneuf",
+    "PostalCode": "G0A 2Y0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "172.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "198.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.261023,
+     46.809682
+    ]
+   },
+   "properties": {
+    "Name": "9410-3306 Quebec inc",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "1080 boul. Wilfrid-Hamel, QUÉBEC",
+    "PostalCode": "G1M 2S3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "198.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.094105,
+     46.911938
+    ]
+   },
+   "properties": {
+    "Name": "9504-6363 Québec inc.",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "6318 boul. Sainte-Anne, L'Ange-Gardien",
+    "PostalCode": "G0A 2K0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.083445,
+     46.917043
+    ]
+   },
+   "properties": {
+    "Name": "9505-5653 Québec inc.",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "6536 boul. Sainte-Anne, L'Ange-Gardien",
+    "PostalCode": "G0A 2K0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "202.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.281988,
+     46.827433
+    ]
+   },
+   "properties": {
+    "Name": "9509-2359 QUEBEC INC",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "425 rue du Marais, QUÉBEC",
+    "PostalCode": "G1M 3A2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "205.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.791002,
+     46.672503
+    ]
+   },
+   "properties": {
+    "Name": "Accommodation Cap-Santé enr.",
+    "brand": "Sonic",
+    "Status": "En opération",
+    "Address": "328 rte 138, Cap-Santé",
+    "PostalCode": "G0A 1L0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "170.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.242766,
+     46.848071
+    ]
+   },
+   "properties": {
+    "Name": "BCP IV Service Station LP",
+    "brand": "Mobil",
+    "Status": "En opération",
+    "Address": "4535 boul. Henri-Bourassa, Québec",
+    "PostalCode": "G1H 7L9",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "169.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "195.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "275.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.24687,
+     46.789388
+    ]
+   },
+   "properties": {
+    "Name": "Centre De Service R.F. Inc.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "1284 boul. Laurier, Québec",
+    "PostalCode": "G1S 1E9",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "172.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "195.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.04365,
+     46.676598
+    ]
+   },
+   "properties": {
+    "Name": "CONSTRUCTION E G R ST-MARC INC",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "655 Boul. Bona Dussault, SAINT-MARC-DES-CARRIÈRES",
+    "PostalCode": "G0A 4B0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "202.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "284.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.179219,
+     46.980831
+    ]
+   },
+   "properties": {
+    "Name": "Coopérative de solidarité d'alimentation de Rivière-à-Pierre",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "294 rue Principale, Rivière-à-Pierre",
+    "PostalCode": "G0A 3A0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "204.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "295.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.269263,
+     46.839565
+    ]
+   },
+   "properties": {
+    "Name": "Costco Québec",
+    "brand": "Costco",
+    "Status": "En opération",
+    "Address": "440 rue Bouvier, Québec",
+    "PostalCode": "G2J 1E3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "166.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "186.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.328438,
+     46.780325
+    ]
+   },
+   "properties": {
+    "Name": "Costco Sainte-Foy",
+    "brand": "Costco",
+    "Status": "En opération",
+    "Address": "3233 av. Watt, Québec",
+    "PostalCode": "G1X 4W2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "166.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "186.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.260341,
+     46.810245
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #1025",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "1000 boul. Wilfrid-Hamel, Québec",
+    "PostalCode": "G1M 2S2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.362502,
+     46.841069
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #1123",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "10048 boul. de l'ormière, Québec",
+    "PostalCode": "G2B 3L3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.286912,
+     46.814369
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #1141",
+    "brand": "Couche-Tard",
+    "Status": "En opération",
+    "Address": "1781 av. du Marais, Québec",
+    "PostalCode": "G1M 0A2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.354603,
+     46.789399
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #1221",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "6550 boul. Wilfrid-Hamel, L'Ancienne-Lorette",
+    "PostalCode": "G2E 2J1",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "200.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.228778,
+     46.816269
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #1305",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "223 rue Dorchester, Québec",
+    "PostalCode": "G1K 5Z3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "169.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "194.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.25004,
+     46.818605
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #1306",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "576 boul. Wilfrid-Hamel, Québec",
+    "PostalCode": "G1M 2S9",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.265865,
+     46.844905
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #1307",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "490 boul. de l'Atrium, Québec",
+    "PostalCode": "G1H 7H2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "169.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "194.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.320532,
+     46.759915
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #1308",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "3525 ch. des Quatre-Bourgeois, Québec",
+    "PostalCode": "G1W 2L1",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.369844,
+     46.764633
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #1309",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "1240 rue Charles-Albanel, Québec",
+    "PostalCode": "G1X 4V1",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.517038,
+     46.885825
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #1345",
+    "brand": "Couche-Tard",
+    "Status": "En opération",
+    "Address": "432 boul. Jacques-Cartier, Shannon",
+    "PostalCode": "G0A 4N0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.33652,
+     46.822729
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #500",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "6480 boul. de l'Ormière, Québec",
+    "PostalCode": "G1P 1K7",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.615111,
+     46.844937
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #501",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "4694 rte de Fossambault, Sainte-Catherine-de-la-Jacques-Cartier",
+    "PostalCode": "G0A 3M0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "172.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "197.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.310132,
+     46.9373
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #503",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "1015 boul. du Lac, Lac-Beauport",
+    "PostalCode": "G0A 2C0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "174.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "199.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.310189,
+     46.812213
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #504",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "2845 boul. du Père-Lelièvre, Québec",
+    "PostalCode": "G1P 2X9",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.352127,
+     46.787663
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #505",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "1241 aut. Duplessis, L'Ancienne-Lorette",
+    "PostalCode": "G2G 2B4",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.259128,
+     46.799158
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #518",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "470 av. Saint-Sacrement, Québec",
+    "PostalCode": "G1N 3Y3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.276518,
+     46.854414
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #519",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "545 rue 76 ouest, Québec",
+    "PostalCode": "G1H 4S4",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "174.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "199.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.31919,
+     46.82334
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #527",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "2900 boul. Lebourgneuf, Québec",
+    "PostalCode": "G2C 1S2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.34696,
+     46.856569
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #535",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "41 rue Valvue, Québec",
+    "PostalCode": "G2A 2G1",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.315834,
+     46.80592
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #539",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "3945 boul. Wilfrid-Hamel, Québec",
+    "PostalCode": "G1P 2J4",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "179.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "204.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.373711,
+     46.81595
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #543",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "4409 boul. Chauveau ouest, Québec",
+    "PostalCode": "G2E 1A2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "200.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.321369,
+     46.845915
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #548",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "1970 boul. Chauveau  est, Québec",
+    "PostalCode": "G2C 1A9",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.251248,
+     46.845092
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #551",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "4660 av. 1, Québec",
+    "PostalCode": "G1H 2T2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "169.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "194.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.279113,
+     46.855338
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #553",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "527 boul. Louis-XIV, Québec",
+    "PostalCode": "G1H 4N7",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "174.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "199.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.268236,
+     46.820869
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #554",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "610 boul. Pierre-Bertrand, Québec",
+    "PostalCode": "G1M 3A3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "172.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "197.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.216997,
+     46.854713
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #558",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "3190 rue Alexandra, Québec",
+    "PostalCode": "G1E 6W2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "170.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "195.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.234499,
+     46.84763
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #564",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "2800 rue Champfleury, Québec",
+    "PostalCode": "G1J 5G4",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "169.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "194.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.896146,
+     47.043069
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #567",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "11005 boul. Sainte-Anne, Beaupré",
+    "PostalCode": "G0A 1E0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "179.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "204.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.255915,
+     46.844117
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #571",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "4750 av. 3 ouest, Québec",
+    "PostalCode": "G1H 6G1",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "169.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "194.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.246589,
+     46.840084
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #574",
+    "brand": "Couche-Tard",
+    "Status": "En opération",
+    "Address": "3240 av. 1, Québec",
+    "PostalCode": "G1L 3P9",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "169.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "194.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.238873,
+     46.852184
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #575",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "4660 av. de Gaulle, Québec",
+    "PostalCode": "G1H 4J2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.243951,
+     46.804701
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #583",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "750 boul. Charest ouest, Québec",
+    "PostalCode": "G1N 2C5",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "282.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.379039,
+     46.753864
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #585",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "3652 rue de l'Hêtrière, Saint-Augustin-de-Desmaures",
+    "PostalCode": "G3R 2L4",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.934647,
+     47.020221
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #586",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "9687 boul. Sainte-Anne, Sainte-Anne-de-Beaupré",
+    "PostalCode": "G0A 3C0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "179.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "204.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.123083,
+     46.898029
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #589",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "5550 boul. Sainte-Anne, Boischatel",
+    "PostalCode": "G0A 1H0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.216536,
+     46.846709
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #722",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "2100 av. D'Estimauville, Québec",
+    "PostalCode": "G1J 5C8",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "200.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.993776,
+     46.637918
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard inc.",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "25 rue des Pins, Deschambault-Grondines",
+    "PostalCode": "G0A 1S0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "172.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "198.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.34988,
+     46.808821
+    ]
+   },
+   "properties": {
+    "Name": "DACINE INC",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "2020 rue Saint-Jean Baptiste, L'ANCIENNE-LORETTE",
+    "PostalCode": "G2E 4S8",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "202.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.320248,
+     46.810162
+    ]
+   },
+   "properties": {
+    "Name": "Dépanner Sprint Masson",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "2565 boul. Masson, Québec",
+    "PostalCode": "G1P 1J5",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.133453,
+     46.892147
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Beau-Soir Boischatel",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "5401 boul. Sainte-Anne, Boischatel",
+    "PostalCode": "G0A 1H0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "185.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "210.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "289.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.769619,
+     47.141226
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur des Caps",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "300 rte 138, Saint-Tite-des-Caps",
+    "PostalCode": "G0A 4J0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "225.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "274.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.07723,
+     46.718378
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur du centre DS inc.",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "231 rue Principale, Saint-Alban",
+    "PostalCode": "G0A 3B0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "174.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "199.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.309302,
+     46.850859
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Éclair Chauveau",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "1365 boul. Bastien, Québec",
+    "PostalCode": "G2K 1G5",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.097857,
+     46.874153
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Ferland",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "1184 ch. Royal, Saint-Pierre-de-l'Île-d'Orléans",
+    "PostalCode": "G0A 4E0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "170.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "195.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.28705,
+     46.867135
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Jean-Talon (2868-2904 Québec Inc.)",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "1551 rue Jean-Talon est, Québec",
+    "PostalCode": "G1G 2L5",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "174.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "202.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.32321,
+     47.478758
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Robin Tremblay inc.",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "2225 rte du Fleuve, Les Éboulements",
+    "PostalCode": "G0A 2M0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "179.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "200.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.256259,
+     46.830305
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur SPRINT  la Concorde",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "2600 rue de la Concorde, Québec",
+    "PostalCode": "G1L 4Z5",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "169.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "194.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.267913,
+     46.858881
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Sprint (76e rue est)",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "125 rue 76 est, Québec",
+    "PostalCode": "G1H 1G3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "174.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "199.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.294566,
+     46.848735
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Sprint (boul. Louis-XIV)",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "65 boul. Louis-XIV, Québec",
+    "PostalCode": "G2K 1E4",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.27914,
+     46.810863
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Sprint (boul. Père-Lelièvre)",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "1450 boul. du Père-Lelièvre, Québec",
+    "PostalCode": "G1M 1N9",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.29482,
+     46.81146
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Sprint (boul. Père-Lelièvre)",
+    "brand": "Eko",
+    "Status": "En opération",
+    "Address": "2055 boul. du Père-Lelièvre, Québec",
+    "PostalCode": "G1P 2W8",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.254737,
+     46.794644
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Sprint (ch. Ste-Foy)",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "1350 ch. Sainte-Foy, Québec",
+    "PostalCode": "G1S 2N6",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.363765,
+     46.760316
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Sprint (route Jean-Gauvin)",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "955 rte Jean-Gauvin, Québec",
+    "PostalCode": "G1X 4M5",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.350576,
+     46.758256
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur SPRINT Cap-Rouge",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "1114 boul. de la Chaudière, Québec",
+    "PostalCode": "G1Y 3T8",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.202586,
+     46.816568
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur SPRINT Dalhousie",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "115 rue Dalhousie, Québec",
+    "PostalCode": "G1K 4C2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "170.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "195.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.617044,
+     46.846561
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Sprint Fossambault",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "4754 rte de Fossambault, Sainte-Catherine-de-la-Jacques-Cartier",
+    "PostalCode": "G0A 3M0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "172.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "197.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.331827,
+     46.803106
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur SPRINT Hamel",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "5100 boul. Wilfrid-Hamel, Québec",
+    "PostalCode": "G2E 2G9",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "200.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.35107,
+     46.831978
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur SPRINT L'Ormière",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "9025 boul. de l'Ormière, Québec",
+    "PostalCode": "G2B 3K2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.281849,
+     46.828739
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur SPRINT Marais",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "390 av. du Marais, Québec",
+    "PostalCode": "G1M 3A2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "200.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.367421,
+     46.8086
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur SPRINT Notre-Dame",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "1855 rue Notre-Dame, L'Ancienne-Lorette",
+    "PostalCode": "G2E 5A5",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "200.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.516925,
+     46.886957
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur SPRINT Shannon",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "435 boul. Jacques-Cartier, Shannon",
+    "PostalCode": "G0A 4N0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.250868,
+     46.817814
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur SPRINT Wilfrid-Hamel",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "580 boul. Wilfrid-Hamel, Québec",
+    "PostalCode": "G1M 2T3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.892501,
+     46.694403
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Suprême",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "100 rue Provencher, Portneuf",
+    "PostalCode": "G0A 2Y0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "174.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "202.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "287.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.293631,
+     46.811654
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Vidéo Éclair inc.",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "2530 boul. Central, Québec",
+    "PostalCode": "G1P 3P1",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "284.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.272702,
+     46.756968
+    ]
+   },
+   "properties": {
+    "Name": "Épicerie St-Ubalde",
+    "brand": "Sonic",
+    "Status": "En opération",
+    "Address": "457 rue Saint-Paul, Saint-Ubalde",
+    "PostalCode": "G0A 4L0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "167.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "191.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.198261,
+     46.981855
+    ]
+   },
+   "properties": {
+    "Name": "Famille Landry-Tardif inc.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "247 av. Sainte-Brigitte, Sainte-Brigitte-de-Laval",
+    "PostalCode": "G0A 3K0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "170.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "198.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.383158,
+     46.808659
+    ]
+   },
+   "properties": {
+    "Name": "Filgo Ancienne-Lorette",
+    "brand": "Sonic",
+    "Status": "En opération",
+    "Address": "1799 rte de l'Aéroport, Québec",
+    "PostalCode": "G2G 2N4",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "199.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.933448,
+     47.019996
+    ]
+   },
+   "properties": {
+    "Name": "Filgo Beaupré",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "9734 boul. Sainte-Anne, Sainte-Anne-de-Beaupré",
+    "PostalCode": "G0A 3C0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "179.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "205.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.243448,
+     46.804299
+    ]
+   },
+   "properties": {
+    "Name": "Filgo Charest",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "735 boul. Charest ouest, Québec",
+    "PostalCode": "G1N 2C3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "197.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.132949,
+     46.656916
+    ]
+   },
+   "properties": {
+    "Name": "Garage Conrad Audet inc.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "415 rte Guilbeault, Saint-Casimir",
+    "PostalCode": "G0A 3L0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "174.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "200.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.330386,
+     46.863527
+    ]
+   },
+   "properties": {
+    "Name": "Garage Magella Beaulieu Inc.",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "1085 av. Lapierre, Québec",
+    "PostalCode": "G0A 3K0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "277.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.802263,
+     46.735302
+    ]
+   },
+   "properties": {
+    "Name": "Garage Serge Lirette inc.",
+    "brand": "Eko",
+    "Status": "En opération",
+    "Address": "803 rue de la Station, Saint-Basile",
+    "PostalCode": "G0A 3G0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "172.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "197.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.999585,
+     46.644049
+    ]
+   },
+   "properties": {
+    "Name": "Halte Deschambault",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "150 rte Dussault, Deschambault-Grondines",
+    "PostalCode": "G0A 1S0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "200.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "284.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.315507,
+     46.806867
+    ]
+   },
+   "properties": {
+    "Name": "Hamel",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "3904 boul. Wilfrid-Hamel, Québec",
+    "PostalCode": "G1P 2J2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "179.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "204.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.358428,
+     46.777045
+    ]
+   },
+   "properties": {
+    "Name": "Harnois Énergies Inc",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "1700 av. Jules-Verne, Québec",
+    "PostalCode": "G2G 2R1",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.226275,
+     46.822132
+    ]
+   },
+   "properties": {
+    "Name": "Harnois Énergies Inc.",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "355 av. 3, Québec",
+    "PostalCode": "G1L 2V9",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "169.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "190.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.33127,
+     46.80266
+    ]
+   },
+   "properties": {
+    "Name": "Harnois Énergies Inc.",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "5105 boul. Wilfrid-Hamel, Québec",
+    "PostalCode": "G2E 2G8",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.209093,
+     46.817112
+    ]
+   },
+   "properties": {
+    "Name": "Harnois Énergies Inc.",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "222 rue Saint-Paul, Québec",
+    "PostalCode": "G1K 3W4",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "169.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "190.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.301497,
+     46.833056
+    ]
+   },
+   "properties": {
+    "Name": "Harnois Énergies Inc.",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "1515 boul. Lebourgneuf, Québec",
+    "PostalCode": "G2K 2G3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.627149,
+     46.699738
+    ]
+   },
+   "properties": {
+    "Name": "Harnois Énergies Inc.",
+    "brand": "Harnois",
+    "Status": "En opération",
+    "Address": "1220 rte 138, Neuville",
+    "PostalCode": "G0A 2R0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "172.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "193.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.244292,
+     46.843689
+    ]
+   },
+   "properties": {
+    "Name": "Harnois Énergies Inc.",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "4105 av. 4 est, Québec",
+    "PostalCode": "G1H 3N2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "170.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "191.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.310696,
+     46.766597
+    ]
+   },
+   "properties": {
+    "Name": "Harnois Énergies Inc.",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "3235 ch. des Quatre-Bourgeois, Québec",
+    "PostalCode": "G1W 2K9",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "197.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.332366,
+     46.85753
+    ]
+   },
+   "properties": {
+    "Name": "Harnois Énergies Inc.",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "1983 boul. Bastien, Québec",
+    "PostalCode": "G2B 1C2",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "197.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.28423,
+     46.761654
+    ]
+   },
+   "properties": {
+    "Name": "IB Services inc",
+    "brand": "Eko",
+    "Status": "En opération",
+    "Address": "2904 ch. Saint-Louis, Québec",
+    "PostalCode": "G1W 1P5",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "276.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.235212,
+     46.831485
+    ]
+   },
+   "properties": {
+    "Name": "IB services inc.",
+    "brand": "Eko",
+    "Status": "En opération",
+    "Address": "285 rue 18, Québec",
+    "PostalCode": "G1L 2E1",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "170.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "195.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "276.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.287563,
+     46.783762
+    ]
+   },
+   "properties": {
+    "Name": "Irving du Vallon",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "2481 ch. Sainte-Foy, Québec",
+    "PostalCode": "G1V 1T7",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "179.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "228.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "295.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.375763,
+     46.767152
+    ]
+   },
+   "properties": {
+    "Name": "JNSS INC.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "2222 av. Jules-Verne, QUÉBEC",
+    "PostalCode": "G2G 2R3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "204.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.251932,
+     46.816137
+    ]
+   },
+   "properties": {
+    "Name": "La Société Canadian Tire Ltée",
+    "brand": "Canadian Tire",
+    "Status": "En opération",
+    "Address": "636 boul. Wilfrid-Hamel, Québec",
+    "PostalCode": "G1M 3P9",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "193.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.331002,
+     46.817578
+    ]
+   },
+   "properties": {
+    "Name": "La Société Canadian Tire Ltée",
+    "brand": "Canadian Tire",
+    "Status": "En opération",
+    "Address": "4895 boul. de l'Ormière, Québec",
+    "PostalCode": "G1P 1K6",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.214727,
+     46.844714
+    ]
+   },
+   "properties": {
+    "Name": "La Société Canadian Tire Ltée",
+    "brand": "Canadian Tire",
+    "Status": "En opération",
+    "Address": "2541 boul. Sainte-Anne, Québec",
+    "PostalCode": "G1J 1Y4",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "171.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.99862,
+     46.643648
+    ]
+   },
+   "properties": {
+    "Name": "LIBRE SERVICE DANIEL DUPÉRÉ INC",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "141 Rang 2, Deschambault-Grondines",
+    "PostalCode": "G0A 1S0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "175.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "202.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "284.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.862102,
+     47.110893
+    ]
+   },
+   "properties": {
+    "Name": "Marché du village Dany Drouin inc.",
+    "brand": "Sonic",
+    "Status": "En opération",
+    "Address": "3175 av. Royale, Saint-Ferréol-les-Neiges",
+    "PostalCode": "G0A 3R0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "179.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.904492,
+     47.060064
+    ]
+   },
+   "properties": {
+    "Name": "Marché Mont Ste-Anne",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "250 boul. du Beau-Pré, Beaupré",
+    "PostalCode": "G0A 1E0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "187.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "212.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "299.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.345636,
+     46.747902
+    ]
+   },
+   "properties": {
+    "Name": "Marché Nada caprouge inc.",
+    "brand": "Harnois",
+    "Status": "En opération",
+    "Address": "4243 rue Saint-Félix, Québec",
+    "PostalCode": "G1Y 1X6",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "197.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.27259,
+     46.866811
+    ]
+   },
+   "properties": {
+    "Name": "PIERRE GINGRAS",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "8860 Boul. Henri-Bourassa, QUÉBEC",
+    "PostalCode": "G1G 4E3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "174.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.897579,
+     47.042562
+    ]
+   },
+   "properties": {
+    "Name": "Provisions Côté inc.",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "10997 boul. Sainte-Anne, Beaupré",
+    "PostalCode": "G0A 1E0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "179.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "212.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "289.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.405251,
+     47.574818
+    ]
+   },
+   "properties": {
+    "Name": "Settrington Alimentation",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "326 rte 138, Saint-Hilarion",
+    "PostalCode": "G0A 3V0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "179.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "204.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.364174,
+     47.424015
+    ]
+   },
+   "properties": {
+    "Name": "Station de gaz Hélène H Dufour enr.",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "3269 ch. des Coudriers, L'Isle-aux-Coudres",
+    "PostalCode": "G0A 3J0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "179.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "204.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.356841,
+     46.861476
+    ]
+   },
+   "properties": {
+    "Name": "Station-service Wendake",
+    "brand": "Eko",
+    "Status": "En opération",
+    "Address": "2909 rue de la Faune, Wendake",
+    "PostalCode": "G0A 4V0",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "277.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.227723,
+     46.822194
+    ]
+   },
+   "properties": {
+    "Name": "TAXIS COOP QUEBEC 525-5191",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "201 rue 4, QUÉBEC",
+    "PostalCode": "G1L 2S4",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "169.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "278.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.301315,
+     46.786455
+    ]
+   },
+   "properties": {
+    "Name": "TAXIS STE-FOY SILLERY",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "2631 Boul. du Versant nord, QUÉBEC",
+    "PostalCode": "G1V 1A3",
+    "Region": "Capitale-Nationale",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "277.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.310892,
+     46.728966
+    ]
+   },
+   "properties": {
+    "Name": "9033-4814 QUEBEC INC",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "390 route Marie-Victorin, Lévis",
+    "PostalCode": "G7A 2X5",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.159855,
+     46.791567
+    ]
+   },
+   "properties": {
+    "Name": "9205-1242 Québec inc.",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "1655 boul. Alphonse-Desjardins, LÉVIS",
+    "PostalCode": "G6V 0B7",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.186653,
+     46.788973
+    ]
+   },
+   "properties": {
+    "Name": "9205-1242 Québec inc.",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "4915 boul. Guillaume-Couture, Lévis",
+    "PostalCode": "G6W 1H2",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.19666,
+     46.775814
+    ]
+   },
+   "properties": {
+    "Name": "9257-3591 QUEBEC INC",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "4005 Boul. Guillaume-Couture, LÉVIS",
+    "PostalCode": "G6W 1T1",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.16428,
+     46.793172
+    ]
+   },
+   "properties": {
+    "Name": "9319-6756 QUÉBEC INC.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "5900 boul. Étienne-Dallaire, Lévis",
+    "PostalCode": "G6V 8T3",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "204.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.154996,
+     46.780299
+    ]
+   },
+   "properties": {
+    "Name": "9319-6756 QUÉBEC INC.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "200 rte du Président-Kennedy, Lévis",
+    "PostalCode": "G6V 6C3",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "204.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.272743,
+     46.731221
+    ]
+   },
+   "properties": {
+    "Name": "9319-6756 QUÉBEC INC.",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "950 boul. Guillaume-Couture, Lévis",
+    "PostalCode": "G6W 5M6",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "204.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.200101,
+     46.769504
+    ]
+   },
+   "properties": {
+    "Name": "9420-2421 QUEBEC INC",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "3600 Boul. Guillaume-Couture, LÉVIS",
+    "PostalCode": "G6W 7L3",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.291205,
+     46.712269
+    ]
+   },
+   "properties": {
+    "Name": "9494-5839 Québec inc.",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "450 av. des Chutes, Lévis",
+    "PostalCode": "G7A 1E7",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "173.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "198.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.15402,
+     46.780519
+    ]
+   },
+   "properties": {
+    "Name": "Centre de service 167 Kennedy",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "167 rte du Président-Kennedy, Lévis",
+    "PostalCode": "G6V 6E2",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.263686,
+     46.730502
+    ]
+   },
+   "properties": {
+    "Name": "Costco Lévis",
+    "brand": "Costco",
+    "Status": "En opération",
+    "Address": "1160 rue De la concorde, Lévis",
+    "PostalCode": "G6W 0M4",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "166.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "186.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.207313,
+     46.730307
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #1090",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "800 av. Taniata, Lévis",
+    "PostalCode": "G6Z 2C9",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.3478,
+     46.7156
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #1133",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "845 rte Marie-Victorin, Lévis",
+    "PostalCode": "G7A 3S8",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "295.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.298849,
+     46.715292
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #1303",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "1505 rte Des Rivières, Lévis",
+    "PostalCode": "G7A 2N9",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "205.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.291273,
+     46.739303
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #508",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "158 rte Marie-Victorin, Lévis",
+    "PostalCode": "G7A 2T4",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "178.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "203.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.266243,
+     46.722893
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #525",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "8025 av. des Églises, Lévis",
+    "PostalCode": "G6X 1X6",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "173.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "198.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.179448,
+     46.804553
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #547",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "515 boul. Alphonse-Desjardins, Lévis",
+    "PostalCode": "G6V 5T3",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.173931,
+     46.792854
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #549",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "70 rte du Président-Kennedy, Lévis",
+    "PostalCode": "G6V 6C6",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.199897,
+     46.721437
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #555",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "952 rue Taniata, Lévis",
+    "PostalCode": "G6Z 3G8",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.238539,
+     46.752907
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #559",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "2035 boul. Guillaume-Couture, Lévis",
+    "PostalCode": "G6W 2S5",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.277184,
+     46.716836
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #562",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "4000 av. des Chutes, Lévis",
+    "PostalCode": "G6X 1B7",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "173.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "198.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.217193,
+     46.738298
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #590",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "665 rue Taniata, Lévis",
+    "PostalCode": "G6Z 2L3",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.286924,
+     46.702987
+    ]
+   },
+   "properties": {
+    "Name": "Couche-Tard #593",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "2201 rte des Rivières, Lévis",
+    "PostalCode": "G6K 1A6",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "173.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "198.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.162717,
+     46.807682
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Boulevard de la Rive-Sud",
+    "brand": "Irving",
+    "Status": "En opération",
+    "Address": "6665 boul. Guillaume-Couture, Lévis",
+    "PostalCode": "G6V 7M5",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": null,
+      "IsAvailable": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.224473,
+     46.742507
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Sprint (av. Taniata)",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "811 av. 4, Lévis",
+    "PostalCode": "G6W 5M6",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.191872,
+     46.781295
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Sprint (boul. Guillaume-Couture",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "4510 boul. Guillaume-Couture, Lévis",
+    "PostalCode": "G6W 6M7",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.179823,
+     46.794354
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Sprint (boul. Guillaume-Couture)",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "5401 boul. Guillaume-Couture, Lévis",
+    "PostalCode": "G6V 4Z3",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.298209,
+     46.71799
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Sprint (route des Rivières)",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "1440 rte des Rivières, Lévis",
+    "PostalCode": "G7A 5G2",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "173.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "198.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.283639,
+     46.695596
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Sprint (route des Rivières)",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "2540 rte des Rivières, Lévis",
+    "PostalCode": "G6K 1C9",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "173.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "198.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.161319,
+     46.785614
+    ]
+   },
+   "properties": {
+    "Name": "Dépanneur Sprint Président-Kennedy",
+    "brand": "Petro-Canada",
+    "Status": "En opération",
+    "Address": "165 rte du Président-Kennedy, Lévis",
+    "PostalCode": "G6V 6E2",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.169972,
+     46.779119
+    ]
+   },
+   "properties": {
+    "Name": "Filgo Lévis C. Rodrigue ",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "1925 rue Charles-Rodrigue, Lévis",
+    "PostalCode": "G6W 0M9",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "202.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.24665,
+     46.696617
+    ]
+   },
+   "properties": {
+    "Name": "Filgo St-Jean-Chrysostome",
+    "brand": "Shell",
+    "Status": "En opération",
+    "Address": "3004 av. Saint-Augustin, Lévis",
+    "PostalCode": "G6Z 2L1",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "202.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.299167,
+     46.712811
+    ]
+   },
+   "properties": {
+    "Name": "Filgo St-Nicolas",
+    "brand": "Sonic",
+    "Status": "En opération",
+    "Address": "475 ch. Vire-Crepe, Lévis",
+    "PostalCode": "G7A 1N3",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "200.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.181373,
+     46.800304
+    ]
+   },
+   "properties": {
+    "Name": "Garage Denis Talbot inc.",
+    "brand": "Eko",
+    "Status": "En opération",
+    "Address": "5656 rue Saint-Georges ouest, Lévis",
+    "PostalCode": "G6V 4M3",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "176.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "201.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.291175,
+     46.711144
+    ]
+   },
+   "properties": {
+    "Name": "Harnois Énergies Inc.",
+    "brand": "Esso",
+    "Status": "En opération",
+    "Address": "1785 rte des Rivières, Lévis",
+    "PostalCode": "G7A 1C8",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "173.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "194.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.27479,
+     46.730306
+    ]
+   },
+   "properties": {
+    "Name": "La Société Canadian Tire Ltée",
+    "brand": "Canadian Tire",
+    "Status": "En opération",
+    "Address": "910 boul. Guillaume-Couture, Lévis",
+    "PostalCode": "G6W 0B1",
+    "Region": "Chaudière-Appalaches",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "173.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "198.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "279.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.811176,
+     45.76293
+    ]
+   },
+   "properties": {
+    "Name": "9386-6648 QUEBEC INC",
+    "brand": "Ultramar",
+    "Status": "En opération",
+    "Address": "218 boul. Sainte-Anne, SAINTE-ANNE-DES-PLAINES",
+    "PostalCode": "G0A 3X0",
+    "Region": "Laurentides",
+    "Prices": [
+     {
+      "GasType": "Régulier",
+      "Price": "169.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Super",
+      "Price": "196.9¢",
+      "IsAvailable": true
+     },
+     {
+      "GasType": "Diesel",
+      "Price": "273.9¢",
+      "IsAvailable": true
+     }
+    ]
+   }
+  }
+ ]
+}
