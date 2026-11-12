@@ -4,6 +4,24 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-12 : Transports STM pour la région métropolitaine
+
+**Modifié**
+
+- **Transports STM** (1.4.0) : couvre la région métropolitaine de Montréal, au Québec. Les autobus du RTL (Longueuil) et d’exo, et les trains de banlieue d’exo, sont dits avec leur réseau (« l’autobus 8 du RTL », « le train d’exo, ligne Saint-Jérôme ») ; le lieu de départ selon son genre (« à la gare Parc », « au terminus Longueuil »). L’état du service et le temps réel de la STM ne s’appliquent plus qu’aux lignes de la STM. Zone élargie aux couronnes. La STL (Laval) n’est pas encore dans Transitous.
+
+### 2026-11-11 : temps réel des autobus de la STM
+
+**Modifié**
+
+- **Transports STM** (1.3.0) : heure réelle des autobus en route, d’après le flux temps réel GTFS-RT de la STM (protobuf), décodé par le module sans dépendance pour les seuls voyages de l’arrêt, cache de 30 secondes. Demande un Cornelius qui sait lire une réponse binaire (`bytes()`) ; avec Cornelius 0.3.0, les heures restent celles de l’horaire, sans erreur. Le métro n’est pas dans ce flux.
+
+### 2026-11-11 : module Transports STM
+
+**Ajouté**
+
+- Module **Transports STM** (`stm`, 1.2.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : le prochain départ de la STM (Montréal : métro, autobus, REM) vers une destination dite à la voix ou une destination favorite, la durée du trajet et le départ suivant, d’après Transitous (horaires GTFS officiels, sans jeton). Disponibilité du réseau : un avis en cours de la STM sur la ligne du trajet est dit à la fin (état du service, clé d’application publique incluse, cache de 3 minutes, sans effet en cas de panne). Départ par adresse ou par coordonnées (celles-ci priment), arrondi à environ 100 m ; itinéraire qui arrive le plus tôt ; adresse substituée par le géocodeur refusée plutôt qu’un faux trajet.
+
 ### 2026-11-08 : météo sans jeton
 
 **Ajouté**

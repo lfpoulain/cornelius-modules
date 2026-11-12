@@ -1,0 +1,576 @@
+[
+ {
+  "type": "PLACE",
+  "category": "parking_16",
+  "tokens": [
+   [
+    0,
+    6
+   ],
+   [
+    7,
+    4
+   ]
+  ],
+  "name": "Centre Bell",
+  "id": "node/1605686925",
+  "lat": 45.495714,
+  "lon": -73.568486,
+  "country": "CA",
+  "tz": "America/Toronto",
+  "areas": [
+   {
+    "name": "Canada",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Québec",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Montréal (région administrative)",
+    "adminLevel": 5,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Agglomération de Montréal",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Montréal",
+    "adminLevel": 8,
+    "matched": false,
+    "unique": true,
+    "default": true
+   },
+   {
+    "name": "Ville-Marie",
+    "adminLevel": 10,
+    "matched": false,
+    "unique": false,
+    "default": false
+   }
+  ],
+  "score": -21.5
+ },
+ {
+  "type": "PLACE",
+  "category": "none",
+  "tokens": [
+   [
+    0,
+    6
+   ],
+   [
+    7,
+    4
+   ]
+  ],
+  "name": "Centre Bell",
+  "id": "way/19911284",
+  "lat": 45.4961044,
+  "lon": -73.5702444,
+  "country": "CA",
+  "tz": "America/Toronto",
+  "areas": [
+   {
+    "name": "Canada",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Québec",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Montréal (région administrative)",
+    "adminLevel": 5,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Agglomération de Montréal",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Montréal",
+    "adminLevel": 8,
+    "matched": false,
+    "unique": true,
+    "default": true
+   },
+   {
+    "name": "Ville-Marie",
+    "adminLevel": 10,
+    "matched": false,
+    "unique": false,
+    "default": false
+   }
+  ],
+  "score": -18.5
+ },
+ {
+  "type": "PLACE",
+  "category": "christian_16",
+  "tokens": [
+   [
+    0,
+    6
+   ],
+   [
+    7,
+    4
+   ]
+  ],
+  "name": "Bell Green Life Centre",
+  "id": "way/234270066",
+  "lat": 52.4381603,
+  "lon": -1.4789121,
+  "country": "GB",
+  "tz": "Europe/London",
+  "areas": [
+   {
+    "name": "Royaume-Uni",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Angleterre",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "West Midlands",
+    "adminLevel": 5,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Coventry",
+    "adminLevel": 8,
+    "matched": false,
+    "unique": true,
+    "default": true
+   }
+  ],
+  "score": -17.25
+ },
+ {
+  "type": "PLACE",
+  "category": "department_store_16",
+  "tokens": [
+   [
+    0,
+    6
+   ],
+   [
+    7,
+    4
+   ]
+  ],
+  "name": "Brian Bell Home Centre",
+  "id": "way/400161373",
+  "lat": -4.3431816,
+  "lon": 152.2682072,
+  "country": "PG",
+  "tz": "Pacific/Port_Moresby",
+  "areas": [
+   {
+    "name": "Papouasie-Nouvelle-Guinée",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Islands Region",
+    "adminLevel": 3,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Nouvelle-Bretagne orientale",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Kokopo District",
+    "adminLevel": 5,
+    "matched": false,
+    "unique": true,
+    "default": true
+   }
+  ],
+  "score": -17.25
+ },
+ {
+  "type": "PLACE",
+  "category": "tower_freestanding",
+  "tokens": [
+   [
+    0,
+    6
+   ],
+   [
+    7,
+    4
+   ]
+  ],
+  "name": "Veneto Centre Bell Tower",
+  "id": "way/877299160",
+  "lat": 43.7721522,
+  "lon": -79.5923041,
+  "country": "CA",
+  "tz": "America/Toronto",
+  "areas": [
+   {
+    "name": "Canada",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Ontario",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "York Region",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Vaughan",
+    "adminLevel": 8,
+    "matched": false,
+    "unique": true,
+    "default": true
+   }
+  ],
+  "score": -17.25
+ },
+ {
+  "type": "PLACE",
+  "category": "department_store_16",
+  "tokens": [
+   [
+    0,
+    6
+   ],
+   [
+    7,
+    4
+   ]
+  ],
+  "name": "Brain Bell Home Centre",
+  "id": "way/1138337299",
+  "lat": -5.2109577,
+  "lon": 145.806442,
+  "country": "PG",
+  "tz": "Pacific/Port_Moresby",
+  "areas": [
+   {
+    "name": "Papouasie-Nouvelle-Guinée",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Région Momase",
+    "adminLevel": 3,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Madang",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Madang District",
+    "adminLevel": 5,
+    "matched": false,
+    "unique": true,
+    "default": true
+   }
+  ],
+  "score": -17.25
+ },
+ {
+  "type": "STOP",
+  "tokens": [
+   [
+    0,
+    6
+   ],
+   [
+    7,
+    4
+   ]
+  ],
+  "name": "Bellamy Centre",
+  "id": "gb-great-britain_3300MA0742",
+  "lat": 53.124504,
+  "lon": -1.1591153,
+  "country": "GB",
+  "tz": "Europe/London",
+  "areas": [
+   {
+    "name": "Royaume-Uni",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Angleterre",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "East Midlands",
+    "adminLevel": 5,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Nottinghamshire",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Mansfield",
+    "adminLevel": 8,
+    "matched": false,
+    "unique": true,
+    "default": true
+   }
+  ],
+  "score": -17.100000381469727,
+  "modes": [],
+  "importance": 0
+ },
+ {
+  "type": "STOP",
+  "tokens": [
+   [
+    0,
+    6
+   ],
+   [
+    7,
+    4
+   ]
+  ],
+  "name": "BELLEVAUX Centre",
+  "id": "be-tec_tec:s-bellevauxcentre",
+  "lat": 50.389385,
+  "lon": 6.0108109999999995,
+  "country": "BE",
+  "zip": "4960",
+  "tz": "Europe/Brussels",
+  "areas": [
+   {
+    "name": "Belgique",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Wallonie",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Liège",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Verviers",
+    "adminLevel": 7,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Malmedy",
+    "adminLevel": 8,
+    "matched": false,
+    "unique": true,
+    "default": true
+   },
+   {
+    "name": "Bellevaux-Ligneuville",
+    "adminLevel": 9,
+    "matched": false,
+    "unique": false,
+    "default": false
+   }
+  ],
+  "score": -16.950000762939453,
+  "modes": [
+   "BUS"
+  ],
+  "importance": 1.6821095982777479e-7
+ },
+ {
+  "type": "STOP",
+  "tokens": [
+   [
+    0,
+    6
+   ],
+   [
+    7,
+    4
+   ]
+  ],
+  "name": "Belle Vue Centre",
+  "id": "gb-great-britain_1600GL1207",
+  "lat": 51.823433,
+  "lon": -2.4978656999999997,
+  "country": "GB",
+  "tz": "Europe/London",
+  "areas": [
+   {
+    "name": "Royaume-Uni",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Angleterre",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Gloucestershire",
+    "adminLevel": 6,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Forest of Dean",
+    "adminLevel": 8,
+    "matched": false,
+    "unique": true,
+    "default": true
+   },
+   {
+    "name": "Cinderford",
+    "adminLevel": 10,
+    "matched": false,
+    "unique": false,
+    "default": false
+   }
+  ],
+  "score": -16.850000381469727,
+  "modes": [
+   "BUS"
+  ],
+  "importance": 0.00000380504798158654
+ },
+ {
+  "type": "PLACE",
+  "category": "doctors_14",
+  "tokens": [
+   [
+    0,
+    6
+   ],
+   [
+    7,
+    4
+   ]
+  ],
+  "name": "Bell Green Health Centre",
+  "id": "way/517982330",
+  "lat": 52.43806,
+  "lon": -1.4718099,
+  "country": "GB",
+  "tz": "Europe/London",
+  "areas": [
+   {
+    "name": "Royaume-Uni",
+    "adminLevel": 2,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Angleterre",
+    "adminLevel": 4,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "West Midlands",
+    "adminLevel": 5,
+    "matched": false,
+    "unique": false,
+    "default": false
+   },
+   {
+    "name": "Coventry",
+    "adminLevel": 8,
+    "matched": false,
+    "unique": true,
+    "default": true
+   }
+  ],
+  "score": -16.75
+ }
+]

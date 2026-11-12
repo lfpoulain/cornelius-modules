@@ -1,0 +1,492 @@
+{
+ "header": {
+  "timestamp": "1794433084"
+ },
+ "alerts": [
+  {
+   "active_periods": [
+    {
+     "start": 1584417600,
+     "end": null
+    }
+   ],
+   "cause": null,
+   "effect": null,
+   "informed_entities": [
+    {
+     "route_short_name": "254"
+    },
+    {
+     "route_short_name": "258"
+    },
+    {
+     "route_short_name": "257"
+    },
+    {
+     "route_short_name": "256"
+    },
+    {
+     "route_short_name": "259"
+    },
+    {
+     "route_short_name": "260"
+    },
+    {
+     "route_short_name": "262"
+    },
+    {
+     "route_short_name": "263"
+    },
+    {
+     "route_short_name": "253"
+    },
+    {
+     "route_short_name": "252"
+    }
+   ],
+   "header_texts": [
+    {
+     "language": "fr",
+     "text": "Le service sur cette navette est suspendu indéfiniment."
+    },
+    {
+     "language": "en",
+     "text": "Le service sur cette navette est suspendu indéfiniment."
+    }
+   ],
+   "description_texts": [
+    {
+     "language": "fr",
+     "text": "Le service sur cette navette est suspendu indéfiniment."
+    },
+    {
+     "language": "en",
+     "text": "Le service sur cette navette est suspendu indéfiniment."
+    }
+   ]
+  },
+  {
+   "active_periods": [
+    {
+     "start": 1787889600,
+     "end": null
+    }
+   ],
+   "cause": null,
+   "effect": null,
+   "informed_entities": [
+    {
+     "route_short_name": "768"
+    }
+   ],
+   "header_texts": [
+    {
+     "language": "fr",
+     "text": "Le service sur cette ligne a pris fin pour la saison 2026. De retour à l'été 2027 lors de la réouverture de la plage Jean-Doré du lac de l'Île Notre-Dame !"
+    },
+    {
+     "language": "en",
+     "text": "Service on this line has ended for the 2026 season. It will return in the summer of 2027 when Jean-Doré Beach on Notre-Dame Island Lake reopens!"
+    }
+   ],
+   "description_texts": [
+    {
+     "language": "fr",
+     "text": "Le service sur cette ligne a pris fin pour la saison 2026. De retour à l'été 2027 lors de la réouverture de la plage Jean-Doré du lac de l'Île Notre-Dame !"
+    },
+    {
+     "language": "en",
+     "text": "Service on this line has ended for the 2026 season. It will return in the summer of 2027 when Jean-Doré Beach on Notre-Dame Island Lake reopens!"
+    }
+   ]
+  },
+  {
+   "active_periods": [
+    {
+     "start": 1787889600,
+     "end": null
+    }
+   ],
+   "cause": null,
+   "effect": null,
+   "informed_entities": [
+    {
+     "route_short_name": "767"
+    },
+    {
+     "route_short_name": "769"
+    }
+   ],
+   "header_texts": [
+    {
+     "language": "fr",
+     "text": "Le service sur cette ligne a pris fin pour la saison 2026. La navette sera de retour au printemps prochain lors de la réouverture de La Ronde."
+    },
+    {
+     "language": "en",
+     "text": "Le service sur cette ligne a pris fin pour la saison 2026. La navette sera de retour au printemps prochain lors de la réouverture de La Ronde."
+    }
+   ],
+   "description_texts": [
+    {
+     "language": "fr",
+     "text": "Le service sur cette ligne a pris fin pour la saison 2026. La navette sera de retour au printemps prochain lors de la réouverture de La Ronde."
+    },
+    {
+     "language": "en",
+     "text": "Le service sur cette ligne a pris fin pour la saison 2026. La navette sera de retour au printemps prochain lors de la réouverture de La Ronde."
+    }
+   ]
+  },
+  {
+   "active_periods": [
+    {
+     "start": 1792555200,
+     "end": null
+    }
+   ],
+   "cause": null,
+   "effect": null,
+   "informed_entities": [
+    {
+     "route_short_name": "71"
+    }
+   ],
+   "header_texts": [
+    {
+     "language": "fr",
+     "text": "En raison de travaux, cette ligne ne dessert plus les arrêts entre des Seigneurs / du Canal (53722) et la station Guy-Concordia. Le terminus est temporairement relocalisé à la station Charlevoix."
+    },
+    {
+     "language": "en",
+     "text": "Due to roadwork, this route temporarily no longer serves stops between Guy-Concordia métro station and des Seigneurs / du Canal (53723). This bus line now departs from Charlevoix métro station."
+    }
+   ],
+   "description_texts": [
+    {
+     "language": "fr",
+     "text": "En raison de travaux, cette ligne ne dessert plus les arrêts entre des Seigneurs / du Canal (53722) et la station Guy-Concordia. Le terminus est temporairement relocalisé à la station Charlevoix."
+    },
+    {
+     "language": "en",
+     "text": "Due to roadwork, this route temporarily no longer serves stops between Guy-Concordia métro station and des Seigneurs / du Canal (53723). This bus line now departs from Charlevoix métro station."
+    }
+   ]
+  },
+  {
+   "active_periods": [
+    {
+     "start": 1792555200,
+     "end": null
+    }
+   ],
+   "cause": null,
+   "effect": null,
+   "informed_entities": [
+    {
+     "route_short_name": "71"
+    }
+   ],
+   "header_texts": [
+    {
+     "language": "fr",
+     "text": "En raison de travaux, cette ligne ne dessert plus les arrêts entre la station Guy-Concordia et des Seigneurs / du Canal (53723). Le point de départ est temporairement relocalisé à la station Charlevoix."
+    },
+    {
+     "language": "en",
+     "text": "Due to roadwork, this route temporarily no longer serves stops between Guy-Concordia métro station and des Seigneurs / du Canal (53723). This bus line now departs from Charlevoix métro station."
+    }
+   ],
+   "description_texts": [
+    {
+     "language": "fr",
+     "text": "En raison de travaux, cette ligne ne dessert plus les arrêts entre la station Guy-Concordia et des Seigneurs / du Canal (53723). Le point de départ est temporairement relocalisé à la station Charlevoix."
+    },
+    {
+     "language": "en",
+     "text": "Due to roadwork, this route temporarily no longer serves stops between Guy-Concordia métro station and des Seigneurs / du Canal (53723). This bus line now departs from Charlevoix métro station."
+    }
+   ]
+  },
+  {
+   "active_periods": [
+    {
+     "start": 1749787200,
+     "end": 1799038800
+    }
+   ],
+   "cause": null,
+   "effect": null,
+   "informed_entities": [
+    {
+     "route_short_name": "225"
+    }
+   ],
+   "header_texts": [
+    {
+     "language": "fr",
+     "text": "Un voyage est ajouté en soirée en direction ouest. Pour consulter l'horaire planifié du lundi au vendredi, <a class=\"external\" href=\"https://www.stm.info/sites/default/files/media/CIC/2026/Refonte_bus/horaire_225_ouest_ajuste.pdf?utm_campaign=mip&utm_source=REFONTE&utm_medium=horairesstm\" target=\"_blank\">cliquez ici.</a>"
+    },
+    {
+     "language": "en",
+     "text": "An additional westbound trip is added in the evening. To view the scheduled timetable for Monday through Friday, <a class=\"external\" href=\"https://www.stm.info/sites/default/files/media/CIC/2026/Refonte_bus/horaire_225_ouest_ajuste.pdf?utm_campaign=mip&utm_source=REFONTE&utm_medium=horairesstm\" target=\"_blank\">click here.</a>"
+    }
+   ],
+   "description_texts": [
+    {
+     "language": "fr",
+     "text": "Un voyage est ajouté en soirée en direction ouest. Pour consulter l'horaire planifié du lundi au vendredi, <a class=\"external\" href=\"https://www.stm.info/sites/default/files/media/CIC/2026/Refonte_bus/horaire_225_ouest_ajuste.pdf?utm_campaign=mip&utm_source=REFONTE&utm_medium=horairesstm\" target=\"_blank\">cliquez ici.</a>"
+    },
+    {
+     "language": "en",
+     "text": "An additional westbound trip is added in the evening. To view the scheduled timetable for Monday through Friday, <a class=\"external\" href=\"https://www.stm.info/sites/default/files/media/CIC/2026/Refonte_bus/horaire_225_ouest_ajuste.pdf?utm_campaign=mip&utm_source=REFONTE&utm_medium=horairesstm\" target=\"_blank\">click here.</a>"
+    }
+   ]
+  },
+  {
+   "active_periods": [
+    {
+     "start": 1749787200,
+     "end": 1799038800
+    }
+   ],
+   "cause": null,
+   "effect": null,
+   "informed_entities": [
+    {
+     "route_short_name": "201"
+    }
+   ],
+   "header_texts": [
+    {
+     "language": "fr",
+     "text": "Le service sur cette ligne est prolongé du lundi au vendredi. Des voyages sont ajoutés à partir de l'arrêt Saint-Pierre / de Pierrefonds (62614) à 22h30 et 23h30. Pour consulter l'horaire, <a class=\"external\" href=\"https://www.stm.info/sites/default/files/media/CIC/2026/Refonte_bus/horaire_201_sud_ajuste.pdf?utm_campaign=mip&utm_source=REFONTE&utm_medium=horairesstm\" target=\"_blank\">cliquez ici.</a>"
+    },
+    {
+     "language": "en",
+     "text": "Service on this line is extended Monday through Friday. Additional trips are added from the Saint-Pierre / de Pierrefonds stop (62614) at 10:30 p.m. and 11:30 p.m. To see the full schedule, <a class=\"external\" href=\"https://www.stm.info/sites/default/files/media/CIC/2026/Refonte_bus/horaire_201_sud_ajuste.pdf?utm_campaign=mip&utm_source=REFONTE&utm_medium=horairesstm\" target=\"_blank\">click here.</a>"
+    }
+   ],
+   "description_texts": [
+    {
+     "language": "fr",
+     "text": "Le service sur cette ligne est prolongé du lundi au vendredi. Des voyages sont ajoutés à partir de l'arrêt Saint-Pierre / de Pierrefonds (62614) à 22h30 et 23h30. Pour consulter l'horaire, <a class=\"external\" href=\"https://www.stm.info/sites/default/files/media/CIC/2026/Refonte_bus/horaire_201_sud_ajuste.pdf?utm_campaign=mip&utm_source=REFONTE&utm_medium=horairesstm\" target=\"_blank\">cliquez ici.</a>"
+    },
+    {
+     "language": "en",
+     "text": "Service on this line is extended Monday through Friday. Additional trips are added from the Saint-Pierre / de Pierrefonds stop (62614) at 10:30 p.m. and 11:30 p.m. To see the full schedule, <a class=\"external\" href=\"https://www.stm.info/sites/default/files/media/CIC/2026/Refonte_bus/horaire_201_sud_ajuste.pdf?utm_campaign=mip&utm_source=REFONTE&utm_medium=horairesstm\" target=\"_blank\">click here.</a>"
+    }
+   ]
+  },
+  {
+   "active_periods": [
+    {
+     "start": 1781064000,
+     "end": 1799038800
+    }
+   ],
+   "cause": null,
+   "effect": null,
+   "informed_entities": [
+    {
+     "route_short_name": "201"
+    }
+   ],
+   "header_texts": [
+    {
+     "language": "fr",
+     "text": "Le service sur cette ligne est prolongé du lundi au vendredi. Des voyages sont ajoutés à partir de la Gare Beaconsfield (58491) à 22h10 et 23h10. Pour consulter l'horaire, <a class=\"external\" href=\"https://www.stm.info/sites/default/files/media/CIC/2026/Refonte_bus/horaire_201_nord_ajuste.pdf?utm_campaign=mip&utm_source=REFONTE&utm_medium=horairesstm\" target=\"_blank\">cliquez ici.</a>"
+    },
+    {
+     "language": "en",
+     "text": "Service on this line is extended Monday through Friday. Additional trips have been added from Beaconsfield Station (58491) at 10:10 p.m. and 11:10 p.m. To see the full schedule, <a class=\"external\" href=\"https://www.stm.info/sites/default/files/media/CIC/2026/Refonte_bus/horaire_201_nord_ajuste.pdf?utm_campaign=mip&utm_source=REFONTE&utm_medium=horairesstm\" target=\"_blank\">click here.</a>"
+    }
+   ],
+   "description_texts": [
+    {
+     "language": "fr",
+     "text": "Le service sur cette ligne est prolongé du lundi au vendredi. Des voyages sont ajoutés à partir de la Gare Beaconsfield (58491) à 22h10 et 23h10. Pour consulter l'horaire, <a class=\"external\" href=\"https://www.stm.info/sites/default/files/media/CIC/2026/Refonte_bus/horaire_201_nord_ajuste.pdf?utm_campaign=mip&utm_source=REFONTE&utm_medium=horairesstm\" target=\"_blank\">cliquez ici.</a>"
+    },
+    {
+     "language": "en",
+     "text": "Service on this line is extended Monday through Friday. Additional trips have been added from Beaconsfield Station (58491) at 10:10 p.m. and 11:10 p.m. To see the full schedule, <a class=\"external\" href=\"https://www.stm.info/sites/default/files/media/CIC/2026/Refonte_bus/horaire_201_nord_ajuste.pdf?utm_campaign=mip&utm_source=REFONTE&utm_medium=horairesstm\" target=\"_blank\">click here.</a>"
+    }
+   ]
+  },
+  {
+   "active_periods": [
+    {
+     "start": 1794391200,
+     "end": 1794666600
+    }
+   ],
+   "cause": null,
+   "effect": null,
+   "informed_entities": [
+    {
+     "route_short_name": "5"
+    }
+   ],
+   "header_texts": [
+    {
+     "language": "fr",
+     "text": "[Ouverture tardive] Ce samedi 14 novembre, le service métro débutera seulement vers 9h30 sur la ligne 5 - Bleue en raison de travaux d'entretien d'Hydro-Québec. Un service de navettes sera disponible. <a class=\"external\" href=\"https://www.stm.info/salle-de-presse/communiques-et-nouvelles/la-ligne-bleue-sera-fermee-le-matin-du-14-novembre-en-raison-de-travaux-d-entretien-d-hydro-quebec?utm_campaign=mip&utm_source=nuitlongue&utm_medium=horairesstm\" target=\"_blank\">Pour plus de détails.</a>"
+    },
+    {
+     "language": "en",
+     "text": "[Delayed Opening] This Saturday, November 14, métro service on line 5 - Blue will not begin until approximately 9:30 a.m. due to maintenance work by Hydro-Québec. A shuttle service will be available. <a class=\"external\" href=\"https://www.stm.info/en/press-room/press-releases-and-news/la-ligne-bleue-sera-fermee-le-matin-du-14-novembre-en-raison-de-travaux-d-entretien-d-hydro-quebec?utm_campaign=mip&utm_source=nuitlongue&utm_medium=horairesstm\" target=\"_blank\">For more details.</a>"
+    }
+   ],
+   "description_texts": [
+    {
+     "language": "fr",
+     "text": "[Ouverture tardive] Ce samedi 14 novembre, le service métro débutera seulement vers 9h30 sur la ligne 5 - Bleue en raison de travaux d'entretien d'Hydro-Québec. Un service de navettes sera disponible. <a class=\"external\" href=\"https://www.stm.info/salle-de-presse/communiques-et-nouvelles/la-ligne-bleue-sera-fermee-le-matin-du-14-novembre-en-raison-de-travaux-d-entretien-d-hydro-quebec?utm_campaign=mip&utm_source=nuitlongue&utm_medium=horairesstm\" target=\"_blank\">Pour plus de détails.</a>"
+    },
+    {
+     "language": "en",
+     "text": "[Delayed Opening] This Saturday, November 14, métro service on line 5 - Blue will not begin until approximately 9:30 a.m. due to maintenance work by Hydro-Québec. A shuttle service will be available. <a class=\"external\" href=\"https://www.stm.info/en/press-room/press-releases-and-news/la-ligne-bleue-sera-fermee-le-matin-du-14-novembre-en-raison-de-travaux-d-entretien-d-hydro-quebec?utm_campaign=mip&utm_source=nuitlongue&utm_medium=horairesstm\" target=\"_blank\">For more details.</a>"
+    }
+   ]
+  },
+  {
+   "active_periods": [
+    {
+     "start": 1794153960,
+     "end": null
+    }
+   ],
+   "cause": null,
+   "effect": null,
+   "informed_entities": [
+    {
+     "route_short_name": "2"
+    }
+   ],
+   "header_texts": [
+    {
+     "language": "fr",
+     "text": "Service normal du métro"
+    },
+    {
+     "language": "en",
+     "text": "Normal métro service"
+    }
+   ],
+   "description_texts": [
+    {
+     "language": "fr",
+     "text": "Service normal du métro"
+    },
+    {
+     "language": "en",
+     "text": "Normal métro service"
+    }
+   ]
+  },
+  {
+   "active_periods": [
+    {
+     "start": 1793853540,
+     "end": null
+    }
+   ],
+   "cause": null,
+   "effect": null,
+   "informed_entities": [
+    {
+     "route_short_name": "1"
+    }
+   ],
+   "header_texts": [
+    {
+     "language": "fr",
+     "text": "Service normal du métro"
+    },
+    {
+     "language": "en",
+     "text": "Normal métro service"
+    }
+   ],
+   "description_texts": [
+    {
+     "language": "fr",
+     "text": "Service normal du métro"
+    },
+    {
+     "language": "en",
+     "text": "Normal métro service"
+    }
+   ]
+  },
+  {
+   "active_periods": [
+    {
+     "start": 1792662000,
+     "end": null
+    }
+   ],
+   "cause": null,
+   "effect": null,
+   "informed_entities": [
+    {
+     "route_short_name": "5"
+    }
+   ],
+   "header_texts": [
+    {
+     "language": "fr",
+     "text": "Service normal du métro"
+    },
+    {
+     "language": "en",
+     "text": "Normal métro service"
+    }
+   ],
+   "description_texts": [
+    {
+     "language": "fr",
+     "text": "Service normal du métro"
+    },
+    {
+     "language": "en",
+     "text": "Normal métro service"
+    }
+   ]
+  },
+  {
+   "active_periods": [
+    {
+     "start": 1783887000,
+     "end": null
+    }
+   ],
+   "cause": null,
+   "effect": null,
+   "informed_entities": [
+    {
+     "route_short_name": "4"
+    }
+   ],
+   "header_texts": [
+    {
+     "language": "fr",
+     "text": "Service normal du métro"
+    },
+    {
+     "language": "en",
+     "text": "Normal métro service"
+    }
+   ],
+   "description_texts": [
+    {
+     "language": "fr",
+     "text": "Service normal du métro"
+    },
+    {
+     "language": "en",
+     "text": "Normal métro service"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,6116 @@
+{
+ "geocode?text=Terminus+Longueuil&language=fr&place=45.508%2C-73.587": [
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     8
+    ],
+    [
+     9,
+     9
+    ]
+   ],
+   "name": "Terminus Longueuil",
+   "id": "ca-qc-RTL_9999",
+   "lat": 45.52408,
+   "lon": -73.52141,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montérégie",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Longueuil",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Longueuil",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Le Vieux-Longueuil",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -28.350000381469727,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.00014818950148764998
+  },
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     8
+    ],
+    [
+     9,
+     9
+    ]
+   ],
+   "name": "Terminus Longueuil Porte D31",
+   "id": "ca-qc-Exo-citchambly-richelieu-carignan_76066",
+   "lat": 45.523808,
+   "lon": -73.522255,
+   "level": 0,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montérégie",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Longueuil",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Longueuil",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Le Vieux-Longueuil",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -26.350000381469727,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.00003327821832499467
+  },
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     8
+    ],
+    [
+     9,
+     9
+    ]
+   ],
+   "name": "Terminus Panama",
+   "id": "ca-qc-RTL_5925",
+   "lat": 45.466747,
+   "lon": -73.46906000000001,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montérégie",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Longueuil",
+     "adminLevel": 6,
+     "matched": true,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Brossard",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    }
+   ],
+   "score": -21.600000381469727,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.00007343568722717464
+  },
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     8
+    ],
+    [
+     9,
+     9
+    ]
+   ],
+   "name": "Terminus Brossard",
+   "id": "ca-qc-RTL_5767",
+   "lat": 45.4369,
+   "lon": -73.43154000000001,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montérégie",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Longueuil",
+     "adminLevel": 6,
+     "matched": true,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Brossard",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    }
+   ],
+   "score": -21.100000381469727,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.00003484576882328838
+  },
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     8
+    ],
+    [
+     9,
+     9
+    ]
+   ],
+   "name": "Terminus De Montarville",
+   "id": "ca-qc-Exo-varannes_70500",
+   "lat": 45.600646999999995,
+   "lon": -73.45031,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montérégie",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Longueuil",
+     "adminLevel": 6,
+     "matched": true,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Boucherville",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    }
+   ],
+   "score": -19.600000381469727,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.000011367290426278487
+  },
+  {
+   "type": "ADDRESS",
+   "tokens": [
+    [
+     0,
+     8
+    ],
+    [
+     9,
+     9
+    ]
+   ],
+   "name": "Rue du Terminus",
+   "id": "",
+   "lat": 45.5234754,
+   "lon": -73.522126,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montérégie",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Longueuil",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Longueuil",
+     "adminLevel": 8,
+     "matched": true,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Le Vieux-Longueuil",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -19.300880432128906
+  },
+  {
+   "type": "PLACE",
+   "category": "amenity_bus_station",
+   "tokens": [
+    [
+     0,
+     8
+    ],
+    [
+     9,
+     9
+    ]
+   ],
+   "name": "Terminus de Montarville",
+   "id": "way/32838513",
+   "lat": 45.6005203,
+   "lon": -73.4516864,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montérégie",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Longueuil",
+     "adminLevel": 6,
+     "matched": true,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Boucherville",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    }
+   ],
+   "score": -18
+  },
+  {
+   "type": "PLACE",
+   "category": "purple_car",
+   "tokens": [
+    [
+     0,
+     8
+    ],
+    [
+     9,
+     9
+    ]
+   ],
+   "name": "Longueuil Kia",
+   "id": "node/13949769228",
+   "lat": 45.548385,
+   "lon": -73.4968698,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montérégie",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Longueuil",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Longueuil",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Le Vieux-Longueuil",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -14
+  },
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     8
+    ],
+    [
+     9,
+     9
+    ]
+   ],
+   "name": "Terminus CAE",
+   "id": "ca-qc-STM_62013",
+   "lat": 45.478374,
+   "lon": -73.70879,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montréal (région administrative)",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Montréal",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montréal",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Saint-Laurent",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -13.84999942779541,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.000013674391084350646
+  },
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     8
+    ],
+    [
+     9,
+     9
+    ]
+   ],
+   "name": "Terminus Radisson",
+   "id": "ca-qc-Exo-mrcdelassomption_85078",
+   "lat": 45.58949,
+   "lon": -73.53936999999999,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montréal (région administrative)",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Montréal",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montréal",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Mercier–Hochelaga-Maisonneuve",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -13.59999942779541,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.000029003340387134813
+  }
+ ],
+ "geocode?text=C%C3%A9gep+%C3%89douard-Montpetit&language=fr&place=45.524%2C-73.521": [
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     18
+    ]
+   ],
+   "name": "Cégep Édouard-Montpetit",
+   "id": "ca-qc-Exo-citchambly-richelieu-carignan_71051",
+   "lat": 45.536457,
+   "lon": -73.49575,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montérégie",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Longueuil",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Longueuil",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Le Vieux-Longueuil",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -33.349998474121094,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.000008285839612653945
+  },
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     18
+    ]
+   ],
+   "name": "ch. de Chambly / CEGEP Édouard-Montpetit",
+   "id": "ca-qc-RTL_3447",
+   "lat": 45.534374,
+   "lon": -73.49331000000001,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montérégie",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Longueuil",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Longueuil",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Le Vieux-Longueuil",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -30.100000381469727,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.000014000662304169964
+  },
+  {
+   "type": "PLACE",
+   "category": "none",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     18
+    ]
+   ],
+   "name": "Cégep Édouard-Montpetit",
+   "id": "node/6736117856",
+   "lat": 45.5359358,
+   "lon": -73.49389,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montérégie",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Longueuil",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Longueuil",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Le Vieux-Longueuil",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -28.75
+  },
+  {
+   "type": "PLACE",
+   "category": "books_16",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     18
+    ]
+   ],
+   "name": "Librarie coopérative du Cégep Édouard-Montpetit",
+   "id": "node/6736117861",
+   "lat": 45.5363551,
+   "lon": -73.4930973,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montérégie",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Longueuil",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Longueuil",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Le Vieux-Longueuil",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -26.25
+  },
+  {
+   "type": "PLACE",
+   "category": "none",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     18
+    ]
+   ],
+   "name": "Cégep Édouard-Montpetit - Campus Longueuil",
+   "id": "way/40042060",
+   "lat": 45.5390267,
+   "lon": -73.4932767,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montérégie",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Longueuil",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Longueuil",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Le Vieux-Longueuil",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -25
+  },
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     18
+    ]
+   ],
+   "name": "Station Édouard-Montpetit",
+   "id": "ca-qc-STM_STATION_M538",
+   "lat": 45.51022,
+   "lon": -73.61233999999999,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montréal (région administrative)",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Montréal",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montréal",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Outremont",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -21.405149459838867,
+   "modes": [
+    "SUBWAY",
+    "TRAM",
+    "BUS"
+   ],
+   "importance": 0.001783801824785769
+  },
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     18
+    ]
+   ],
+   "name": "Décarie / Édouard-Montpetit",
+   "id": "ca-qc-STM_50905",
+   "lat": 45.486168,
+   "lon": -73.634026,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montréal (région administrative)",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Montréal",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montréal",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Côte-des-Neiges–Notre-Dame-de-Grâce",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -19.850000381469727,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.000010297120752511546
+  },
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     18
+    ]
+   ],
+   "name": "Édouard-Montpetit / McKenna",
+   "id": "ca-qc-STM_51213",
+   "lat": 45.501366,
+   "lon": -73.62068,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montréal (région administrative)",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Montréal",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montréal",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Côte-des-Neiges–Notre-Dame-de-Grâce",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -19.850000381469727,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.00003303170160506852
+  },
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     18
+    ]
+   ],
+   "name": "Édouard-Montpetit / No 2141",
+   "id": "ca-qc-STM_50114",
+   "lat": 45.508717000000004,
+   "lon": -73.61404,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montréal (région administrative)",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Montréal",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montréal",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Côte-des-Neiges–Notre-Dame-de-Grâce",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -19.850000381469727,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.00001705311115074437
+  },
+  {
+   "type": "STOP",
+   "tokens": [
+    [
+     0,
+     6
+    ],
+    [
+     7,
+     18
+    ]
+   ],
+   "name": "Decelles / Édouard-Montpetit",
+   "id": "ca-qc-STM_51167",
+   "lat": 45.49916,
+   "lon": -73.622154,
+   "country": "CA",
+   "tz": "America/Toronto",
+   "areas": [
+    {
+     "name": "Canada",
+     "adminLevel": 2,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Québec",
+     "adminLevel": 4,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montréal (région administrative)",
+     "adminLevel": 5,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Agglomération de Montréal",
+     "adminLevel": 6,
+     "matched": false,
+     "unique": false,
+     "default": false
+    },
+    {
+     "name": "Montréal",
+     "adminLevel": 8,
+     "matched": false,
+     "unique": true,
+     "default": true
+    },
+    {
+     "name": "Côte-des-Neiges–Notre-Dame-de-Grâce",
+     "adminLevel": 10,
+     "matched": false,
+     "unique": false,
+     "default": false
+    }
+   ],
+   "score": -19.600000381469727,
+   "modes": [
+    "BUS"
+   ],
+   "importance": 0.00003303170160506852
+  }
+ ],
+ "plan?fromPlace=45.524%2C-73.521&toPlace=45.536%2C-73.496&numItineraries=3": {
+  "requestParameters": {},
+  "debugOutput": {
+   "algorithm": 1,
+   "direct": 5,
+   "execute_time": 26,
+   "fares": 0,
+   "fastest_direct": 0,
+   "fp_update_prevented_by_lower_bound": 0,
+   "gpu_supported": 1,
+   "gpu_used": 1,
+   "interval_extensions": 0,
+   "lb_time": 0,
+   "n_dest_offsets": 66,
+   "n_earliest_arrival_updated_by_footpath": 0,
+   "n_earliest_arrival_updated_by_route": 0,
+   "n_earliest_trip_calls": 0,
+   "n_events_skipped_by_early_termination": 0,
+   "n_execute_bwd": 3,
+   "n_execute_fwd": 3,
+   "n_footpaths_visited": 0,
+   "n_routes_visited": 0,
+   "n_routing_time": 0,
+   "n_start_offsets": 45,
+   "n_td_dest_offsets": 0,
+   "n_td_start_offsets": 0,
+   "prepare": 8,
+   "prepare_backward_WALK": 3,
+   "prepare_forward_WALK": 5,
+   "route_update_prevented_by_lower_bound": 0,
+   "search_interval_reduction_by_early_termination": 0
+  },
+  "from": {
+   "name": "START",
+   "lat": 45.524,
+   "lon": -73.521,
+   "level": 0,
+   "vertexType": "NORMAL"
+  },
+  "to": {
+   "name": "END",
+   "lat": 45.536,
+   "lon": -73.496,
+   "level": 0,
+   "vertexType": "NORMAL"
+  },
+  "direct": [],
+  "itineraries": [
+   {
+    "duration": 960,
+    "startTime": "2026-11-12T14:24:00Z",
+    "endTime": "2026-11-12T14:40:00Z",
+    "transfers": 0,
+    "id": "CkghUI2XbhLDRkAp001iEFhhUsAyDmNhLXFjLVJUTF80NDE1OTm2niEcw0ZAQXMR34lZYVLASICY19cGULyY19cGWgRXQUxLYAEKjQEKATgSMTIwMjYxMTEyXzA5OjI1X2NhLXFjLVJUTF84XzFfUl9TRV8xMjU2X210cm9fMDk6MjUaDmNhLXFjLVJUTF80NDE1ITm2niEcw0ZAKXMR34lZYVLAMg5jYS1xYy1SVExfMTM1MznYMEPjicRGQEEvi4nNx19SwEi8mNfXBlDIntfXBloDQlVTYAEKSBoOY2EtcWMtUlRMXzEzNTMh2DBD44nERkApL4uJzcdfUsA5+FPjpZvERkBBObTIdr5fUsBIyJ7X1wZQwJ/X1wZaBFdBTEtgAQ==",
+    "legs": [
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "START",
+       "lat": 45.524,
+       "lon": -73.521,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-12T14:24:00Z",
+       "scheduledDeparture": "2026-11-12T14:24:00Z",
+       "vertexType": "NORMAL"
+      },
+      "to": {
+       "name": "Terminus Longueuil",
+       "stopId": "ca-qc-RTL_4415",
+       "parentId": "ca-qc-RTL_9999",
+       "importance": 0.00014818950148764998,
+       "lat": 45.524296,
+       "lon": -73.52109,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T14:25:00Z",
+       "scheduledArrival": "2026-11-12T14:25:00Z",
+       "stopCode": "34415",
+       "vertexType": "TRANSIT",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 60,
+      "startTime": "2026-11-12T14:24:00Z",
+      "endTime": "2026-11-12T14:25:00Z",
+      "scheduledStartTime": "2026-11-12T14:24:00Z",
+      "scheduledEndTime": "2026-11-12T14:25:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 52,
+      "legGeometry": {
+       "points": "_aqyuAnujfkC?N??WtN??sDKaCIgDKcBE",
+       "precision": 6,
+       "length": 9
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 0,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 11197511935,
+        "polyline": {
+         "points": "_aqyuAnujfkC?N",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 20,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 88561298,
+        "fromOsmNode": 11197511935,
+        "toOsmNode": 2775929815,
+        "polyline": {
+         "points": "_aqyuA~ujfkCWtN",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "E",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 32,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 2775929815,
+        "polyline": {
+         "points": "waqyuAtekfkCsDKaCIgDKcBE",
+         "precision": 6,
+         "length": 5
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     },
+     {
+      "mode": "BUS",
+      "from": {
+       "name": "Terminus Longueuil",
+       "stopId": "ca-qc-RTL_4415",
+       "parentId": "ca-qc-RTL_9999",
+       "importance": 0.00014818950148764998,
+       "lat": 45.524296,
+       "lon": -73.52109,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-12T14:25:00Z",
+       "scheduledDeparture": "2026-11-12T14:25:00Z",
+       "stopCode": "34415",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NOT_ALLOWED",
+       "cancelled": false,
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "ch. de Chambly / De Gentilly O.",
+       "stopId": "ca-qc-RTL_1353",
+       "importance": 0.0000275010424957145,
+       "lat": 45.535458000000006,
+       "lon": -73.49657,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T14:38:00Z",
+       "scheduledArrival": "2026-11-12T14:38:00Z",
+       "stopCode": "31353",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 780,
+      "startTime": "2026-11-12T14:25:00Z",
+      "endTime": "2026-11-12T14:38:00Z",
+      "scheduledStartTime": "2026-11-12T14:25:00Z",
+      "scheduledEndTime": "2026-11-12T14:38:00Z",
+      "realTime": false,
+      "scheduled": true,
+      "interlineWithPreviousLeg": false,
+      "headsign": "Promenades St-Bruno",
+      "tripFrom": {
+       "name": "Terminus Longueuil",
+       "stopId": "ca-qc-RTL_4415",
+       "parentId": "ca-qc-RTL_9999",
+       "importance": 0.00014818950148764998,
+       "lat": 45.524296,
+       "lon": -73.52109,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-12T14:25:00Z",
+       "scheduledDeparture": "2026-11-12T14:25:00Z",
+       "stopCode": "34415",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NOT_ALLOWED",
+       "cancelled": false,
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "tripTo": {
+       "name": "1011 St-Bruno",
+       "stopId": "ca-qc-RTL_6172",
+       "importance": 0.000005990340468997601,
+       "lat": 45.502445,
+       "lon": -73.38417,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T15:21:00Z",
+       "scheduledArrival": "2026-11-12T15:21:00Z",
+       "stopCode": "30904",
+       "vertexType": "TRANSIT",
+       "pickupType": "NOT_ALLOWED",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "routeId": "ca-qc-RTL_8",
+      "routeUrl": "",
+      "directionId": "0",
+      "routeColor": "d90b3e",
+      "routeTextColor": "ffffff",
+      "routeType": 700,
+      "agencyName": "Réseau de transport de Longueuil",
+      "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+      "agencyFareUrl": "http://www.rtl-longueuil.qc.ca/fr-CA/tarifs/",
+      "agencyId": "RTL",
+      "tripId": "20261112_09:25_ca-qc-RTL_8_1_R_SE_1256_mtro_09:25",
+      "routeShortName": "8",
+      "routeLongName": "ch. de Chambly / Cousineau / Promenades St-Bruno",
+      "tripShortName": "",
+      "displayName": "8",
+      "cancelled": false,
+      "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:725056:725123",
+      "intermediateStops": [
+       {
+        "name": "St-Charles O. / Place Longueuil",
+        "stopId": "ca-qc-RTL_3958",
+        "importance": 0.000012596970918821171,
+        "lat": 45.52834300000001,
+        "lon": -73.51709000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:28:00Z",
+        "departure": "2026-11-12T14:28:00Z",
+        "scheduledArrival": "2026-11-12T14:28:00Z",
+        "scheduledDeparture": "2026-11-12T14:28:00Z",
+        "stopCode": "33958",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / Gardenville",
+        "stopId": "ca-qc-RTL_3777",
+        "importance": 0.000014706858564750291,
+        "lat": 45.531612,
+        "lon": -73.51750000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:30:00Z",
+        "departure": "2026-11-12T14:30:00Z",
+        "scheduledArrival": "2026-11-12T14:30:00Z",
+        "scheduledDeparture": "2026-11-12T14:30:00Z",
+        "stopCode": "33777",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / Montarville",
+        "stopId": "ca-qc-RTL_1346",
+        "importance": 0.000030134413464111276,
+        "lat": 45.533695,
+        "lon": -73.51525000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:31:00Z",
+        "departure": "2026-11-12T14:31:00Z",
+        "scheduledArrival": "2026-11-12T14:31:00Z",
+        "scheduledDeparture": "2026-11-12T14:31:00Z",
+        "stopCode": "31346",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / Labonté",
+        "stopId": "ca-qc-RTL_1347",
+        "importance": 0.000026575880838208832,
+        "lat": 45.53511000000001,
+        "lon": -73.51394,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:31:00Z",
+        "departure": "2026-11-12T14:31:00Z",
+        "scheduledArrival": "2026-11-12T14:31:00Z",
+        "scheduledDeparture": "2026-11-12T14:31:00Z",
+        "stopCode": "31347",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / St-Jean",
+        "stopId": "ca-qc-RTL_1348",
+        "importance": 0.000026575880838208832,
+        "lat": 45.53729,
+        "lon": -73.51116000000002,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:33:00Z",
+        "departure": "2026-11-12T14:33:00Z",
+        "scheduledArrival": "2026-11-12T14:33:00Z",
+        "scheduledDeparture": "2026-11-12T14:33:00Z",
+        "stopCode": "31348",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / St-Alexandre",
+        "stopId": "ca-qc-RTL_1349",
+        "importance": 0.000026575880838208832,
+        "lat": 45.538673,
+        "lon": -73.50955,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:33:00Z",
+        "departure": "2026-11-12T14:33:00Z",
+        "scheduledArrival": "2026-11-12T14:33:00Z",
+        "scheduledDeparture": "2026-11-12T14:33:00Z",
+        "stopCode": "31349",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "ch. de Chambly / Ste-Élizabeth",
+        "stopId": "ca-qc-RTL_3615",
+        "importance": 0.000010872808161366265,
+        "lat": 45.540436,
+        "lon": -73.50756000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:35:00Z",
+        "departure": "2026-11-12T14:35:00Z",
+        "scheduledArrival": "2026-11-12T14:35:00Z",
+        "scheduledDeparture": "2026-11-12T14:35:00Z",
+        "stopCode": "33615",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "ch. de Chambly / St-Laurent O.",
+        "stopId": "ca-qc-RTL_1350",
+        "importance": 0.000026369967599748634,
+        "lat": 45.539593,
+        "lon": -73.50549,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:35:00Z",
+        "departure": "2026-11-12T14:35:00Z",
+        "scheduledArrival": "2026-11-12T14:35:00Z",
+        "scheduledDeparture": "2026-11-12T14:35:00Z",
+        "stopCode": "31350",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "ch. de Chambly / Guillaume",
+        "stopId": "ca-qc-RTL_1351",
+        "importance": 0.000010872808161366265,
+        "lat": 45.538662,
+        "lon": -73.50403,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:36:00Z",
+        "departure": "2026-11-12T14:36:00Z",
+        "scheduledArrival": "2026-11-12T14:36:00Z",
+        "scheduledDeparture": "2026-11-12T14:36:00Z",
+        "stopCode": "31351",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "ch. de Chambly / Le Moyne O.",
+        "stopId": "ca-qc-RTL_1352",
+        "importance": 0.000028887332518934272,
+        "lat": 45.53682,
+        "lon": -73.49972500000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:37:00Z",
+        "departure": "2026-11-12T14:37:00Z",
+        "scheduledArrival": "2026-11-12T14:37:00Z",
+        "scheduledDeparture": "2026-11-12T14:37:00Z",
+        "stopCode": "31352",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       }
+      ],
+      "legGeometry": {
+       "points": "osqyuAb{jfkC?oBF?pG^\\?l@?LkBHgAp@sl@?eAbL|@~Mn@|Lz@bA_g@XgJqToEaL{AwScB}@?qMSwV?gO?_@{JGkMs@sIu@gJMkCGgEG_H\\aS`Aq|@Hc`@eAk\\mDf@wRjCqGnAkWfFoAZ_ARgRzE{H~B{KzFms@~b@mNbFgTjHud@jMwI~CqYfJwUfF}TfDeEf@sJzDsInBkCHqE?iDIkDq@yCq@sA{@kAg@}AcBo_@w_@gn@_r@gg@gn@yCaGeDiDe\\sXyBmB_YmV{AoAgCwBqBoAuUcVkYgYsNwLeNgO}O{OeER}F_HsNgPod@w~@{U_g@_HoPsMcWgCcGmEoEmBcBcEsDei@_^in@sa@oF{DcQgKkLuHgPqJgQwK~BoGnDmLrPak@`N_b@pf@{`BhCkGxFgJpWw[zG{J`C{E|I_Xnb@wsAhWwx@jk@ihB~ZebA~\\udAhK}XbBoF|Y{aA_Ozr@",
+       "precision": 6,
+       "length": 115
+      },
+      "bikesAllowed": false,
+      "wheelchairAccessible": "ACCESSIBLE",
+      "reservation": "NONE",
+      "alternatives": []
+     },
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "ch. de Chambly / De Gentilly O.",
+       "stopId": "ca-qc-RTL_1353",
+       "importance": 0.0000275010424957145,
+       "lat": 45.535458000000006,
+       "lon": -73.49657,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T14:38:00Z",
+       "departure": "2026-11-12T14:38:00Z",
+       "scheduledArrival": "2026-11-12T14:38:00Z",
+       "scheduledDeparture": "2026-11-12T14:38:00Z",
+       "stopCode": "31353",
+       "vertexType": "TRANSIT",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "END",
+       "lat": 45.536,
+       "lon": -73.496,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T14:40:00Z",
+       "scheduledArrival": "2026-11-12T14:40:00Z",
+       "vertexType": "NORMAL"
+      },
+      "duration": 120,
+      "startTime": "2026-11-12T14:38:00Z",
+      "endTime": "2026-11-12T14:40:00Z",
+      "scheduledStartTime": "2026-11-12T14:38:00Z",
+      "scheduledEndTime": "2026-11-12T14:40:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 101,
+      "legGeometry": {
+       "points": "gngzuAt}zdkCaCrH??aAxC??kAuE??]wAqBeC??{AmB??uFcF??BcH??gCcI??aBkF",
+       "precision": 6,
+       "length": 19
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 14,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 14351255331,
+        "polyline": {
+         "points": "gngzuAt}zdkCaCrH",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 739901646,
+        "fromOsmNode": 14351255331,
+        "toOsmNode": 6927980753,
+        "polyline": {
+         "points": "irgzuAhg{dkCaAxC",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 9,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 739901644,
+        "fromOsmNode": 6927980753,
+        "toOsmNode": 6927980757,
+        "polyline": {
+         "points": "ktgzuAbl{dkCkAuE",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 12,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 739901644,
+        "fromOsmNode": 6927980757,
+        "toOsmNode": 6927980755,
+        "polyline": {
+         "points": "wvgzuAle{dkC]wAqBeC",
+         "precision": 6,
+         "length": 3
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 739901644,
+        "fromOsmNode": 6927980755,
+        "toOsmNode": 6511942839,
+        "polyline": {
+         "points": "g{gzuAn~zdkC{AmB",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 16,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 693605415,
+        "fromOsmNode": 6511942839,
+        "toOsmNode": 6511942842,
+        "polyline": {
+         "points": "c~gzuA`{zdkCuFcF",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 11,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 693604801,
+        "fromOsmNode": 6511942842,
+        "toOsmNode": 6511937267,
+        "polyline": {
+         "points": "yehzuA|szdkCBcH",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 15,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 693604801,
+        "fromOsmNode": 6511937267,
+        "toOsmNode": 6736117854,
+        "polyline": {
+         "points": "uehzuAxjzdkCgCcI",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 10,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 6736117854,
+        "polyline": {
+         "points": "}ihzuAt`zdkCaBkF",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "duration": 960,
+    "startTime": "2026-11-12T14:31:00Z",
+    "endTime": "2026-11-12T14:47:00Z",
+    "transfers": 0,
+    "id": "CkghUI2XbhLDRkAp001iEFhhUsAyDmNhLXFjLVJUTF80NDE1OTm2niEcw0ZAQXMR34lZYVLASKSb19cGUOCb19cGWgRXQUxLYAEKjwEKAjg4EjIyMDI2MTExMl8wOTozMl9jYS1xYy1SVExfODhfMV9SX1NFXzIwMTlfbXRyb18wOTozMhoOY2EtcWMtUlRMXzQ0MTUhObaeIRzDRkApcxHfiVlhUsAyDmNhLXFjLVJUTF8xMzUzOdgwQ+OJxEZAQS+Lic3HX1LASOCb19cGUOyh19cGWgNCVVNgAQpIGg5jYS1xYy1SVExfMTM1MyHYMEPjicRGQCkvi4nNx19SwDn4U+Olm8RGQEE5tMh2vl9SwEjsodfXBlDkotfXBloEV0FMS2AB",
+    "legs": [
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "START",
+       "lat": 45.524,
+       "lon": -73.521,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-12T14:31:00Z",
+       "scheduledDeparture": "2026-11-12T14:31:00Z",
+       "vertexType": "NORMAL"
+      },
+      "to": {
+       "name": "Terminus Longueuil",
+       "stopId": "ca-qc-RTL_4415",
+       "parentId": "ca-qc-RTL_9999",
+       "importance": 0.00014818950148764998,
+       "lat": 45.524296,
+       "lon": -73.52109,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T14:32:00Z",
+       "scheduledArrival": "2026-11-12T14:32:00Z",
+       "stopCode": "34415",
+       "vertexType": "TRANSIT",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 60,
+      "startTime": "2026-11-12T14:31:00Z",
+      "endTime": "2026-11-12T14:32:00Z",
+      "scheduledStartTime": "2026-11-12T14:31:00Z",
+      "scheduledEndTime": "2026-11-12T14:32:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 52,
+      "legGeometry": {
+       "points": "_aqyuAnujfkC?N??WtN??sDKaCIgDKcBE",
+       "precision": 6,
+       "length": 9
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 0,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 11197511935,
+        "polyline": {
+         "points": "_aqyuAnujfkC?N",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 20,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 88561298,
+        "fromOsmNode": 11197511935,
+        "toOsmNode": 2775929815,
+        "polyline": {
+         "points": "_aqyuA~ujfkCWtN",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "E",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 32,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 2775929815,
+        "polyline": {
+         "points": "waqyuAtekfkCsDKaCIgDKcBE",
+         "precision": 6,
+         "length": 5
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     },
+     {
+      "mode": "BUS",
+      "from": {
+       "name": "Terminus Longueuil",
+       "stopId": "ca-qc-RTL_4415",
+       "parentId": "ca-qc-RTL_9999",
+       "importance": 0.00014818950148764998,
+       "lat": 45.524296,
+       "lon": -73.52109,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-12T14:32:00Z",
+       "scheduledDeparture": "2026-11-12T14:32:00Z",
+       "stopCode": "34415",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NOT_ALLOWED",
+       "cancelled": false,
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "ch. de Chambly / De Gentilly O.",
+       "stopId": "ca-qc-RTL_1353",
+       "importance": 0.0000275010424957145,
+       "lat": 45.535458000000006,
+       "lon": -73.49657,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T14:45:00Z",
+       "scheduledArrival": "2026-11-12T14:45:00Z",
+       "stopCode": "31353",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 780,
+      "startTime": "2026-11-12T14:32:00Z",
+      "endTime": "2026-11-12T14:45:00Z",
+      "scheduledStartTime": "2026-11-12T14:32:00Z",
+      "scheduledEndTime": "2026-11-12T14:45:00Z",
+      "realTime": false,
+      "scheduled": true,
+      "interlineWithPreviousLeg": false,
+      "headsign": "Mountainview",
+      "tripFrom": {
+       "name": "Terminus Longueuil",
+       "stopId": "ca-qc-RTL_4415",
+       "parentId": "ca-qc-RTL_9999",
+       "importance": 0.00014818950148764998,
+       "lat": 45.524296,
+       "lon": -73.52109,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-12T14:32:00Z",
+       "scheduledDeparture": "2026-11-12T14:32:00Z",
+       "stopCode": "34415",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NOT_ALLOWED",
+       "cancelled": false,
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "tripTo": {
+       "name": "Kimber / Léonard",
+       "stopId": "ca-qc-RTL_4504",
+       "importance": 0.000011612356502155308,
+       "lat": 45.46312,
+       "lon": -73.38374999999999,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T15:23:00Z",
+       "scheduledArrival": "2026-11-12T15:23:00Z",
+       "stopCode": "34504",
+       "vertexType": "TRANSIT",
+       "pickupType": "NOT_ALLOWED",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "routeId": "ca-qc-RTL_88",
+      "routeUrl": "",
+      "directionId": "0",
+      "routeColor": "d90b3e",
+      "routeTextColor": "ffffff",
+      "routeType": 700,
+      "agencyName": "Réseau de transport de Longueuil",
+      "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+      "agencyFareUrl": "http://www.rtl-longueuil.qc.ca/fr-CA/tarifs/",
+      "agencyId": "RTL",
+      "tripId": "20261112_09:32_ca-qc-RTL_88_1_R_SE_2019_mtro_09:32",
+      "routeShortName": "88",
+      "routeLongName": "ch. de Chambly / Mountainview",
+      "tripShortName": "",
+      "displayName": "88",
+      "cancelled": false,
+      "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:772196:772267",
+      "intermediateStops": [
+       {
+        "name": "St-Charles O. / Place Longueuil",
+        "stopId": "ca-qc-RTL_3958",
+        "importance": 0.000012596970918821171,
+        "lat": 45.52834300000001,
+        "lon": -73.51709000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:35:00Z",
+        "departure": "2026-11-12T14:35:00Z",
+        "scheduledArrival": "2026-11-12T14:35:00Z",
+        "scheduledDeparture": "2026-11-12T14:35:00Z",
+        "stopCode": "33958",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / Gardenville",
+        "stopId": "ca-qc-RTL_3777",
+        "importance": 0.000014706858564750291,
+        "lat": 45.531612,
+        "lon": -73.51750000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:37:00Z",
+        "departure": "2026-11-12T14:37:00Z",
+        "scheduledArrival": "2026-11-12T14:37:00Z",
+        "scheduledDeparture": "2026-11-12T14:37:00Z",
+        "stopCode": "33777",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / Montarville",
+        "stopId": "ca-qc-RTL_1346",
+        "importance": 0.000030134413464111276,
+        "lat": 45.533695,
+        "lon": -73.51525000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:38:00Z",
+        "departure": "2026-11-12T14:38:00Z",
+        "scheduledArrival": "2026-11-12T14:38:00Z",
+        "scheduledDeparture": "2026-11-12T14:38:00Z",
+        "stopCode": "31346",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / Labonté",
+        "stopId": "ca-qc-RTL_1347",
+        "importance": 0.000026575880838208832,
+        "lat": 45.53511000000001,
+        "lon": -73.51394,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:38:00Z",
+        "departure": "2026-11-12T14:38:00Z",
+        "scheduledArrival": "2026-11-12T14:38:00Z",
+        "scheduledDeparture": "2026-11-12T14:38:00Z",
+        "stopCode": "31347",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / St-Jean",
+        "stopId": "ca-qc-RTL_1348",
+        "importance": 0.000026575880838208832,
+        "lat": 45.53729,
+        "lon": -73.51116000000002,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:40:00Z",
+        "departure": "2026-11-12T14:40:00Z",
+        "scheduledArrival": "2026-11-12T14:40:00Z",
+        "scheduledDeparture": "2026-11-12T14:40:00Z",
+        "stopCode": "31348",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / St-Alexandre",
+        "stopId": "ca-qc-RTL_1349",
+        "importance": 0.000026575880838208832,
+        "lat": 45.538673,
+        "lon": -73.50955,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:40:00Z",
+        "departure": "2026-11-12T14:40:00Z",
+        "scheduledArrival": "2026-11-12T14:40:00Z",
+        "scheduledDeparture": "2026-11-12T14:40:00Z",
+        "stopCode": "31349",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "ch. de Chambly / Ste-Élizabeth",
+        "stopId": "ca-qc-RTL_3615",
+        "importance": 0.000010872808161366265,
+        "lat": 45.540436,
+        "lon": -73.50756000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:42:00Z",
+        "departure": "2026-11-12T14:42:00Z",
+        "scheduledArrival": "2026-11-12T14:42:00Z",
+        "scheduledDeparture": "2026-11-12T14:42:00Z",
+        "stopCode": "33615",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "ch. de Chambly / St-Laurent O.",
+        "stopId": "ca-qc-RTL_1350",
+        "importance": 0.000026369967599748634,
+        "lat": 45.539593,
+        "lon": -73.50549,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:42:00Z",
+        "departure": "2026-11-12T14:42:00Z",
+        "scheduledArrival": "2026-11-12T14:42:00Z",
+        "scheduledDeparture": "2026-11-12T14:42:00Z",
+        "stopCode": "31350",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "ch. de Chambly / Guillaume",
+        "stopId": "ca-qc-RTL_1351",
+        "importance": 0.000010872808161366265,
+        "lat": 45.538662,
+        "lon": -73.50403,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:43:00Z",
+        "departure": "2026-11-12T14:43:00Z",
+        "scheduledArrival": "2026-11-12T14:43:00Z",
+        "scheduledDeparture": "2026-11-12T14:43:00Z",
+        "stopCode": "31351",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "ch. de Chambly / Le Moyne O.",
+        "stopId": "ca-qc-RTL_1352",
+        "importance": 0.000028887332518934272,
+        "lat": 45.53682,
+        "lon": -73.49972500000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:44:00Z",
+        "departure": "2026-11-12T14:44:00Z",
+        "scheduledArrival": "2026-11-12T14:44:00Z",
+        "scheduledDeparture": "2026-11-12T14:44:00Z",
+        "stopCode": "31352",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       }
+      ],
+      "legGeometry": {
+       "points": "osqyuAb{jfkC?oBF?pG^\\?l@?LkBHgAp@sl@?eAbL|@~Mn@|Lz@bA_g@XgJqToEaL{AwScBoOSwV?gO?_@{JGkMs@sIu@gJMkCGgEG_H\\aS`Aq|@Hc`@eAk\\mDf@wRjCqGnAkWfFoAZgTnF{H~B{KzFms@~b@mNbFsNzEsDnAud@jMwI~CqYfJwUfF}TfDeEf@sJzDsInBkCHqE?iDIkDq@yCq@sA{@kAg@}AcBo_@w_@gn@_r@gg@gn@yCaGeDiDe\\sXyBmB_YmV{AoAgCwBqBoAuUcVkYgYsNwLeNgO}O{OeERqVgYod@w~@{U_g@_HoPsMcWgCcGmEoEqHwGqL_Is[_Tin@sa@oF{DcQgKkLuHgPqJgQwK~BoGjFwQvNwe@`N_b@pf@{`BhCkGxFgJpWw[zG{J`C{E|I_Xnb@wsAhWwx@jk@ihB~ZebA~\\udAhK}XbBoF|Y{aA_Ozr@",
+       "precision": 6,
+       "length": 113
+      },
+      "bikesAllowed": false,
+      "wheelchairAccessible": "ACCESSIBLE",
+      "reservation": "NONE",
+      "alternatives": []
+     },
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "ch. de Chambly / De Gentilly O.",
+       "stopId": "ca-qc-RTL_1353",
+       "importance": 0.0000275010424957145,
+       "lat": 45.535458000000006,
+       "lon": -73.49657,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T14:45:00Z",
+       "departure": "2026-11-12T14:45:00Z",
+       "scheduledArrival": "2026-11-12T14:45:00Z",
+       "scheduledDeparture": "2026-11-12T14:45:00Z",
+       "stopCode": "31353",
+       "vertexType": "TRANSIT",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "END",
+       "lat": 45.536,
+       "lon": -73.496,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T14:47:00Z",
+       "scheduledArrival": "2026-11-12T14:47:00Z",
+       "vertexType": "NORMAL"
+      },
+      "duration": 120,
+      "startTime": "2026-11-12T14:45:00Z",
+      "endTime": "2026-11-12T14:47:00Z",
+      "scheduledStartTime": "2026-11-12T14:45:00Z",
+      "scheduledEndTime": "2026-11-12T14:47:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 101,
+      "legGeometry": {
+       "points": "gngzuAt}zdkCaCrH??aAxC??kAuE??]wAqBeC??{AmB??uFcF??BcH??gCcI??aBkF",
+       "precision": 6,
+       "length": 19
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 14,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 14351255331,
+        "polyline": {
+         "points": "gngzuAt}zdkCaCrH",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 739901646,
+        "fromOsmNode": 14351255331,
+        "toOsmNode": 6927980753,
+        "polyline": {
+         "points": "irgzuAhg{dkCaAxC",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 9,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 739901644,
+        "fromOsmNode": 6927980753,
+        "toOsmNode": 6927980757,
+        "polyline": {
+         "points": "ktgzuAbl{dkCkAuE",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 12,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 739901644,
+        "fromOsmNode": 6927980757,
+        "toOsmNode": 6927980755,
+        "polyline": {
+         "points": "wvgzuAle{dkC]wAqBeC",
+         "precision": 6,
+         "length": 3
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 739901644,
+        "fromOsmNode": 6927980755,
+        "toOsmNode": 6511942839,
+        "polyline": {
+         "points": "g{gzuAn~zdkC{AmB",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 16,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 693605415,
+        "fromOsmNode": 6511942839,
+        "toOsmNode": 6511942842,
+        "polyline": {
+         "points": "c~gzuA`{zdkCuFcF",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 11,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 693604801,
+        "fromOsmNode": 6511942842,
+        "toOsmNode": 6511937267,
+        "polyline": {
+         "points": "yehzuA|szdkCBcH",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 15,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 693604801,
+        "fromOsmNode": 6511937267,
+        "toOsmNode": 6736117854,
+        "polyline": {
+         "points": "uehzuAxjzdkCgCcI",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 10,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 6736117854,
+        "polyline": {
+         "points": "}ihzuAt`zdkCaBkF",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "duration": 960,
+    "startTime": "2026-11-12T14:39:00Z",
+    "endTime": "2026-11-12T14:55:00Z",
+    "transfers": 0,
+    "id": "CkghUI2XbhLDRkAp001iEFhhUsAyDmNhLXFjLVJUTF80NDE1OTm2niEcw0ZAQXMR34lZYVLASISf19cGUMCf19cGWgRXQUxLYAEKjQEKATgSMTIwMjYxMTEyXzA5OjQwX2NhLXFjLVJUTF84XzFfUl9TRV8yMDI1X210cm9fMDk6NDAaDmNhLXFjLVJUTF80NDE1ITm2niEcw0ZAKXMR34lZYVLAMg5jYS1xYy1SVExfMTM1MznYMEPjicRGQEEvi4nNx19SwEjAn9fXBlDMpdfXBloDQlVTYAEKSBoOY2EtcWMtUlRMXzEzNTMh2DBD44nERkApL4uJzcdfUsA5+FPjpZvERkBBObTIdr5fUsBIzKXX1wZQxKbX1wZaBFdBTEtgAQ==",
+    "legs": [
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "START",
+       "lat": 45.524,
+       "lon": -73.521,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-12T14:39:00Z",
+       "scheduledDeparture": "2026-11-12T14:39:00Z",
+       "vertexType": "NORMAL"
+      },
+      "to": {
+       "name": "Terminus Longueuil",
+       "stopId": "ca-qc-RTL_4415",
+       "parentId": "ca-qc-RTL_9999",
+       "importance": 0.00014818950148764998,
+       "lat": 45.524296,
+       "lon": -73.52109,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T14:40:00Z",
+       "scheduledArrival": "2026-11-12T14:40:00Z",
+       "stopCode": "34415",
+       "vertexType": "TRANSIT",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 60,
+      "startTime": "2026-11-12T14:39:00Z",
+      "endTime": "2026-11-12T14:40:00Z",
+      "scheduledStartTime": "2026-11-12T14:39:00Z",
+      "scheduledEndTime": "2026-11-12T14:40:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 52,
+      "legGeometry": {
+       "points": "_aqyuAnujfkC?N??WtN??sDKaCIgDKcBE",
+       "precision": 6,
+       "length": 9
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 0,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 11197511935,
+        "polyline": {
+         "points": "_aqyuAnujfkC?N",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 20,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 88561298,
+        "fromOsmNode": 11197511935,
+        "toOsmNode": 2775929815,
+        "polyline": {
+         "points": "_aqyuA~ujfkCWtN",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "E",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 32,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 2775929815,
+        "polyline": {
+         "points": "waqyuAtekfkCsDKaCIgDKcBE",
+         "precision": 6,
+         "length": 5
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     },
+     {
+      "mode": "BUS",
+      "from": {
+       "name": "Terminus Longueuil",
+       "stopId": "ca-qc-RTL_4415",
+       "parentId": "ca-qc-RTL_9999",
+       "importance": 0.00014818950148764998,
+       "lat": 45.524296,
+       "lon": -73.52109,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-12T14:40:00Z",
+       "scheduledDeparture": "2026-11-12T14:40:00Z",
+       "stopCode": "34415",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NOT_ALLOWED",
+       "cancelled": false,
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "ch. de Chambly / De Gentilly O.",
+       "stopId": "ca-qc-RTL_1353",
+       "importance": 0.0000275010424957145,
+       "lat": 45.535458000000006,
+       "lon": -73.49657,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T14:53:00Z",
+       "scheduledArrival": "2026-11-12T14:53:00Z",
+       "stopCode": "31353",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "duration": 780,
+      "startTime": "2026-11-12T14:40:00Z",
+      "endTime": "2026-11-12T14:53:00Z",
+      "scheduledStartTime": "2026-11-12T14:40:00Z",
+      "scheduledEndTime": "2026-11-12T14:53:00Z",
+      "realTime": false,
+      "scheduled": true,
+      "interlineWithPreviousLeg": false,
+      "headsign": "Promenades St-Bruno",
+      "tripFrom": {
+       "name": "Terminus Longueuil",
+       "stopId": "ca-qc-RTL_4415",
+       "parentId": "ca-qc-RTL_9999",
+       "importance": 0.00014818950148764998,
+       "lat": 45.524296,
+       "lon": -73.52109,
+       "level": 0,
+       "tz": "America/Toronto",
+       "departure": "2026-11-12T14:40:00Z",
+       "scheduledDeparture": "2026-11-12T14:40:00Z",
+       "stopCode": "34415",
+       "vertexType": "TRANSIT",
+       "pickupType": "NORMAL",
+       "dropoffType": "NOT_ALLOWED",
+       "cancelled": false,
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "tripTo": {
+       "name": "1011 St-Bruno",
+       "stopId": "ca-qc-RTL_6172",
+       "importance": 0.000005990340468997601,
+       "lat": 45.502445,
+       "lon": -73.38417,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T15:36:00Z",
+       "scheduledArrival": "2026-11-12T15:36:00Z",
+       "stopCode": "30904",
+       "vertexType": "TRANSIT",
+       "pickupType": "NOT_ALLOWED",
+       "dropoffType": "NORMAL",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "routeId": "ca-qc-RTL_8",
+      "routeUrl": "",
+      "directionId": "0",
+      "routeColor": "d90b3e",
+      "routeTextColor": "ffffff",
+      "routeType": 700,
+      "agencyName": "Réseau de transport de Longueuil",
+      "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+      "agencyFareUrl": "http://www.rtl-longueuil.qc.ca/fr-CA/tarifs/",
+      "agencyId": "RTL",
+      "tripId": "20261112_09:40_ca-qc-RTL_8_1_R_SE_2025_mtro_09:40",
+      "routeShortName": "8",
+      "routeLongName": "ch. de Chambly / Cousineau / Promenades St-Bruno",
+      "tripShortName": "",
+      "displayName": "8",
+      "cancelled": false,
+      "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:726794:726861",
+      "intermediateStops": [
+       {
+        "name": "St-Charles O. / Place Longueuil",
+        "stopId": "ca-qc-RTL_3958",
+        "importance": 0.000012596970918821171,
+        "lat": 45.52834300000001,
+        "lon": -73.51709000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:43:00Z",
+        "departure": "2026-11-12T14:43:00Z",
+        "scheduledArrival": "2026-11-12T14:43:00Z",
+        "scheduledDeparture": "2026-11-12T14:43:00Z",
+        "stopCode": "33958",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / Gardenville",
+        "stopId": "ca-qc-RTL_3777",
+        "importance": 0.000014706858564750291,
+        "lat": 45.531612,
+        "lon": -73.51750000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:45:00Z",
+        "departure": "2026-11-12T14:45:00Z",
+        "scheduledArrival": "2026-11-12T14:45:00Z",
+        "scheduledDeparture": "2026-11-12T14:45:00Z",
+        "stopCode": "33777",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / Montarville",
+        "stopId": "ca-qc-RTL_1346",
+        "importance": 0.000030134413464111276,
+        "lat": 45.533695,
+        "lon": -73.51525000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:46:00Z",
+        "departure": "2026-11-12T14:46:00Z",
+        "scheduledArrival": "2026-11-12T14:46:00Z",
+        "scheduledDeparture": "2026-11-12T14:46:00Z",
+        "stopCode": "31346",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / Labonté",
+        "stopId": "ca-qc-RTL_1347",
+        "importance": 0.000026575880838208832,
+        "lat": 45.53511000000001,
+        "lon": -73.51394,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:46:00Z",
+        "departure": "2026-11-12T14:46:00Z",
+        "scheduledArrival": "2026-11-12T14:46:00Z",
+        "scheduledDeparture": "2026-11-12T14:46:00Z",
+        "stopCode": "31347",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / St-Jean",
+        "stopId": "ca-qc-RTL_1348",
+        "importance": 0.000026575880838208832,
+        "lat": 45.53729,
+        "lon": -73.51116000000002,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:48:00Z",
+        "departure": "2026-11-12T14:48:00Z",
+        "scheduledArrival": "2026-11-12T14:48:00Z",
+        "scheduledDeparture": "2026-11-12T14:48:00Z",
+        "stopCode": "31348",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "St-Charles O. / St-Alexandre",
+        "stopId": "ca-qc-RTL_1349",
+        "importance": 0.000026575880838208832,
+        "lat": 45.538673,
+        "lon": -73.50955,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:48:00Z",
+        "departure": "2026-11-12T14:48:00Z",
+        "scheduledArrival": "2026-11-12T14:48:00Z",
+        "scheduledDeparture": "2026-11-12T14:48:00Z",
+        "stopCode": "31349",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "ch. de Chambly / Ste-Élizabeth",
+        "stopId": "ca-qc-RTL_3615",
+        "importance": 0.000010872808161366265,
+        "lat": 45.540436,
+        "lon": -73.50756000000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:50:00Z",
+        "departure": "2026-11-12T14:50:00Z",
+        "scheduledArrival": "2026-11-12T14:50:00Z",
+        "scheduledDeparture": "2026-11-12T14:50:00Z",
+        "stopCode": "33615",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "ch. de Chambly / St-Laurent O.",
+        "stopId": "ca-qc-RTL_1350",
+        "importance": 0.000026369967599748634,
+        "lat": 45.539593,
+        "lon": -73.50549,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:50:00Z",
+        "departure": "2026-11-12T14:50:00Z",
+        "scheduledArrival": "2026-11-12T14:50:00Z",
+        "scheduledDeparture": "2026-11-12T14:50:00Z",
+        "stopCode": "31350",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "ch. de Chambly / Guillaume",
+        "stopId": "ca-qc-RTL_1351",
+        "importance": 0.000010872808161366265,
+        "lat": 45.538662,
+        "lon": -73.50403,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:51:00Z",
+        "departure": "2026-11-12T14:51:00Z",
+        "scheduledArrival": "2026-11-12T14:51:00Z",
+        "scheduledDeparture": "2026-11-12T14:51:00Z",
+        "stopCode": "31351",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       },
+       {
+        "name": "ch. de Chambly / Le Moyne O.",
+        "stopId": "ca-qc-RTL_1352",
+        "importance": 0.000028887332518934272,
+        "lat": 45.53682,
+        "lon": -73.49972500000001,
+        "level": 0,
+        "tz": "America/Toronto",
+        "arrival": "2026-11-12T14:52:00Z",
+        "departure": "2026-11-12T14:52:00Z",
+        "scheduledArrival": "2026-11-12T14:52:00Z",
+        "scheduledDeparture": "2026-11-12T14:52:00Z",
+        "stopCode": "31352",
+        "vertexType": "TRANSIT",
+        "pickupType": "NORMAL",
+        "dropoffType": "NORMAL",
+        "cancelled": false,
+        "arrivalTimestampReason": "NO_RT_DATA",
+        "departureTimestampReason": "NO_RT_DATA",
+        "modes": [
+         "BUS"
+        ]
+       }
+      ],
+      "legGeometry": {
+       "points": "osqyuAb{jfkC?oBF?pG^\\?l@?LkBHgAp@sl@?eAbL|@~Mn@|Lz@bA_g@XgJqToEaL{AwScB}@?qMSwV?gO?_@{JGkMs@sIu@gJMkCGgEG_H\\aS`Aq|@Hc`@eAk\\mDf@wRjCqGnAkWfFoAZ_ARgRzE{H~B{KzFms@~b@mNbFgTjHud@jMwI~CqYfJwUfF}TfDeEf@sJzDsInBkCHqE?iDIkDq@yCq@sA{@kAg@}AcBo_@w_@gn@_r@gg@gn@yCaGeDiDe\\sXyBmB_YmV{AoAgCwBqBoAuUcVkYgYsNwLeNgO}O{OeER}F_HsNgPod@w~@{U_g@_HoPsMcWgCcGmEoEmBcBcEsDei@_^in@sa@oF{DcQgKkLuHgPqJgQwK~BoGnDmLrPak@`N_b@pf@{`BhCkGxFgJpWw[zG{J`C{E|I_Xnb@wsAhWwx@jk@ihB~ZebA~\\udAhK}XbBoF|Y{aA_Ozr@",
+       "precision": 6,
+       "length": 115
+      },
+      "bikesAllowed": false,
+      "wheelchairAccessible": "ACCESSIBLE",
+      "reservation": "NONE",
+      "alternatives": []
+     },
+     {
+      "mode": "WALK",
+      "from": {
+       "name": "ch. de Chambly / De Gentilly O.",
+       "stopId": "ca-qc-RTL_1353",
+       "importance": 0.0000275010424957145,
+       "lat": 45.535458000000006,
+       "lon": -73.49657,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T14:53:00Z",
+       "departure": "2026-11-12T14:53:00Z",
+       "scheduledArrival": "2026-11-12T14:53:00Z",
+       "scheduledDeparture": "2026-11-12T14:53:00Z",
+       "stopCode": "31353",
+       "vertexType": "TRANSIT",
+       "cancelled": false,
+       "arrivalTimestampReason": "NO_RT_DATA",
+       "departureTimestampReason": "NO_RT_DATA",
+       "modes": [
+        "BUS"
+       ]
+      },
+      "to": {
+       "name": "END",
+       "lat": 45.536,
+       "lon": -73.496,
+       "level": 0,
+       "tz": "America/Toronto",
+       "arrival": "2026-11-12T14:55:00Z",
+       "scheduledArrival": "2026-11-12T14:55:00Z",
+       "vertexType": "NORMAL"
+      },
+      "duration": 120,
+      "startTime": "2026-11-12T14:53:00Z",
+      "endTime": "2026-11-12T14:55:00Z",
+      "scheduledStartTime": "2026-11-12T14:53:00Z",
+      "scheduledEndTime": "2026-11-12T14:55:00Z",
+      "realTime": false,
+      "scheduled": false,
+      "distance": 101,
+      "legGeometry": {
+       "points": "gngzuAt}zdkCaCrH??aAxC??kAuE??]wAqBeC??{AmB??uFcF??BcH??gCcI??aBkF",
+       "precision": 6,
+       "length": 19
+      },
+      "steps": [
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 14,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "toOsmNode": 14351255331,
+        "polyline": {
+         "points": "gngzuAt}zdkCaCrH",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 739901646,
+        "fromOsmNode": 14351255331,
+        "toOsmNode": 6927980753,
+        "polyline": {
+         "points": "irgzuAhg{dkCaAxC",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 9,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 739901644,
+        "fromOsmNode": 6927980753,
+        "toOsmNode": 6927980757,
+        "polyline": {
+         "points": "ktgzuAbl{dkCkAuE",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 12,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 739901644,
+        "fromOsmNode": 6927980757,
+        "toOsmNode": 6927980755,
+        "polyline": {
+         "points": "wvgzuAle{dkC]wAqBeC",
+         "precision": 6,
+         "length": 3
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 7,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 739901644,
+        "fromOsmNode": 6927980755,
+        "toOsmNode": 6511942839,
+        "polyline": {
+         "points": "g{gzuAn~zdkC{AmB",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 16,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 693605415,
+        "fromOsmNode": 6511942839,
+        "toOsmNode": 6511942842,
+        "polyline": {
+         "points": "c~gzuA`{zdkCuFcF",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 11,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 693604801,
+        "fromOsmNode": 6511942842,
+        "toOsmNode": 6511937267,
+        "polyline": {
+         "points": "yehzuA|szdkCBcH",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 15,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "osmWay": 693604801,
+        "fromOsmNode": 6511937267,
+        "toOsmNode": 6736117854,
+        "polyline": {
+         "points": "uehzuAxjzdkCgCcI",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       },
+       {
+        "relativeDirection": "CONTINUE",
+        "distance": 10,
+        "fromLevel": 0,
+        "toLevel": 0,
+        "fromOsmNode": 6736117854,
+        "polyline": {
+         "points": "}ihzuAt`zdkCaBkF",
+         "precision": 6,
+         "length": 2
+        },
+        "streetName": "",
+        "exit": "",
+        "stayOn": false,
+        "area": false,
+        "toll": false,
+        "elevationUp": 0,
+        "elevationDown": 0
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "previousPageCursor": "EARLIER|1794493080",
+  "nextPageCursor": "LATER|1794494400"
+ },
+ "stoptimes?stopId=ca-qc-RTL_4415&n=30": {
+  "stopTimes": [
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4418",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524048,
+     "lon": -73.522606,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:19:00Z",
+     "scheduledDeparture": "2026-11-12T14:19:00Z",
+     "stopCode": "34418",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "De Montarville",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4418",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524048,
+     "lon": -73.522606,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34418",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "582 Carrefour de la Rive-Sud",
+     "stopId": "ca-qc-RTL_4972",
+     "importance": 0.0000019837291347357677,
+     "lat": 45.573154,
+     "lon": -73.40437,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34972",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_80",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:19_ca-qc-RTL_80_1_R_SE_2184_mtro_09:19",
+    "routeType": 700,
+    "routeShortName": "80",
+    "routeLongName": "De Montarville / Carrefour de la Rive-Sud",
+    "tripShortName": "",
+    "displayName": "80",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:161356:161381"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:19:00Z",
+     "scheduledDeparture": "2026-11-12T14:19:00Z",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Terminus Georges-Gagné",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Terminus Georges-Gagné",
+     "stopId": "ca-qc-RTL_6183",
+     "importance": 0.000008277139386336785,
+     "lat": 45.38506699999999,
+     "lon": -73.54790000000001,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "76048",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_901",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "00ab84",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:19_ca-qc-RTL_901_1_R_SE_1255_mtro_09:19",
+    "routeType": 700,
+    "routeShortName": "901",
+    "routeLongName": "Ligne métropolitaine Taschereau",
+    "tripShortName": "",
+    "displayName": "901",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:358691:358740"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:20:00Z",
+     "scheduledDeparture": "2026-11-12T14:20:00Z",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Davis",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Prince-Charles / Davis",
+     "stopId": "ca-qc-RTL_3498",
+     "importance": 0.00000812777943792753,
+     "lat": 45.492360000000005,
+     "lon": -73.420815,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "33498",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_19",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:20_ca-qc-RTL_19_1_R_SE_2143_mtro_09:20",
+    "routeType": 700,
+    "routeShortName": "19",
+    "routeLongName": "Davis",
+    "tripShortName": "",
+    "displayName": "19",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "NOT_ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:151895:151926"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1002",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523815000000006,
+     "lon": -73.521416,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:20:00Z",
+     "scheduledDeparture": "2026-11-12T14:20:00Z",
+     "stopCode": "31002",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Grande Allée",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1002",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523815000000006,
+     "lon": -73.521416,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31002",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "4055 pl. de Java",
+     "stopId": "ca-qc-RTL_5510",
+     "importance": 0.000013294466043589637,
+     "lat": 45.432163,
+     "lon": -73.45748,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "30258",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_21",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:20_ca-qc-RTL_21_1_R_SE_1057_mtro_09:20",
+    "routeType": 700,
+    "routeShortName": "21",
+    "routeLongName": "Grande Allée / du Quartier",
+    "tripShortName": "",
+    "displayName": "21",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:262473:262532"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:21:00Z",
+     "scheduledDeparture": "2026-11-12T14:21:00Z",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Montgomery",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Diane / Montgomery",
+     "stopId": "ca-qc-RTL_1126",
+     "importance": 0.000007563692633993924,
+     "lat": 45.500355000000006,
+     "lon": -73.456,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31126",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_3",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:21_ca-qc-RTL_3_1_R_SE_2071_mtro_09:21",
+    "routeType": 700,
+    "routeShortName": "3",
+    "routeLongName": "Secteur Laflèche",
+    "tripShortName": "",
+    "displayName": "3",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:548423:548449"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4416",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523804,
+     "lon": -73.52115,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:21:00Z",
+     "scheduledDeparture": "2026-11-12T14:21:00Z",
+     "stopCode": "34416",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "McGill",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4416",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523804,
+     "lon": -73.52115,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34416",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Maréchal / de Chatham",
+     "stopId": "ca-qc-RTL_3224",
+     "importance": 0.0000028581362130353227,
+     "lat": 45.52070200000001,
+     "lon": -73.46491000000002,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "33224",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_75",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:21_ca-qc-RTL_75_1_R_SE_2002_mtro_09:21",
+    "routeType": 700,
+    "routeShortName": "75",
+    "routeLongName": "Quinn / Brébeuf",
+    "tripShortName": "",
+    "displayName": "75",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "NOT_ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:446035:446059"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:23:00Z",
+     "scheduledDeparture": "2026-11-12T14:23:00Z",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Sect. M Vieux-Longueuil",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Roland-Therrien / Des Ormeaux",
+     "stopId": "ca-qc-RTL_1502",
+     "importance": 0.000023158008843893185,
+     "lat": 45.529076,
+     "lon": -73.45476000000001,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31502",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_417",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:23_ca-qc-RTL_417_2_R_SE_1210_mtro_09:23",
+    "routeType": 700,
+    "routeShortName": "417",
+    "routeLongName": "Express Roland-Therrien / Roberval",
+    "tripShortName": "",
+    "displayName": "417",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "NOT_ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:200350:200358"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:25:00Z",
+     "scheduledDeparture": "2026-11-12T14:25:00Z",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Pratt et Whitney",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Marie-Victorin / RTL",
+     "stopId": "ca-qc-RTL_3415",
+     "importance": 0.000007447685220540734,
+     "lat": 45.559546999999995,
+     "lon": -73.49353,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "33415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_125",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:25_ca-qc-RTL_125_1_R_SE_2283_mtro_09:25",
+    "routeType": 700,
+    "routeShortName": "125",
+    "routeLongName": "Pratt & Whitney / Lumenpulse",
+    "tripShortName": "",
+    "displayName": "125",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "NOT_ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:425069:425073"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:25:00Z",
+     "scheduledDeparture": "2026-11-12T14:25:00Z",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Promenades St-Bruno",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "1011 St-Bruno",
+     "stopId": "ca-qc-RTL_6172",
+     "importance": 0.000005990340468997601,
+     "lat": 45.502445,
+     "lon": -73.38417,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "30904",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_8",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:25_ca-qc-RTL_8_1_R_SE_1256_mtro_09:25",
+    "routeType": 700,
+    "routeShortName": "8",
+    "routeLongName": "ch. de Chambly / Cousineau / Promenades St-Bruno",
+    "tripShortName": "",
+    "displayName": "8",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:725056:725123"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1002",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523815000000006,
+     "lon": -73.521416,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:27:00Z",
+     "scheduledDeparture": "2026-11-12T14:27:00Z",
+     "stopCode": "31002",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Curé-Poirier",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1002",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523815000000006,
+     "lon": -73.521416,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31002",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Curé-Poirier E. / Kent",
+     "stopId": "ca-qc-RTL_3099",
+     "importance": 0.000003690490530061652,
+     "lat": 45.536385,
+     "lon": -73.47775,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "33099",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_71",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:27_ca-qc-RTL_71_1_R_SE_2144_mtro_09:27",
+    "routeType": 700,
+    "routeShortName": "71",
+    "routeLongName": "Curé-Poirier / Tiffin",
+    "tripShortName": "",
+    "displayName": "71",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "NOT_ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:109812:109837"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:28:00Z",
+     "scheduledDeparture": "2026-11-12T14:28:00Z",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Sect. B Vieux-Longueuil",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Roland-Therrien / Roberval E.",
+     "stopId": "ca-qc-RTL_5574",
+     "importance": 0.000007963918505993206,
+     "lat": 45.525227,
+     "lon": -73.44324500000002,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "30322",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_76",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:28_ca-qc-RTL_76_1_R_SE_1254_mtro_09:28",
+    "routeType": 700,
+    "routeShortName": "76",
+    "routeLongName": "Roland-Therrien / Roberval",
+    "tripShortName": "",
+    "displayName": "76",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:500189:500229"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1002",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523815000000006,
+     "lon": -73.521416,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:29:00Z",
+     "scheduledDeparture": "2026-11-12T14:29:00Z",
+     "stopCode": "31002",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Terminus Panama",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1002",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523815000000006,
+     "lon": -73.521416,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31002",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Terminus Panama",
+     "stopId": "ca-qc-RTL_4429",
+     "importance": 0.00007343568722717464,
+     "lat": 45.465893,
+     "lon": -73.46918000000001,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34429",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_13",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:29_ca-qc-RTL_13_1_R_SE_1033_mtro_09:29",
+    "routeType": 700,
+    "routeShortName": "13",
+    "routeLongName": "Riverside / Secteurs P-V Brossard",
+    "tripShortName": "",
+    "displayName": "13",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:484824:484861"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:29:00Z",
+     "scheduledDeparture": "2026-11-12T14:29:00Z",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Sect. B Vieux-Longueuil",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Béliveau / Jacques-Cartier E.",
+     "stopId": "ca-qc-RTL_4118",
+     "importance": 0.00001780716047505848,
+     "lat": 45.537822999999996,
+     "lon": -73.45546,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34118",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_20",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:29_ca-qc-RTL_20_1_R_SE_2041_mtro_09:29",
+    "routeType": 700,
+    "routeShortName": "20",
+    "routeLongName": "Jean-Paul-Vincent / Beauharnois",
+    "tripShortName": "",
+    "displayName": "20",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "NOT_ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:306482:306509"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4418",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524048,
+     "lon": -73.522606,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:29:00Z",
+     "scheduledDeparture": "2026-11-12T14:29:00Z",
+     "stopCode": "34418",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "De Montarville",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4418",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524048,
+     "lon": -73.522606,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34418",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "De La Barre / Marie-Victorin",
+     "stopId": "ca-qc-RTL_3453",
+     "importance": 0.000013320567632035818,
+     "lat": 45.587753,
+     "lon": -73.46617,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "33453",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_83",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:29_ca-qc-RTL_83_1_R_SE_2230_mtro_09:29",
+    "routeType": 700,
+    "routeShortName": "83",
+    "routeLongName": "De Montarville / Samuel-De Champlain",
+    "tripShortName": "",
+    "displayName": "83",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:162378:162381"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4417",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.52353000000001,
+     "lon": -73.520805,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:30:00Z",
+     "scheduledDeparture": "2026-11-12T14:30:00Z",
+     "stopCode": "34417",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Collectivité Nouvelle",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4417",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.52353000000001,
+     "lon": -73.520805,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34417",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "de l'Église / de l'Église",
+     "stopId": "ca-qc-RTL_2538",
+     "importance": 0.000005463955858431291,
+     "lat": 45.570133000000006,
+     "lon": -73.48190000000001,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "32538",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_29",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:30_ca-qc-RTL_29_1_R_SE_1053_mtro_09:30",
+    "routeType": 700,
+    "routeShortName": "29",
+    "routeLongName": "Collectivité Nouvelle",
+    "tripShortName": "",
+    "displayName": "29",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:101380:101422"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:31:00Z",
+     "scheduledDeparture": "2026-11-12T14:31:00Z",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "de Fontainebleau",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "de Fontainebleau S. / de Fontainebleau S.",
+     "stopId": "ca-qc-RTL_2502",
+     "importance": 0.000009576423508406151,
+     "lat": 45.518494,
+     "lon": -73.45741000000001,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "32502",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_73",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:31_ca-qc-RTL_73_1_R_SE_2153_mtro_09:31",
+    "routeType": 700,
+    "routeShortName": "73",
+    "routeLongName": "Joliette / de Lyon",
+    "tripShortName": "",
+    "displayName": "73",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "NOT_ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:344575:344615"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:32:00Z",
+     "scheduledDeparture": "2026-11-12T14:32:00Z",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Mountainview",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Kimber / Léonard",
+     "stopId": "ca-qc-RTL_4504",
+     "importance": 0.000011612356502155308,
+     "lat": 45.46312,
+     "lon": -73.38374999999999,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34504",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_88",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:32_ca-qc-RTL_88_1_R_SE_2019_mtro_09:32",
+    "routeType": 700,
+    "routeShortName": "88",
+    "routeLongName": "ch. de Chambly / Mountainview",
+    "tripShortName": "",
+    "displayName": "88",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:772196:772267"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4416",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523804,
+     "lon": -73.52115,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:33:00Z",
+     "scheduledDeparture": "2026-11-12T14:33:00Z",
+     "stopCode": "34416",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Windsor",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4416",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523804,
+     "lon": -73.52115,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34416",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "1661 Régent",
+     "stopId": "ca-qc-RTL_6148",
+     "importance": 0.0000037035413242847426,
+     "lat": 45.49414,
+     "lon": -73.46337,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "30880",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_1",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:33_ca-qc-RTL_1_1_R_SE_2166_mtro_09:33",
+    "routeType": 700,
+    "routeShortName": "1",
+    "routeLongName": "Desaulniers / Victoria / Windsor",
+    "tripShortName": "",
+    "displayName": "1",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:197487:197529"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:35:00Z",
+     "scheduledDeparture": "2026-11-12T14:35:00Z",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Aéroport MET",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Aéroport MET",
+     "stopId": "ca-qc-RTL_6167",
+     "importance": 0.000004361884293757612,
+     "lat": 45.519928,
+     "lon": -73.39938,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "30899",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_428",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:35_ca-qc-RTL_428_1_R_SE_1214_mtro_09:35",
+    "routeType": 700,
+    "routeShortName": "428",
+    "routeLongName": "Aéroport MET",
+    "tripShortName": "",
+    "displayName": "428",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:31946:31965"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:37:00Z",
+     "scheduledDeparture": "2026-11-12T14:37:00Z",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Sect. B Vieux-Longueuil",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Boucher / Belcourt",
+     "stopId": "ca-qc-RTL_1483",
+     "importance": 0.000011551452189451084,
+     "lat": 45.530422,
+     "lon": -73.44757000000001,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31483",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_410",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:37_ca-qc-RTL_410_2_R_SE_2275_mtro_09:37",
+    "routeType": 700,
+    "routeShortName": "410",
+    "routeLongName": "Express Roland-Therrien / Belcourt",
+    "tripShortName": "",
+    "displayName": "410",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "NOT_ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:198271:198283"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1002",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523815000000006,
+     "lon": -73.521416,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:38:00Z",
+     "scheduledDeparture": "2026-11-12T14:38:00Z",
+     "stopCode": "31002",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Terminus Panama",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1002",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523815000000006,
+     "lon": -73.521416,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31002",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Terminus Panama",
+     "stopId": "ca-qc-RTL_4429",
+     "importance": 0.00007343568722717464,
+     "lat": 45.465893,
+     "lon": -73.46918000000001,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34429",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_6",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:38_ca-qc-RTL_6_1_R_SE_1060_mtro_09:38",
+    "routeType": 700,
+    "routeShortName": "6",
+    "routeLongName": "Victoria",
+    "tripShortName": "",
+    "displayName": "6",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:702996:703030"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:39:00Z",
+     "scheduledDeparture": "2026-11-12T14:39:00Z",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Terminus Georges-Gagné",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Terminus Georges-Gagné",
+     "stopId": "ca-qc-RTL_6183",
+     "importance": 0.000008277139386336785,
+     "lat": 45.38506699999999,
+     "lon": -73.54790000000001,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "76048",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_901",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "00ab84",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:39_ca-qc-RTL_901_1_R_SE_2315_mtro_09:39",
+    "routeType": 700,
+    "routeShortName": "901",
+    "routeLongName": "Ligne métropolitaine Taschereau",
+    "tripShortName": "",
+    "displayName": "901",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:360141:360190"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:40:00Z",
+     "scheduledDeparture": "2026-11-12T14:40:00Z",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Antoinette-Robidoux",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "1195 Du Tremblay",
+     "stopId": "ca-qc-RTL_5507",
+     "importance": 0.000004524294581642607,
+     "lat": 45.53666,
+     "lon": -73.46421000000002,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "30255",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_16",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:40_ca-qc-RTL_16_1_R_SE_2228_mtro_09:40",
+    "routeType": 700,
+    "routeShortName": "16",
+    "routeLongName": "Nobert / Antoinette-Robidoux / Adoncour",
+    "tripShortName": "",
+    "displayName": "16",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "NOT_ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:420380:420422"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4417",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.52353000000001,
+     "lon": -73.520805,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:40:00Z",
+     "scheduledDeparture": "2026-11-12T14:40:00Z",
+     "stopCode": "34417",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "ch. du Tremblay",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4417",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.52353000000001,
+     "lon": -73.520805,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34417",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Du Tremblay / Bédard",
+     "stopId": "ca-qc-RTL_1888",
+     "importance": 0.000006381865659932373,
+     "lat": 45.545788,
+     "lon": -73.45060000000001,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31888",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_23",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:40_ca-qc-RTL_23_1_R_SE_2052_mtro_09:40",
+    "routeType": 700,
+    "routeShortName": "23",
+    "routeLongName": "Ste-Hélène / Jacques-Cartier",
+    "tripShortName": "",
+    "displayName": "23",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:603248:603282"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:40:00Z",
+     "scheduledDeparture": "2026-11-12T14:40:00Z",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Promenades St-Bruno",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "1011 St-Bruno",
+     "stopId": "ca-qc-RTL_6172",
+     "importance": 0.000005990340468997601,
+     "lat": 45.502445,
+     "lon": -73.38417,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "30904",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_8",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:40_ca-qc-RTL_8_1_R_SE_2025_mtro_09:40",
+    "routeType": 700,
+    "routeShortName": "8",
+    "routeLongName": "ch. de Chambly / Cousineau / Promenades St-Bruno",
+    "tripShortName": "",
+    "displayName": "8",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:726794:726861"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1002",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523815000000006,
+     "lon": -73.521416,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:41:00Z",
+     "scheduledDeparture": "2026-11-12T14:41:00Z",
+     "stopCode": "31002",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Terminus Brossard",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1002",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523815000000006,
+     "lon": -73.521416,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31002",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Terminus Brossard",
+     "stopId": "ca-qc-RTL_5767",
+     "importance": 0.00003484576882328838,
+     "lat": 45.4369,
+     "lon": -73.43154000000001,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "30536",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_4",
+    "routeUrl": "",
+    "directionId": "1",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:41_ca-qc-RTL_4_3_A_SE_1181_mtro_09:41",
+    "routeType": 700,
+    "routeShortName": "4",
+    "routeLongName": "Taschereau / Payer / DIX30",
+    "tripShortName": "",
+    "displayName": "4",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:642603:642679"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4418",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524048,
+     "lon": -73.522606,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:42:00Z",
+     "scheduledDeparture": "2026-11-12T14:42:00Z",
+     "stopCode": "34418",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "De Montarville",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4418",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524048,
+     "lon": -73.522606,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34418",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "De La Barre / Marie-Victorin",
+     "stopId": "ca-qc-RTL_3453",
+     "importance": 0.000013320567632035818,
+     "lat": 45.587753,
+     "lon": -73.46617,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "33453",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_84",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:42_ca-qc-RTL_84_1_R_SE_2034_mtro_09:42",
+    "routeType": 700,
+    "routeShortName": "84",
+    "routeLongName": "Samuel-De Champlain / De Montarville",
+    "tripShortName": "",
+    "displayName": "84",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "NOT_ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:522949:522952"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4416",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523804,
+     "lon": -73.52115,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:45:00Z",
+     "scheduledDeparture": "2026-11-12T14:45:00Z",
+     "stopCode": "34416",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Terminus Panama",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4416",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.523804,
+     "lon": -73.52115,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34416",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Terminus Panama",
+     "stopId": "ca-qc-RTL_4429",
+     "importance": 0.00007343568722717464,
+     "lat": 45.465893,
+     "lon": -73.46918000000001,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34429",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_15",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:45_ca-qc-RTL_15_1_R_SE_1167_mtro_09:45",
+    "routeType": 700,
+    "routeShortName": "15",
+    "routeLongName": "Riverside / Alexandra / Churchill",
+    "tripShortName": "",
+    "displayName": "15",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:469488:469533"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:45:00Z",
+     "scheduledDeparture": "2026-11-12T14:45:00Z",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "École ENA",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4415",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524296,
+     "lon": -73.52109,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34415",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "ÉNA - École nationale d'aérotechnique",
+     "stopId": "ca-qc-RTL_3637",
+     "importance": 0.000004991225068806671,
+     "lat": 45.523926,
+     "lon": -73.41981000000001,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "33637",
+     "vertexType": "TRANSIT",
+     "pickupType": "NOT_ALLOWED",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_28",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:45_ca-qc-RTL_28_1_R_SE_2099_mtro_09:45",
+    "routeType": 700,
+    "routeShortName": "28",
+    "routeLongName": "ch. de Chambly / Savane / ENA",
+    "tripShortName": "",
+    "displayName": "28",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:805131:805176"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:50:00Z",
+     "scheduledDeparture": "2026-11-12T14:50:00Z",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "Davis",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_1001",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524277,
+     "lon": -73.5214,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "31001",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "Prince-Charles / Davis",
+     "stopId": "ca-qc-RTL_3498",
+     "importance": 0.00000812777943792753,
+     "lat": 45.492360000000005,
+     "lon": -73.420815,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "33498",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_19",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:50_ca-qc-RTL_19_1_R_SE_2196_mtro_09:50",
+    "routeType": 700,
+    "routeShortName": "19",
+    "routeLongName": "Davis",
+    "tripShortName": "",
+    "displayName": "19",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "NOT_ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:152151:152182"
+   },
+   {
+    "place": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4418",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524048,
+     "lon": -73.522606,
+     "level": 0,
+     "tz": "America/Toronto",
+     "departure": "2026-11-12T14:50:00Z",
+     "scheduledDeparture": "2026-11-12T14:50:00Z",
+     "stopCode": "34418",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "mode": "BUS",
+    "realTime": false,
+    "headsign": "du Fort-St-Louis",
+    "tripFrom": {
+     "name": "Terminus Longueuil",
+     "stopId": "ca-qc-RTL_4418",
+     "parentId": "ca-qc-RTL_9999",
+     "importance": 0.00014818950148764998,
+     "lat": 45.524048,
+     "lon": -73.522606,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "34418",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NOT_ALLOWED",
+     "cancelled": false,
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "tripTo": {
+     "name": "De La Barre / Marie-Victorin",
+     "stopId": "ca-qc-RTL_3453",
+     "importance": 0.000013320567632035818,
+     "lat": 45.587753,
+     "lon": -73.46617,
+     "level": 0,
+     "tz": "America/Toronto",
+     "stopCode": "33453",
+     "vertexType": "TRANSIT",
+     "pickupType": "NORMAL",
+     "dropoffType": "NORMAL",
+     "cancelled": false,
+     "arrivalTimestampReason": "NO_RT_DATA",
+     "departureTimestampReason": "NO_RT_DATA",
+     "modes": [
+      "BUS"
+     ]
+    },
+    "agencyId": "RTL",
+    "agencyName": "Réseau de transport de Longueuil",
+    "agencyUrl": "http://www.rtl-longueuil.qc.ca",
+    "routeId": "ca-qc-RTL_81",
+    "routeUrl": "",
+    "directionId": "0",
+    "routeColor": "d90b3e",
+    "routeTextColor": "ffffff",
+    "tripId": "20261112_09:50_ca-qc-RTL_81_1_R_SE_1257_mtro_09:50",
+    "routeType": 700,
+    "routeShortName": "81",
+    "routeLongName": "du Fort-St-Louis / Marie-Victorin",
+    "tripShortName": "",
+    "displayName": "81",
+    "pickupDropoffType": "NORMAL",
+    "cancelled": false,
+    "tripCancelled": false,
+    "bikesAllowed": false,
+    "wheelchairAccessible": "ACCESSIBLE",
+    "reservation": "NONE",
+    "source": "ca-qc_RTL.gtfs.zip/stop_times.txt:825360:825388"
+   }
+  ],
+  "place": {
+   "name": "Terminus Longueuil",
+   "stopId": "ca-qc-RTL_4415",
+   "parentId": "ca-qc-RTL_9999",
+   "importance": 0.00014818950148764998,
+   "lat": 45.524296,
+   "lon": -73.52109,
+   "level": 0,
+   "tz": "America/Toronto",
+   "stopCode": "34415",
+   "vertexType": "TRANSIT",
+   "modes": [
+    "BUS"
+   ]
+  },
+  "previousPageCursor": "EARLIER|1794493080",
+  "nextPageCursor": "LATER|1794495060"
+ }
+}
