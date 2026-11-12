@@ -4,6 +4,18 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-12 : Météo Canada choisi pour la météo
+
+**Modifié**
+
+- **Météo Canada** (1.0.1) : la description de l’outil dit qu’il répond à toute question de météo du foyer et qu’il passe avant un autre outil météo sans source. Avec la Météo livrée avec Cornelius installée mais sans source, le modèle choisissait parfois celle-ci et répondait qu’aucun module n’était réglé.
+
+### 2026-11-11 : module Météo Canada
+
+**Ajouté**
+
+- Module **Météo Canada** (`meteo_canada`, 1.0.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : la météo d’une ville canadienne d’après Environnement et Changement climatique Canada (API GeoMet-OGC, en français, sans jeton) : conditions actuelles, prévisions par période et avertissements en vigueur, dits à la voix et affichés en première ligne. Ville trouvée par son nom (province pour un homonyme) dans une liste réduite des 844 villes, ou par coordonnées. Icônes d’après les codes officiels : vraies icônes sur un cœur qui connaît `cardIcons`, émojis sinon. Ressenti écarté quand la source le publie absurde.
+
 ### 2026-11-08 : météo sans jeton
 
 **Ajouté**

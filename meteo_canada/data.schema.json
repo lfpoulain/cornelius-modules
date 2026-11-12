@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MeteoCanadaData v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ville", "actuel", "periodes", "avertissements", "misAJour"],
+  "$defs": {
+    "icone": {
+      "enum": [
+        "sun",
+        "moon",
+        "cloud-sun",
+        "cloud-moon",
+        "cloud",
+        "cloud-drizzle",
+        "cloud-rain",
+        "cloud-sun-rain",
+        "cloud-moon-rain",
+        "cloud-snow",
+        "snowflake",
+        "cloud-hail",
+        "cloud-lightning",
+        "cloud-fog",
+        "haze",
+        "wind",
+        "tornado",
+        "thermometer",
+        "triangle-alert"
+      ]
+    }
+  },
+  "properties": {
+    "ville": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "actuel": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["temperature", "condition", "icone", "ressenti", "ventKmh"],
+      "properties": {
+        "temperature": { "type": "number", "minimum": -70, "maximum": 60 },
+        "condition": { "type": ["string", "null"], "maxLength": 120 },
+        "icone": { "$ref": "#/$defs/icone" },
+        "ressenti": { "type": ["number", "null"], "minimum": -90, "maximum": 70 },
+        "ventKmh": { "type": ["number", "null"], "minimum": 0, "maximum": 400 }
+      }
+    },
+    "periodes": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["nom", "resume", "icone", "temperature", "classe"],
+        "properties": {
+          "nom": { "type": "string", "minLength": 1, "maxLength": 60 },
+          "resume": { "type": "string", "minLength": 1, "maxLength": 140 },
+          "icone": { "$ref": "#/$defs/icone" },
+          "temperature": { "type": ["number", "null"], "minimum": -70, "maximum": 60 },
+          "classe": { "enum": ["max", "min", null] }
+        }
+      }
+    },
+    "avertissements": {
+      "type": "array",
+      "maxItems": 3,
+      "items": { "type": "string", "minLength": 1, "maxLength": 120 }
+    },
+    "misAJour": { "type": "string", "minLength": 1, "maxLength": 40 }
+  }
+}
