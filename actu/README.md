@@ -15,17 +15,26 @@ Dans **Modules → Titres de l’actualité → Ajouter une source** :
 
 | Réglage | Effet | Par défaut |
 | --- | --- | --- |
-| Adresse du flux RSS | L’adresse du flux, `http` ou `https` | `https://www.franceinfo.fr/titres.rss` |
+| Journal et zone | Recherche dans le catalogue : un pays, une région ou un journal (« Québec », « Bretagne », « TVA »), ou l’adresse d’un flux collée telle quelle | franceinfo · national |
 | Titres annoncés | De 1 à 5, dans l’ordre du journal | 3 |
 
-Quelques flux essayés :
+### Choisir un journal par zone
 
-| Journal | Adresse |
-| --- | --- |
-| franceinfo, les titres | `https://www.franceinfo.fr/titres.rss` |
-| Le Monde, à la une | `https://www.lemonde.fr/rss/une.xml` |
-| Ouest-France, à la une | `https://www.ouest-france.fr/rss/une` |
-| 20 Minutes, à la une | `https://www.20minutes.fr/feeds/rss-une.xml` |
+Le champ **Journal et zone** cherche dans un catalogue de flux essayés, classés par pays, province et région ([catalogue.json](catalogue.json)) :
+
+| Pays | National | Régional |
+| --- | --- | --- |
+| Canada | Radio-Canada, TVA Nouvelles, Noovo Info, La Presse, Le Journal de Montréal | Radio-Canada : 22 régions (Québec, Montréal et environs, Estrie, Saguenay–Lac-Saint-Jean, Ottawa-Gatineau, Toronto, Manitoba…) ; Noovo Info : région de Québec, Montréal et environs |
+| France | franceinfo, Le Monde, Ouest-France, 20 Minutes | France 3 : les 13 régions |
+| Suisse | RTS Info | |
+
+- La région demandée passe d’abord (« Québec » donne « Radio-Canada · Région de Québec »), puis les flux du pays du foyer, d’après son fuseau horaire, puis les flux nationaux.
+- Chaque résultat dit sa zone : « Canada › Québec › Région de Québec · régional ».
+- Une adresse collée dans le champ (`https://…`) est gardée telle quelle : tout flux RSS ou Atom reste possible.
+- Pour les nouvelles du pays **et** celles de la région, ajoutez deux sources : « Les titres » (national) et « Près de chez nous » (régional).
+- Les sources réglées avant la version 1.2.0 (adresse seule) ne changent pas.
+
+Le catalogue n’a que des flux vérifiés avec ce module (titres lus, date récente) le 2026-11-12. Écartés : Le Soleil (plus de flux), les flux Noovo d’Estrie, de Mauricie et du Saguenay (vides ou d’un seul titre vieux de plus d’un jour).
 
 Une source par journal ou par rubrique : « Les titres », « Le sport », « L’actu locale »…
 

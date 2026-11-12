@@ -14,6 +14,12 @@
       "maxLength": 300,
       "examples": ["https://www.franceinfo.fr/titres.rss"]
     },
+    "feedLabel": {
+      "title": "Journal choisi",
+      "description": "Nom du flux choisi dans la recherche (« Radio-Canada · Région de Québec »).",
+      "type": ["string", "null"],
+      "maxLength": 160
+    },
     "count": {
       "title": "Titres annoncés",
       "description": "Nombre de titres lus et affichés, dans l’ordre du journal.",
