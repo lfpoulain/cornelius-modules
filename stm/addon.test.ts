@@ -6,6 +6,8 @@ import addon, {
   arretDit,
   coeurSansLectureBinaire,
   destinationFor,
+  lieuDit,
+  reseauDit,
   phraseAvis,
   surLaRue,
   vehiculeDit,
@@ -23,6 +25,8 @@ import stoptimesCentreBell from './fixtures/stoptimes-centre-bell.json' with { t
 import stoptimesSaintMichel from './fixtures/stoptimes-saint-michel.json' with { type: 'json' };
 import etatSnowdon from './fixtures/etatservice-snowdon.json' with { type: 'json' };
 import transitousSnowdon from './fixtures/transitous-snowdon.json' with { type: 'json' };
+import transitousLongueuil from './fixtures/transitous-longueuil.json' with { type: 'json' };
+import transitousTrainSj from './fixtures/transitous-train-sj.json' with { type: 'json' };
 
 const at = '2026-11-11T21:16:00Z';
 const berri = { depart: 'Berri-UQAM', latitude: 45.515, longitude: -73.561, favoris: [] };
@@ -234,4 +238,85 @@ test('temps réel des autobus avec un cœur qui lit le binaire ; sinon, l’hora
         ? 'Le suivant est prévu dans 9 minutes selon l’horaire.'
         : 'Le suivant est prévu dans 9 minutes.'),
   );
+});
+
+// Région métropolitaine : relevés réels du 2026-11-12 vers 14 h 18 UTC, depuis le terminus
+// Longueuil (RTL) et la gare Parc (train d'exo). La STM n'est jamais interrogée pour eux : ni
+// son état du service (un autobus 8 du RTL n'a pas les avis de la ligne 8), ni son temps réel.
+test('Longueuil et trains d’exo : réseau nommé, ni avis ni temps réel de la STM', async (t) => {
+  const cle = (url: URL) => {
+    url.searchParams.delete('time');
+    return url.pathname.split('/').pop() + url.search;
+  };
+  const cas = [
+    {
+      enregistrement: transitousLongueuil,
+      depart: 'Terminus Longueuil',
+      destination: 'au Cégep Édouard-Montpetit',
+      at: '2026-11-12T14:18:00Z',
+      phrase:
+        'Pour te rendre au Cégep Édouard-Montpetit, le prochain départ est l’autobus 8 du RTL dans 7 minutes selon l’horaire, au terminus Longueuil, à 1 minute à pied. ' +
+        'La durée du trajet est de 16 minutes. Le suivant est prévu dans 22 minutes selon l’horaire.',
+    },
+    {
+      enregistrement: transitousTrainSj,
+      depart: 'Gare Parc',
+      destination: 'à la gare Saint-Jérôme',
+      at: '2026-11-12T14:19:00Z',
+      phrase:
+        'Pour te rendre à la gare Saint-Jérôme, le prochain départ est le train d’exo, ligne Saint-Jérôme dans 29 minutes selon l’horaire, à la gare Parc, à 2 minutes à pied. ' +
+        'La durée du trajet est de 59 minutes. Le suivant est prévu dans 170 minutes selon l’horaire.',
+    },
+  ];
+  for (const c of cas) {
+    const f = createTestModule(t, addon, {
+      config: { depart: 'le départ', adresseDepart: c.depart, favoris: [] },
+      at: c.at,
+      routes: (request: { url: string }) => {
+        const url = new URL(request.url);
+        if (url.hostname === 'api.stm.info') return { status: 500 };
+        return (
+          (c.enregistrement as unknown as Record<string, Record<string, unknown>>)[cle(url)] ?? {
+            status: 404,
+          }
+        );
+      },
+    });
+    const result = await f.invoke('trajet', { query: c.destination });
+    assert.deepEqual(f.contract(result.outcome), []);
+    assert.equal(result.tool.status, 'succeeded', result.tool.error?.message);
+    assert.equal(result.tool.summary, c.phrase);
+    assert.equal(f.calls.filter((call) => call.url.includes('api.stm.info')).length, 0, c.depart);
+  }
+});
+
+test('réseaux et lieux dits à la voix', () => {
+  assert.equal(reseauDit({ agencyId: 'STM', agencyName: 'Société de transport de Montréal' }), '');
+  assert.equal(
+    reseauDit({ agencyId: 'RTL', agencyName: 'Réseau de transport de Longueuil' }),
+    ' du RTL',
+  );
+  assert.equal(reseauDit({ agencyId: 'CITLA', agencyName: 'exo-Laurentides' }), ' d’exo');
+  assert.equal(
+    reseauDit({ agencyId: 'STL', agencyName: 'Société de transport de Laval' }),
+    ' de la STL',
+  );
+  assert.equal(
+    vehiculeDit({
+      mode: 'REGIONAL_RAIL',
+      routeShortName: 'VH',
+      routeLongName: '11 - Vaudreuil/Hudson',
+      agencyName: 'exo-Réseau de transport métropolitain',
+    }),
+    'le train d’exo, ligne Vaudreuil/Hudson',
+  );
+  assert.equal(
+    vehiculeDit({ mode: 'BUS', routeShortName: '28', agencyId: 'RTL' }),
+    'l’autobus 28 du RTL',
+  );
+  assert.equal(lieuDit('station Berri-UQAM'), 'à la station Berri-UQAM');
+  assert.equal(lieuDit('gare Parc'), 'à la gare Parc');
+  assert.equal(lieuDit('terminus Longueuil'), 'au terminus Longueuil');
+  assert.equal(lieuDit('Jean-Talon et Saint-Denis'), 'à l’arrêt Jean-Talon et Saint-Denis');
+  assert.equal(arretDit('Gare Parc'), 'gare Parc');
 });

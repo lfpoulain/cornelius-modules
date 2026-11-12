@@ -1,6 +1,6 @@
 # Module Transports STM
 
-Le module Transports STM donne le prochain départ de la STM (Montréal : métro, autobus, REM) vers une destination, la durée du trajet, le départ suivant et la disponibilité du réseau. Cette fiche s’adresse à la personne qui règle le miroir et à celle qui lit le code du module (identifiant `stm`).
+Le module Transports STM couvre la **région métropolitaine de Montréal, au Québec** : il donne le prochain départ en transport en commun (métro et autobus de la STM, autobus du RTL à Longueuil, autobus et trains de banlieue d’exo, REM) vers une destination, la durée du trajet, le départ suivant et la disponibilité du réseau. Cette fiche s’adresse à la personne qui règle le miroir et à celle qui lit le code du module (identifiant `stm`).
 
 ## Ce que fait le module
 
@@ -12,6 +12,20 @@ Le module Transports STM donne le prochain départ de la STM (Montréal : métro
 - Parmi les itinéraires proposés, le module retient celui qui arrive le plus tôt. « Le prochain » est le premier départ qu’on peut attraper, marche jusqu’à la station comprise.
 - **Temps réel des autobus** : avec un Cornelius qui sait lire une réponse binaire (`bytes()`, proposé après la 0.3.0), le module lit le flux temps réel de la STM (GTFS-RT) et donne l’heure réelle des autobus en route. Le métro n’y figure pas, et un autobus qui n’a pas quitté son terminus non plus : leurs heures restent celles de l’horaire, et la réponse le dit (« selon l’horaire »). Avec Cornelius 0.3.0, tout reste « selon l’horaire », sans erreur.
 - Les données restent en cache 1 minute ; le flux temps réel, 30 secondes ; l’état du service, 3 minutes.
+
+## Réseaux couverts
+
+| Réseau | Ce que Cornelius dit | Temps réel | Avis |
+| --- | --- | --- | --- |
+| STM (Montréal) : métro, autobus | « le métro, ligne verte », « l’autobus 51 » | Autobus (avec `bytes()`) | Oui |
+| RTL (Longueuil) | « l’autobus 8 du RTL » | Non | Non |
+| exo : autobus des couronnes | « l’autobus 708 d’exo » | Selon Transitous | Non |
+| exo : trains de banlieue | « le train d’exo, ligne Saint-Jérôme » | Selon Transitous | Non |
+| REM | « le REM » | Non | Non |
+
+Le lieu de départ est dit selon son genre : « à la station Berri-UQAM », « à la gare Parc », « au terminus Longueuil », « à l’arrêt … ». L’état du service et le temps réel de la STM ne valent que pour un trajet qui commence sur une ligne de la STM : un autobus 8 du RTL n’a pas les avis de la ligne 8 de la STM.
+
+**Laval** : la STL n’est pas encore dans Transitous. À Laval, le module donne le métro (Montmorency, De la Concorde, Cartier), les autobus et les trains d’exo, mais pas les autobus de la STL.
 
 ## Sources des données
 
@@ -47,7 +61,7 @@ L’adresse du départ est envoyée à Transitous pour la trouver (au plus une f
 
 ## Limites
 
-- Grand Montréal (latitude 45,2 à 45,9, longitude -74,2 à -73,2) ; les lieux à plus de 80 km du départ sont écartés.
+- Région métropolitaine de Montréal et ses couronnes (latitude 45,0 à 46,1, longitude -74,6 à -72,9) ; les lieux à plus de 80 km du départ sont écartés.
 - Le géocodeur de Transitous (OpenStreetMap) remplace sans prévenir une adresse qu’il ne connaît pas par une voisine d’orthographe (« 1500 rue Berri » → « 1500 rue Serre »). Le module le refuse : avec un numéro civique, le résultat doit être sur la rue demandée ; pour une intersection, il doit contenir les deux rues. Sinon : « Adresse introuvable… Essayez une intersection proche ou un lieu connu ».
 - Sans ville dans l’adresse, une deuxième recherche ajoute « , Montréal ».
 - Transitous est un service communautaire sans garantie : en panne, le module répond « Transitous est indisponible ».

@@ -25,16 +25,16 @@
       "title": "Latitude du départ (facultatif)",
       "description": "Au choix, à la place de l’adresse ; si elles sont saisies, elles passent avant. En degrés décimaux, arrondie à environ 100 m avant d’être envoyée à Transitous.",
       "type": ["number", "null"],
-      "minimum": 45.2,
-      "maximum": 45.9,
+      "minimum": 45.0,
+      "maximum": 46.1,
       "examples": [45.515]
     },
     "longitude": {
       "title": "Longitude du départ (facultatif)",
       "description": "Au choix, avec la latitude. En degrés décimaux, négative : -73.561 pour Berri-UQAM.",
       "type": ["number", "null"],
-      "minimum": -74.2,
-      "maximum": -73.2,
+      "minimum": -74.6,
+      "maximum": -72.9,
       "examples": [-73.561]
     },
     "favoris": {

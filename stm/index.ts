@@ -129,23 +129,44 @@ export function vehiculeDit(leg: Leg): string {
       return color ? `le métro, ligne ${color}` : `le métro, ligne ${short}`;
     }
     case 'BUS':
-      return `l’autobus ${short}`;
+      return `l’autobus ${short}${reseauDit(leg)}`;
     case 'TRAM':
       // « A4-A1 » (branches communes) ne se dit pas : « le REM » suffit.
       return short && !short.includes('-') ? `le REM ${short}` : 'le REM';
     case 'RAIL':
     case 'REGIONAL_RAIL':
-    case 'SUBURBAN':
-      return `le train ${short || long}`.trim();
+    case 'SUBURBAN': {
+      // Trains d'exo : « 11 - Vaudreuil/Hudson » se dit « ligne Vaudreuil/Hudson ».
+      const ligne = long.replace(/^\d+\s*-\s*/u, '');
+      if (reseauDit(leg) === ' d’exo') return `le train d’exo, ligne ${ligne || short}`;
+      return `le train ${short || long}${reseauDit(leg)}`.trim();
+    }
     default:
       return `la ligne ${short || long}`.trim();
   }
 }
 
+/**
+ * Le réseau, dit après le véhicule (« l’autobus 28 du RTL ») ; rien pour la STM, réseau par
+ * défaut du module, ni pour le REM, déjà nommé.
+ */
+export function reseauDit(leg: Leg): string {
+  const id = String(leg.agencyId ?? '').trim();
+  const nom = String(leg.agencyName ?? '').trim();
+  if (id === 'STM' || /^Société de transport de Montréal$/iu.test(nom) || /\bREM\b/u.test(nom))
+    return '';
+  if (id === 'RTL' || /Longueuil/u.test(nom)) return ' du RTL';
+  if (id === 'STL' || /Société de transport de Laval/iu.test(nom)) return ' de la STL';
+  if (/^exo\b/iu.test(nom)) return ' d’exo';
+  return nom ? ` (${nom})` : '';
+}
+
 /** « STATION BERRI-UQAM » → « station Berri-UQAM » ; les sigles courts restent en capitales. */
 export function arretDit(name: string): string {
   if (name !== name.toUpperCase())
-    return name.replace(/^Station /u, 'station ').replace(/\s*\/\s*/g, ' et ');
+    return name
+      .replace(/^(Station|Gare|Terminus) /u, (mot) => mot.toLowerCase())
+      .replace(/\s*\/\s*/g, ' et ');
   const small = new Set(['de', 'du', 'des', 'la', 'le', 'les', 'et']);
   return name
     .toLowerCase()
@@ -158,7 +179,7 @@ export function arretDit(name: string): string {
       if (['uqam', 'chum', 'ets', 'cegep', 'udem'].includes(word)) return word.toUpperCase();
       return word.charAt(0).toUpperCase() + word.slice(1);
     })
-    .replace(/^Station /u, 'station ')
+    .replace(/^(Station|Gare|Terminus) /u, (mot) => mot.toLowerCase())
     .replace(/\s*\/\s*/g, ' et ');
 }
 
@@ -462,7 +483,8 @@ async function collect(context: Context) {
     dureeMin: Math.max(1, Math.min(600, minutes((Number(best.itinerary.duration) || 60) * 1000))),
     correspondances: ride.autres.slice(0, 4).map((l) => l.slice(0, 80)),
     departs: passages,
-    avis: await avisStm(context, ride.ligne),
+    // L'état du service est celui de la STM : un autobus 8 du RTL n'a pas les avis de la ligne 8.
+    avis: ride.stopId.startsWith('ca-qc-STM_') ? await avisStm(context, ride.ligne) : [],
   };
   if (!validateData(data)) throw new AddonCollectError('malformed', 'Trajet STM incohérent.');
   return {
@@ -471,6 +493,13 @@ async function collect(context: Context) {
     freshMs: 60_000,
     source: { provider: 'transitous', sourceId: `${data.ligne}:${ride.stopId}`.slice(0, 128) },
   };
+}
+
+/** « à la station Berri-UQAM », « à la gare Parc », « au terminus Longueuil », « à l’arrêt Jean-Talon et Saint-Denis ». */
+export function lieuDit(arret: string): string {
+  if (/^(station|gare) /u.test(arret)) return `à la ${arret}`;
+  if (/^terminus /u.test(arret)) return `au ${arret}`;
+  return `à l’arrêt ${arret}`;
 }
 
 function dans(ms: number): string {
@@ -496,7 +525,7 @@ function present(
     .map((d) => ({ at: Date.parse(d.heure), reel: d.reel }))
     .filter((d) => d.at >= now + data.marcheMin * 60_000 - 30_000);
   const [prochain, suivant] = atteignables;
-  const lieu = `${/^station /u.test(data.arret) ? 'à la' : 'à l’arrêt'} ${data.arret}${data.marcheMin ? `, à ${data.marcheMin} minute${data.marcheMin > 1 ? 's' : ''} à pied` : ''}`;
+  const lieu = `${lieuDit(data.arret)}${data.marcheMin ? `, à ${data.marcheMin} minute${data.marcheMin > 1 ? 's' : ''} à pied` : ''}`;
   const horaire = (reel: boolean) => (reel ? '' : ' selon l’horaire');
   const correspondance = data.correspondances.length
     ? ` Correspondance avec ${data.correspondances.join(', puis ')}.`
@@ -538,7 +567,7 @@ function present(
 const addon: AddonDefinition<StmConfig, StmData> = {
   id: 'stm',
   apiVersion: 1,
-  version: '1.3.0',
+  version: '1.4.0',
   minCoreVersion: '0.2.0',
   sourceLabel: 'Transitous et état du service STM',
   display: {
@@ -546,7 +575,7 @@ const addon: AddonDefinition<StmConfig, StmData> = {
     name: 'Transports STM',
     // 160 caractères au plus (contrat des modules).
     description:
-      'Prochain métro, autobus ou REM à Montréal, durée du trajet, départ suivant et disponibilité du réseau (état du service de la STM).',
+      'Région métropolitaine de Montréal, au Québec : métro, autobus, train et REM (STM, RTL, exo), trajet, départs et avis de la STM.',
     icon: 'train-front',
     keywords: [
       'métro',
@@ -575,9 +604,9 @@ const addon: AddonDefinition<StmConfig, StmData> = {
     {
       name: 'trajet',
       description:
-        'Trouver le prochain départ de la STM (Montréal : métro, autobus, REM) depuis le point de départ de la source vers une destination, avec la durée du trajet et le départ suivant. Affiche la carte Transports STM. ' +
+        'Trouver le prochain départ en transport en commun dans la région métropolitaine de Montréal, au Québec (STM, RTL à Longueuil, exo : autobus et trains de banlieue, REM) depuis le point de départ de la source vers une destination, avec la durée du trajet et le départ suivant. Affiche la carte Transports STM. ' +
         'Utiliser pour « comment je vais au Centre Bell ? », « c’est quand le prochain métro pour l’Université de Montréal ? ». ' +
-        'query : la destination seulement, soit le mot-clé d’une destination favorite, soit une adresse ou un lieu à Montréal, précédé de sa préposition (« au Centre Bell », « à l’Université de Montréal »). ' +
+        'query : la destination seulement, soit le mot-clé d’une destination favorite, soit une adresse ou un lieu de la région de Montréal, précédé de sa préposition (« au Centre Bell », « à l’Université de Montréal »). ' +
         'Si la personne nomme un lieu dont tu as mémorisé l’adresse, passe cette adresse. La réponse prend quelques secondes. ' +
         'Dis toujours les trois éléments du résultat, dans l’ordre, sans en omettre : le prochain départ et dans combien de minutes, la durée du trajet, puis le départ suivant. S’il y a un avis de la STM, dis-le à la fin.',
       parameters: {

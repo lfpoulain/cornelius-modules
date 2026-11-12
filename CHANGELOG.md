@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-12 : Transports STM pour la région métropolitaine
+
+**Modifié**
+
+- **Transports STM** (1.4.0) : couvre la région métropolitaine de Montréal, au Québec. Les autobus du RTL (Longueuil) et d’exo, et les trains de banlieue d’exo, sont dits avec leur réseau (« l’autobus 8 du RTL », « le train d’exo, ligne Saint-Jérôme ») ; le lieu de départ selon son genre (« à la gare Parc », « au terminus Longueuil »). L’état du service et le temps réel de la STM ne s’appliquent plus qu’aux lignes de la STM. Zone élargie aux couronnes. La STL (Laval) n’est pas encore dans Transitous.
+
 ### 2026-11-11 : temps réel des autobus de la STM
 
 **Modifié**
