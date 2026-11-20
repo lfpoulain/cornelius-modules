@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-20 : titres de l’actualité choisis par zone
+
+**Modifié**
+
+- **Titres de l’actualité** (1.2.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : le flux se choisit par la recherche assistée « Journal et zone », dans un catalogue de 47 flux essayés, classés par pays, province et région (Canada : Radio-Canada et ses 22 régions, TVA Nouvelles, Noovo Info, La Presse, Le Journal de Montréal ; France : franceinfo, Le Monde, Ouest-France, 20 Minutes, France 3 et ses 13 régions ; Suisse : RTS). La région demandée passe d’abord, puis le pays du foyer d’après son fuseau. Une adresse collée reste possible ; les sources existantes ne changent pas.
+
 ### 2026-11-20 : module Immich
 
 **Ajouté**

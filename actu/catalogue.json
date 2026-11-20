@@ -1,0 +1,425 @@
+[
+  {
+    "id": "ca-radio-canada",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": null,
+    "region": null,
+    "niveau": "national",
+    "url": "https://ici.radio-canada.ca/info/rss/info"
+  },
+  {
+    "id": "ca-tva-nouvelles",
+    "media": "TVA Nouvelles",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": null,
+    "niveau": "national",
+    "url": "https://www.tvanouvelles.ca/rss.xml"
+  },
+  {
+    "id": "ca-noovo-info",
+    "media": "Noovo Info",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": null,
+    "niveau": "national",
+    "url": "https://www.noovo.info/arc/outboundfeeds/rss/"
+  },
+  {
+    "id": "ca-la-presse",
+    "media": "La Presse",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": null,
+    "niveau": "national",
+    "url": "https://www.lapresse.ca/actualites/rss"
+  },
+  {
+    "id": "ca-journal-de-montreal",
+    "media": "Le Journal de Montréal",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": null,
+    "niveau": "national",
+    "url": "https://www.journaldemontreal.com/rss.xml"
+  },
+  {
+    "id": "ca-radio-canada-abitibi-temiscamingue",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": "Abitibi-Témiscamingue",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/abitibi-temiscamingue/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-bas-saint-laurent",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": "Bas-Saint-Laurent",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/bas-saint-laurent/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-cote-nord",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": "Côte-Nord",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/cote-nord/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-estrie",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": "Estrie",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/estrie/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-gaspesie",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": "Gaspésie–Îles-de-la-Madeleine",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/gaspesie/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-grand-nord",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": "Grand Nord",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/grand-nord/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-mauricie-centre-du-quebec",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": "Mauricie–Centre-du-Québec",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/mauricie-centre-du-quebec/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-montreal-environs",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": "Montréal et environs",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/montreal-environs/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-ottawa-gatineau",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": "Ottawa-Gatineau",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/ottawa-gatineau/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-quebec",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": "Région de Québec",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/quebec/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-saguenay-lac-saint-jean",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": "Saguenay–Lac-Saint-Jean",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/saguenay-lac-saint-jean/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-alberta",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Alberta",
+    "region": "Alberta",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/alberta/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-colombie-britannique",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Colombie-Britannique",
+    "region": "Colombie-Britannique",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/colombie-britannique/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-ile-du-prince-edouard",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Île-du-Prince-Édouard",
+    "region": "Île-du-Prince-Édouard",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/ile-du-prince-edouard/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-manitoba",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Manitoba",
+    "region": "Manitoba",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/manitoba/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-nord-de-ontario",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Ontario",
+    "region": "Nord de l’Ontario",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/nord-de-ontario/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-nouveau-brunswick",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Nouveau-Brunswick",
+    "region": "Nouveau-Brunswick",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/nouveau-brunswick/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-nouvelle-ecosse",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Nouvelle-Écosse",
+    "region": "Nouvelle-Écosse",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/nouvelle-ecosse/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-saskatchewan",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Saskatchewan",
+    "region": "Saskatchewan",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/saskatchewan/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-terre-neuve-labrador",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Terre-Neuve-et-Labrador",
+    "region": "Terre-Neuve-et-Labrador",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/terre-neuve-labrador/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-toronto",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Ontario",
+    "region": "Toronto",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/toronto/en-continu"
+  },
+  {
+    "id": "ca-radio-canada-windsor",
+    "media": "Radio-Canada",
+    "pays": "Canada",
+    "province": "Ontario",
+    "region": "Windsor",
+    "niveau": "régional",
+    "url": "https://ici.radio-canada.ca/info/rss/regions/windsor/en-continu"
+  },
+  {
+    "id": "ca-noovo-region-de-quebec",
+    "media": "Noovo Info",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": "Région de Québec",
+    "niveau": "régional",
+    "url": "https://www.noovo.info/arc/outboundfeeds/rss/category/regions/region-de-quebec"
+  },
+  {
+    "id": "ca-noovo-grand-montreal",
+    "media": "Noovo Info",
+    "pays": "Canada",
+    "province": "Québec",
+    "region": "Montréal et environs",
+    "niveau": "régional",
+    "url": "https://www.noovo.info/arc/outboundfeeds/rss/category/regions/grand-montreal"
+  },
+  {
+    "id": "fr-franceinfo",
+    "media": "franceinfo",
+    "pays": "France",
+    "province": null,
+    "region": null,
+    "niveau": "national",
+    "url": "https://www.franceinfo.fr/titres.rss"
+  },
+  {
+    "id": "fr-le-monde",
+    "media": "Le Monde",
+    "pays": "France",
+    "province": null,
+    "region": null,
+    "niveau": "national",
+    "url": "https://www.lemonde.fr/rss/une.xml"
+  },
+  {
+    "id": "fr-ouest-france",
+    "media": "Ouest-France",
+    "pays": "France",
+    "province": null,
+    "region": null,
+    "niveau": "national",
+    "url": "https://www.ouest-france.fr/rss/une"
+  },
+  {
+    "id": "fr-20-minutes",
+    "media": "20 Minutes",
+    "pays": "France",
+    "province": null,
+    "region": null,
+    "niveau": "national",
+    "url": "https://www.20minutes.fr/feeds/rss-une.xml"
+  },
+  {
+    "id": "fr-france-3-auvergne-rhone-alpes",
+    "media": "France 3",
+    "pays": "France",
+    "province": null,
+    "region": "Auvergne-Rhône-Alpes",
+    "niveau": "régional",
+    "url": "https://france3-regions.franceinfo.fr/auvergne-rhone-alpes/rss"
+  },
+  {
+    "id": "fr-france-3-bourgogne-franche-comte",
+    "media": "France 3",
+    "pays": "France",
+    "province": null,
+    "region": "Bourgogne-Franche-Comté",
+    "niveau": "régional",
+    "url": "https://france3-regions.franceinfo.fr/bourgogne-franche-comte/rss"
+  },
+  {
+    "id": "fr-france-3-bretagne",
+    "media": "France 3",
+    "pays": "France",
+    "province": null,
+    "region": "Bretagne",
+    "niveau": "régional",
+    "url": "https://france3-regions.franceinfo.fr/bretagne/rss"
+  },
+  {
+    "id": "fr-france-3-centre-val-de-loire",
+    "media": "France 3",
+    "pays": "France",
+    "province": null,
+    "region": "Centre-Val de Loire",
+    "niveau": "régional",
+    "url": "https://france3-regions.franceinfo.fr/centre-val-de-loire/rss"
+  },
+  {
+    "id": "fr-france-3-corse",
+    "media": "France 3",
+    "pays": "France",
+    "province": null,
+    "region": "Corse",
+    "niveau": "régional",
+    "url": "https://france3-regions.franceinfo.fr/corse/rss"
+  },
+  {
+    "id": "fr-france-3-grand-est",
+    "media": "France 3",
+    "pays": "France",
+    "province": null,
+    "region": "Grand Est",
+    "niveau": "régional",
+    "url": "https://france3-regions.franceinfo.fr/grand-est/rss"
+  },
+  {
+    "id": "fr-france-3-hauts-de-france",
+    "media": "France 3",
+    "pays": "France",
+    "province": null,
+    "region": "Hauts-de-France",
+    "niveau": "régional",
+    "url": "https://france3-regions.franceinfo.fr/hauts-de-france/rss"
+  },
+  {
+    "id": "fr-france-3-normandie",
+    "media": "France 3",
+    "pays": "France",
+    "province": null,
+    "region": "Normandie",
+    "niveau": "régional",
+    "url": "https://france3-regions.franceinfo.fr/normandie/rss"
+  },
+  {
+    "id": "fr-france-3-nouvelle-aquitaine",
+    "media": "France 3",
+    "pays": "France",
+    "province": null,
+    "region": "Nouvelle-Aquitaine",
+    "niveau": "régional",
+    "url": "https://france3-regions.franceinfo.fr/nouvelle-aquitaine/rss"
+  },
+  {
+    "id": "fr-france-3-occitanie",
+    "media": "France 3",
+    "pays": "France",
+    "province": null,
+    "region": "Occitanie",
+    "niveau": "régional",
+    "url": "https://france3-regions.franceinfo.fr/occitanie/rss"
+  },
+  {
+    "id": "fr-france-3-paris-ile-de-france",
+    "media": "France 3",
+    "pays": "France",
+    "province": null,
+    "region": "Paris Île-de-France",
+    "niveau": "régional",
+    "url": "https://france3-regions.franceinfo.fr/paris-ile-de-france/rss"
+  },
+  {
+    "id": "fr-france-3-pays-de-la-loire",
+    "media": "France 3",
+    "pays": "France",
+    "province": null,
+    "region": "Pays de la Loire",
+    "niveau": "régional",
+    "url": "https://france3-regions.franceinfo.fr/pays-de-la-loire/rss"
+  },
+  {
+    "id": "fr-france-3-provence-alpes-cote-d-azur",
+    "media": "France 3",
+    "pays": "France",
+    "province": null,
+    "region": "Provence-Alpes-Côte d’Azur",
+    "niveau": "régional",
+    "url": "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/rss"
+  },
+  {
+    "id": "ch-rts",
+    "media": "RTS Info",
+    "pays": "Suisse",
+    "province": null,
+    "region": null,
+    "niveau": "national",
+    "url": "https://www.rts.ch/info/?format=rss/news"
+  }
+]
