@@ -24,13 +24,15 @@ type Json = Record<string, unknown>;
 
 /** Catalogue public des réseaux GBFS, tenu par MobilityData. */
 const catalogUrl = 'https://raw.githubusercontent.com/MobilityData/gbfs/master/systems.csv';
-const countries = new Set(['FR', 'BE', 'CH', 'LU', 'MC']);
+// Canada : àVélo (Québec), BIXI (Montréal), Accès Vélo (Saguenay), Bike Share Toronto, Mobi…
+const countries = new Set(['FR', 'BE', 'CH', 'LU', 'MC', 'CA']);
 /**
  * Autopartage de voitures et engins sans station : le catalogue les mêle aux vélos, mais
- * ils n'ont pas de station où lire une disponibilité.
+ * ils n'ont pas de station où lire une disponibilité. LocoMotion (partage entre voisins) et
+ * PBSC HQ (réseau de démonstration du fabricant) ne sont pas des vélos en libre-service.
  */
 const excluded =
-  /citiz|citedia|citédia|marguerite|getaround|leo\s*(and|&)\s*go|zity|free2move|ubeeqo|communauto|marcel|clem|share\s*now|bird|dott|lime|tier|voi\b|pony|cooltra|yego|felyx|cityscoot/iu;
+  /citiz|citedia|citédia|marguerite|getaround|leo\s*(and|&)\s*go|zity|free2move|ubeeqo|communauto|marcel|clem|share\s*now|bird|dott|lime|tier|voi\b|pony|cooltra|yego|felyx|cityscoot|locomotion|pbsc\s*hq/iu;
 /** Plateformes d'autopartage de voitures, quel que soit le nom du service qu'elles portent. */
 const carSharingHosts = /(^|\.)(citiz\.fr|getaround\.com)$/iu;
 
@@ -192,14 +194,25 @@ const plural = (n: number, word: string) => `${n === 0 ? 'aucun' : n} ${word}${n
 const addon: AddonDefinition<VelosConfig, VelosData> = {
   id: 'velos',
   apiVersion: 1,
-  version: '1.1.0',
+  version: '1.2.0',
   minCoreVersion: '0.2.0',
   sourceLabel: 'Vélos en libre-service',
   display: {
     name: 'Vélos en libre-service',
-    description: 'Vélos et places libres d’une station : Vélib’, V’Lille, Vélo’v, STAR, TBM…',
+    description:
+      'Vélos et places libres d’une station : Vélib’, V’Lille, Vélo’v, STAR, TBM, BIXI, àVélo…',
     icon: 'bike',
-    keywords: ['vélo', 'vélib', 'libre-service', 'station', 'gbfs', 'v’lille', 'vélo’v', 'star'],
+    keywords: [
+      'vélo',
+      'vélib',
+      'libre-service',
+      'station',
+      'gbfs',
+      'v’lille',
+      'vélo’v',
+      'star',
+      'bixi',
+    ],
     example: { label: 'Vélos de la maison', ref: 'maison' },
     spoken: { head: 'les vélos', repeats: ['velos', 'velo', 'velib', 'station'] },
   },
