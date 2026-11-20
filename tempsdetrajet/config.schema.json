@@ -7,7 +7,7 @@
   "properties": {
     "origin": {
       "title": "Départ",
-      "description": "Point de départ « latitude,longitude », rempli par la recherche d'adresse.",
+      "description": "Point de départ « latitude,longitude », rempli par la recherche d’adresse.",
       "type": "string",
       "pattern": "^-?[0-9]{1,2}\\.[0-9]{3,6},-?[0-9]{1,3}\\.[0-9]{3,6}$",
       "maxLength": 32,
@@ -22,7 +22,7 @@
     },
     "destination": {
       "title": "Arrivée",
-      "description": "Lieu d'arrivée « latitude,longitude », rempli par la recherche d'adresse.",
+      "description": "Lieu d’arrivée « latitude,longitude », rempli par la recherche d’adresse.",
       "type": "string",
       "pattern": "^-?[0-9]{1,2}\\.[0-9]{3,6},-?[0-9]{1,3}\\.[0-9]{3,6}$",
       "maxLength": 32,
@@ -30,7 +30,7 @@
     },
     "destinationLabel": {
       "title": "Arrivée : adresse choisie",
-      "description": "Libellé de l'arrivée choisie dans la recherche.",
+      "description": "Libellé de l’arrivée choisie dans la recherche.",
       "type": "string",
       "minLength": 1,
       "maxLength": 120
