@@ -248,6 +248,8 @@ const addon: AddonDefinition<TrajetConfig, TrajetData> = {
         cacheMs: 10 * minute,
       });
       if (response.status !== 200) failFor(response.status, 'Recherche d’adresse refusée.');
+      if (response.truncated)
+        throw new AddonCollectError('malformed', 'Réponse de recherche incomplète.');
       let payload: unknown;
       try {
         payload = response.json();
@@ -312,6 +314,9 @@ const addon: AddonDefinition<TrajetConfig, TrajetData> = {
       'routeType=fastest',
       // Demande aussi la durée sans trafic, pour dire de combien le trafic retarde.
       'computeTravelTimeFor=all',
+      // Seul le résumé est lu : sans cela, TomTom renvoie tout le tracé (environ 2 Ko par kilomètre),
+      // et un long trajet dépasse `maxBytes`.
+      'routeRepresentation=summaryOnly',
     ].join('&');
     const response = await context.http.fetch({
       url: `${baseUrl}/${places}/json?${query}`,
@@ -325,6 +330,9 @@ const addon: AddonDefinition<TrajetConfig, TrajetData> = {
         response.status,
         'Itinéraire refusé : vérifiez le départ et l’arrivée dans les réglages.',
       );
+    // Une réponse coupée à `maxBytes` n'est pas un JSON : on le dit plutôt que de la déclarer illisible.
+    if (response.truncated)
+      throw new AddonCollectError('malformed', 'Réponse de TomTom incomplète.');
     let payload: unknown;
     try {
       payload = response.json();
@@ -336,8 +344,8 @@ const addon: AddonDefinition<TrajetConfig, TrajetData> = {
     const summary = payload.routes[0]!.summary;
     const freeFlow = summary.noTrafficTravelTimeInSeconds ?? null;
     // L'écart avec la durée sans trafic : « sans trafic + retard = durée » reste vrai sur la carte.
-    // `trafficDelayInSeconds` ne compte que les incidents du moment (300 s pour un écart réel de
-    // 423 s dans la réponse enregistrée) : il ne sert qu'à défaut de durée sans trafic.
+    // `trafficDelayInSeconds` ne compte que les incidents du moment (299 s pour un écart réel de
+    // 483 s dans la réponse enregistrée) : il ne sert qu'à défaut de durée sans trafic.
     const delay =
       freeFlow === null
         ? (summary.trafficDelayInSeconds ?? null)
