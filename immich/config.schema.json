@@ -7,14 +7,15 @@
   "properties": {
     "serverUrl": {
       "type": "string",
-      "title": "URL du serveur Immich",
-      "description": "Adresse HTTP ou HTTPS de votre instance Immich (ex: http://192.168.1.50:2283).",
-      "minLength": 1
+      "title": "Adresse du serveur Immich",
+      "description": "Adresse HTTP ou HTTPS de votre serveur Immich (ex. http://192.168.1.50:2283).",
+      "minLength": 1,
+      "pattern": "^https?://[^\\s/$.?#].[^\\s]*$"
     },
     "userName": {
       "type": "string",
-      "title": "Prénom du propriétaire",
-      "description": "Prénom affiché sur la carte et utilisé dans le résumé vocal."
+      "title": "Nom de la photothèque",
+      "description": "Nom affiché sur la carte et utilisé dans le résumé vocal (ex. Foyer)."
     },
     "defaultCount": {
       "type": "integer",

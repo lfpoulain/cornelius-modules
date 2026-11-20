@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-20 : module Immich
+
+**Ajouté**
+
+- Module **Immich** (`immich`, 1.0.0), par [Ewan Berthomieu](https://github.com/ewan-berthomieu) : souvenirs du jour (« ce jour-là ») avec repli sur une sélection aléatoire de la photothèque du foyer, et recherche sémantique de photos par mots-clés (`immich__search`), d’après une instance Immich auto-hébergée. Jours formatés dans le fuseau du foyer ; clé API Immich à déclarer.
+
 ### 2026-11-08 : météo sans jeton
 
 **Ajouté**

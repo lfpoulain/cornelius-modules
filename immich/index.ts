@@ -1,4 +1,4 @@
-import { AddonCollectError, type AddonDefinition } from '#cornelius/addons';
+import { AddonCollectError, type AddonDefinition, type AddonHttpClient } from '#cornelius/addons';
 import configSchema from './config.schema.json' with { type: 'json' };
 import dataSchema from './data.schema.json' with { type: 'json' };
 
@@ -16,16 +16,19 @@ export type ImmichItem = {
   country: string | null;
 };
 
+export type ImmichMode = 'memories' | 'random' | 'search';
+
 export type ImmichData = {
   timestamp: number;
   ownerName: string;
+  mode: ImmichMode;
   totalCount: number;
   title: string;
   query: string | null;
   items: ImmichItem[];
 };
 
-interface ImmichAssetRaw {
+type ImmichAssetRaw = {
   id?: unknown;
   originalFileName?: unknown;
   fileCreatedAt?: unknown;
@@ -35,26 +38,69 @@ interface ImmichAssetRaw {
     city?: unknown;
     country?: unknown;
   } | null;
+};
+
+type HttpResponse = Awaited<ReturnType<AddonHttpClient['fetch']>>;
+
+const MAX_BYTES = 2 * 1024 * 1024;
+
+function readJson(res: HttpResponse): unknown {
+  if (res.status === 401) throw new AddonCollectError('auth', 'Clé API Immich refusée.');
+  if (res.status === 403) throw new AddonCollectError('forbidden', 'Accès refusé par Immich.');
+  if (res.status === 404) throw new AddonCollectError('not_found', 'Ressource Immich introuvable.');
+  if (res.status === 429) throw new AddonCollectError('quota', 'Quota Immich atteint.', true);
+  if (res.status >= 500) {
+    throw new AddonCollectError('unavailable', 'Serveur Immich indisponible.', true);
+  }
+  if (res.status !== 200) {
+    throw new AddonCollectError('upstream', `Réponse HTTP ${res.status} inattendue d’Immich.`);
+  }
+  if (res.truncated) {
+    throw new AddonCollectError('malformed', 'Réponse d’Immich tronquée.');
+  }
+  try {
+    return res.json();
+  } catch {
+    throw new AddonCollectError('malformed', 'Réponse d’Immich illisible.');
+  }
 }
 
-function formatAssetDate(asset: ImmichAssetRaw, fallback: string): string {
-  const raw = asset.fileCreatedAt || asset.localDateTime || asset.createdAt;
-  if (typeof raw !== 'string' || !raw) return fallback;
-  const parsed = new Date(raw);
-  if (Number.isNaN(parsed.getTime())) return fallback;
-  return parsed.toLocaleDateString('fr-FR', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-    timeZone: 'UTC',
-  });
+function formatAssetDate(asset: ImmichAssetRaw, timeZone: string, fallback: string): string {
+  const utcRaw = asset.fileCreatedAt || asset.createdAt;
+  if (typeof utcRaw === 'string' && utcRaw) {
+    const parsed = new Date(utcRaw);
+    if (!Number.isNaN(parsed.getTime())) {
+      return parsed.toLocaleDateString('fr-FR', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+        timeZone,
+      });
+    }
+  }
+  if (typeof asset.localDateTime === 'string' && asset.localDateTime) {
+    const parsed = new Date(asset.localDateTime);
+    if (!Number.isNaN(parsed.getTime())) {
+      return parsed.toLocaleDateString('fr-FR', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+        timeZone,
+      });
+    }
+  }
+  return fallback;
 }
 
-function toImmichItem(asset: ImmichAssetRaw, fallbackLabel: string): ImmichItem | null {
+function toImmichItem(
+  asset: ImmichAssetRaw,
+  timeZone: string,
+  fallbackLabel: string,
+): ImmichItem | null {
   if (typeof asset.id !== 'string' || !asset.id) return null;
   return {
     id: asset.id,
-    date: formatAssetDate(asset, fallbackLabel),
+    date: formatAssetDate(asset, timeZone, fallbackLabel),
     description:
       typeof asset.originalFileName === 'string' && asset.originalFileName.trim()
         ? asset.originalFileName.trim()
@@ -68,19 +114,20 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
   id: 'immich',
   apiVersion: 1,
   version: '1.0.0',
-  sourceLabel: 'Immich Souvenirs & Photos',
+  minCoreVersion: '0.2.0',
+  sourceLabel: 'Immich (photothèque)',
   display: {
     name: 'Immich',
-    description: 'Souvenirs et recherche intelligente dans votre photothèque personnelle Immich.',
+    description: 'Souvenirs du jour et recherche de photos dans la photothèque Immich du foyer.',
     icon: 'history',
     keywords: ['immich', 'photo', 'photos', 'souvenir', 'souvenirs', 'vacances', 'album'],
-    example: { label: 'Mes souvenirs Immich', ref: 'immich-perso' },
-    spoken: { head: 'mes souvenirs Immich', repeats: ['immich', 'souvenirs', 'photos'] },
+    example: { label: 'Photothèque du foyer', ref: 'foyer' },
+    spoken: { head: 'les souvenirs Immich', repeats: ['immich', 'souvenirs', 'photos'] },
   },
   configVersion: 1,
   configSchema,
   configDefaults: {
-    serverUrl: 'http://localhost:2283',
+    serverUrl: 'http://immich.local:2283',
     defaultCount: 5,
   },
   dataVersion: 1,
@@ -90,16 +137,16 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
     {
       name: 'IMMICH_API_KEY',
       env: 'CORNELIUS_IMMICH_API_KEY',
-      label: 'Clé API Immich',
-      note: 'Paramètres du compte Immich.',
+      label: 'une clé API Immich',
+      note: 'lecture des médias et souvenirs',
     },
   ],
   tools: [
     {
       name: 'memories',
       description:
-        'Consulter les souvenirs du jour (« ce jour-là ») dans la photothèque Immich du profil reconnu devant le miroir. ' +
-        'Utiliser pour « montre mes souvenirs », « souvenirs d’aujourd’hui », « mes photos du jour ».',
+        'Consulter les souvenirs du jour (« ce jour-là ») dans la photothèque Immich configurée. ' +
+        'Utiliser pour « montre nos souvenirs », « souvenirs d’aujourd’hui », « photos du jour ».',
       parameters: {
         type: 'object',
         additionalProperties: false,
@@ -120,8 +167,8 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
     {
       name: 'search',
       description:
-        'Rechercher des photos par mots-clés dans la photothèque Immich du profil reconnu devant le miroir. ' +
-        'Utiliser pour « photos de vacances », « cherche mes photos à la plage », « photos de montagne ».',
+        'Rechercher des photos par mots-clés dans la photothèque Immich configurée. ' +
+        'Utiliser pour « photos de vacances », « cherche des photos à la plage », « photos de montagne ».',
       query: { maxLength: 100 },
       parameters: {
         type: 'object',
@@ -144,13 +191,16 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
   ],
   async collect(context) {
     const serverUrl = (context.config.serverUrl || '').trim().replace(/\/+$/, '');
-    if (!serverUrl) {
-      throw new AddonCollectError('config_invalid', 'URL du serveur Immich manquante.');
+    if (!/^https?:\/\/\S+$/i.test(serverUrl)) {
+      throw new AddonCollectError(
+        'config_invalid',
+        'Adresse du serveur Immich invalide (http:// ou https:// attendu).',
+      );
     }
 
     const apiKey = context.secret('IMMICH_API_KEY');
     if (!apiKey) {
-      throw new AddonCollectError('auth', 'Clé API Immich manquante.');
+      throw new AddonCollectError('config_invalid', 'Clé API Immich absente.');
     }
 
     const count =
@@ -159,12 +209,14 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
         : (context.config.defaultCount ?? 5);
     const query =
       typeof context.query === 'string' && context.query.trim() ? context.query.trim() : null;
-    const ownerName = context.config.userName?.trim() || 'votre compte';
+    const ownerName = context.config.userName?.trim() || 'Foyer';
 
     const items: ImmichItem[] = [];
     let title = 'Souvenirs Immich';
+    let mode: ImmichMode = 'memories';
 
     if (query) {
+      mode = 'search';
       title = `Photos : ${query}`;
       const res = await context.http.fetch({
         url: `${serverUrl}/api/search/smart`,
@@ -176,20 +228,14 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
         body: JSON.stringify({ query, type: 'IMAGE', size: count }),
         signal: context.signal,
         timeoutMs: 4500,
+        maxBytes: MAX_BYTES,
       });
-      if (res.status === 401 || res.status === 403) {
-        throw new AddonCollectError('auth', 'Clé API Immich refusée.');
+      const payload = readJson(res) as { assets?: { items?: unknown } } | null;
+      if (!payload || typeof payload !== 'object' || !Array.isArray(payload.assets?.items)) {
+        throw new AddonCollectError('malformed', 'Résultats de recherche Immich invalides.');
       }
-      if (res.status !== 200) {
-        throw new AddonCollectError(
-          'unavailable',
-          `Immich a répondu avec le statut ${res.status}.`,
-        );
-      }
-      const json = res.json() as { assets?: { items?: ImmichAssetRaw[] } } | null;
-      const assets = Array.isArray(json?.assets?.items) ? json.assets.items : [];
-      for (const asset of assets.slice(0, count)) {
-        const item = toImmichItem(asset, 'Photo');
+      for (const asset of payload.assets.items.slice(0, count) as ImmichAssetRaw[]) {
+        const item = toImmichItem(asset, context.timeZone, 'Photo');
         if (item) items.push(item);
       }
     } else {
@@ -199,24 +245,22 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
         headers: { 'x-api-key': apiKey },
         signal: context.signal,
         timeoutMs: 4500,
+        maxBytes: MAX_BYTES,
       });
-      if (memRes.status === 401 || memRes.status === 403) {
-        throw new AddonCollectError('auth', 'Clé API Immich refusée.');
+      const memoriesPayload = readJson(memRes);
+      if (!Array.isArray(memoriesPayload)) {
+        throw new AddonCollectError('malformed', 'Liste de souvenirs Immich invalide.');
       }
-      if (memRes.status === 200) {
-        const memories =
-          (memRes.json() as Array<{
-            data?: { year?: number };
-            assets?: ImmichAssetRaw[];
-          }>) ?? [];
-        for (const mem of memories) {
-          const fallback = mem.data?.year ? `En ${mem.data.year}` : 'Ce jour-là';
-          if (Array.isArray(mem.assets)) {
-            for (const asset of mem.assets) {
-              if (items.length >= count) break;
-              const item = toImmichItem(asset, fallback);
-              if (item) items.push(item);
-            }
+      for (const mem of memoriesPayload as Array<{
+        data?: { year?: number };
+        assets?: ImmichAssetRaw[];
+      }>) {
+        const fallback = mem.data?.year ? `En ${mem.data.year}` : 'Ce jour-là';
+        if (Array.isArray(mem.assets)) {
+          for (const asset of mem.assets) {
+            if (items.length >= count) break;
+            const item = toImmichItem(asset, context.timeZone, fallback);
+            if (item) items.push(item);
           }
         }
       }
@@ -229,17 +273,20 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
             'x-api-key': apiKey,
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ count }),
+          body: JSON.stringify({ size: count, type: 'IMAGE', withExif: true }),
           signal: context.signal,
           timeoutMs: 4500,
+          maxBytes: MAX_BYTES,
         });
-        if (randRes.status === 200) {
-          const randomAssets = (randRes.json() as ImmichAssetRaw[]) ?? [];
-          title = 'Sélection Immich';
-          for (const asset of randomAssets.slice(0, count)) {
-            const item = toImmichItem(asset, 'Photo');
-            if (item) items.push(item);
-          }
+        const randomPayload = readJson(randRes);
+        if (!Array.isArray(randomPayload)) {
+          throw new AddonCollectError('malformed', 'Sélection aléatoire Immich invalide.');
+        }
+        mode = 'random';
+        title = 'Sélection Immich';
+        for (const asset of randomPayload.slice(0, count) as ImmichAssetRaw[]) {
+          const item = toImmichItem(asset, context.timeZone, 'Photo');
+          if (item) items.push(item);
         }
       }
     }
@@ -249,12 +296,13 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
         data: {
           timestamp: context.now(),
           ownerName,
+          mode,
           totalCount: 0,
           title,
           query,
           items: [],
         },
-        source: { provider: 'immich', sourceId: serverUrl },
+        source: { provider: 'immich', sourceId: 'phototheque' },
         empty: true,
       };
     }
@@ -263,24 +311,42 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
       data: {
         timestamp: context.now(),
         ownerName,
+        mode,
         totalCount: items.length,
         title,
         query,
         items,
       },
-      source: { provider: 'immich', sourceId: serverUrl },
+      source: { provider: 'immich', sourceId: 'phototheque' },
     };
   },
   present(snapshot) {
     const data = snapshot.data;
-    if (!data || data.items.length === 0) {
-      throw new Error('Aucune photo disponible.');
+    if (!data) throw new Error('Aucune donnée Immich à présenter.');
+
+    if (data.items.length === 0) {
+      return {
+        title: data.title.slice(0, 80),
+        primaryValue:
+          data.mode === 'search' ? 'Aucune photo trouvée' : 'Aucun souvenir aujourd’hui',
+        subtitle: data.ownerName.slice(0, 120),
+        description: null,
+        items: [],
+        summary:
+          data.mode === 'search' && data.query
+            ? `Aucune photo trouvée pour « ${data.query} » dans la photothèque Immich.`
+            : 'Aucun souvenir ni photo disponible aujourd’hui dans la photothèque Immich.',
+        sources: ['immich'],
+      };
     }
 
     const first = data.items[0]!;
-    const primaryValue = data.query
-      ? `${data.totalCount} photo${data.totalCount > 1 ? 's' : ''} trouvée${data.totalCount > 1 ? 's' : ''}`
-      : `Souvenirs · ${data.ownerName}`;
+    const primaryValue =
+      data.mode === 'search'
+        ? `${data.totalCount} photo${data.totalCount > 1 ? 's' : ''} trouvée${data.totalCount > 1 ? 's' : ''}`
+        : data.mode === 'random'
+          ? `Sélection aléatoire · ${data.ownerName}`
+          : `Souvenirs · ${data.ownerName}`;
     const subtitle = `${data.items.length} cliché${data.items.length > 1 ? 's' : ''} · ${first.date}`;
 
     const cardItems = data.items.slice(0, 5).map((item) => {
@@ -291,15 +357,18 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
       };
     });
 
-    const summary = data.query
-      ? `J’ai trouvé ${data.totalCount} photo${data.totalCount > 1 ? 's' : ''} pour « ${data.query} » dans la photothèque Immich.`
-      : `Voici les souvenirs Immich pour ${data.ownerName} : ${data.totalCount} cliché${data.totalCount > 1 ? 's' : ''}, notamment du ${first.date}.`;
+    const summary =
+      data.mode === 'search'
+        ? `J’ai trouvé ${data.totalCount} photo${data.totalCount > 1 ? 's' : ''} pour « ${data.query} » dans la photothèque Immich.`
+        : data.mode === 'random'
+          ? `Aucun souvenir daté d’aujourd’hui ; voici une sélection aléatoire de ${data.totalCount} cliché${data.totalCount > 1 ? 's' : ''} dans la photothèque Immich (${data.ownerName}), notamment du ${first.date}.`
+          : `Voici les souvenirs du jour dans la photothèque Immich (${data.ownerName}) : ${data.totalCount} cliché${data.totalCount > 1 ? 's' : ''}, notamment du ${first.date}.`;
 
     return {
       title: data.title.slice(0, 80),
       primaryValue: primaryValue.slice(0, 120),
       subtitle: subtitle.slice(0, 120),
-      description: `Photothèque Immich de ${data.ownerName}.`,
+      description: `Photothèque Immich (${data.ownerName}).`,
       items: cardItems,
       summary,
       sources: ['immich'],

@@ -3,10 +3,11 @@
   "title": "Données Immich",
   "type": "object",
   "additionalProperties": false,
-  "required": ["timestamp", "ownerName", "totalCount", "title", "items"],
+  "required": ["timestamp", "ownerName", "mode", "totalCount", "title", "items"],
   "properties": {
     "timestamp": { "type": "integer" },
     "ownerName": { "type": "string" },
+    "mode": { "type": "string", "enum": ["memories", "random", "search"] },
     "totalCount": { "type": "integer" },
     "title": { "type": "string" },
     "query": { "type": ["string", "null"] },
