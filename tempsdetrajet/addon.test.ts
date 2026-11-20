@@ -37,8 +37,8 @@ test('définition, réglages, contrat et adresse interrogée', async (t) => {
     );
   const result = await f.read();
   assert.deepEqual(f.contract(result), []);
-  assert.equal(result.ok && result.card.primaryValue, 'Arrivée vers 12 h 18');
-  assert.equal(result.ok && result.card.subtitle, '18 min en partant maintenant');
+  assert.equal(result.ok && result.card.primaryValue, 'Arrivée vers 12 h 19');
+  assert.equal(result.ok && result.card.subtitle, '19 min en partant maintenant');
   assert.equal(result.ok && result.snapshot.validUntil, '2026-09-22T10:05:00.000Z');
   const url = new URL(f.calls[0]!.url);
   assert.equal(url.origin, 'https://api.tomtom.com');
@@ -48,6 +48,8 @@ test('définition, réglages, contrat et adresse interrogée', async (t) => {
   assert.equal(url.searchParams.get('traffic'), 'true');
   assert.equal(url.searchParams.get('routeType'), 'fastest');
   assert.equal(url.searchParams.get('computeTravelTimeFor'), 'all');
+  // Sans `summaryOnly`, TomTom renvoie tout le tracé et un long trajet dépasse `maxBytes`.
+  assert.equal(url.searchParams.get('routeRepresentation'), 'summaryOnly');
   assert.ok(f.calls[0]?.signal);
 });
 
@@ -57,21 +59,21 @@ test('la carte donne le retard, la durée sans trafic et la distance', async (t)
   assert.equal(result.ok, true);
   if (!result.ok) return;
   assert.deepEqual(result.card.items, [
-    { label: 'Trafic', value: '+7 min de trafic' },
+    { label: 'Trafic', value: '+8 min de trafic' },
     { label: 'Sans trafic', value: '11 min' },
     { label: 'Distance', value: '3,1 km' },
   ]);
   assert.match(
     result.presentation.summary,
-    /arrivée vers 12 h 18 : 18 min de route, dont 7 min de trafic/u,
+    /arrivée vers 12 h 19 : 19 min de route, dont 8 min de trafic/u,
   );
 });
 
 test('le retard est l’écart avec la durée sans trafic ; à défaut, le retard annoncé ; sinon il reste inconnu', async (t) => {
-  // Réponse enregistrée : 1 108 s au total, 685 s sans trafic, mais « trafficDelayInSeconds » 300 s
-  // (les seuls incidents du moment). La carte garde « sans trafic + retard = durée » : 11 + 7 = 18.
+  // Réponse enregistrée : 1 143 s au total, 660 s sans trafic, mais « trafficDelayInSeconds » 299 s
+  // (les seuls incidents du moment). La carte garde « sans trafic + retard = durée » : 11 + 8 = 19.
   const gap = await setup(t).read();
-  assert.equal(gap.ok && gap.card.items[0]?.value, '+7 min de trafic');
+  assert.equal(gap.ok && gap.card.items[0]?.value, '+8 min de trafic');
 
   const announced = setup(t, route({ noTrafficTravelTimeInSeconds: undefined }));
   const second = await announced.read();
@@ -90,28 +92,34 @@ test('le retard est l’écart avec la durée sans trafic ; à défaut, le retar
 });
 
 test('un retard sous la minute se dit « Trafic fluide »', async (t) => {
-  const f = setup(t, route({ noTrafficTravelTimeInSeconds: 1070 }));
+  const f = setup(t, route({ noTrafficTravelTimeInSeconds: 1100 }));
   const result = await f.read();
   assert.equal(result.ok && result.card.items[0]?.value, 'Trafic fluide');
   assert.match(result.ok ? result.presentation.summary : '', /sans retard dû au trafic/u);
 });
 
 test('un trajet de plus d’une heure se dit en heures et minutes', async (t) => {
-  const f = setup(t, route({ travelTimeInSeconds: 3900, trafficDelayInSeconds: 600 }));
+  // 3 900 s au total pour 3 300 s sans trafic : 10 min de retard, et la carte le dit.
+  const f = setup(t, route({ travelTimeInSeconds: 3900, noTrafficTravelTimeInSeconds: 3300 }));
   const result = await f.read();
   assert.equal(result.ok && result.card.subtitle, '1 h 05 en partant maintenant');
   assert.equal(result.ok && result.card.primaryValue, 'Arrivée vers 13 h 05');
+  assert.deepEqual(result.ok && result.card.items, [
+    { label: 'Trafic', value: '+10 min de trafic' },
+    { label: 'Sans trafic', value: '55 min' },
+    { label: 'Distance', value: '3,1 km' },
+  ]);
 });
 
 test('l’affichage permanent suit l’heure sans nouvelle requête', async (t) => {
   const f = setup(t);
   assert.equal((await f.read()).ok, true);
   const first = f.ambient();
-  assert.equal(first.content?.value, 'Arrivée 12 h 18');
-  assert.equal(first.content?.subtitle, '18 min en partant maintenant');
+  assert.equal(first.content?.value, 'Arrivée 12 h 19');
+  assert.equal(first.content?.subtitle, '19 min en partant maintenant');
   // Trois minutes plus tard, la durée est inchangée mais l'arrivée a avancé.
   f.advance(3 * 60_000);
-  assert.equal(f.ambient().content?.value, 'Arrivée 12 h 21');
+  assert.equal(f.ambient().content?.value, 'Arrivée 12 h 22');
   assert.equal(f.calls.length, 1);
 });
 
@@ -173,6 +181,30 @@ test('une réponse invalide est signalée, jamais convertie en trajet nul', asyn
     assert.equal(result.ok, false);
     if (!result.ok) assert.equal(result.error.code, 'malformed');
   }
+});
+
+test('une réponse coupée par la limite de taille est dite incomplète, pas illisible', async (t) => {
+  const cut = { status: 200, body: JSON.stringify(payload).slice(0, 400), truncated: true };
+  const f = setup(t, cut);
+  const result = await f.read();
+  assert.equal(result.ok, false);
+  if (!result.ok) {
+    assert.equal(result.error.code, 'malformed');
+    assert.match(result.error.message, /incomplète/u);
+  }
+  const g = setup(t);
+  g.route({
+    '/search/2/search/': {
+      status: 200,
+      body: JSON.stringify(found).slice(0, 400),
+      truncated: true,
+    },
+  });
+  await assert.rejects(
+    g.runtime.search(addon.id, { kind: 'origin', query: 'gare saint-jean' }, signal()),
+    (error: { code?: string; message: string }) =>
+      error.code === 'malformed' && /incomplète/u.test(error.message),
+  );
 });
 
 test('une panne après expiration garde le dernier relevé et l’annonce comme tel', async (t) => {
@@ -271,8 +303,9 @@ test('la recherche d’adresse propose des points arrondis, un seul par repère'
     { kind: 'destination', query: ' gare saint-jean bordeaux ' },
     signal(),
   );
-  // Réponse enregistrée : six résultats ; « Pause Gourmande » tombe sur le même repère arrondi
-  // que la rue « Gare Saint-Jean » (44.825,-0.557) : un seul réglage possible, le mieux classé reste.
+  // Réponse enregistrée : six résultats, tous distincts chez TomTom. « Pause Gourmande », un vrai
+  // lieu à 43 m de la rue « Gare Saint-Jean », tombe sur le même repère arrondi (44.825,-0.557) :
+  // un seul réglage possible, le mieux classé reste.
   assert.deepEqual(results, [
     {
       id: '44.826,-0.556',
