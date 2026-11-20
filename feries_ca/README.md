@@ -20,7 +20,7 @@ Le module Vacances et jours fériés livré pour la France (`vacances`) ne convi
 
 | Donnée | Source | Licence, conditions |
 | --- | --- | --- |
-| Jours fériés par province et territoire, et des employeurs fédéraux | [canada-holidays.ca](https://canada-holidays.ca/api) (`/api/v1/provinces/{code}`, `/api/v1/holidays?federal=true`) | Gratuit, sans jeton ; chaque province renvoie aussi le lien de sa source officielle (CNESST pour le Québec) |
+| Jours fériés par province et territoire, et des employeurs fédéraux | [canada-holidays.ca](https://canada-holidays.ca/api) (`/api/v1/provinces/{code}`, `/api/v1/holidays?federal=true`) | Gratuit, sans jeton. Site bénévole et non officiel, code sous licence MIT ([pcraig3/hols](https://github.com/pcraig3/hols)) ; les dates sont des faits publics repris des sources officielles, sans licence propre. Chaque province renvoie aussi le lien de sa source officielle (CNESST pour le Québec) |
 
 Deux requêtes par relevé (l’année en cours et la suivante), gardées un jour en cache.
 

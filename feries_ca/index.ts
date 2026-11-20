@@ -59,7 +59,7 @@ const provinces: Record<Province, { code: string; dans: string }> = {
 };
 
 const api = 'https://canada-holidays.ca/api/v1';
-const headers = { 'User-Agent': 'Cornelius-module-feries_ca/1.0', Accept: 'application/json' };
+const headers = { Accept: 'application/json' };
 
 type Holiday = {
   date: string;
