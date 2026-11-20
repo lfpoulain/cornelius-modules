@@ -5,39 +5,26 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    env:
-      # Cornelius est privé : jeton en lecture seule sur lfpoulain/Cornelius (voir CONTRIBUTING.md).
-      CORNELIUS_TOKEN: ${{ secrets.CORNELIUS_READ_TOKEN }}
     steps:
-      - name: Accès à Cornelius
-        if: env.CORNELIUS_TOKEN == ''
-        run: echo "::warning::Secret CORNELIUS_READ_TOKEN absent, vérifications sautées."
       - uses: actions/checkout@v4
-        if: env.CORNELIUS_TOKEN != ''
         with:
           path: cornelius-modules
-      # Même disposition qu'en local : Cornelius à côté de ce dépôt.
+      # Même disposition qu'en local : Cornelius (public) à côté de ce dépôt.
       - uses: actions/checkout@v4
-        if: env.CORNELIUS_TOKEN != ''
         with:
           repository: lfpoulain/Cornelius
-          token: ${{ env.CORNELIUS_TOKEN }}
+          ref: main
           path: cornelius
       - uses: actions/setup-node@v4
-        if: env.CORNELIUS_TOKEN != ''
         with:
           node-version-file: cornelius/.nvmrc
           cache: npm
           cache-dependency-path: cornelius/package-lock.json
-      - if: env.CORNELIUS_TOKEN != ''
-        run: npm ci
+      - run: npm ci
         working-directory: cornelius
-      - if: env.CORNELIUS_TOKEN != ''
-        run: npm run format:check
+      - run: npm run format:check
         working-directory: cornelius-modules
-      - if: env.CORNELIUS_TOKEN != ''
-        run: npm run check
+      - run: npm run check
         working-directory: cornelius-modules
-      - if: env.CORNELIUS_TOKEN != ''
-        run: npm test
+      - run: npm test
         working-directory: cornelius-modules
