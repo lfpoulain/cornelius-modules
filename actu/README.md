@@ -34,7 +34,9 @@ Le champ **Journal et zone** cherche dans un catalogue de flux essayés, classé
 - Pour les nouvelles du pays **et** celles de la région, ajoutez deux sources : « Les titres » (national) et « Près de chez nous » (régional).
 - Les sources réglées avant la version 1.2.0 (adresse seule) ne changent pas.
 
-Le catalogue n’a que des flux vérifiés avec ce module (titres lus, date récente) le 2026-11-12. Écartés : Le Soleil (plus de flux), les flux Noovo d’Estrie, de Mauricie et du Saguenay (vides ou d’un seul titre vieux de plus d’un jour).
+Le catalogue n’a que des flux vérifiés avec ce module (titres lus, date récente) le 2026-11-12. Écartés : Le Soleil (plus de flux), les flux Noovo d’Estrie, de Mauricie et du Saguenay (vides ou d’un seul titre vieux de plus d’un jour). Il reste volontairement court : des flux nationaux et régionaux essayés, sans viser l’exhaustivité.
+
+**Un flux peut disparaître** : un journal change d’adresse ou ferme son flux sans prévenir, et la source tombe alors en erreur. Coller l’adresse d’un flux dans le champ reste toujours possible, que le journal soit au catalogue ou non. Pour relire tous les flux du catalogue d’un coup, avant de le modifier ou de temps en temps : `node scripts/verifier-flux-actu.mjs` (aucune dépendance ; code 1 si un flux est en échec).
 
 Une source par journal ou par rubrique : « Les titres », « Le sport », « L’actu locale »…
 
