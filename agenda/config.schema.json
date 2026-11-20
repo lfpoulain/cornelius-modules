@@ -1,9 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "AgendaConfig v1",
+  "title": "AgendaConfig v2",
   "type": "object",
   "additionalProperties": false,
-  "required": ["url", "days"],
+  "required": ["url", "days", "descriptions", "descriptionLength"],
   "properties": {
     "url": {
       "title": "Lien iCal privé",
@@ -18,6 +18,18 @@
       "type": "integer",
       "minimum": 1,
       "maximum": 14
+    },
+    "descriptions": {
+      "title": "Lire les descriptions",
+      "description": "Cornelius garde la description de chaque rendez-vous et s’en sert quand on la demande (« qu’est-ce qu’il y a dans la description du dentiste ? »). Elles partent alors au fournisseur vocal avec le reste de l’agenda.",
+      "type": "boolean"
+    },
+    "descriptionLength": {
+      "title": "Longueur des descriptions",
+      "description": "Caractères gardés au plus par description ; au-delà, elle est coupée. Plus elles sont longues, plus chaque question sur l’agenda coûte.",
+      "type": "integer",
+      "minimum": 50,
+      "maximum": 1000
     }
   }
 }

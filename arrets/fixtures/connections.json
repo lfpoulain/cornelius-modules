@@ -1,0 +1,72 @@
+{
+  "connections": [
+    {
+      "from": {
+        "station": { "id": "8588432", "name": "Lausanne, Chailly-Village" },
+        "departure": "2026-10-29T00:18:00+0100",
+        "platform": null
+      },
+      "to": {
+        "station": { "id": "8588440", "name": "Lausanne, Ouchy-Olympique" },
+        "arrival": "2026-10-29T01:07:00+0100"
+      },
+      "duration": "00d00:49:00",
+      "transfers": 0,
+      "products": ["B 6"],
+      "sections": [
+        {
+          "departure": {
+            "station": { "name": "Lausanne, Chailly-Village" },
+            "departure": "2026-10-29T00:18:00+0100",
+            "platform": null
+          },
+          "arrival": {
+            "station": { "name": "Lausanne, Ouchy-Olympique" },
+            "arrival": "2026-10-29T01:07:00+0100"
+          },
+          "journey": { "category": "B", "number": "6", "name": "B 6" }
+        }
+      ]
+    },
+    {
+      "from": {
+        "station": { "id": "8588432", "name": "Lausanne, Chailly-Village" },
+        "departure": "2026-10-29T00:41:00+0100",
+        "platform": null
+      },
+      "to": {
+        "station": { "id": "8588440", "name": "Lausanne, Ouchy-Olympique" },
+        "arrival": "2026-10-29T01:02:00+0100"
+      },
+      "duration": "00d00:21:00",
+      "transfers": 1,
+      "products": ["B 7", "m2"],
+      "sections": [
+        {
+          "departure": {
+            "station": { "name": "Lausanne, Chailly-Village" },
+            "departure": "2026-10-29T00:41:00+0100",
+            "platform": null
+          },
+          "arrival": {
+            "station": { "name": "Lausanne, Ours" },
+            "arrival": "2026-10-29T00:47:00+0100"
+          },
+          "journey": { "category": "B", "number": "7", "name": "B 7" }
+        },
+        {
+          "departure": {
+            "station": { "name": "Lausanne, Ours" },
+            "departure": "2026-10-29T00:52:00+0100",
+            "platform": "2"
+          },
+          "arrival": {
+            "station": { "name": "Lausanne, Ouchy-Olympique" },
+            "arrival": "2026-10-29T01:02:00+0100"
+          },
+          "journey": { "category": "M", "number": "m2", "name": "m2" }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MeteoLibreData v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["place", "days"],
+  "properties": {
+    "place": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "days": {
+      "type": "array",
+      "maxItems": 7,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "tmin", "tmax", "summary", "rainProbability", "windKmh"],
+        "properties": {
+          "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "tmin": { "type": "integer", "minimum": -90, "maximum": 70 },
+          "tmax": { "type": "integer", "minimum": -90, "maximum": 70 },
+          "summary": { "type": "string", "minLength": 1, "maxLength": 80 },
+          "rainProbability": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+          "windKmh": { "type": ["integer", "null"], "minimum": 0, "maximum": 400 }
+        }
+      }
+    }
+  }
+}

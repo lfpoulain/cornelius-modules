@@ -4,11 +4,59 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
-### 2026-10-30 : module Temps de trajet
+### 2026-11-20 : module Temps de trajet
 
 **Ajouté**
 
-- Module **Temps de trajet** (`tempsdetrajet`, 1.0.0) : l’heure d’arrivée estimée d’un trajet en voiture avec le trafic en direct, d’après l’API TomTom (clé gratuite, 20 000 itinéraires et 2 500 recherches par mois). Départ et arrivée choisis par recherche d’adresse, points arrondis à environ 100 mètres, affichage permanent possible. Auteur : Bunchfr.
+- Module **Temps de trajet** (`tempsdetrajet`, 1.0.0) : l’heure d’arrivée estimée d’un trajet en voiture avec le trafic en direct, d’après l’API TomTom (clé gratuite, 20 000 itinéraires par mois). Départ et arrivée choisis par recherche d’adresse, points arrondis à environ 100 mètres, affichage permanent possible. Auteur : Bunchfr.
+
+### 2026-11-12 : module Jours fériés au Canada
+
+**Ajouté**
+
+- Module **Jours fériés au Canada** (`feries_ca`, 1.0.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : le prochain jour férié et les suivants de la province ou du territoire choisi, ou du calendrier fédéral si l’employeur le suit (case à cocher), d’après canada-holidays.ca (sans jeton). Date observée quand le jour férié est reporté ; au Québec, Vendredi saint ou lundi de Pâques au choix de l’employeur ; liste de l’année en cours et de la suivante dans les données de la réponse ; compte à rebours sur le miroir, recalculé à minuit.
+
+### 2026-11-12 : vélos en libre-service au Canada
+
+**Modifié**
+
+- **Vélos en libre-service** (1.2.0) : les réseaux du Canada sont proposés dans la recherche, avec ceux de France, de Belgique, de Suisse, du Luxembourg et de Monaco : àVélo (Québec), BIXI (Montréal), Accès Vélo (Saguenay), Bike Share Toronto, Mobi (Vancouver)… Les trottinettes et l’autopartage restent écartés. Par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)).
+
+### 2026-11-11 : module Météo Canada
+
+**Ajouté**
+
+- Module **Météo Canada** (`meteo_canada`, 1.0.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : la météo d’une ville canadienne d’après Environnement et Changement climatique Canada (API GeoMet-OGC, en français, sans jeton) : conditions actuelles, prévisions par période et avertissements en vigueur, dits à la voix et affichés en première ligne. Ville trouvée par son nom (province pour un homonyme) dans une liste réduite des 844 villes, ou par coordonnées. Icônes d’après les codes officiels : vraies icônes sur un cœur qui connaît `cardIcons`, émojis sinon. Ressenti écarté quand la source le publie absurde.
+
+### 2026-11-08 : météo sans jeton
+
+**Ajouté**
+
+- Module **Météo libre** (`meteo_libre`, 1.0.0) : prévisions d’un lieu donné par sa latitude et sa longitude, de 1 à 7 jours, d’après l’API libre et gratuite Open-Meteo, sans jeton. Codes météo de l’OMM dits en français, pluie citée à partir de 40 %, vent à partir de 40 km/h ; jours dans le fuseau du foyer ; affichage permanent qui passe au lendemain à minuit. Pour un foyer sans jeton Météo Concept (module Météo livré avec Cornelius). Par Louis (NeuTroNBZh).
+
+### 2026-11-05 : descriptions dans l’Agenda
+
+**Modifié**
+
+- **Agenda** (1.2.0) : la description de chaque rendez-vous peut être lue (HTML et bloc Google Meet retirés) et donnée à la voix dans les données de la réponse, sans être dite d’office ni affichée. Deux réglages par source : « Lire les descriptions », désactivé par défaut, et « Longueur des descriptions » (50 à 1 000 caractères, 300 par défaut). Les sources déjà réglées restent sans descriptions (`configVersion` 2, `dataVersion` 3).
+
+### 2026-11-02 : module Arrêts et itinéraires
+
+**Ajouté**
+
+- Module **Arrêts et itinéraires** (`arrets`, 1.0.0), par [Malvu](https://github.com/Malvu) : n’importe quel arrêt de Suisse, les lignes qui le desservent et leur prochain départ, et l’itinéraire entre deux lieux avec ses changements. À la voix, l’outil `partir` donne l’heure de départ pour arriver à une heure donnée, en gardant le dernier départ utile et en annonçant la marge. La ville est facultative : vide, la recherche porte sur tout le pays. Les gares germanophones sont cherchées sous leur nom français (« Berne » donne Bern). Source : transport.opendata.ch, sans jeton.
+
+### 2026-11-02 : module Perturbations
+
+**Ajouté**
+
+- Module **Perturbations** (`perturbations`, 1.0.0), par [Malvu](https://github.com/Malvu) : les annonces de trafic du hub suisse (SIRI-SX), filtrées sur les lignes et les arrêts du foyer. Une ligne peut être désignée par son numéro public ou par son exploitant (« 801:121 ») pour lever les homonymes ; seules les annonces en cours sont retenues, un flux sans annonce donne « Aucune » plutôt qu’une erreur, et un flux illisible une erreur plutôt qu’un faux « Aucune ». Jeton gratuit à déclarer. Source : opentransportdata.swiss.
+
+### 2026-10-31 : module Dépenses OpenAI
+
+**Ajouté**
+
+- Module **Dépenses OpenAI** (`depenses_openai`, 1.0.0) : dépenses du mois, du jour et des 7 derniers jours lues par l’API des coûts de l’organisation (clé Admin, en lecture seule si OpenAI le propose), avec les usages les plus chers et une alerte de budget à 80 % et 100 %, sur la carte comme sur l’affichage permanent. Les avoirs sont déduits ; « rien de publié pour l’instant » pour une journée sans montant ; un relevé repris après une panne est daté. Mois et jour suivent le fuseau du foyer, rapprochés des journées UTC d’OpenAI. Auteur : tigul_one.
 
 ### 2026-10-29 : licence MIT
 

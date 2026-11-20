@@ -21,9 +21,7 @@ npm run check
 npm test
 ```
 
-`npm run format` corrige la mise en forme. Les mêmes vérifications tournent à chaque envoi (`.github/workflows/check.yml`), contre la branche `main` de Cornelius.
-
-Cornelius étant privé, la vérification automatique a besoin du secret `CORNELIUS_READ_TOKEN` : un jeton GitHub à granularité fine, en lecture seule sur le contenu de `lfpoulain/Cornelius`, ajouté dans **Settings → Secrets and variables → Actions**. Sans lui, elle s’arrête sur un avertissement.
+`npm run format` corrige la mise en forme. Les mêmes vérifications tournent à chaque envoi (`.github/workflows/check.yml`), contre la branche `main` de Cornelius. Pour une première contribution, GitHub attend qu’un mainteneur autorise la vérification avant de la lancer.
 
 ## Ce qu’un module doit avoir
 

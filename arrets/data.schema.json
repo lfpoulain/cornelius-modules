@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "depuis", "vers", "limite", "margeMin", "trajets"],
+      "properties": {
+        "kind": { "const": "echeance" },
+        "depuis": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "vers": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "limite": { "type": "string", "pattern": "^\\d{2}:\\d{2}$" },
+        "margeMin": { "type": "integer", "minimum": 0, "maximum": 1440 },
+        "trajets": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["depart", "arrive", "dureeMin", "correspondances", "lignes", "etapes"],
+            "properties": {
+              "depart": { "type": "string", "minLength": 20, "maxLength": 40 },
+              "arrive": { "type": "string", "minLength": 20, "maxLength": 40 },
+              "dureeMin": { "type": "integer", "minimum": 0, "maximum": 1440 },
+              "correspondances": { "type": "integer", "minimum": 0, "maximum": 9 },
+              "lignes": {
+                "type": "array",
+                "maxItems": 4,
+                "items": { "type": "string", "minLength": 1, "maxLength": 24 }
+              },
+              "etapes": {
+                "type": "array",
+                "maxItems": 8,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["ligne", "depuis", "vers", "depart", "arrive", "voie"],
+                  "properties": {
+                    "ligne": { "type": "string", "minLength": 1, "maxLength": 40 },
+                    "depuis": { "type": "string", "minLength": 1, "maxLength": 80 },
+                    "vers": { "type": "string", "minLength": 1, "maxLength": 80 },
+                    "depart": { "type": "string", "minLength": 20, "maxLength": 40 },
+                    "arrive": { "type": "string", "minLength": 20, "maxLength": 40 },
+                    "voie": { "type": ["string", "null"], "maxLength": 20 }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "arret", "ville", "lignes"],
+      "properties": {
+        "kind": { "const": "stop" },
+        "arret": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "ville": { "type": "string", "minLength": 1, "maxLength": 40 },
+        "lignes": {
+          "type": "array",
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["ligne", "direction", "depart", "retardMin", "voie"],
+            "properties": {
+              "ligne": { "type": "string", "minLength": 1, "maxLength": 40 },
+              "direction": { "type": "string", "minLength": 1, "maxLength": 80 },
+              "depart": { "type": "string", "minLength": 20, "maxLength": 40 },
+              "retardMin": { "type": "integer", "minimum": 0, "maximum": 240 },
+              "voie": { "type": ["string", "null"], "maxLength": 20 }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "depuis", "vers", "trajets"],
+      "properties": {
+        "kind": { "const": "trajet" },
+        "depuis": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "vers": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "trajets": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["depart", "arrive", "dureeMin", "correspondances", "lignes", "etapes"],
+            "properties": {
+              "depart": { "type": "string", "minLength": 20, "maxLength": 40 },
+              "arrive": { "type": "string", "minLength": 20, "maxLength": 40 },
+              "dureeMin": { "type": "integer", "minimum": 0, "maximum": 1440 },
+              "correspondances": { "type": "integer", "minimum": 0, "maximum": 9 },
+              "lignes": {
+                "type": "array",
+                "maxItems": 4,
+                "items": { "type": "string", "minLength": 1, "maxLength": 24 }
+              },
+              "etapes": {
+                "type": "array",
+                "maxItems": 8,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["ligne", "depuis", "vers", "depart", "arrive", "voie"],
+                  "properties": {
+                    "ligne": { "type": "string", "minLength": 1, "maxLength": 40 },
+                    "depuis": { "type": "string", "minLength": 1, "maxLength": 80 },
+                    "vers": { "type": "string", "minLength": 1, "maxLength": 80 },
+                    "depart": { "type": "string", "minLength": 20, "maxLength": 40 },
+                    "arrive": { "type": "string", "minLength": 20, "maxLength": 40 },
+                    "voie": { "type": ["string", "null"], "maxLength": 20 }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

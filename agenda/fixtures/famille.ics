@@ -28,6 +28,11 @@ DTSTART;TZID=Europe/Paris:20261020T093000
 DTEND;TZID=Europe/Paris:20261020T110000
 UID:ecole@fictif
 SUMMARY:Réunion d'école
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT0H30M0S
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=Europe/Paris:20261020T160000
@@ -35,6 +40,8 @@ DTEND;TZID=Europe/Paris:20261020T163000
 UID:dentiste@fictif
 SUMMARY:Dentiste de Léa
 LOCATION:Cabinet du Dr Martin\, Pacé
+DESCRIPTION:<b>Apporter</b> la carte vitale&nbsp\;et le carnet de santé.<br>C
+ ode de la porte : 4B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:This is an event reminder
@@ -76,6 +83,10 @@ DTEND:20261022T124500Z
 UID:visio@fictif
 SUMMARY:Visio avec les cousins d'Amérique pour préparer les fêtes de fin d
  'année et la grande réunion de famille
+DESCRIPTION:Ordre du jour : le menu de Noël.\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nRejoindre avec Goog
+ le Meet : https://meet.google.com/abc-defg-hij\n\nPour en savoir plus sur M
+ eet : https://support.google.com/a/users/answer/9282720\, ou appelez le num
+ éro indiqué.\n\nNe modifiez pas cette section de la description.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID="Romance Standard Time":20261023T090000
@@ -95,6 +106,7 @@ DTEND;TZID=Europe/Paris:20260905T110000
 RRULE:FREQ=WEEKLY
 UID:piano@fictif
 SUMMARY:Cours de piano
+DESCRIPTION:Apporter la partition.
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=Europe/Paris:20261024T110000
@@ -102,6 +114,7 @@ DTEND;TZID=Europe/Paris:20261024T120000
 RECURRENCE-ID;TZID=Europe/Paris:20261024T100000
 UID:piano@fictif
 SUMMARY:Cours de piano (décalé)
+DESCRIPTION:Salle 2\, au lieu de la salle 1.
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=Europe/Paris:20261019T090000
