@@ -199,6 +199,20 @@ test('recherche du réseau : par ville, sans autopartage ni trottinettes, hors d
     ["Vélib' Metropole", 'Vélibéo'],
   );
   assert.equal((await find(f, 'system', 'villo')).length, 1);
+  // Canada : àVélo par sa ville, BIXI par son nom ; trottinettes Bird et Lime, LocoMotion
+  // (partage entre voisins) et PBSC HQ (démonstration du fabricant) écartés.
+  assert.deepEqual(await find(f, 'system', 'quebec'), [
+    {
+      id: 'https://quebec.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json',
+      label: 'àVélo',
+      detail: 'Ville de Québec',
+    },
+  ]);
+  assert.deepEqual(
+    (await find(f, 'system', 'montreal')).map((r) => r.label),
+    ['BIXI Montréal'],
+  );
+  assert.deepEqual(await find(f, 'system', 'ottawa'), []);
   // Le catalogue (180 Ko) est partagé dix minutes entre les recherches.
   assert.ok(f.calls.every((call) => call.cacheMs === 600_000));
 });

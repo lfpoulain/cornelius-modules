@@ -4,11 +4,17 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
-### 2026-11-12 : Météo Canada choisi pour la météo
+### 2026-11-12 : module Jours fériés au Canada
+
+**Ajouté**
+
+- Module **Jours fériés au Canada** (`feries_ca`, 1.0.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : le prochain jour férié et les suivants de la province ou du territoire choisi, ou du calendrier fédéral si l’employeur le suit (case à cocher), d’après canada-holidays.ca (sans jeton). Date observée quand le jour férié est reporté ; au Québec, Vendredi saint ou lundi de Pâques au choix de l’employeur ; liste de l’année en cours et de la suivante dans les données de la réponse ; compte à rebours sur le miroir, recalculé à minuit.
+
+### 2026-11-12 : vélos en libre-service au Canada
 
 **Modifié**
 
-- **Météo Canada** (1.0.1) : la description de l’outil dit qu’il répond à toute question de météo du foyer et qu’il passe avant un autre outil météo sans source. Avec la Météo livrée avec Cornelius installée mais sans source, le modèle choisissait parfois celle-ci et répondait qu’aucun module n’était réglé.
+- **Vélos en libre-service** (1.2.0) : les réseaux du Canada sont proposés dans la recherche, avec ceux de France, de Belgique, de Suisse, du Luxembourg et de Monaco : àVélo (Québec), BIXI (Montréal), Accès Vélo (Saguenay), Bike Share Toronto, Mobi (Vancouver)… Les trottinettes et l’autopartage restent écartés. Par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)).
 
 ### 2026-11-11 : module Météo Canada
 
