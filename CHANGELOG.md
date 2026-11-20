@@ -9,6 +9,11 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 **Ajouté**
 
 - Module **Temps de trajet** (`tempsdetrajet`, 1.0.0) : l’heure d’arrivée estimée d’un trajet en voiture avec le trafic en direct, d’après l’API TomTom (clé gratuite, 20 000 itinéraires par mois). Départ et arrivée choisis par recherche d’adresse, points arrondis à environ 100 mètres, affichage permanent possible. Auteur : Bunchfr.
+### 2026-11-20 : module Immich
+
+**Ajouté**
+
+- Module **Immich** (`immich`, 1.0.0), par [Ewan Berthomieu](https://github.com/ewan-berthomieu) : souvenirs du jour (« ce jour-là ») avec repli sur une sélection aléatoire de la photothèque du foyer, et recherche sémantique de photos par mots-clés (`immich__search`), d’après une instance Immich auto-hébergée. Jours formatés dans le fuseau du foyer ; clé API Immich à déclarer.
 
 ### 2026-11-12 : module Jours fériés au Canada
 

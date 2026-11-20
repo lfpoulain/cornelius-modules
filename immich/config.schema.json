@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Configuration Immich",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["serverUrl"],
+  "properties": {
+    "serverUrl": {
+      "type": "string",
+      "title": "Adresse du serveur Immich",
+      "description": "Adresse HTTP ou HTTPS de votre serveur Immich (ex. http://192.168.1.50:2283).",
+      "minLength": 1,
+      "pattern": "^https?://[^\\s/$.?#].[^\\s]*$"
+    },
+    "userName": {
+      "type": "string",
+      "title": "Nom de la photothèque",
+      "description": "Nom affiché sur la carte et utilisé dans le résumé vocal (ex. Foyer)."
+    },
+    "defaultCount": {
+      "type": "integer",
+      "title": "Nombre de clichés par défaut",
+      "description": "Nombre maximal de souvenirs ou photos retournés par défaut (1 à 10).",
+      "minimum": 1,
+      "maximum": 10
+    }
+  }
+}
