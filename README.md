@@ -45,6 +45,10 @@ Cornelius livre ses modules de base avec lui. Ce dépôt accueille **tous les au
 | 🗑️ **Poubelles** | Quel bac sortir et quand, d’après le calendrier de la commune écrit en toutes lettres, encombrants compris ; rappel la veille au soir | aucun | [poubelles](poubelles/README.md) |
 | ⛽ **Prix des carburants** | Les prix d’une station-service, carburant principal d’abord ou celui demandé (« et le SP98 ? ») ; station trouvée par commune ou code postal | aucun | [carburants](carburants/README.md) |
 | 📰 **Titres de l’actualité** | Les premiers titres d’un journal, d’après son flux RSS ou Atom (franceinfo par défaut) | aucun | [actu](actu/README.md) |
+| 🚌 **Transports RTC** | Région de Québec : le prochain autobus du RTC vers une destination, la durée du trajet et le départ suivant, selon l’horaire ; d’après Transitous | aucun | [rtc](rtc/README.md) |
+| 🚇 **Transports STM** | Région de Montréal : métro, autobus, trains et REM (STM, RTL, exo), prochain départ, durée et suivant d’après Transitous ; avis de la STM et heure réelle des autobus avec une clé STM | clé STM facultative | [stm](stm/README.md) |
+| 🚌 **Transports STO** | Région de Gatineau : autobus et Rapibus de la STO, correspondances OC Transpo vers Ottawa ; prochain départ à l’heure réelle, durée et suivant, d’après Transitous | aucun | [sto](sto/README.md) |
+| 🚌 **Transports STS** | Région de Sherbrooke : le prochain autobus de la STS vers une destination, la durée du trajet et le départ suivant, selon l’horaire ; d’après Transitous | aucun | [sts](sts/README.md) |
 | 🏖️ **Vacances et jours fériés** | En vacances ou pas, prochaines vacances scolaires de la zone, prochain jour férié ; affichage permanent possible | aucun | [vacances](vacances/README.md) |
 | 🚲 **Vélos en libre-service** | Vélos (mécaniques, électriques) et places libres d’une station : Vélib’, V’Lille, Vélo’v, STAR, TBM, BIXI, àVélo… (norme GBFS) | aucun | [velos](velos/README.md) |
 | ▶️ **YouTube** | La dernière vidéo d’une chaîne (par défaut, Les Frères Poulain), avec ou sans les Shorts | aucun | [youtube](youtube/README.md) |

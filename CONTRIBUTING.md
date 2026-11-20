@@ -35,7 +35,7 @@ npm test
 
 ## Le code partagé
 
-Le dossier `_lib/` réunit ce que plusieurs modules utilisent ; son nom commence par « _ », Cornelius ne le charge donc pas comme un module. Il contient `flux.ts` (lecture des flux RSS et Atom, coupe des textes sur un mot, ancienneté « il y a 3 heures ») et `temps.ts` (jour civil, minuit suivant, heure murale dans le fuseau du foyer, changements d’heure compris). Un module l’importe par un chemin relatif (`../_lib/temps.js`) et reste sans autre dépendance. Une fonction n’y entre que lorsqu’au moins deux modules s’en servent ; avant, elle reste dans son module, comme `agenda/ics.ts`.
+Le dossier `_lib/` réunit ce que plusieurs modules utilisent ; son nom commence par « _ », Cornelius ne le charge donc pas comme un module. Il contient `flux.ts` (lecture des flux RSS et Atom, coupe des textes sur un mot, ancienneté « il y a 3 heures ») `temps.ts` (jour civil, minuit suivant, heure murale dans le fuseau du foyer, changements d’heure compris) et `transitous.ts` (trajets en transport en commun d’après Transitous : géocodage, itinéraire, passages à l’arrêt, phrase et carte, communs aux modules de transport du Québec). Un module l’importe par un chemin relatif (`../_lib/temps.js`) et reste sans autre dépendance. Une fonction n’y entre que lorsqu’au moins deux modules s’en servent ; avant, elle reste dans son module, comme `agenda/ics.ts`.
 
 ## Conventions
 
