@@ -21,14 +21,14 @@ Elle peut aussi se saisir dans **Mise en route → Clés et jetons**. Elle n’e
 
 ## Réglages d’une source
 
-Dans **Modules → Trajet → Ajouter une source** :
+Dans **Modules → Temps de trajet → Ajouter une source** :
 
-| Réglage | Effet | Par défaut |
-| --- | --- | --- |
-| Départ | Se choisit par **recherche d’adresse** : tapez une rue ou un lieu, puis **Chercher** et cliquez le résultat | Place de la Bourse, Bordeaux (exemple) |
-| Arrivée | Même recherche | Gare Saint-Jean, Bordeaux (exemple) |
+| Réglage | Effet                                                                                                       | Par défaut                             |
+| ------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| Départ  | Se choisit par **recherche d’adresse** : tapez une rue ou un lieu, puis **Chercher** et cliquez le résultat | Place de la Bourse, Bordeaux (exemple) |
+| Arrivée | Même recherche                                                                                              | Gare Saint-Jean, Bordeaux (exemple)    |
 
-Les valeurs par défaut sont des repères de démonstration : remplacez-les par vos adresses. La recherche demande au moins 3 lettres, ne cherche qu’en France et propose six résultats au plus. Une même saisie est gardée 10 minutes en mémoire, ce qui épargne le quota.
+Les valeurs par défaut sont des repères de démonstration : remplacez-les par vos adresses. La recherche demande au moins 3 lettres, ne cherche qu’en France et propose six résultats au plus. Une même saisie est gardée 10 minutes en mémoire, ce qui épargne le quota. Deux lieux à moins d’une centaine de mètres n’apparaissent qu’une fois dans les résultats : ils donneraient le même point arrondi, donc le même réglage.
 
 **Confidentialité.** L’adresse tapée part chez TomTom au moment de la recherche. Le point retenu est ensuite **arrondi à environ 100 mètres** avant d’être enregistré et envoyé pour calculer le trajet : TomTom reçoit un repère proche, pas la porte exacte. Un point saisi à la main avec plus de précision est arrondi de la même façon avant l’envoi. Pour ne pas lui donner non plus l’adresse tapée, cherchez une rue ou un lieu voisin plutôt que votre numéro.
 
@@ -50,10 +50,11 @@ Le miroir affiche quatre sources permanentes au plus. Avec la reconnaissance dé
 - Le départ est toujours « maintenant ». Une heure de départ fixe n’est pas gérée.
 - Le module ne change pas de destination tout seul selon l’heure : une source par destination, choisie à la voix ou affichée en permanence.
 - La recherche d’adresse utilise l’API de recherche de TomTom, en plus de l’API de calcul d’itinéraire. Son quota gratuit n’est pas vérifié ici.
+- **Quota en affichage permanent.** Une source affichée en permanence relit le trajet toutes les 5 minutes, soit jusqu’à environ 8 600 itinéraires par mois : trois sources de ce type dépassent le palier gratuit de 20 000. Réservez l’affichage permanent au trajet du matin, ou n’en activez qu’une ou deux.
 - Le palier gratuit annoncé sur la [page des tarifs TomTom](https://docs.tomtom.com/pricing) est de 20 000 requêtes par mois pour le Routing. Ses conditions d’usage et ce qui arrive au-delà ne figurent pas sur cette page : lisez les conditions de TomTom avant de l’utiliser.
 - Le retard affiché est l’écart entre la durée avec trafic et la durée sans trafic (`noTrafficTravelTimeInSeconds`), pour que « sans trafic + retard = durée » reste vrai sur la carte. À défaut de durée sans trafic, le champ `trafficDelayInSeconds` de TomTom (les incidents du moment) est utilisé ; sinon le retard n’est pas affiché.
 - En cas de panne, le dernier relevé est gardé et annoncé comme « dernier relevé connu ».
-- **Réponses de référence.** Les tests s’appuient sur deux réponses réelles de TomTom, enregistrées le 2 novembre 2026 sur des lieux publics : un itinéraire de la gare Saint-Jean vers le centre de Bordeaux (`fixtures/route.json`) et la recherche « gare saint-jean bordeaux » (`fixtures/search.json`). Si TomTom change la forme de ses réponses, le module affiche « Réponse illisible », ou ne propose aucun résultat, jamais une durée ni une adresse inventée.
+- **Réponses de référence.** Les tests s’appuient sur deux réponses réelles de TomTom, enregistrées en novembre 2026 sur des lieux publics : l’itinéraire de l’exemple, de la place de la Bourse à la gare Saint-Jean, demandé avec `routeRepresentation=summaryOnly` (`fixtures/route.json`, le 20 novembre), et la recherche « gare saint-jean bordeaux » (`fixtures/search.json`, le 2 novembre). Si TomTom change la forme de ses réponses, le module affiche « Réponse illisible », ou ne propose aucun résultat, jamais une durée ni une adresse inventée.
 
 ## Sécurité
 
@@ -65,6 +66,10 @@ Le miroir affiche quatre sources permanentes au plus. Avec la reconnaissance dé
 ## Outil vocal et affichage permanent
 
 L’outil s’appelle `tempsdetrajet__read`. Avec « Afficher en permanence sur le miroir », le miroir montre « Arrivée 8 h 42 » en grand, la durée en dessous, puis jusqu’à trois lignes : trafic, durée sans trafic et distance.
+
+## Auteur
+
+[Bunchfr](https://github.com/Bunchfr)
 
 ## Voir aussi
 
