@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Configuration Immich",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["serverUrl"],
+  "properties": {
+    "serverUrl": {
+      "type": "string",
+      "title": "URL du serveur Immich",
+      "description": "Adresse HTTP ou HTTPS de votre instance Immich (ex: http://192.168.1.50:2283).",
+      "minLength": 1
+    },
+    "userName": {
+      "type": "string",
+      "title": "Prénom du propriétaire",
+      "description": "Prénom affiché sur la carte et utilisé dans le résumé vocal."
+    },
+    "defaultCount": {
+      "type": "integer",
+      "title": "Nombre de clichés par défaut",
+      "description": "Nombre maximal de souvenirs ou photos retournés par défaut (1 à 10).",
+      "minimum": 1,
+      "maximum": 10
+    }
+  }
+}

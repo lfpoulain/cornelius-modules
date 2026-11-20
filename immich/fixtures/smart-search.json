@@ -1,0 +1,20 @@
+{
+  "assets": {
+    "total": 2,
+    "count": 2,
+    "items": [
+      {
+        "id": "33333333-3333-4333-8333-333333333333",
+        "originalFileName": "vacances_plage.jpg",
+        "fileCreatedAt": "2025-08-12T11:00:00.000Z",
+        "exifInfo": { "city": "Biarritz", "country": "France" }
+      },
+      {
+        "id": "44444444-4444-4444-8444-444444444444",
+        "originalFileName": "coucher_soleil.jpg",
+        "fileCreatedAt": "2025-08-13T19:45:00.000Z",
+        "exifInfo": { "city": null, "country": "France" }
+      }
+    ]
+  }
+}
