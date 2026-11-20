@@ -38,13 +38,15 @@ Cornelius livre ses modules de base avec lui. Ce dépôt accueille **tous les au
 | 💸 **Dépenses OpenAI** | Ce que coûte Cornelius chez OpenAI : mois, jour, 7 derniers jours et usages les plus chers, avec alerte de budget ; mois et jour du foyer | clé Admin OpenAI | [depenses_openai](depenses_openai/README.md) |
 | 📜 **Éphéméride** | Ce qui s’est passé un jour comme aujourd’hui, l’anniversaire le plus rond d’abord, d’après Wikipédia | aucun | [ephemeride](ephemeride/README.md) |
 | 🖼️ **Immich** | Les souvenirs du jour (« ce jour-là ») ou une sélection de la photothèque du foyer, et la recherche de photos par mots-clés (CLIP), d’après un serveur Immich | clé API Immich | [immich](immich/README.md) |
+| 🎉 **Jours fériés au Canada** | Le prochain jour férié et les suivants d’une province ou d’un territoire, ou des employeurs fédéraux ; compte à rebours sur le miroir ; d’après canada-holidays.ca | aucun | [feries_ca](feries_ca/README.md) |
+| 🍁 **Météo Canada** | Conditions actuelles, prévisions et avertissements d’Environnement Canada pour une ville canadienne, avec icônes (émojis sur un cœur qui ne les dessine pas) | aucun | [meteo_canada](meteo_canada/README.md) |
 | 🌦️ **Météo libre** | Les prévisions du jour et des jours suivants pour un lieu (latitude, longitude), d’après Open-Meteo : températures, temps, pluie, vent | aucun | [meteo_libre](meteo_libre/README.md) |
 | 🔔 **Perturbations** | Travaux, déviations et lignes interrompues du réseau suisse (SIRI-SX), filtrés sur les lignes et les arrêts du foyer | jeton gratuit | [perturbations](perturbations/README.md) |
 | 🗑️ **Poubelles** | Quel bac sortir et quand, d’après le calendrier de la commune écrit en toutes lettres, encombrants compris ; rappel la veille au soir | aucun | [poubelles](poubelles/README.md) |
 | ⛽ **Prix des carburants** | Les prix d’une station-service, carburant principal d’abord ou celui demandé (« et le SP98 ? ») ; station trouvée par commune ou code postal | aucun | [carburants](carburants/README.md) |
 | 📰 **Titres de l’actualité** | Les premiers titres d’un journal, d’après son flux RSS ou Atom (franceinfo par défaut) | aucun | [actu](actu/README.md) |
 | 🏖️ **Vacances et jours fériés** | En vacances ou pas, prochaines vacances scolaires de la zone, prochain jour férié ; affichage permanent possible | aucun | [vacances](vacances/README.md) |
-| 🚲 **Vélos en libre-service** | Vélos (mécaniques, électriques) et places libres d’une station : Vélib’, V’Lille, Vélo’v, STAR, TBM… (norme GBFS) | aucun | [velos](velos/README.md) |
+| 🚲 **Vélos en libre-service** | Vélos (mécaniques, électriques) et places libres d’une station : Vélib’, V’Lille, Vélo’v, STAR, TBM, BIXI, àVélo… (norme GBFS) | aucun | [velos](velos/README.md) |
 | ▶️ **YouTube** | La dernière vidéo d’une chaîne (par défaut, Les Frères Poulain), avec ou sans les Shorts | aucun | [youtube](youtube/README.md) |
 
 Livrés avec Cornelius, et donc absents d’ici : Heure, Météo, Transports, Ragator. Voir [Les modules](https://github.com/lfpoulain/Cornelius/blob/main/docs/modules/README.md) dans Cornelius.

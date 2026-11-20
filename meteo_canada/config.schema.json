@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MeteoCanadaConfig v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ville", "periodes"],
+  "properties": {
+    "ville": {
+      "title": "Ville",
+      "description": "Nom d’une ville d’Environnement Canada (« Québec », « Lévis »), suivi au besoin de la province pour un homonyme (« Windsor, ON »). Les coordonnées, si elles sont saisies, passent avant.",
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 80,
+      "examples": ["Québec"]
+    },
+    "latitude": {
+      "title": "Latitude (facultative)",
+      "description": "Au choix, à la place de la ville : la ville d’Environnement Canada la plus proche est retenue. En degrés décimaux.",
+      "type": ["number", "null"],
+      "minimum": 41.5,
+      "maximum": 84,
+      "examples": [46.81]
+    },
+    "longitude": {
+      "title": "Longitude (facultative)",
+      "description": "Au choix, avec la latitude. En degrés décimaux, négative : -71.21 pour Québec.",
+      "type": ["number", "null"],
+      "minimum": -141.1,
+      "maximum": -52.5,
+      "examples": [-71.21]
+    },
+    "periodes": {
+      "title": "Périodes de prévision",
+      "description": "Nombre de périodes affichées (« ce soir et cette nuit », « jeudi »…), de 1 à 5. Les deux premières sont dites à la voix.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "examples": [3]
+    }
+  }
+}
