@@ -18,13 +18,13 @@
       "maximum": 86400
     },
     "delaySeconds": {
-      "description": "Retard dû au trafic, ou null s'il est inconnu.",
+      "description": "Retard dû au trafic, ou null s’il est inconnu.",
       "type": ["integer", "null"],
       "minimum": 0,
       "maximum": 86400
     },
     "distanceMeters": {
-      "description": "Longueur de l'itinéraire le plus rapide.",
+      "description": "Longueur de l’itinéraire le plus rapide.",
       "type": "integer",
       "minimum": 0,
       "maximum": 2000000
