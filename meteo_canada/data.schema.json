@@ -3,7 +3,7 @@
   "title": "MeteoCanadaData v1",
   "type": "object",
   "additionalProperties": false,
-  "required": ["ville", "actuel", "periodes", "avertissements", "misAJour"],
+  "required": ["ville", "actuel", "periodes", "avertissements"],
   "$defs": {
     "icone": {
       "enum": [

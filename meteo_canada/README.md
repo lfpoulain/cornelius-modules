@@ -23,6 +23,10 @@ Le module Météo Canada donne la météo d’une ville canadienne d’après En
 
 La liste complète des villes pèse 28 Mo chez Environnement Canada : le module en garde une copie réduite (31 Ko) pour trouver une ville sans requête, puis ne lit que la page de cette ville (environ 35 Ko).
 
+## Avec les autres météos
+
+Cornelius a une météo intégrée (Météo-Concept, France seulement), et le module [Météo libre](../meteo_libre/README.md) couvre aussi le Canada. Depuis Cornelius 0.4.0, un module sans source n’est pas proposé au modèle : seule la météo qui a une source répond. Si deux météos ont une source, une question comme « quel temps fait-il ? » peut aller à l’une ou à l’autre : gardez celle que vous préférez, ou nommez la ville.
+
 ## Réglages d’une source
 
 Dans **Modules → Météo Canada → Ajouter une source** :

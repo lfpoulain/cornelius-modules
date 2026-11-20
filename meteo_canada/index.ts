@@ -63,13 +63,13 @@ type MeteoCanadaData = {
   } | null;
   periodes: Periode[];
   avertissements: string[];
-  misAJour: string;
+  misAJour?: string;
 };
 
 /** [identifiant, nom, latitude, longitude] des 844 pages de ville d'Environnement Canada. */
 const listeVilles = villes as [string, string, number, number][];
 const api = 'https://api.weather.gc.ca/collections/citypageweather-realtime/items';
-const headers = { 'User-Agent': 'Cornelius-module-meteo-canada/1.0', Accept: 'application/json' };
+const headers = { Accept: 'application/json' };
 const validateData = compile<MeteoCanadaData>(dataSchema);
 
 const plain = (text: string) =>
@@ -298,7 +298,7 @@ export function lirePage(page: unknown, maintenant: number): Omit<MeteoCanadaDat
     actuel,
     periodes,
     avertissements,
-    misAJour: String(p.lastUpdated ?? new Date(maintenant).toISOString()),
+    ...(p.lastUpdated ? { misAJour: String(p.lastUpdated) } : {}),
   };
 }
 
@@ -378,7 +378,9 @@ function present(
     const t =
       p.temperature === null
         ? ''
-        : `, ${p.classe === 'min' ? 'minimum' : 'maximum'} ${ditDegres(p.temperature)}`;
+        : p.classe === null
+          ? `, ${ditDegres(p.temperature)} degrés`
+          : `, ${p.classe === 'min' ? 'minimum' : 'maximum'} ${ditDegres(p.temperature)}`;
     oral.push(`${p.nom} : ${minuscule(p.resume)}${t}.`);
   }
   if (avertissements.length) oral.push(`${avertissements.join('. ')} en vigueur.`);
@@ -413,7 +415,7 @@ function present(
 const addon: AddonDefinition<MeteoCanadaConfig, MeteoCanadaData> = {
   id: 'meteo_canada',
   apiVersion: 1,
-  version: '1.0.1',
+  version: '1.0.0',
   minCoreVersion: '0.2.0',
   sourceLabel: 'Environnement Canada',
   display: {
@@ -446,10 +448,6 @@ const addon: AddonDefinition<MeteoCanadaConfig, MeteoCanadaData> = {
       description:
         'Lire la météo d’Environnement Canada pour la ville réglée : température, conditions, prévisions des prochaines périodes et avertissements en vigueur, et afficher la carte Météo Canada. ' +
         'Utiliser pour toute question de météo du foyer : « quelle est la météo ? », « quel temps fait-il ? », « et demain ? », « va-t-il neiger ce soir ? », « y a-t-il un avertissement météo ? ». ' +
-        // Plusieurs modules météo peuvent être installés sans source (la Météo livrée avec
-        // Cornelius, par exemple) : le modèle les choisissait et répondait qu'aucun module
-        // n'était réglé. Une source Météo Canada autorisée l'emporte sur un outil météo sans source.
-        'Si une source Météo Canada est autorisée, c’est cet outil qu’il faut appeler, et non un autre outil météo sans source. ' +
         'Dire les avertissements s’il y en a.',
       parameters: {
         type: 'object',
