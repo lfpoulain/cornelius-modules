@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FeriesCaData v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["province", "federal", "feries", "source"],
+  "properties": {
+    "province": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "federal": {
+      "type": "boolean"
+    },
+    "feries": {
+      "type": "array",
+      "maxItems": 60,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "observe", "nom", "federal"],
+        "properties": {
+          "date": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "observe": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "nom": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "federal": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "source": {
+      "type": ["string", "null"],
+      "maxLength": 300
+    }
+  }
+}
