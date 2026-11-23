@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { createTestModule } from '#cornelius/testing';
-import addon, { findFeeds, type CatalogueFeed } from './index.js';
+import addon, { feedLabel, findFeeds, migrateConfig, type CatalogueFeed } from './index.js';
 import catalogue from './catalogue.json' with { type: 'json' };
 
 // Flux fictifs, aux formats exacts de franceinfo (entités hexadécimales) et du Monde (CDATA).
@@ -152,14 +152,17 @@ test('catalogue : flux uniques, en https, valides pour le module ; anciennes sou
     assert.match(feed.url, /^https:\/\//u, feed.id);
     assert.ok(['national', 'régional'].includes(feed.niveau), feed.id);
     assert.equal(feed.region === null, feed.niveau === 'national', feed.id);
-    const result = findFeeds(feed.media).find((r) => r.id === feed.url);
-    if (result)
-      assert.equal(
-        f.runtime.validateConfig(addon.id, { url: result.id, feedLabel: result.label, count: 3 })
-          .ok,
-        true,
-        feed.id,
-      );
+    // Chaque flux se trouve par son journal et sa zone, et son réglage est valide.
+    const result = findFeeds(`${feed.media} ${feed.region ?? feed.pays}`).find(
+      (r) => r.id === feed.url,
+    );
+    assert.ok(result, feed.id);
+    assert.equal(result.label, feedLabel(feed), feed.id);
+    assert.equal(
+      f.runtime.validateConfig(addon.id, { url: result.id, feedLabel: result.label, count: 3 }).ok,
+      true,
+      feed.id,
+    );
   }
   // Une source réglée avant la recherche (adresse seule, sans libellé) reste valide.
   assert.equal(
@@ -167,4 +170,32 @@ test('catalogue : flux uniques, en https, valides pour le module ; anciennes sou
       .ok,
     true,
   );
+});
+
+test('réglages de la version 1 : adresse et nombre gardés, journal affiché', (t) => {
+  const f = setup(t);
+  // Adresse du catalogue : son libellé ; autre adresse : le nom d'hôte.
+  const connu = migrateConfig(1, { url: 'https://www.franceinfo.fr/titres.rss', count: 5 });
+  assert.deepEqual(connu, {
+    url: 'https://www.franceinfo.fr/titres.rss',
+    feedLabel: 'franceinfo · national',
+    count: 5,
+  });
+  const autre = migrateConfig(1, { url: 'https://www.exemple.fr/flux.xml', count: 2 });
+  assert.equal(autre.feedLabel, 'exemple.fr');
+  for (const config of [connu, autre])
+    assert.equal(f.runtime.validateConfig(addon.id, config).ok, true);
+  assert.equal(addon.configDefaults.feedLabel, 'franceinfo · national');
+  assert.throws(() => migrateConfig(3, connu), /inconnue/u);
+});
+
+test('Ottawa-Gatineau se trouve par l’Ontario ; fuseaux canadiens reconnus', () => {
+  assert.ok(findFeeds('Ontario').some((r) => r.label === 'Radio-Canada · Ottawa-Gatineau'));
+  for (const zone of [
+    'America/Swift_Current',
+    'America/Atikokan',
+    'America/Creston',
+    'America/Inuvik',
+  ])
+    assert.equal(findFeeds('national', zone)[0]!.label, 'Radio-Canada · national', zone);
 });

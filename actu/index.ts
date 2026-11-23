@@ -42,21 +42,52 @@ const plain = (text: string) =>
     .replace(/[^a-z0-9]+/gu, ' ')
     .trim();
 
+/** Fuseaux du Canada (base IANA, alias compris). */
+const canadianZones = new Set(
+  [
+    'Atikokan',
+    'Blanc-Sablon',
+    'Cambridge_Bay',
+    'Coral_Harbour',
+    'Creston',
+    'Dawson',
+    'Dawson_Creek',
+    'Edmonton',
+    'Fort_Nelson',
+    'Glace_Bay',
+    'Goose_Bay',
+    'Halifax',
+    'Inuvik',
+    'Iqaluit',
+    'Moncton',
+    'Montreal',
+    'Nipigon',
+    'Pangnirtung',
+    'Rainy_River',
+    'Rankin_Inlet',
+    'Regina',
+    'Resolute',
+    'St_Johns',
+    'Swift_Current',
+    'Thunder_Bay',
+    'Toronto',
+    'Vancouver',
+    'Whitehorse',
+    'Winnipeg',
+    'Yellowknife',
+  ].map((zone) => `America/${zone}`),
+);
+
 /** Pays du foyer, d'après son fuseau : ses flux passent en tête de la recherche. */
 function countryOf(timeZone: string | undefined): string | null {
   if (!timeZone) return null;
-  if (
-    /^America\/(Toronto|Montreal|Vancouver|Edmonton|Winnipeg|Regina|Halifax|Moncton|St_Johns|Whitehorse|Yellowknife|Iqaluit|Glace_Bay|Goose_Bay)$/u.test(
-      timeZone,
-    )
-  )
-    return 'Canada';
+  if (canadianZones.has(timeZone)) return 'Canada';
   if (timeZone === 'Europe/Paris') return 'France';
   if (timeZone === 'Europe/Zurich') return 'Suisse';
   return null;
 }
 
-const feedLabel = (feed: CatalogueFeed) => `${feed.media} · ${feed.region ?? 'national'}`;
+export const feedLabel = (feed: CatalogueFeed) => `${feed.media} · ${feed.region ?? 'national'}`;
 
 /** « Région de Québec » se compare à « Québec » ; « Mauricie–Centre-du-Québec » ne lui est pas égale. */
 const regionName = (region: string) => plain(region).replace(/^region de /u, '');
@@ -99,6 +130,31 @@ export function findFeeds(query: string | undefined, timeZone?: string): AddonSe
   }));
 }
 
+/**
+ * Réglages de la version 1 (adresse seule) : l'adresse et le nombre de titres sont gardés, et le
+ * libellé est rempli pour que le formulaire montre le journal choisi (le libellé du catalogue si
+ * l'adresse y figure, sinon le nom d'hôte). Sans réseau ni écriture.
+ */
+export function migrateConfig(fromVersion: number, config: unknown): ActuConfig {
+  if (fromVersion !== 1) throw new Error(`Version de réglages inconnue : ${fromVersion}.`);
+  const old = (config ?? {}) as Partial<ActuConfig>;
+  if (typeof old.url !== 'string') throw new Error('Réglages sans adresse de flux.');
+  const known = feeds.find((feed) => feed.url === old.url);
+  let label = old.feedLabel ?? (known ? feedLabel(known) : null);
+  if (!label) {
+    try {
+      label = new URL(old.url).hostname.replace(/^www\./u, '');
+    } catch {
+      label = null;
+    }
+  }
+  return {
+    url: old.url,
+    feedLabel: label,
+    count: typeof old.count === 'number' ? old.count : 3,
+  };
+}
+
 const addon: AddonDefinition<ActuConfig, ActuData> = {
   id: 'actu',
   apiVersion: 1,
@@ -114,13 +170,14 @@ const addon: AddonDefinition<ActuConfig, ActuData> = {
     example: { label: 'Les titres', ref: 'titres' },
     spoken: { head: 'les titres', repeats: ['titres', 'actu', 'actualite', 'infos'] },
   },
-  configVersion: 1,
+  configVersion: 2,
   configSchema,
   configDefaults: {
     url: 'https://www.franceinfo.fr/titres.rss',
-    feedLabel: 'franceinfo · France',
+    feedLabel: 'franceinfo · national',
     count: 3,
   },
+  configMigrate: migrateConfig,
   search: {
     fields: [
       {

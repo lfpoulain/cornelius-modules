@@ -30,9 +30,9 @@ Le champ **Journal et zone** cherche dans un catalogue de flux essayés, classé
 
 - La région demandée passe d’abord (« Québec » donne « Radio-Canada · Région de Québec »), puis les flux du pays du foyer, d’après son fuseau horaire, puis les flux nationaux.
 - Chaque résultat dit sa zone : « Canada › Québec › Région de Québec · régional ».
-- Une adresse collée dans le champ (`https://…`) est gardée telle quelle : tout flux RSS ou Atom reste possible.
+- Une adresse collée dans le champ (`https://…`) est gardée telle quelle : tout flux RSS ou Atom reste possible. La recherche du formulaire accepte 120 caractères au plus : une adresse plus longue ne passe pas par ce champ.
 - Pour les nouvelles du pays **et** celles de la région, ajoutez deux sources : « Les titres » (national) et « Près de chez nous » (régional).
-- Les sources réglées avant la version 1.2.0 (adresse seule) ne changent pas.
+- Les sources réglées avant la version 1.2.0 (adresse seule) gardent leur adresse et leur nombre de titres. À l’ouverture du formulaire, le champ montre leur journal : le libellé du catalogue si l’adresse y figure, sinon le nom du site.
 
 Le catalogue n’a que des flux vérifiés avec ce module (titres lus, date récente) le 2026-11-12. Écartés : Le Soleil (plus de flux), les flux Noovo d’Estrie, de Mauricie et du Saguenay (vides ou d’un seul titre vieux de plus d’un jour). Il reste volontairement court : des flux nationaux et régionaux essayés, sans viser l’exhaustivité.
 
@@ -45,6 +45,7 @@ Une source par journal ou par rubrique : « Les titres », « Le sport », « L�
 - Une ancienne adresse qui renvoie vers la nouvelle (`francetvinfo.fr` vers `franceinfo.fr`) est suivie, trois fois au plus, et jamais vers une adresse non chiffrée (`http://`). Au-delà, Cornelius demande l’adresse finale : l’ouvrir dans un navigateur montre où elle mène.
 - Un flux de plus de 512 Ko est coupé : seuls ses premiers titres sont lus, ce qui suffit.
 - Si le journal ne répond pas, Cornelius annonce les derniers titres connus comme tels.
+- Les flux restent soumis aux conditions de leurs éditeurs : ils sont lus pour un usage personnel, au foyer.
 
 ## Outil vocal et affichage permanent
 
