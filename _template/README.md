@@ -17,7 +17,7 @@ Le module [Nom affiché] [ce qu’il apporte, en une phrase]. Cette fiche s’ad
 
 ## Jeton requis
 
-[Supprimez cette section si le module n’en a pas besoin.]
+[Supprimez cette section si le module n’en a pas besoin. Si le module fonctionne sans le jeton (`optional: true` dans `secrets`), titrez-la « Jeton facultatif » et dites ce que le jeton ajoute.]
 
 Le module a besoin d’[un jeton Fournisseur] ([gratuit ou payant]), à demander sur [adresse de la page d’inscription, identique au champ `url` de `secrets`]. Ajoutez-le dans le fichier `.env` puis redémarrez Cornelius :
 

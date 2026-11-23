@@ -37,7 +37,8 @@ const addon: AddonDefinition<ParkingConfig, ParkingData> = {
   //   name  : nom passé à context.secret() ;
   //   env   : variable du fichier .env, en majuscules (CORNELIUS_…) ;
   //   label : nom du jeton précédé de « un » ou « une » ;
-  //   url   : page d'inscription (http ou https) ; note : précision courte, ex. « gratuit ».
+  //   url   : page d'inscription (http ou https) ; note : précision courte, ex. « gratuit » ;
+  //   optional : true si le module fonctionne sans (moins de fonctions), cœur 0.4.1 et plus.
   // La déclaration suffit : server/app.ts branche chaque jeton déclaré, saisi dans
   // l'administration ou lu dans le fichier .env. Rien d'autre à ajouter dans le cœur.
   // secrets: [
