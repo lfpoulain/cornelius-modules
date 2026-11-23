@@ -6,6 +6,7 @@ import {
   arretDit,
   collecteur,
   dans,
+  deDit,
   destinationFor,
   lieuDit,
   minutesDit,
@@ -122,6 +123,46 @@ test('destinations et adresses substituées refusées', () => {
   assert.equal(destinationFor({ favoris: [] }, 'Centre Bell').vers, 'à Centre Bell');
   assert.equal(surLaRue('1500 rue Berri', { street: 'Rue Serre', houseNumber: '1500' }), false);
   assert.equal(surLaRue('Saint-Denis et Mont-Royal', { name: 'Mont-Royal et Saint-Denis' }), true);
+  // « aux » avant « au », et une espace exigée : « Auteuil » reste entier.
+  assert.deepEqual(destinationFor({ favoris: [] }, 'aux Galeries d’Anjou'), {
+    vers: 'aux Galeries d’Anjou',
+    adresse: 'Galeries d’Anjou',
+  });
+  assert.deepEqual(destinationFor({ favoris: [] }, 'Auteuil'), {
+    vers: 'à Auteuil',
+    adresse: 'Auteuil',
+  });
+  // Écritures courantes au Québec face à celles d'OpenStreetMap.
+  assert.equal(surLaRue('1234 rue St-Denis', { street: 'Rue Saint-Denis' }), true);
+  assert.equal(surLaRue('800 rue Ste-Catherine', { street: 'Rue Sainte-Catherine' }), true);
+  assert.equal(surLaRue('100 1ère Avenue', { street: '1re Avenue' }), true);
+  assert.equal(surLaRue('1234 rue St-Denis', { street: 'Rue Saint-Hubert' }), false);
+});
+
+test('« du métro », « de l’autobus » : de contracté', () => {
+  assert.equal(deDit('le métro, ligne verte'), 'du métro, ligne verte');
+  assert.equal(deDit('le REM'), 'du REM');
+  assert.equal(deDit('l’autobus 7'), 'de l’autobus 7');
+  assert.equal(deDit('la ligne 4'), 'de la ligne 4');
+});
+
+test('ligne fréquente et longue marche : les passages trop tôt ne cachent pas le bon', async (t) => {
+  const f = essai(t, {
+    // Un passage toutes les 3 minutes, et 18 minutes de marche jusqu'à l'arrêt.
+    plan: plan({
+      duration: 2400,
+      endTime: minute(40),
+      legs: [{ mode: 'WALK', duration: 18 * 60 }, leg(18)],
+    }),
+    stoptimes: { stopTimes: Array.from({ length: 12 }, (_, i) => passage(i * 3)) },
+  });
+  const result = await f.invoke('trajet', { query: 'à l’Université' });
+  assert.equal(result.tool.status, 'succeeded', result.tool.error?.message);
+  assert.equal(
+    result.tool.summary,
+    'Pour te rendre à l’Université, le prochain départ est l’autobus 7 dans 18 minutes selon l’horaire, à l’arrêt Côte d’Abraham, à 18 minutes à pied. ' +
+      'La durée du trajet est de 40 minutes. Le suivant est prévu dans 21 minutes selon l’horaire.',
+  );
 });
 
 test('durée absente : aucune durée dite ni inventée ; 1 minute au singulier', async (t) => {

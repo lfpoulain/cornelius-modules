@@ -208,7 +208,8 @@ export function destinationFor(
   // Dit sans la ville ni le reste après la virgule : « au 4777 avenue Pierre-De Coubertin ».
   const dit = text.split(',')[0]!.trim() || text;
   // « au Centre Bell » se dit tel quel, mais se cherche sans la préposition.
-  const article = /^(?:à la|à l[’']|à|au|aux)\s*/iu.exec(text);
+  // « aux » avant « au », et une espace exigée (sauf après « l’ ») : « Auteuil » reste entier.
+  const article = /^(?:à la\s+|à l[’']\s*|aux\s+|au\s+|à\s+)/iu.exec(text);
   if (article && article[0].length < text.length)
     return { vers: dit, adresse: text.slice(article[0].length) };
   return { vers: /^chez\s/iu.test(dit) ? dit : `à ${dit}`, adresse: text };
@@ -292,16 +293,33 @@ const motsGeneriques = new Set(
 );
 
 /**
+ * Les mots d'un nom de rue, sous une seule écriture : « St-Denis » et « Saint-Denis », « Ste-Catherine »
+ * et « Sainte-Catherine », « 1ère Avenue » et « 1re Avenue » (écritures courantes au Québec,
+ * qu'OpenStreetMap écrit en entier ou selon l'usage officiel).
+ */
+function motsDeRue(texte: string): string[] {
+  return plain(texte)
+    .split(' ')
+    .filter(Boolean)
+    .map((w) =>
+      w === 'st'
+        ? 'saint'
+        : w === 'ste'
+          ? 'sainte'
+          : w.replace(/^(\d+)(?:ere|re)$/u, '$1re').replace(/^(\d+)(?:ieme|eme)$/u, '$1e'),
+    );
+}
+
+/**
  * Avec un numéro civique, le résultat doit être sur la rue demandée : sinon le géocodeur remplace
  * une adresse qu'il ne connaît pas par une voisine d'orthographe (« 1500 rue Berri » → « 1500 Rue
  * Serre », à l'autre bout de la ville), sans le dire.
  */
 export function surLaRue(adresse: string, resultat: Leg): boolean {
   const sansVille = adresse.split(',')[0]!;
-  const nom = ` ${plain(`${resultat.street ?? ''} ${resultat.name ?? ''}`)} `;
+  const nom = ` ${motsDeRue(`${resultat.street ?? ''} ${resultat.name ?? ''}`).join(' ')} `;
   const contient = (texte: string) =>
-    plain(texte)
-      .split(' ')
+    motsDeRue(texte)
       .filter((w) => w.length > 1 && !motsGeneriques.has(w))
       .every((w) => nom.includes(` ${w} `));
   const civique = /^\s*\d+[a-z]?\s+(.+)$/iu.exec(sansVille);
@@ -475,11 +493,15 @@ export function collecteur(reseau: Reseau) {
             (s) => (p.tripId && s.tripId === p.tripId) || Math.abs(s.prevu - p.prevu) < 60_000,
           ),
       );
+    // Seuls les passages qu'on peut encore attraper à pied comptent, avant de n'en garder que
+    // quelques-uns : à une ligne fréquente (métro aux 3 minutes) et loin de l'arrêt, les premiers
+    // passages lus seraient tous trop tôt.
+    const marche = ride.marcheMin * 60_000;
     const candidats = [...lus, ...duPlan]
       .filter(
         (s, i, tous) =>
           Number.isFinite(s.prevu) &&
-          s.prevu >= context.now() - 20 * 60_000 &&
+          s.prevu >= context.now() + marche - 20 * 60_000 &&
           tous.findIndex((t) => t.prevu === s.prevu && t.tripId === s.tripId) === i,
       )
       .sort((a, b) => a.prevu - b.prevu)
@@ -490,7 +512,7 @@ export function collecteur(reseau: Reseau) {
         const reel = reels[i];
         return reel === undefined ? { at: s.prevu, reel: s.reel } : { at: reel, reel: true };
       })
-      .filter((s) => s.at >= context.now() - 30_000)
+      .filter((s) => s.at >= context.now() + marche - 30_000)
       .sort((a, b) => a.at - b.at)
       .slice(0, 6)
       .map((s) => ({ heure: new Date(s.at).toISOString(), reel: s.reel }));
@@ -515,7 +537,9 @@ export function collecteur(reseau: Reseau) {
       throw new AddonCollectError('malformed', `Trajet ${reseau.sigle} incohérent.`);
     return {
       data,
-      empty: passages.length === 0,
+      // Un trajet trouvé reste une réponse utile, même sans passage qu'on peut encore attraper :
+      // la phrase le dit, avec l'arrêt, la marche et la durée.
+      empty: false,
       freshMs: 60_000,
       source: { provider: 'transitous', sourceId: `${data.ligne}:${ride.stopId}`.slice(0, 128) },
     };
@@ -526,6 +550,14 @@ const heure = (at: number, timeZone: string) =>
   new Intl.DateTimeFormat('fr-CA', { hour: 'numeric', minute: '2-digit', timeZone })
     .format(new Date(at))
     .replace(':', ' h ');
+
+/** « de » contracté : « du métro », « du REM », « des trains », « de l’autobus 7 ». */
+export const deDit = (vehicule: string) =>
+  /^le /u.test(vehicule)
+    ? `du ${vehicule.slice(3)}`
+    : /^les /u.test(vehicule)
+      ? `des ${vehicule.slice(4)}`
+      : `de ${vehicule}`;
 
 /** La carte et la phrase d'un module de transport. */
 export function presentation(reseau: Reseau) {
@@ -560,7 +592,7 @@ export function presentation(reseau: Reseau) {
           : '') +
         avis
       : // Aucun passage à attraper parmi ceux lus : rien n'est promis (ni « dans l'heure », ni plus tard).
-        `Pour te rendre ${data.vers}, je ne trouve pas de prochain départ de ${data.vehicule} ${lieu}.` +
+        `Pour te rendre ${data.vers}, je ne trouve pas de prochain départ ${deDit(data.vehicule)} ${lieu}.` +
         duree +
         avis;
     return {
