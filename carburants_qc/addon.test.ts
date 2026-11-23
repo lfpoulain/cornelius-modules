@@ -251,6 +251,8 @@ test('relevé sans date : pas daté de l’heure actuelle', async (t) => {
   const result = await f.invoke('read', {});
   assert.deepEqual(f.contract(result.outcome), []);
   assert.equal(result.tool.status, 'succeeded', result.tool.error?.message);
+  assert.ok(result.outcome.ok);
+  assert.equal((result.outcome.snapshot.data as { releve: string | null }).releve, null);
 });
 
 test('les coordonnées passent avant le code postal', async (t) => {
