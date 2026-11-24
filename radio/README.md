@@ -20,6 +20,8 @@ Le module a besoin d’une clé Radio, gratuite, une par adresse courriel, à ob
 CORNELIUS_RADIO_KEY=votre-clé
 ```
 
+Ensuite, la clé se gère dans **Clés et accès**, section **Modules**, carte **Clé Radio**, toujours visible : **Remplacer** pour en saisir une nouvelle, **Effacer** pour la supprimer, et le lien **Obtenir la clé sur radio.jokobee.com** pour en demander une à tout moment.
+
 Une clé sert à un seul Cornelius à la fois : utilisée par un autre Cornelius (une autre adresse) dans la dernière demi-heure, elle est refusée. Questions : radio@jokobee.com.
 
 ## Réglages d’une source
