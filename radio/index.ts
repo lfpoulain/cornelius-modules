@@ -32,6 +32,20 @@ export function paysDuFoyer(config: RadioConfig, timeZone: string): string | nul
   return (fuseaux as Record<string, string>)[timeZone] ?? null;
 }
 
+/**
+ * Le nom seul, si le modèle transmet la phrase entière : « joue CHOI Radio X » donne « CHOI Radio
+ * X », « mets-moi la radio CKOI » donne « CKOI ». « Radio X » reste « Radio X » : « la radio »,
+ * « le poste » ou « la station » ne sont retirés qu'avec leur article, après un verbe.
+ */
+export function nomDemande(query: string): string {
+  const texte = query.replace(/\s+/gu, ' ').trim();
+  const sansVerbe = texte.replace(
+    /^(?:fais(?:-moi)? jouer|joue(?:r|-moi)?|mets?(?:-moi)?|mettre|lance(?:r|-moi)?|écoute(?:r)?|ouvre|allume|démarre|passe(?:-moi)?)\s+(?:(?:la radio|le poste|la station|la chaîne)(?:\s+de)?\s+)?/iu,
+    '',
+  );
+  return (sansVerbe || texte).slice(0, 80);
+}
+
 /** Une réponse de l'API, vérifiée champ par champ avant d'être rendue au lecteur. */
 function poste(value: unknown): Poste {
   const p = (value as { poste?: Record<string, unknown> } | null)?.poste;
@@ -97,7 +111,7 @@ async function collect(context: Context) {
       data: { poste: null, pays },
       source: { provider: 'jokobee-radio', sourceId: 'radio' },
     };
-  const demande = context.query.replace(/\s+/gu, ' ').trim().slice(0, 80);
+  const demande = nomDemande(context.query);
   const genre = context.args?.genre === true;
   const trouve = await trouver(context, cle, genre ? { genre: demande } : { nom: demande });
   if (!trouve)
@@ -183,7 +197,9 @@ const addon: AddonDefinition<RadioConfig, RadioData> = {
       description:
         'Faire jouer un poste de radio sur le miroir, par son nom (« mets France Inter », « mets RTL »). query : le nom du poste. ' +
         'Pour un genre (« trouve un poste de jazz »), utiliser l’argument genre.',
-      parameters: parametres('Le nom du poste, ou le genre si genre est vrai.'),
+      parameters: parametres(
+        'Le nom du poste seulement, tel que dit, sans le verbe (« CHOI Radio X », « 98,5 », « France Inter ») ; ou le genre si genre est vrai.',
+      ),
       query: { maxLength: 80 },
       arguments: {
         genre: {

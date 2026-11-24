@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { createTestModule } from '#cornelius/testing';
-import addon, { api, paysDuFoyer } from './index.js';
+import addon, { api, nomDemande, paysDuFoyer } from './index.js';
 
 // Réponses simulées, au format exact de l'API de l'annuaire (un seul poste par demande).
 const franceInter = {
@@ -140,4 +140,14 @@ test('réglages : « selon le fuseau » par défaut et chaque pays de la liste s
     assert.equal(f.runtime.validateConfig(addon.id, { pays }).ok, true, pays);
   assert.equal(f.runtime.validateConfig(addon.id, addon.configDefaults).ok, true);
   assert.equal(f.runtime.validateConfig(addon.id, { pays: 'XX' }).ok, false);
+});
+
+test('le nom seul part à l’annuaire, même si la phrase entière arrive', () => {
+  assert.equal(nomDemande('joue CHOI Radio X'), 'CHOI Radio X');
+  assert.equal(nomDemande('Mets-moi la radio CKOI'), 'CKOI');
+  assert.equal(nomDemande('fais jouer le poste de France Inter'), 'France Inter');
+  assert.equal(nomDemande('écoute la station 98,5'), '98,5');
+  assert.equal(nomDemande('  Radio  X '), 'Radio X');
+  assert.equal(nomDemande('Rythme FM'), 'Rythme FM');
+  assert.equal(nomDemande('joue'), 'joue');
 });
