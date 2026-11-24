@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-24 : module Radio
+
+**Ajouté**
+
+- Module **Radio** (`radio`, 1.0.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : fait jouer un poste de radio sur le miroir par l’outil de lecture (Cornelius 0.4.1), par son nom (« mets France Inter ») ou au hasard dans un genre (« trouve un poste de jazz »), d’après l’annuaire de radio.jokobee.com. Un seul poste par demande, flux audio direct en https vérifié et logo ; pays du foyer d’abord. Clé gratuite par adresse courriel (`CORNELIUS_RADIO_KEY`).
+
 ### 2026-11-20 : transports au Québec
 
 **Ajouté**

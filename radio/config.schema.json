@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RadioConfig v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "pays": {
+      "title": "Pays cherché d’abord",
+      "description": "Code du pays à deux lettres (« FR », « CA », « BE »…). Vide : celui du fuseau horaire du foyer. Source : radio.jokobee.com · radio@jokobee.com.",
+      "type": ["string", "null"],
+      "pattern": "^[A-Z]{2}$"
+    }
+  }
+}
