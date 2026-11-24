@@ -87,7 +87,7 @@ test('poste introuvable, clé refusée ou utilisée ailleurs, limite : des messa
     [
       { status: 422, body: { erreur: 'format' } },
       'not_found',
-      /format que Cornelius ne sait pas encore lire/u,
+      /format de diffusion de ce poste n’est pas pris en charge pour le moment/u,
     ],
   ] as const;
   for (const [reply, code, message] of cas) {

@@ -87,7 +87,7 @@ async function trouver(context: Context, cle: string, demande: { nom?: string; g
   if (body?.erreur === 'format')
     throw new AddonCollectError(
       'not_found',
-      'Ce poste diffuse dans un format que Cornelius ne sait pas encore lire (HLS ou flux non sécurisé).',
+      'Le format de diffusion de ce poste n’est pas pris en charge pour le moment.',
     );
   if (response.status === 404) return null;
   if (response.status === 401)
