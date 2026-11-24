@@ -6,9 +6,19 @@
   "properties": {
     "pays": {
       "title": "Pays cherché d’abord",
-      "description": "Code du pays à deux lettres (« FR », « CA », « BE »…). Vide : celui du fuseau horaire du foyer. Source : radio.jokobee.com · radio@jokobee.com.",
-      "type": ["string", "null"],
-      "pattern": "^[A-Z]{2}$"
+      "description": "Les postes de ce pays passent en premier ; ailleurs ensuite. Source : radio.jokobee.com · radio@jokobee.com.",
+      "type": "string",
+      "oneOf": [
+        { "const": "", "title": "Selon le fuseau horaire du foyer" },
+        { "const": "CA", "title": "Canada" },
+        { "const": "FR", "title": "France" },
+        { "const": "BE", "title": "Belgique" },
+        { "const": "CH", "title": "Suisse" },
+        { "const": "LU", "title": "Luxembourg" },
+        { "const": "MC", "title": "Monaco" },
+        { "const": "US", "title": "États-Unis" },
+        { "const": "GB", "title": "Royaume-Uni" }
+      ]
     }
   }
 }

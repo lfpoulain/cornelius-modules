@@ -26,9 +26,9 @@ Une clé sert à un seul Cornelius à la fois : utilisée par un autre Cornelius
 
 Dans **Modules → Radio → Ajouter une source** :
 
-| Réglage              | Effet                                                 | Par défaut                                |
-| -------------------- | ----------------------------------------------------- | ----------------------------------------- |
-| Pays cherché d’abord | Code du pays à deux lettres (« FR », « CA », « BE »…) | vide : le pays du fuseau horaire du foyer |
+| Réglage              | Effet                                                                                                                                       | Par défaut                       |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| Pays cherché d’abord | Les postes de ce pays passent en premier (Canada, France, Belgique, Suisse, Luxembourg, Monaco, États-Unis, Royaume-Uni) ; ailleurs ensuite | Selon le fuseau horaire du foyer |
 
 ## Limites
 

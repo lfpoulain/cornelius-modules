@@ -14,7 +14,7 @@ import {
 import configSchema from './config.schema.json' with { type: 'json' };
 import dataSchema from './data.schema.json' with { type: 'json' };
 
-type RadioConfig = { pays?: string | null };
+type RadioConfig = { pays?: string };
 type RadioData = { poste: string | null; pays: string | null };
 type Poste = { nom: string; flux: string; logo: string | null; pays: string | null };
 type Context = AddonCollectContext<RadioConfig>;
@@ -210,7 +210,7 @@ const addon: AddonDefinition<RadioConfig, RadioData> = {
   ],
   configVersion: 1,
   configSchema,
-  configDefaults: { pays: null },
+  configDefaults: { pays: '' },
   dataVersion: 1,
   dataSchema,
   freshMs: 60_000,

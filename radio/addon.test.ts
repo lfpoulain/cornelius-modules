@@ -125,7 +125,16 @@ test('Tester (lecture ordinaire) : aucune demande à l’annuaire, la limite est
 test('pays cherché d’abord : réglage, sinon fuseau du foyer', () => {
   assert.equal(paysDuFoyer({ pays: 'BE' }, 'Europe/Paris'), 'BE');
   assert.equal(paysDuFoyer({}, 'America/Toronto'), 'CA');
+  assert.equal(paysDuFoyer({ pays: '' }, 'Europe/Paris'), 'FR');
   assert.equal(paysDuFoyer({}, 'Canada/Eastern'), 'CA');
   assert.equal(paysDuFoyer({}, 'Europe/Zurich'), 'CH');
   assert.equal(paysDuFoyer({}, 'Asia/Tokyo'), null);
+});
+
+test('réglages : « selon le fuseau » par défaut et chaque pays de la liste sont valides', (t) => {
+  const f = setup(t);
+  for (const pays of ['', 'CA', 'FR', 'BE', 'US'])
+    assert.equal(f.runtime.validateConfig(addon.id, { pays }).ok, true, pays);
+  assert.equal(f.runtime.validateConfig(addon.id, addon.configDefaults).ok, true);
+  assert.equal(f.runtime.validateConfig(addon.id, { pays: 'XX' }).ok, false);
 });
