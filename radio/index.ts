@@ -82,6 +82,13 @@ async function trouver(context: Context, cle: string, demande: { nom?: string; g
       throw new AddonCollectError('malformed', 'Réponse illisible de l’annuaire des postes.');
   }
   if (response.status === 200) return poste(body);
+  // « format » : le poste est reconnu et joue, mais seulement en HLS ou en http, que le lecteur
+  // de Cornelius ne lit pas. Ce n'est pas une panne : réessayer plus tard n'y changerait rien.
+  if (body?.erreur === 'format')
+    throw new AddonCollectError(
+      'not_found',
+      'Ce poste diffuse dans un format que Cornelius ne sait pas encore lire (HLS ou flux non sécurisé).',
+    );
   if (response.status === 404) return null;
   if (response.status === 401)
     throw new AddonCollectError(

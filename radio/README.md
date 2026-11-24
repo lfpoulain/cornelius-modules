@@ -36,7 +36,7 @@ Dans **Modules → Radio → Ajouter une source** :
 
 - **Flux en https seulement, sans HLS** : le lecteur de Cornelius ne joue que des flux audio directs (MP3, AAC, Ogg, Opus) en https. Un poste qui ne diffuse qu’en HLS (Radio-Canada, ICI Musique, par exemple) ou qu’en http n’est pas proposé : « aucun poste disponible ».
 - 100 demandes par clé et par jour, et des limites par adresse : largement assez pour un foyer.
-- Un poste reconnu dont le flux ne répond pas en ce moment : « Ce poste ne répond pas pour l’instant » ; un nom inconnu : « Aucun poste … disponible ».
+- Un poste reconnu dont le flux ne répond pas en ce moment : « Ce poste ne répond pas pour l’instant » ; un poste qui ne diffuse qu’en HLS ou en http : « Ce poste diffuse dans un format que Cornelius ne sait pas encore lire » ; un nom inconnu : « Aucun poste … disponible ».
 - Une réponse peut prendre quelques secondes : l’annuaire vérifie que le poste joue vraiment avant de répondre.
 - Le miroir seulement : les satellites ne jouent pas encore la radio.
 - **Conditions d’utilisation** : l’annuaire des postes est réservé à l’usage personnel avec Cornelius. Sa copie, son aspiration ou sa revente sont interdites, et une clé peut être coupée en cas d’abus. Les flux restent soumis aux conditions de leurs diffuseurs.
