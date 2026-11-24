@@ -4,7 +4,7 @@ Ce tutoriel construit pas à pas, dans ce dépôt, un module d’informations à
 
 Un module d’informations lit une source, garde des données propres et fournit la réponse orale et la carte. Pour déclencher une action (ouvrir un portail), utilisez plutôt une [commande HTTP](https://github.com/lfpoulain/Cornelius/blob/main/docs/modules/README.md#les-commandes-http) de Cornelius : aucun code n’est nécessaire.
 
-Ce tutoriel construit une lecture ordinaire, la même à chaque appel et gardée en cache. Pour un module qui répond à une question libre (chercher dans des documents, interroger un service), suivez les mêmes étapes, puis déclarez un [outil à la demande](https://github.com/lfpoulain/Cornelius/blob/main/docs/modules/reference.md#loutil-à-la-demande) : `collect` reçoit alors la question dans `context.query`. Le module livré [Ragator](https://github.com/lfpoulain/Cornelius/blob/main/addons/ragator/index.ts) en est l’exemple.
+Ce tutoriel construit une lecture ordinaire, la même à chaque appel et gardée en cache. Pour un module qui répond à une question libre (chercher dans des documents, interroger un service), suivez les mêmes étapes, puis déclarez un [outil à la demande](https://github.com/lfpoulain/Cornelius/blob/main/docs/modules/reference.md#loutil-à-la-demande) : `collect` reçoit alors la question dans `context.query`. Le module livré [Ragator](https://github.com/lfpoulain/Cornelius/blob/main/addons/ragator/index.ts) en est l’exemple. Pour faire écouter une radio, un podcast ou un son sur le miroir, déclarez un [outil de lecture](https://github.com/lfpoulain/Cornelius/blob/main/docs/modules/reference.md#loutil-de-lecture) (`play: true`, Cornelius 0.4.1) : `collect` rend alors une demande `playback` (flux `https://` direct, titre, logo), et Cornelius la joue, l’affiche et la pilote (arrêter, reprendre, volume).
 
 ## Avant de commencer
 
@@ -26,14 +26,14 @@ Copy-Item -Recurse _template parking
 
 Vous obtenez :
 
-| Fichier | Rôle |
-| --- | --- |
-| `index.ts` | La définition du module, exportée par défaut |
-| `config.schema.json` | Les réglages d’une source |
-| `data.schema.json` | Les données gardées après chaque lecture |
+| Fichier                      | Rôle                                               |
+| ---------------------------- | -------------------------------------------------- |
+| `index.ts`                   | La définition du module, exportée par défaut       |
+| `config.schema.json`         | Les réglages d’une source                          |
+| `data.schema.json`           | Les données gardées après chaque lecture           |
 | `fixtures/availability.json` | Une réponse fictive du fournisseur, pour les tests |
-| `addon.test.ts` | Les tests, lancés par `npm test` |
-| `README.md` | La fiche du module, à remplir |
+| `addon.test.ts`              | Les tests, lancés par `npm test`                   |
+| `README.md`                  | La fiche du module, à remplir                      |
 
 ## 2. Choisir l’identifiant
 
@@ -311,7 +311,8 @@ npm run format
 - [ ] Dossier et `id` identiques, différents des modules livrés ; le module se charge sans « Module non chargé ».
 - [ ] Imports par `#cornelius/addons`, `#cornelius/validation` et `#cornelius/testing`, aucun chemin vers `../cornelius/`.
 - [ ] `display` rempli : nom, description, icône de la liste, exemple, phrase vocale.
-- [ ] `minCoreVersion: '0.2.0'` dès qu’un ajout de 0.2.0 est utilisé.
+- [ ] `minCoreVersion: '0.2.0'` dès qu’un ajout de 0.2.0 est utilisé, ou la version de l’ajout le plus récent (`'0.4.1'` pour un jeton `optional` ou un outil de lecture).
+- [ ] Outil de lecture : flux `https://` direct (ni m3u, ni pls, ni HLS), `kind` juste (`live` ou `file`), et la fiche dit vers quel service partent les demandes.
 - [ ] Fournisseur fictif, adresse et textes du gabarit remplacés.
 - [ ] Champs de réglage avec `title`, `description` et bornes ; choix en liste déroulante ; valeurs par défaut vérifiées ; `configMigrate` si la forme a changé.
 - [ ] Collecte avec `context.http` et `context.signal`, réponse validée, erreurs explicites ; `cacheMs` pour un fichier commun ; `truncated` dit.
@@ -337,7 +338,7 @@ sans garder son fournisseur fictif. Inspire-toi du module le plus proche de ce d
 Source réelle : [documentation de l'API, adresses autorisées, format des réponses].
 Réglages : [champs, titres, descriptions, choix en liste, listes, valeurs par défaut].
 Jeton : [nom de la variable .env, jamais sa valeur ; la déclaration dans secrets suffit].
-Lecture : [ordinaire avec read, arguments typés, ou outil à la demande avec query].
+Lecture : [ordinaire avec read, arguments typés, outil à la demande avec query, ou outil de lecture avec play].
 Fraîcheur : [durée, et traitement d'une donnée déjà ancienne].
 Carte et oral : [faits prioritaires, comportement sans donnée, rien à signaler].
 Affichage permanent : [oui ou non ; metric ou list ; valeur et lignes ; refreshAt].

@@ -56,6 +56,9 @@ const addon: AddonDefinition<ParkingConfig, ParkingData> = {
   dataVersion: 1,
   dataSchema,
   freshMs: 60_000,
+  // Un outil peut aussi être un outil à la demande (query), avoir des arguments typés, ou
+  // faire écouter un flux sur le miroir (play: true, cœur 0.4.1 : collect rend alors
+  // playback). Voir « L'outil de lecture » dans docs/modules/reference.md de Cornelius.
   tools: [
     {
       name: 'read',
