@@ -42,7 +42,7 @@ const plain = (text: string) =>
     .replace(/[^a-z0-9]+/gu, ' ')
     .trim();
 
-/** Fuseaux du Canada (base IANA, alias compris). */
+/** Fuseaux du Canada (base IANA), avec les anciens alias America/* et Canada/*. */
 const canadianZones = new Set(
   [
     'Atikokan',
@@ -75,11 +75,24 @@ const canadianZones = new Set(
     'Whitehorse',
     'Winnipeg',
     'Yellowknife',
-  ].map((zone) => `America/${zone}`),
+  ]
+    .map((zone) => `America/${zone}`)
+    .concat(
+      [
+        'Atlantic',
+        'Central',
+        'Eastern',
+        'Mountain',
+        'Newfoundland',
+        'Pacific',
+        'Saskatchewan',
+        'Yukon',
+      ].map((zone) => `Canada/${zone}`),
+    ),
 );
 
 /** Pays du foyer, d'après son fuseau : ses flux passent en tête de la recherche. */
-function countryOf(timeZone: string | undefined): string | null {
+export function countryOf(timeZone: string | undefined): string | null {
   if (!timeZone) return null;
   if (canadianZones.has(timeZone)) return 'Canada';
   if (timeZone === 'Europe/Paris') return 'France';
@@ -143,7 +156,7 @@ export function migrateConfig(fromVersion: number, config: unknown): ActuConfig 
   let label = old.feedLabel ?? (known ? feedLabel(known) : null);
   if (!label) {
     try {
-      label = new URL(old.url).hostname.replace(/^www\./u, '');
+      label = new URL(old.url).hostname.replace(/^www\./u, '').slice(0, 160);
     } catch {
       label = null;
     }
