@@ -245,7 +245,7 @@ function uneFaute(a: string, b: string): boolean {
 /**
  * Pertinence d'une station pour une recherche, de 0 à 1 : la part des mots cherchés qu'on y
  * retrouve, pondérée. Un mot correspond s'il commence un mot de la station (« sainte » pour
- * « Sainte-Foy »), ou à une lettre près pour les mots de cinq lettres ou plus (« Lorier »).
+ * « Sainte-Foy »), ou à une lettre près pour les mots de cinq lettres ou plus (« Laurer » pour « Laurier »).
  * Le numéro civique doit être exact et pèse triple ; le code postal (« G1V », « 2L9 » ou « G1V2L9 »)
  * pèse double. Ainsi l'ordre des mots, la bannière absente, « QC » ou une faute de frappe ne font
  * plus échouer la recherche : les stations les plus proches de ce qui est tapé viennent en tête.
