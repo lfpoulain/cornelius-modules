@@ -92,6 +92,9 @@ async function trouver(context: Context, cle: string, demande: { nom?: string; g
     );
   if (response.status === 429)
     throw new AddonCollectError('quota', 'Limite de demandes atteinte pour aujourd’hui.', true);
+  // 503 « flux » : le poste est reconnu, mais son flux ne répond pas en ce moment.
+  if (response.status === 503 && body?.erreur === 'flux')
+    throw new AddonCollectError('unavailable', 'Ce poste ne répond pas pour l’instant.', true);
   if (response.status >= 500)
     throw new AddonCollectError('unavailable', 'L’annuaire des postes est indisponible.', true);
   throw new AddonCollectError('upstream', `Réponse HTTP ${response.status} inattendue.`);

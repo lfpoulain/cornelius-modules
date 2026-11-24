@@ -83,6 +83,7 @@ test('poste introuvable, clé refusée ou utilisée ailleurs, limite : des messa
     [{ status: 401, body: { erreur: 'ailleurs' } }, 'auth', /autre Cornelius/u],
     [{ status: 429, body: { erreur: 'limite' } }, 'quota', /Limite/u],
     [{ status: 503, body: { erreur: 'indisponible' } }, 'unavailable', /indisponible/u],
+    [{ status: 503, body: { erreur: 'flux' } }, 'unavailable', /ne répond pas pour l’instant/u],
   ] as const;
   for (const [reply, code, message] of cas) {
     const f = setup(t, reply);
