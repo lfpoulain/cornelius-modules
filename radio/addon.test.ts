@@ -156,4 +156,9 @@ test('le nom seul part à l’annuaire, même si la phrase entière arrive', () 
   assert.equal(nomDemande('  Radio  X '), 'Radio X');
   assert.equal(nomDemande('Rythme FM'), 'Rythme FM');
   assert.equal(nomDemande('joue'), 'joue');
+  // Un nom épelé est recollé ; une lettre seule (« Radio X ») ne bouge pas.
+  assert.equal(nomDemande('joue W E N D A T FM'), 'WENDAT FM');
+  assert.equal(nomDemande('mets C.H.O.I. Radio X'), 'CHOI Radio X');
+  assert.equal(nomDemande('Radio X'), 'Radio X');
+  assert.equal(nomDemande('98,5 FM'), '98,5 FM');
 });

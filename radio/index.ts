@@ -35,10 +35,17 @@ export function paysDuFoyer(config: RadioConfig, timeZone: string): string | nul
 /**
  * Le nom seul, si le modèle transmet la phrase entière : « joue CHOI Radio X » donne « CHOI Radio
  * X », « mets-moi la radio CKOI » donne « CKOI ». « Radio X » reste « Radio X » : « la radio »,
- * « le poste » ou « la station » ne sont retirés qu'avec leur article, après un verbe.
+ * « le poste » ou « la station » ne sont retirés qu'avec leur article, après un verbe. Un nom épelé
+ * lettre par lettre (« W E N D A T », « C.H.O.I ») est recollé (« WENDAT », « CHOI ») : trois
+ * lettres isolées au moins, pour laisser « Radio X » intact.
  */
 export function nomDemande(query: string): string {
-  const texte = query.replace(/\s+/gu, ' ').trim();
+  const texte = query
+    .replace(/\s+/gu, ' ')
+    .trim()
+    .replace(/(?<![\p{L}\p{N}])(?:\p{L}[.\s]\s*){2,}\p{L}(?![\p{L}\p{N}])\.?/gu, (lettres) =>
+      lettres.replace(/[.\s]/gu, ''),
+    );
   const sansVerbe = texte.replace(
     /^(?:fais(?:-moi)? jouer|joue(?:r|-moi)?|mets?(?:-moi)?|mettre|lance(?:r|-moi)?|écoute(?:r)?|ouvre|allume|démarre|passe(?:-moi)?)\s+(?:(?:la radio|le poste|la station|la chaîne)(?:\s+de)?\s+)?/iu,
     '',
