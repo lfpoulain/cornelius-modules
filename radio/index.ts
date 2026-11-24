@@ -13,6 +13,8 @@ import {
 } from '#cornelius/addons';
 import configSchema from './config.schema.json' with { type: 'json' };
 import dataSchema from './data.schema.json' with { type: 'json' };
+// Fuseau horaire → pays (table IANA zone.tab et ses anciens noms) : scripts/fuseaux-radio.mjs.
+import fuseaux from './fuseaux.json' with { type: 'json' };
 
 type RadioConfig = { pays?: string };
 type RadioData = { poste: string | null; pays: string | null };
@@ -24,49 +26,10 @@ export const api = 'https://radio.jokobee.com/api/cornelius/v1/poste';
 /** Page où chaque personne obtient sa clé gratuite, avec son adresse courriel. */
 export const pageCle = 'https://radio.jokobee.com/cornelius';
 
-/** Fuseaux des pays proposés en premier, d'après le fuseau du foyer. */
-const paysDuFuseau: Record<string, string> = {
-  'Europe/Paris': 'FR',
-  'Europe/Brussels': 'BE',
-  'Europe/Zurich': 'CH',
-  'Europe/Luxembourg': 'LU',
-  'Europe/Monaco': 'MC',
-};
-const fuseauxCanadiens = new Set(
-  [
-    'Atikokan',
-    'Blanc-Sablon',
-    'Cambridge_Bay',
-    'Creston',
-    'Dawson',
-    'Dawson_Creek',
-    'Edmonton',
-    'Fort_Nelson',
-    'Glace_Bay',
-    'Goose_Bay',
-    'Halifax',
-    'Inuvik',
-    'Iqaluit',
-    'Moncton',
-    'Montreal',
-    'Rankin_Inlet',
-    'Regina',
-    'Resolute',
-    'St_Johns',
-    'Swift_Current',
-    'Toronto',
-    'Vancouver',
-    'Whitehorse',
-    'Winnipeg',
-    'Yellowknife',
-  ].map((zone) => `America/${zone}`),
-);
-
-/** Pays où chercher d'abord : le réglage de la source, sinon celui du fuseau du foyer. */
+/** Pays cherché d'abord : le réglage de la source, sinon celui du fuseau horaire du foyer. */
 export function paysDuFoyer(config: RadioConfig, timeZone: string): string | null {
   if (config.pays) return config.pays;
-  if (fuseauxCanadiens.has(timeZone) || timeZone.startsWith('Canada/')) return 'CA';
-  return paysDuFuseau[timeZone] ?? null;
+  return (fuseaux as Record<string, string>)[timeZone] ?? null;
 }
 
 /** Une réponse de l'API, vérifiée champ par champ avant d'être rendue au lecteur. */
@@ -193,7 +156,7 @@ const addon: AddonDefinition<RadioConfig, RadioData> = {
     name: 'Radio',
     // 160 caractères au plus (contrat des modules).
     description:
-      'Fait jouer un poste de radio sur le miroir, par son nom ou au hasard dans un genre. Source : radio.jokobee.com · radio@jokobee.com.',
+      'Fait jouer un poste de radio sur le miroir, par son nom ou au hasard dans un genre.\u000ASource : radio.jokobee.com',
     icon: 'music',
     keywords: ['radio', 'poste', 'station', 'musique', 'écouter', 'joue', 'mets'],
     example: { label: 'Radio', ref: 'radio' },
