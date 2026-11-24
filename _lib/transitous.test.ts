@@ -165,6 +165,36 @@ test('ligne fréquente et longue marche : les passages trop tôt ne cachent pas 
   );
 });
 
+test('ligne très fréquente : prochain et suivant justes, quelle que soit la marche', async (t) => {
+  // Passage toutes les 1,5 ou 2 minutes (depuis 20 minutes avant maintenant), et 18 ou 25
+  // minutes de marche : les premiers passages de la fenêtre sont tous avant l'arrivée à pied.
+  for (const [intervalle, marche] of [
+    [1.5, 18],
+    [2, 25],
+    [2, 18],
+  ] as const) {
+    const passages = Array.from({ length: 50 }, (_, i) => -20 + i * intervalle);
+    // Un passage 30 secondes avant l'arrivée à pied compte encore (marge de la collecte).
+    const depart = passages.find((p) => p >= marche - 0.5)!;
+    const f = essai(t, {
+      plan: plan({
+        duration: 3000,
+        endTime: minute(60),
+        legs: [{ mode: 'WALK', duration: marche * 60 }, leg(depart)],
+      }),
+      stoptimes: { stopTimes: passages.map(passage) },
+    });
+    const result = await f.invoke('trajet', { query: 'à l’Université' });
+    const cas = `toutes les ${intervalle} min, ${marche} min de marche`;
+    assert.match(
+      result.tool.summary ?? '',
+      new RegExp(`le prochain départ est l’autobus 7 dans ${Math.round(depart)} minutes`, 'u'),
+      cas,
+    );
+    assert.match(result.tool.summary ?? '', /Le suivant est prévu dans/u, cas);
+  }
+});
+
 test('durée absente : aucune durée dite ni inventée ; 1 minute au singulier', async (t) => {
   const f = essai(t, {
     plan: plan({ endTime: minute(30), legs: [{ mode: 'WALK', duration: 60 }, leg(5)] }),

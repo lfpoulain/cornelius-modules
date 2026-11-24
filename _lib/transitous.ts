@@ -497,15 +497,22 @@ export function collecteur(reseau: Reseau) {
     // quelques-uns : à une ligne fréquente (métro aux 3 minutes) et loin de l'arrêt, les premiers
     // passages lus seraient tous trop tôt.
     const marche = ride.marcheMin * 60_000;
-    const candidats = [...lus, ...duPlan]
+    const arrivee = context.now() + marche;
+    const tries = [...lus, ...duPlan]
       .filter(
         (s, i, tous) =>
           Number.isFinite(s.prevu) &&
-          s.prevu >= context.now() + marche - 20 * 60_000 &&
+          s.prevu >= arrivee - 20 * 60_000 &&
           tous.findIndex((t) => t.prevu === s.prevu && t.tripId === s.tripId) === i,
       )
-      .sort((a, b) => a.prevu - b.prevu)
-      .slice(0, 10);
+      .sort((a, b) => a.prevu - b.prevu);
+    // Quelques passages prévus avant l'arrivée à pied (un véhicule en retard peut encore passer,
+    // le temps réel le dira), puis les suivants : sur une ligne très fréquente, les premiers
+    // passages de la fenêtre seraient tous avant l'arrivée.
+    const candidats = [
+      ...tries.filter((s) => s.prevu < arrivee).slice(-4),
+      ...tries.filter((s) => s.prevu >= arrivee).slice(0, 8),
+    ];
     const reels = reseau.tempsReel ? await reseau.tempsReel(context, candidats, ride.stopId) : [];
     const passages: Depart[] = candidats
       .map((s, i) => {
