@@ -156,7 +156,7 @@ const addon: AddonDefinition<RadioConfig, RadioData> = {
     name: 'Radio',
     // 160 caractères au plus (contrat des modules).
     description:
-      'Fait jouer un poste de radio sur le miroir, par son nom ou au hasard dans un genre. - Votre clé se gère dans Clés et accès. - Source : radio.jokobee.com',
+      'Fait jouer un poste de radio sur le miroir, par son nom ou au hasard dans un genre. - Votre clé gratuite : rubrique Clés et accès. - Source : radio.jokobee.com',
     icon: 'music',
     keywords: ['radio', 'poste', 'station', 'musique', 'écouter', 'joue', 'mets'],
     example: { label: 'Radio', ref: 'radio' },
