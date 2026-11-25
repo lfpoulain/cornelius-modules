@@ -4,6 +4,13 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-20 : transports au Québec
+
+**Ajouté**
+
+- Bibliothèque commune **`_lib/transitous.ts`**, avec ses tests : trajets en transport en commun d’après Transitous (géocodage limité à la région, adresse substituée refusée, apostrophe droite envoyée au géocodeur ; départ arrondi à environ 100 m ; itinéraire qui arrive le plus tôt ; passages de la même ligne et direction lus par `stoptimes`, complétés par les départs des itinéraires ; noms d’arrêts dits à l’oral avec l’apostrophe typographique ; phrase et carte). Aucune donnée inventée : sans durée chez Transitous, aucune durée n’est dite ; sans passage à attraper, aucun départ n’est promis.
+- Modules **Transports STO** (`sto`, 1.0.0, Gatineau : autobus et Rapibus, correspondances OC Transpo, heure réelle de la STO), **Transports STS** (`sts`, 1.0.0, Sherbrooke, selon l’horaire), **Transports RTC** (`rtc`, 1.0.0, Québec, selon l’horaire) et **Transports STM** (`stm`, 1.0.0, région métropolitaine de Montréal : STM, RTL, exo, REM ; avec la clé d’API de la STM du foyer, facultative, avis de la STM sur la ligne et heure réelle des autobus en GTFS-RT sur un cœur qui connaît `bytes()`), par [LucQuebec](https://github.com/LucQuebec), sur `_lib/transitous.ts`, sans jeton pour les trois premiers. Licences citées dans chaque fiche : conditions de Transitous, flux GTFS de chaque réseau, ODbL d’OpenStreetMap.
+
 ### 2026-11-20 : titres de l’actualité choisis par zone
 
 **Modifié**

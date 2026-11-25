@@ -10,7 +10,7 @@ Ce tutoriel construit une lecture ordinaire, la même à chaque appel et gardée
 
 - Cornelius 0.2.0 ou plus récent est cloné **à côté** de ce dépôt, dans `../cornelius`, et `npm ci` y a été lancé. Ailleurs, indiquez son dossier dans `CORNELIUS_DIR`.
 - Rien à installer ici : `npm test`, `npm run check` et `npm run format` utilisent les outils de Cornelius.
-- Le dossier `_lib/` réunit le code partagé par les modules : `flux.ts` (flux RSS et Atom, texte coupé, ancienneté) et `temps.ts` (jour civil, minuit suivant, heure murale dans le fuseau du foyer).
+- Le dossier `_lib/` réunit le code partagé par les modules : `flux.ts` (flux RSS et Atom, texte coupé, ancienneté), `temps.ts` (jour civil, minuit suivant, heure murale dans le fuseau du foyer) et `transitous.ts` (trajets en transport en commun d’après Transitous, pour les modules de transport du Québec).
 
 ## 1. Copier le gabarit
 
