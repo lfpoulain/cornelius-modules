@@ -5,19 +5,21 @@ Le module Immich permet de consulter les souvenirs du jour et de rechercher des 
 ## Ce que fait le module
 
 - Il répond à « montre nos souvenirs » et affiche une carte « Souvenirs Immich » avec les clichés « ce jour-là » des années précédentes (ou une sélection aléatoire de la photothèque s’il n’y a aucun souvenir daté du jour, annoncée comme telle).
+- Il répond à « affiche la dernière photo » ou « mes dernières photos » et affiche une carte « Dernières photos » triée par date décroissante (`POST /api/search/metadata`).
 - Il répond à « cherche mes photos de vacances » et affiche une carte « Photos : vacances » grâce à la recherche sémantique CLIP d’Immich (`POST /api/search/smart`).
 - Quand aucun souvenir ni photo n’est disponible, il affiche « Aucun souvenir aujourd’hui » ou « Aucune photo trouvée ».
 - Les données restent en cache une minute.
 
 ## Jeton requis
 
-Le module a besoin d’une clé API Immich (gratuite, générée depuis les paramètres du compte sur votre serveur Immich). Saisissez-la dans l’administration de Cornelius ou ajoutez-la dans le fichier `.env` puis redémarrez Cornelius :
+Le module a besoin d’une clé API Immich (gratuite, générée depuis les paramètres du compte sur votre serveur Immich).
+
+- **Une clé par profil (`perSource: true`)** : sur un cœur Cornelius qui prend en charge les jetons par source, vous pouvez saisir une clé API Immich propre à chaque source rattachée à un profil. Chaque personne reconnue devant le miroir par reconnaissance faciale accède alors uniquement à sa propre photothèque Immich avec une clé révocable individuellement.
+- **Clé partagée du foyer (repli)** : si vous saisissez une clé au niveau du module (dans l’administration ou via `.env`), elle sert de repli pour toute source sans clé propre, et reste le comportement par défaut sur un cœur plus ancien qui ignore `perSource` :
 
 ```ini
 CORNELIUS_IMMICH_API_KEY=votre-cle-api-immich
 ```
-
-La clé est déclarée au niveau du module : toutes les sources configurées utilisent cette même clé et accèdent donc au même compte Immich. Pour partager des photos devant le foyer, utilisez de préférence un compte dédié ou une photothèque partagée.
 
 ## Réglages d’une source
 
@@ -32,7 +34,7 @@ Dans **Modules → Immich → Ajouter une source** :
 ## Limites
 
 - **Confidentialité et données externes** : le miroir affiche les noms de fichiers des photos ainsi que la ville et le pays issus des métadonnées EXIF, visibles par toute personne dans la pièce. Ces métadonnées textuelles sont également transmises au fournisseur du modèle vocal/LLM configuré pour formuler la réponse orale.
-- Le module repose sur une clé API unique pour tout le foyer : il ne sépare pas plusieurs comptes Immich distincts par profil reconnu.
+- Sur un cœur Cornelius antérieur à la prise en charge de `perSource`, toutes les sources utilisent la clé unique du module.
 - La recherche sémantique (`search`) est filtrée sur les images (`type: IMAGE`) et dépend du modèle CLIP activé sur votre serveur Immich.
 - En cas d’adresse invalide ou de clé absente (`config_invalid`), de clé refusée (`401`), de réponse illisible ou tronquée au-delà de 2 Mio (`malformed`), ou de serveur injoignable (`unavailable`), le module signale l’incident sans le masquer par une carte vide.
 - Licence des données : données privées hébergées sur votre propre instance Immich.

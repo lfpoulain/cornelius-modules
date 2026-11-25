@@ -16,7 +16,7 @@ export type ImmichItem = {
   country: string | null;
 };
 
-export type ImmichMode = 'memories' | 'random' | 'search';
+export type ImmichMode = 'memories' | 'random' | 'search' | 'recent';
 
 export type ImmichData = {
   timestamp: number;
@@ -113,14 +113,25 @@ function toImmichItem(
 const addon: AddonDefinition<ImmichConfig, ImmichData> = {
   id: 'immich',
   apiVersion: 1,
-  version: '1.0.0',
+  version: '1.1.0',
   minCoreVersion: '0.2.0',
   sourceLabel: 'Immich (photothèque)',
   display: {
     name: 'Immich',
-    description: 'Souvenirs du jour et recherche de photos dans la photothèque Immich du foyer.',
+    description:
+      'Souvenirs du jour, dernières photos et recherche dans la photothèque Immich (par profil ou partagée).',
     icon: 'history',
-    keywords: ['immich', 'photo', 'photos', 'souvenir', 'souvenirs', 'vacances', 'album'],
+    keywords: [
+      'immich',
+      'photo',
+      'photos',
+      'souvenir',
+      'souvenirs',
+      'récentes',
+      'dernière',
+      'vacances',
+      'album',
+    ],
     example: { label: 'Photothèque du foyer', ref: 'foyer' },
     spoken: { head: 'les souvenirs Immich', repeats: ['immich', 'souvenirs', 'photos'] },
   },
@@ -139,7 +150,8 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
       env: 'CORNELIUS_IMMICH_API_KEY',
       label: 'une clé API Immich',
       note: 'lecture des médias et souvenirs',
-    },
+      perSource: true,
+    } as AddonDefinition['secrets'] extends (infer T)[] | undefined ? T : never,
   ],
   tools: [
     {
@@ -167,8 +179,8 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
     {
       name: 'search',
       description:
-        'Rechercher des photos par mots-clés dans la photothèque Immich configurée. ' +
-        'Utiliser pour « photos de vacances », « cherche des photos à la plage », « photos de montagne ».',
+        'Rechercher des photos par mots-clés dans la photothèque Immich configurée ou afficher les plus récentes (query : « récentes »). ' +
+        'Utiliser pour « photos de vacances », « cherche des photos à la plage », « affiche la dernière photo », « mes dernières photos ».',
       query: { maxLength: 100 },
       parameters: {
         type: 'object',
@@ -216,16 +228,36 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
     let mode: ImmichMode = 'memories';
 
     if (query) {
-      mode = 'search';
-      title = `Photos : ${query}`;
+      const isRecentOnly =
+        /^(?:ma\s+|mes\s+|les\s+|la\s+|notre\s+|nos\s+)?(?:derni[eè]res?|r[eé]centes?|plus\s+r[eé]centes?|nouvelles?|latest|recent)(?:\s+photos?)?$/iu.test(
+          query,
+        );
+      const isSingularRecent =
+        isRecentOnly &&
+        typeof context.args?.count !== 'number' &&
+        /^(?:ma\s+|la\s+|notre\s+)?(?:derni[eè]re|r[eé]cente|plus\s+r[eé]cente|nouvelle|latest|recent)(?:\s+photo)?$/iu.test(
+          query,
+        ) &&
+        !/^(?:latest|recent)$/iu.test(query);
+      const requestCount = isSingularRecent ? 1 : count;
+      mode = isRecentOnly ? 'recent' : 'search';
+      title = isRecentOnly
+        ? requestCount === 1
+          ? 'Dernière photo'
+          : 'Dernières photos'
+        : `Photos : ${query}`;
       const res = await context.http.fetch({
-        url: `${serverUrl}/api/search/smart`,
+        url: isRecentOnly ? `${serverUrl}/api/search/metadata` : `${serverUrl}/api/search/smart`,
         method: 'POST',
         headers: {
           'x-api-key': apiKey,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ query, type: 'IMAGE', size: count }),
+        body: JSON.stringify(
+          isRecentOnly
+            ? { type: 'IMAGE', order: 'desc', size: requestCount }
+            : { query, type: 'IMAGE', size: requestCount },
+        ),
         signal: context.signal,
         timeoutMs: 4500,
         maxBytes: MAX_BYTES,
@@ -234,7 +266,7 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
       if (!payload || typeof payload !== 'object' || !Array.isArray(payload.assets?.items)) {
         throw new AddonCollectError('malformed', 'Résultats de recherche Immich invalides.');
       }
-      for (const asset of payload.assets.items.slice(0, count) as ImmichAssetRaw[]) {
+      for (const asset of payload.assets.items.slice(0, requestCount) as ImmichAssetRaw[]) {
         const item = toImmichItem(asset, context.timeZone, 'Photo');
         if (item) items.push(item);
       }
@@ -344,9 +376,11 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
     const primaryValue =
       data.mode === 'search'
         ? `${data.totalCount} photo${data.totalCount > 1 ? 's' : ''} trouvée${data.totalCount > 1 ? 's' : ''}`
-        : data.mode === 'random'
-          ? `Sélection aléatoire · ${data.ownerName}`
-          : `Souvenirs · ${data.ownerName}`;
+        : data.mode === 'recent'
+          ? `Dernières photos · ${data.ownerName}`
+          : data.mode === 'random'
+            ? `Sélection aléatoire · ${data.ownerName}`
+            : `Souvenirs · ${data.ownerName}`;
     const subtitle = `${data.items.length} cliché${data.items.length > 1 ? 's' : ''} · ${first.date}`;
 
     const cardItems = data.items.slice(0, 5).map((item) => {
@@ -360,9 +394,11 @@ const addon: AddonDefinition<ImmichConfig, ImmichData> = {
     const summary =
       data.mode === 'search'
         ? `J’ai trouvé ${data.totalCount} photo${data.totalCount > 1 ? 's' : ''} pour « ${data.query} » dans la photothèque Immich.`
-        : data.mode === 'random'
-          ? `Aucun souvenir daté d’aujourd’hui ; voici une sélection aléatoire de ${data.totalCount} cliché${data.totalCount > 1 ? 's' : ''} dans la photothèque Immich (${data.ownerName}), notamment du ${first.date}.`
-          : `Voici les souvenirs du jour dans la photothèque Immich (${data.ownerName}) : ${data.totalCount} cliché${data.totalCount > 1 ? 's' : ''}, notamment du ${first.date}.`;
+        : data.mode === 'recent'
+          ? `Voici ${data.totalCount > 1 ? `les ${data.totalCount} dernières photos` : 'la dernière photo'} dans la photothèque Immich (${data.ownerName}), la plus récente du ${first.date}.`
+          : data.mode === 'random'
+            ? `Aucun souvenir daté d’aujourd’hui ; voici une sélection aléatoire de ${data.totalCount} cliché${data.totalCount > 1 ? 's' : ''} dans la photothèque Immich (${data.ownerName}), notamment du ${first.date}.`
+            : `Voici les souvenirs du jour dans la photothèque Immich (${data.ownerName}) : ${data.totalCount} cliché${data.totalCount > 1 ? 's' : ''}, notamment du ${first.date}.`;
 
     return {
       title: data.title.slice(0, 80),
