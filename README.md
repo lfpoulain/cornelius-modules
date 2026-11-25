@@ -124,6 +124,17 @@ Les règles complètes vivent dans Cornelius, à côté du code qu’elles décr
 - 🌐 Le cœur leur impose son client HTTP (adresses http(s) sans identifiants, trois redirections au plus et jamais vers une adresse non chiffrée, réponses bornées) et valide tout ce qu’ils renvoient.
 - 🔑 Leurs jetons restent dans le `.env` ou l’administration de Cornelius, jamais dans ce dépôt.
 
+## 🧾 Services tiers
+
+La plupart des modules lisent leurs données chez un service extérieur : une API publique, un fournisseur de données, ou un service géré par l’auteur du module lui-même. Ces services n’appartiennent ni aux Frères Poulain ni au projet Cornelius, qui ne les exploitent pas et ne les contrôlent pas.
+
+- 🤝 **Votre relation avec le service** : sa disponibilité, ses conditions d’utilisation, ses limites, ses tarifs et sa façon de traiter vos données relèvent de son exploitant seul. En demandant une clé ou en installant le module, vous acceptez ses conditions, pas les nôtres.
+- 📤 **Ce qui part chez lui** : à chaque demande, le module lui envoie ce que décrit sa fiche (votre question, vos réglages, votre adresse IP, votre clé). Lisez la fiche, et les conditions du service, avant d’installer un module.
+- 🏷️ **Un module dans ce dépôt n’est pas une caution du service** : nous relisons le code du module, pas le fonctionnement du service ni ses engagements. Quand l’auteur d’un module exploite le service qu’il utilise, ou y est lié, la fiche le dit.
+- 🔌 **Si le service change ou s’arrête**, le module peut cesser de fonctionner sans préavis de notre part. Un module dont le service ne répond plus, ou dont les conditions ne conviennent plus à ce dépôt, peut être retiré.
+
+Les modules sont fournis tels quels, sans garantie, comme le précise la [licence MIT](LICENSE).
+
 ## 📚 Documentation
 
 |                |                                                                                                                                                                      |

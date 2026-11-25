@@ -33,6 +33,12 @@ Dans **Modules → [Nom affiché, celui de `display.name`] → Ajouter une sourc
 | --- | --- | --- |
 | [title du champ dans config.schema.json] | [description du champ] | [valeur de `configDefaults`] |
 
+## Service et vie privée
+
+Les données viennent de [nom du service] ([adresse]), exploité par [exploitant]. [Si vous exploitez ce service ou y êtes lié, dites-le ici.] À chaque demande, le module lui envoie [ce qui part : question, réglages, clé] ; le service voit aussi l’adresse IP du serveur de Cornelius. [Ce que le service garde et combien de temps, s’il le publie.] Ses conditions d’utilisation : [adresse]. Licence des données : [licence].
+
+Ce service n’appartient pas au projet Cornelius : sa disponibilité, ses conditions et le traitement des données relèvent de son exploitant. Voir [Services tiers](../README.md#-services-tiers).
+
 ## Limites
 
 - [Zone couverte, quota du fournisseur, précision des données.]

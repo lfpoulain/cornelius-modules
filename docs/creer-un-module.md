@@ -321,7 +321,7 @@ npm run format
 - [ ] Carte dans les limites, dernier relevé annoncé comme tel.
 - [ ] `ambient` présent seulement si l’affichage permanent a un sens.
 - [ ] Tests avec `createTestModule` ; `npm test`, `npm run check` et `npm run format:check` passent.
-- [ ] Fiche `<id>/README.md` remplie : ce que fait le module, réglages, jeton et lien d’inscription, limites, outil vocal, auteur.
+- [ ] Fiche `<id>/README.md` remplie : ce que fait le module, réglages, jeton et lien d’inscription, service et vie privée (qui l’exploite, ce qui lui est envoyé, votre lien avec lui), limites, outil vocal, auteur.
 - [ ] Module ajouté au tableau du [README](../README.md#-les-modules) et au [CHANGELOG](../CHANGELOG.md).
 - [ ] Essai réel dans l’administration et à la voix, noté à part des tests automatiques.
 
