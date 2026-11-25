@@ -72,10 +72,14 @@ test('« trouve un poste de jazz » : un poste au hasard du genre', async (t) =>
   assert.equal((result.outcome as { playback?: { imageUrl: unknown } }).playback?.imageUrl, null);
 });
 
-test('l’outil dit au modèle quoi répondre quand ce Cornelius ne lit pas le HLS', () => {
+test('format non lu : une phrase simple pour l’usager, sans détail technique', () => {
   const tool = addon.tools.find((candidate) => candidate.name === 'ecouter')!;
-  assert.match(tool.description, /Liste de lecture \(m3u, pls, HLS\) non prise en charge/u);
-  assert.match(tool.description, /version de Cornelius/u);
+  assert.match(tool.description, /Liste de lecture … non prise en charge/u);
+  assert.match(
+    tool.description,
+    /sans détail technique : « Le format de diffusion de ce poste n’est pas pris en charge pour le moment\. »/u,
+  );
+  assert.doesNotMatch(tool.description, /HLS|version de Cornelius|mise à jour/u);
 });
 
 test('poste introuvable, clé refusée ou utilisée ailleurs, limite : des messages clairs', async (t) => {

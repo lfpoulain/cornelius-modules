@@ -51,7 +51,7 @@ Ce service n’appartient pas au projet Cornelius : sa disponibilité, ses condi
 
 ## Limites
 
-- **HLS** (Radio-Canada, ICI Musique, FIP, CBC Music) : rendu tel quel, avec une version de Cornelius qui lit le HLS. Une version plus ancienne répond « Liste de lecture (m3u, pls, HLS) non prise en charge » ; Cornelius explique alors que ce poste diffuse dans un format que sa version ne lit pas encore.
+- **HLS** (Radio-Canada, ICI Musique, FIP, CBC Music) : rendu tel quel, avec une version de Cornelius qui lit le HLS. Avec une version plus ancienne, Cornelius dit simplement : « Le format de diffusion de ce poste n’est pas pris en charge pour le moment. »
 - **http, listes m3u ou pls** : « Le format de diffusion de ce poste n’est pas pris en charge pour le moment », sans réessayer.
 - 100 demandes par clé et par jour, et des limites par adresse : largement assez pour un foyer.
 - Un poste dont le flux ne répond pas en ce moment : Cornelius le dit à la lecture (« Flux introuvable », « Le flux est injoignable ») ; un nom inconnu : « Aucun poste … disponible ».

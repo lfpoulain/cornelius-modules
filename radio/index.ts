@@ -232,7 +232,7 @@ const addon: AddonDefinition<RadioConfig, RadioData> = {
       description:
         'Faire jouer un poste de radio sur le miroir, par son nom (« mets France Inter », « mets RTL »). query : le nom du poste. ' +
         'Pour un genre (« trouve un poste de jazz »), utiliser l’argument genre. ' +
-        'Si la lecture échoue avec « Liste de lecture (m3u, pls, HLS) non prise en charge », dire que ce poste diffuse dans un format que cette version de Cornelius ne lit pas encore (HLS) ; une mise à jour de Cornelius le permettra.',
+        'Si la lecture échoue parce que le format n’est pas lu (« Liste de lecture … non prise en charge », « Format audio illisible », « Flux chiffré »), dire seulement, sans détail technique : « Le format de diffusion de ce poste n’est pas pris en charge pour le moment. »',
       parameters: parametres(
         'Le nom du poste seulement, tel que dit, sans le verbe (« CHOI Radio X », « 98,5 », « France Inter ») ; ou le genre si genre est vrai.',
       ),
