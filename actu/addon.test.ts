@@ -2,7 +2,13 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { createTestModule } from '#cornelius/testing';
-import addon, { feedLabel, findFeeds, migrateConfig, type CatalogueFeed } from './index.js';
+import addon, {
+  countryOf,
+  feedLabel,
+  findFeeds,
+  migrateConfig,
+  type CatalogueFeed,
+} from './index.js';
 import catalogue from './catalogue.json' with { type: 'json' };
 
 // Flux fictifs, aux formats exacts de franceinfo (entités hexadécimales) et du Monde (CDATA).
@@ -187,15 +193,28 @@ test('réglages de la version 1 : adresse et nombre gardés, journal affiché', 
     assert.equal(f.runtime.validateConfig(addon.id, config).ok, true);
   assert.equal(addon.configDefaults.feedLabel, 'franceinfo · national');
   assert.throws(() => migrateConfig(3, connu), /inconnue/u);
+  // Un nom d'hôte très long reste dans la longueur du libellé.
+  const long = migrateConfig(1, {
+    url: `https://${'a'.repeat(63)}.${'b'.repeat(63)}.${'c'.repeat(63)}.fr/flux`,
+    count: 3,
+  });
+  assert.ok(long.feedLabel!.length <= 160);
+  assert.equal(f.runtime.validateConfig(addon.id, long).ok, true);
 });
 
 test('Ottawa-Gatineau se trouve par l’Ontario ; fuseaux canadiens reconnus', () => {
   assert.ok(findFeeds('Ontario').some((r) => r.label === 'Radio-Canada · Ottawa-Gatineau'));
+  // Le pays du foyer d'après son fuseau, alias compris.
   for (const zone of [
     'America/Swift_Current',
     'America/Atikokan',
     'America/Creston',
     'America/Inuvik',
+    'Canada/Eastern',
+    'Canada/Newfoundland',
   ])
-    assert.equal(findFeeds('national', zone)[0]!.label, 'Radio-Canada · national', zone);
+    assert.equal(countryOf(zone), 'Canada', zone);
+  assert.equal(countryOf('Europe/Paris'), 'France');
+  assert.equal(countryOf('Europe/Berlin'), null);
+  assert.equal(countryOf(undefined), null);
 });
