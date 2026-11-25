@@ -28,7 +28,7 @@ npm test
 - Un dossier `<id>/` à la racine, identique au champ `id`, sans tiret, différent des modules livrés avec Cornelius (`clock`, `weather`, `transit`, `ragator`).
 - Le contrat importé par `#cornelius/addons`, `#cornelius/validation` et, dans les tests, `#cornelius/testing`. Aucun chemin vers `../cornelius/`.
 - Des tests écrits avec `createTestModule`, sur des réponses enregistrées du vrai fournisseur (`fixtures/`), sans réseau.
-- Une fiche `<id>/README.md` remplie à partir de [la fiche du gabarit](_template/README.md), avec la licence des données.
+- Une fiche `<id>/README.md` remplie à partir de [la fiche du gabarit](_template/README.md), avec la section « Service et vie privée » : qui exploite le service, ce que le module lui envoie, ses conditions, la licence des données, et votre lien avec le service si vous l’exploitez ou y êtes lié. Voir [Services tiers](README.md#-services-tiers).
 - Une ligne dans le tableau des modules du [README](README.md#-les-modules) et dans le [CHANGELOG](CHANGELOG.md).
 - Un champ `display` (nom, description, icône, phrase vocale) et `minCoreVersion: '0.2.0'`, ou plus si le module s’appuie sur un ajout plus récent de Cornelius.
 - Des fixtures sans contenu protégé : les réponses de fournisseurs de données publiques sont enregistrées telles quelles ; pour la presse, des articles fictifs au format exact du flux.

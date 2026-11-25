@@ -11,11 +11,23 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 - Bibliothèque commune **`_lib/transitous.ts`**, avec ses tests : trajets en transport en commun d’après Transitous (géocodage limité à la région, adresse substituée refusée, apostrophe droite envoyée au géocodeur ; départ arrondi à environ 100 m ; itinéraire qui arrive le plus tôt ; passages de la même ligne et direction lus par `stoptimes`, complétés par les départs des itinéraires ; noms d’arrêts dits à l’oral avec l’apostrophe typographique ; phrase et carte). Aucune donnée inventée : sans durée chez Transitous, aucune durée n’est dite ; sans passage à attraper, aucun départ n’est promis.
 - Modules **Transports STO** (`sto`, 1.0.0, Gatineau : autobus et Rapibus, correspondances OC Transpo, heure réelle de la STO), **Transports STS** (`sts`, 1.0.0, Sherbrooke, selon l’horaire), **Transports RTC** (`rtc`, 1.0.0, Québec, selon l’horaire) et **Transports STM** (`stm`, 1.0.0, région métropolitaine de Montréal : STM, RTL, exo, REM ; avec la clé d’API de la STM du foyer, facultative, avis de la STM sur la ligne et heure réelle des autobus en GTFS-RT sur un cœur qui connaît `bytes()`), par [LucQuebec](https://github.com/LucQuebec), sur `_lib/transitous.ts`, sans jeton pour les trois premiers. Licences citées dans chaque fiche : conditions de Transitous, flux GTFS de chaque réseau, ODbL d’OpenStreetMap.
 
+### 2026-11-20 : titres de l’actualité choisis par zone
+
+**Modifié**
+
+- **Titres de l’actualité** (1.2.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : le flux se choisit par la recherche assistée « Journal et zone », dans un catalogue de 47 flux essayés, classés par pays, province et région (Canada : Radio-Canada et ses 22 régions, TVA Nouvelles, Noovo Info, La Presse, Le Journal de Montréal ; France : franceinfo, Le Monde, Ouest-France, 20 Minutes, France 3 et ses 13 régions ; Suisse : RTS). La région demandée passe d’abord, puis le pays du foyer d’après son fuseau. Une adresse collée reste possible. Les sources existantes gardent leur adresse et leur nombre de titres, et le formulaire montre leur journal (`configVersion` 2).
+
 ### 2026-11-20 : module Immich
 
 **Ajouté**
 
 - Module **Immich** (`immich`, 1.0.0), par [Ewan Berthomieu](https://github.com/ewan-berthomieu) : souvenirs du jour (« ce jour-là ») avec repli sur une sélection aléatoire de la photothèque du foyer, et recherche sémantique de photos par mots-clés (`immich__search`), d’après une instance Immich auto-hébergée. Jours formatés dans le fuseau du foyer ; clé API Immich à déclarer.
+
+### 2026-11-12 : module Prix des carburants au Québec
+
+**Ajouté**
+
+- Module **Prix des carburants au Québec** (`carburants_qc`, 1.0.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : les prix d’une station préférée et le meilleur prix de chaque carburant autour d’un code postal, avec le nom et l’adresse de la station (la préférée si elle est au même prix), d’après les prix déclarés à la Régie de l’énergie (Régie essence Québec, sans jeton). Un ou plusieurs carburants québécois au choix (ordinaire, super, diesel), prix dits en dollars ; « et le diesel ? » se demande à la voix. Le code postal est situé d’après les stations qui le partagent, sans géocodeur : il ne quitte pas Cornelius ; coordonnées au choix, qui priment. Bannières ou stations exclues au choix (« Costco »).
 
 ### 2026-11-12 : module Jours fériés au Canada
 

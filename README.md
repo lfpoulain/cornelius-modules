@@ -31,27 +31,28 @@ Cornelius livre ses modules de base avec lui. Ce dépôt accueille **tous les au
 
 ## 📦 Les modules
 
-| Module | Ce qu’il fait | Jeton | Fiche |
-| --- | --- | --- | --- |
-| 📅 **Agenda** | Les prochains rendez-vous d’un agenda Google, iCloud ou Outlook, par son lien iCal privé, répétitions comprises ; « et samedi ? » se demande à la voix | lien privé | [agenda](agenda/README.md) |
-| 🚌 **Arrêts et itinéraires** | N’importe quel arrêt de Suisse : les lignes qui le desservent, le prochain départ de chacune, l’itinéraire avec correspondances et, à la voix, l’heure de départ pour arriver à une heure donnée ; la ville est facultative | aucun | [arrets](arrets/README.md) |
-| 💸 **Dépenses OpenAI** | Ce que coûte Cornelius chez OpenAI : mois, jour, 7 derniers jours et usages les plus chers, avec alerte de budget ; mois et jour du foyer | clé Admin OpenAI | [depenses_openai](depenses_openai/README.md) |
-| 📜 **Éphéméride** | Ce qui s’est passé un jour comme aujourd’hui, l’anniversaire le plus rond d’abord, d’après Wikipédia | aucun | [ephemeride](ephemeride/README.md) |
-| 🖼️ **Immich** | Les souvenirs du jour (« ce jour-là ») ou une sélection de la photothèque du foyer, et la recherche de photos par mots-clés (CLIP), d’après un serveur Immich | clé API Immich | [immich](immich/README.md) |
-| 🎉 **Jours fériés au Canada** | Le prochain jour férié et les suivants d’une province ou d’un territoire, ou des employeurs fédéraux ; compte à rebours sur le miroir ; d’après canada-holidays.ca | aucun | [feries_ca](feries_ca/README.md) |
-| 🍁 **Météo Canada** | Conditions actuelles, prévisions et avertissements d’Environnement Canada pour une ville canadienne, avec icônes (émojis sur un cœur qui ne les dessine pas) | aucun | [meteo_canada](meteo_canada/README.md) |
-| 🌦️ **Météo libre** | Les prévisions du jour et des jours suivants pour un lieu (latitude, longitude), d’après Open-Meteo : températures, temps, pluie, vent | aucun | [meteo_libre](meteo_libre/README.md) |
-| 🔔 **Perturbations** | Travaux, déviations et lignes interrompues du réseau suisse (SIRI-SX), filtrés sur les lignes et les arrêts du foyer | jeton gratuit | [perturbations](perturbations/README.md) |
-| 🗑️ **Poubelles** | Quel bac sortir et quand, d’après le calendrier de la commune écrit en toutes lettres, encombrants compris ; rappel la veille au soir | aucun | [poubelles](poubelles/README.md) |
-| ⛽ **Prix des carburants** | Les prix d’une station-service, carburant principal d’abord ou celui demandé (« et le SP98 ? ») ; station trouvée par commune ou code postal | aucun | [carburants](carburants/README.md) |
-| 📰 **Titres de l’actualité** | Les premiers titres d’un journal, d’après son flux RSS ou Atom (franceinfo par défaut) | aucun | [actu](actu/README.md) |
-| 🚌 **Transports RTC** | Région de Québec : le prochain autobus du RTC vers une destination, la durée du trajet et le départ suivant, selon l’horaire ; d’après Transitous | aucun | [rtc](rtc/README.md) |
-| 🚇 **Transports STM** | Région de Montréal : métro, autobus, trains et REM (STM, RTL, exo), prochain départ, durée et suivant d’après Transitous ; avis de la STM et heure réelle des autobus avec une clé STM | clé STM facultative | [stm](stm/README.md) |
-| 🚌 **Transports STO** | Région de Gatineau : autobus et Rapibus de la STO, correspondances OC Transpo vers Ottawa ; prochain départ à l’heure réelle, durée et suivant, d’après Transitous | aucun | [sto](sto/README.md) |
-| 🚌 **Transports STS** | Région de Sherbrooke : le prochain autobus de la STS vers une destination, la durée du trajet et le départ suivant, selon l’horaire ; d’après Transitous | aucun | [sts](sts/README.md) |
-| 🏖️ **Vacances et jours fériés** | En vacances ou pas, prochaines vacances scolaires de la zone, prochain jour férié ; affichage permanent possible | aucun | [vacances](vacances/README.md) |
-| 🚲 **Vélos en libre-service** | Vélos (mécaniques, électriques) et places libres d’une station : Vélib’, V’Lille, Vélo’v, STAR, TBM, BIXI, àVélo… (norme GBFS) | aucun | [velos](velos/README.md) |
-| ▶️ **YouTube** | La dernière vidéo d’une chaîne (par défaut, Les Frères Poulain), avec ou sans les Shorts | aucun | [youtube](youtube/README.md) |
+| Module                               | Ce qu’il fait                                                                                                                                                                                                                                                        | Jeton               | Fiche                                        |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | -------------------------------------------- |
+| 📅 **Agenda**                        | Les prochains rendez-vous d’un agenda Google, iCloud ou Outlook, par son lien iCal privé, répétitions comprises ; « et samedi ? » se demande à la voix                                                                                                               | lien privé          | [agenda](agenda/README.md)                   |
+| 🚌 **Arrêts et itinéraires**         | N’importe quel arrêt de Suisse : les lignes qui le desservent, le prochain départ de chacune, l’itinéraire avec correspondances et, à la voix, l’heure de départ pour arriver à une heure donnée ; la ville est facultative                                          | aucun               | [arrets](arrets/README.md)                   |
+| 💸 **Dépenses OpenAI**               | Ce que coûte Cornelius chez OpenAI : mois, jour, 7 derniers jours et usages les plus chers, avec alerte de budget ; mois et jour du foyer                                                                                                                            | clé Admin OpenAI    | [depenses_openai](depenses_openai/README.md) |
+| 📜 **Éphéméride**                    | Ce qui s’est passé un jour comme aujourd’hui, l’anniversaire le plus rond d’abord, d’après Wikipédia                                                                                                                                                                 | aucun               | [ephemeride](ephemeride/README.md)           |
+| 🖼️ **Immich**                        | Les souvenirs du jour (« ce jour-là ») ou une sélection de la photothèque du foyer, et la recherche de photos par mots-clés (CLIP), d’après un serveur Immich                                                                                                        | clé API Immich      | [immich](immich/README.md)                   |
+| 🎉 **Jours fériés au Canada**        | Le prochain jour férié et les suivants d’une province ou d’un territoire, ou des employeurs fédéraux ; compte à rebours sur le miroir ; d’après canada-holidays.ca                                                                                                   | aucun               | [feries_ca](feries_ca/README.md)             |
+| 🍁 **Météo Canada**                  | Conditions actuelles, prévisions et avertissements d’Environnement Canada pour une ville canadienne, avec icônes (émojis sur un cœur qui ne les dessine pas)                                                                                                         | aucun               | [meteo_canada](meteo_canada/README.md)       |
+| 🌦️ **Météo libre**                   | Les prévisions du jour et des jours suivants pour un lieu (latitude, longitude), d’après Open-Meteo : températures, temps, pluie, vent                                                                                                                               | aucun               | [meteo_libre](meteo_libre/README.md)         |
+| 🔔 **Perturbations**                 | Travaux, déviations et lignes interrompues du réseau suisse (SIRI-SX), filtrés sur les lignes et les arrêts du foyer                                                                                                                                                 | jeton gratuit       | [perturbations](perturbations/README.md)     |
+| 🗑️ **Poubelles**                     | Quel bac sortir et quand, d’après le calendrier de la commune écrit en toutes lettres, encombrants compris ; rappel la veille au soir                                                                                                                                | aucun               | [poubelles](poubelles/README.md)             |
+| ⛽ **Prix des carburants**           | Les prix d’une station-service, carburant principal d’abord ou celui demandé (« et le SP98 ? ») ; station trouvée par commune ou code postal                                                                                                                         | aucun               | [carburants](carburants/README.md)           |
+| ⛽ **Prix des carburants au Québec** | Les prix de votre station préférée et le meilleur prix de chaque carburant autour d’un code postal, avec la station et son adresse, en dollars (ordinaire, super, diesel, un ou plusieurs) ; bannières exclues au choix (« Costco ») ; d’après la Régie de l’énergie | aucun               | [carburants_qc](carburants_qc/README.md)     |
+| 📰 **Titres de l’actualité**         | Les premiers titres d’un journal, d’après son flux RSS ou Atom (franceinfo par défaut)                                                                                                                                                                               | aucun               | [actu](actu/README.md)                       |
+| 🚌 **Transports RTC**                | Région de Québec : le prochain autobus du RTC vers une destination, la durée du trajet et le départ suivant, selon l’horaire ; d’après Transitous                                                                                                                    | aucun               | [rtc](rtc/README.md)                         |
+| 🚇 **Transports STM**                | Région de Montréal : métro, autobus, trains et REM (STM, RTL, exo), prochain départ, durée et suivant d’après Transitous ; avis de la STM et heure réelle des autobus avec une clé STM                                                                               | clé STM facultative | [stm](stm/README.md)                         |
+| 🚌 **Transports STO**                | Région de Gatineau : autobus et Rapibus de la STO, correspondances OC Transpo vers Ottawa ; prochain départ à l’heure réelle, durée et suivant, d’après Transitous                                                                                                   | aucun               | [sto](sto/README.md)                         |
+| 🚌 **Transports STS**                | Région de Sherbrooke : le prochain autobus de la STS vers une destination, la durée du trajet et le départ suivant, selon l’horaire ; d’après Transitous                                                                                                             | aucun               | [sts](sts/README.md)                         |
+| 🏖️ **Vacances et jours fériés**      | En vacances ou pas, prochaines vacances scolaires de la zone, prochain jour férié ; affichage permanent possible                                                                                                                                                     | aucun               | [vacances](vacances/README.md)               |
+| 🚲 **Vélos en libre-service**        | Vélos (mécaniques, électriques) et places libres d’une station : Vélib’, V’Lille, Vélo’v, STAR, TBM, BIXI, àVélo… (norme GBFS)                                                                                                                                       | aucun               | [velos](velos/README.md)                     |
+| ▶️ **YouTube**                       | La dernière vidéo d’une chaîne (par défaut, Les Frères Poulain), avec ou sans les Shorts                                                                                                                                                                             | aucun               | [youtube](youtube/README.md)                 |
 
 Livrés avec Cornelius, et donc absents d’ici : Heure, Météo, Transports, Ragator. Voir [Les modules](https://github.com/lfpoulain/Cornelius/blob/main/docs/modules/README.md) dans Cornelius.
 
@@ -95,11 +96,11 @@ cp -r _template parking
 
 Le gabarit `_template` est un module complet relié à un fournisseur fictif, avec ses schémas, une réponse d’exemple et ses tests. Remplacez le fournisseur, adaptez les schémas et les tests, puis vérifiez :
 
-| Commande | Effet |
-| --- | --- |
-| `npm test` | Lance les tests de tous les modules avec le vrai cœur de Cornelius (`createTestModule` : base en mémoire, horloge réglable, réseau simulé) |
-| `npm run check` | Vérifie les types contre le contrat de Cornelius |
-| `npm run format` | Met le code en forme, avec les règles de Cornelius |
+| Commande         | Effet                                                                                                                                      |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `npm test`       | Lance les tests de tous les modules avec le vrai cœur de Cornelius (`createTestModule` : base en mémoire, horloge réglable, réseau simulé) |
+| `npm run check`  | Vérifie les types contre le contrat de Cornelius                                                                                           |
+| `npm run format` | Met le code en forme, avec les règles de Cornelius                                                                                         |
 
 Rien à installer ici : ces commandes utilisent les outils du Cornelius voisin, où `npm ci` doit avoir été lancé. S’il est rangé ailleurs, indiquez son dossier dans `CORNELIUS_DIR`.
 
@@ -109,14 +110,14 @@ Le pas à pas complet est dans [Créer un module](docs/creer-un-module.md), et l
 
 Un module dépend de Cornelius par trois alias, toujours résolus vers le Cornelius qui le charge :
 
-| Alias | Contenu |
-| --- | --- |
-| `#cornelius/addons` | Le contrat : types, `AddonCollectError` |
-| `#cornelius/validation` | La compilation des schémas JSON |
-| `#cornelius/testing` | Pour les tests : `createTestModule` (le module dans le vrai cœur, horloge et réseau simulés), et `validateAddonDefinition`, `openDatabase`, `AddonRepository`, `AddonRuntime` |
+| Alias                   | Contenu                                                                                                                                                                       |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `#cornelius/addons`     | Le contrat : types, `AddonCollectError`                                                                                                                                       |
+| `#cornelius/validation` | La compilation des schémas JSON                                                                                                                                               |
+| `#cornelius/testing`    | Pour les tests : `createTestModule` (le module dans le vrai cœur, horloge et réseau simulés), et `validateAddonDefinition`, `openDatabase`, `AddonRepository`, `AddonRuntime` |
 
 - `apiVersion: 1` est le contrat. Il ne change qu’en cas de rupture : un module d’une autre version est refusé.
-- `minCoreVersion`, facultatif, est la version minimale de Cornelius pour un module qui s’appuie sur un ajout récent du cœur. Les modules de ce dépôt demandent `'0.2.0'` : présentation dans l’administration, listes du formulaire, précisions à la voix, fuseau du foyer, affichage recalculé à l’heure dite.
+- `minCoreVersion`, facultatif, est la version minimale de Cornelius pour un module qui s’appuie sur un ajout récent du cœur. Les modules de ce dépôt demandent `'0.2.0'` : présentation dans l’administration, listes du formulaire, précisions à la voix, fuseau du foyer, affichage recalculé à l’heure dite. Un module qui s’appuie sur un ajout plus récent demande sa version, par exemple `'0.4.1'` pour un jeton facultatif ou un outil de lecture (radio, podcast).
 - Un module externe ne remplace jamais un module livré : s’il en reprend l’identifiant, il est refusé.
 
 Les règles complètes vivent dans Cornelius, à côté du code qu’elles décrivent : [référence du contrat des modules](https://github.com/lfpoulain/Cornelius/blob/main/docs/modules/reference.md).
@@ -127,14 +128,25 @@ Les règles complètes vivent dans Cornelius, à côté du code qu’elles décr
 - 🌐 Le cœur leur impose son client HTTP (adresses http(s) sans identifiants, trois redirections au plus et jamais vers une adresse non chiffrée, réponses bornées) et valide tout ce qu’ils renvoient.
 - 🔑 Leurs jetons restent dans le `.env` ou l’administration de Cornelius, jamais dans ce dépôt.
 
+## 🧾 Services tiers
+
+La plupart des modules lisent leurs données chez un service extérieur : une API publique, un fournisseur de données, ou un service géré par l’auteur du module lui-même. Ces services n’appartiennent ni aux Frères Poulain ni au projet Cornelius, qui ne les exploitent pas et ne les contrôlent pas.
+
+- 🤝 **Votre relation avec le service** : sa disponibilité, ses conditions d’utilisation, ses limites, ses tarifs et sa façon de traiter vos données relèvent de son exploitant seul. En demandant une clé ou en installant le module, vous acceptez ses conditions, pas les nôtres.
+- 📤 **Ce qui part chez lui** : à chaque demande, le module lui envoie ce que décrit sa fiche (votre question, vos réglages, votre adresse IP, votre clé). Lisez la fiche, et les conditions du service, avant d’installer un module.
+- 🏷️ **Un module dans ce dépôt n’est pas une caution du service** : nous relisons le code du module, pas le fonctionnement du service ni ses engagements. Quand l’auteur d’un module exploite le service qu’il utilise, ou y est lié, la fiche le dit.
+- 🔌 **Si le service change ou s’arrête**, le module peut cesser de fonctionner sans préavis de notre part. Un module dont le service ne répond plus, ou dont les conditions ne conviennent plus à ce dépôt, peut être retiré.
+
+Les modules sont fournis tels quels, sans garantie, comme le précise la [licence MIT](LICENSE).
+
 ## 📚 Documentation
 
-| | |
-|---|---|
-| **Écrire** | [Créer un module](docs/creer-un-module.md) · [Fiche à remplir](_template/README.md) · [Contribuer](CONTRIBUTING.md) |
+|                |                                                                                                                                                                      |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Écrire**     | [Créer un module](docs/creer-un-module.md) · [Fiche à remplir](_template/README.md) · [Contribuer](CONTRIBUTING.md)                                                  |
 | **Le contrat** | [Référence](https://github.com/lfpoulain/Cornelius/blob/main/docs/modules/reference.md) · [Types](https://github.com/lfpoulain/Cornelius/blob/main/shared/addons.ts) |
-| **Utiliser** | [Les modules dans Cornelius](https://github.com/lfpoulain/Cornelius/blob/main/docs/modules/README.md) : sources, jetons, affichage permanent |
-| **Suivre** | [Historique des changements](CHANGELOG.md) |
+| **Utiliser**   | [Les modules dans Cornelius](https://github.com/lfpoulain/Cornelius/blob/main/docs/modules/README.md) : sources, jetons, affichage permanent                         |
+| **Suivre**     | [Historique des changements](CHANGELOG.md)                                                                                                                           |
 
 ## 📜 Licence
 
