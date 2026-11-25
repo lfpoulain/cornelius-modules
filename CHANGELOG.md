@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-25 : module Radio, format HLS
+
+**Modifié**
+
+- **Radio** (1.1.0), par [LucQuebec](https://github.com/LucQuebec) ([Jokobee™](https://jokobee.com)) : Amélioration de la gestion des erreurs pour supporter le format HLS.
+
 ### 2026-11-24 : module Radio
 
 **Ajouté**

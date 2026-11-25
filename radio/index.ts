@@ -197,7 +197,7 @@ const parametres = (description: string) => ({
 const addon: AddonDefinition<RadioConfig, RadioData> = {
   id: 'radio',
   apiVersion: 1,
-  version: '1.0.0',
+  version: '1.1.0',
   // Outil de lecture : Cornelius 0.4.1. Provisoirement omis tant que beta annonce 0.4.0.
   sourceLabel: 'radio.jokobee.com',
   display: {
