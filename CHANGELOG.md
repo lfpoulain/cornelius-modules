@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-20 : module Temps de trajet
+
+**Ajouté**
+
+- Module **Temps de trajet** (`tempsdetrajet`, 1.0.0), par [Bunchfr](https://github.com/Bunchfr) : l’heure d’arrivée estimée d’un trajet en voiture avec le trafic en direct, d’après l’API TomTom (clé gratuite, 20 000 itinéraires par mois). Départ et arrivée choisis par recherche d’adresse, points arrondis à environ 100 mètres, affichage permanent possible.
+
 ### 2026-11-20 : transports au Québec
 
 **Ajouté**

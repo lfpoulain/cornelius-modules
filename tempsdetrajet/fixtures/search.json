@@ -1,0 +1,79 @@
+{
+  "results": [
+    {
+      "poi": {
+        "name": "Bordeaux Saint-Jean"
+      },
+      "address": {
+        "freeformAddress": "Rue Charles Domercq, 33800 Bordeaux",
+        "municipality": "Bordeaux"
+      },
+      "position": {
+        "lat": 44.82646,
+        "lon": -0.556223
+      }
+    },
+    {
+      "address": {
+        "freeformAddress": "Gare Saint-Jean, 33800 Bordeaux",
+        "municipality": "Bordeaux"
+      },
+      "position": {
+        "lat": 44.825059,
+        "lon": -0.556936
+      }
+    },
+    {
+      "poi": {
+        "name": "Pause Gourmande-Gare Saint-Jean Bordeaux"
+      },
+      "address": {
+        "freeformAddress": "37 Rue Charles Domercq, 33800 Bordeaux",
+        "municipality": "Bordeaux"
+      },
+      "position": {
+        "lat": 44.824988,
+        "lon": -0.557478
+      }
+    },
+    {
+      "poi": {
+        "name": "Cargo Bordeaux GARE Saint-Jean"
+      },
+      "address": {
+        "freeformAddress": "40-42 Rue Furtado, 33800 Bordeaux",
+        "municipality": "Bordeaux"
+      },
+      "position": {
+        "lat": 44.824819,
+        "lon": -0.560643
+      }
+    },
+    {
+      "poi": {
+        "name": "Ténéo Apparthotel Bordeaux-Gare Saint-Jean"
+      },
+      "address": {
+        "freeformAddress": "4 Cours Barbey, 33800 Bordeaux",
+        "municipality": "Bordeaux"
+      },
+      "position": {
+        "lat": 44.828333,
+        "lon": -0.561944
+      }
+    },
+    {
+      "poi": {
+        "name": "Coiffeur Gare Saint-Jean"
+      },
+      "address": {
+        "freeformAddress": "202 Cours de la Marne, 33800 Bordeaux",
+        "municipality": "Bordeaux"
+      },
+      "position": {
+        "lat": 44.827836,
+        "lon": -0.558808
+      }
+    }
+  ]
+}
