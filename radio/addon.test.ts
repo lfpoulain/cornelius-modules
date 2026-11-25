@@ -72,6 +72,12 @@ test('« trouve un poste de jazz » : un poste au hasard du genre', async (t) =>
   assert.equal((result.outcome as { playback?: { imageUrl: unknown } }).playback?.imageUrl, null);
 });
 
+test('l’outil dit au modèle quoi répondre quand ce Cornelius ne lit pas le HLS', () => {
+  const tool = addon.tools.find((candidate) => candidate.name === 'ecouter')!;
+  assert.match(tool.description, /Liste de lecture \(m3u, pls, HLS\) non prise en charge/u);
+  assert.match(tool.description, /version de Cornelius/u);
+});
+
 test('poste introuvable, clé refusée ou utilisée ailleurs, limite : des messages clairs', async (t) => {
   const cas = [
     [
@@ -99,9 +105,38 @@ test('poste introuvable, clé refusée ou utilisée ailleurs, limite : des messa
   }
 });
 
-test('flux non https ou réponse incomplète : refusés, rien ne joue', async (t) => {
+test('liste HLS (.m3u8) : rendue telle quelle au lecteur, en direct', async (t) => {
+  const ici = 'https://rcavliveaudio.akamaized.net/hls/live/2006979/M-7QMTL0_MTL/playlist.m3u8';
+  const f = setup(t, {
+    status: 200,
+    body: { poste: { nom: 'ICI Musique', flux: ici, logo: null, pays: 'CA' } },
+  });
+  const result = await f.invoke('ecouter', { query: 'ICI Musique' });
+  assert.equal(result.outcome.ok, true);
+  if (!result.outcome.ok) return;
+  assert.equal(result.outcome.playback?.url, ici);
+  assert.equal(result.outcome.playback?.kind, 'live');
+});
+
+test('lien http ou liste m3u ou pls : « format non pris en charge », sans réessayer', async (t) => {
+  for (const flux of [
+    'http://flux.exemple.fr/a.mp3',
+    'https://flux.exemple.fr/liste.pls',
+    'https://flux.exemple.fr/liste.m3u?x=1',
+  ]) {
+    const f = setup(t, { status: 200, body: { poste: { ...franceInter.poste, flux } } });
+    const result = await f.invoke('ecouter', { query: 'France Inter' });
+    assert.equal(result.tool.status, 'failed', flux);
+    assert.equal(result.tool.error?.code, 'not_found', flux);
+    assert.equal(result.tool.error?.retryable, false, flux);
+    assert.match(result.tool.error?.message ?? '', /format de diffusion/u, flux);
+  }
+});
+
+test('réponse incomplète ou adresse illisible : refusée, rien ne joue', async (t) => {
   for (const body of [
-    { poste: { ...franceInter.poste, flux: 'http://flux.exemple.fr/a.mp3' } },
+    { poste: { ...franceInter.poste, flux: 'ftp://flux.exemple.fr/a.mp3' } },
+    { poste: { ...franceInter.poste, flux: 'pas une adresse' } },
     { poste: { nom: '', flux: 'https://flux.exemple.fr/a.mp3' } },
     { autre: true },
   ]) {

@@ -1,8 +1,10 @@
 /**
  * Radio : fait jouer un poste de radio sur le miroir (« mets France Inter », « trouve un poste
- * de jazz »), d'après l'annuaire de Jokobee™ Radio. Chaque demande renvoie un seul poste, déjà
- * vérifié en train de jouer : flux audio direct en https et logo. Le cœur relaie et joue le flux
- * (outil de lecture, Cornelius 0.4.1).
+ * de jazz »), d'après l'annuaire de Jokobee™ Radio. Chaque demande renvoie un seul poste : son
+ * lien tel que l'annuaire le connaît (flux direct, ou liste HLS .m3u8) et son logo. Le cœur
+ * relaie et joue le flux (outil de lecture, Cornelius 0.4.1) ; c'est lui qui dit si le flux est
+ * en panne ou dans un format qu'il ne lit pas. Le module écarte seulement ce que le cœur
+ * refuserait comme une demande illisible : http, listes m3u et pls.
  */
 import {
   AddonCollectError,
@@ -53,15 +55,34 @@ export function nomDemande(query: string): string {
   return (sansVerbe || texte).slice(0, 80);
 }
 
-/** Une réponse de l'API, vérifiée champ par champ avant d'être rendue au lecteur. */
+/** Format de diffusion que le lecteur de Cornelius ne lit pas : dit clairement, sans réessayer. */
+const formatNonPrisEnCharge = () =>
+  new AddonCollectError(
+    'not_found',
+    'Le format de diffusion de ce poste n’est pas pris en charge pour le moment.',
+  );
+
+/**
+ * Une réponse de l'API, vérifiée champ par champ avant d'être rendue au lecteur. L'annuaire
+ * rend le lien du poste sans le vérifier : un flux direct ou une liste HLS (.m3u8) passent tels
+ * quels ; un lien http ou une liste m3u ou pls, que le cœur refuserait, sont dits ici.
+ */
 function poste(value: unknown): Poste {
   const p = (value as { poste?: Record<string, unknown> } | null)?.poste;
   const nom = typeof p?.nom === 'string' ? p.nom.trim() : '';
   const flux = typeof p?.flux === 'string' ? p.flux : '';
   const logo = typeof p?.logo === 'string' && p.logo.startsWith('https://') ? p.logo : null;
   const pays = typeof p?.pays === 'string' && /^[A-Z]{2}$/u.test(p.pays) ? p.pays : null;
-  if (!nom || !flux.startsWith('https://') || flux.length > 2000)
+  let adresse: URL | null = null;
+  try {
+    adresse = new URL(flux);
+  } catch {
+    adresse = null;
+  }
+  if (!nom || !adresse || !/^https?:$/u.test(adresse.protocol) || flux.length > 2000)
     throw new AddonCollectError('malformed', 'Réponse illisible de l’annuaire des postes.');
+  if (adresse.protocol === 'http:' || /\.(m3u|pls|asx|xspf)$/iu.test(adresse.pathname))
+    throw formatNonPrisEnCharge();
   return { nom: nom.slice(0, 80), flux, logo: logo && logo.length <= 2000 ? logo : null, pays };
 }
 
@@ -89,13 +110,9 @@ async function trouver(context: Context, cle: string, demande: { nom?: string; g
       throw new AddonCollectError('malformed', 'Réponse illisible de l’annuaire des postes.');
   }
   if (response.status === 200) return poste(body);
-  // « format » : le poste est reconnu et joue, mais seulement en HLS ou en http, que le lecteur
-  // de Cornelius ne lit pas. Ce n'est pas une panne : réessayer plus tard n'y changerait rien.
-  if (body?.erreur === 'format')
-    throw new AddonCollectError(
-      'not_found',
-      'Le format de diffusion de ce poste n’est pas pris en charge pour le moment.',
-    );
+  // « format » : réponse d'une ancienne version de l'annuaire (elle ne le rend plus depuis le
+  // 2026-11-25, le lien est rendu tel quel). Ce n'est pas une panne : réessayer n'y changerait rien.
+  if (body?.erreur === 'format') throw formatNonPrisEnCharge();
   if (response.status === 404) return null;
   if (response.status === 401)
     throw new AddonCollectError(
@@ -213,7 +230,8 @@ const addon: AddonDefinition<RadioConfig, RadioData> = {
       name: 'ecouter',
       description:
         'Faire jouer un poste de radio sur le miroir, par son nom (« mets France Inter », « mets RTL »). query : le nom du poste. ' +
-        'Pour un genre (« trouve un poste de jazz »), utiliser l’argument genre.',
+        'Pour un genre (« trouve un poste de jazz »), utiliser l’argument genre. ' +
+        'Si la lecture échoue avec « Liste de lecture (m3u, pls, HLS) non prise en charge », dire que ce poste diffuse dans un format que cette version de Cornelius ne lit pas encore (HLS) ; une mise à jour de Cornelius le permettra.',
       parameters: parametres(
         'Le nom du poste seulement, tel que dit, sans le verbe (« CHOI Radio X », « 98,5 », « France Inter ») ; ou le genre si genre est vrai.',
       ),

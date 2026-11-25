@@ -10,7 +10,7 @@ Source : radio.jokobee.com · radio@jokobee.com
 - « Trouve un poste de jazz », « mets de la musique classique » : un poste au hasard parmi les plus écoutés de ce genre.
 - Le bandeau du miroir montre le nom et le logo du poste, avec le bouton **Arrêter**. « Arrête la radio », « reprends » et « plus fort » sont des commandes communes de Cornelius.
 - Pendant une conversation, la radio baisse quand Cornelius écoute et se tait quand il parle.
-- Chaque demande renvoie un seul poste, déjà vérifié en train de jouer : un flux audio direct en https et son logo.
+- Chaque demande renvoie un seul poste : son adresse de diffusion telle que l’annuaire la connaît (flux audio direct, ou HLS `.m3u8` comme ICI Musique ou FIP) et son logo. Cornelius la joue et dit lui-même si le poste est en panne ou dans un format qu’il ne lit pas.
 
 ## Clé requise
 
@@ -34,10 +34,10 @@ Dans **Modules → Radio → Ajouter une source** :
 
 ## Limites
 
-- **Flux en https seulement, sans HLS** : le lecteur de Cornelius ne joue que des flux audio directs (MP3, AAC, Ogg, Opus) en https. Un poste qui ne diffuse qu’en HLS (Radio-Canada, ICI Musique, par exemple) ou qu’en http n’est pas proposé : « aucun poste disponible ».
+- **HLS** (Radio-Canada, ICI Musique, FIP, CBC Music) : rendu tel quel, avec une version de Cornelius qui lit le HLS. Une version plus ancienne répond « Liste de lecture (m3u, pls, HLS) non prise en charge » ; Cornelius explique alors que ce poste diffuse dans un format que sa version ne lit pas encore.
+- **http, listes m3u ou pls** : « Le format de diffusion de ce poste n’est pas pris en charge pour le moment », sans réessayer.
 - 100 demandes par clé et par jour, et des limites par adresse : largement assez pour un foyer.
-- Un poste reconnu dont le flux ne répond pas en ce moment : « Ce poste ne répond pas pour l’instant » ; un poste qui ne diffuse qu’en HLS ou en http : « Le format de diffusion de ce poste n’est pas pris en charge pour le moment » ; un nom inconnu : « Aucun poste … disponible ».
-- Une réponse peut prendre quelques secondes : l’annuaire vérifie que le poste joue vraiment avant de répondre.
+- Un poste dont le flux ne répond pas en ce moment : Cornelius le dit à la lecture (« Flux introuvable », « Le flux est injoignable ») ; un nom inconnu : « Aucun poste … disponible ».
 - Le miroir seulement : les satellites ne jouent pas encore la radio.
 - **Conditions d’utilisation** : l’annuaire des postes est réservé à l’usage personnel avec Cornelius. Sa copie, son aspiration ou sa revente sont interdites, et une clé peut être coupée en cas d’abus. Les flux restent soumis aux conditions de leurs diffuseurs.
 
