@@ -32,6 +32,23 @@ Dans **Modules → Radio → Ajouter une source** :
 | -------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Pays cherché d’abord | Les postes de ce pays passent en premier, ailleurs ensuite ; tous les pays, en français | Selon le fuseau horaire du foyer : son pays, d’après la table des fuseaux de l’IANA (anciens noms compris) |
 
+## Service et vie privée
+
+Les postes viennent de l’annuaire de Jokobee™ Radio ([radio.jokobee.com](https://radio.jokobee.com)), exploité par Jokobee™, l’entreprise de l’auteur de ce module ([LucQuebec](https://github.com/LucQuebec)). À chaque demande, le module lui envoie la clé Radio, le nom ou le genre demandé (tel que la reconnaissance vocale l’a écrit) et le pays cherché d’abord ; l’annuaire voit aussi l’adresse IP du serveur de Cornelius.
+
+Ce que l’annuaire garde :
+
+- **Journal des demandes vocales**, pour améliorer la recherche : le texte reçu, le pays, le poste trouvé ou non et la durée de la recherche, jamais la clé ni l’adresse IP. Gardé 7 jours.
+- **Vos 10 dernières demandes réussies**, liées à la clé (donc à l’adresse courriel) : le texte demandé, le nom et l’identifiant du poste trouvé, la date. Elles servent seulement à retrouver plus vite les postes que vous demandez souvent ; effacées 90 jours après la dernière demande, ou dès que la clé est effacée ou révoquée.
+- **Une seule instance par clé** : une empreinte de l’adresse IP (jamais l’adresse elle-même), en mémoire, 30 minutes, et un compteur de demandes par jour.
+- **Journaux techniques** de l’hébergement : l’adresse IP des requêtes, 30 jours au plus, pour la sécurité et le bon fonctionnement.
+
+L’adresse courriel donnée pour obtenir la clé sert seulement à l’envoyer et à gérer l’accès : le serveur garde l’adresse, la date d’acceptation des conditions et l’empreinte de la clé (jamais la clé elle-même). Tout est effacé sur demande (**Ma clé → Supprimer mon accès**), ou après 12 mois sans usage ; une clé demandée mais jamais utilisée est effacée après 30 jours. Jamais de publicité ni de profilage.
+
+Politique de confidentialité : https://www.jokobee.com/radio-privacy-fr. Conditions d’utilisation de l’annuaire : https://www.jokobee.com/radio-terms-fr. Questions : radio@jokobee.com.
+
+Ce service n’appartient pas au projet Cornelius : sa disponibilité, ses conditions et le traitement des données relèvent de son exploitant. Voir [Services tiers](../README.md#-services-tiers).
+
 ## Limites
 
 - **HLS** (Radio-Canada, ICI Musique, FIP, CBC Music) : rendu tel quel, avec une version de Cornelius qui lit le HLS. Une version plus ancienne répond « Liste de lecture (m3u, pls, HLS) non prise en charge » ; Cornelius explique alors que ce poste diffuse dans un format que sa version ne lit pas encore.
@@ -51,6 +68,6 @@ L’outil s’appelle `radio__ecouter` : un outil de lecture (Cornelius 0.4.1). 
 
 ## Voir aussi
 
-- [Le lecteur audio](https://github.com/lfpoulain/Cornelius/blob/beta/docs/fonctionnalites/lecteur-audio.md)
-- [Référence du contrat des modules : l’outil de lecture](https://github.com/lfpoulain/Cornelius/blob/beta/docs/modules/reference.md#loutil-de-lecture)
+- [Le lecteur audio](https://github.com/lfpoulain/Cornelius/blob/main/docs/fonctionnalites/lecteur-audio.md)
+- [Référence du contrat des modules : l’outil de lecture](https://github.com/lfpoulain/Cornelius/blob/main/docs/modules/reference.md#loutil-de-lecture)
 - Code : [index.ts](index.ts), [config.schema.json](config.schema.json)
