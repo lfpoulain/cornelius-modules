@@ -2,7 +2,14 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { createTestModule } from '#cornelius/testing';
-import addon from './index.js';
+import addon, {
+  countryOf,
+  feedLabel,
+  findFeeds,
+  migrateConfig,
+  type CatalogueFeed,
+} from './index.js';
+import catalogue from './catalogue.json' with { type: 'json' };
 
 // Flux fictifs, aux formats exacts de franceinfo (entités hexadécimales) et du Monde (CDATA).
 const fixture = (name: string) =>
@@ -106,4 +113,108 @@ test('adresse qui ne donne pas un flux, flux absent ou vide', async (t) => {
   ).read();
   assert.equal(empty.ok, false);
   if (!empty.ok) assert.equal(empty.status, 'empty');
+});
+
+test('recherche par zone : région exacte, pays du foyer, national ; adresse collée', async () => {
+  const labels = (query: string, timeZone?: string) =>
+    findFeeds(query, timeZone).map((r) => r.label);
+  assert.deepEqual(labels('Québec', 'America/Toronto').slice(0, 3), [
+    'Radio-Canada · Région de Québec',
+    'Noovo Info · Région de Québec',
+    'TVA Nouvelles · national',
+  ]);
+  assert.deepEqual(labels('Montréal', 'America/Toronto').slice(0, 2), [
+    'Radio-Canada · Montréal et environs',
+    'Noovo Info · Montréal et environs',
+  ]);
+  assert.deepEqual(labels('bretagne'), ['France 3 · Bretagne']);
+  // Le pays du foyer passe en tête, d'après son fuseau.
+  assert.equal(labels('national', 'Europe/Paris')[0], 'franceinfo · national');
+  assert.equal(labels('national', 'America/Toronto')[0], 'Radio-Canada · national');
+  assert.equal(findFeeds('Bretagne')[0]!.detail, 'France › Bretagne · régional');
+  assert.deepEqual(findFeeds('https://www.exemple.fr/flux.xml'), [
+    { id: 'https://www.exemple.fr/flux.xml', label: 'exemple.fr', detail: 'Adresse saisie' },
+  ]);
+  assert.deepEqual(findFeeds('q'), []);
+  assert.deepEqual(findFeeds('Atlantide'), []);
+  // La recherche du formulaire passe par le même chemin.
+  const via = await addon.search!.find({ kind: 'flux', query: 'Estrie', values: {} }, {
+    timeZone: 'America/Toronto',
+  } as never);
+  assert.deepEqual(
+    via.map((r) => r.label),
+    ['Radio-Canada · Estrie'],
+  );
+});
+
+test('catalogue : flux uniques, en https, valides pour le module ; anciennes sources inchangées', (t) => {
+  const f = setup(t);
+  const ids = new Set<string>();
+  const urls = new Set<string>();
+  for (const feed of catalogue as CatalogueFeed[]) {
+    assert.ok(!ids.has(feed.id) && !urls.has(feed.url), feed.id);
+    ids.add(feed.id);
+    urls.add(feed.url);
+    assert.match(feed.url, /^https:\/\//u, feed.id);
+    assert.ok(['national', 'régional'].includes(feed.niveau), feed.id);
+    assert.equal(feed.region === null, feed.niveau === 'national', feed.id);
+    // Chaque flux se trouve par son journal et sa zone, et son réglage est valide.
+    const result = findFeeds(`${feed.media} ${feed.region ?? feed.pays}`).find(
+      (r) => r.id === feed.url,
+    );
+    assert.ok(result, feed.id);
+    assert.equal(result.label, feedLabel(feed), feed.id);
+    assert.equal(
+      f.runtime.validateConfig(addon.id, { url: result.id, feedLabel: result.label, count: 3 }).ok,
+      true,
+      feed.id,
+    );
+  }
+  // Une source réglée avant la recherche (adresse seule, sans libellé) reste valide.
+  assert.equal(
+    f.runtime.validateConfig(addon.id, { url: 'https://www.franceinfo.fr/titres.rss', count: 3 })
+      .ok,
+    true,
+  );
+});
+
+test('réglages de la version 1 : adresse et nombre gardés, journal affiché', (t) => {
+  const f = setup(t);
+  // Adresse du catalogue : son libellé ; autre adresse : le nom d'hôte.
+  const connu = migrateConfig(1, { url: 'https://www.franceinfo.fr/titres.rss', count: 5 });
+  assert.deepEqual(connu, {
+    url: 'https://www.franceinfo.fr/titres.rss',
+    feedLabel: 'franceinfo · national',
+    count: 5,
+  });
+  const autre = migrateConfig(1, { url: 'https://www.exemple.fr/flux.xml', count: 2 });
+  assert.equal(autre.feedLabel, 'exemple.fr');
+  for (const config of [connu, autre])
+    assert.equal(f.runtime.validateConfig(addon.id, config).ok, true);
+  assert.equal(addon.configDefaults.feedLabel, 'franceinfo · national');
+  assert.throws(() => migrateConfig(3, connu), /inconnue/u);
+  // Un nom d'hôte très long reste dans la longueur du libellé.
+  const long = migrateConfig(1, {
+    url: `https://${'a'.repeat(63)}.${'b'.repeat(63)}.${'c'.repeat(63)}.fr/flux`,
+    count: 3,
+  });
+  assert.ok(long.feedLabel!.length <= 160);
+  assert.equal(f.runtime.validateConfig(addon.id, long).ok, true);
+});
+
+test('Ottawa-Gatineau se trouve par l’Ontario ; fuseaux canadiens reconnus', () => {
+  assert.ok(findFeeds('Ontario').some((r) => r.label === 'Radio-Canada · Ottawa-Gatineau'));
+  // Le pays du foyer d'après son fuseau, alias compris.
+  for (const zone of [
+    'America/Swift_Current',
+    'America/Atikokan',
+    'America/Creston',
+    'America/Inuvik',
+    'Canada/Eastern',
+    'Canada/Newfoundland',
+  ])
+    assert.equal(countryOf(zone), 'Canada', zone);
+  assert.equal(countryOf('Europe/Paris'), 'France');
+  assert.equal(countryOf('Europe/Berlin'), null);
+  assert.equal(countryOf(undefined), null);
 });

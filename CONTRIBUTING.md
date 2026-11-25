@@ -28,14 +28,14 @@ npm test
 - Un dossier `<id>/` à la racine, identique au champ `id`, sans tiret, différent des modules livrés avec Cornelius (`clock`, `weather`, `transit`, `ragator`).
 - Le contrat importé par `#cornelius/addons`, `#cornelius/validation` et, dans les tests, `#cornelius/testing`. Aucun chemin vers `../cornelius/`.
 - Des tests écrits avec `createTestModule`, sur des réponses enregistrées du vrai fournisseur (`fixtures/`), sans réseau.
-- Une fiche `<id>/README.md` remplie à partir de [la fiche du gabarit](_template/README.md), avec la licence des données.
+- Une fiche `<id>/README.md` remplie à partir de [la fiche du gabarit](_template/README.md), avec la section « Service et vie privée » : qui exploite le service, ce que le module lui envoie, ses conditions, la licence des données, et votre lien avec le service si vous l’exploitez ou y êtes lié. Voir [Services tiers](README.md#-services-tiers).
 - Une ligne dans le tableau des modules du [README](README.md#-les-modules) et dans le [CHANGELOG](CHANGELOG.md).
 - Un champ `display` (nom, description, icône, phrase vocale) et `minCoreVersion: '0.2.0'`, ou plus si le module s’appuie sur un ajout plus récent de Cornelius.
 - Des fixtures sans contenu protégé : les réponses de fournisseurs de données publiques sont enregistrées telles quelles ; pour la presse, des articles fictifs au format exact du flux.
 
 ## Le code partagé
 
-Le dossier `_lib/` réunit ce que plusieurs modules utilisent ; son nom commence par « _ », Cornelius ne le charge donc pas comme un module. Il contient `flux.ts` (lecture des flux RSS et Atom, coupe des textes sur un mot, ancienneté « il y a 3 heures ») et `temps.ts` (jour civil, minuit suivant, heure murale dans le fuseau du foyer, changements d’heure compris). Un module l’importe par un chemin relatif (`../_lib/temps.js`) et reste sans autre dépendance. Une fonction n’y entre que lorsqu’au moins deux modules s’en servent ; avant, elle reste dans son module, comme `agenda/ics.ts`.
+Le dossier `_lib/` réunit ce que plusieurs modules utilisent ; son nom commence par « _ », Cornelius ne le charge donc pas comme un module. Il contient `flux.ts` (lecture des flux RSS et Atom, coupe des textes sur un mot, ancienneté « il y a 3 heures ») `temps.ts` (jour civil, minuit suivant, heure murale dans le fuseau du foyer, changements d’heure compris) et `transitous.ts` (trajets en transport en commun d’après Transitous : géocodage, itinéraire, passages à l’arrêt, phrase et carte, communs aux modules de transport du Québec). Un module l’importe par un chemin relatif (`../_lib/temps.js`) et reste sans autre dépendance. Une fonction n’y entre que lorsqu’au moins deux modules s’en servent ; avant, elle reste dans son module, comme `agenda/ics.ts`.
 
 ## Conventions
 
