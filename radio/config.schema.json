@@ -1,0 +1,1007 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RadioConfig v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "pays": {
+      "title": "Pays cherché d’abord",
+      "description": "Les postes de ce pays passent en premier ; ailleurs ensuite. Source : radio.jokobee.com · radio@jokobee.com.",
+      "type": "string",
+      "oneOf": [
+        {
+          "const": "",
+          "title": "Selon le fuseau horaire du foyer"
+        },
+        {
+          "const": "AF",
+          "title": "Afghanistan"
+        },
+        {
+          "const": "ZA",
+          "title": "Afrique du Sud"
+        },
+        {
+          "const": "AL",
+          "title": "Albanie"
+        },
+        {
+          "const": "DZ",
+          "title": "Algérie"
+        },
+        {
+          "const": "DE",
+          "title": "Allemagne"
+        },
+        {
+          "const": "AD",
+          "title": "Andorre"
+        },
+        {
+          "const": "AO",
+          "title": "Angola"
+        },
+        {
+          "const": "AI",
+          "title": "Anguilla"
+        },
+        {
+          "const": "AQ",
+          "title": "Antarctique"
+        },
+        {
+          "const": "AG",
+          "title": "Antigua-et-Barbuda"
+        },
+        {
+          "const": "SA",
+          "title": "Arabie saoudite"
+        },
+        {
+          "const": "AR",
+          "title": "Argentine"
+        },
+        {
+          "const": "AM",
+          "title": "Arménie"
+        },
+        {
+          "const": "AW",
+          "title": "Aruba"
+        },
+        {
+          "const": "AU",
+          "title": "Australie"
+        },
+        {
+          "const": "AT",
+          "title": "Autriche"
+        },
+        {
+          "const": "AZ",
+          "title": "Azerbaïdjan"
+        },
+        {
+          "const": "BS",
+          "title": "Bahamas"
+        },
+        {
+          "const": "BH",
+          "title": "Bahreïn"
+        },
+        {
+          "const": "BD",
+          "title": "Bangladesh"
+        },
+        {
+          "const": "BB",
+          "title": "Barbade"
+        },
+        {
+          "const": "BE",
+          "title": "Belgique"
+        },
+        {
+          "const": "BZ",
+          "title": "Belize"
+        },
+        {
+          "const": "BJ",
+          "title": "Bénin"
+        },
+        {
+          "const": "BM",
+          "title": "Bermudes"
+        },
+        {
+          "const": "BT",
+          "title": "Bhoutan"
+        },
+        {
+          "const": "BY",
+          "title": "Biélorussie"
+        },
+        {
+          "const": "BO",
+          "title": "Bolivie"
+        },
+        {
+          "const": "BA",
+          "title": "Bosnie-Herzégovine"
+        },
+        {
+          "const": "BW",
+          "title": "Botswana"
+        },
+        {
+          "const": "BR",
+          "title": "Brésil"
+        },
+        {
+          "const": "BN",
+          "title": "Brunei"
+        },
+        {
+          "const": "BG",
+          "title": "Bulgarie"
+        },
+        {
+          "const": "BF",
+          "title": "Burkina Faso"
+        },
+        {
+          "const": "BI",
+          "title": "Burundi"
+        },
+        {
+          "const": "KH",
+          "title": "Cambodge"
+        },
+        {
+          "const": "CM",
+          "title": "Cameroun"
+        },
+        {
+          "const": "CA",
+          "title": "Canada"
+        },
+        {
+          "const": "CV",
+          "title": "Cap-Vert"
+        },
+        {
+          "const": "CL",
+          "title": "Chili"
+        },
+        {
+          "const": "CN",
+          "title": "Chine"
+        },
+        {
+          "const": "CY",
+          "title": "Chypre"
+        },
+        {
+          "const": "CO",
+          "title": "Colombie"
+        },
+        {
+          "const": "KM",
+          "title": "Comores"
+        },
+        {
+          "const": "CG",
+          "title": "Congo-Brazzaville"
+        },
+        {
+          "const": "CD",
+          "title": "Congo-Kinshasa"
+        },
+        {
+          "const": "KP",
+          "title": "Corée du Nord"
+        },
+        {
+          "const": "KR",
+          "title": "Corée du Sud"
+        },
+        {
+          "const": "CR",
+          "title": "Costa Rica"
+        },
+        {
+          "const": "CI",
+          "title": "Côte d’Ivoire"
+        },
+        {
+          "const": "HR",
+          "title": "Croatie"
+        },
+        {
+          "const": "CU",
+          "title": "Cuba"
+        },
+        {
+          "const": "CW",
+          "title": "Curaçao"
+        },
+        {
+          "const": "DK",
+          "title": "Danemark"
+        },
+        {
+          "const": "DJ",
+          "title": "Djibouti"
+        },
+        {
+          "const": "DM",
+          "title": "Dominique"
+        },
+        {
+          "const": "EG",
+          "title": "Égypte"
+        },
+        {
+          "const": "AE",
+          "title": "Émirats arabes unis"
+        },
+        {
+          "const": "EC",
+          "title": "Équateur"
+        },
+        {
+          "const": "ER",
+          "title": "Érythrée"
+        },
+        {
+          "const": "ES",
+          "title": "Espagne"
+        },
+        {
+          "const": "EE",
+          "title": "Estonie"
+        },
+        {
+          "const": "SZ",
+          "title": "Eswatini"
+        },
+        {
+          "const": "VA",
+          "title": "État de la Cité du Vatican"
+        },
+        {
+          "const": "US",
+          "title": "États-Unis"
+        },
+        {
+          "const": "ET",
+          "title": "Éthiopie"
+        },
+        {
+          "const": "FJ",
+          "title": "Fidji"
+        },
+        {
+          "const": "FI",
+          "title": "Finlande"
+        },
+        {
+          "const": "FR",
+          "title": "France"
+        },
+        {
+          "const": "GA",
+          "title": "Gabon"
+        },
+        {
+          "const": "GM",
+          "title": "Gambie"
+        },
+        {
+          "const": "GE",
+          "title": "Géorgie"
+        },
+        {
+          "const": "GS",
+          "title": "Géorgie du Sud-et-les Îles Sandwich du Sud"
+        },
+        {
+          "const": "GH",
+          "title": "Ghana"
+        },
+        {
+          "const": "GI",
+          "title": "Gibraltar"
+        },
+        {
+          "const": "GR",
+          "title": "Grèce"
+        },
+        {
+          "const": "GD",
+          "title": "Grenade"
+        },
+        {
+          "const": "GL",
+          "title": "Groenland"
+        },
+        {
+          "const": "GP",
+          "title": "Guadeloupe"
+        },
+        {
+          "const": "GU",
+          "title": "Guam"
+        },
+        {
+          "const": "GT",
+          "title": "Guatemala"
+        },
+        {
+          "const": "GG",
+          "title": "Guernesey"
+        },
+        {
+          "const": "GN",
+          "title": "Guinée"
+        },
+        {
+          "const": "GQ",
+          "title": "Guinée équatoriale"
+        },
+        {
+          "const": "GW",
+          "title": "Guinée-Bissau"
+        },
+        {
+          "const": "GY",
+          "title": "Guyana"
+        },
+        {
+          "const": "GF",
+          "title": "Guyane française"
+        },
+        {
+          "const": "HT",
+          "title": "Haïti"
+        },
+        {
+          "const": "HN",
+          "title": "Honduras"
+        },
+        {
+          "const": "HU",
+          "title": "Hongrie"
+        },
+        {
+          "const": "CX",
+          "title": "Île Christmas"
+        },
+        {
+          "const": "IM",
+          "title": "Île de Man"
+        },
+        {
+          "const": "NF",
+          "title": "Île Norfolk"
+        },
+        {
+          "const": "AX",
+          "title": "Îles Åland"
+        },
+        {
+          "const": "KY",
+          "title": "Îles Caïmans"
+        },
+        {
+          "const": "CC",
+          "title": "Îles Cocos"
+        },
+        {
+          "const": "CK",
+          "title": "Îles Cook"
+        },
+        {
+          "const": "FO",
+          "title": "Îles Féroé"
+        },
+        {
+          "const": "FK",
+          "title": "Îles Malouines"
+        },
+        {
+          "const": "MP",
+          "title": "Îles Mariannes du Nord"
+        },
+        {
+          "const": "MH",
+          "title": "Îles Marshall"
+        },
+        {
+          "const": "UM",
+          "title": "Îles mineures éloignées des États-Unis"
+        },
+        {
+          "const": "PN",
+          "title": "Îles Pitcairn"
+        },
+        {
+          "const": "SB",
+          "title": "Îles Salomon"
+        },
+        {
+          "const": "TC",
+          "title": "Îles Turques-et-Caïques"
+        },
+        {
+          "const": "VG",
+          "title": "Îles Vierges britanniques"
+        },
+        {
+          "const": "VI",
+          "title": "Îles Vierges des États-Unis"
+        },
+        {
+          "const": "IN",
+          "title": "Inde"
+        },
+        {
+          "const": "ID",
+          "title": "Indonésie"
+        },
+        {
+          "const": "IQ",
+          "title": "Irak"
+        },
+        {
+          "const": "IR",
+          "title": "Iran"
+        },
+        {
+          "const": "IE",
+          "title": "Irlande"
+        },
+        {
+          "const": "IS",
+          "title": "Islande"
+        },
+        {
+          "const": "IL",
+          "title": "Israël"
+        },
+        {
+          "const": "IT",
+          "title": "Italie"
+        },
+        {
+          "const": "JM",
+          "title": "Jamaïque"
+        },
+        {
+          "const": "JP",
+          "title": "Japon"
+        },
+        {
+          "const": "JE",
+          "title": "Jersey"
+        },
+        {
+          "const": "JO",
+          "title": "Jordanie"
+        },
+        {
+          "const": "KZ",
+          "title": "Kazakhstan"
+        },
+        {
+          "const": "KE",
+          "title": "Kenya"
+        },
+        {
+          "const": "KG",
+          "title": "Kirghizstan"
+        },
+        {
+          "const": "KI",
+          "title": "Kiribati"
+        },
+        {
+          "const": "KW",
+          "title": "Koweït"
+        },
+        {
+          "const": "RE",
+          "title": "La Réunion"
+        },
+        {
+          "const": "LA",
+          "title": "Laos"
+        },
+        {
+          "const": "LS",
+          "title": "Lesotho"
+        },
+        {
+          "const": "LV",
+          "title": "Lettonie"
+        },
+        {
+          "const": "LB",
+          "title": "Liban"
+        },
+        {
+          "const": "LR",
+          "title": "Liberia"
+        },
+        {
+          "const": "LY",
+          "title": "Libye"
+        },
+        {
+          "const": "LI",
+          "title": "Liechtenstein"
+        },
+        {
+          "const": "LT",
+          "title": "Lituanie"
+        },
+        {
+          "const": "LU",
+          "title": "Luxembourg"
+        },
+        {
+          "const": "MK",
+          "title": "Macédoine du Nord"
+        },
+        {
+          "const": "MG",
+          "title": "Madagascar"
+        },
+        {
+          "const": "MY",
+          "title": "Malaisie"
+        },
+        {
+          "const": "MW",
+          "title": "Malawi"
+        },
+        {
+          "const": "MV",
+          "title": "Maldives"
+        },
+        {
+          "const": "ML",
+          "title": "Mali"
+        },
+        {
+          "const": "MT",
+          "title": "Malte"
+        },
+        {
+          "const": "MA",
+          "title": "Maroc"
+        },
+        {
+          "const": "MQ",
+          "title": "Martinique"
+        },
+        {
+          "const": "MU",
+          "title": "Maurice"
+        },
+        {
+          "const": "MR",
+          "title": "Mauritanie"
+        },
+        {
+          "const": "YT",
+          "title": "Mayotte"
+        },
+        {
+          "const": "MX",
+          "title": "Mexique"
+        },
+        {
+          "const": "FM",
+          "title": "Micronésie"
+        },
+        {
+          "const": "MD",
+          "title": "Moldavie"
+        },
+        {
+          "const": "MC",
+          "title": "Monaco"
+        },
+        {
+          "const": "MN",
+          "title": "Mongolie"
+        },
+        {
+          "const": "ME",
+          "title": "Monténégro"
+        },
+        {
+          "const": "MS",
+          "title": "Montserrat"
+        },
+        {
+          "const": "MZ",
+          "title": "Mozambique"
+        },
+        {
+          "const": "MM",
+          "title": "Myanmar (Birmanie)"
+        },
+        {
+          "const": "NA",
+          "title": "Namibie"
+        },
+        {
+          "const": "NR",
+          "title": "Nauru"
+        },
+        {
+          "const": "NP",
+          "title": "Népal"
+        },
+        {
+          "const": "NI",
+          "title": "Nicaragua"
+        },
+        {
+          "const": "NE",
+          "title": "Niger"
+        },
+        {
+          "const": "NG",
+          "title": "Nigeria"
+        },
+        {
+          "const": "NU",
+          "title": "Niue"
+        },
+        {
+          "const": "NO",
+          "title": "Norvège"
+        },
+        {
+          "const": "NC",
+          "title": "Nouvelle-Calédonie"
+        },
+        {
+          "const": "NZ",
+          "title": "Nouvelle-Zélande"
+        },
+        {
+          "const": "OM",
+          "title": "Oman"
+        },
+        {
+          "const": "UG",
+          "title": "Ouganda"
+        },
+        {
+          "const": "UZ",
+          "title": "Ouzbékistan"
+        },
+        {
+          "const": "PK",
+          "title": "Pakistan"
+        },
+        {
+          "const": "PW",
+          "title": "Palaos"
+        },
+        {
+          "const": "PA",
+          "title": "Panama"
+        },
+        {
+          "const": "PG",
+          "title": "Papouasie-Nouvelle-Guinée"
+        },
+        {
+          "const": "PY",
+          "title": "Paraguay"
+        },
+        {
+          "const": "NL",
+          "title": "Pays-Bas"
+        },
+        {
+          "const": "BQ",
+          "title": "Pays-Bas caribéens"
+        },
+        {
+          "const": "PE",
+          "title": "Pérou"
+        },
+        {
+          "const": "PH",
+          "title": "Philippines"
+        },
+        {
+          "const": "PL",
+          "title": "Pologne"
+        },
+        {
+          "const": "PF",
+          "title": "Polynésie française"
+        },
+        {
+          "const": "PR",
+          "title": "Porto Rico"
+        },
+        {
+          "const": "PT",
+          "title": "Portugal"
+        },
+        {
+          "const": "QA",
+          "title": "Qatar"
+        },
+        {
+          "const": "HK",
+          "title": "R.A.S. chinoise de Hong Kong"
+        },
+        {
+          "const": "MO",
+          "title": "R.A.S. chinoise de Macao"
+        },
+        {
+          "const": "CF",
+          "title": "République centrafricaine"
+        },
+        {
+          "const": "DO",
+          "title": "République dominicaine"
+        },
+        {
+          "const": "RO",
+          "title": "Roumanie"
+        },
+        {
+          "const": "GB",
+          "title": "Royaume-Uni"
+        },
+        {
+          "const": "RU",
+          "title": "Russie"
+        },
+        {
+          "const": "RW",
+          "title": "Rwanda"
+        },
+        {
+          "const": "EH",
+          "title": "Sahara occidental"
+        },
+        {
+          "const": "BL",
+          "title": "Saint-Barthélemy"
+        },
+        {
+          "const": "KN",
+          "title": "Saint-Christophe-et-Niévès"
+        },
+        {
+          "const": "SM",
+          "title": "Saint-Marin"
+        },
+        {
+          "const": "MF",
+          "title": "Saint-Martin"
+        },
+        {
+          "const": "SX",
+          "title": "Saint-Martin (partie néerlandaise)"
+        },
+        {
+          "const": "PM",
+          "title": "Saint-Pierre-et-Miquelon"
+        },
+        {
+          "const": "VC",
+          "title": "Saint-Vincent-et-les Grenadines"
+        },
+        {
+          "const": "SH",
+          "title": "Sainte-Hélène"
+        },
+        {
+          "const": "LC",
+          "title": "Sainte-Lucie"
+        },
+        {
+          "const": "SV",
+          "title": "Salvador"
+        },
+        {
+          "const": "WS",
+          "title": "Samoa"
+        },
+        {
+          "const": "AS",
+          "title": "Samoa américaines"
+        },
+        {
+          "const": "ST",
+          "title": "Sao Tomé-et-Principe"
+        },
+        {
+          "const": "SN",
+          "title": "Sénégal"
+        },
+        {
+          "const": "RS",
+          "title": "Serbie"
+        },
+        {
+          "const": "SC",
+          "title": "Seychelles"
+        },
+        {
+          "const": "SL",
+          "title": "Sierra Leone"
+        },
+        {
+          "const": "SG",
+          "title": "Singapour"
+        },
+        {
+          "const": "SK",
+          "title": "Slovaquie"
+        },
+        {
+          "const": "SI",
+          "title": "Slovénie"
+        },
+        {
+          "const": "SO",
+          "title": "Somalie"
+        },
+        {
+          "const": "SD",
+          "title": "Soudan"
+        },
+        {
+          "const": "SS",
+          "title": "Soudan du Sud"
+        },
+        {
+          "const": "LK",
+          "title": "Sri Lanka"
+        },
+        {
+          "const": "SE",
+          "title": "Suède"
+        },
+        {
+          "const": "CH",
+          "title": "Suisse"
+        },
+        {
+          "const": "SR",
+          "title": "Suriname"
+        },
+        {
+          "const": "SJ",
+          "title": "Svalbard et Jan Mayen"
+        },
+        {
+          "const": "SY",
+          "title": "Syrie"
+        },
+        {
+          "const": "TJ",
+          "title": "Tadjikistan"
+        },
+        {
+          "const": "TW",
+          "title": "Taïwan"
+        },
+        {
+          "const": "TZ",
+          "title": "Tanzanie"
+        },
+        {
+          "const": "TD",
+          "title": "Tchad"
+        },
+        {
+          "const": "CZ",
+          "title": "Tchéquie"
+        },
+        {
+          "const": "TF",
+          "title": "Terres australes françaises"
+        },
+        {
+          "const": "IO",
+          "title": "Territoire britannique de l’océan Indien"
+        },
+        {
+          "const": "PS",
+          "title": "Territoires palestiniens"
+        },
+        {
+          "const": "TH",
+          "title": "Thaïlande"
+        },
+        {
+          "const": "TL",
+          "title": "Timor oriental"
+        },
+        {
+          "const": "TG",
+          "title": "Togo"
+        },
+        {
+          "const": "TK",
+          "title": "Tokelau"
+        },
+        {
+          "const": "TO",
+          "title": "Tonga"
+        },
+        {
+          "const": "TT",
+          "title": "Trinité-et-Tobago"
+        },
+        {
+          "const": "TN",
+          "title": "Tunisie"
+        },
+        {
+          "const": "TM",
+          "title": "Turkménistan"
+        },
+        {
+          "const": "TR",
+          "title": "Turquie"
+        },
+        {
+          "const": "TV",
+          "title": "Tuvalu"
+        },
+        {
+          "const": "UA",
+          "title": "Ukraine"
+        },
+        {
+          "const": "UY",
+          "title": "Uruguay"
+        },
+        {
+          "const": "VU",
+          "title": "Vanuatu"
+        },
+        {
+          "const": "VE",
+          "title": "Venezuela"
+        },
+        {
+          "const": "VN",
+          "title": "Viêt Nam"
+        },
+        {
+          "const": "WF",
+          "title": "Wallis-et-Futuna"
+        },
+        {
+          "const": "YE",
+          "title": "Yémen"
+        },
+        {
+          "const": "ZM",
+          "title": "Zambie"
+        },
+        {
+          "const": "ZW",
+          "title": "Zimbabwe"
+        }
+      ]
+    }
+  }
+}
