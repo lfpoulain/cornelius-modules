@@ -15,6 +15,7 @@ function setup(
     timeZone?: string;
     memoriesReply?: { status: number; body: string; truncated?: boolean };
     searchReply?: { status: number; body: string; truncated?: boolean };
+    metadataReply?: { status: number; body: string; truncated?: boolean };
     randomReply?: { status: number; body: string; truncated?: boolean };
   } = {},
 ) {
@@ -30,6 +31,9 @@ function setup(
       }
       if (req.url.endsWith('/api/search/smart')) {
         return options.searchReply ?? { status: 200, body: searchJson };
+      }
+      if (req.url.endsWith('/api/search/metadata')) {
+        return options.metadataReply ?? { status: 200, body: searchJson };
       }
       if (req.url.endsWith('/api/search/random')) {
         return options.randomReply ?? { status: 200, body: '[]' };
@@ -120,6 +124,41 @@ test('recherche intelligente CLIP par mot-clé', async (t) => {
   assert.equal(outcome.card.primaryValue, '2 photos trouvées');
   assert.equal(outcome.card.items[0]?.value, 'vacances_plage.jpg (Biarritz, France)');
   assert.match(outcome.presentation.summary, /vacances/u);
+});
+
+test('photos les plus récentes via /api/search/metadata et déclaration perSource', async (t) => {
+  const secretDecl = addon.secrets?.[0] as { perSource?: boolean } | undefined;
+  assert.equal(secretDecl?.perSource, true);
+
+  const f = setup(t);
+  const { outcome } = await f.invoke('search', { query: 'dernières photos', count: 3 });
+  assert.equal(outcome.ok, true);
+  if (!outcome.ok) return;
+  assert.equal(f.calls[0]?.url, 'http://immich.local:2283/api/search/metadata');
+  assert.deepEqual(JSON.parse(String(f.calls[0]?.body ?? '{}')), {
+    type: 'IMAGE',
+    order: 'desc',
+    size: 3,
+  });
+  assert.equal(outcome.card.title, 'Dernières photos');
+  assert.equal(outcome.card.primaryValue, 'Dernières photos · Foyer');
+  assert.match(outcome.presentation.summary, /dernières photos.*Foyer/u);
+  assert.deepEqual(f.contract(outcome), []);
+
+  const fSingle = setup(t);
+  const { outcome: single } = await fSingle.invoke('search', { query: 'la dernière photo' });
+  assert.equal(single.ok, true);
+  if (!single.ok) return;
+  assert.equal(fSingle.calls[0]?.url, 'http://immich.local:2283/api/search/metadata');
+  assert.deepEqual(JSON.parse(String(fSingle.calls[0]?.body ?? '{}')), {
+    type: 'IMAGE',
+    order: 'desc',
+    size: 1,
+  });
+  assert.equal(single.card.title, 'Dernière photo');
+  assert.equal(single.card.items.length, 1);
+  assert.match(single.presentation.summary, /Voici la dernière photo/u);
+  assert.deepEqual(fSingle.contract(single), []);
 });
 
 test('clé absente, clé refusée, réponse illisible, panne et photothèque vide', async (t) => {

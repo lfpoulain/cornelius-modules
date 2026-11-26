@@ -4,6 +4,12 @@ Cette page retrace les modules ajoutés et modifiés, du plus récent au plus an
 
 ## Non publié
 
+### 2026-11-25 : Immich : clé API par profil et dernières photos
+
+**Modifié**
+
+- **Immich** (1.1.0), par [Ewan Berthomieu](https://github.com/ewan-berthomieu) : déclaration `perSource: true` sur la clé API Immich pour isoler une photothèque par profil reconnu devant le miroir (avec repli sur la clé du module) ; ajout du tri chronologique (`POST /api/search/metadata`, `order: 'desc'`) pour les demandes de photos récentes (« la dernière photo », « mes dernières photos »).
+
 ### 2026-11-25 : module Radio, format HLS
 
 **Modifié**
